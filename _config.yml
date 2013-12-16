@@ -1,10 +1,9 @@
-name: ""
-description: ""
-
-url: "[YOUR DOMAIN]"
-
+name: "Labs"
 paginate: 10
 
 markdown: rdiscount
 permalink: pretty
 pygments: true
+
+exclude: ['README.md']
+baseurl: /Labs
