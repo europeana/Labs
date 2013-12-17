@@ -1,10 +1,11 @@
 ---
-layout: default
-title: Ovo je druga novica
+layout: post-details
+title: Twitter EuropeanaBot
 meta: Ovo je drugi meta podatek
 source: http://semantika.si/nekaj
 tags: [API, Hackaton, CaseStudy]
 category: post
+imageurl: /plf/tech(9)
 ---
 
 2This site aims to be a comprehensive guide to Jekyll. We’ll cover topics such as getting your site up and running, creating and managing your content, customizing the way your site works and looks, deploying to various environments, and give you some advice on participating in the future development of Jekyll itself.

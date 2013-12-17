@@ -5,23 +5,25 @@ layout: default
 <div class="grid__item three-quarters palm--one-whole">
 
     <ul class="post-list grid">
-
-        {% for post in paginator.posts %}<li class="grid__item one-whole desk--one-half">
-            <div class="block block-thumb">
+        {% assign counter=0 %}
+        {% for post in paginator.posts %}<!--
+        --><li class="grid__item one-whole desk--one-half">
+            <div class="block block-thumb  {%if counter > 1 %} block-thumb-small {% endif %}">
 
                 <div class="b-thumb">
-                    <a href="#">
-                        <img src="{{site.baseurl}}/plf/tech" alt="Post Thumbnail">
+                    <a href="{{site.baseurl}}{{post.url}}">
+                        <img src="{{ site.baseurl }}/{{post.imageurl}}" alt="Post Thumbnail">
                     </a>
                 </div>
 
                 <div class="b-text">
 
-                    <h1 class="headline gamma"><a href="#">ATHENA</a></h1>
-
+                    <h1 class="headline gamma"><a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a></h1>
+                    {%if counter < 2 %}
                     <div class="description">
-                        <p>ATHENA is a project developing metadata exchange standards for the museum domain and aggregating museum content for Europeana. Through our API, they have built a search service where users can perform keyword searches and structured searches to find and view Europeana items. Example: search for the famous photographer, Man Ray</p>
+                        {{post.content}}                        
                     </div>
+                    {% endif %}
                     <div class="tags">
                         <i class="icon icon-tag"></i>
 						{% for tag in post.tags %}
@@ -31,36 +33,34 @@ layout: default
                 </div>
 
             </div>
-        </li><!--                 
--->{% endfor %}
+        </li>{% assign counter=counter | plus:1 %}{% endfor %}
     </ul>
     <ol class="pagination">
-        <li class="is-disabled"><a href="">← First</a></li>
-        <li class="arrow is-disabled"><a href="">←</a></li>
-        <li class="current"><a href="">1</a></li>
-        <li><a href="">2</a></li>
-        <li><a href="">3</a></li>
-        <li><a href="">4</a></li>
-        <li><a href="">5</a></li>
-        <li><a href="">6</a></li>
+        <li class="is-disabled"><a href="{{site.baseurl}}/">← First</a></li>
 
-        <li class="is-disabled"><a href="">…</a></li>
+        {% if paginator.previous_page %}
+          <li class="arrow"><a href="{{site.baseurl}}/page{{ paginator.previous_page }}/">←</a></li>
+        {% else %}
+          <span class="previous">←</span>
+        {% endif %}
 
-        <li class="arrow"><a href="">→</a></li>
-        <li class=""><a href="">Last →</a></li>
+        {% for page in (1..paginator.total_pages) %}
+            {% if page == paginator.page %}
+                 <li class="current"><a href="{{site.baseurl}}/Page{{page}}/">{{ page }}</a></li>
+            {% elsif page == 1 %}
+                <li><a href="{{site.baseurl}}/">{{ page }}</a></li>
+            {% else %}
+                <li><a href="{{site.baseurl}}/Page{{page}}/">{{ page }}</a></li>
+            {% endif %}
+        {% endfor %}
+             
+
+        {% if paginator.next_page %}
+            <li class="arrow"><a href="{{site.baseurl}}/page{{ paginator.next_page }}/">→</a></li>
+        {% else %}
+            <span class="next ">→</span>
+        {% endif %}
+
+        <li class=""><a href="{{site.baseurl}}/page{{ paginator.total_pages }}/">Last →</a></li>
     </ol>
-	<!-- Pagination links -->
-<div class="pagination">
-  {% if paginator.previous_page %}
-    <a href="/page{{ paginator.previous_page }}" class="previous">Previous</a>
-  {% else %}
-    <span class="previous">Previous</span>
-  {% endif %}
-  <span class="page_number ">Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
-  {% if paginator.next_page %}
-    <a href="/page{{ paginator.next_page }}" class="next">Next</a>
-  {% else %}
-    <span class="next ">Next</span>
-  {% endif %}
-</div>
 </div>
