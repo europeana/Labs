@@ -46,11 +46,11 @@ layout: default
 
         {% for page in (1..paginator.total_pages) %}
             {% if page == paginator.page %}
-                 <li class="current"><a href="{{site.baseurl}}/Page{{page}}/">{{ page }}</a></li>
+                 <li class="current"><a href="{{site.baseurl}}/page{{page}}/">{{ page }}</a></li>
             {% elsif page == 1 %}
                 <li><a href="{{site.baseurl}}/">{{ page }}</a></li>
             {% else %}
-                <li><a href="{{site.baseurl}}/Page{{page}}/">{{ page }}</a></li>
+                <li><a href="{{site.baseurl}}/page{{page}}/">{{ page }}</a></li>
             {% endif %}
         {% endfor %}
              
