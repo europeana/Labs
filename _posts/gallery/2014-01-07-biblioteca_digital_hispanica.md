@@ -6,6 +6,7 @@ source: http://semantika.si/nekaj
 tags: [API, Hackathon, CaseStudy]
 category: gallery
 imageurl: "http://lorempixel.com/148/148"
+featured: true
 ---
 
 The National Library of Spain has implemented the Europeana API in their online portal, Biblioteca Digital Hispánica. The portal now enables their users to access related Europeana content via single link on their search result header.

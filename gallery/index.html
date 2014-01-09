@@ -3,7 +3,7 @@ layout: gallery-list
 ---
 <div class="grid__item three-quarters palm--one-whole">
     <ul class="post-list grid">
-        {% for post in site.posts %}<!--
+        {% for post in site.categories.gallery %}<!--
         --><li class="grid__item one-whole desk--one-half">
             <div class="block block-thumb  {%if counter > 1 %} block-thumb-small {% endif %}">
 
@@ -16,7 +16,7 @@ layout: gallery-list
                 <div class="b-text">
 
                     <h1 class="headline gamma"><a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a></h1>
-                    {%if counter < 2 %}
+                    {%if post.featured %}
                     <div class="description">
                         {{post.content}}                        
                     </div>

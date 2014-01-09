@@ -1,0 +1,37 @@
+{% include start.html %}<!--
+-->{% include header.html %}<!--
+--><div class="post-list grid">
+	
+	<div class="grid__item">
+		<a href="/spaces" class="btn">&larr;Return to Spaces</a>
+	</div>
+	
+	
+	<div class="grid__item palm--one-whole desk--three-quarters push--one-quarter">
+        <div class="block block-thumb">
+
+            <div class="b-thumb">
+                <a href="{{site.baseurl}}{{page.url}}">
+                    <img src="{{page.imageurl}}" alt="{{page.title}}">
+                </a>
+            </div>
+
+            <div class="b-text">
+
+                <h1 class="headline gamma"><a href="{{site.baseurl}}{{page.url}}">{{page.title}}</a></h1>
+                <div class="description">
+                    {{ page.content}}                        
+                </div>
+                <div class="tags">
+                    <i class="icon icon-tag"></i>
+					{% for tag in page.tags %}
+						<a href="#" class="tag_alt">{{tag}}</a>
+					{% endfor %}
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% include footer.html %}<!--
+-->{% include end.html %}
