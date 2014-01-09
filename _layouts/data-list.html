@@ -1,0 +1,43 @@
+{% include start.html %}<!--
+-->{% include header.html %}<!--
+--><div role="main" class="grid">
+
+	<div class="block block-content-header">
+		<div class="grid__item palm--one-whole push--palm--none three-quarters push--one-quarter">
+				<h1 class="title">Datasets</h1>
+				<p class="subhead grid grid__item desk--one-half">
+					Europeana is a database of some 30 million cultural and historical documents, images, sound and video files from Europe's museums, libraries, galleries and archives.
+				</p>
+		</div>
+	</div>
+	
+	<div class="grid__item one-quarter palm--one-whole">
+		<div class="subnav">
+
+			<h4 class="label epsilon"> Filter by:</h4>
+
+			<ul class="tags tags-large">
+				<li><a href="#" class="tag">Library</a></li>
+				<li><a href="#" class="tag">Archive</a></li>
+				<li><a href="#" class="tag">Museum</a></li>
+				<li><a href="#" class="tag">Audiovisual</a></li>
+			</ul>
+		</div>
+<!--
+		<ul class="tabs tabs-v">
+			<li><a href="">Suggest a Dataset</a></li>
+			<li><a href="">Help Improve This Content</a></li>
+		</ul>
+-->
+	</div>
+	<div class="prose grid__item palm--one-whole push--palm--none one-half desk--three-quarter">
+		<p>With the Europeana API, you can access the collections and incorporate them into things like apps, games, websites, even creating mash-ups using other APIs. The possibilities really are endless.</p>
+
+		<p>Here we highlight just some of the collections you can find through Europeana - explore them through the <a href="http://europeana.eu" title="Europeana search portal">Europeana portal</a> or directly through the <a href="http://europeana.eu/portal/api/console.html" title="Test the Europeana API using a console">API console</a>.</p>
+
+		</p>Want to work with these collections? <a href="http://europeana.eu/portal/api/registration.html" title"API Key Registration">Register for your API key</a> now.</p>
+	</div><!--
+	 -->{{ content}}<!--
+--></div>
+{% include footer.html %}<!--
+-->{% include end.html %}

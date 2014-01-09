@@ -1,0 +1,36 @@
+﻿{% include start.html %}<!--
+-->{% include header.html %}<!--
+--><div role="main" class="grid">
+
+	<div class="block block-content-header">
+		<div class="grid__item palm--one-whole push--palm--none three-quarters push--one-quarter">
+				<h1 class="title">Application Gallery</h1>
+				<p class="subhead grid grid__item desk--one-half">
+				Find inspiration in these examples of creative uses of Europeana content. Discover a range of applications of the Europeana API, the semantic web and Linked Open Data technologies.
+				</p>
+		</div>
+	</div>
+	
+	<div class="grid__item one-quarter palm--one-whole">
+		<div class="subnav">
+
+			<h4 class="label epsilon"> Filter by:</h4>
+
+			<ul class="tags tags-large">
+				<li><a href="{{site.baseurl}}/apis" class="tag">API</a></li>
+				<li><a href="#" class="tag">Linked Open data</a></li>
+				<li><a href="#" class="tag">Case Study</a></li>
+				<li><a href="#" class="tag">Prototype</a></li>
+				<li><a href="#" class="tag">Hackathon</a></li>
+			</ul>
+		</div>
+
+		<ul class="tabs tabs-v">
+			<li><a href="">Contribute to the Gallery</a></li>
+			<li><a href="">Help Improve This Content</a></li>
+		</ul>
+	</div><!--
+	 -->{{ content}}<!--
+--></div>
+{% include footer.html %}<!--
+-->{% include end.html %}
