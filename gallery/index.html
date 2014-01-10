@@ -5,7 +5,7 @@ layout: gallery-list
     <ul class="post-list grid">
         {% for post in site.categories.gallery %}<!--
         --><li class="grid__item one-whole desk--one-half">
-            <div class="block {%if post.featured %} block-thumb {%else %} block-thumb-small {% endif %}">
+            <div class="block block-thumb {%if post.featured != true %}  block-thumb-small {% endif %}">
 
                 <div class="b-thumb">
                     <a href="{{site.baseurl}}{{post.url}}">
@@ -16,12 +16,12 @@ layout: gallery-list
                 <div class="b-text">
 
                     {%if post.featured %}
-                    <h1 class="headline gamma"><a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a></h1>
-                    <div class="description">
-                        {{post.excerpt}}                        
-                    </div>
+	                    <h1 class="headline gamma"><a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a></h1>
+	                    <div class="description">
+	                        {{post.excerpt}}                        
+	                    </div>
 					{% else %}
-					<h5><a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a></h5>
+						<h5><a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a></h5>
                     {% endif %}
 					<a href="{{site.baseurl}}{{post.url}}" title="{{post.title}}" class="text-btn">Read more&rarr;</a>
                     <div class="tags">
