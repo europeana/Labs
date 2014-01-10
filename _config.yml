@@ -2,7 +2,7 @@ name: "Labs"
 paginate: 10
 paginate_path: "/page:num"
 
-markdown: rdiscount
+markdown: maruku
 permalink: pretty
 pygments: true
 
