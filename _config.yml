@@ -9,3 +9,5 @@ pygments: true
 exclude: ['README.md']
 baseurl: /Labs
 
+lunr_search:
+  excludes: [rss.xml, atom.xml]
