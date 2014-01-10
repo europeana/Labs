@@ -20,16 +20,31 @@ layout: default
 		</div>
 	</div>
 
-	<div class="block">
-		<div class="grid__item palm--one-whole push--palm--none three-quarters push--one-quarter">
-			<h2>Get inspired by some examples.</h2>
-		</div>
-		<div class="grid__item palm--one-whole push--palm--none three-quarters push--one-quarter">
-			<p class="grid grid__item desk--one-half">Sign up for your free API key and get developing! The rest is up to you.</p>
-			<ul>
-				<li>Historiana</li>
-				<li>Natural History</li>
-			</ul>
-		</div>
+	<div class="grid__item palm--one-whole push--palm--none three-quarters push--one-quarter">
+		<h3>Get inspired by some examples.</h3>
+	    <ul class="post-list grid">
+	        {% for post in site.categories.gallery %}
+	        {%if post.featured %}<!--
+	        --><li class="grid__item one-whole three-quarters">
+	            <div class="block block-thumb">
+
+	                <div class="b-thumb">
+	                    <a href="{{site.baseurl}}{{post.url}}">
+	                        <img src="{{post.imageurl}}" alt="{{post.title}}">
+	                    </a>
+	                </div>
+
+	                <div class="b-text">
+
+	                    <h1 class="headline gamma"><a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a></h1>
+	                    <div class="description">
+	                        {{post.content}}                        
+	                    </div>
+	                    {% endif %}
+	                </div>
+
+	            </div>
+	        </li>{% endfor %}
+	    </ul>
 	</div>
 </div>
