@@ -1,7 +1,41 @@
 ---
-layout: default
+layout: data-list
 ---
-<div class="grid__item three-quarters palm--one-whole">
-<h1>Data</h1>
- 
- </div>
+
+<div class="grid__item three-quarters palm--one-whole push--one-quarter">
+    <ul class="post-list grid">
+        {% for dataset in site.data.datasets %}<!--
+        --><li class="grid__item one-whole">
+            <div class="block block-thumb  {%if counter > 1 %} block-thumb-small {% endif %}">
+
+                <div class="b-thumb">
+                    <a href="{{dataset.search}}">
+                        <img src="{{dataset.links.preview}}" alt="{{dataset.name}}">
+                    </a>
+                </div>
+
+                <div class="b-text">
+                    <h1 class="headline gamma"><a href="{{dataset.links.portal}}">{{dataset.name}}</a></h1>
+					<div class="prose">
+	                    <div class="description">
+	                        {{dataset.description}}                        
+	                    </div>
+						<p><small>Dataset <a href="{{dataset.links.portal}}" title="View {{dataset.name}} in Europeana">{{dataset.datasetid}}</a> provided by <a href="{{dataset.links.provider}}" title="Link to {{dataset.provider}}">{{dataset.provider}}</a>. Contact <a href="mailto:{{dataset.contact}}">{{dataset.contact}}</a> for more details.</small></p><br />
+					</div>
+					<h6>View this datain</h6>
+					<a href="{{dataset.links.portal}}" title="View {{dataset.name}} in Europeana" class="btn">Portal</a>
+					<a href="{{dataset.links.console}}" title="View {{dataset.name}} in the API Console" class="btn">API Console</a>
+                    <div class="tags">
+                        <i class="icon icon-tag"></i>
+						{% for tag in dataset.tags %}
+							<a href="#" class="tag_alt">{{tag}}</a>
+						{% endfor %}
+                    </div>
+                </div>
+            </div>
+        </li>{% endfor %}
+    </ul>
+</div>
+
+
+<ul>
