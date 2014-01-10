@@ -167,7 +167,7 @@ body {
   hyphens: auto;
   word-wrap: break-word;
   background: #fcfcfc;
-  font: 100%/1.4 "dejarip", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+  font: 100%/1.4 "Noto Sans", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
   -webkit-text-size-adjust: 100%;
   color: #232323; }
 
@@ -253,12 +253,12 @@ h1, h2, h3, h4, h5, h6 {
 
 /* line 105, scss/base/_headings.scss */
 h1 {
-  font-family: "ff-more-web-pro", Georgia, Times, "Times New Roman", serif;
+  font-family: 'Noto Serif', Georgia, Times, "Times New Roman", serif;
   font-weight: normal; }
 
 /* line 118, scss/base/_headings.scss */
 h3 {
-  font-family: "ff-more-web-pro", Georgia, Times, "Times New Roman", serif;
+  font-family: "Nota Serif", Georgia, Times, "Times New Roman", serif;
   font-style: italic;
   font-weight: normal; }
 
@@ -269,7 +269,7 @@ h6 {
 /* Subheadings */
 /* line 146, scss/base/_headings.scss */
 .subheading {
-  font-family: "ff-more-web-pro", Georgia, Times, "Times New Roman", serif;
+  font-family: "Nota Serif", Georgia, Times, "Times New Roman", serif;
   font-weight: normal; }
 
 /* line 151, scss/base/_headings.scss */
@@ -3109,10 +3109,10 @@ td {
   clear: both;
   overflow: hidden;
   max-height: 0;
-  font-family: "ff-more-web-pro", Georgia, Times, "Times New Roman", serif;
+  font-family: "Noto Serif", Georgia, Times, "Times New Roman", serif;
   font-size: 16px;
   font-size: 1rem;
-  font-weight: 500; }
+  font-weight: 700; }
   /* line 13, scss/objects/_nav.scss */
   .nav a {
     display: block;
@@ -3143,7 +3143,7 @@ td {
 /* line 48, scss/objects/_nav.scss */
 .pagination {
   overflow: hidden;
-  font-family: "ff-more-web-pro", Georgia, Times, "Times New Roman", serif;
+  font-family: "Nota Serif", Georgia, Times, "Times New Roman", serif;
   margin-bottom: 1.6rem; }
   /* line 54, scss/objects/_nav.scss */
   .pagination li {
@@ -3180,7 +3180,7 @@ td {
 .breadcrumbs {
   list-style: none;
   line-height: 1;
-  font-family: "ff-more-web-pro", Georgia, Times, "Times New Roman", serif; }
+  font-family: "Nota Serif", Georgia, Times, "Times New Roman", serif; }
   /* line 101, scss/objects/_nav.scss */
   .breadcrumbs a {
     display: inline-block;
@@ -3259,7 +3259,7 @@ td {
 /* Global Font Classes */
 /* line 2, scss/objects/_text.scss */
 .font-secondary {
-  font-family: "ff-more-web-pro", Georgia, Times, "Times New Roman", serif; }
+  font-family: "Nota Serif", Georgia, Times, "Times New Roman", serif; }
 
 /* line 7, scss/objects/_text.scss */
 .intro {
@@ -3430,7 +3430,7 @@ html:hover [class^="icon-"] {
 
 /* line 112, scss/objects/_icons.scss */
 .icon-search:before, .icon-search.right:after {
-  content: '🔎'; }
+  content: ''; }
 
 /* line 112, scss/objects/_icons.scss */
 .icon-zoomin:before, .icon-zoomin.right:after {
@@ -3442,15 +3442,15 @@ html:hover [class^="icon-"] {
 
 /* line 112, scss/objects/_icons.scss */
 .icon-view:before, .icon-view.right:after {
-  content: '👀'; }
+  content: ''; }
 
 /* line 112, scss/objects/_icons.scss */
 .icon-attach:before, .icon-attach.right:after {
-  content: '📎'; }
+  content: ''; }
 
 /* line 112, scss/objects/_icons.scss */
 .icon-link:before, .icon-link.right:after {
-  content: '🔗'; }
+  content: ''; }
 
 /* line 112, scss/objects/_icons.scss */
 .icon-move:before, .icon-move.right:after {
@@ -3470,19 +3470,19 @@ html:hover [class^="icon-"] {
 
 /* line 112, scss/objects/_icons.scss */
 .icon-compose:before, .icon-compose.right:after {
-  content: '📝'; }
+  content: ''; }
 
 /* line 112, scss/objects/_icons.scss */
 .icon-lock:before, .icon-lock.right:after {
-  content: '🔒'; }
+  content: ''; }
 
 /* line 112, scss/objects/_icons.scss */
 .icon-unlock:before, .icon-unlock.right:after {
-  content: '🔓'; }
+  content: ''; }
 
 /* line 112, scss/objects/_icons.scss */
 .icon-key:before, .icon-key.right:after {
-  content: '🔑'; }
+  content: ''; }
 
 /* line 112, scss/objects/_icons.scss */
 .icon-backspace:before, .icon-backspace.right:after {
@@ -3490,7 +3490,7 @@ html:hover [class^="icon-"] {
 
 /* line 112, scss/objects/_icons.scss */
 .icon-ban:before, .icon-ban.right:after {
-  content: '🚫'; }
+  content: ''; }
 
 /* line 112, scss/objects/_icons.scss */
 .icon-trash:before, .icon-trash.right:after {
@@ -3506,7 +3506,7 @@ html:hover [class^="icon-"] {
 
 /* line 112, scss/objects/_icons.scss */
 .icon-bookmark:before, .icon-bookmark.right:after {
-  content: '🔖'; }
+  content: ''; }
 
 /* line 112, scss/objects/_icons.scss */
 .icon-flag:before, .icon-flag.right:after {
@@ -3514,11 +3514,11 @@ html:hover [class^="icon-"] {
 
 /* line 112, scss/objects/_icons.scss */
 .icon-like:before, .icon-like.right:after {
-  content: '👍'; }
+  content: ''; }
 
 /* line 112, scss/objects/_icons.scss */
 .icon-dislike:before, .icon-dislike.right:after {
-  content: '👎'; }
+  content: ''; }
 
 /* line 112, scss/objects/_icons.scss */
 .icon-heart:before, .icon-heart.right:after {
@@ -3558,7 +3558,7 @@ html:hover [class^="icon-"] {
 
 /* line 112, scss/objects/_icons.scss */
 .icon-phone:before, .icon-phone.right:after {
-  content: '📞'; }
+  content: ''; }
 
 /* line 112, scss/objects/_icons.scss */
 .icon-phonedisabled:before, .icon-phonedisabled.right:after {
@@ -3586,11 +3586,11 @@ html:hover [class^="icon-"] {
 
 /* line 112, scss/objects/_icons.scss */
 .icon-inbox:before, .icon-inbox.right:after {
-  content: '📥'; }
+  content: ''; }
 
 /* line 112, scss/objects/_icons.scss */
 .icon-chat:before, .icon-chat.right:after {
-  content: '💬'; }
+  content: ''; }
 
 /* line 112, scss/objects/_icons.scss */
 .icon-ellipsischat:before, .icon-ellipsischat.right:after {
@@ -3602,15 +3602,15 @@ html:hover [class^="icon-"] {
 
 /* line 112, scss/objects/_icons.scss */
 .icon-user:before, .icon-user.right:after {
-  content: '👤'; }
+  content: ''; }
 
 /* line 112, scss/objects/_icons.scss */
 .icon-femaleuser:before, .icon-femaleuser.right:after {
-  content: '👧'; }
+  content: ''; }
 
 /* line 112, scss/objects/_icons.scss */
 .icon-users:before, .icon-users.right:after {
-  content: '👥'; }
+  content: ''; }
 
 /* line 112, scss/objects/_icons.scss */
 .icon-cart:before, .icon-cart.right:after {
@@ -3618,15 +3618,15 @@ html:hover [class^="icon-"] {
 
 /* line 112, scss/objects/_icons.scss */
 .icon-creditcard:before, .icon-creditcard.right:after {
-  content: '💳'; }
+  content: ''; }
 
 /* line 112, scss/objects/_icons.scss */
 .icon-dollarsign:before, .icon-dollarsign.right:after {
-  content: '💲'; }
+  content: ''; }
 
 /* line 112, scss/objects/_icons.scss */
 .icon-barchart:before, .icon-barchart.right:after {
-  content: '📊'; }
+  content: ''; }
 
 /* line 112, scss/objects/_icons.scss */
 .icon-piechart:before, .icon-piechart.right:after {
@@ -3634,7 +3634,7 @@ html:hover [class^="icon-"] {
 
 /* line 112, scss/objects/_icons.scss */
 .icon-box:before, .icon-box.right:after {
-  content: '📦'; }
+  content: ''; }
 
 /* line 112, scss/objects/_icons.scss */
 .icon-home:before, .icon-home.right:after {
@@ -3642,7 +3642,7 @@ html:hover [class^="icon-"] {
 
 /* line 112, scss/objects/_icons.scss */
 .icon-buildings:before, .icon-buildings.right:after {
-  content: '🏢'; }
+  content: ''; }
 
 /* line 112, scss/objects/_icons.scss */
 .icon-warehouse:before, .icon-warehouse.right:after {
@@ -3650,7 +3650,7 @@ html:hover [class^="icon-"] {
 
 /* line 112, scss/objects/_icons.scss */
 .icon-globe:before, .icon-globe.right:after {
-  content: '🌎'; }
+  content: ''; }
 
 /* line 112, scss/objects/_icons.scss */
 .icon-navigate:before, .icon-navigate.right:after {
@@ -3674,7 +3674,7 @@ html:hover [class^="icon-"] {
 
 /* line 112, scss/objects/_icons.scss */
 .icon-pin:before, .icon-pin.right:after {
-  content: '📍'; }
+  content: ''; }
 
 /* line 112, scss/objects/_icons.scss */
 .icon-database:before, .icon-database.right:after {
@@ -3690,19 +3690,19 @@ html:hover [class^="icon-"] {
 
 /* line 112, scss/objects/_icons.scss */
 .icon-mic:before, .icon-mic.right:after {
-  content: '🎤'; }
+  content: ''; }
 
 /* line 112, scss/objects/_icons.scss */
 .icon-volume:before, .icon-volume.right:after {
-  content: '🔈'; }
+  content: ''; }
 
 /* line 112, scss/objects/_icons.scss */
 .icon-lowvolume:before, .icon-lowvolume.right:after {
-  content: '🔉'; }
+  content: ''; }
 
 /* line 112, scss/objects/_icons.scss */
 .icon-highvolume:before, .icon-highvolume.right:after {
-  content: '🔊'; }
+  content: ''; }
 
 /* line 112, scss/objects/_icons.scss */
 .icon-airplay:before, .icon-airplay.right:after {
@@ -3710,15 +3710,15 @@ html:hover [class^="icon-"] {
 
 /* line 112, scss/objects/_icons.scss */
 .icon-camera:before, .icon-camera.right:after {
-  content: '📷'; }
+  content: ''; }
 
 /* line 112, scss/objects/_icons.scss */
 .icon-picture:before, .icon-picture.right:after {
-  content: '🌄'; }
+  content: ''; }
 
 /* line 112, scss/objects/_icons.scss */
 .icon-video:before, .icon-video.right:after {
-  content: '📹'; }
+  content: ''; }
 
 /* line 112, scss/objects/_icons.scss */
 .icon-play:before, .icon-play.right:after {
@@ -3758,7 +3758,7 @@ html:hover [class^="icon-"] {
 
 /* line 112, scss/objects/_icons.scss */
 .icon-repeat:before, .icon-repeat.right:after {
-  content: '🔁'; }
+  content: ''; }
 
 /* line 112, scss/objects/_icons.scss */
 .icon-replay:before, .icon-replay.right:after {
@@ -3766,23 +3766,23 @@ html:hover [class^="icon-"] {
 
 /* line 112, scss/objects/_icons.scss */
 .icon-shuffle:before, .icon-shuffle.right:after {
-  content: '🔀'; }
+  content: ''; }
 
 /* line 112, scss/objects/_icons.scss */
 .icon-book:before, .icon-book.right:after {
-  content: '📕'; }
+  content: ''; }
 
 /* line 112, scss/objects/_icons.scss */
 .icon-openbook:before, .icon-openbook.right:after {
-  content: '📖'; }
+  content: ''; }
 
 /* line 112, scss/objects/_icons.scss */
 .icon-notebook:before, .icon-notebook.right:after {
-  content: '📓'; }
+  content: ''; }
 
 /* line 112, scss/objects/_icons.scss */
 .icon-newspaper:before, .icon-newspaper.right:after {
-  content: '📰'; }
+  content: ''; }
 
 /* line 112, scss/objects/_icons.scss */
 .icon-grid:before, .icon-grid.right:after {
@@ -3806,7 +3806,7 @@ html:hover [class^="icon-"] {
 
 /* line 112, scss/objects/_icons.scss */
 .icon-desktop:before, .icon-desktop.right:after {
-  content: '💻'; }
+  content: ''; }
 
 /* line 112, scss/objects/_icons.scss */
 .icon-laptop:before, .icon-laptop.right:after {
@@ -3818,11 +3818,11 @@ html:hover [class^="icon-"] {
 
 /* line 112, scss/objects/_icons.scss */
 .icon-cell:before, .icon-cell.right:after {
-  content: '📱'; }
+  content: ''; }
 
 /* line 112, scss/objects/_icons.scss */
 .icon-battery:before, .icon-battery.right:after {
-  content: '🔋'; }
+  content: ''; }
 
 /* line 112, scss/objects/_icons.scss */
 .icon-highbattery:before, .icon-highbattery.right:after {
@@ -3842,7 +3842,7 @@ html:hover [class^="icon-"] {
 
 /* line 112, scss/objects/_icons.scss */
 .icon-lightbulb:before, .icon-lightbulb.right:after {
-  content: '💡'; }
+  content: ''; }
 
 /* line 112, scss/objects/_icons.scss */
 .icon-downloadcloud:before, .icon-downloadcloud.right:after {
@@ -3894,11 +3894,11 @@ html:hover [class^="icon-"] {
 
 /* line 112, scss/objects/_icons.scss */
 .icon-file:before, .icon-file.right:after {
-  content: '📄'; }
+  content: ''; }
 
 /* line 112, scss/objects/_icons.scss */
 .icon-folder:before, .icon-folder.right:after {
-  content: '📁'; }
+  content: ''; }
 
 /* line 112, scss/objects/_icons.scss */
 .icon-quote:before, .icon-quote.right:after {
@@ -3918,7 +3918,7 @@ html:hover [class^="icon-"] {
 
 /* line 112, scss/objects/_icons.scss */
 .icon-fax:before, .icon-fax.right:after {
-  content: '📠'; }
+  content: ''; }
 
 /* line 112, scss/objects/_icons.scss */
 .icon-list:before, .icon-list.right:after {
@@ -3990,11 +3990,11 @@ html:hover [class^="icon-"] {
 
 /* line 112, scss/objects/_icons.scss */
 .icon-notifications:before, .icon-notifications.right:after {
-  content: '🔔'; }
+  content: ''; }
 
 /* line 112, scss/objects/_icons.scss */
 .icon-notificationsdisabled:before, .icon-notificationsdisabled.right:after {
-  content: '🔕'; }
+  content: ''; }
 
 /* line 112, scss/objects/_icons.scss */
 .icon-clock:before, .icon-clock.right:after {
@@ -4006,7 +4006,7 @@ html:hover [class^="icon-"] {
 
 /* line 112, scss/objects/_icons.scss */
 .icon-calendar:before, .icon-calendar.right:after {
-  content: '📅'; }
+  content: ''; }
 
 /* line 112, scss/objects/_icons.scss */
 .icon-addcalendar:before, .icon-addcalendar.right:after {
@@ -4026,7 +4026,7 @@ html:hover [class^="icon-"] {
 
 /* line 112, scss/objects/_icons.scss */
 .icon-briefcase:before, .icon-briefcase.right:after {
-  content: '💼'; }
+  content: ''; }
 
 /* line 112, scss/objects/_icons.scss */
 .icon-cloud:before, .icon-cloud.right:after {
@@ -4034,7 +4034,7 @@ html:hover [class^="icon-"] {
 
 /* line 112, scss/objects/_icons.scss */
 .icon-droplet:before, .icon-droplet.right:after {
-  content: '💧'; }
+  content: ''; }
 
 /* line 112, scss/objects/_icons.scss */
 .icon-flask:before, .icon-flask.right:after {
@@ -4274,11 +4274,11 @@ html:hover [class^="icon-"] {
 
 /* line 156, scss/objects/_icons.scss */
 .icon-social-link:before, .icon-social-link.right:after {
-  content: '🔗'; }
+  content: ''; }
 
 /* line 157, scss/objects/_icons.scss */
 .icon-social-phone:before, .icon-social-phone.right:after {
-  content: '📞'; }
+  content: ''; }
 
 /* line 158, scss/objects/_icons.scss */
 .icon-social-mail:before, .icon-social-mail.right:after {
@@ -4286,7 +4286,7 @@ html:hover [class^="icon-"] {
 
 /* line 159, scss/objects/_icons.scss */
 .icon-social-like:before, .icon-social-like.right:after {
-  content: '👍'; }
+  content: ''; }
 
 /* line 160, scss/objects/_icons.scss */
 .icon-social-rss:before, .icon-social-rss.right:after {
@@ -4670,7 +4670,7 @@ html:hover [class^="icon-"] {
 
 /* line 212, scss/objects/_blocks.scss */
 .subhead {
-  font-weight: bold;
+  font-weight: normal;
   font-size: 19.2px;
   font-size: 1.2rem; }
 
@@ -4782,7 +4782,7 @@ html:hover [class^="icon-"] {
 .acc-handle {
   background: #212121;
   color: white;
-  font-family: "ff-more-web-pro", Georgia, Times, "Times New Roman", serif;
+  font-family: "Nota Serif", Georgia, Times, "Times New Roman", serif;
   display: block;
   position: relative;
   padding: 0.5rem;
@@ -4805,7 +4805,7 @@ html:hover [class^="icon-"] {
 /* line 1, scss/objects/_tabs.scss */
 .tabs {
   overflow: hidden;
-  font-family: "ff-more-web-pro", Georgia, Times, "Times New Roman", serif;
+  font-family: "Nota Serif", Georgia, Times, "Times New Roman", serif;
   margin-bottom: 1.6rem; }
   /* line 7, scss/objects/_tabs.scss */
   .tabs a {
