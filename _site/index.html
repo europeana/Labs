@@ -58,15 +58,19 @@
 	
 	<div class="block">
 		<div class="grid__item palm--one-whole push--palm--none three-quarters push--one-quarter">
-			<h2>Get your API key.</h2>
-		</div>
-		<div class="grid__item palm--one-whole push--palm--none three-quarters push--one-quarter">
-			<p class="grid grid__item desk--one-half">Sign up for your free API key and get developing! The rest is up to you.</p>
+			<form id="model" action="http://europeana.eu/portal/api/registration.html" method="POST"><h2>Register for the API</h2>
+  <fieldset>
+	<input id="requestedAction" name="requestedAction" value="RequestAPI" type="hidden" value=""/>
+	<label for="register_email">Email address</label><br/>
+	<input id="register_email" name="email" name="email" type="text" value="" maxlength="50"/><em></em><br/>
+	<input type="submit" name="submit_button" value="Register for the API"/>
+  </fieldset>
+</form>
 		</div>
 	</div>
 
 	<div class="grid__item palm--one-whole push--palm--none three-quarters push--one-quarter">
-		<h3>Get inspired by some examples.</h3>
+		<h3>Be inspired ...</h3>
 	    <ul class="post-list grid">
 	        
 	        <!--

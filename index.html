@@ -13,15 +13,12 @@ layout: default
 	
 	<div class="block">
 		<div class="grid__item palm--one-whole push--palm--none three-quarters push--one-quarter">
-			<h2>Get your API key.</h2>
-		</div>
-		<div class="grid__item palm--one-whole push--palm--none three-quarters push--one-quarter">
-			<p class="grid grid__item desk--one-half">Sign up for your free API key and get developing! The rest is up to you.</p>
+			{% include apireg.html %}
 		</div>
 	</div>
 
 	<div class="grid__item palm--one-whole push--palm--none three-quarters push--one-quarter">
-		<h3>Get inspired by some examples.</h3>
+		<h3>Be inspired ...</h3>
 	    <ul class="post-list grid">
 	        {% for post in site.categories.gallery %}
 	        {%if post.featured %}<!--

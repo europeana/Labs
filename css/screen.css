@@ -258,7 +258,7 @@ h1 {
 
 /* line 118, scss/base/_headings.scss */
 h3 {
-  font-family: "Nota Serif", Georgia, Times, "Times New Roman", serif;
+  font-family: "Noto Serif Serif", Georgia, Times, "Times New Roman", serif;
   font-style: italic;
   font-weight: normal; }
 
@@ -269,7 +269,7 @@ h6 {
 /* Subheadings */
 /* line 146, scss/base/_headings.scss */
 .subheading {
-  font-family: "Nota Serif", Georgia, Times, "Times New Roman", serif;
+  font-family: "Noto Serif Serif", Georgia, Times, "Times New Roman", serif;
   font-weight: normal; }
 
 /* line 151, scss/base/_headings.scss */
@@ -3143,7 +3143,7 @@ td {
 /* line 48, scss/objects/_nav.scss */
 .pagination {
   overflow: hidden;
-  font-family: "Nota Serif", Georgia, Times, "Times New Roman", serif;
+  font-family: "Noto Serif Serif", Georgia, Times, "Times New Roman", serif;
   margin-bottom: 1.6rem; }
   /* line 54, scss/objects/_nav.scss */
   .pagination li {
@@ -3180,7 +3180,7 @@ td {
 .breadcrumbs {
   list-style: none;
   line-height: 1;
-  font-family: "Nota Serif", Georgia, Times, "Times New Roman", serif; }
+  font-family: "Noto Serif Serif", Georgia, Times, "Times New Roman", serif; }
   /* line 101, scss/objects/_nav.scss */
   .breadcrumbs a {
     display: inline-block;
@@ -3259,7 +3259,7 @@ td {
 /* Global Font Classes */
 /* line 2, scss/objects/_text.scss */
 .font-secondary {
-  font-family: "Nota Serif", Georgia, Times, "Times New Roman", serif; }
+  font-family: "Noto Serif Serif", Georgia, Times, "Times New Roman", serif; }
 
 /* line 7, scss/objects/_text.scss */
 .intro {
@@ -4782,7 +4782,7 @@ html:hover [class^="icon-"] {
 .acc-handle {
   background: #212121;
   color: white;
-  font-family: "Nota Serif", Georgia, Times, "Times New Roman", serif;
+  font-family: "Noto Serif Serif", Georgia, Times, "Times New Roman", serif;
   display: block;
   position: relative;
   padding: 0.5rem;
@@ -4805,7 +4805,7 @@ html:hover [class^="icon-"] {
 /* line 1, scss/objects/_tabs.scss */
 .tabs {
   overflow: hidden;
-  font-family: "Nota Serif", Georgia, Times, "Times New Roman", serif;
+  font-family: "Noto Serif Serif", Georgia, Times, "Times New Roman", serif;
   margin-bottom: 1.6rem; }
   /* line 7, scss/objects/_tabs.scss */
   .tabs a {
