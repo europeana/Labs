@@ -1,0 +1,28 @@
+---
+- name: Hungarian Data
+  provider: Hungarian Theatre Museum and Institute
+  contact: me@example.com
+  datasetid: 12345
+  description: Since its founding in 1952 the Hungarian Theatre Museum and Institute has been collecting the most valuable relics and data of the Hungarian theatre.
+  tags:
+    - Art
+    - Theatre
+  links:
+    portal: http://europeana.eu/portal/search.html?query=DATA_PROVIDER%3a%22Országos+Sz%C3%ADnháztörténeti+Múzeum+és+Intézet+%5c(Hungarian+Theatre+Museum+and+Institute%5c)%2c+OSZMI%22&utm_source=featuredpartner&utm_medium=portal&utm_campaign=Featured%2Bpartner
+    console: http://europeana.eu/portal/api/console.html?function=search&query=DATA_PROVIDER%3A%22National+Gallery+of+Ireland%22&qf=&latMin=&latMax=&longMin=&longMax=&yearMin=&yearMax=&profile=standard&profile=portal&profile=facets&profile=breadcrumb&profile=minimal&profile=params&rows=12&start=1&callback=
+    provider: http://szinhaziintezet.hu/index.php?lang=en
+    preview: http://europeana.eu/portal/sp/rss-blog-cache/sp-img-fi_partner_211113_02_1.jpg
+
+- name: Spanish Stuff
+  provider: Hispana
+  contact: spanish@example.com
+  datasetid: 23446
+  description: En Cataluña, los proyectos promovidos por el Ministerio de Educación, Cultura y Deporte a través IPCE en los últimos cinco años han supuesto un gasto -vía inversión y subvención- de casi 29 millones de euros
+  tags:
+    - Art
+    - Gallery
+  links:
+    portal:  http://www.europeana.eu/portal/search.html?query=*:*&qf=PROVIDER:Hispana
+    console: http://europeana.eu/portal/api/console.html?function=search&query=DATA_PROVIDER%3A%22National+Gallery+of+Ireland%22&qf=&latMin=&latMax=&longMin=&longMax=&yearMin=&yearMax=&profile=standard&profile=portal&profile=facets&profile=breadcrumb&profile=minimal&profile=params&rows=12&start=1&callback=
+    provider: http://hispana.mcu.es/es/estaticos/contenido.cmd?pagina=estaticos/presentacion
+    preview: http://hispana.mcu.es/i18n/img/imgMS/img_MinisterioCultura.gif
