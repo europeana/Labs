@@ -1,11 +1,18 @@
 {% include start.html %}<!--
 -->{% include header.html %}<!--
 --><div class="post-list grid">
-	
-	<div class="grid__item">
-		<a href="/spaces" class="btn">&larr;Return to Spaces</a>
+
+	<div class="block block-content-header">
+		<div class="grid__item palm--one-whole push--palm--none three-quarters push--one-quarter">
+				<h2 class="title">{{page.title}}</h2>
+		</div>
 	</div>
 	
+	<div class="grid__item one-quarter tabs tabs-v">
+		<ul>
+			<li><a href="{{site.baseurl}}/spaces">&larr;&nbsp;Spaces</a></li>
+		</ul>
+	</div>
 	
 	<div class="grid__item palm--one-whole desk--three-quarters push--one-quarter">
         <div class="block block-thumb">
@@ -18,20 +25,35 @@
 
             <div class="b-text">
 
-                <h1 class="headline gamma"><a href="{{site.baseurl}}{{page.url}}">{{page.title}}</a></h1>
-                <div class="description">
-                    {{ page.content}}                        
-                </div>
-                <div class="tags">
-                    <i class="icon icon-tag"></i>
-					{% for tag in page.tags %}
-						<a href="#" class="tag_alt">{{tag}}</a>
-					{% endfor %}
+                <div class="prose description">
+                    {{ content}}                        
                 </div>
             </div>
 
         </div>
     </div>
+
+	<div class="grid__item palm--one-whole one-quarter ">
+        <div class="tags">
+            <i class="icon icon-tag"></i>
+			{% for tag in page.tags %}
+				<a href="#" class="tag_alt">{{tag}}</a>
+			{% endfor %}
+        </div>
+	</div>
+
+	<div class="grid__item palm--one-whole three-quarters push--one-quarter push--palm--none ">
+		<ul>
+			<li class="contact"><strong>Contact:</strong>&nbsp;{{ page.contact.name }}</li>
+			<li class="address"><strong>Address:</strong>&nbsp;{{ page.contact.address }}</li>
+			{% if page.contact.telephone %}
+			<li class="tel"><strong>Tel:</strong>&nbsp;{{ page.contact.telephone }}</li>
+			{% endif %}
+			<li class="email"><strong>Email:</strong>&nbsp;{{ page.contact.email }}</li>
+			<li class="website"><strong>Website:</strong>&nbsp;<a href="{{page.contact.website}}" title="{{page.title}} Website">{{ page.title }}</li>
+		</ul>
+	</div>
+
 </div>
 {% include footer.html %}<!--
 -->{% include end.html %}

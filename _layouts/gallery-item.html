@@ -1,23 +1,26 @@
 ﻿{% include start.html %}<!--
 -->{% include header.html %}<!--
 -->
-<div class="block block-content-header">
-	<div class="grid__item palm--one-whole push--palm--none three-quarters push--one-quarter">
-			<h2 class="title">{{page.title}}</h2>
+<div role="main" class="grid">
+	<div class="block block-content-header">
+		<div class="grid__item palm--one-whole push--palm--none three-quarters push--one-quarter">
+				<h2 class="title">{{page.title}}</h2>
+		</div>
 	</div>
-</div>
 
-<div class="prose">
+	{% include gallery-subnav.html %}
 
-	<img src="{{page.imageurl}}" alt="{{page.title}}" />
+	<div class="prose grid__item palm--one-whole desk--three-quarters push--one-quarter">
+		<img src="{{page.imageurl}}" alt="{{page.title}}" />
 
-    {{ content}}                        
+	    {{ content}}                        
 
-	<div class="tags">
-	    <i class="icon icon-tag"></i>
-	{% for tag in page.tags %}
-		<a href="#" class="tag_alt">{{tag}}</a>
-	{% endfor %}
+		<div class="tags">
+		    <i class="icon icon-tag"></i>
+		{% for tag in page.tags %}
+			<a href="#" class="tag_alt">{{tag}}</a>
+		{% endfor %}
+		</div>
 	</div>
 </div>
 {% include footer.html %}<!--
