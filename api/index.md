@@ -5,8 +5,6 @@ layout: api
 * TOC
 {:toc}
 
-# Working with the API 
-
 In this section you will find general information that is relevant to all the API methods.
 
 ### Request
