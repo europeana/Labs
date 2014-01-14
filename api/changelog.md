@@ -3,20 +3,21 @@ layout: api-page
 title: API Change Log
 ---
 
-* TOC
-{:toc}
+This document describes the changes of Europeana API. The changes are grouped by new API versions. We deploy new versions of the portal and the API quite regularly, but not all new versions has change in the interface. The API documentation always describes the current version of the API. We don't have (yet?) however API call to get the actual version, so the API users should see the date of changes.
 
-### Usage Limit
+### Version 2.0.6 (2013-08-09)
 
-Applications are permitted to perform up to 10000 calls in 24 hours. If you need more than that please [contact us](mailto:api@europeana.eu).
+New allowable value for the _profile_ parameter: `params`. When client adds `params` to the _profile_ parameter, the header of the response will contain a `params` key, which lists the requested and default parameters of the API call. The client can use profile _profile_ parameter in search and object calls. The parameter accepts both single and multiple values separated by comma or space (such as `&profile=standard` or `&profile=standard,params` or `&amp;profile=standard%20params`).
 
-[^datatype]: [Datatype defitions](api-introduction.html#data-types "API1-API2 Mapping")
+#### Example
 
-### Example
+```
+http://europeana.eu/api/v2/search.json?wskey=xxxxxxxx&amp;query=mona+lisa&amp;profile=standard%20params
+```
 
-The call `http://europeana.eu/api/v2/search.json?wskey=xxxxxxxx&query=mona+lisa&profile=standard%20params` returns
+returns
 
-```json
+<pre>
 {
   "apikey": "xxxxxxxxx",
   "action": "search.json",
@@ -32,19 +33,4 @@ The call `http://europeana.eu/api/v2/search.json?wskey=xxxxxxxx&query=mona+lisa&
   "totalResults": 195,
   "items": [...]
 }
-```
-
-#### Javascript
-
-And some javascript, just to check the syntax formatting.
-
-{% highlight java %}
-var sum = function() {
-    var i, x = 0;
-    for (i = 0; i < arguments.length; ++i) {
-        x += arguments[i];
-    }
-    return x;
-}
-sum(1, 2, 4); // returns 6
-{% endhighlight %}
+</pre>
