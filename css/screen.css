@@ -4843,36 +4843,6 @@ html:hover [class^="icon-"] {
   background-color: transparent;
   border-bottom: solid 1px #d2d2d2; }
 
-/* Hack for maruku_toc */
-.maruku_toc {
-  overflow: hidden;
-  font-family: "Noto Serif", Georgia, Times, "Times New Roman", serif;
-  margin-bottom: 1.6rem;
-  margin-left: 1.6px;
-  margin-right: 5rem;
-  float:left;
-  position:absolute;
-  left: -275px;
-}
-  .maruku_toc li {
-	list-style-type: none;}
-	
-  .maruku_toc a {
-    display: block;
-    padding: 1rem;
-    background: #d2d2d2; 
-    background-color: transparent;
-    border-bottom: solid 1px #d2d2d2;}
-
-    .maruku_toc a:hover, .maruku_toc a:focus, .maruku_toc a:active {
-      background: #333333;
-      color: white; }
-
-    .maruku_toc a.active {
-      background: #333333;
-      color: white; }
-/* End maruku_toc hack */
-
 /* line 1, scss/objects/_sections.scss */
 .section {
   margin: 0 0 1.6rem; }
