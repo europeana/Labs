@@ -2,7 +2,7 @@
 	<h4 class="label epsilon"> Filter by:</h4>
 	<ul class="tags tags-large">
 		{% for tag in site.tags %}
-			<li><a href="{{site.baseurl}}/gallery/{{ tag | first | slugize }}/" class="tag">{{ tag | first }}</a></li>		
+			<li><a href="{{site.baseurl}}/gallery/{{ tag | first | tags_links | slugize }}/" class="tag">{{ tag | first }}</a></li>		
 		{% endfor %}
 	</ul>
 </div>

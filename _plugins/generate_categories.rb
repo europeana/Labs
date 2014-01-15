@@ -228,23 +228,8 @@ module Jekyll
     end
     
      def tags_links(tags)
-      base_dir = @context.registers[:site].config['category_dir']
-      categories = categories.sort!.map do |tag|
-        category_dir = GenerateCategories.category_dir(base_dir, category)
-        # Make sure the category directory begins with a slash.
-        category_dir = "/#{category_dir}" unless category_dir =~ /^\//
-        "<a class='category' href='#{category_dir}/'>#{category}</a>"
-      end
-
-      case categories.length
-      when 0
-        ""
-      when 1
-        categories[0].to_s
-      else
-        categories.join(', ')
-      end
-    end
+        tags.gsub(/_|\P{Word}/, '-').gsub(/-{2,}/, '-').downcase
+     end
 
     # Outputs the post.date as formatted html, with hooks for CSS styling.
     #
