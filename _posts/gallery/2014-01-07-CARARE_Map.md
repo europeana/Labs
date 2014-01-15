@@ -1,11 +1,15 @@
 ---
 layout: gallery-item
-title: CARARE Map
-meta: Ovo je drugi meta podatek
-source: http://semantika.si/nekaj
-tags: [API, Hackathon, CaseStudy]
 category: gallery
+title: CARARE Map
+tags: [API, Hackathon, CaseStudy]
 imageurl: "http://lorempixel.com/148/148"
+contact:
+  name: Olivier
+  email: olivier@platoniq
+  website: http://www.youcoop.org
+  address: Palma
+  telephone:
 ---
 
 CARARE Map is a web-based mapping tool for archaeological/architectural sites.

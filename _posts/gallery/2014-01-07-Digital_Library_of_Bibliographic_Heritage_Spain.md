@@ -1,11 +1,15 @@
 ---
 layout: gallery-item
-title: Digital Library of Bibliographic Heritage, Spain
-meta: Ovo je drugi meta podatek
-source: http://semantika.si/nekaj
-tags: [API, Hackathon, CaseStudy]
 category: gallery
+title: Digital Library of Bibliographic Heritage, Spain
+tags: [API, Hackathon, CaseStudy]
 imageurl: "http://lorempixel.com/148/148"
+contact:
+  name: Olivier
+  email: olivier@platoniq
+  website: http://www.youcoop.org
+  address: Palma
+  telephone:
 ---
 
 As part of HISPANA, the Digital Library of Bibliographic Heritage has chosen to use the Europeana API to complement results in their own search services with relevant links from Europeana.

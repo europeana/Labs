@@ -1,11 +1,15 @@
 ---
 layout: gallery-item
-title: CH Context widget
-meta: Ovo je drugi meta podatek
-source: http://semantika.si/nekaj
-tags: [API, Hackathon, CaseStudy]
 category: gallery
+title: CH Context widget
+tags: [API, Hackathon, CaseStudy]
 imageurl: "http://lorempixel.com/148/148"
+contact:
+  name: Olivier
+  email: olivier@platoniq
+  website: http://www.youcoop.org
+  address: Palma
+  telephone:
 ---
 
 This JavaScript-based widget is able to provide links to cultural heritage materials (from Europeana or Digital Public Library of America or Polish Digital Library Federation) based on predefined item of a website on which it is embedded (via given JQuery HTML selector).

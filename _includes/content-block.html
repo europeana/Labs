@@ -1,0 +1,17 @@
+<ul>
+	{% if page.contact.name %}
+	<li class="contact"><strong>Contact:</strong>&nbsp;{{ page.contact.name }}</li>
+	{% endif %}
+	{% if page.contact.address %}
+	<li class="address"><strong>Address:</strong>&nbsp;{{ page.contact.address }}</li>
+	{% endif %}
+	{% if page.contact.telephone %}
+	<li class="tel"><strong>Tel:</strong>&nbsp;{{ page.contact.telephone }}</li>
+	{% endif %}
+	{% if page.contact.email %}
+	<li class="email"><strong>Email:</strong>&nbsp;{{ page.contact.email }}</li>
+	{% endif %}
+	{% if page.contact.website %}
+	<li class="website"><strong>Website:</strong>&nbsp;<a href="{{page.contact.website}}" title="{{page.title}} Website">{{ page.title }}</li>
+	{% endif %}
+</ul>

@@ -1,11 +1,15 @@
 ---
 layout: gallery-item
-title: Digital Humanities Observatory
-meta: Ovo je drugi meta podatek
-source: http://semantika.si/nekaj
-tags: [API, Hackathon, CaseStudy]
 category: gallery
+title: Digital Humanities Observatory
+tags: [API, Hackathon, CaseStudy]
 imageurl: "http://lorempixel.com/148/148"
+contact:
+  name: Olivier
+  email: olivier@platoniq
+  website: http://www.youcoop.org
+  address: Palma
+  telephone:
 ---
 
 The Digital Humanities Observatory has extended its API implementation to harvest the Irish related Europeana 1914-1918 stories relating to Ireland, making them available on their portal and displaying them in their experimental 'Exhibit Visualizations'.

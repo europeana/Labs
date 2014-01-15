@@ -1,11 +1,15 @@
 ---
 layout: gallery-item
-title: CERL Thesaurus Search
-meta: Ovo je drugi meta podatek
-source: http://semantika.si/nekaj
-tags: [API, Hackathon, CaseStudy]
 category: gallery
+title: CERL Thesaurus Search
+tags: [API, Hackathon, CaseStudy]
 imageurl: "http://lorempixel.com/148/148"
+contact:
+  name: Olivier
+  email: olivier@platoniq
+  website: http://www.youcoop.org
+  address: Palma
+  telephone:
 ---
 
 Through the Europeana API, users can now see the number of results in Europeana related to the authority and click through to view them.

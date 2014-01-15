@@ -1,11 +1,15 @@
 ---
 layout: gallery-item
-title: Biblioteca Virtual Ignacio Larramendi
-meta: Ovo je drugi meta podatek
-source: http://semantika.si/nekaj
-tags: [API, Hackathon, CaseStudy]
 category: gallery
+title: Biblioteca Virtual Ignacio Larramendi
+tags: [API, Hackathon, CaseStudy]
 imageurl: "http://lorempixel.com/148/148"
+contact:
+  name: Olivier
+  email: olivier@platoniq
+  website: http://www.youcoop.org
+  address: Palma
+  telephone:
 ---
 
 This API complements search results within the digital library of the Larramendi Foundation with results from Europeana.

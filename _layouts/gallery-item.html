@@ -1,27 +1,30 @@
-﻿{% include start.html %}<!--
--->{% include header.html %}<!--
--->
-<div role="main" class="grid">
-	<div class="block block-content-header">
-		<div class="grid__item palm--one-whole push--palm--none three-quarters push--one-quarter">
-				<h2 class="title">{{page.title}}</h2>
+﻿{% include item-header.html %}	
+	<div class="grid__item one-quarter tabs tabs-v">
+		<ul>
+			<li><a href="{{site.baseurl}}/gallery">&larr;&nbsp;Gallery</a></li>
+		</ul>
+	</div>
+	
+	<div class="grid__item palm--one-whole desk--one-half">
+		    <a href="{{ page.contact.website }}" title="{{page.title}} Website">
+		        <img src="{{page.imageurl}}" alt="{{page.title}}">
+		    </a>
+
+		<div class="b-text">
+		    <div class="prose description">
+		        {{ content}}                        
+		    </div>
 		</div>
+    </div>
+
+	<div class="grid__item palm--one-whole one-quarter ">
+		{% include icon-block.html %}
 	</div>
 
-	{% include gallery-subnav.html %}
-
-	<div class="prose grid__item palm--one-whole desk--three-quarters push--one-quarter">
-		<img src="{{page.imageurl}}" alt="{{page.title}}" />
-
-	    {{ content}}                        
-
-		<div class="tags">
-		    <i class="icon icon-tag"></i>
-		{% for tag in page.tags %}
-			<a href="#" class="tag_alt">{{tag}}</a>
-		{% endfor %}
-		</div>
+	<div class="grid__item palm--one-whole one-half push--palm--none ">
+		{% include content-block.html %}
 	</div>
 </div>
+
 {% include footer.html %}<!--
 -->{% include end.html %}
