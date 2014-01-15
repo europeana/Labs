@@ -1,7 +1,8 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
-	<link href='http://fonts.googleapis.com/css?family=Noto+Sans|Noto+Serif:400,700&subset=latin,greek,cyrillic,latin-ext' rel='stylesheet' type='text/css'>	    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<link href='http://fonts.googleapis.com/css?family=Noto+Sans|Noto+Serif:400,700&subset=latin,greek,cyrillic,latin-ext' rel='stylesheet' type='text/css'>	    
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<title>  Biblioteca Digital Hispánica |  Europeana Labs </title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
@@ -13,6 +14,9 @@
 	<meta http-equiv="pragma" content="no-cache">
     <link rel="stylesheet" href="/Labs/css/styleguide.css"/>
     <link rel="stylesheet" href="/Labs/css/screen.css" media="all" />
+    <link rel="stylesheet" href="/Labs/css/labs.css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="/Labs/js/labs.js"></script>
 </head>
 <body class="sg-single-pattern svg"><!--
 -->﻿<!-- Begin header -->
@@ -35,7 +39,7 @@
         </form>	<nav id="nav" class="nav">
             <ul>
                 <li><a href="/Labs/" class="current">Home</a></li>
-                <li><a href="/Labs/api">API</a></li>
+                <li><a href="/Labs/documentation">Documentation</a></li>
                 <li><a href="/Labs/gallery">Gallery</a></li>
                 <li><a href="/Labs/data">Datasets</a></li>
                 <li><a href="/Labs/spaces">Spaces</a></li> 
@@ -47,31 +51,43 @@
 </header>
 <!-- End header --><!--
 -->
-<div class="block block-content-header">
-	<div class="grid__item palm--one-whole push--palm--none three-quarters push--one-quarter">
-			<h2 class="title">Biblioteca Digital Hispánica</h2>
+<div role="main" class="grid">
+	<div class="block block-content-header">
+		<div class="grid__item palm--one-whole push--palm--none three-quarters push--one-quarter">
+				<h2 class="title">Biblioteca Digital Hispánica</h2>
+		</div>
 	</div>
-</div>
 
-<div class="prose">
+		<div class="grid__item one-quarter palm--one-whole">
+		<ul class="tabs tabs-v">
+			<li><a href="/Labs/gallery" title="Application Gallery">Application Gallery</a></li>
+		</ul>		
+		
+		<ul class="tabs tabs-v">
+			<li><a href="#">Help Improve This Content</a></li>
+		</ul>
+	</div>
 
-	<img src="http://lorempixel.com/148/148" alt="Biblioteca Digital Hispánica" />
 
-    <p>The National Library of <strong>Spain</strong> has implemented the Europeana API in their online portal, Biblioteca Digital Hispánica. The portal now enables their users to access related Europeana content via single link on their search result header.</p>
+	<div class="prose grid__item palm--one-whole desk--three-quarters push--one-quarter">
+		<img src="http://lorempixel.com/148/148" alt="Biblioteca Digital Hispánica" />
+
+	    <p>The National Library of <strong>Spain</strong> has implemented the Europeana API in their online portal, Biblioteca Digital Hispánica. The portal now enables their users to access related Europeana content via single link on their search result header.</p>
 
 <h3 id="what_they_do">What they do</h3>
 
 <p>Other stuff.</p>                        
 
-	<div class="tags">
-	    <i class="icon icon-tag"></i>
-	
-		<a href="#" class="tag_alt">API</a>
-	
-		<a href="#" class="tag_alt">Hackathon</a>
-	
-		<a href="#" class="tag_alt">CaseStudy</a>
-	
+		<div class="tags">
+		    <i class="icon icon-tag"></i>
+		
+			<a href="#" class="tag_alt">API</a>
+		
+			<a href="#" class="tag_alt">Hackathon</a>
+		
+			<a href="#" class="tag_alt">CaseStudy</a>
+		
+		</div>
 	</div>
 </div>
 ﻿<!-- Begin Footer -->
@@ -79,7 +95,7 @@
     <div class="lc">
         <ul class="nav-footer">
             <li><a href="/">Home</a></li>
-            <li><a href="/about">About us</a></li>
+            <li><a href="/Labs/about">About us</a></li>
             <li><a href="http://europeana.eu/portal/rights/terms-and-policies.html">Terms &amp; policies</a></li>
             <li><a href="#">Sitemap</a></li>
         </ul>
