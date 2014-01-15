@@ -1,7 +1,7 @@
 ---
 layout: gallery-item
 category: gallery
-permalink: carare-map
+permalink: gallery/carare-map
 title: CARARE Map
 tags: [API Implementation]
 imageurl: "http://lorempixel.com/148/148"

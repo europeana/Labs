@@ -1,16 +1,18 @@
 ---
 layout: gallery-item
 category: gallery
-permalink: biblioteca-virtual
+permalink: gallery/biblioteca-virtual
 title: Biblioteca Virtual Ignacio Larramendi
-tags: [API Implementation]
 imageurl: "http://lorempixel.com/148/148"
 contact:
-  name: Olivier
-  email: olivier@platoniq
-  website: http://www.youcoop.org
-  address: Palma
+  name:
+  email:
+  website:
+  address:
   telephone:
+tags: [API Implementation]
+links:
+  - http://www.larramendi.es/i18n/consulta/busqueda.cmd
 ---
 
 This API complements search results within the digital library of the Larramendi Foundation with results from Europeana.

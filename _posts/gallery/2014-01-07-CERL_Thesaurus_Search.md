@@ -1,7 +1,7 @@
 ---
 layout: gallery-item
 category: gallery
-permalink: cerl-thesaurus
+permalink: gallery/cerl-thesaurus
 title: CERL Thesaurus Search
 tags: [API Implementation]
 imageurl: "http://lorempixel.com/148/148"

@@ -1,0 +1,11 @@
+<div>
+	{% if page.links %}
+		<h6>Learn more about {{page.title}}:</h6>
+		<ul>
+		{% for link in page.links %}
+			<li><i class="icon icon-link"></i>
+			<a href="{{link}}" class="">{{link}}</a></li>
+		{% endfor %}
+		</ul>
+	{% endif %}
+</div>

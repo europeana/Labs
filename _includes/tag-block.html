@@ -1,0 +1,8 @@
+{% if page.tags %}
+	<div class="tags">
+		<i class="icon icon-tag"></i>
+		{% for tag in page.tags %}
+			<a href="#" class="tag_alt">{{tag}}</a>
+		{% endfor %}
+	</div>
+{% endif %}

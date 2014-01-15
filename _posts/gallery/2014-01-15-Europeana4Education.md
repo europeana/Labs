@@ -1,7 +1,7 @@
 ---
 layout: gallery-item
 category: gallery
-permalink: e4e
+permalink: gallery/e4e
 title: Europeana4Education (E4E)
 tags: [Hackathon Prototype]
 imageurl: "http://lorempixel.com/148/148"

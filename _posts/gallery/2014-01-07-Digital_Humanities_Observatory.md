@@ -1,7 +1,7 @@
 ---
 layout: gallery-item
 category: gallery
-permalink: digital-humanities-observatory
+permalink: gallery/digital-humanities-observatory
 title: Digital Humanities Observatory
 tags: [API Implementation]
 imageurl: "http://lorempixel.com/148/148"

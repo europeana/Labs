@@ -1,7 +1,7 @@
 ---
 layout: gallery-item
 category: gallery
-permalink: ch-context-widget
+permalink: gallery/ch-context-widget
 title: CH Context widget
 tags: [API Implementation]
 imageurl: "http://lorempixel.com/148/148"
