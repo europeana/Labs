@@ -192,6 +192,7 @@ module Jekyll
     def self.category_dir(base_dir, category, tags)
       base_dir = (base_dir || category).gsub(/^\/*(.*)\/*$/, '\1')
       category = category.gsub(/_|\P{Word}/, '-').gsub(/-{2,}/, '-').downcase
+      tags = tags.gsub(/_|\P{Word}/, '-').gsub(/-{2,}/, '-').downcase
       File.join(base_dir, tags)
     end
 
