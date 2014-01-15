@@ -3,7 +3,7 @@ layout: gallery-list
 ---
 <div class="grid__item three-quarters palm--one-whole">
     <ul class="post-list grid">
-        {% for post in site.categories.gallery %}<!--
+        {% for post in site.tags[page.tag] %}<!--
         --><li class="grid__item one-whole desk--one-half">
             <div class="block block-thumb {%if post.featured != true %}  block-thumb-small {% endif %}">
 
@@ -35,34 +35,4 @@ layout: gallery-list
             </div>
         </li>{% endfor %}
     </ul>
-    {% if paginator.total_pages >1%}
- 	<ol class="pagination">
-        <li class="is-disabled"><a href="{{site.baseurl}}/">← First</a></li>
-
-        {% if paginator.previous_page %}
-          <li class="arrow"><a href="{{site.baseurl}}/page{{ paginator.previous_page }}/">←</a></li>
-        {% else %}
-          <span class="previous">←</span>
-        {% endif %}
-
-        {% for page in (1..paginator.total_pages) %}
-            {% if page == paginator.page %}
-                 <li class="current"><a href="{{site.baseurl}}/page{{page}}/">{{ page }}</a></li>
-            {% elsif page == 1 %}
-                <li><a href="{{site.baseurl}}/">{{ page }}</a></li>
-            {% else %}
-                <li><a href="{{site.baseurl}}/page{{page}}/">{{ page }}</a></li>
-            {% endif %}
-        {% endfor %}
-             
-
-        {% if paginator.next_page %}
-            <li class="arrow"><a href="{{site.baseurl}}/page{{ paginator.next_page }}/">→</a></li>
-        {% else %}
-            <span class="next ">→</span>
-        {% endif %}
-
-        <li class=""><a href="{{site.baseurl}}/page{{ paginator.total_pages }}/">Last →</a></li>
-    </ol>
-{% endif %}
-</div>
+    
