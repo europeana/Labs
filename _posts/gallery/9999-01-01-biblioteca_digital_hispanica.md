@@ -1,11 +1,10 @@
 ---
 layout: gallery-item
 category: gallery
+permalink: biblioteca
 title: Biblioteca Digital Hispánica
 tags: 
-  - API
-  - Hackathon
-  - CaseStudy
+  - API Implementation
 imageurl: "http://lorempixel.com/148/148"
 featured: true
 published: true

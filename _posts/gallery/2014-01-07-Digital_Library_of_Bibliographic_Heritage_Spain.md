@@ -1,8 +1,9 @@
 ---
 layout: gallery-item
 category: gallery
+permalink: bibheritagespain
 title: Digital Library of Bibliographic Heritage, Spain
-tags: [API, Hackathon, CaseStudy]
+tags: [API Implementation]
 imageurl: "http://lorempixel.com/148/148"
 contact:
   name: Olivier

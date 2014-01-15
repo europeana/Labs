@@ -1,8 +1,9 @@
 ---
 layout: gallery-item
 category: gallery
+permalink: carare-map
 title: CARARE Map
-tags: [API, Hackathon, CaseStudy]
+tags: [API Implementation]
 imageurl: "http://lorempixel.com/148/148"
 contact:
   name: Olivier
