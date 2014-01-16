@@ -21,4 +21,12 @@
 
 .pull-right{float:right;}
 
+.block-thumb {
+	display: table;
+	width: 100%;
+	border-top: solid 2px #333333;
+	padding-top: 1rem;
+	margin-bottom: 1.6rem;
+}
+
 
