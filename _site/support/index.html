@@ -27,7 +27,6 @@
 	<script src="/js/jquery.lunr.search.js" type="text/javascript" charset="utf-8"></script>
 	
 	
-	
     <script src="/js/labs.js"></script>
 </head>
 <body class="sg-single-pattern svg"><!--
@@ -76,12 +75,82 @@
 <div class="prose grid__item palm--one-whole push--palm--none three-quarters push--one-quarter">
 
 	<p>Got questions about the Europeana API?</p> 
+	<div id="contactForm">
+		<div id="messageContainer" class="alert alert-danger">
+			
+		</div>
+		<form id="frmContact">
+		    <label>Name</label>
+		    <input id="name" name="name" placeholder="Type Here"/>
+		            
+		    <label>Email</label>
+		    <input id="email" name="email" type="email" placeholder="Type Here"/>
+		    
+		    <label>Subject</label>
+		    <input id="subject" name="subject" placeholder="Type Here"/>		    
+		            
+		    <label>Message</label>
+		    <textarea id="message" name="message" placeholder="Your message"> </textarea>
+		    
+		    <label>Captcha</label>
+		    <table>
+		    	<tr>
+		    		<td><img id="imageCaptcha" src="http://dev.museu.ms/captcha" alt="" /></td>
+		    		<td><input id="captcha" name="captcha" type="text" placeholder="Enter code from image"/></td>
+		    	</tr>
+		    </table>
+		    
+		    <button type="submit" id="submit" name="submit" class="pull-right" onclick="sendEmail();return false;">Submit</button>
+	        <br class="clear"/>
+		</form>
+	</div>
+	<p>Or</p>	
 	<ul>
 		<li>Email us at <a href="api@europeana.eu" title="Email our API team">api@europeana.eu</a></li>
 		<li>or ask our <a href="https://groups.google.com/forum/#!forum/europeanaapi" title="API Forum on Google Groups">API forum</a></li>
 		<li>Follow us on Twitter at <a href="https://twitter.com/europeanaeu" title="@EuropeanaEU on Twitter">@europeanaeu</a></li>
-	</ul>
-</div><!--
+		
+	</ul>	
+	<br/>
+	<br/>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#messageContainer").hide();
+});
+
+function sendEmail(){
+	var url = "http://dev.museu.ms/Labs/SendEmail?name="+$("#name").val()+"&email="+$("#email").val()+"&subject="+$("#subject").val()+"&message="+$("#message").val()+"&captcha="+$("#captcha").val();
+	 	$.ajax({
+	 			url: url,
+                dataType: 'jsonp',
+                error:function(xhr, status, error){
+                	alert(error);
+                },
+                success:function(data){
+                	
+                	if(data.success==false){
+	                	$("#messageContainer").addClass("alert-error");
+	                	$("#messageContainer").html(data.Message);
+	                	$("#messageContainer").show();
+                	}else{
+						$("#messageContainer").removeClass("alert-error").addClass("alert-success");
+	                	$("#messageContainer").html(data.Message);
+	                	$("#frmContact").hide();
+                	}
+                	
+					var d = new Date();
+					$("#imageCaptcha").attr("src", "http://dev.museu.ms/captcha?"+d.getTime());
+                }
+			});
+				
+
+               
+}
+
+
+</script><!--
 -->﻿<!-- Begin Footer -->
 <footer class="footer" role="contentinfo">
     <div class="lc">
