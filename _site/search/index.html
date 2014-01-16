@@ -37,7 +37,8 @@
         <a href="/" class="logo ir">Europeana</a>	
 		<a href="#" class="nav-toggle nav-toggle-search icon-search"><span class="is-vishidden">Search</span></a>
         <a href="#" class="nav-toggle nav-toggle-menu icon-rows"><span class="is-vishidden">Menu</span></a>
-	<div id="search">
+
+		<a id="rssUrl" class="pull-right" href="/rss.xml"><img src="/img/rss24.png" /></a>
         <form id="search" action="/search" method="get" class="inline-form search-form">
             <fieldset>
                 <legend class="is-vishidden">Search</legend>
@@ -48,8 +49,7 @@
                     <span class="is-vishidden">Search</span>
                 </button>
             </fieldset>
-        </form>	
-        </div>
+        </form>
         <nav id="nav" class="nav">
             <ul>
                 <li><a href="/" class="current">Home</a></li>
@@ -58,6 +58,7 @@
                 <li><a href="/datasets">Datasets</a></li>
                 <li><a href="/spaces">Spaces</a></li> 
 <!--                <li><a href="/events">Events</a></li> -->
+				<li><a href="/search">Search</a></li>
                 <li><a href="/support">Support</a></li>
             </ul>
         </nav>
@@ -112,6 +113,9 @@
       entries:  '.entries',                 // jQuery selector for the element to contain the results list, must be a child of the results element above.
       template: '#search-results-template'  // jQuery selector for the Mustache.js template
     });
+    
+    inputFieldQ.focus();
+    
    }catch(e){
    	alert(e.message);
    }
