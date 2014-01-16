@@ -29,4 +29,21 @@
 	margin-bottom: 1.6rem;
 }
 
+#search-results{
+	max-width: 1140px;
+	margin-left:auto;
+	margin-right:auto;
+}
 
+.block-content-header{
+	margin-bottom: 2rem;
+}
+
+#search-results li.grid__item{
+	padding-left: 0px;
+}
+
+#search-results div.b-thumb
+{
+	width:15%;
+}

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"
+  xmlns:content="http://purl.org/rss/1.0/modules/content/"
+  xmlns:dc="http://purl.org/dc/elements/1.1/"
+  xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
+  xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
+  <channel>
+    <title>Labs</title>
+    <link>http://localhost:4000/</link>
+    <description>RSS feed for Labs</description>
+    <pubDate>Fri, 01 Jan 9999 00:00:00 +0100</pubDate>
+    <item>
+      <title>Biblioteca Digital Hispánica</title>
+      <link>http://localhost:4000//gallery/biblioteca</link>
+      <description>&lt;p&gt;The National Library of Spain has implemented the Europeana API in their online portal, Biblioteca Digital Hispánica. The portal now enables their users to access related Europeana content via single link on their search result header.&lt;/p&gt;</description>
+      <pubDate>Fri, 01 Jan 9999 00:00:00 +0100</pubDate>
+      <guid>http://localhost:4000//gallery/biblioteca</guid>
+      <dc:date>9999-01-01T00:00:00+01:00</dc:date>
+    </item>
+    <item>
+      <title>ATHENA</title>
+      <link>http://localhost:4000//gallery/athena</link>
+      <description>&lt;p&gt;ATHENA is a project developing metadata exchange standards for the museum domain and aggregating museum content for Europeana. Through our API, they have built a &lt;a href='http://www.athenaeurope.org/index.php?en/191/europeana-opensearch'&gt;search service&lt;/a&gt; where users can perform keyword searches and structured searches to find and view Europeana items.&lt;/p&gt;</description>
+      <pubDate>Fri, 01 Jan 9999 00:00:00 +0100</pubDate>
+      <guid>http://localhost:4000//gallery/athena</guid>
+      <dc:date>9999-01-01T00:00:00+01:00</dc:date>
+    </item>
+    <item>
+      <title>Europeana4Education (E4E)</title>
+      <link>http://localhost:4000//gallery/e4e</link>
+      <description>&lt;p&gt;E4E is a set of two widgets that automatically suggest cultural resources from Europeana and learning resources from Open Discovery Space. It is aimed at authors of educational pathways. E4E widgets can be integrated into an authoring environment such as OMEKA to augment the authoring process and to enhance the educational impact of a pathway. The main rationale behind E4E development was to explore the educational uses of items on Europeana. The E4E widgets were developed in the context of the Natural Europe and Open Discovery Space projects. Winner in the category ‘Social Inclusion’&lt;/p&gt;</description>
+      <pubDate>Wed, 15 Jan 2014 00:00:00 +0100</pubDate>
+      <guid>http://localhost:4000//gallery/e4e</guid>
+      <dc:date>2014-01-15T00:00:00+01:00</dc:date>
+    </item>
+    <item>
+      <title>i-Matériel.Lab | Paris</title>
+      <link>http://localhost:4000//spaces/2014/01/09/paris/</link>
+      <description>&lt;p&gt;i-Matériel.Lab is the user driven innovation platform dedicated to Cultural Heritage and Tourism, specialized in mobile products and services (Smartphones, touch screen Tablets and Smart Objects).&lt;/p&gt;</description>
+      <pubDate>Thu, 09 Jan 2014 00:00:00 +0100</pubDate>
+      <guid>http://localhost:4000//spaces/2014/01/09/paris/</guid>
+      <dc:date>2014-01-09T00:00:00+01:00</dc:date>
+    </item>
+    <item>
+      <title>AALTO Fab Lab | Helsinki</title>
+      <link>http://localhost:4000//aalto</link>
+      <description>&lt;p&gt;FabLab (fabrication laboratory) is a small-scale workshop for digital fabrication, started by MIT. In a Fablab you can find machines such as the lasercutter, vinyl cutter, desktop CNC milling machine and 3D printer and electronics prototyping equipment.&lt;/p&gt;</description>
+      <pubDate>Thu, 09 Jan 2014 00:00:00 +0100</pubDate>
+      <guid>http://localhost:4000//aalto</guid>
+      <dc:date>2014-01-09T00:00:00+01:00</dc:date>
+    </item>
+    <item>
+      <title>Future Classroom Lab | Brussels</title>
+      <link>http://localhost:4000//future-classroom-lab</link>
+      <description>&lt;p&gt;The Future Classroom Lab in Brussels is a fully equipped, reconfigurable, teaching and learning space developed by &lt;a href='http://eun.org'&gt;European Schoolnet&lt;/a&gt;, its 30 supporting Ministries of Education and leading educational technology providers.&lt;/p&gt;</description>
+      <pubDate>Thu, 09 Jan 2014 00:00:00 +0100</pubDate>
+      <guid>http://localhost:4000//future-classroom-lab</guid>
+      <dc:date>2014-01-09T00:00:00+01:00</dc:date>
+    </item>
+    <item>
+      <title>Digital Library of Bibliographic Heritage, Spain</title>
+      <link>http://localhost:4000//gallery/bibheritagespain</link>
+      <description>&lt;p&gt;As part of HISPANA, the Digital Library of Bibliographic Heritage has chosen to use the Europeana API to complement results in their own search services with relevant links from Europeana.&lt;/p&gt;</description>
+      <pubDate>Tue, 07 Jan 2014 00:00:00 +0100</pubDate>
+      <guid>http://localhost:4000//gallery/bibheritagespain</guid>
+      <dc:date>2014-01-07T00:00:00+01:00</dc:date>
+    </item>
+    <item>
+      <title>Digital Humanities Observatory</title>
+      <link>http://localhost:4000//gallery/digital-humanities-observatory</link>
+      <description>&lt;p&gt;The Digital Humanities Observatory has extended its API implementation to harvest the Irish related Europeana 1914-1918 stories relating to Ireland, making them available on their portal and displaying them in their experimental ‘Exhibit Visualizations’.&lt;/p&gt;</description>
+      <pubDate>Tue, 07 Jan 2014 00:00:00 +0100</pubDate>
+      <guid>http://localhost:4000//gallery/digital-humanities-observatory</guid>
+      <dc:date>2014-01-07T00:00:00+01:00</dc:date>
+    </item>
+    <item>
+      <title>CH Context widget</title>
+      <link>http://localhost:4000//gallery/ch-context-widget</link>
+      <description>&lt;p&gt;This JavaScript-based widget is able to provide links to cultural heritage materials (from Europeana or Digital Public Library of America or Polish Digital Library Federation) based on predefined item of a website on which it is embedded (via given JQuery HTML selector).&lt;/p&gt;</description>
+      <pubDate>Tue, 07 Jan 2014 00:00:00 +0100</pubDate>
+      <guid>http://localhost:4000//gallery/ch-context-widget</guid>
+      <dc:date>2014-01-07T00:00:00+01:00</dc:date>
+    </item>
+    <item>
+      <title>CERL Thesaurus Search</title>
+      <link>http://localhost:4000//gallery/cerl-thesaurus</link>
+      <description>&lt;p&gt;Through the Europeana API, users can now see the number of results in Europeana related to the authority and click through to view them.&lt;/p&gt;</description>
+      <pubDate>Tue, 07 Jan 2014 00:00:00 +0100</pubDate>
+      <guid>http://localhost:4000//gallery/cerl-thesaurus</guid>
+      <dc:date>2014-01-07T00:00:00+01:00</dc:date>
+    </item>
+    <item>
+      <title>CARARE Map</title>
+      <link>http://localhost:4000//gallery/carare-map</link>
+      <description>&lt;p&gt;CARARE Map is a web-based mapping tool for archaeological/architectural sites.&lt;/p&gt;</description>
+      <pubDate>Tue, 07 Jan 2014 00:00:00 +0100</pubDate>
+      <guid>http://localhost:4000//gallery/carare-map</guid>
+      <dc:date>2014-01-07T00:00:00+01:00</dc:date>
+    </item>
+    <item>
+      <title>Biblioteca Virtual Ignacio Larramendi</title>
+      <link>http://localhost:4000//gallery/biblioteca-virtual</link>
+      <description>&lt;p&gt;This API complements search results within the digital library of the Larramendi Foundation with results from Europeana.&lt;/p&gt;</description>
+      <pubDate>Tue, 07 Jan 2014 00:00:00 +0100</pubDate>
+      <guid>http://localhost:4000//gallery/biblioteca-virtual</guid>
+      <dc:date>2014-01-07T00:00:00+01:00</dc:date>
+    </item>
+    <item>
+      <title>Platoniq | Palma</title>
+      <link>http://localhost:4000//platoniq</link>
+      <description>&lt;p&gt;The Future Classroom Lab in Brussels is a fully equipped, reconfigurable, teaching and learning space developed by &lt;a href='http://eun.org'&gt;European Schoolnet&lt;/a&gt;, its 30 supporting Ministries of Education and leading educational technology providers.&lt;/p&gt;</description>
+      <pubDate>Sat, 04 Jan 2014 00:00:00 +0100</pubDate>
+      <guid>http://localhost:4000//platoniq</guid>
+      <dc:date>2014-01-04T00:00:00+01:00</dc:date>
+    </item>
+    <dc:date>9999-01-01T00:00:00+01:00</dc:date>
+  </channel>
+</rss>

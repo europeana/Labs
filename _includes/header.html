@@ -4,18 +4,20 @@
         <a href="{{site.baseurl}}/" class="logo ir">Europeana</a>	
 		<a href="#" class="nav-toggle nav-toggle-search icon-search"><span class="is-vishidden">Search</span></a>
         <a href="#" class="nav-toggle nav-toggle-menu icon-rows"><span class="is-vishidden">Menu</span></a>
-
-        <form action="#" method="post" class="inline-form search-form">
+	<div id="search">
+        <form id="search" action="/search" method="get" class="inline-form search-form">
             <fieldset>
                 <legend class="is-vishidden">Search</legend>
                 <label for="search-field" class="is-vishidden">Search</label>
-                <input type="search" placeholder="Search" id="search-field" class="search-field">
+                <input type="text" placeholder="Search" id="search-query" name="q" class="search-field" autocomplete="off">
                 <button class="search-submit">
                     <span class="icon-search" aria-hidden="true"></span>
                     <span class="is-vishidden">Search</span>
                 </button>
             </fieldset>
-        </form>	<nav id="nav" class="nav">
+        </form>	
+        </div>
+        <nav id="nav" class="nav">
             <ul>
                 <li><a href="{{site.baseurl}}/" class="current">Home</a></li>
                 <li><a href="{{site.baseurl}}/documentation">Documentation</a></li>

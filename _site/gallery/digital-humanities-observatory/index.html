@@ -19,7 +19,15 @@
 	<style type="text/css">.tk-dejarip{font-family:"dejarip",sans-serif;}.tk-ff-more-web-pro{font-family:"ff-more-web-pro",serif;}</style><link rel="stylesheet" href="http://use.typekit.net/c/a93097/dejarip:i4:i7:n4:n7,ff-more-web-pro:i4:i5:n4:n5.Pyq:N:2,Pyv:N:2,Pyp:N:2,Pyt:N:2,VVb:N:2,VVf:N:2,VQP:N:2,VVd:N:2/d?3bb2a6e53c9684ffdc9a9bf71c5b2a6272be58e6824d2f2e6fb239e8cf4203049013567d271eb11e88b702a26bb8a567985e44d5fde55c54845fe9b45d924f4b355fc32a2986e0d7fa1266c0d2c63e917d6d7dab80e03b8c354710c21216000daed902279c6555b7e05ebfc7ad2788d2c5b10957"><script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     
     <link rel="stylesheet" href="/css/labs.css" />
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="/js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/js/lunr.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/js/mustache.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/js/date.format.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/js/URI.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/js/jquery.lunr.search.js" type="text/javascript" charset="utf-8"></script>
+	
+	
+	
     <script src="/js/labs.js"></script>
 </head>
 <body class="sg-single-pattern svg"><!--
@@ -29,18 +37,20 @@
         <a href="/" class="logo ir">Europeana</a>	
 		<a href="#" class="nav-toggle nav-toggle-search icon-search"><span class="is-vishidden">Search</span></a>
         <a href="#" class="nav-toggle nav-toggle-menu icon-rows"><span class="is-vishidden">Menu</span></a>
-
-        <form action="#" method="post" class="inline-form search-form">
+	<div id="search">
+        <form id="search" action="/search" method="get" class="inline-form search-form">
             <fieldset>
                 <legend class="is-vishidden">Search</legend>
                 <label for="search-field" class="is-vishidden">Search</label>
-                <input type="search" placeholder="Search" id="search-field" class="search-field">
+                <input type="text" placeholder="Search" id="search-query" name="q" class="search-field" autocomplete="off">
                 <button class="search-submit">
                     <span class="icon-search" aria-hidden="true"></span>
                     <span class="is-vishidden">Search</span>
                 </button>
             </fieldset>
-        </form>	<nav id="nav" class="nav">
+        </form>	
+        </div>
+        <nav id="nav" class="nav">
             <ul>
                 <li><a href="/" class="current">Home</a></li>
                 <li><a href="/documentation">Documentation</a></li>
@@ -75,9 +85,7 @@
 
 		<div class="b-text">
 		    <div class="prose description">
-		        <p>The Digital Humanities Observatory has extended its API implementation to harvest the Irish related Europeana 1914-1918 stories relating to Ireland, making them available on their portal and displaying them in their experimental ‘Exhibit Visualizations’.</p>
-
-<p>The organisation is a Europeana Network partner and was established under the auspices of the Royal Irish Academy to manage and co-ordinate the increasingly complex e-resources created in the arts and humanities Their Europeana API implementation enriches search results on their website. It pulls in related Europeana content based on a mix of keywords in the item’s metadata. Related content is then presented by subject, creator and location (based on the design of the Europeana portal).</p>
+		        <p>The Digital Humanities Observatory has extended its API implementation to harvest the Irish related Europeana 1914-1918 stories relating to Ireland, making them available on their portal and displaying them in their experimental ‘Exhibit Visualizations’.</p><p>The organisation is a Europeana Network partner and was established under the auspices of the Royal Irish Academy to manage and co-ordinate the increasingly complex e-resources created in the arts and humanities Their Europeana API implementation enriches search results on their website. It pulls in related Europeana content based on a mix of keywords in the item’s metadata. Related content is then presented by subject, creator and location (based on the design of the Europeana portal).</p>
 				<div>
 	
 </div>

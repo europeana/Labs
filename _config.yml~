@@ -12,4 +12,4 @@ baseurl:
 lunr_search:
   excludes: [rss.xml, atom.xml]
 
-url: "http://localhost:4000/"
+url: ""

@@ -19,7 +19,15 @@
 	<style type="text/css">.tk-dejarip{font-family:"dejarip",sans-serif;}.tk-ff-more-web-pro{font-family:"ff-more-web-pro",serif;}</style><link rel="stylesheet" href="http://use.typekit.net/c/a93097/dejarip:i4:i7:n4:n7,ff-more-web-pro:i4:i5:n4:n5.Pyq:N:2,Pyv:N:2,Pyp:N:2,Pyt:N:2,VVb:N:2,VVf:N:2,VQP:N:2,VVd:N:2/d?3bb2a6e53c9684ffdc9a9bf71c5b2a6272be58e6824d2f2e6fb239e8cf4203049013567d271eb11e88b702a26bb8a567985e44d5fde55c54845fe9b45d924f4b355fc32a2986e0d7fa1266c0d2c63e917d6d7dab80e03b8c354710c21216000daed902279c6555b7e05ebfc7ad2788d2c5b10957"><script type="text/javascript">try{Typekit.load();}catch(e){}</script>
     
     <link rel="stylesheet" href="/css/labs.css" />
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="/js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/js/lunr.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/js/mustache.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/js/date.format.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/js/URI.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/js/jquery.lunr.search.js" type="text/javascript" charset="utf-8"></script>
+	
+	
+	
     <script src="/js/labs.js"></script>
 </head>
 <body class="sg-single-pattern svg"><!--
@@ -29,18 +37,20 @@
         <a href="/" class="logo ir">Europeana</a>	
 		<a href="#" class="nav-toggle nav-toggle-search icon-search"><span class="is-vishidden">Search</span></a>
         <a href="#" class="nav-toggle nav-toggle-menu icon-rows"><span class="is-vishidden">Menu</span></a>
-
-        <form action="#" method="post" class="inline-form search-form">
+	<div id="search">
+        <form id="search" action="/search" method="get" class="inline-form search-form">
             <fieldset>
                 <legend class="is-vishidden">Search</legend>
                 <label for="search-field" class="is-vishidden">Search</label>
-                <input type="search" placeholder="Search" id="search-field" class="search-field">
+                <input type="text" placeholder="Search" id="search-query" name="q" class="search-field" autocomplete="off">
                 <button class="search-submit">
                     <span class="icon-search" aria-hidden="true"></span>
                     <span class="is-vishidden">Search</span>
                 </button>
             </fieldset>
-        </form>	<nav id="nav" class="nav">
+        </form>	
+        </div>
+        <nav id="nav" class="nav">
             <ul>
                 <li><a href="/" class="current">Home</a></li>
                 <li><a href="/documentation">Documentation</a></li>
@@ -75,21 +85,13 @@
 
 		<div class="b-text">
 		    <div class="prose description">
-		        <p>The Future Classroom Lab in Brussels is a fully equipped, reconfigurable, teaching and learning space developed by <a href="http://eun.org">European Schoolnet</a>, its 30 supporting Ministries of Education and leading educational technology providers.</p>
-
-<p>It has been designed as a “Living Lab’ for how ICT can be implemented in schools and where policy makers, ICT suppliers, teachers and educational researchers can come together to:</p>
-
-<ul>
+		        <p>The Future Classroom Lab in Brussels is a fully equipped, reconfigurable, teaching and learning space developed by <a href='http://eun.org'>European Schoolnet</a>, its 30 supporting Ministries of Education and leading educational technology providers.</p><p>It has been designed as a “Living Lab’ for how ICT can be implemented in schools and where policy makers, ICT suppliers, teachers and educational researchers can come together to:</p><ul>
 <li>Rethink how new technologies can support the educational reform process at both national and European level.</li>
 
 <li>Engage in regular workshops, seminars and courses on how existing and emerging technologies can have a transformative effect on teaching and learning processes.</li>
 
 <li>Develop new economic models in order that teaching and learning activities designed for the future classroom can be mainstreamed and taken to scale.</li>
-</ul>
-
-<p>Results from a ‘family’ of related European Schoolnet projects, such as iTEC and CPDLab projects will particularly be made available and sustained as part of the Future Classroom Lab initiative.</p>
-
-<p><a href="http://fcl.eun.org/learning-spaces">Discover our learning spaces!</a></p>                        
+</ul><p>Results from a ‘family’ of related European Schoolnet projects, such as iTEC and CPDLab projects will particularly be made available and sustained as part of the Future Classroom Lab initiative.</p><p><a href='http://fcl.eun.org/learning-spaces'>Discover our learning spaces!</a></p>                        
 		    </div>
 		</div>
     </div>

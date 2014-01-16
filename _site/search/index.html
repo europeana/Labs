@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
 	<link href='http://fonts.googleapis.com/css?family=Noto+Sans|Noto+Serif:400,700&subset=latin,greek,cyrillic,latin-ext' rel='stylesheet' type='text/css'>	    
@@ -68,36 +68,64 @@
 
 	<div class="block block-content-header">
 		<div class="grid__item palm--one-whole push--palm--none three-quarters push--one-quarter">
-				<h1 class="title">Europeana Labs</h1>
+				<h1 class="title">Search results</h1>
 				<p class="subhead grid grid__item desk--one-half">
-					Giving developers access to cultural and scientific images, texts and audiovisual collections from Europe's leading cultural organisations &mdash; all rights-cleared and ready to use. Use our API or go and experiment at one of our physical 'hubs'.</p>
+				</p>
 		</div>
 	</div>
-	
-	<div class="block">
-		<div class="grid__item palm--one-whole push--palm--none three-quarters push--one-quarter">
-			<h2>Get your API key.</h2>
-		</div>
-		<div class="grid__item palm--one-whole push--palm--none three-quarters push--one-quarter">
-			<p class="grid grid__item desk--one-half">Sign up for your free API key and get developing! The rest is up to you.</p>
-		</div>
-	</div>
-	<br/>
-	<div class="block">
-		<div class="grid__item palm--one-whole push--palm--none three-quarters push--one-quarter">
-			<h2>Get inspired by some examples.</h2>
-		</div>
-		<div class="grid__item palm--one-whole push--palm--none three-quarters push--one-quarter">
-			<p class="grid grid__item desk--one-half">Sign up for your free API key and get developing! The rest is up to you.</p>
-			<ul>
-				<li>Historiana</li>
-				<li>Natural History</li>
-			</ul>
-		</div>
-	</div>
-</div>
+<!---->
+<script id="search-results-template" type="text/mustache">
+  {{#entries}}
+ 	<li class="grid__item one-whole">
+            <div class="block block-thumb ">
+
+                <div class="b-thumb">
+                    <a href="{{url}}">
+                        <img src="http://lorempixel.com/148/148" alt=""/>
+                    </a>
+                </div>
+
+                <div class="b-text">
+
+                    
+	                    <h1 class="headline gamma"><a href="/gallery/biblioteca">{{title}}</a></h1>
+	                    <div class="description">
+	                        <p>{{body}}</p>                        
+	                    </div>
+					
+					<a href="{{url}}" title="{{title}}" class="text-btn">Read more→</a>
+                </div>
+
+            </div>
+        </li>
+  {{/entries}}
+</script>
+
+
+<script type="text/javascript">
+  $(document).ready(function() {
+  	try{
+  		var inputFieldQ = $("#search-query");
+    inputFieldQ.lunrSearch({
+      indexUrl: '/search.json',             // URL of the `search.json` index data for your site
+      results:  '#search-results',          // jQuery selector for the search results container
+      entries:  '.entries',                 // jQuery selector for the element to contain the results list, must be a child of the results element above.
+      template: '#search-results-template'  // jQuery selector for the Mustache.js template
+    });
+   }catch(e){
+   	alert(e.message);
+   }
+    
+  });
+</script>
+
+<section id="search-results" style="display: none;">
+  <div class="entries">
+  </div>
+</section>
 <!--
--->﻿<!-- Begin Footer -->
+--></div>
+﻿<!-- Begin Footer -->
 <footer class="footer" role="contentinfo">
     <div class="lc">
         <ul class="nav-footer">

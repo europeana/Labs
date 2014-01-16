@@ -1,0 +1,53 @@
+---
+layout: search-list
+---
+{% raw %}
+<script id="search-results-template" type="text/mustache">
+  {{#entries}}
+ 	<li class="grid__item one-whole">
+            <div class="block block-thumb ">
+
+                <div class="b-thumb">
+                    <a href="{{url}}">
+                        <img src="http://lorempixel.com/148/148" alt=""/>
+                    </a>
+                </div>
+
+                <div class="b-text">
+
+                    
+	                    <h1 class="headline gamma"><a href="/gallery/biblioteca">{{title}}</a></h1>
+	                    <div class="description">
+	                        <p>{{body}}</p>                        
+	                    </div>
+					
+					<a href="{{url}}" title="{{title}}" class="text-btn">Read more→</a>
+                </div>
+
+            </div>
+        </li>
+  {{/entries}}
+</script>
+{% endraw %}
+
+<script type="text/javascript">
+  $(document).ready(function() {
+  	try{
+  		var inputFieldQ = $("#search-query");
+    inputFieldQ.lunrSearch({
+      indexUrl: '/search.json',             // URL of the `search.json` index data for your site
+      results:  '#search-results',          // jQuery selector for the search results container
+      entries:  '.entries',                 // jQuery selector for the element to contain the results list, must be a child of the results element above.
+      template: '#search-results-template'  // jQuery selector for the Mustache.js template
+    });
+   }catch(e){
+   	alert(e.message);
+   }
+    
+  });
+</script>
+
+<section id="search-results" style="display: none;">
+  <div class="entries">
+  </div>
+</section>
