@@ -15,7 +15,8 @@ layout: data-list
                 </div>
 
                 <div class="b-text">
-                    <h1 class="headline gamma"><a href="{{dataset.links.portal}}">{{dataset.name}}</a></h1>
+                    <!--<h1 class="headline gamma"><a href="{{dataset.links.portal}}">{{dataset.name}}</a></h1>-->
+                    <h1 class="headline gamma">{{dataset.name}}</h1>
 					<div class="prose">
 	                    <div class="description">
 	                        {{dataset.description}}                        
@@ -25,6 +26,7 @@ layout: data-list
 					<h6>View this data in</h6>
 					<a href="{{dataset.links.portal}}" title="View {{dataset.name}} in Europeana" class="btn">Portal</a>
 					<a href="{{dataset.links.console}}" title="View {{dataset.name}} in the API Console" class="btn">API Console</a>
+					<a href="{{dataset.links.portal}}" class="text-btn pull-right">Read more→</a>
                     <div class="tags">
                         <i class="icon icon-tag"></i>
 						{% for tag in dataset.tags %}

@@ -1,1 +1,24 @@
 #documentation p{max-width: 500px;}
+
+/* line 397, scss/objects/_csswizardry-grids.scss */
+.three-quarters, .six-eighths, .nine-twelfths { width: 74%; }
+
+.btn {
+	display: inline-block;
+	background: transparent;
+	color: #212121;
+	border: solid 1px #212121;
+	font-size: 12.8px;
+	font-size: 0.8rem;
+	line-height: 1;
+	font-weight: bold;
+	text-transform: uppercase;
+	letter-spacing: 0.2em;
+	padding: 0.6em 1.2em;
+	text-align: center;
+	margin-bottom: 5px;
+}
+
+.pull-right{float:right;}
+
+
