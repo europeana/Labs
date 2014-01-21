@@ -1,50 +1,36 @@
 ---
-layout: api-page
+layout: "api-page"
 title: API Essentials
+published: true
 ---
 
 * TOC
 {:toc}
 
-### Usage Limit
+In this section you will find information necessary to jump-start using Europeana API.
 
-Applications are permitted to perform up to 10000 calls in 24 hours. If you need more than that please [contact us](mailto:api@europeana.eu).
+## Request
 
-[^datatype]: [Datatype defitions](api-introduction.html#data-types "API1-API2 Mapping")
+Every API call is an HTTP request in a specified format that is sent to the Europeana API service.
+The API root URL is located at: 
+    http://www.europeana.eu/api/v2.
 
-### Example
+### Authentication Parameter
+Every API call must be provided a special authentication parameter wskey. This parameter should contain your private key that you got during the registration process.
 
-The call `http://europeana.eu/api/v2/search.json?wskey=xxxxxxxx&query=mona+lisa&profile=standard%20params` returns
+## Response
 
-```json
-{
-  "apikey": "xxxxxxxxx",
-  "action": "search.json",
-  "success": true,
-  "requestNumber": 6,
-  "params": {
-    "query": "mona lisa",
-    "profile": "standard params",
-    "start": 1,
-    "rows": 12
-  },
-  "itemsCount": 12,
-  "totalResults": 195,
-  "items": [...]
-}
-```
+A response to an API call will always contain a number of standard fields that precede the fields specific for the call. The standard part contains the following fields:
 
-#### Javascript
+| Field        | Datatype       | Description  |
+| ------------- |:-------------:| :-----|
+| apikey |	String	| the authentication parameter sent out by the client (the wskey parameter) |
+| action |	String |	the name of the API method that was called |
+| success |	Boolean |	a boolean (true/false) flag denoting the successful execution of the call |
+| statsDuration |	Number |	the time (in milliseconds) taken to serve the request |
+| requestNumber |	Number |	a positive number denoting the number of request by this API key within the last 24 hours |
+| error | 	String |	if the call was not successful this fields will contain a detailed text message. See [Error Codes](labs.europeana.eu/documentation/error-codes.html) for more information.|
+| params |	Object	| original request parameters. If an invalid request parameter was submitted, this response parameter will contain the default value (see individual calls for the default values). Shown up only if the profile parameter contains "params". |
 
-And some javascript, just to check the syntax formatting.
 
-{% highlight java %}
-var sum = function() {
-    var i, x = 0;
-    for (i = 0; i < arguments.length; ++i) {
-        x += arguments[i];
-    }
-    return x;
-}
-sum(1, 2, 4); // returns 6
-{% endhighlight %}
+
