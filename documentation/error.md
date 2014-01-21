@@ -1,50 +1,20 @@
 ---
-layout: api-page
+layout: "api-page"
 title: API Error Codes
+published: true
 ---
 
 * TOC
 {:toc}
 
-### Usage Limit
+An error during processing of an API method is reported by (1) a relevant HTTP status code, (2) a value of the success field and (3) a meaningful error message in the error field (see the Response section).
 
-Applications are permitted to perform up to 10000 calls in 24 hours. If you need more than that please [contact us](mailto:api@europeana.eu).
+The following HTTP status codes are returned:
 
-[^datatype]: [Datatype defitions](api-introduction.html#data-types "API1-API2 Mapping")
-
-### Example
-
-The call `http://europeana.eu/api/v2/search.json?wskey=xxxxxxxx&query=mona+lisa&profile=standard%20params` returns
-
-```json
-{
-  "apikey": "xxxxxxxxx",
-  "action": "search.json",
-  "success": true,
-  "requestNumber": 6,
-  "params": {
-    "query": "mona lisa",
-    "profile": "standard params",
-    "start": 1,
-    "rows": 12
-  },
-  "itemsCount": 12,
-  "totalResults": 195,
-  "items": [...]
-}
-```
-
-#### Javascript
-
-And some javascript, just to check the syntax formatting.
-
-{% highlight java %}
-var sum = function() {
-    var i, x = 0;
-    for (i = 0; i < arguments.length; ++i) {
-        x += arguments[i];
-    }
-    return x;
-}
-sum(1, 2, 4); // returns 6
-{% endhighlight %}
+| HTTP Status Code | Description  | 
+|:----------------|:-------------| 
+| 200 |	The request was executed successfully. |
+| 401 |	Authentication credentials were missing or authentication failed. |
+| 404 |	The requested record was not found. |
+| 429 |	The request could be served because the application has reached its usage limit. |
+| 500 |	Internal Server Error. Something has gone wrong, tell us!|
