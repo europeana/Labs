@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href='http://fonts.googleapis.com/css?family=Noto+Sans|Noto+Serif:400,700&subset=latin,greek,cyrillic,latin-ext' rel='stylesheet' type='text/css'>	    
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>  API Search Method |  Europeana Labs </title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width">
+	<!-- never cache patterns -->
+	<meta http-equiv="cache-control" content="max-age=0">
+	<meta http-equiv="cache-control" content="no-cache">
+	<meta http-equiv="expires" content="0">
+	<meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT">
+	<meta http-equiv="pragma" content="no-cache">
+    <link rel="stylesheet" href="/css/styleguide.css"/>
+    <link rel="stylesheet" href="/css/screen.css" media="all" />
+    
+    <script type="text/javascript" src="//use.typekit.net/otu7ppb.js"></script>
+	<style type="text/css">.tk-dejarip{font-family:"dejarip",sans-serif;}.tk-ff-more-web-pro{font-family:"ff-more-web-pro",serif;}</style><link rel="stylesheet" href="http://use.typekit.net/c/a93097/dejarip:i4:i7:n4:n7,ff-more-web-pro:i4:i5:n4:n5.Pyq:N:2,Pyv:N:2,Pyp:N:2,Pyt:N:2,VVb:N:2,VVf:N:2,VQP:N:2,VVd:N:2/d?3bb2a6e53c9684ffdc9a9bf71c5b2a6272be58e6824d2f2e6fb239e8cf4203049013567d271eb11e88b702a26bb8a567985e44d5fde55c54845fe9b45d924f4b355fc32a2986e0d7fa1266c0d2c63e917d6d7dab80e03b8c354710c21216000daed902279c6555b7e05ebfc7ad2788d2c5b10957"><script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    
+    <link rel="stylesheet" href="/css/labs.css" />
+    <script src="/js/jquery-1.9.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/js/lunr.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/js/mustache.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/js/date.format.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/js/URI.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="/js/jquery.lunr.search.js" type="text/javascript" charset="utf-8"></script>
+	
+	
+    <script src="/js/labs.js"></script>
+</head>
+<body class="sg-single-pattern svg"><!--
+-->﻿<!-- Begin header -->
+<header class="header cf" role="banner">
+    <div class="lc">
+        <a href="/" class="logo ir">Europeana</a>	
+		
+        <a href="#" class="nav-toggle nav-toggle-menu icon-rows"><span class="is-vishidden">Menu</span></a>
+        <a href="/search" class="nav-toggle nav-toggle-search icon-search"><span class="is-vishidden">Search</span></a>
+		<a href="/rss.xml" class="nav-toggle nav-toggle-search icon-rss"><span class="is-vishidden">Rss</span></a>
+		
+        <form id="search" action="/search" method="get" class="inline-form search-form">
+        	<a id="rssUrl" class="pull-right" href="/rss.xml"><img src="/img/rss24.png" /></a>
+            <fieldset>
+                <legend class="is-vishidden">Search</legend>
+                <label for="search-field" class="is-vishidden">Search</label>
+                <input type="text" placeholder="Search" id="search-query" name="q" class="search-field" autocomplete="off">
+                <button class="search-submit">
+                    <span class="icon-search" aria-hidden="true"></span>
+                    <span class="is-vishidden">Search</span>
+                </button>
+            </fieldset>
+        </form>
+        <nav id="nav" class="nav">
+            <ul>
+                <li><a href="/" class="current">Home</a></li>
+                <li><a href="/api">API</a></li>
+                <li><a href="/gallery">Gallery</a></li>
+                <li><a href="/datasets">Datasets</a></li>
+                <li><a href="/spaces">Spaces</a></li> 
+<!--                <li><a href="/events">Events</a></li> -->
+				<li><a href="/search">Search</a></li>
+                <li><a href="/support">Support</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<!-- End header --><!--
+-->
+<div role="main" class="grid">
+	<div class="block block-content-header">
+		<div class="grid__item palm--one-whole push--palm--none three-quarters push--one-quarter">
+			<h2 class="title">API Search Method</h2>
+		</div>
+	</div>
+
+		<div class="grid__item one-quarter palm--one-whole">
+		<ul class="tabs tabs-v">
+			<li><a href="/api" title="API Introduction">Introduction</a></li>
+			<li><a href="/api/essentials" title="API Essentials">Essentials</a></li>
+			<li><a href="http://europeana.eu/portal/api/registration.html" title="API Registration">Registration</a></li>
+			<li><a href="http://europeana.eu/portal/api/console.html" title="API Console">Console</a></li>
+			<li><a href="/api/changelog" title="API ChangeLog">Change Log</a></li>
+		</ul>
+		
+		<ul class="tabs tabs-v">
+			<li><a href="/api/authentication" title="API Authentication">Authentication</a></li>
+			<li><a href="/api/search" title="API Search Method">Search Method</a></li>
+			<li><a href="/api/object" title="API Object Method">Object Method</a></li>
+			<li><a href="/api/myeuropeana" title="Accessing MyEuropeana via API">My Europeana</a></li>
+			<li><a href="/api/provider" title="Accessing Provider/Collection via API">Provider/Collection</a></li>
+			<li><a href="/api/error" title="API Error Code">Error Codes</a></li>
+		</ul>
+
+		<ul class="tabs tabs-v">
+			<li><a href="/api/search-widget" title="Search Widget">Search Widget</a></li>
+			<li><a href="/api/edm" title="Europeana Data Model Reference">EDM Reference</a></li>
+		</ul>
+		
+		<ul class="tabs tabs-v">
+			<li><a href="#">Help Improve This Content</a></li>
+		</ul>
+	</div>
+
+		
+	<div id="documentation" class="prose grid__item palm--one-whole push--palm-none one-half"><!--
+	--><div class="maruku_toc"><ul><li><a href="#request">Request</a></li><li><a href="#response">Response</a><ul><li><a href="#item">item</a></li><li><a href="#breadcrumb">breadcrumb</a></li><li><a href="#facet">facet</a></li></ul></li></ul></div>
+<h1 id="searchjson">search.json</h1>
+
+<p>Find objects within the Europeana repository.</p>
+
+<pre><code>http://europeana.eu/api/v2/search.json</code></pre>
+
+<h2 id="request">Request</h2>
+
+<p><strong>Test</strong> | Field | Datatype | Description | |——-|———-|————-| | apikey | String | the authentication parameter sent out by the client (the <em>wskey</em> parameter) | <strong>Test</strong></p>
+
+<p>| Parameter | Datatype | Desription | |: ————- |:————-| :—–| | query | String | The search term(s) for the search. See the <a href="http://www.europeana.eu/portal/api-query-syntax.html">Query Syntax</a> section of this documentation for information on forming complex queries and examples. | | callback| String| Name of a client side callback function.| | profile | String | A number of profiles can be added to a search to control the format and richness of the response TBD (add profiles) | | qf | String | Facet filtering query. This parameter can be defined more than once. See the query syntax documentation on <a href="http://www.europeana.eu/portal/api-query-syntax.html#faceted">faceted search</a> for more information. | | rows | Number | The number of records to return; the maximum value is 100 (default is 12). | | start | Number | The item in the search results to start with; first item is 1 (default is 1). |</p>
+
+<h2 id="response">Response</h2>
+
+<p>| Field | Datatype | Desription | |: ————- |:————-| :—–| | items | Array (<a href="http://www.europeana.eu/portal/api-search-json.html#Item">Item</a>) | This is a collection of search results. Each item is represented by a summary of the metadata record. The actual content is dependent of the profile parameter.| | facets | Array (<a href="http://www.europeana.eu/portal/api-search-json.html#Facet">Facet</a>) | A collection of facets that describe the resultant dataset. | | breadCrumbs | Array (<a href="http://www.europeana.eu/portal/api-search-json.html#Item">Breadcrumb</a>)| A collection of search queries that were applied in this call. | | itemsCount | Number | The number of retrieved records | | totalResults | Number | The total number of results |</p>
+
+<h3 id="item">item</h3>
+
+<p>Each item is a search result and is represented by a summary of its metadata record. The actual content depends of the profile parameter.</p>
+
+<p>| Field | Datatype | Desription | |: ————- |:————-| :—–| | completeness | Number | A number from 1 to 10 that is an internal measure of the metadata quality. It is based on the availability of mandatory and optional schema fields.| | dataProvider* | Array (String) | The names of Europeana Data Providers who provided the object. | | europeanaCollectionName * | Array (String) | The names of the Europeana collections that contain the item | | id* | String | The Europeana ID of the record. | | guid* | String | A link to the object page on the Europeana portal to be used by client applications.| | link* | String | A link to the API object call. This link should be used to retrieve the full metadata object.| | provider* | String | The name or identifier of the provider of the object.| | rights* | Array (String) | A collection of URLs referring to the object rights.| |type* | String | The type of the provided object (TEXT, VIDEO, SOUND, IMAGE, 3D)| | dcCreator | Array (String) | A collection entities primarily responsible for making the resource.| | edmConceptLabel | String | The label of the SKOS Concept of the record. Find more in the EDM Definition | |edmPreview |String |A link to the representation of the object on Europeana.| |edmTimespanLabel | String | The label of EDM Time Span object of the record. Find more in the EDM Definition | |language | Array (String) | Languages assigned to the resource with reference to the Provider. Usually, this field contains the languages of the metadata of the record.| |title | Array (String)| The main and alternative titles of the item.| |year | Array (String)| A point of time associated with an event in the life of the original analog or born digital object. Find more in the EDM Definition|</p>
+
+<h3 id="breadcrumb">breadcrumb</h3>
+
+<p>A collection of search queries that were applied in this call.</p>
+
+<p>| Field | Datatype | Desription | |: ————- |:————-| :—–| |display | String | Human-readable description of the search | |param | String | The search parameter name (query or qf)| |value | String | The search parameter value | |href | String | The search part of the URL which can be reused in further calls| |last | Boolean | Boolean value indicating whether the current breadcrumb is the last one |</p>
+
+<h3 id="facet">facet</h3>
+
+<p>A collection of facets that describe the resultant dataset.</p>
+
+<p>| Field | Datatype | Desription | |: ————- |:————-| :—–| | name * | String | The name of the facet (COUNTRY, DATA_PROVIDER, LANGUAGE, PROVIDER, RIGHTS, TYPE, UGC, YEAR) | | fields * | Array (field) | A collection of facet fields. Each field is an object that has a label (String) and a count of objects (Number).|</p>
+
+<p>* <em>indicates an obligatory property</em></p><!--
+--></div>
+</div>
+﻿<!-- Begin Footer -->
+<footer class="footer" role="contentinfo">
+    <div class="lc">
+        <ul class="nav-footer">
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About us</a></li>
+            <li><a href="http://europeana.eu/portal/rights/terms-and-policies.html">Terms &amp; policies</a></li>
+            <li><a href="#">Sitemap</a></li>
+        </ul>
+
+        <p class="copyright">Co-funded by the European Union.</p><a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="/plf/88x31.png"></a>
+    </div>
+</footer>
+<!-- End Footer --><!--
+--></body>
+</html>
