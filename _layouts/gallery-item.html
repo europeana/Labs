@@ -14,13 +14,12 @@
 		    <div class="prose description">
 		        {{ content}}
 				{% include link-block.html %}
-					{% include tag-block.html %}
 		    </div>
 		</div>
+			{% include contact-block.html %}
+			<hr />
+			{% include tag-block.html %}
     </div>
-	<div class="grid__item palm--one-whole one-half push--palm--none ">
-		{% include content-block.html %}
-	</div>
 </div>
 
 {% include footer.html %}<!--

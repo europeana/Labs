@@ -1,3 +1,5 @@
+{% if page.contact %}
+<br />
 <ul>
 	{% if page.contact.name %}
 	<li class="contact"><i class="icon icon-user"></i>&nbsp;<strong>Contact:</strong>&nbsp;{{ page.contact.name }}</li>
@@ -12,6 +14,7 @@
 	<li class="email"><i class="icon icon-mail"></i>&nbsp;<strong>Email:</strong>&nbsp;{{ page.contact.email }}</li>
 	{% endif %}
 	{% if page.contact.website %}
-	<li class="website"><i class="icon icon-link"></i>&nbsp;<strong>Website:</strong>&nbsp;<a href="{{page.contact.website}}" title="{{page.title}} Website">{{ page.title }}</li>
+	<li class="website"><i class="icon icon-link"></i>&nbsp;<strong>Website:</strong>&nbsp;<a href="{{page.contact.website}}" title="{{page.title}} Website">{{ page.contact.website }}</li>
 	{% endif %}
 </ul>
+{% endif %}
