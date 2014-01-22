@@ -46,6 +46,7 @@ prose:
               field:
                 element: "text"
                 label: "Title"
+                placeholder: "Application Title"
             - name: "imageurl"
               field:
                 element: "text"
@@ -55,10 +56,6 @@ prose:
               field:
                 element: "checkbox"
                 label: "Featured"
-            - name: "contact"
-              field:
-                element: "text"
-                label: "Contact"
             - name: "tags"
               field:
                 element: "multiselect"
@@ -83,3 +80,4 @@ prose:
               field:
                 element: "text"
                 label: "Links"
+                placeholder: "http://example.com"
