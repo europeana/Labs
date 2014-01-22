@@ -10,6 +10,14 @@
     <description>RSS feed for Labs</description>
     <pubDate>Fri, 01 Jan 9999 00:00:00 +0100</pubDate>
     <item>
+      <title>Europeana Culture Collage</title>
+      <link>http://localhost:4000//gallery/culture-collage</link>
+      <description>&lt;p&gt;Europeana Culture Collage is developed by Monique Szpak (@zenlan) and started as a simple exercise in mashing up a few of the newer web technologies, incl. Europeana API and Europeana visual data.&lt;/p&gt;</description>
+      <pubDate>Fri, 01 Jan 9999 00:00:00 +0100</pubDate>
+      <guid>http://localhost:4000//gallery/culture-collage</guid>
+      <dc:date>9999-01-01T00:00:00+01:00</dc:date>
+    </item>
+    <item>
       <title>Biblioteca Digital Hispánica</title>
       <link>http://localhost:4000//gallery/biblioteca</link>
       <description>&lt;p&gt;The National Library of Spain has implemented the Europeana API in their online portal, Biblioteca Digital Hispánica. The portal now enables their users to access related Europeana content via single link on their search result header.&lt;/p&gt;</description>
@@ -18,27 +26,11 @@
       <dc:date>9999-01-01T00:00:00+01:00</dc:date>
     </item>
     <item>
-      <title>ATHENA</title>
-      <link>http://localhost:4000//gallery/athena</link>
-      <description>&lt;p&gt;ATHENA is a project developing metadata exchange standards for the museum domain and aggregating museum content for Europeana. Through our API, they have built a &lt;a href='http://www.athenaeurope.org/index.php?en/191/europeana-opensearch'&gt;search service&lt;/a&gt; where users can perform keyword searches and structured searches to find and view Europeana items.&lt;/p&gt;</description>
-      <pubDate>Fri, 01 Jan 9999 00:00:00 +0100</pubDate>
-      <guid>http://localhost:4000//gallery/athena</guid>
-      <dc:date>9999-01-01T00:00:00+01:00</dc:date>
-    </item>
-    <item>
       <title>europeana4j</title>
       <link>http://localhost:4000//gallery/europeana4j</link>
       <description>&lt;p&gt;europeana4j is a Java library which allows applications to search and retrieve Europeana data, including millions of books, paintings, films, museum objects and archival records that have been digitised throughout Europe.&lt;/p&gt;</description>
       <pubDate>Wed, 22 Jan 2014 00:00:00 +0100</pubDate>
       <guid>http://localhost:4000//gallery/europeana4j</guid>
-      <dc:date>2014-01-22T00:00:00+01:00</dc:date>
-    </item>
-    <item>
-      <title>Europeana Culture Collage</title>
-      <link>http://localhost:4000//gallery/culture-collage</link>
-      <description>&lt;p&gt;Europeana Culture Collage is developed by Monique Szpak (@zenlan) and started as a simple exercise in mashing up a few of the newer web technologies, incl. Europeana API and Europeana visual data.&lt;/p&gt;</description>
-      <pubDate>Wed, 22 Jan 2014 00:00:00 +0100</pubDate>
-      <guid>http://localhost:4000//gallery/culture-collage</guid>
       <dc:date>2014-01-22T00:00:00+01:00</dc:date>
     </item>
     <item>
@@ -63,6 +55,14 @@
       <description>&lt;p&gt;The app is a programming library for Django, the free and open source web framework written in Python and used in Pinterest, Instagram, Mozilla and The Washington Times.&lt;/p&gt;</description>
       <pubDate>Wed, 22 Jan 2014 00:00:00 +0100</pubDate>
       <guid>http://localhost:4000//gallery/django</guid>
+      <dc:date>2014-01-22T00:00:00+01:00</dc:date>
+    </item>
+    <item>
+      <title>ATHENA</title>
+      <link>http://localhost:4000//gallery/athena</link>
+      <description>&lt;p&gt;ATHENA is a project developing metadata exchange standards for the museum domain and aggregating museum content for Europeana. Through our API, they have built a &lt;a href='http://www.athenaeurope.org/index.php?en/191/europeana-opensearch'&gt;search service&lt;/a&gt; where users can perform keyword searches and structured searches to find and view Europeana items.&lt;/p&gt;</description>
+      <pubDate>Wed, 22 Jan 2014 00:00:00 +0100</pubDate>
+      <guid>http://localhost:4000//gallery/athena</guid>
       <dc:date>2014-01-22T00:00:00+01:00</dc:date>
     </item>
     <item>
