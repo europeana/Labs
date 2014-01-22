@@ -1,8 +1,8 @@
 ---
-- name: "Maps and Drawings from the Catálogo Colectivo de la Red de Bibliotecas de los Archivos Estatales"
+- name: "Maps and Drawings from the Catálogo Colectivo De La Red De Bibliotecas De Los Archivos Estatales"
   provider: "Catálogo Colectivo de la Red de Bibliotecas de los Archivos Estatales"
   contact: ccbae.dglab@mcu.es
-  description: "More than 7,000 Maps, city plans & architectural drawings/plans from the Catálogo Colectivo de la Red de Bibliotecas de los Archivos Estatales. The collection is a union catalog of state archives and libraries in Spain. Spanish language."
+  description: "More than 7,000 maps, city plans & architectural drawings/plans from the Catálogo Colectivo de la Red de Bibliotecas de los Archivos Estatales. The collection is a union catalog of state archives and libraries in Spain. Spanish language."
   tags:
     - Maps
     - Architecture
@@ -14,7 +14,7 @@
       - pd
     preview: /img/datasets/catalogo_1_800.jpeg
       
-- name: "Maps and drawings from the Biblioteca Virtual del Patrimonio Bibliográfico"
+- name: "Maps and Drawings from the Biblioteca Virtual Del Patrimonio Bibliográfico"
   provider: "Biblioteca Virtual del Patrimonio Bibliográfico"
   contact: ccbae.dglab@mcu.es
   description: "More than 4,000 maps and drawings from the Biblioteca Virtual del Patrimonio Bibliográfico. Spanish language."
@@ -29,7 +29,7 @@
       - pd
     preview: /img/datasets/bvirtual_1_800.jpeg
 
-- name: "Drawings, prints and artwork from the National Library of Poland"
+- name: "Drawings, Prints and Artwork from the National Library of Poland"
   provider: "The National Library of Poland - Biblioteka Narodowa"
   contact: biblnar@bn.org.pl
   description: "More than 16,000 examples of drawings, prints, artwork, posters, engravings, postcards, photographs, portraits and caricatures from the National Library of Poland. Polish language."
@@ -45,7 +45,7 @@
       - pd
     preview: /img/datasets/narodowa_1_800.jpeg
 
-- name: "Archaeological artefacts from the Institute of Balkan Studies and Thracology"
+- name: "Archaeological Artefacts from the Institute of Balkan Studies and Thracology"
   provider: "Institute of Balkan Studies and Thracology - Институт за балканистика с Център по тракология"
   contact: balkani@cl.bas.bg
   description: "500 examples of archaeological artefacts from the Institute of Balkan Studies and Thracology. Bulgarian language."
@@ -60,7 +60,7 @@
       - sa
     preview: /img/datasets/balkan_1_800.jpeg
 
-- name: "Photographs, prints and posters from the Biblioteca Valenciana Digital"
+- name: "Photographs, Prints and Posters from the Biblioteca Valenciana Digital"
   provider: "Biblioteca Valenciana Digital"
   contact: bivaldi@gva.es
   description: "More than 500 examples of photographs, prints and posters from the Biblioteca Valenciana Digital. Spanish language."
@@ -75,7 +75,7 @@
       - pd
     preview: /img/datasets/valenciana_1_800.jpeg
 
-- name: "Butterflies and moths from the University of Tartu"
+- name: "Butterflies and Moths from the University of Tartu"
   provider: "University of Tartu, Natural History Museum"
   contact: loodusmuuseum@ut.ee
   description: "More than 15,000 butterflies and moths from the Natural History Museum at the University of Tartu. In English with Latin species names."
@@ -89,3 +89,47 @@
       - by
       - sa
     preview: /img/datasets/tartu_1_800.jpeg
+
+- name: "Fossils from the University of Tartu"
+  provider: "Museum of Geology, University of Tartu"
+  contact: mi@ut.ee
+  description: "More than 9,000 fossils from the Museum of Geology, University of Tartu. In English with Latin species names."
+  tags:
+    - Natural History
+  links:
+    portal: "http://www.europeana.eu/portal/search.html?query=DATA_PROVIDER%3A%22Museum+of+Geology%2C+University+of+Tartu%22"
+    console: "http://www.europeana.eu/portal/api/console.html?function=search&query=DATA_PROVIDER%3A%22Museum+of+Geology%2C+University+of+Tartu%22"
+    provider: http://www.ut.ee/BGGM/museum.html
+    licenses: 
+      - by
+      - sa
+    preview: /img/datasets/geology_1_800.jpeg
+
+- name: "Flowers and Trees from the Royal Botanic Garden in Edinburgh"
+  provider: "The Royal Botanic Garden Edinburgh"
+  contact: webmaster@rbge.org.uk
+  description: "More than 3,000 flowers and trees from the collections of the  Royal Botanic Garden in Edinburgh. In English with Latin species names."
+  tags:
+    - Natural History
+  links:
+    portal: "http://www.europeana.eu/portal/search.html?query=DATA_PROVIDER:%22The%20Royal%20Botanic%20Garden%20Edinburgh%22&qf=RIGHTS:http://creativecommons.org/licenses/by-sa/*&rows=24"
+    console: "http://www.europeana.eu/portal/api/console.html?function=search&query=DATA_PROVIDER:%22The%20Royal%20Botanic%20Garden%20Edinburgh%22&qf=RIGHTS:http://creativecommons.org/licenses/by-sa/*&rows=24"
+    provider: http://www.rbge.org.uk
+    licenses: 
+      - by
+      - sa
+    preview: /img/datasets/edinburgh_1_800.jpeg
+
+- name: "Early Photographs from the Fondo Fotográfico De La Universidad De Navarra"
+  provider: "Fondo Fotográfico de la Universidad de Navarra"
+  contact: dirmuseo@unav.es
+  description: "More than 4,000 early photographs from 19th-century Spain in the collections of the Universidad de Navarra. Spanish language."
+  tags:
+    - Photographs
+  links:
+    portal: "http://www.europeana.eu/portal/search.html?query=DATA_PROVIDER%3a%22Fondo+Fotogr%C3%A1fico+de+la+Universidad+de+Navarra%22"
+    console: "http://www.europeana.eu/portal/api/console.html?function=search&query=DATA_PROVIDER%3a%22Fondo+Fotogr%C3%A1fico+de+la+Universidad+de+Navarra%22"
+    provider: "http://coleccionfff.unav.es/bvunav/i18n/estaticos/contenido.cmd?pagina=estaticos/presentacion"
+    licenses: 
+      - pd
+    preview: /img/datasets/navarra_1_800.jpeg
