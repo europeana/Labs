@@ -1,7 +1,7 @@
 ---
-published: false
-layout: "gallery-item"
 category: gallery
+layout: "gallery-item"
+published: true
 permalink: "gallery/dutch-natural-history"
 title: Dutch Museum of Natural History
 imageurl: "http://lorempixel.com/148/148"
