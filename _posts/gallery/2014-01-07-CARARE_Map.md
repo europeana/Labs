@@ -3,14 +3,11 @@ layout: gallery-item
 category: gallery
 permalink: gallery/carare-map
 title: CARARE Map
-tags: [API Implementation]
 imageurl: "http://lorempixel.com/148/148"
-contact:
-  name: Olivier
-  email: olivier@platoniq
-  website: http://www.youcoop.org
-  address: Palma
-  telephone:
+tags: 
+  - API Implementation
+links:
+  - http://carare.eculturelab.eu/Carare50m/Map.html
 ---
 
 CARARE Map is a web-based mapping tool for archaeological/architectural sites.

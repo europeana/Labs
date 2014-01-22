@@ -3,17 +3,11 @@ layout: gallery-item
 category: gallery
 permalink: gallery/bibheritagespain
 title: Digital Library of Bibliographic Heritage, Spain
-tags: [API Implementation]
 imageurl: "http://lorempixel.com/148/148"
-contact:
-  name: Olivier
-  email: olivier@platoniq
-  website: http://www.youcoop.org
-  address: Palma
-  telephone:
+tags: 
+  - API Implementation
 links:
-  - http://www.youcoop.org
-  - http://lorempixel.com/148/148
+  - http://bvpb.mcu.es/es/estaticos/contenido.cmd?pagina=estaticos/presentacion
 ---
 
 As part of HISPANA, the Digital Library of Bibliographic Heritage has chosen to use the Europeana API to complement results in their own search services with relevant links from Europeana.

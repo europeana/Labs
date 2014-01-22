@@ -3,14 +3,11 @@ layout: gallery-item
 category: gallery
 permalink: gallery/cerl-thesaurus
 title: CERL Thesaurus Search
-tags: [API Implementation]
 imageurl: "http://lorempixel.com/148/148"
-contact:
-  name: Olivier
-  email: olivier@platoniq
-  website: http://www.youcoop.org
-  address: Palma
-  telephone:
+tags: 
+  - API Implementation
+links:
+  - http://thesaurus.cerl.org/cgi-bin/search.pl
 ---
 
 Through the Europeana API, users can now see the number of results in Europeana related to the authority and click through to view them.

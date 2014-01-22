@@ -4,13 +4,8 @@ category: gallery
 permalink: gallery/biblioteca-virtual
 title: Biblioteca Virtual Ignacio Larramendi
 imageurl: "http://lorempixel.com/148/148"
-contact:
-  name:
-  email:
-  website:
-  address:
-  telephone:
-tags: [API Implementation]
+tags: 
+  - API Implementation
 links:
   - http://www.larramendi.es/i18n/consulta/busqueda.cmd
 ---

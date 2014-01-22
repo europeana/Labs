@@ -3,14 +3,14 @@ layout: gallery-item
 category: gallery
 permalink: gallery/ch-context-widget
 title: CH Context widget
-tags: [API Implementation]
 imageurl: "http://lorempixel.com/148/148"
 contact:
-  name: Olivier
-  email: olivier@platoniq
-  website: http://www.youcoop.org
-  address: Palma
-  telephone:
+  name: "Poznań Supercomputing and Networking Center Digital Libraries Team - Marcin Mielnicki, Ola Nowak, Krzysztof Sielski and Marcin Werla"
+tags: 
+  - API Implementation
+links:
+  - http://dl.psnc.pl/
+  - https://github.com/psnc-dl/chcontext
 ---
 
 This JavaScript-based widget is able to provide links to cultural heritage materials (from Europeana or Digital Public Library of America or Polish Digital Library Federation) based on predefined item of a website on which it is embedded (via given JQuery HTML selector).
