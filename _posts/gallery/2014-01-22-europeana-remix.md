@@ -2,17 +2,16 @@
 category: gallery
 layout: "gallery-item"
 published: true
-title: Europeana Culture Collage
-featured: true
-permalink: "gallery/culture-collage"
+title: "Europeana Remix"
+featured: false
+permalink: "gallery/remix"
 tags: 
   - API Implementation
 links: 
-  - "http://www.zenlan.com/collage/europeana/#"
-  - "https://github.com/zenlan/eurapi"
+  - "http://pro.europeana.eu/web/guest/europeana-remix"
+  - "http://remix.europeana.eu/"
 contact:
-  name: "Monique Szpak"
-  website: https://twitter.com/zenlan
+  name: "Europeana Remix was developed in cooperation with Kennisland, Three Eyed Labs, and BigUp."
 ---
 
 Europeana Culture Collage is developed by Monique Szpak (@zenlan) and started as a simple exercise in mashing up a few of the newer web technologies, incl. Europeana API and Europeana visual data.
