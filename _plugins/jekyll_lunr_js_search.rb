@@ -1,4 +1,5 @@
 require 'rubygems'
+require 'bundler/setup'
 require 'json'
 
 module Jekyll
@@ -90,6 +91,7 @@ module Jekyll
     end
   end
 end
+
 require 'nokogiri'
 
 module Jekyll
@@ -109,8 +111,8 @@ module Jekyll
   end
   
 end
-require 'nokogiri'
 
+require 'nokogiri'
 module Jekyll
   
   class SearchEntry
