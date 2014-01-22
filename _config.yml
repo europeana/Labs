@@ -86,4 +86,10 @@ prose:
                 element: "multiselect"
                 label: "Add Links"
                 alterable: true
-                placeholder: "Add New Links"
+                placeholder: "Create New Links"
+            - name: "contact"
+              - name: "email"
+                field:
+                  element: "text"
+                  label: "Email"
+                  placeholder: "me@example.com"
