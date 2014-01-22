@@ -34,13 +34,11 @@
 <header class="header cf" role="banner">
     <div class="lc">
         <a href="/" class="logo ir">Europeana</a>	
-		
+		<a href="#" class="nav-toggle nav-toggle-search icon-search"><span class="is-vishidden">Search</span></a>
         <a href="#" class="nav-toggle nav-toggle-menu icon-rows"><span class="is-vishidden">Menu</span></a>
-        <a href="/search" class="nav-toggle nav-toggle-search icon-search"><span class="is-vishidden">Search</span></a>
-		<a href="/rss.xml" class="nav-toggle nav-toggle-search icon-rss"><span class="is-vishidden">Rss</span></a>
-		
+
+		<a id="rssUrl" class="pull-right" href="/rss.xml"><img src="/img/rss24.png" /></a>
         <form id="search" action="/search" method="get" class="inline-form search-form">
-        	<a id="rssUrl" class="pull-right" href="/rss.xml"><img src="/img/rss24.png" /></a>
             <fieldset>
                 <legend class="is-vishidden">Search</legend>
                 <label for="search-field" class="is-vishidden">Search</label>
@@ -59,7 +57,6 @@
                 <li><a href="/datasets">Datasets</a></li>
                 <li><a href="/spaces">Spaces</a></li> 
 <!--                <li><a href="/events">Events</a></li> -->
-				<li><a href="/search">Search</a></li>
                 <li><a href="/support">Support</a></li>
             </ul>
         </nav>
@@ -108,10 +105,11 @@
 <p>An error during processing of an API method is reported by (1) a relevant HTTP status code, (2) a value of the success field and (3) a meaningful error message in the error field (see the Response section).</p>
 
 <p>The following HTTP status codes are returned:</p>
-<table><thead><tr><th>HTTP Status Code</th><th>Description</th><th></th></tr></thead><tbody><tr><td style="text-align: left;">200</td><td style="text-align: left;">The request was executed successfully.</td><td style="text-align: left;">401</td></tr>
-<tr><td style="text-align: left;">Authentication credentials were missing or authentication failed.</td><td style="text-align: left;">404</td><td style="text-align: left;">The requested record was not found.</td></tr>
-<tr><td style="text-align: left;">429</td><td style="text-align: left;">The request could be served because the application has reached its usage limit.</td><td style="text-align: left;">500</td></tr>
-<tr><td style="text-align: left;">Internal Server Error. Something has gone wrong, tell us!</td></tr>
+<table><thead><tr><th>HTTP Status Code</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">200</td><td style="text-align: left;">The request was executed successfully.</td></tr>
+<tr><td style="text-align: left;">401</td><td style="text-align: left;">Authentication credentials were missing or authentication failed.</td></tr>
+<tr><td style="text-align: left;">404</td><td style="text-align: left;">The requested record was not found.</td></tr>
+<tr><td style="text-align: left;">429</td><td style="text-align: left;">The request could be served because the application has reached its usage limit.</td></tr>
+<tr><td style="text-align: left;">500</td><td style="text-align: left;">Internal Server Error. Something has gone wrong, tell us!</td></tr>
 </tbody></table><!--
 --></div>
 </div>

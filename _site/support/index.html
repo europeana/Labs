@@ -52,12 +52,11 @@
         <nav id="nav" class="nav">
             <ul>
                 <li><a href="/" class="current">Home</a></li>
-                <li><a href="/documentation">Documentation</a></li>
+                <li><a href="/api">API</a></li>
                 <li><a href="/gallery">Gallery</a></li>
                 <li><a href="/datasets">Datasets</a></li>
                 <li><a href="/spaces">Spaces</a></li> 
 <!--                <li><a href="/events">Events</a></li> -->
-				<li><a href="/search">Search</a></li>
                 <li><a href="/support">Support</a></li>
             </ul>
         </nav>
@@ -76,7 +75,7 @@
 
 	<p>Got questions about the Europeana API?</p> 
 	<div id="contactForm">
-		<div id="messageContainer" class="alert alert-danger">
+		<div id="messageContainer" class="alert">
 			
 		</div>
 		<form id="frmContact">
@@ -99,8 +98,8 @@
 		    		<td><input id="captcha" name="captcha" type="text" placeholder="Enter code from image"/></td>
 		    	</tr>
 		    </table>
-		    
 		    <button type="submit" id="submit" name="submit" class="pull-right" onclick="sendEmail();return false;">Submit</button>
+		    <img id="loadingIcon" src="/img/ajax-loader.gif" alt="Loading..." class="pull-right" style="margin: 1em;" />
 	        <br class="clear"/>
 		</form>
 	</div>
@@ -118,20 +117,22 @@
 <script type="text/javascript">
 $(document).ready(function(){
 	$("#messageContainer").hide();
+	$("#loadingIcon").hide();
 });
 
 function sendEmail(){
+	$("#loadingIcon").show();
 	var url = "http://dev.museu.ms/Labs/SendEmail?name="+$("#name").val()+"&email="+$("#email").val()+"&subject="+$("#subject").val()+"&message="+$("#message").val()+"&captcha="+$("#captcha").val();
 	 	$.ajax({
 	 			url: url,
                 dataType: 'jsonp',
-                error:function(xhr, status, error){
-                	alert(error);
-                },
                 success:function(data){
-                	
-                	if(data.success==false){
-	                	$("#messageContainer").addClass("alert-error");
+                	if(data.Success==false){
+	                	$("#messageContainer")
+	                	.removeClass("alert-success")
+	                	.removeClass("alert-error")
+	                	.addClass("alert-error");
+	                	
 	                	$("#messageContainer").html(data.Message);
 	                	$("#messageContainer").show();
                 	}else{
@@ -140,6 +141,8 @@ function sendEmail(){
 	                	$("#frmContact").hide();
                 	}
                 	
+                	$("#loadingIcon").hide();
+                	$("#captcha").val("");
 					var d = new Date();
 					$("#imageCaptcha").attr("src", "http://dev.museu.ms/captcha?"+d.getTime());
                 }

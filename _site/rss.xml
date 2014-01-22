@@ -35,26 +35,26 @@
     </item>
     <item>
       <title>i-Matériel.Lab | Paris</title>
-      <link>http://localhost:4000//spaces/2014/01/09/paris/</link>
+      <link>http://localhost:4000//spaces/imateriel</link>
       <description>&lt;p&gt;i-Matériel.Lab is the user driven innovation platform dedicated to Cultural Heritage and Tourism, specialized in mobile products and services (Smartphones, touch screen Tablets and Smart Objects).&lt;/p&gt;</description>
       <pubDate>Thu, 09 Jan 2014 00:00:00 +0100</pubDate>
-      <guid>http://localhost:4000//spaces/2014/01/09/paris/</guid>
+      <guid>http://localhost:4000//spaces/imateriel</guid>
       <dc:date>2014-01-09T00:00:00+01:00</dc:date>
     </item>
     <item>
       <title>AALTO Fab Lab | Helsinki</title>
-      <link>http://localhost:4000//aalto</link>
+      <link>http://localhost:4000//spaces/aalto</link>
       <description>&lt;p&gt;FabLab (fabrication laboratory) is a small-scale workshop for digital fabrication, started by MIT. In a Fablab you can find machines such as the lasercutter, vinyl cutter, desktop CNC milling machine and 3D printer and electronics prototyping equipment.&lt;/p&gt;</description>
       <pubDate>Thu, 09 Jan 2014 00:00:00 +0100</pubDate>
-      <guid>http://localhost:4000//aalto</guid>
+      <guid>http://localhost:4000//spaces/aalto</guid>
       <dc:date>2014-01-09T00:00:00+01:00</dc:date>
     </item>
     <item>
       <title>Future Classroom Lab | Brussels</title>
-      <link>http://localhost:4000//future-classroom-lab</link>
+      <link>http://localhost:4000//spaces/future-classroom-lab</link>
       <description>&lt;p&gt;The Future Classroom Lab in Brussels is a fully equipped, reconfigurable, teaching and learning space developed by &lt;a href='http://eun.org'&gt;European Schoolnet&lt;/a&gt;, its 30 supporting Ministries of Education and leading educational technology providers.&lt;/p&gt;</description>
       <pubDate>Thu, 09 Jan 2014 00:00:00 +0100</pubDate>
-      <guid>http://localhost:4000//future-classroom-lab</guid>
+      <guid>http://localhost:4000//spaces/future-classroom-lab</guid>
       <dc:date>2014-01-09T00:00:00+01:00</dc:date>
     </item>
     <item>
@@ -107,10 +107,10 @@
     </item>
     <item>
       <title>Platoniq | Palma</title>
-      <link>http://localhost:4000//platoniq</link>
+      <link>http://localhost:4000//spaces/platoniq</link>
       <description>&lt;p&gt;The Future Classroom Lab in Brussels is a fully equipped, reconfigurable, teaching and learning space developed by &lt;a href='http://eun.org'&gt;European Schoolnet&lt;/a&gt;, its 30 supporting Ministries of Education and leading educational technology providers.&lt;/p&gt;</description>
       <pubDate>Sat, 04 Jan 2014 00:00:00 +0100</pubDate>
-      <guid>http://localhost:4000//platoniq</guid>
+      <guid>http://localhost:4000//spaces/platoniq</guid>
       <dc:date>2014-01-04T00:00:00+01:00</dc:date>
     </item>
     <dc:date>9999-01-01T00:00:00+01:00</dc:date>
