@@ -13,3 +13,67 @@ lunr_search:
   excludes: [rss.xml, atom.xml]
 
 url: "http://localhost:4000/"
+
+prose:
+    rooturl: '_posts'
+    ignore:
+        - _config.yml
+        - CNAME
+        - Gemfile
+        - Gemfile.lock
+        - index.html
+        - /_data
+        - /_includes
+        - /_layouts
+        - /_plugins
+        - /_site
+    metadata:
+        _posts/gallery:
+            - name: "layout"
+              field:
+                element: "hidden"
+                value: "gallery-item"
+            - name: "category"
+              field:
+                element: "hidden"
+                value: "gallery"
+            - name: "permalink"
+              field:
+                element: "text"
+                placeholder: "gallery/"
+            - name: "title"
+              field:
+                element: "text"
+                label: "Title"
+            - name: "imageurl"
+              field:
+                element: "text"
+                label: "Image URL"
+                placeholder: "/img/gallery/"
+            - name: "featured"
+              field:
+                element: "checkbox"
+            - name: "contact"
+              field:
+                element: "text"
+            - name: "tags"
+              field:
+                element: "multiselect"
+                label: "Add tags"
+                placeholder: "Choose tags"
+                options:
+                    - name: "API Implementation"
+                      value: "API Implementation"
+                    - name: "Linked Open Data"
+                      value: "Linked Open Data"
+                    - name: "Case Study"
+                      value: "Case Study"
+                    - name: "Prototype"
+                      value: "Prototype"
+                    - name: "Hackathon"
+                      value: "Hackathon"
+                    - name: "ThoughtLab"
+                      value: "ThoughtLab"
+                    - name: "Open Source Project"
+                      value: "Open Source Project"
+            - name: "links"
