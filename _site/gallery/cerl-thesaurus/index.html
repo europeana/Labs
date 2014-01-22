@@ -34,13 +34,11 @@
 <header class="header cf" role="banner">
     <div class="lc">
         <a href="/" class="logo ir">Europeana</a>	
-		
+		<a href="#" class="nav-toggle nav-toggle-search icon-search"><span class="is-vishidden">Search</span></a>
         <a href="#" class="nav-toggle nav-toggle-menu icon-rows"><span class="is-vishidden">Menu</span></a>
-        <a href="/search" class="nav-toggle nav-toggle-search icon-search"><span class="is-vishidden">Search</span></a>
-		<a href="/rss.xml" class="nav-toggle nav-toggle-search icon-rss"><span class="is-vishidden">Rss</span></a>
-		
+
+		<a id="rssUrl" class="pull-right" href="/rss.xml"><img src="/img/rss24.png" /></a>
         <form id="search" action="/search" method="get" class="inline-form search-form">
-        	<a id="rssUrl" class="pull-right" href="/rss.xml"><img src="/img/rss24.png" /></a>
             <fieldset>
                 <legend class="is-vishidden">Search</legend>
                 <label for="search-field" class="is-vishidden">Search</label>
@@ -59,7 +57,6 @@
                 <li><a href="/datasets">Datasets</a></li>
                 <li><a href="/spaces">Spaces</a></li> 
 <!--                <li><a href="/events">Events</a></li> -->
-				<li><a href="/search">Search</a></li>
                 <li><a href="/support">Support</a></li>
             </ul>
         </nav>

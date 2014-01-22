@@ -2,13 +2,11 @@
 <header class="header cf" role="banner">
     <div class="lc">
         <a href="{{site.baseurl}}/" class="logo ir">Europeana</a>	
-		
+		<a href="#" class="nav-toggle nav-toggle-search icon-search"><span class="is-vishidden">Search</span></a>
         <a href="#" class="nav-toggle nav-toggle-menu icon-rows"><span class="is-vishidden">Menu</span></a>
-        <a href="{{site.baseurl}}/search" class="nav-toggle nav-toggle-search icon-search"><span class="is-vishidden">Search</span></a>
-		<a href="{{site.baseurl}}/rss.xml" class="nav-toggle nav-toggle-search icon-rss"><span class="is-vishidden">Rss</span></a>
-		
+
+		<a id="rssUrl" class="pull-right" href="{{site.baseurl}}/rss.xml"><img src="{{site.baseurl}}/img/rss24.png" /></a>
         <form id="search" action="/search" method="get" class="inline-form search-form">
-        	<a id="rssUrl" class="pull-right" href="{{site.baseurl}}/rss.xml"><img src="{{site.baseurl}}/img/rss24.png" /></a>
             <fieldset>
                 <legend class="is-vishidden">Search</legend>
                 <label for="search-field" class="is-vishidden">Search</label>
@@ -27,7 +25,6 @@
                 <li><a href="{{site.baseurl}}/datasets">Datasets</a></li>
                 <li><a href="{{site.baseurl}}/spaces">Spaces</a></li> 
 <!--                <li><a href="{{site.baseurl}}/events">Events</a></li> -->
-				<li><a href="{{site.baseurl}}/search">Search</a></li>
                 <li><a href="{{site.baseurl}}/support">Support</a></li>
             </ul>
         </nav>

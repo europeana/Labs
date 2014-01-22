@@ -573,6 +573,9 @@ table {
   margin-bottom: 1rem;
   color: #232323; }
 
+th {
+	white-space: nowrap; }
+
 /* line 19, scss/base/_tables.scss */
 td,
 th {
