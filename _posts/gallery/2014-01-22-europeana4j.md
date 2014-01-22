@@ -7,7 +7,8 @@ featured: false
 permalink: gallery/europeana4j
 tags: 
   - API Implementation
-  - Open Source Project
+links: 
+  - "http://code.google.com/p/europeana4j/"
 ---
 
 europeana4j is a Java library which allows applications to search and retrieve Europeana data, including millions of books, paintings, films, museum objects and archival records that have been digitised throughout Europe.
