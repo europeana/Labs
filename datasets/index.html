@@ -9,7 +9,7 @@ layout: data-list
             <div class="block block-thumb  {%if counter > 1 %} block-thumb-small {% endif %}">
 
                 <div class="b-thumb">
-                    <a href="{{dataset.search}}">
+                    <a href="{{dataset.links.portal}}">
                         <img src="{{dataset.links.preview}}" alt="{{dataset.name}}">
                     </a>
                 </div>
@@ -21,9 +21,18 @@ layout: data-list
 	                    <div class="description">
 	                        {{dataset.description}}                        
 	                    </div>
-						<p><small>Dataset <a href="{{dataset.links.portal}}" title="View {{dataset.name}} in Europeana">{{dataset.datasetid}}</a> provided by <a href="{{dataset.links.provider}}" title="Link to {{dataset.provider}}">{{dataset.provider}}</a>. Contact <a href="mailto:{{dataset.contact}}">{{dataset.contact}}</a> for more details.</small></p><br />
+						<p><small>Dataset provided by <a href="{{dataset.links.provider}}" title="Link to {{dataset.provider}}">{{dataset.provider}}</a>. Contact <a href="mailto:{{dataset.contact}}">{{dataset.contact}}</a> for more details.</small></p>
+						{%if dataset.links.licenses %}
+							<ul class="sg-icons inline-list">
+							{% for license in dataset.links.licenses %}
+								<li class="icon-license-{{license}}"></li>
+							{% endfor %}
+							</ul>
+						{% else %}
+							<br />
+						{% endif %}
 					</div>
-					<h6>View this data in</h6>
+					<h6>View this data in:</h6>
 					<a href="{{dataset.links.portal}}" title="View {{dataset.name}} in Europeana" class="btn">Portal</a>
 					<a href="{{dataset.links.console}}" title="View {{dataset.name}} in the API Console" class="btn">API Console</a>
 					<a href="{{dataset.links.portal}}" class="text-btn pull-right">Read more→</a>
@@ -38,6 +47,5 @@ layout: data-list
         </li>{% endfor %}
     </ul>
 </div>
-
 
 <ul>

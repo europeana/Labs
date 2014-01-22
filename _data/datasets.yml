@@ -1,28 +1,77 @@
 ---
-- name: Hungarian Data
-  provider: Hungarian Theatre Museum and Institute
-  contact: me@example.com
-  datasetid: 12345
-  description: Since its founding in 1952 the Hungarian Theatre Museum and Institute has been collecting the most valuable relics and data of the Hungarian theatre.
+- name: "Maps and Drawings from the Catálogo Colectivo de la Red de Bibliotecas de los Archivos Estatales"
+  provider: "Catálogo Colectivo de la Red de Bibliotecas de los Archivos Estatales"
+  contact: ccbae.dglab@mcu.es
+  description: "More than 7,000 Maps, city plans & architectural drawings/plans from the Catálogo Colectivo de la Red de Bibliotecas de los Archivos Estatales. The collection is a union catalog of state archives and libraries in Spain. Spanish language."
   tags:
-    - Art
-    - Theatre
+    - Maps
+    - Architecture
   links:
-    portal: http://europeana.eu/portal/search.html?query=DATA_PROVIDER%3a%22Országos+Sz%C3%ADnháztörténeti+Múzeum+és+Intézet+%5c(Hungarian+Theatre+Museum+and+Institute%5c)%2c+OSZMI%22&utm_source=featuredpartner&utm_medium=portal&utm_campaign=Featured%2Bpartner
-    console: http://europeana.eu/portal/api/console.html?function=search&query=DATA_PROVIDER%3A%22National+Gallery+of+Ireland%22&qf=&latMin=&latMax=&longMin=&longMax=&yearMin=&yearMax=&profile=standard&profile=portal&profile=facets&profile=breadcrumb&profile=minimal&profile=params&rows=12&start=1&callback=
-    provider: http://szinhaziintezet.hu/index.php?lang=en
-    preview: http://europeana.eu/portal/sp/rss-blog-cache/sp-img-fi_partner_211113_02_1.jpg
+    portal: "http://www.europeana.eu/portal/search.html?query=DATA_PROVIDER:%22Cat%C3%A1logo%20Colectivo%20de%20la%20Red%20de%20Bibliotecas%20de%20los%20Archivos%20Estatales%22&qf=TYPE:IMAGE"
+    console: "http://europeana.eu/portal/api/console.html?function=search&query=DATA_PROVIDER:%22Catálogo%20Colectivo%20de%20la%20Red%20de%20Bibliotecas%20de%20los%20Archivos%20Estatales%22&qf=TYPE:IMAGE"
+    provider: http://www.mcu.es/ccbae/es/inicio/inicio.cmd
+    licenses: 
+      - pd
+    preview: /img/datasets/catalogo_1_800.jpeg
+      
+- name: "Maps and drawings from the Biblioteca Virtual del Patrimonio Bibliográfico"
+  provider: "Biblioteca Virtual del Patrimonio Bibliográfico"
+  contact: ccbae.dglab@mcu.es
+  description: "More than 4,000 maps and drawings from the Biblioteca Virtual del Patrimonio Bibliográfico. Spanish language."
+  tags:
+    - Maps
+    - Drawings
+  links:
+    portal: "http://www.europeana.eu/portal/search.html?query=DATA_PROVIDER:%22Biblioteca%20Virtual%20del%20Patrimonio%20Bibliogr%C3%A1fico%22&qf=TYPE:IMAGE"
+    console: "http://europeana.eu/portal/api/console.html?function=search&query=DATA_PROVIDER:%22Biblioteca%20Virtual%20del%20Patrimonio%20Bibliogr%C3%A1fico%22&qf=TYPE:IMAGE"
+    provider: http://bvpb.mcu.es/es/estaticos/contenido.cmd?pagina=estaticos/presentacion
+    licenses: 
+      - pd
+    preview: /img/datasets/bvirtual_1_800.jpeg
 
-- name: Spanish Stuff
-  provider: Hispana
-  contact: spanish@example.com
-  datasetid: 23446
-  description: En Cataluña, los proyectos promovidos por el Ministerio de Educación, Cultura y Deporte a través IPCE en los últimos cinco años han supuesto un gasto -vía inversión y subvención- de casi 29 millones de euros
+- name: "Drawings, prints and artwork from the National Library of Poland"
+  provider: "The National Library of Poland - Biblioteka Narodowa"
+  contact: biblnar@bn.org.pl
+  description: "More than 16,000 examples of drawings, prints, artwork, posters, engravings, postcards, photographs, portraits and caricatures from the National Library of Poland. Polish language."
   tags:
-    - Art
-    - Gallery
+    - Photographs
+    - Prints
+    - Drawings
   links:
-    portal:  http://www.europeana.eu/portal/search.html?query=*:*&qf=PROVIDER:Hispana
-    console: http://europeana.eu/portal/api/console.html?function=search&query=DATA_PROVIDER%3A%22National+Gallery+of+Ireland%22&qf=&latMin=&latMax=&longMin=&longMax=&yearMin=&yearMax=&profile=standard&profile=portal&profile=facets&profile=breadcrumb&profile=minimal&profile=params&rows=12&start=1&callback=
-    provider: http://hispana.mcu.es/es/estaticos/contenido.cmd?pagina=estaticos/presentacion
-    preview: http://hispana.mcu.es/i18n/img/imgMS/img_MinisterioCultura.gif
+    portal: "http://www.europeana.eu/portal/search.html?query=DATA_PROVIDER%3A%22The+National+Library+of+Poland+-+Biblioteka+Narodowa%22+AND+NOT+book"
+    console: "http://europeana.eu/portal/api/console.html?function=search&query=DATA_PROVIDER%3A%22The+National+Library+of+Poland+-+Biblioteka+Narodowa%22+AND+NOT+book"
+    provider: http://bn.org.pl/en/
+    licenses: 
+      - pd
+    preview: /img/datasets/narodowa_1_800.jpeg
+
+- name: "Archaeological artefacts from the Institute of Balkan Studies and Thracology"
+  provider: "Institute of Balkan Studies and Thracology - Институт за балканистика с Център по тракология"
+  contact: balkani@cl.bas.bg
+  description: "500 examples of archaeological artefacts from the Institute of Balkan Studies and Thracology. Bulgarian language."
+  tags:
+    - Photographs
+    - Archaeology
+  links:
+    portal: "http://www.europeana.eu/portal/search.html?query=DATA_PROVIDER%3a%22%D0%98%D0%BD%D1%81%D1%82%D0%B8%D1%82%D1%83%D1%82+%D0%B7%D0%B0+%D0%B1%D0%B0%D0%BB%D0%BA%D0%B0%D0%BD%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B0+%D1%81+%D0%A6%D0%B5%D0%BD%D1%82%D1%8A%D1%80+%D0%BF%D0%BE+%D1%82%D1%80%D0%B0%D0%BA%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%8F%22"
+    console: "http://www.europeana.eu/portal/api/console.html?function=search&query=DATA_PROVIDER%3a%22%D0%98%D0%BD%D1%81%D1%82%D0%B8%D1%82%D1%83%D1%82+%D0%B7%D0%B0+%D0%B1%D0%B0%D0%BB%D0%BA%D0%B0%D0%BD%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B0+%D1%81+%D0%A6%D0%B5%D0%BD%D1%82%D1%8A%D1%80+%D0%BF%D0%BE+%D1%82%D1%80%D0%B0%D0%BA%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%8F%22"
+    provider: http://balkanstudies.bg
+    licenses: 
+      - by
+      - sa
+    preview: /img/datasets/balkan_1_800.jpeg
+
+- name: "Photographs, prints and posters from the Biblioteca Valenciana Digital"
+  provider: "Biblioteca Valenciana Digital"
+  contact: bivaldi@gva.es
+  description: "More than 500 examples of photographs, prints and posters from the Biblioteca Valenciana Digital. Spanish language."
+  tags:
+    - Photographs
+    - Prints
+  links:
+    portal: "http://www.europeana.eu/portal/search.html?query=DATA_PROVIDER:%22Biblioteca%20Valenciana%20Digital%22&qf=TYPE:IMAGE"
+    console: "http://www.europeana.eu/portal/api/console.html?function=search&query=DATA_PROVIDER:%22Biblioteca%20Valenciana%20Digital%22&qf=TYPE:IMAGE"
+    provider: http://bv2.gva.es/es/cms/elemento.cmd?id=estaticos/paginas/inicio.html
+    licenses: 
+      - pd
+    preview: /img/datasets/valenciana_1_800.jpeg
