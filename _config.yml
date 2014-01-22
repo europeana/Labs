@@ -56,6 +56,10 @@ prose:
               field:
                 element: "checkbox"
                 label: "Featured"
+            - name: "published"
+              field:
+                element: "checkbox"
+                value: true
             - name: "tags"
               field:
                 element: "multiselect"
