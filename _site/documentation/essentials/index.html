@@ -34,11 +34,13 @@
 <header class="header cf" role="banner">
     <div class="lc">
         <a href="/" class="logo ir">Europeana</a>	
-		<a href="#" class="nav-toggle nav-toggle-search icon-search"><span class="is-vishidden">Search</span></a>
+		
         <a href="#" class="nav-toggle nav-toggle-menu icon-rows"><span class="is-vishidden">Menu</span></a>
-
-		<a id="rssUrl" class="pull-right" href="/rss.xml"><img src="/img/rss24.png" /></a>
+        <a href="/search" class="nav-toggle nav-toggle-search icon-search"><span class="is-vishidden">Search</span></a>
+		<a href="/rss.xml" class="nav-toggle nav-toggle-search icon-rss"><span class="is-vishidden">Rss</span></a>
+		
         <form id="search" action="/search" method="get" class="inline-form search-form">
+        	<a id="rssUrl" class="pull-right" href="/rss.xml"><img src="/img/rss24.png" /></a>
             <fieldset>
                 <legend class="is-vishidden">Search</legend>
                 <label for="search-field" class="is-vishidden">Search</label>
@@ -102,45 +104,28 @@
 
 		
 	<div id="documentation" class="prose grid__item palm--one-whole push--palm-none one-half"><!--
-	--><div class="maruku_toc"><ul><li><a href="#usage_limit">Usage Limit</a></li><li><a href="#example">Example</a><ul><li><a href="#javascript">Javascript</a></li></ul></li></ul></div>
-<h3 id="usage_limit">Usage Limit</h3>
+	--><div class="maruku_toc"><ul><li><a href="#request">Request</a><ul><li><a href="#authentication_parameter">Authentication Parameter</a></li></ul></li><li><a href="#response">Response</a></li></ul></div>
+<p>In this section you will find information necessary to jump-start using Europeana API.</p>
 
-<p>Applications are permitted to perform up to 10000 calls in 24 hours. If you need more than that please <a href="mailto:api@europeana.eu">contact us</a>.</p>
+<h2 id="request">Request</h2>
 
-<h3 id="example">Example</h3>
+<p>Every API call is an HTTP request in a specified format that is sent to the Europeana API service. The API root URL is located at: http://www.europeana.eu/api/v2.</p>
 
-<p>The call <code>http://europeana.eu/api/v2/search.json?wskey=xxxxxxxx&amp;query=mona+lisa&amp;profile=standard%20params</code> returns</p>
+<h3 id="authentication_parameter">Authentication Parameter</h3>
 
-<pre class="json"><code class="json">
-{
-  &quot;apikey&quot;: &quot;xxxxxxxxx&quot;,
-  &quot;action&quot;: &quot;search.json&quot;,
-  &quot;success&quot;: true,
-  &quot;requestNumber&quot;: 6,
-  &quot;params&quot;: {
-    &quot;query&quot;: &quot;mona lisa&quot;,
-    &quot;profile&quot;: &quot;standard params&quot;,
-    &quot;start&quot;: 1,
-    &quot;rows&quot;: 12
-  },
-  &quot;itemsCount&quot;: 12,
-  &quot;totalResults&quot;: 195,
-  &quot;items&quot;: [...]
-}
-</code></pre>
+<p>Every API call must be provided a special authentication parameter wskey. This parameter should contain your private key that you got during the registration process.</p>
 
-<h4 id="javascript">Javascript</h4>
+<h2 id="response">Response</h2>
 
-<p>And some javascript, just to check the syntax formatting.</p>
-<div class='highlight'><pre><code class='java'><span class='n'>var</span> <span class='n'>sum</span> <span class='o'>=</span> <span class='n'>function</span><span class='o'>()</span> <span class='o'>{</span>
-    <span class='n'>var</span> <span class='n'>i</span><span class='o'>,</span> <span class='n'>x</span> <span class='o'>=</span> <span class='mi'>0</span><span class='o'>;</span>
-    <span class='k'>for</span> <span class='o'>(</span><span class='n'>i</span> <span class='o'>=</span> <span class='mi'>0</span><span class='o'>;</span> <span class='n'>i</span> <span class='o'>&lt;</span> <span class='n'>arguments</span><span class='o'>.</span><span class='na'>length</span><span class='o'>;</span> <span class='o'>++</span><span class='n'>i</span><span class='o'>)</span> <span class='o'>{</span>
-        <span class='n'>x</span> <span class='o'>+=</span> <span class='n'>arguments</span><span class='o'>[</span><span class='n'>i</span><span class='o'>];</span>
-    <span class='o'>}</span>
-    <span class='k'>return</span> <span class='n'>x</span><span class='o'>;</span>
-<span class='o'>}</span>
-<span class='n'>sum</span><span class='o'>(</span><span class='mi'>1</span><span class='o'>,</span> <span class='mi'>2</span><span class='o'>,</span> <span class='mi'>4</span><span class='o'>);</span> <span class='c1'>// returns 6</span>
-</code></pre></div><!--
+<p>A response to an API call will always contain a number of standard fields that precede the fields specific for the call. The standard part contains the following fields:</p>
+<table><thead><tr><th>Field</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">apikey</td><td style="text-align: center;">String</td><td style="text-align: left;">the authentication parameter sent out by the client (the wskey parameter)</td></tr>
+<tr><td style="text-align: left;">action</td><td style="text-align: center;">String</td><td style="text-align: left;">the name of the API method that was called</td></tr>
+<tr><td style="text-align: left;">success</td><td style="text-align: center;">Boolean</td><td style="text-align: left;">a boolean (true/false) flag denoting the successful execution of the call</td></tr>
+<tr><td style="text-align: left;">statsDuration</td><td style="text-align: center;">Number</td><td style="text-align: left;">the time (in milliseconds) taken to serve the request</td></tr>
+<tr><td style="text-align: left;">requestNumber</td><td style="text-align: center;">Number</td><td style="text-align: left;">a positive number denoting the number of request by this API key within the last 24 hours</td></tr>
+<tr><td style="text-align: left;">error</td><td style="text-align: center;">String</td><td style="text-align: left;">if the call was not successful this fields will contain a detailed text message. See <a href="labs.europeana.eu/documentation/error-codes.html">Error Codes</a> for more information.</td></tr>
+<tr><td style="text-align: left;">params</td><td style="text-align: center;">Object</td><td style="text-align: left;">original request parameters. If an invalid request parameter was submitted, this response parameter will contain the default value (see individual calls for the default values). Shown up only if the profile parameter contains “params”.</td></tr>
+</tbody></table><!--
 --></div>
 </div>
 ﻿<!-- Begin Footer -->

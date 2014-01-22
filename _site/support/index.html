@@ -34,11 +34,13 @@
 <header class="header cf" role="banner">
     <div class="lc">
         <a href="/" class="logo ir">Europeana</a>	
-		<a href="#" class="nav-toggle nav-toggle-search icon-search"><span class="is-vishidden">Search</span></a>
+		
         <a href="#" class="nav-toggle nav-toggle-menu icon-rows"><span class="is-vishidden">Menu</span></a>
-
-		<a id="rssUrl" class="pull-right" href="/rss.xml"><img src="/img/rss24.png" /></a>
+        <a href="/search" class="nav-toggle nav-toggle-search icon-search"><span class="is-vishidden">Search</span></a>
+		<a href="/rss.xml" class="nav-toggle nav-toggle-search icon-rss"><span class="is-vishidden">Rss</span></a>
+		
         <form id="search" action="/search" method="get" class="inline-form search-form">
+        	<a id="rssUrl" class="pull-right" href="/rss.xml"><img src="/img/rss24.png" /></a>
             <fieldset>
                 <legend class="is-vishidden">Search</legend>
                 <label for="search-field" class="is-vishidden">Search</label>
@@ -76,7 +78,7 @@
 
 	<p>Got questions about the Europeana API?</p> 
 	<div id="contactForm">
-		<div id="messageContainer" class="alert alert-danger">
+		<div id="messageContainer" class="alert">
 			
 		</div>
 		<form id="frmContact">
@@ -99,8 +101,8 @@
 		    		<td><input id="captcha" name="captcha" type="text" placeholder="Enter code from image"/></td>
 		    	</tr>
 		    </table>
-		    
 		    <button type="submit" id="submit" name="submit" class="pull-right" onclick="sendEmail();return false;">Submit</button>
+		    <img id="loadingIcon" src="/img/ajax-loader.gif" alt="Loading..." class="pull-right" style="margin: 1em;" />
 	        <br class="clear"/>
 		</form>
 	</div>
@@ -118,20 +120,22 @@
 <script type="text/javascript">
 $(document).ready(function(){
 	$("#messageContainer").hide();
+	$("#loadingIcon").hide();
 });
 
 function sendEmail(){
+	$("#loadingIcon").show();
 	var url = "http://dev.museu.ms/Labs/SendEmail?name="+$("#name").val()+"&email="+$("#email").val()+"&subject="+$("#subject").val()+"&message="+$("#message").val()+"&captcha="+$("#captcha").val();
 	 	$.ajax({
 	 			url: url,
                 dataType: 'jsonp',
-                error:function(xhr, status, error){
-                	alert(error);
-                },
                 success:function(data){
-                	
-                	if(data.success==false){
-	                	$("#messageContainer").addClass("alert-error");
+                	if(data.Success==false){
+	                	$("#messageContainer")
+	                	.removeClass("alert-success")
+	                	.removeClass("alert-error")
+	                	.addClass("alert-error");
+	                	
 	                	$("#messageContainer").html(data.Message);
 	                	$("#messageContainer").show();
                 	}else{
@@ -140,6 +144,8 @@ function sendEmail(){
 	                	$("#frmContact").hide();
                 	}
                 	
+                	$("#loadingIcon").hide();
+                	$("#captcha").val("");
 					var d = new Date();
 					$("#imageCaptcha").attr("src", "http://dev.museu.ms/captcha?"+d.getTime());
                 }

@@ -3,7 +3,7 @@
 <head>
 	<link href='http://fonts.googleapis.com/css?family=Noto+Sans|Noto+Serif:400,700&subset=latin,greek,cyrillic,latin-ext' rel='stylesheet' type='text/css'>	    
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>  API Authentiation |  Europeana Labs </title>
+	<title>  API Authentication |  Europeana Labs </title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
 	<!-- never cache patterns -->
@@ -34,11 +34,13 @@
 <header class="header cf" role="banner">
     <div class="lc">
         <a href="/" class="logo ir">Europeana</a>	
-		<a href="#" class="nav-toggle nav-toggle-search icon-search"><span class="is-vishidden">Search</span></a>
+		
         <a href="#" class="nav-toggle nav-toggle-menu icon-rows"><span class="is-vishidden">Menu</span></a>
-
-		<a id="rssUrl" class="pull-right" href="/rss.xml"><img src="/img/rss24.png" /></a>
+        <a href="/search" class="nav-toggle nav-toggle-search icon-search"><span class="is-vishidden">Search</span></a>
+		<a href="/rss.xml" class="nav-toggle nav-toggle-search icon-rss"><span class="is-vishidden">Rss</span></a>
+		
         <form id="search" action="/search" method="get" class="inline-form search-form">
+        	<a id="rssUrl" class="pull-right" href="/rss.xml"><img src="/img/rss24.png" /></a>
             <fieldset>
                 <legend class="is-vishidden">Search</legend>
                 <label for="search-field" class="is-vishidden">Search</label>
@@ -68,7 +70,7 @@
 <div role="main" class="grid">
 	<div class="block block-content-header">
 		<div class="grid__item palm--one-whole push--palm--none three-quarters push--one-quarter">
-			<h2 class="title">API Authentiation</h2>
+			<h2 class="title">API Authentication</h2>
 		</div>
 	</div>
 
