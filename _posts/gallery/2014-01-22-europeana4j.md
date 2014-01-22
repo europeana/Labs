@@ -7,6 +7,7 @@ featured: false
 permalink: gallery/europeana4j
 tags: 
   - API Implementation
+  - Open Source Project
 links: 
   - "http://code.google.com/p/europeana4j/"
 ---
