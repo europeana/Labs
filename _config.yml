@@ -7,7 +7,7 @@ permalink: pretty
 pygments: true
 
 exclude: ['README.md', 'Gemfile', 'Gemfile.lock']
-baseurl: /Labs
+baseurl: http://europeana.github.io/Labs
 
 lunr_search:
   excludes: [rss.xml, atom.xml]
