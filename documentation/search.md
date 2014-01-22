@@ -1,5 +1,5 @@
 ---
-layout: "api-page"
+layout: api-page
 title: API Search Method
 published: true
 ---
@@ -14,6 +14,12 @@ Find objects within the Europeana repository.
     http://europeana.eu/api/v2/search.json
 
 ## Request
+
+**Test**
+| Field | Datatype[^datatype] | Description |
+|-------|----------|-------------|
+| apikey | String | the authentication parameter sent out by the client (the _wskey_ parameter) |
+**Test**
 
 | Parameter | Datatype | Desription |
 |: ------------- |:-------------| :-----|

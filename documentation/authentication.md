@@ -1,7 +1,6 @@
 ---
 layout: api-page
-title: API Authentiation
-topnav: api
+title: API Authentication
 ---
 
 * TOC

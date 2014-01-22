@@ -1,6 +1,5 @@
 ---
 layout: api
-topnav: api
 ---
 
 * TOC
