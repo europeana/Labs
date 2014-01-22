@@ -26,6 +26,30 @@
       <dc:date>9999-01-01T00:00:00+01:00</dc:date>
     </item>
     <item>
+      <title>ECLAP</title>
+      <link>http://localhost:4000//gallery/eclap</link>
+      <description>&lt;p&gt;The ECLAP e-library of performing arts is a Europeana group project member and content provider. On their Drupal powered website, any search will display results from Europeana in a sidebar widget.&lt;/p&gt;</description>
+      <pubDate>Wed, 22 Jan 2014 00:00:00 +0100</pubDate>
+      <guid>http://localhost:4000//gallery/eclap</guid>
+      <dc:date>2014-01-22T00:00:00+01:00</dc:date>
+    </item>
+    <item>
+      <title>Dutch Museum of Natural History</title>
+      <link>http://localhost:4000//gallery/dutch-natural-history</link>
+      <description>&lt;p&gt;The Dutch Museum of National History presents the history of Dutch people in images and stories. Should a user search for a historical person, the result pages include also Europeana content related to this individual.&lt;/p&gt;</description>
+      <pubDate>Wed, 22 Jan 2014 00:00:00 +0100</pubDate>
+      <guid>http://localhost:4000//gallery/dutch-natural-history</guid>
+      <dc:date>2014-01-22T00:00:00+01:00</dc:date>
+    </item>
+    <item>
+      <title>Django Europeana 0.1.5</title>
+      <link>http://localhost:4000//gallery/django</link>
+      <description>&lt;p&gt;The app is a programming library for Django, the free and open source web framework written in Python and used in Pinterest, Instagram, Mozilla and The Washington Times.&lt;/p&gt;</description>
+      <pubDate>Wed, 22 Jan 2014 00:00:00 +0100</pubDate>
+      <guid>http://localhost:4000//gallery/django</guid>
+      <dc:date>2014-01-22T00:00:00+01:00</dc:date>
+    </item>
+    <item>
       <title>Europeana4Education (E4E)</title>
       <link>http://localhost:4000//gallery/e4e</link>
       <description>&lt;p&gt;E4E is a set of two widgets that automatically suggest cultural resources from Europeana and learning resources from Open Discovery Space. It is aimed at authors of educational pathways. E4E widgets can be integrated into an authoring environment such as OMEKA to augment the authoring process and to enhance the educational impact of a pathway. The main rationale behind E4E development was to explore the educational uses of items on Europeana. The E4E widgets were developed in the context of the Natural Europe and Open Discovery Space projects. Winner in the category ‘Social Inclusion’&lt;/p&gt;</description>
