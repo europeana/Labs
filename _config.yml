@@ -41,6 +41,7 @@ prose:
               field:
                 element: "text"
                 placeholder: "gallery/"
+                label: "Permalink"
             - name: "title"
               field:
                 element: "text"
@@ -53,9 +54,11 @@ prose:
             - name: "featured"
               field:
                 element: "checkbox"
+                label: "Featured"
             - name: "contact"
               field:
                 element: "text"
+                label: "Contact"
             - name: "tags"
               field:
                 element: "multiselect"
@@ -77,3 +80,6 @@ prose:
                     - name: "Open Source Project"
                       value: "Open Source Project"
             - name: "links"
+              field:
+                element: "text"
+                label: "Links"
