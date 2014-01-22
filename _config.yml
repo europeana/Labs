@@ -7,7 +7,7 @@ permalink: pretty
 pygments: true
 
 exclude: ['README.md', 'Gemfile', 'Gemfile.lock']
-baseurl: Labs
+baseurl: /Labs
 
 lunr_search:
   excludes: [rss.xml, atom.xml]
