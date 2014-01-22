@@ -6,7 +6,7 @@ markdown: maruku
 permalink: pretty
 pygments: true
 
-exclude: ['README.md']
+exclude: ['README.md', 'Gemfile', 'Gemfile.lock']
 baseurl: 
 
 lunr_search:
