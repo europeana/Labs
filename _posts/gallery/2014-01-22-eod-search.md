@@ -7,7 +7,8 @@ featured: false
 permalink: "gallery/eod-search"
 tags: 
   - API Implementation
-links: "http://search.books2ebooks.eu/Record/vkol_vkol000457366"
+links: 
+  - "http://search.books2ebooks.eu/Record/vkol_vkol000457366"
 ---
 
 Over 6000 books have been digitised via EOD. Through the Europeana API, EOD search results are enriched with relevant Europeana records. The eBooks on Demand (EOD) search makes currently available over 3,4 Mio records from 24 libraries by giving direct access to the items already digitised on users' requests and through other projects as well as books offered for digitisation on demand.
