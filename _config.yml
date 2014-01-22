@@ -82,6 +82,6 @@ prose:
                       value: "Open Source Project"
             - name: "links"
               field:
-                element: "text"
-                label: "Links"
-                placeholder: "http://example.com"
+                element: "multiselect"
+                label: "Add Links"
+                alterable: true
