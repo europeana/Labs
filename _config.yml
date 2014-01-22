@@ -60,6 +60,7 @@ prose:
               field:
                 element: "checkbox"
                 value: true
+                label: "Published"
             - name: "tags"
               field:
                 element: "multiselect"
@@ -85,3 +86,4 @@ prose:
                 element: "multiselect"
                 label: "Add Links"
                 alterable: true
+                placeholder: "Add New Links"
