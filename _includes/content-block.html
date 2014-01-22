@@ -1,17 +1,17 @@
 <ul>
 	{% if page.contact.name %}
-	<i class="icon icon-user"></i><li class="contact"><strong>Contact:</strong>&nbsp;{{ page.contact.name }}</li>
+	<li class="contact"><i class="icon icon-user"></i>&nbsp;<strong>Contact:</strong>&nbsp;{{ page.contact.name }}</li>
 	{% endif %}
 	{% if page.contact.address %}
-	<li class="address"><strong>Address:</strong>&nbsp;{{ page.contact.address }}</li>
+	<li class="address"><i class="icon icon-location"></i>&nbsp;<strong>Address:</strong>&nbsp;{{ page.contact.address }}</li>
 	{% endif %}
 	{% if page.contact.telephone %}
-	<li class="tel"><strong>Tel:</strong>&nbsp;{{ page.contact.telephone }}</li>
+	<li class="tel"><i class="icon icon-phone"></i>&nbsp;<strong>Tel:</strong>&nbsp;{{ page.contact.telephone }}</li>
 	{% endif %}
 	{% if page.contact.email %}
-	<li class="email"><strong>Email:</strong>&nbsp;{{ page.contact.email }}</li>
+	<li class="email"><i class="icon icon-mail"></i>&nbsp;<strong>Email:</strong>&nbsp;{{ page.contact.email }}</li>
 	{% endif %}
 	{% if page.contact.website %}
-	<li class="website"><strong>Website:</strong>&nbsp;<a href="{{page.contact.website}}" title="{{page.title}} Website">{{ page.title }}</li>
+	<li class="website"><i class="icon icon-link"></i>&nbsp;<strong>Website:</strong>&nbsp;<a href="{{page.contact.website}}" title="{{page.title}} Website">{{ page.title }}</li>
 	{% endif %}
 </ul>
