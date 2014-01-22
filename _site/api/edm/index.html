@@ -3,7 +3,7 @@
 <head>
 	<link href='http://fonts.googleapis.com/css?family=Noto+Sans|Noto+Serif:400,700&subset=latin,greek,cyrillic,latin-ext' rel='stylesheet' type='text/css'>	    
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>  API Change Log |  Europeana Labs </title>
+	<title>  Europeana Data Model (EDM) Reference |  Europeana Labs </title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
 	<!-- never cache patterns -->
@@ -54,7 +54,7 @@
         <nav id="nav" class="nav">
             <ul>
                 <li><a href="/" class="current">Home</a></li>
-                <li><a href="/documentation">Documentation</a></li>
+                <li><a href="/api">API</a></li>
                 <li><a href="/gallery">Gallery</a></li>
                 <li><a href="/datasets">Datasets</a></li>
                 <li><a href="/spaces">Spaces</a></li> 
@@ -70,31 +70,31 @@
 <div role="main" class="grid">
 	<div class="block block-content-header">
 		<div class="grid__item palm--one-whole push--palm--none three-quarters push--one-quarter">
-			<h2 class="title">API Change Log</h2>
+			<h2 class="title">Europeana Data Model (EDM) Reference</h2>
 		</div>
 	</div>
 
 		<div class="grid__item one-quarter palm--one-whole">
 		<ul class="tabs tabs-v">
-			<li><a href="/documentation" title="API Introduction">Introduction</a></li>
-			<li><a href="/documentation/essentials" title="API Essentials">Essentials</a></li>
+			<li><a href="/api" title="API Introduction">Introduction</a></li>
+			<li><a href="/api/essentials" title="API Essentials">Essentials</a></li>
 			<li><a href="http://europeana.eu/portal/api/registration.html" title="API Registration">Registration</a></li>
 			<li><a href="http://europeana.eu/portal/api/console.html" title="API Console">Console</a></li>
-			<li><a href="/documentation/changelog" title="API ChangeLog">Change Log</a></li>
+			<li><a href="/api/changelog" title="API ChangeLog">Change Log</a></li>
 		</ul>
 		
 		<ul class="tabs tabs-v">
-			<li><a href="/documentation/authentication" title="API Authentication">Authentication</a></li>
-			<li><a href="/documentation/search" title="API Search Method">Search Method</a></li>
-			<li><a href="/documentation/object" title="API Object Method">Object Method</a></li>
-			<li><a href="/documentation/myeuropeana" title="Accessing MyEuropeana via API">My Europeana</a></li>
-			<li><a href="/documentation/provider" title="Accessing Provider/Collection via API">Provider/Collection</a></li>
-			<li><a href="/documentation/error" title="API Error Code">Error Codes</a></li>
+			<li><a href="/api/authentication" title="API Authentication">Authentication</a></li>
+			<li><a href="/api/search" title="API Search Method">Search Method</a></li>
+			<li><a href="/api/object" title="API Object Method">Object Method</a></li>
+			<li><a href="/api/myeuropeana" title="Accessing MyEuropeana via API">My Europeana</a></li>
+			<li><a href="/api/provider" title="Accessing Provider/Collection via API">Provider/Collection</a></li>
+			<li><a href="/api/error" title="API Error Code">Error Codes</a></li>
 		</ul>
 
 		<ul class="tabs tabs-v">
-			<li><a href="/documentation/search-widget" title="Search Widget">Search Widget</a></li>
-			<li><a href="/documentation/edm" title="Europeana Data Model Reference">EDM Reference</a></li>
+			<li><a href="/api/search-widget" title="Search Widget">Search Widget</a></li>
+			<li><a href="/api/edm" title="Europeana Data Model Reference">EDM Reference</a></li>
 		</ul>
 		
 		<ul class="tabs tabs-v">
@@ -104,36 +104,45 @@
 
 		
 	<div id="documentation" class="prose grid__item palm--one-whole push--palm-none one-half"><!--
-	--><p>This document describes the changes of Europeana API. The changes are grouped by new API versions. We deploy new versions of the portal and the API quite regularly, but not all new versions has change in the interface. The API documentation always describes the current version of the API. We don’t have (yet?) however API call to get the actual version, so the API users should see the date of changes.</p>
+	--><div class="maruku_toc"><ul><li><a href="#usage_limit">Usage Limit</a></li><li><a href="#example">Example</a><ul><li><a href="#javascript">Javascript</a></li></ul></li></ul></div>
+<h3 id="usage_limit">Usage Limit</h3>
 
-<h3 id="version_206_20130809">Version 2.0.6 (2013-08-09)</h3>
+<p>Applications are permitted to perform up to 10000 calls in 24 hours. If you need more than that please <a href="mailto:api@europeana.eu">contact us</a>.</p>
 
-<p>New allowable value for the <em>profile</em> parameter: <code>params</code>. When client adds <code>params</code> to the <em>profile</em> parameter, the header of the response will contain a <code>params</code> key, which lists the requested and default parameters of the API call. The client can use profile <em>profile</em> parameter in search and object calls. The parameter accepts both single and multiple values separated by comma or space (such as <code>&amp;profile=standard</code> or <code>&amp;profile=standard,params</code> or <code>&amp;amp;profile=standard%20params</code>).</p>
+<h3 id="example">Example</h3>
 
-<h4 id="example">Example</h4>
+<p>The call <code>http://europeana.eu/api/v2/search.json?wskey=xxxxxxxx&amp;query=mona+lisa&amp;profile=standard%20params</code> returns</p>
 
-<pre><code>
-http://europeana.eu/api/v2/search.json?wskey=xxxxxxxx&amp;amp;query=mona+lisa&amp;amp;profile=standard%20params
+<pre class="json"><code class="json">
+{
+  &quot;apikey&quot;: &quot;xxxxxxxxx&quot;,
+  &quot;action&quot;: &quot;search.json&quot;,
+  &quot;success&quot;: true,
+  &quot;requestNumber&quot;: 6,
+  &quot;params&quot;: {
+    &quot;query&quot;: &quot;mona lisa&quot;,
+    &quot;profile&quot;: &quot;standard params&quot;,
+    &quot;start&quot;: 1,
+    &quot;rows&quot;: 12
+  },
+  &quot;itemsCount&quot;: 12,
+  &quot;totalResults&quot;: 195,
+  &quot;items&quot;: [...]
+}
 </code></pre>
 
-<p>returns</p>
-<pre>
-{
-  "apikey": "xxxxxxxxx",
-  "action": "search.json",
-  "success": true,
-  "requestNumber": 6,
-  "params": {
-    "query": "mona lisa",
-    "profile": "standard params",
-    "start": 1,
-    "rows": 12
-  },
-  "itemsCount": 12,
-  "totalResults": 195,
-  "items": [...]
-}
-</pre><!--
+<h4 id="javascript">Javascript</h4>
+
+<p>And some javascript, just to check the syntax formatting.</p>
+<div class='highlight'><pre><code class='java'><span class='n'>var</span> <span class='n'>sum</span> <span class='o'>=</span> <span class='n'>function</span><span class='o'>()</span> <span class='o'>{</span>
+    <span class='n'>var</span> <span class='n'>i</span><span class='o'>,</span> <span class='n'>x</span> <span class='o'>=</span> <span class='mi'>0</span><span class='o'>;</span>
+    <span class='k'>for</span> <span class='o'>(</span><span class='n'>i</span> <span class='o'>=</span> <span class='mi'>0</span><span class='o'>;</span> <span class='n'>i</span> <span class='o'>&lt;</span> <span class='n'>arguments</span><span class='o'>.</span><span class='na'>length</span><span class='o'>;</span> <span class='o'>++</span><span class='n'>i</span><span class='o'>)</span> <span class='o'>{</span>
+        <span class='n'>x</span> <span class='o'>+=</span> <span class='n'>arguments</span><span class='o'>[</span><span class='n'>i</span><span class='o'>];</span>
+    <span class='o'>}</span>
+    <span class='k'>return</span> <span class='n'>x</span><span class='o'>;</span>
+<span class='o'>}</span>
+<span class='n'>sum</span><span class='o'>(</span><span class='mi'>1</span><span class='o'>,</span> <span class='mi'>2</span><span class='o'>,</span> <span class='mi'>4</span><span class='o'>);</span> <span class='c1'>// returns 6</span>
+</code></pre></div><!--
 --></div>
 </div>
 ﻿<!-- Begin Footer -->
