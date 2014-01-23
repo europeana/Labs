@@ -5,19 +5,19 @@ published: true
 title: Europeana Culture Collage
 featured: true
 permalink: "gallery/culture-collage"
-imageurl:
+imageurl: 
   - "/img/gallery/europeana-culture-collage/Culture_Collage.jpg"
 tags: 
   - API Implementation
 links: 
   - "http://www.zenlan.com/collage/europeana/#"
   - "https://github.com/zenlan/eurapi"
-contact:
-  name: "Monique Szpak"
-  website: https://twitter.com/zenlan
+contact: 
+  name: Monique Szpak
+  website: "https://twitter.com/zenlan"
 ---
 
-Europeana Culture Collage is developed by Monique Szpak (@zenlan) and started as a simple exercise in mashing up a few of the newer web technologies, incl. Europeana API and Europeana visual data.
+Europeana Culture Collage is developed by Monique Szpak (@zenlan) and started as a simple exercise in mashing up a few of the new web technologies, incl. Europeana API and Europeana visual data.
 
 The Europeana API proved to be easy to use and provides access to over 14 million images, which made it perfect for a very visual application and has the added advantage of being able to connect the user to both famous and obscure collections and sources.
 
