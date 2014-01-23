@@ -33,25 +33,40 @@ layout: default
 		<br><br>
 	</div>
 
-	<div class="grid__item palm--one-whole push--palm--none one-whole">
-		<h3>Be inspired &hellip;</h3>
-		{% for post in site.categories.gallery %}
-	        {%if post.featured %}
+	<div class="grid__item one-whole palm--one-whole grid--center">
+		<h3 class="pull--left">Be inspired &hellip;</h3>
+	    <ul class="post-list grid">
+	        {% for post in site.categories.gallery %}
+			{% if post.featured %}<!--
+	        --><li class="grid__item three-eighths desk--three-eighths">
+	            <div class="block block-thumb">
 
-		<div class="grid__item block block-thumb block-thumb-small one-half">
-			<a href="{{site.baseurl}}{{post.url}}" class="b-inner">
-				<div class="b-thumb">
-					<img src="{{post.imageurl}}" alt="Square Thumbnail" />	 
-				</div>
-				<div class="b-text">
-					<h3 class="headline">{{post.title}}</h3>
-					<p>{{post.excerpt}}</p>
-				</div>
-			</a>
-		</div>
-		{% endif %}
-	{% endfor %}
-</div>
+	                <div class="b-thumb">
+	                    <a href="{{site.baseurl}}{{post.url}}">
+	                        <img src="{{post.imageurl}}" alt="{{post.title}}">
+	                    </a>
+	                </div>
+
+	                <div class="b-text">
+
+	                    {%if post.featured %}
+		                    <h1 class="headline gamma"><a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a></h1>
+		                    <div class="description">
+		                        {{post.excerpt}}                        
+		                    </div>
+						{% else %}
+							<h5><a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a></h5>
+	                    {% endif %}
+						<a href="{{site.baseurl}}{{post.url}}" title="{{post.title}}" class="text-btn">Read more&rarr;</a>
+	                </div>
+
+	            </div>
+	        </li>
+			{% endif %}
+			{% endfor %}
+	    </ul>
+	</div>
+
 
 <div class="grid--center">
 	<div class="grid__item palm--one-whole one-third">
