@@ -3,7 +3,8 @@ layout: gallery-item
 category: gallery
 permalink: gallery/cerl-thesaurus
 title: CERL Thesaurus Search
-imageurl: "http://lorempixel.com/148/148"
+imageurl: 
+  - "/img/gallery/cerl-thesaurus-search/CERL_Thesaurus.jpg"
 tags: 
   - API Implementation
 links:

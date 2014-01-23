@@ -3,7 +3,9 @@ layout: gallery-item
 category: gallery
 permalink: gallery/biblioteca
 title: Biblioteca Digital Hispánica
-imageurl: "http://lorempixel.com/300/300"
+imageurl: 
+  - "/img/gallery/biblioteca-digital-hispanica/Hispania1.png"
+  - "/img/gallery/biblioteca-digital-hispanica/HIspania2.png"
 featured: true
 published: true
 contact:

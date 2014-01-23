@@ -3,7 +3,8 @@ layout: gallery-item
 category: gallery
 permalink: gallery/carare-map
 title: CARARE Map
-imageurl: "http://lorempixel.com/148/148"
+imageurl: 
+  - "/img/gallery/carare-map/CarareMap.jpg"
 tags: 
   - API Implementation
 links:

@@ -4,7 +4,8 @@ layout: "gallery-item"
 published: true
 permalink: "gallery/dutch-natural-history"
 title: Dutch Museum of Natural History
-imageurl: "http://lorempixel.com/148/148"
+imageurl: 
+  - "/img/gallery/dutch-museum-of-national-history/Dutch_Museum_of_National_History.jpg"
 featured: false
 contact: 
   name: null

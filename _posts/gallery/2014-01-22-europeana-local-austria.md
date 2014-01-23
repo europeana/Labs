@@ -3,7 +3,8 @@ layout: gallery-item
 category: gallery
 permalink: gallery/europeana-local-austria
 title: "Europeana Local Austria"
-imageurl: "http://lorempixel.com/148/148"
+imageurl:
+  - "/img/gallery/europeana-local-austria/eLocal.jpg"
 featured: false
 tags: 
   - API Implementation

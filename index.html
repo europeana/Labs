@@ -43,7 +43,7 @@ layout: default
 
 	                <div class="b-thumb">
 	                    <a href="{{site.baseurl}}{{post.url}}">
-	                        <img src="{{post.imageurl}}" alt="{{post.title}}">
+	                        <img src="{{site.baseurl}}{{post.imageurl}}" alt="{{post.title}}">
 	                    </a>
 	                </div>
 
@@ -59,14 +59,12 @@ layout: default
 	                    {% endif %}
 						<a href="{{site.baseurl}}{{post.url}}" title="{{post.title}}" class="text-btn">Read more&rarr;</a>
 	                </div>
-
 	            </div>
 	        </li>
 			{% endif %}
 			{% endfor %}
 	    </ul>
 	</div>
-
 
 <div class="grid--center">
 	<div class="grid__item palm--one-whole one-third">

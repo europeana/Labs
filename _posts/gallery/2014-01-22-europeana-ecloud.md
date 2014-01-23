@@ -3,7 +3,8 @@ layout: gallery-item
 category: gallery
 permalink: gallery/europeana-ecloud
 title: "Europeana eCloud"
-imageurl: "http://lorempixel.com/148/148"
+imageurl:
+  - "/img/gallery/europeana_ecloud/eCloud.jpg"
 featured: false
 tags: 
   - API Implementation

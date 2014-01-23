@@ -10,6 +10,10 @@ tags:
 links: 
   - "http://pro.europeana.eu/web/guest/europeana-remix"
   - "http://remix.europeana.eu/"
+imageurl:
+  - "/img/gallery/europeana-remix/remix.jpg"
+  - "/img/gallery/europeana-remix/remix_2.jpg"
+  - "/img/gallery/europeana-remix/remix_3.jpg"
 contact:
   name: "Europeana Remix was developed in cooperation with Kennisland, Three Eyed Labs, and BigUp."
 ---

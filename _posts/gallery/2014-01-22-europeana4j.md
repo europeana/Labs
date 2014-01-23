@@ -8,6 +8,8 @@ permalink: gallery/europeana4j
 tags: 
   - API Implementation
   - Open Source Project
+imageurl:
+  - "/img/gallery/europeana4j/europeana4j.jpg"
 links: 
   - "http://code.google.com/p/europeana4j/"
 ---

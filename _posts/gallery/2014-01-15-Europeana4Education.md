@@ -3,7 +3,7 @@ layout: gallery-item
 category: gallery
 permalink: gallery/e4e
 title: Europeana4Education (E4E)
-imageurl: "http://lorempixel.com/148/148"
+imageurl: "http://lorempixel.com/400/400"
 featured: false
 contact:
   name: Olivier

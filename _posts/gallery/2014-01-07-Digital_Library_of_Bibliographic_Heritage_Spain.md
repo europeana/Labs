@@ -3,7 +3,8 @@ layout: gallery-item
 category: gallery
 permalink: gallery/bibheritagespain
 title: Digital Library of Bibliographic Heritage, Spain
-imageurl: "http://lorempixel.com/148/148"
+imageurl: 
+  - "/img/gallery/digital-library-of-bibliographic-heritage-spain/Digital_Library_Spain_jpg.jpg"
 tags: 
   - API Implementation
 links:

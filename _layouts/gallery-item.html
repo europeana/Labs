@@ -7,7 +7,7 @@
 	
 	<div class="grid__item palm--one-whole desk--one-half">
 		    <a href="{{ page.contact.website }}" title="{{page.title}} Website">
-		        <img src="{{page.imageurl}}" alt="{{page.title}}">
+		        <img src="{{site.baseurl}}{{page.imageurl}}" alt="{{page.title}}">
 		    </a>
 
 		<div class="b-text">
@@ -16,9 +16,10 @@
 				{% include link-block.html %}
 		    </div>
 		</div>
-			{% include contact-block.html %}
-			<hr />
-			{% include tag-block.html %}
+		{% include contact-block.html %}
+		{% include other-image-block.html %}
+		<hr />
+		{% include tag-block.html %}
     </div>
 </div>
 

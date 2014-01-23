@@ -3,7 +3,10 @@ layout: gallery-item
 category: gallery
 permalink: gallery/biblioteca-virtual
 title: Biblioteca Virtual Ignacio Larramendi
-imageurl: "http://lorempixel.com/148/148"
+imageurl: 
+  - "/img/gallery/biblioteca_virtual_ignacio_larramendi/larramendi-main.jpg"
+  - "/img/gallery/biblioteca_virtual_ignacio_larramendi/larramendi-1.jpg"
+  - "/img/gallery/biblioteca_virtual_ignacio_larramendi/larramendi-2.jpg"
 tags: 
   - API Implementation
 links:

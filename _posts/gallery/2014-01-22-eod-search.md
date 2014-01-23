@@ -7,6 +7,9 @@ featured: false
 permalink: "gallery/eod-search"
 tags: 
   - API Implementation
+imageurl:
+  - "/img/gallery/eod-search/EOD.jpg"
+  - "/img/gallery/eod-search/EOD_2.jpg"
 links: 
   - "http://search.books2ebooks.eu/Record/vkol_vkol000457366"
 ---

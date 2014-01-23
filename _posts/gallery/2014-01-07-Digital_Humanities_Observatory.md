@@ -3,7 +3,11 @@ layout: gallery-item
 category: gallery
 permalink: gallery/digital-humanities-observatory
 title: Digital Humanities Observatory
-imageurl: "http://lorempixel.com/148/148"
+imageurl: 
+  - "/img/gallery/digital-humanities-observatory/DHO_discovery.jpg"
+  - "/img/gallery/digital-humanities-observatory/DHO_discovery_2.jpg"
+  - "/img/gallery/digital-humanities-observatory/DHO_discovery_3.jpg"
+  - "/img/gallery/digital-humanities-observatory/DHO_discovery_4.png"
 tags: 
   - API Implementation
 links:

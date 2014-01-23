@@ -7,6 +7,10 @@ featured: false
 permalink: gallery/inventing-europe
 tags: 
   - API Implementation
+imageurl:
+  - "/img/gallery/inventing-europe/image_gallery_nr2.jpg"
+  - "/img/gallery/inventing-europe/image_gallery_nr3.jpg"
+  - "/img/gallery/inventing-europe/image_gallery_nr4.jpg"
 links: 
   - "http://www.inventingeurope.eu/"
 ---
