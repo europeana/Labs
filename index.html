@@ -3,33 +3,59 @@ layout: default
 ---
 <div role="main" class="grid">
 
-	<div class="block block-content-header">
-		<div class="grid__item palm--one-whole push--palm--none three-quarters push--one-quarter">
-				<h1 class="title">Europeana Labs</h1>
-				<p class="subhead grid grid__item desk--one-half">
-					Giving developers access to cultural and scientific images, texts and audiovisual collections from Europe's leading cultural organisations &mdash; all rights-cleared and ready to use. Use our API or go and experiment at one of our physical 'hubs'.</p>
-		</div>
+<div class="block block-hero"> 
+	<div class="b-thumb">
+		<img src="/img/hero_bg.png" width="100%" />
 	</div>
-	
-	<div class="block">
-		<div class="grid__item palm--one-whole push--palm--none three-quarters push--one-quarter">
-			<h2>Get your API key.</h2>
+	<div class="b-text"> 
+		<h1>Europeana Labs</h1>
+		<div class="byline">
+			<br>
+			<p>Giving developers access to cultural and scientific images, texts and audiovisual collections<br> from Europe's leading cultural organisations <br>&mdash; all rights-cleared and ready to use.</p>
+			<span class="byline-author"><a href="{{site.baseurl}}/api" title="API Documentation">Use our API</a></span> or go and experiment at one of our <span class="byline-author"><a href="{{site.baseurl}}/spaces" title="Lab Spaces">Spaces</a></span>. 
 		</div>
-		<div class="grid__item palm--one-whole push--palm--none three-quarters push--one-quarter">
-			<p class="grid grid__item desk--one-half">Sign up for your free API key and get developing! The rest is up to you.</p>
+	</div> 
+</div>
+
+<br><br>
+
+<div class="block">
+	<div class="grid--center">
+		<div class="grid__item palm--one-whole one-third">
+			<img src="{{site.baseurl}}/img/key.png">
 		</div>
+		
+		<div class="grid__item palm--one-whole one-third">
+			<h3>Get your API key.</h3>
+			<p>Sign up for your free API key and get developing! <br>The rest is up to you.</p>
+			{% include api-registration.html %}
+		</div>
+		<br><br>
 	</div>
-	<br/>
-	<div class="block">
-		<div class="grid__item palm--one-whole push--palm--none three-quarters push--one-quarter">
-			<h2>Get inspired by some examples.</h2>
+
+	<div class="grid__item palm--one-whole push--palm--none one-whole">
+		<h3>Be inspired &hellip;</h3>
+		{% for post in site.categories.gallery %}
+	        {%if post.featured %}
+
+		<div class="grid__item block block-thumb block-thumb-small one-half">
+			<a href="{{post.url}}" class="b-inner">
+				<div class="b-thumb">
+					<img src="{{post.imageurl}}" alt="Square Thumbnail" />	 
+				</div>
+				<div class="b-text">
+					<h3 class="headline">{{post.title}}</h3>
+					<p>{{post.excerpt}}</p>
+				</div>
+			</a>
 		</div>
-		<div class="grid__item palm--one-whole push--palm--none three-quarters push--one-quarter">
-			<p class="grid grid__item desk--one-half">Sign up for your free API key and get developing! The rest is up to you.</p>
-			<ul>
-				<li>Historiana</li>
-				<li>Natural History</li>
-			</ul>
-		</div>
+		{% endif %}
+	{% endfor %}
+</div>
+
+<div class="grid--center">
+	<div class="grid__item palm--one-whole one-third">
+		<hr>
+		<p class="text-btn" align="center"><a href="{{site.baseurl}}/gallery" title="Application Gallery"><strong>See more examples in the Application Gallery&nbsp;&rarr;</strong></a></p>
 	</div>
 </div>
