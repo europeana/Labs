@@ -15,7 +15,7 @@ links:
   - "http://www.inventingeurope.eu/"
 ---
 
-The Inventing Europe online platform is a pioneering collaboration between historians and cultural heritage institutions across all of Europe.
+The Inventing Europe online platform is a pioneering collaboration between historians and cultural heritage institutions across Europe.
 
 The platform explores the history of technology in Europe via curated tours and exhibitions. These virtual journeys are based on the objects and images of the partner heritage institutions and are enriched with relevant materials from Europeana collections through the Europeana API.
 
