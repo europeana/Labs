@@ -5,6 +5,7 @@ published: true
 title: Europeana Culture Collage
 featured: true
 permalink: "gallery/culture-collage"
+imageurl: "http://lorempixel.com/300/300"
 tags: 
   - API Implementation
 links: 
