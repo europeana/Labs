@@ -9,7 +9,7 @@ var semLabs = {
 		var currentUrl = window.location.pathname;
 		
 		$("nav a").each(function(){
-			if(currentUrl.match($(this).attr("href"))){
+			if(currentUrl.match("^"+$(this).attr("href"))){
 				$(this).addClass("current");
 			}
 		});
