@@ -4,9 +4,8 @@
 			<li><a href="{{site.baseurl}}/gallery">&larr;&nbsp;Gallery</a></li>
 			{% include improve-content.html %}
 		</ul>
-	</div>
-	
-	<div class="grid__item palm--one-whole desk--one-half">
+	</div><!--
+	--><div class="grid__item palm--one-whole desk--one-half">
 		    <a href="{{ page.contact.website }}" title="{{page.title}} Website">
 		        <img src="{{site.baseurl}}{{page.imageurl.first}}" alt="{{page.title}}">
 		    </a>
@@ -21,8 +20,28 @@
 		{% include other-image-block.html %}
 		<hr />
 		{% include tag-block.html %}
-    </div>
+		
+		<style type="text/css">
+ 
+	#share-buttons img {
+	width: 35px;
+	padding: 5px;
+	border: 0;
+	box-shadow: 0;
+	display: inline;
+	}
+ 
+</style>
+
+<div style="float:right;">
+	<div id="share-buttons">
+	<a href="http://www.facebook.com/sharer.php?u={{site.url}}{{page.url}}" target="_blank"><img src="http://www.simplesharebuttons.com/images/somacro/facebook.png" alt="Facebook" /></a>	 
+	<a href="http://twitter.com/share?url={{site.url}}{{page.url}}&text=" target="_blank"><img src="http://www.simplesharebuttons.com/images/somacro/twitter.png" alt="Twitter" /></a>	 
+	<a href="https://plus.google.com/share?url={{site.url}}{{page.url}}" target="_blank"><img src="http://www.simplesharebuttons.com/images/somacro/google.png" alt="Google" /></a>
+	</div>
 </div>
+    </div>
+    
 
 {% include footer.html %}<!--
 -->{% include end.html %}
