@@ -1,6 +1,10 @@
 $(document).ready(function(){
 	semLabs.initMenu();
 	$("#homepage").parent().attr("id", "homepagebody");
+	
+	$("#hamMenu").click(function(){
+		$("#nav").css("max-height","999px");
+	});
 });
 
 var semLabs = {

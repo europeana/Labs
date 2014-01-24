@@ -36,11 +36,13 @@
     <div class="lc">
         <a href="/" class="logo ir">Europeana</a>	
 		<a href="#" class="nav-toggle nav-toggle-search icon-search"><span class="is-vishidden">Search</span></a>
-        <a href="#" class="nav-toggle nav-toggle-menu icon-rows"><span class="is-vishidden">Menu</span></a>
+        <a id="hamMenu" href="#" class="nav-toggle nav-toggle-menu icon-rows"><span class="is-vishidden">Menu</span></a>
+        <a href="/rss" class="nav-toggle nav-toggle-search icon-rss"><span class="is-vishidden">Rss</span></a>
 
 		
         <form id="search" action="/search" method="get" class="inline-form search-form">
-        	<a id="rssUrl" class="pull-right" href="/rss.xml"><img src="/img/rss24.png" /></a>
+        	
+        	<a id="rssUrl" href="/rss" class="icon-rss pull-right"><span class="is-vishidden">Rss</span></a>
             <fieldset>
                 <legend class="is-vishidden">Search</legend>
                 <label for="search-field" class="is-vishidden">Search</label>
