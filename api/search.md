@@ -9,7 +9,7 @@ published: true
 
 ## search.json
 
-Find objects within the Europeana data repository.
+Find objects within the Europeana repository.
 
     http://europeana.eu/api/v2/search.json
 
