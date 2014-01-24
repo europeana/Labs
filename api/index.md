@@ -8,7 +8,7 @@ The Europeana API allows you to build applications that use the wealth of cultur
 
 To get straight to the point of the API, you can go directly to the [Essentials page](essentials) which tells you only what you have to know to start using the API.
 
-## Registration
+### Registration
 To start using the API you should register at the registration page. Upon registration you will get your individual private authentication key. This key should be used when calling API methods as a special wskey authentication parameter.
 
 ### Backward Compatibility
