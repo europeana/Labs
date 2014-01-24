@@ -1,5 +1,6 @@
 $(document).ready(function(){
 	semLabs.initMenu();
+	$("#homepage").parent().attr("id", "homepagebody");
 });
 
 var semLabs = {
