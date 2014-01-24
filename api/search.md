@@ -26,14 +26,14 @@ Find objects within the Europeana repository.
 
 | Field | Datatype | Description |
 |:-------------|:-------------|:-----|
-| items |   Array ([Item](http://www.europeana.eu/portal/api-search-json.html#Item)) |  This is a collection of search results. Each item is represented by a summary of the metadata record. The actual content is dependent of the profile parameter.|
-| facets |  Array ([Facet](http://www.europeana.eu/portal/api-search-json.html#Facet)) |    A collection of facets that describe the resultant dataset. |
+| items |   Array ([Item](#item)) |  This is a collection of search results. Each item is represented by a summary of the metadata record. The actual content is dependent of the profile parameter.|
+| facets |  Array ([Facet](#facet)) |    A collection of facets that describe the resultant dataset. |
 | breadcrumbs | Array ([Breadcrumb](#breadcrumb))| A collection of search queries that were applied in this call. |
 | itemsCount |  Number  | The number of retrieved records |
 | totalResults |    Number |    The total number of results |
 
 
-#### item
+#### <a name="item"></a> item
 
 Each item is a search result and is represented by a summary of its metadata record. The actual content depends of the profile parameter.
 
@@ -70,7 +70,7 @@ A collection of search queries that were applied in this call.
 |last       | Boolean   | Boolean value indicating whether the current breadcrumb is the last one |
 
 
-### facet
+#### <a name="facet"></a> facet
 
 A collection of facets that describe the resultant dataset.
 
