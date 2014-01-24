@@ -21,8 +21,8 @@ There is a method for developers to see how Europeana API works and test it for 
 
 ### Discussion
 
-Join the Europeana API discussion group at Google Groups and get regular updates about the Europeana API, provide feedback and discuss it with other developer.
+Join the [Europeana API discussion group at Google Groups](https://groups.google.com/forum/?pli=1#!forum/europeanaapi) and get regular updates about the Europeana API, provide feedback and discuss it with other developer.
 
 ### Terms of Use
 
-Please see here our [Terms of Use](/http://labs.europeana.eu/api/terms).
+Please see here our [Terms of Use](terms).
