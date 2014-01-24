@@ -4,10 +4,12 @@ title: API Search Method
 published: true
 ---
 
+* TOC
+{:toc}
 
 ## search.json
 
-Find objects within the Europeana repository.
+Find objects within the Europeana cultural heritage repository.
 
     http://europeana.eu/api/v2/search.json
 
@@ -33,7 +35,7 @@ Find objects within the Europeana repository.
 | totalResults |    Number |    The total number of results |
 
 
-#### <a name="item"></a> item
+#### item
 
 Each item is a search result and is represented by a summary of its metadata record. The actual content depends of the profile parameter.
 
@@ -57,7 +59,7 @@ Each item is a search result and is represented by a summary of its metadata rec
 |year          |    Array (String)| A point of time associated with an event in the life of the original analog or born digital object. Find more in the EDM Definition|
 
 
-#### <a name="breadcrumb"></a> breadcrumb
+#### breadcrumb
 
 A collection of search queries that were applied in this call.
 
@@ -70,7 +72,7 @@ A collection of search queries that were applied in this call.
 |last       | Boolean   | Boolean value indicating whether the current breadcrumb is the last one |
 
 
-#### <a name="facet"></a> facet
+#### facet
 
 A collection of facets that describe the resultant dataset.
 
