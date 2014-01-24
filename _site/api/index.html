@@ -108,103 +108,29 @@
 
 
 	<div id="documentation" class="prose grid__item palm--one-whole push--palm-none one-half"><!--
-	--><div class="maruku_toc"><ul><li><a href="#request">Request</a></li><li><a href="#response">Response</a></li><li><a href="#error_codes">Error Codes</a></li><li><a href="#usage_limit">Usage Limit</a></li><li><a href="#example">Example</a><ul><li><a href="#javascript">Javascript</a></li></ul></li></ul></div>
-<h3 id="request">Request</h3>
+	--><p>The Europeana API allows you to build applications that use the wealth of cultural heritage objects stored in the Europeana repository. The API uses the standard web technology of REST calls over HTTP. Responses are returned in the popular JSON format for data exchange.</p>
 
-<p>Every API call is an HTTP request in a specified format that is sent to the Europeana API service.</p>
+<p>To get straight to the point of the API, you can go directly to the <a href="essentials">Essentials page</a> which tells you only what you have to know to start using the API.</p>
 
-<p>The API root URL is located at: <a href="http://www.europeana.eu/api/v2">http://www.europeana.eu/api/v2</a>.</p>
+<h2 id="registration">Registration</h2>
 
-<p><a name='Authentication'><strong>Authentication Parameter</strong></a></p>
+<p>To start using the API you should register at the registration page. Upon registration you will get your individual private authentication key. This key should be used when calling API methods as a special wskey authentication parameter.</p>
 
-<p>Every API call must be provided a special authentication parameter <em>wskey</em>. This parameter should contain your private key that you got during the registration process.</p>
+<h3 id="backward_compatibility">Backward Compatibility</h3>
 
-<h3 id="response">Response</h3>
+<p>The current version of the Europeana API (API2) is fully backward compatible with the previous version (API1). However, we encourage developers to switch to the new naming of the fields that were used in API1. For more information on the mapping between the new and the old fields, please see <a href="mapping">API1-API2 Fields Mapping</a>.</p>
 
-<p>Every response to an API call will contain a number of standard fields that precede the fields specific for the call. The standard part contains the following fields:</p>
-<table><thead><tr><th>Field</th><th>Datatype<sup id="fnref:1"><a href="#fn:1" rel="footnote">1</a></sup></th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">apikey</td><td style="text-align: left;">String</td><td style="text-align: left;">the authentication parameter sent out by the client (the <em>wskey</em> parameter)</td></tr>
-<tr><td style="text-align: left;">action</td><td style="text-align: left;">String</td><td style="text-align: left;">the name of the API method that was called</td></tr>
-<tr><td style="text-align: left;">success</td><td style="text-align: left;">Boolean</td><td style="text-align: left;">a boolean (true/false) flag denoting the successful execution of the call</td></tr>
-<tr><td style="text-align: left;">statsDuration</td><td style="text-align: left;">Number</td><td style="text-align: left;">the time (in milliseconds) taken to serve the request</td></tr>
-<tr><td style="text-align: left;">requestNumber</td><td style="text-align: left;">Number</td><td style="text-align: left;">a positive number denoting the number of request by this API key within the last 24 hours</td></tr>
-<tr><td style="text-align: left;">error</td><td style="text-align: left;">String</td><td style="text-align: left;">if the call was not successful this fields will contain a detailed text message. See <a href="/portal/api-working-with-api.html#Error-Codes">Error Codes</a> for more information.</td></tr>
-<tr><td style="text-align: left;">params</td><td style="text-align: left;">Object</td><td style="text-align: left;">parameters the client entered when requested the JSON API call. If the client submits an invalid values, API returns the default value (see individual calls for the default values of given parameters). Shown up only if the profile parameter contains “params”.</td></tr>
-</tbody></table>
-<h3 id="error_codes">Error Codes</h3>
+<h3 id="api_console">API Console</h3>
 
-<p>An error during processing of an API method is reported by (1) a relevant HTTP status code, (2) a value of the success field and (3) a meaningful error message in the error field (see the <a href="/portal/api-working-with-api.html#Response" title="Response">Response</a> section).</p>
+<p>There is a method for developers to see how Europeana API works and test it for their needs without getting registered - the API console. This is an interactive tool that allows filling method parameters in an online form and see both the expected results and the exact format of the call that should be used by an application to get these results. The API console has been built by us for developers’ convenience. You are encouraged to use it and provide us feedback about its usability for the developer community.</p>
 
-<p>The following HTTP status codes are returned:</p>
-<table class='bordered'>
-	<thead>
-		<tr>
-			<th>HTTP Status Code</th>
-			<th>Description</th>
-		</tr>
-	</thead>
-	<tbody>
-		<tr>
-			<td>200</td>
-			<td>The request was executed successfully.</td>
-		</tr>
-		<tr>
-			<td>401</td>
-			<td>Authentication credentials were missing or authentication failed.</td>
-		</tr>
-		<tr>
-			<td>404</td>
-			<td>The requested record was not found.</td>
-		</tr>
-		<tr>
-			<td>429</td>
-			<td>The request could be served because the application has reached its usage limit.</td>
-		</tr>
-		<tr>
-			<td>500</td>
-			<td>Internal Server Error. Something has gone wrong, please report to us.</td>
-		</tr>
-	</tbody>
-</table>
-<h3 id="usage_limit">Usage Limit</h3>
+<h3 id="discussion">Discussion</h3>
 
-<p>Applications are permitted to perform up to 10000 calls in 24 hours. If you need more than that please <a href="mailto:api@europeana.eu">contact us</a>.</p>
+<p>Join the <a href="https://groups.google.com/forum/?pli=1#!forum/europeanaapi">Europeana API discussion group at Google Groups</a> and get regular updates about the Europeana API, provide feedback and discuss it with other developer.</p>
 
-<h3 id="example">Example</h3>
+<h3 id="terms_of_use">Terms of Use</h3>
 
-<p>The call <code>http://europeana.eu/api/v2/search.json?wskey=xxxxxxxx&amp;query=mona+lisa&amp;profile=standard%20params</code> returns</p>
-
-<pre class="json"><code class="json">
-{
-  &quot;apikey&quot;: &quot;xxxxxxxxx&quot;,
-  &quot;action&quot;: &quot;search.json&quot;,
-  &quot;success&quot;: true,
-  &quot;requestNumber&quot;: 6,
-  &quot;params&quot;: {
-    &quot;query&quot;: &quot;mona lisa&quot;,
-    &quot;profile&quot;: &quot;standard params&quot;,
-    &quot;start&quot;: 1,
-    &quot;rows&quot;: 12
-  },
-  &quot;itemsCount&quot;: 12,
-  &quot;totalResults&quot;: 195,
-  &quot;items&quot;: [...]
-}
-</code></pre>
-
-<h4 id="javascript">Javascript</h4>
-
-<p>And some javascript, just to check the syntax formatting.</p>
-<div class='highlight'><pre><code class='java'><span class='n'>var</span> <span class='n'>sum</span> <span class='o'>=</span> <span class='n'>function</span><span class='o'>()</span> <span class='o'>{</span>
-    <span class='n'>var</span> <span class='n'>i</span><span class='o'>,</span> <span class='n'>x</span> <span class='o'>=</span> <span class='mi'>0</span><span class='o'>;</span>
-    <span class='k'>for</span> <span class='o'>(</span><span class='n'>i</span> <span class='o'>=</span> <span class='mi'>0</span><span class='o'>;</span> <span class='n'>i</span> <span class='o'>&lt;</span> <span class='n'>arguments</span><span class='o'>.</span><span class='na'>length</span><span class='o'>;</span> <span class='o'>++</span><span class='n'>i</span><span class='o'>)</span> <span class='o'>{</span>
-        <span class='n'>x</span> <span class='o'>+=</span> <span class='n'>arguments</span><span class='o'>[</span><span class='n'>i</span><span class='o'>];</span>
-    <span class='o'>}</span>
-    <span class='k'>return</span> <span class='n'>x</span><span class='o'>;</span>
-<span class='o'>}</span>
-<span class='n'>sum</span><span class='o'>(</span><span class='mi'>1</span><span class='o'>,</span> <span class='mi'>2</span><span class='o'>,</span> <span class='mi'>4</span><span class='o'>);</span> <span class='c1'>// returns 6</span>
-</code></pre></div><div class="footnotes"><hr /><ol><li id="fn:1">
-<p><a href="api-introduction.html#data-types" title="API1-API2 Mapping">Datatype defitions</a> <a href="#fnref:1" rev="footnote">↩</a></p>
-</li></ol></div><!--
+<p>Please see here our <a href="terms">Terms of Use</a>.</p><!--
 --></div>
 </div>
 ﻿<!-- Begin Footer -->

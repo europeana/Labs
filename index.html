@@ -25,16 +25,17 @@ layout: homepage
 <div  class="block">
 	<div id="apikey-block" >
 	<div class="grid--center">
-		<div class="grid__item palm--one-whole one-third">
-			<img src="{{site.baseurl}}/img/key.png">
-		</div>
-		
-		<div class="grid__item palm--one-whole one-third">
-			<h3>Get your API key.</h3>
-			<p>Sign up for your free API key and get developing! <br>The rest is up to you.</p>
-			{% include api-registration.html %}
-		</div>
-		<br><br>
+		<table id="tblKey">
+			<tr>
+				<td class="key-image"><img src="{{site.baseurl}}/img/key.png"></td>
+				<td class="key-form">
+					<h3>Get your API key.</h3>
+					<p>Sign up for your free API key and get developing! <br>The rest is up to you.</p>
+						{% include api-registration.html %}
+				</td>
+			</tr>
+		</table>
+
 	</div>
 	</div>
 

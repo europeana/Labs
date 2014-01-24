@@ -91,24 +91,25 @@
 <div  class="block">
 	<div id="apikey-block" >
 	<div class="grid--center">
-		<div class="grid__item palm--one-whole one-third">
-			<img src="/img/key.png">
-		</div>
-		
-		<div class="grid__item palm--one-whole one-third">
-			<h3>Get your API key.</h3>
-			<p>Sign up for your free API key and get developing! <br>The rest is up to you.</p>
-			<form id="model" action="http://europeana.eu/portal/api/registration.html" method="POST" class="inline-form newsletter-form">
+		<table id="tblKey">
+			<tr>
+				<td class="key-image"><img src="/img/key.png"></td>
+				<td class="key-form">
+					<h3>Get your API key.</h3>
+					<p>Sign up for your free API key and get developing! <br>The rest is up to you.</p>
+						<form id="model" action="http://europeana.eu/portal/api/registration.html" method="POST" class="inline-form newsletter-form">
 	<fieldset>
-		<input id="requestedAction" name="requestedAction" value="RequestAPI" type="hidden"><label for="register_email">Email address:</label><br>
+		<input id="requestedAction" name="requestedAction" value="RequestAPI" type="hidden"><label for="register_email">Email address:</label>
 		<div class="inline-container">
 			<input id="register_email" name="email" type="text" placeholder="you@example.com" maxlength="50" class="newsletter-field">
 			<input type="submit" name="submit_button" value="Sign up" class="newsletter-submit">
 		</div>
 	</fieldset>
 </form>
-		</div>
-		<br><br>
+				</td>
+			</tr>
+		</table>
+
 	</div>
 	</div>
 

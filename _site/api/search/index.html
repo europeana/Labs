@@ -105,14 +105,13 @@
 
 		
 	<div id="documentation" class="prose grid__item palm--one-whole push--palm-none one-half"><!--
-	--><div class="maruku_toc"><ul><li><a href="#request">Request</a></li><li><a href="#response">Response</a><ul><li><a href="#item">item</a></li><li><a href="#breadcrumb">breadcrumb</a></li><li><a href="#facet">facet</a></li></ul></li></ul></div>
-<h1 id="searchjson">search.json</h1>
+	--><h2 id="searchjson">search.json</h2>
 
 <p>Find objects within the Europeana repository.</p>
 
 <pre><code>http://europeana.eu/api/v2/search.json</code></pre>
 
-<h2 id="request">Request</h2>
+<h3 id="request">Request</h3>
 <table><thead><tr><th>Parameter</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">query</td><td style="text-align: left;">String</td><td style="text-align: left;">The search term(s) for the search. See the <a href="http://www.europeana.eu/portal/api-query-syntax.html">Query Syntax</a> section of this documentation for information on forming complex queries and examples.</td></tr>
 <tr><td style="text-align: left;">callback</td><td style="text-align: left;">String</td><td style="text-align: left;">Name of a client side callback function.</td></tr>
 <tr><td style="text-align: left;">profile</td><td style="text-align: left;">String</td><td style="text-align: left;">A number of profiles can be added to a search to control the format and richness of the response TBD (add profiles)</td></tr>
@@ -120,14 +119,14 @@
 <tr><td style="text-align: left;">rows</td><td style="text-align: left;">Number</td><td style="text-align: left;">The number of records to return; the maximum value is 100 (default is 12).</td></tr>
 <tr><td style="text-align: left;">start</td><td style="text-align: left;">Number</td><td style="text-align: left;">The item in the search results to start with; first item is 1 (default is 1).</td></tr>
 </tbody></table>
-<h2 id="response">Response</h2>
-<table><thead><tr><th>Field</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">items</td><td style="text-align: left;">Array (<a href="http://www.europeana.eu/portal/api-search-json.html#Item">Item</a>)</td><td style="text-align: left;">This is a collection of search results. Each item is represented by a summary of the metadata record. The actual content is dependent of the profile parameter.</td></tr>
-<tr><td style="text-align: left;">facets</td><td style="text-align: left;">Array (<a href="http://www.europeana.eu/portal/api-search-json.html#Facet">Facet</a>)</td><td style="text-align: left;">A collection of facets that describe the resultant dataset.</td></tr>
-<tr><td style="text-align: left;">breadCrumbs</td><td style="text-align: left;">Array (<a href="http://www.europeana.eu/portal/api-search-json.html#Item">Breadcrumb</a>)</td><td style="text-align: left;">A collection of search queries that were applied in this call.</td></tr>
+<h3 id="response">Response</h3>
+<table><thead><tr><th>Field</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">items</td><td style="text-align: left;">Array (<a href="#item">Item</a>)</td><td style="text-align: left;">This is a collection of search results. Each item is represented by a summary of the metadata record. The actual content is dependent of the profile parameter.</td></tr>
+<tr><td style="text-align: left;">facets</td><td style="text-align: left;">Array (<a href="#facet">Facet</a>)</td><td style="text-align: left;">A collection of facets that describe the resultant dataset.</td></tr>
+<tr><td style="text-align: left;">breadcrumbs</td><td style="text-align: left;">Array (<a href="#breadcrumb">Breadcrumb</a>)</td><td style="text-align: left;">A collection of search queries that were applied in this call.</td></tr>
 <tr><td style="text-align: left;">itemsCount</td><td style="text-align: left;">Number</td><td style="text-align: left;">The number of retrieved records</td></tr>
 <tr><td style="text-align: left;">totalResults</td><td style="text-align: left;">Number</td><td style="text-align: left;">The total number of results</td></tr>
 </tbody></table>
-<h3 id="item">item</h3>
+<h4 id="_item"><a name='item' /> item</h4>
 
 <p>Each item is a search result and is represented by a summary of its metadata record. The actual content depends of the profile parameter.</p>
 <table><thead><tr><th>Field</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">completeness</td><td style="text-align: left;">Number</td><td style="text-align: left;">A number from 1 to 10 that is an internal measure of the metadata quality. It is based on the availability of mandatory and optional schema fields.</td></tr>
@@ -147,7 +146,7 @@
 <tr><td style="text-align: left;">title</td><td style="text-align: left;">Array (String)</td><td style="text-align: left;">The main and alternative titles of the item.</td></tr>
 <tr><td style="text-align: left;">year</td><td style="text-align: left;">Array (String)</td><td style="text-align: left;">A point of time associated with an event in the life of the original analog or born digital object. Find more in the EDM Definition</td></tr>
 </tbody></table>
-<h3 id="breadcrumb">breadcrumb</h3>
+<h4 id="_breadcrumb"><a name='breadcrumb' /> breadcrumb</h4>
 
 <p>A collection of search queries that were applied in this call.</p>
 <table><thead><tr><th>Field</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">display</td><td style="text-align: left;">String</td><td style="text-align: left;">Human-readable description of the search</td></tr>
@@ -156,7 +155,7 @@
 <tr><td style="text-align: left;">href</td><td style="text-align: left;">String</td><td style="text-align: left;">The search part of the URL which can be reused in further calls</td></tr>
 <tr><td style="text-align: left;">last</td><td style="text-align: left;">Boolean</td><td style="text-align: left;">Boolean value indicating whether the current breadcrumb is the last one</td></tr>
 </tbody></table>
-<h3 id="facet">facet</h3>
+<h4 id="_facet"><a name='facet' /> facet</h4>
 
 <p>A collection of facets that describe the resultant dataset.</p>
 <table><thead><tr><th>Field</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">name</td><td style="text-align: left;">String</td><td style="text-align: left;">The name of the facet (COUNTRY, DATA_PROVIDER, LANGUAGE, PROVIDER, RIGHTS, TYPE, UGC, YEAR)</td></tr>
