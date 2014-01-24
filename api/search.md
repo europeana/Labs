@@ -1,19 +1,17 @@
 ---
-layout: api-page
+layout: "api-page"
 title: API Search Method
 published: true
 ---
 
-* TOC
-{:toc}
 
-# search.json
+## search.json
 
 Find objects within the Europeana repository.
 
     http://europeana.eu/api/v2/search.json
 
-## Request
+### Request
 
 | Parameter | Datatype | Description |
 |:-------------|:-------------|:-----|
@@ -24,18 +22,18 @@ Find objects within the Europeana repository.
 | rows | Number | The number of records to return; the maximum value is 100 (default is 12). |
 | start | Number | The item in the search results to start with; first item is 1 (default is 1). |
 
-## Response
+### Response
 
 | Field | Datatype | Description |
 |:-------------|:-------------|:-----|
 | items |   Array ([Item](http://www.europeana.eu/portal/api-search-json.html#Item)) |  This is a collection of search results. Each item is represented by a summary of the metadata record. The actual content is dependent of the profile parameter.|
 | facets |  Array ([Facet](http://www.europeana.eu/portal/api-search-json.html#Facet)) |    A collection of facets that describe the resultant dataset. |
-| breadCrumbs | Array ([Breadcrumb](http://www.europeana.eu/portal/api-search-json.html#Item))| A collection of search queries that were applied in this call. |
+| breadcrumbs | Array ([Breadcrumb](#breadcrumb))| A collection of search queries that were applied in this call. |
 | itemsCount |  Number  | The number of retrieved records |
 | totalResults |    Number |    The total number of results |
 
 
-### item
+#### item
 
 Each item is a search result and is represented by a summary of its metadata record. The actual content depends of the profile parameter.
 
@@ -59,7 +57,7 @@ Each item is a search result and is represented by a summary of its metadata rec
 |year          |    Array (String)| A point of time associated with an event in the life of the original analog or born digital object. Find more in the EDM Definition|
 
 
-### breadcrumb
+#### <a name="breadcrumb"></a> breadcrumb
 
 A collection of search queries that were applied in this call.
 
@@ -82,4 +80,3 @@ A collection of facets that describe the resultant dataset.
 | fields<sup>\*</sup> |   Array (field) | A collection of facet fields. Each field is an object that has a label (String) and a count of objects (Number).|
 
 <sup>\*</sup> _indicates an obligatory property_
-
