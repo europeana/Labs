@@ -4,8 +4,6 @@ title: API Essentials
 published: true
 ---
 
-* TOC
-{:toc}
 
 In this section you will find information necessary to jump-start using Europeana API.
 
@@ -31,6 +29,3 @@ A response to an API call will always contain a number of standard fields that p
 | requestNumber |	Number |	a positive number denoting the number of request by this API key within the last 24 hours |
 | error | 	String |	if the call was not successful this fields will contain a detailed text message. See [Error Codes](labs.europeana.eu/documentation/error-codes.html) for more information.|
 | params |	Object	| original request parameters. If an invalid request parameter was submitted, this response parameter will contain the default value (see individual calls for the default values). Shown up only if the profile parameter contains "params". |
-
-
-
