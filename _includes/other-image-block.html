@@ -1,7 +1,7 @@
 {% if page.imageurl.size > 1 %}
 	{% for each image in page.imageurl %}
 		<div class="grid__item b-thumb block block-thumb block-thumb-small one-quarter">
-			<a href="{{site.baseurl}}{{post.url}}"><img src="{{site.baseurl}}{{image}}" alt="{{post.title}}"></a>
+			<img src="{{site.baseurl}}{{image}}" alt="{{post.title}}">
 		</div>
 	{% endfor %}
 {% endif %}
