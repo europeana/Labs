@@ -15,7 +15,9 @@ layout: homepage
 			<div class="startBtn">
 				<a href="{{site.baseurl}}/api">GET STARTED</a>
 			</div>
-			<span class="byline-author"><a href="{{site.baseurl}}/api" title="API Documentation">Use our API</a></span> or go and experiment at one of our <span class="byline-author"><a href="{{site.baseurl}}/spaces" title="Lab Spaces">Spaces</a></span>. 
+			<div id="useOurAPI">
+				<span class="byline-author"><a href="{{site.baseurl}}/api" title="API Documentation">Use our API</a></span> or go and experiment at one of our <span class="byline-author"><a href="{{site.baseurl}}/spaces" title="Lab Spaces">Spaces</a></span>.
+			</div> 
 		</div>
 	</div> 
 </div>
@@ -38,9 +40,12 @@ layout: homepage
 
 	</div>
 	</div>
-
-<div class="grid__item one-whole palm--one-whole grid--center">
-		<h3 class="pull--left">Be inspired &hellip;</h3>
+	<div id="beinspired" class="block">
+		<div class="grid--center" style="text-align: left;">
+			<h3 style="font-weight: bold;">Be inspired &hellip;</h3>
+		</div>
+	</div>
+	<div class="grid__item one-whole palm--one-whole grid--center">
 	    <ul class="post-list grid">
 	        {% for post in site.categories.gallery %}
 			{% if post.featured %}<!--
@@ -75,7 +80,7 @@ layout: homepage
 <div class="grid--center">
 	<div class="grid__item palm--one-whole one-third">
 		<hr>
-		<p class="text-btn" align="center"><a href="{{site.baseurl}}/gallery" title="Application Gallery"><strong>See more examples in the Application Gallery&nbsp;&rarr;</strong></a></p>
+		<p class="text-btn" align="center"><a href="{{site.baseurl}}/gallery" class="seemoreapi" title="Application Gallery"><strong>See more examples in the Application Gallery&nbsp;&rarr;</strong></a></p>
 	</div>
 </div>
 </div>

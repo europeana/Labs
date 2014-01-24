@@ -152,19 +152,65 @@ border-color: #eed3d7;
 
 #homepage ul.post-list li div.block-thumb{border-top: 0px;}
 
-#homepage h1.headline {font-site:0.8em; font-weight:bold; font-family: Arial; }
+#homepage h1.headline {font-size:1.2em; font-weight:bold; font: 100%/1.4 "Noto Sans", "HelveticaNeue", "Helvetica", "Arial", sans-serif; text-align: left; }
 
 
-#homepage #tblKey {max-width: 60%; margin-left:auto; margin-right:auto; border:0;}
+#homepage #tblKey {max-width: 80%; margin-left:auto; margin-right:auto; border:0;}
 #homepage #tblKey td{border:0;}
 #homepage #tblKey td.key-image {text-align: right; }
 #homepage #tblKey td.key-form {text-align: left; }
 #homepage #tblKey td.key-form h3 {font-weight:bold;}
 #homepage #tblKey td.key-form label {font-size:0.8em;}
+#homepage div.description {text-align: left;}
+#homepage hr {height: 3px;}
+#homepage a.seemoreapi{color:#2a9ec5;}
 
-@media (max-width: 700px){
+#homepage #beinspired{
+	width: 75%; 
+	margin:auto; 
+	padding-left: 24px;
+}
+
+
+@media (max-width: 1200px){
+
+	#homepage #useOurAPI {display: none;}
+}
+	
+
+
+@media (max-width: 1000px){
 	div.b-text {
-		display: none;
+		padding: 0;
+	}
+
+	#homepage div.b-text:before{ width: 40%; border-top: solid 5px white; margin: 0 auto 1%;}
+	#homepage div.b-text h1{ font-weight: bold; margin-bottom: 1%; }
+	#homepage div.byline p {font-style: normal; font-weight: bold;}
+	#homepage div.startBtn:after{width: 13%; border-bottom: solid 3px white; margin: 1% auto 1%; content: " "; display: block;}	
+	
+	#homepage #apikey-block {
+		width: 96%; 
+	}
+	#homepage #beinspired
+	{
+		width: 96%;
+	}
+	
+	#homepage #tblKey td.key-image img {max-width: 150px;}
+	#homepage #tblKey {max-width:100%;}
+
+	#homepage ul.post-list {margin-left: 2%; margin-right: 2%;}
+	#homepage ul.post-list li {display: block; width: 100%;}
+}
+
+@media (max-width: 900px){
+	#homepage div.startBtn {display:none;}
+}
+
+@media (max-width: 800px){
+	div.b-text {
+		display:none;
 	}
 }
 

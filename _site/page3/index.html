@@ -35,7 +35,7 @@
 <header class="header cf" role="banner">
     <div class="lc">
         <a href="/" class="logo ir">Europeana</a>	
-		<a href="#" class="nav-toggle nav-toggle-search icon-search"><span class="is-vishidden">Search</span></a>
+		<a href="/search" class="nav-toggle nav-toggle-search icon-search"><span class="is-vishidden">Search</span></a>
         <a id="hamMenu" href="#" class="nav-toggle nav-toggle-menu icon-rows"><span class="is-vishidden">Menu</span></a>
         <a href="/rss" class="nav-toggle nav-toggle-search icon-rss"><span class="is-vishidden">Rss</span></a>
 
@@ -81,7 +81,9 @@
 			<div class="startBtn">
 				<a href="/api">GET STARTED</a>
 			</div>
-			<span class="byline-author"><a href="/api" title="API Documentation">Use our API</a></span> or go and experiment at one of our <span class="byline-author"><a href="/spaces" title="Lab Spaces">Spaces</a></span>. 
+			<div id="useOurAPI">
+				<span class="byline-author"><a href="/api" title="API Documentation">Use our API</a></span> or go and experiment at one of our <span class="byline-author"><a href="/spaces" title="Lab Spaces">Spaces</a></span>.
+			</div> 
 		</div>
 	</div> 
 </div>
@@ -112,9 +114,12 @@
 
 	</div>
 	</div>
-
-<div class="grid__item one-whole palm--one-whole grid--center">
-		<h3 class="pull--left">Be inspired &hellip;</h3>
+	<div id="beinspired" class="block">
+		<div class="grid--center" style="text-align: left;">
+			<h3 style="font-weight: bold;">Be inspired &hellip;</h3>
+		</div>
+	</div>
+	<div class="grid__item one-whole palm--one-whole grid--center">
 	    <ul class="post-list grid">
 	        
 			<!--
@@ -209,7 +214,7 @@
 <div class="grid--center">
 	<div class="grid__item palm--one-whole one-third">
 		<hr>
-		<p class="text-btn" align="center"><a href="/gallery" title="Application Gallery"><strong>See more examples in the Application Gallery&nbsp;&rarr;</strong></a></p>
+		<p class="text-btn" align="center"><a href="/gallery" class="seemoreapi" title="Application Gallery"><strong>See more examples in the Application Gallery&nbsp;&rarr;</strong></a></p>
 	</div>
 </div>
 </div><!--
