@@ -28,7 +28,7 @@
     <item>
       <title>Kringla</title>
       <link>http://localhost:4000/gallery/kringla</link>
-      <description>&lt;p&gt;The portal of the Swedish National Heritage Board (SOCH) www.kringla.nu allows users to search in both the national heritage repository ‘SOCH’ and Europeana presenting the search results in different tabs.&lt;/p&gt;</description>
+      <description>&lt;p&gt;The portal of the Swedish National Heritage Board (SOCH) www.kringla.nu allows users to search in both the national heritage repository ‘SOCH’ and the Europeana repository presenting the search results in different tabs.&lt;/p&gt;</description>
       <pubDate>Wed, 22 Jan 2014 00:00:00 +0100</pubDate>
       <guid>http://localhost:4000/gallery/kringla</guid>
       <dc:date>2014-01-22T00:00:00+01:00</dc:date>
