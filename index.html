@@ -22,7 +22,8 @@ layout: homepage
 
 <br><br>
 
-<div class="block">
+<div  class="block">
+	<div id="apikey-block" >
 	<div class="grid--center">
 		<div class="grid__item palm--one-whole one-third">
 			<img src="{{site.baseurl}}/img/key.png">
@@ -35,8 +36,9 @@ layout: homepage
 		</div>
 		<br><br>
 	</div>
+	</div>
 
-	<div class="grid__item one-whole palm--one-whole grid--center">
+<div class="grid__item one-whole palm--one-whole grid--center">
 		<h3 class="pull--left">Be inspired &hellip;</h3>
 	    <ul class="post-list grid">
 	        {% for post in site.categories.gallery %}
@@ -74,4 +76,5 @@ layout: homepage
 		<hr>
 		<p class="text-btn" align="center"><a href="{{site.baseurl}}/gallery" title="Application Gallery"><strong>See more examples in the Application Gallery&nbsp;&rarr;</strong></a></p>
 	</div>
+</div>
 </div>
