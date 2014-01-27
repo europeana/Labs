@@ -13,7 +13,7 @@ layout: homepage
 			<br>
 			<p>Giving developers access to cultural and scientific images, texts and audiovisual collections<br> from Europe's leading cultural organisations <br>&mdash; all rights-cleared and ready to use.</p>
 			<div class="startBtn">
-				<a href="{{site.baseurl}}/api">GET STARTED</a>
+				<a href="{{site.baseurl}}#tblKey">GET STARTED</a>
 			</div>
 			<div id="useOurAPI">
 				<span class="byline-author"><a href="{{site.baseurl}}/api" title="API Documentation">Use our API</a></span> or go and experiment at one of our <span class="byline-author"><a href="{{site.baseurl}}/spaces" title="Lab Spaces">Spaces</a></span>.
@@ -46,7 +46,7 @@ layout: homepage
 		</div>
 	</div>
 	<div class="grid__item one-whole palm--one-whole grid--center">
-	    <ul class="post-list grid">
+	    <ul id="homepage-postsl-list" class="post-list grid">
 	        {% for post in site.categories.gallery %}
 			{% if post.featured %}<!--
 	        --><li class="grid__item three-eighths desk--three-eighths">
@@ -68,7 +68,7 @@ layout: homepage
 						{% else %}
 							<h5><a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a></h5>
 	                    {% endif %}
-						<a href="{{site.baseurl}}{{post.url}}" title="{{post.title}}" class="text-btn">Read more&rarr;</a>
+						<a href="{{site.baseurl}}{{post.url}}" title="{{post.title}}" class="text-btn-homepage">Find out more</a>
 	                </div>
 	            </div>
 	        </li>
@@ -79,8 +79,9 @@ layout: homepage
 
 <div class="grid--center">
 	<div class="grid__item palm--one-whole one-third">
-		<hr>
+		<hr class="top-no-margin">
 		<p class="text-btn" align="center"><a href="{{site.baseurl}}/gallery" class="seemoreapi" title="Application Gallery"><strong>See more examples in the Application Gallery&nbsp;&rarr;</strong></a></p>
 	</div>
+	<br/><br/><br/><br/>
 </div>
 </div>

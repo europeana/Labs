@@ -119,6 +119,7 @@ border-color: #eed3d7;
 #homepage nav{ margin-top:2em; margin-left:4em;}
 #homepage nav ul li a {font-size: 1.3em;}
 
+
 #homepage div.b-text:before{ width: 40%; border-top: solid 10px white; margin: 0 auto 3%;}
 #homepage div.b-text h1{ font-weight: bold; margin-bottom: 3%; }
 #homepage div.byline p {font-style: normal; font-weight: bold;}
@@ -134,6 +135,8 @@ border-color: #eed3d7;
  	font-size:1.5em;
  	letter-spacing: 2pt;
  }
+#homepage div.startBtn a:hover{color:white;}
+
 #homepage div.startBtn:after{width: 13%; border-bottom: solid 3px white; margin: 3% auto 1%; content: " "; display: block;}
 #homepage div.byline {font-style:normal; font-weight: bold; font-size:1em; }
 #homepage div.byline span.byline-author {font-style: normal; font-weight: bold; font-size: 1.8em; border-bottom: 3px solid white; }
@@ -163,7 +166,7 @@ border-color: #eed3d7;
 #homepage #tblKey td.key-form label {font-size:0.8em;}
 #homepage div.description {text-align: left;}
 #homepage hr {height: 3px;}
-#homepage a.seemoreapi{color:#2a9ec5;}
+#homepage a.seemoreapi{color:#2a9ec5; font-style: normal; margin-top:-15px;}
 
 #homepage #beinspired{
 	width: 75%; 
@@ -171,7 +174,20 @@ border-color: #eed3d7;
 	padding-left: 24px;
 }
 
+#homepage #homepage-postsl-list{margin-bottom:0;}
+#homepage hr.top-no-margin{margin-top: 0; margin-bottom: 1.7em;}
+#homepage a.text-btn-homepage{ color: #b4b4b4;}
+#homepage #useOurAPI a:hover{color:white;}
 
+#homepage-postsl-list div.description{margin-bottom: 0.5em;}
+#homepage-postsl-list div.b-text {text-align: left;}
+
+#homepage footer {
+	padding-bottom: 50px;
+	padding-top:50px;
+}
+
+/*RESPONSIVE*/
 @media (max-width: 1200px){
 
 	#homepage #useOurAPI {display: none;}
@@ -206,12 +222,15 @@ border-color: #eed3d7;
 
 @media (max-width: 900px){
 	#homepage div.startBtn {display:none;}
+	#homepage #tblKey td.key-image img {max-width: 100px;}
 }
 
 @media (max-width: 800px){
 	div.b-text {
 		display:none;
 	}
+	
+	#homepage #tblKey td.key-image img {max-width: 80px;}
 }
 
 
