@@ -5,6 +5,9 @@ $(document).ready(function(){
 	$("#hamMenu").click(function(){
 		$("#nav").css("max-height","999px");
 	});
+	
+	$("#homepage ul.nav-footer").append("<br class='clear'/>");
+	
 });
 
 var semLabs = {

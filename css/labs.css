@@ -120,8 +120,8 @@ border-color: #eed3d7;
 #homepage nav ul li a {font-size: 1.3em;}
 
 
-#homepage div.b-text:before{ width: 40%; border-top: solid 10px white; margin: 3% auto 3%;}
-#homepage div.b-text h1{ font-weight: bold; margin-bottom: 3%; }
+#homepage div.b-text:before{ width: 45%; border-top: solid 10px white; margin: 3% auto 3%;}
+#homepage div.b-text h1{ font-weight: bold; margin-bottom: 1.8%; }
 #homepage div.byline p {font-style: normal; font-weight: bold; font-size:1em;}
 #homepage div.startBtn a{
 	display: inline-block; 
@@ -176,7 +176,7 @@ border-color: #eed3d7;
 }
 
 #homepage #homepage-postsl-list{margin-bottom:0;}
-#homepage hr.top-no-margin{margin-top: 0; margin-bottom: 1.7em;}
+#homepage hr.top-no-margin{margin-top: 0; margin-bottom: 1.7em; margin-left: 10%; margin-right:10%;}
 #homepage a.text-btn-homepage{ color: #b4b4b4;}
 #homepage #useOurAPI a:hover{color:white;}
 
@@ -186,13 +186,49 @@ border-color: #eed3d7;
 #homepage footer {
 	padding-bottom: 50px;
 	padding-top:50px;
+	border-top:3px solid #C5C5C5;	
 }
 
-#homepage #register_email {width: 300px; margin-right: 10px;}
-#homepage input.newsletter-submit {float:left; right: auto;}
+#homepage #register_email {width: 300px; margin-right: 10px; font-size:1em; padding:10px;}
+#homepage input.newsletter-submit {
+	float:left; 
+	right: auto; 
+	color:#484848;
+	
+	background: -moz-linear-gradient(top, #fff 0%, #cccccc 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fff), color-stop(100%,#cccccc));
+	
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff, endColorstr=#cccccc);    
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff, endColorstr=#cccccc)";
+	
+	border-radius: 5px; border: 1px solid #ccc;
+	-moz-border-radius: 5px; border: 1px solid #ccc;
+	-webkit-border-radius: 5px; border: 1px solid #ccc;
+
+	font-size:1em;
+	
+	padding-left:5%;
+	padding-right:5%;
+	font-weight:bold;
+}
+
+
+
+#homepage ul.nav-footer a{
+	font-weight: bold; 
+	text-decoration: underline; 
+	color:white; 
+	font-size:0.8em;
+	padding:0;
+}
+
+#homepage ul.nav-footer{margin-bottom: 0.6em;  }
+#homepage ul.nav-footer li {margin-left:0.6rem; display: inline-block;}
+#homepage .copyright{float: none; display: block; color:#cccccc; font-size:0.8em;}
+#homepage footer div.lc{max-width: 75%;}
+
+
 /*RESPONSIVE*/
-
-
 
 @media (max-width: 1200px){
 
