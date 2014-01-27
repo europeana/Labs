@@ -120,9 +120,9 @@ border-color: #eed3d7;
 #homepage nav ul li a {font-size: 1.3em;}
 
 
-#homepage div.b-text:before{ width: 40%; border-top: solid 10px white; margin: 0 auto 3%;}
+#homepage div.b-text:before{ width: 40%; border-top: solid 10px white; margin: 3% auto 3%;}
 #homepage div.b-text h1{ font-weight: bold; margin-bottom: 3%; }
-#homepage div.byline p {font-style: normal; font-weight: bold;}
+#homepage div.byline p {font-style: normal; font-weight: bold; font-size:1em;}
 #homepage div.startBtn a{
 	display: inline-block; 
 	width:300px; 
@@ -164,6 +164,7 @@ border-color: #eed3d7;
 #homepage #tblKey td.key-form {text-align: left; }
 #homepage #tblKey td.key-form h3 {font-weight:bold;}
 #homepage #tblKey td.key-form label {font-size:0.8em;}
+#homepage #tblKey td.key-form p{margin-bottom: 0.5em;}
 #homepage div.description {text-align: left;}
 #homepage hr {height: 3px;}
 #homepage a.seemoreapi{color:#2a9ec5; font-style: normal; margin-top:-15px;}
@@ -187,10 +188,16 @@ border-color: #eed3d7;
 	padding-top:50px;
 }
 
+#homepage #register_email {width: 300px; margin-right: 10px;}
+#homepage input.newsletter-submit {float:left; right: auto;}
 /*RESPONSIVE*/
+
+
+
 @media (max-width: 1200px){
 
 	#homepage #useOurAPI {display: none;}
+	#homepage div.b-text:before{ width: 40%; border-top: solid 10px white; margin: 0 auto 3%;}
 }
 	
 
@@ -229,7 +236,7 @@ border-color: #eed3d7;
 	div.b-text {
 		display:none;
 	}
-	
+	#homepage #register_email {width: 150px; margin-right: 10px;}
 	#homepage #tblKey td.key-image img {max-width: 80px;}
 }
 
