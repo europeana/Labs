@@ -121,11 +121,7 @@ border-color: #eed3d7;
 
 
 #homepage div.b-text:before{ width: 45%; border-top: solid 10px white; margin: 3% auto 3%;}
-	#homepage div.b-text h1 {
-		font-size: 1.2em;
-		font-weight: bold;
-		margin-bottom: 5%;
-	}
+#homepage div.b-text h1 { font-weight: bold; margin-bottom: 2%; }
 #homepage div.byline p {font-style: normal; font-weight: bold; font-size:1em;}
 #homepage div.startBtn a{
 	display: inline-block; 
@@ -139,8 +135,8 @@ border-color: #eed3d7;
  	font-size:1.5em;
  	letter-spacing: 2pt;
  }
-#homepage div.startBtn a:hover{color:white;}
 
+#homepage div.startBtn a:hover{color:white;}
 #homepage div.startBtn:after{width: 13%; border-bottom: solid 3px white; margin: 3% auto 1%; content: " "; display: block;}
 #homepage div.byline {font-style:normal; font-weight: bold; font-size:1em; }
 #homepage div.byline span.byline-author {font-style: normal; font-weight: bold; font-size: 1.8em; border-bottom: 3px solid white; }
@@ -149,7 +145,7 @@ border-color: #eed3d7;
 	margin-left:auto;
 	margin-right:auto;
 	padding-left: 24px; 
-	}
+}
 
 #homepage #apikey-block div.grid--center{
 	padding-bottom: 3%;
@@ -205,7 +201,7 @@ border-color: #eed3d7;
 	
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff, endColorstr=#cccccc);    
 	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffff, endColorstr=#cccccc)";
-	background: -ms-linear-gradient(top left, #FFFFFF 0%, #cccccc 100%);
+	background: -ms-linear-gradient(top, #FFFFFF 0%, #cccccc 100%);
 	
 	border-radius: 5px; border: 1px solid #ccc;
 	-moz-border-radius: 5px; border: 1px solid #ccc;
@@ -258,7 +254,9 @@ border-color: #eed3d7;
 	background: url("../img/social-icons.png") -92px 0;
 }
 
+#homepage #homepage-postsl-list h1.headline {margin-bottom:5%; font-size:1.3em;}
 
+#itemHeader div.block-content-header{padding: 2rem 0;}
 
 
 /*RESPONSIVE*/
