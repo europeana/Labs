@@ -308,3 +308,33 @@ border-color: #eed3d7;
 }
 
 
+.featureBanner {
+    position: fixed;
+    margin: 0px
+}
+
+.featureBanner:before {
+    position: absolute;
+    content: "Alpha";
+    top: 5px;
+    left: -8px;
+    padding-right: 10px;
+    color: #232323;
+    font-weight: bold;
+    height: 0px;
+    border: 15px solid #ffa200;
+    border-right-color: transparent;
+    line-height: 0px;
+    box-shadow: -0px 5px 5px -5px #000;
+    z-index: 1001;
+}
+
+.featureBanner:after {
+    content: "";
+    position: absolute;
+    top: 35px;
+    left: -8px;
+    border: 4px solid #89540c;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+}
