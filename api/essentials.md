@@ -9,7 +9,7 @@ In this section you will find information necessary to jump-start using European
 
 ## Request
 
-Every API call is an HTTP request in a specified format that is sent to the Europeana API service.
+Every Europeana Search API call is an HTTP request in a specified format that is sent to the Europeana API service.
 The API root URL is located at: 
     http://www.europeana.eu/api/v2.
 
