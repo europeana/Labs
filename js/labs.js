@@ -8,6 +8,9 @@ $(document).ready(function(){
 	
 	$("#homepage ul.nav-footer").append("<br class='clear'/>");
 	
+	if(document.referrer.indexOf("/search") != -1 && document.URL.indexOf("/search")==-1){
+		$("#search").append("<a style='display:block; font-size:0.8em; text-align:center;' href='"+document.referrer+"'>Back to search results</a>");
+	}
 });
 
 var semLabs = {
