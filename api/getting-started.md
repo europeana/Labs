@@ -1,6 +1,6 @@
 ---
 layout: "api-page"
-title: Getting Started with the Europeana Search API
+title: Getting Started with the Search API
 published: true
 ---
 
