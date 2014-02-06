@@ -1,6 +1,6 @@
 ---
 layout: api-page
-title: Europeana Data Model (EDM) Reference
+title: API Data Fields
 ---
 
 * TOC
