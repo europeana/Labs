@@ -5,7 +5,7 @@ layout: data-list
 <div class="grid__item palm--one-whole three-quarters">
     <ul class="post-list grid">
         {% for dataset in site.data.datasets %}<!--
-        --><li class="grid__item one-whole">
+        --><li class="grid__item one-whole {% for tag in dataset.tags %}{{tag | tags_links}} {% endfor %}">
             <div class="block block-thumb  {%if counter > 1 %} block-thumb-small {% endif %}">
 
                 <div class="b-thumb">
@@ -38,6 +38,9 @@ layout: data-list
 						{% for tag in dataset.tags %}
 							<a href="#" class="tag_alt">{{tag}}</a>
 						{% endfor %}
+						
+						
+						
                     </div>
                 </div>
             </div>

@@ -2,13 +2,15 @@
 	<div class="subnav">
 	    <h4 class="label epsilon"> Filter by:</h4>
 	    <ul class="tags tags-large">
-           <li><a href="#" class="tag">Archaeology</a></li>
-            <li><a href="#" class="tag">Architecture</a></li>
-            <li><a href="#" class="tag">Drawings</a></li>
-            <li><a href="#" class="tag">Maps</a></li>
-            <li><a href="#" class="tag">Natural History</a></li>
-            <li><a href="#" class="tag">Photographs</a></li>
-            <li><a href="#" class="tag">Prints</a></li>	   
+
+					{% assign uniqTags = site.data.datasets | make_flat%}
+				
+					{% for tag in uniqTags %}
+					<li>
+						<a href="#{{tag | tags_links}}" rel="{{tag | tags_links}}" class="tag">{{tag}}</a>
+						</li>
+					{% endfor %}
+ 
 	    </ul>
     </div>
 	

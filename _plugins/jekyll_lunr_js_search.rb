@@ -50,7 +50,7 @@ module Jekyll
           :body => entry.body
         }
         
-        puts 'Indexed ' << "#{entry.title} (#{entry.url})"
+        #puts 'Indexed ' << "#{entry.title} (#{entry.url})"
       end
       
       json = JSON.generate({:entries => index})

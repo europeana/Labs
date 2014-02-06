@@ -11,6 +11,20 @@ $(document).ready(function(){
 	if(document.referrer.indexOf("/search") != -1 && document.URL.indexOf("/search")==-1){
 		$("#search").append("<a style='display:block; font-size:0.8em; text-align:center;' href='"+document.referrer+"'>Back to search results</a>");
 	}
+	
+	$("ul.tags li a").click(function(){
+		$("ul.post-list li").hide();
+		$("ul.post-list li."+$(this).attr("rel")).show();
+		
+	});
+	
+	$(".obfuscate").each(function(){
+		var currentMailto = $(this).attr("href");
+		$(this).attr("href", currentMailto.replace("[at]","@"));
+		
+		var currentText = $(this).text();
+		$(this).text(currentText.replace("[at]","@"));
+	});
 });
 
 var semLabs = {
