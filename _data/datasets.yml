@@ -147,3 +147,18 @@
     licenses: 
       - pd
     preview: /img/datasets/edinburgh_1_800.jpeg
+
+- name: "Beetles from the Royal Belgian Institute of Natural Sciences"
+  provider: "Royal Belgian Institute of Natural Sciences"
+  contact: info@naturalsciences.be
+  description: "More than 4,000 photographs of beetles from the collections of the  Royal Belgian Institute of Natural Sciences. In English with Latin species names."
+  tags:
+    - Natural History
+  links:
+    portal: "http://www.europeana.eu/portal/search.html?query=europeana_collectionName%3A11625*&rows=12"
+    console: "http://www.europeana.eu/portal/api/console.html?function=search&query=http://www.europeana.eu/portal/search.html?query=europeana_collectionName%3A11625*&rows=12"
+    provider: http://www.naturalsciences.be/
+    licenses: 
+      - by
+      - sa
+    preview: /img/datasets/edinburgh_1_800.jpeg
