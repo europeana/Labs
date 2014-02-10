@@ -76,7 +76,7 @@
     preview: /img/datasets/valenciana_1_800.jpeg
 
 - name: "Butterflies and Moths from the University of Tartu and the Museum of Natural History Berlin"
-  provider: "University of Tartu, Natural History Museum" "Natural History Museum Berlin"
+  provider: "University of Tartu, Natural History, Museum Natural History Museum Berlin"
   contact: loodusmuuseum@ut.ee, info@mfn-berlin.de
   description: "More than 11,000 butterflies and moths from the Natural History Museum at the University of Tartu and the Natural History Museum in Berlin. In English with Latin species names."
   tags:
@@ -147,4 +147,3 @@
     licenses: 
       - pd
     preview: /img/datasets/edinburgh_1_800.jpeg
-

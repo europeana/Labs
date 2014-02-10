@@ -44,7 +44,11 @@ $(document).ready(function(){
 	if($("#homepage").length <= 0){
 		$("footer").attr("id", "nothomepagefooter");
 	}
+	
+	
 });
+
+
 
 var semLabs = {
 	initMenu:function(){
