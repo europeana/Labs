@@ -27,12 +27,14 @@ http://europeana.eu/api/v2/mydata/profile.json
 
 | Parameter | Datatype | Description |
 |:-------------|:-------------|:-----|
+| ? | ? | ? |
 
 
 ### Response
 
 | Field | Datatype | Description |
 |:-------------|:-------------|:-----|
+| ? | ? | ? |
 
 
 ## Saved Items
@@ -47,12 +49,14 @@ http://europeana.eu/api/v2/mydata/saveditem.json
 
 | Parameter | Datatype | Description |
 |:-------------|:-------------|:-----|
+| ? | ? | ? |
 
 
 ### Response
 
 | Field | Datatype | Description |
 |:-------------|:-------------|:-----|
+| ? | ? | ? |
 
 ## Saved Tags
 
@@ -66,12 +70,14 @@ http://europeana.eu/api/v2/mydata/tag.json
 
 | Parameter | Datatype | Description |
 |:-------------|:-------------|:-----|
+| ? | ? | ? |
 
 
 ### Response
 
 | Field | Datatype | Description |
 |:-------------|:-------------|:-----|
+| ? | ? | ? |
 
 
 ## Saved Searches
@@ -86,9 +92,11 @@ http://europeana.eu/api/v2/mydata/savedsearch.json
 
 | Parameter | Datatype | Description |
 |:-------------|:-------------|:-----|
+| ? | ? | ? |
 
 
 ### Response
 
 | Field | Datatype | Description |
 |:-------------|:-------------|:-----|
+| ? | ? | ? |
