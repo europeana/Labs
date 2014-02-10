@@ -77,16 +77,14 @@
 
 - name: "Butterflies and Moths from the University of Tartu and the Museum of Natural History Berlin"
   provider: "University of Tartu, Natural History Museum"
-  contact: loodusmuuseum@ut.ee
-  contact: info@mfn-berlin.de
+  contact: loodusmuuseum@ut.ee, info@mfn-berlin.de
   description: "More than 11,000 butterflies and moths from the Natural History Museum at the University of Tartu and the Natural History Museum in Berlin. In English with Latin species names."
   tags:
     - Natural History
   links:
     portal: "http://www.europeana.eu/portal/search.html?query=%28europeana_collectionName%3A11617*+AND+zoological%29+OR+%28europeana_collectionName%3A11609*%29+&rows=12"
     console: "http://www.europeana.eu/portal/api/console.html?function=search&query=%28europeana_collectionName%3A11617*+AND+zoological%29+OR+%28europeana_collectionName%3A11609*%29+&rows=12"
-    provider: http://www.natmuseum.ut.ee
-    provider: http://www.naturkundemuseum-berlin.de/
+    provider: http://www.natmuseum.ut.ee, http://www.naturkundemuseum-berlin.de/
     licenses: 
       - by
       - sa
