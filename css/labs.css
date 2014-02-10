@@ -60,6 +60,8 @@
 	max-width: 600px;
 }
 
+
+
 /*
 #contactForm button{
 	width=250px;
@@ -257,6 +259,13 @@ border-color: #eed3d7;
 #homepage #homepage-postsl-list h1.headline {margin-bottom:5%; font-size:1.3em;}
 
 #itemHeader div.block-content-header{padding: 2rem 0;}
+
+
+ul.tags li a.tag:focus{color:white;}
+
+#nothomepagefooter{background: #1B1B1B;}
+#nothomepagefooter p.copyright {margin-top:-10px;}
+#nothomepagefooter a.licensehr img {margin-top:-10px;}
 
 
 /*RESPONSIVE*/

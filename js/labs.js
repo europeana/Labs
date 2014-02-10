@@ -25,6 +25,25 @@ $(document).ready(function(){
 		var currentText = $(this).text();
 		$(this).text(currentText.replace("[at]","@"));
 	});
+	
+	$("div.startBtn a").click(function (event) {
+	    event.preventDefault();
+	    //calculate destination place
+	    var dest = 0;
+	    if ($(this.hash).offset().top > $(document).height() - $(window).height()) {
+	        dest = $(document).height() - $(window).height();
+	    } else {
+	        dest = $(this.hash).offset().top;
+	    }
+	    //go to destination
+	    $('html,body').animate({
+	        scrollTop: dest
+	    }, 2000, 'swing');
+	});
+	
+	if($("#homepage").length <= 0){
+		$("footer").attr("id", "nothomepagefooter");
+	}
 });
 
 var semLabs = {
