@@ -1,7 +1,15 @@
 ---
 layout: "api-page"
-title: Accessing My Europeana via API
+title: Accessing your MyEuropeana via API
 published: true
 ---
 
-TBD
+* TOC
+{:toc}
+
+## Introduction
+
+MyData is used to access your own MyEuroepana data through the API. 
+
+## Authentication
+
