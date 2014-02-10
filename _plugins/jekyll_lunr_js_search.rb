@@ -47,7 +47,8 @@ module Jekyll
           :url => entry.url,
           :date => entry.date,
           :categories => entry.categories,
-          :body => entry.body
+          :body => entry.body,
+          :tags => entry.tags
         }
         
         #puts 'Indexed ' << "#{entry.title} (#{entry.url})"
@@ -127,8 +128,9 @@ module Jekyll
       body = renderer.render(page)
       date = nil
       categories = []
+      tags = []
       
-      SearchEntry.new(title, url, date, categories, body)
+      SearchEntry.new(title, url, date, categories, body, tags)
     end
     
     def self.create_from_post(post, renderer)
@@ -136,8 +138,9 @@ module Jekyll
       body = renderer.render(post)
       date = post.date
       categories = post.categories
+      tags = post.tags
       
-      SearchEntry.new(title, url, date, categories, body)
+      SearchEntry.new(title, url, date, categories, body, tags)
     end
 
     def self.extract_title_and_url(item)
@@ -145,10 +148,10 @@ module Jekyll
       [ data['title'], data['url'] ]
     end
 
-    attr_reader :title, :url, :date, :categories, :body
+    attr_reader :title, :url, :date, :categories, :body, :tags
     
-    def initialize(title, url, date, categories, body)
-      @title, @url, @date, @categories, @body = title, url, date, categories, body
+    def initialize(title, url, date, categories, body, tags)
+      @title, @url, @date, @categories, @body, @tags = title, url, date, categories, body, tags
     end
     
     def strip_index_suffix_from_url!

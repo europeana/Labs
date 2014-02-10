@@ -79,7 +79,7 @@
 <!---->
 <script id="search-results-template" type="text/mustache">
   {{#entries}}
- 	<li class="grid__item one-whole">
+ 	<li class="grid__item one-whole {{tags}}">
             <div class="block block-thumb ">
 
                 <div class="b-thumb">
@@ -89,14 +89,20 @@
                 </div>
 
                 <div class="b-text">
-
-                    
 	                    <h1 class="headline gamma"><a href="/gallery/biblioteca">{{title}}</a></h1>
 	                    <div class="description">
 	                        <p>{{body}}</p>                        
 	                    </div>
-					
-					<a href="{{url}}" title="{{title}}" class="text-btn">Read more→</a>
+	                    <a href="{{url}}" title="{{title}}" class="text-btn pull-right">Read more→</a>
+	                    <div class="clear"></div>
+						<div class="tags">
+	                        <i class="icon icon-tag"></i>
+							{{#tags}}
+								<a href="#" class="tag_alt">{{.}}</a>
+	                    	{{/tags}}
+	                   
+	                    </div>
+						
                 </div>
 
             </div>
@@ -108,27 +114,69 @@
 <script type="text/javascript">
   $(document).ready(function() {
   	try{
-  		var inputFieldQ = $("#search-query");
+		var inputFieldQ = $("#search-query");
     inputFieldQ.lunrSearch({
       indexUrl: '/search.json',             // URL of the `search.json` index data for your site
       results:  '#search-results',          // jQuery selector for the search results container
       entries:  '.entries',                 // jQuery selector for the element to contain the results list, must be a child of the results element above.
       template: '#search-results-template'  // jQuery selector for the Mustache.js template
     });
-    
+   
     inputFieldQ.focus();
     
    }catch(e){
    	alert(e.message);
    }
+   
+	$("a.tag").click(function(){
+		var clickedTagText = $(this).text();
+		$("#search-results li").show();
+		$("#search-results li").each(function(){
+  			var iskaniTag = $(this).find('a').filter(function(index) { return $(this).text() === clickedTagText; });
+  			if(iskaniTag.length>0){
+  					
+  			}else{
+  				$(this).hide();
+  			}
+  			
+  		});
+	}); 
     
   });
+
 </script>
 
-<section id="search-results" style="display: none;">
-  <div class="entries">
-  </div>
-</section>
+<div class="grid__item one-quarter palm--one-whole">
+	<div class="subnav">
+	    <h4 class="label epsilon"> Filter by:</h4>
+	    <ul class="tags tags-large">
+
+					
+		
+			<li><a href="#api-implementation" rel="api-implementation" class="tag">API Implementation</a></li>
+					
+		
+			<li><a href="#open-source-project" rel="open-source-project" class="tag">Open Source Project</a></li>
+					
+		
+				
+ 
+	    </ul>
+    </div>
+	
+   <ul class="tabs tabs-v">
+     <li><a href="">Suggest a Dataset</a></li>
+     <li><a href="">Help improve this content</a></li>
+   </ul>
+</div>
+
+
+<div class="grid__item palm--one-whole three-quarters">
+	<section id="search-results" style="display: none;">
+	  <div class="entries">
+	  </div>
+	</section>
+</div>
 <!--
 --></div>
 ﻿<!-- Begin Footer -->
