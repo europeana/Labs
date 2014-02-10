@@ -19,9 +19,7 @@ MyData is used to access your own MyEuroepana data through the API.
 
 Retrieve your MyEuropeana profile, including statistics.
 
-```
-http://europeana.eu/api/v2/mydata/profile.json
-```
+  http://europeana.eu/api/v2/mydata/profile.json
 
 ### Request
 
@@ -38,9 +36,7 @@ The request doesn't take any parameters.
 
 ...
 
-```
-http://europeana.eu/api/v2/mydata/saveditem.json
-```
+  http://europeana.eu/api/v2/mydata/saveditem.json
 
 ### Get saved items
 
@@ -53,11 +49,13 @@ HTTP request type: get
 | europeanaid | String | (optional) check the existance of a specific saved item |
 
 
-### Response for LIST
+#### Response for LIST
 
 | Field | Datatype | Description |
 |:-------------|:-------------|:-----|
 | ? | ? | ? |
+
+### Create saved items
 
 #### Request for CREATE
 HTTP request type: get / post or put
@@ -67,6 +65,8 @@ HTTP request type: get / post or put
 | action | String | "CREATE" in case of a http get request |
 | europeanaid | String | (optional) check the existance of a specific saved item |
 
+
+### Delete saved items
 
 #### Request for DELETE
 HTTP request type: get / delete
@@ -81,9 +81,7 @@ HTTP request type: get / delete
 
 ...
 
-```
-http://europeana.eu/api/v2/mydata/tag.json
-```
+  http://europeana.eu/api/v2/mydata/tag.json
 
 ### Request
 
@@ -103,9 +101,7 @@ http://europeana.eu/api/v2/mydata/tag.json
 
 ...
 
-```
-http://europeana.eu/api/v2/mydata/savedsearch.json
-```
+  http://europeana.eu/api/v2/mydata/savedsearch.json
 
 ### Request
 
