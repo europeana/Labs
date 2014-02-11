@@ -236,3 +236,60 @@
     licenses: 
       - by
     preview: /img/datasets/edinburgh_1_800.jpeg
+
+- name: "Postcards from Europeana 1914 - 1918"
+  provider: "Europeana 1914 – 1918"
+  contact: Ad.Polle@europeana.eu
+  description: "More than 2,500 Postcards telling the story of the first World War."
+  tags:
+    - History
+  links:
+    portal: "http://www.europeana.eu/portal/search.html?query=PROVIDER:%22Europeana%201914%20-%201918%22&qf=REUSABILITY:open&qf=TYPE:IMAGE&qf=postcards"
+    console: "http://www.europeana.eu/portal/api/console.html?function=search&query=PROVIDER:%22Europeana%201914%20-%201918%22&qf=REUSABILITY:open&qf=TYPE:IMAGE&qf=postcards"
+    provider: http://www.europeana1914-1918.eu/
+    licenses: 
+      - by
+      - sa
+    preview: /img/datasets/edinburgh_1_800.jpeg
+
+- name: "Battles on artwork and drawings from the Rijksmuseum in the Netherlands"
+  provider: "Rijksmuseum"
+  contact: info@rijksmuseum.nl
+  description: "A collection of  thousand drawings, prints and artworks of battles across Europe through the centuries."
+  tags:
+    - History
+  links:
+    portal: "http://www.europeana.eu/portal/search.html?query=PROVIDER:Rijksmuseum&qf=slag"
+    console: "http://www.europeana.eu/portal/api/console.html?function=search&query=PROVIDER:Rijksmuseum&qf=slag"
+    provider: https://www.rijksmuseum.nl/
+    licenses: 
+      - pd
+    preview: /img/datasets/edinburgh_1_800.jpeg
+
+- name: "Popes on artwork, drawings and documents from the Rijksmuseum in the Netherlands"
+  provider: "Rijksmuseum"
+  contact: info@rijksmuseum.nl
+  description: "A collection of  more than 500 drawings, prints and artworks of popes through the centuries and related documents."
+  tags:
+    - History
+  links:
+    portal: "http://www.europeana.eu/portal/search.html?query=%28europeana_collectionName%3A90402*%29+AND+paus+&rows=12"
+    console: "http://www.europeana.eu/portal/api/console.html?function=search&query=%28europeana_collectionName%3A90402*%29+AND+paus+&rows=12"
+    provider: https://www.rijksmuseum.nl/
+    licenses: 
+      - pd
+    preview: /img/datasets/edinburgh_1_800.jpeg
+
+- name: "Napoleon on artwork, drawings and documents from the Amsterdam Museum"
+  provider: "Amsterdam Museum"
+  contact: info@amsterdammuseum.nl
+  description: "A beautiful collection of about 70 items related to Napoleon Bonaparte (1769 – 1829)."
+  tags:
+    - History
+  links:
+    portal: "http://www.europeana.eu/portal/search.html?query=europeana_collectionName:2021608*%20&qf=REUSABILITY:open&qf=TYPE:IMAGE&qf=napoleon"
+    console: "http://www.europeana.eu/portal/api/console.html?function=search&query=europeana_collectionName:2021608*%20&qf=REUSABILITY:open&qf=TYPE:IMAGE&qf=napoleon"
+    provider: http://www.amsterdammuseum.nl/
+    licenses: 
+      - by
+    preview: /img/datasets/edinburgh_1_800.jpeg
