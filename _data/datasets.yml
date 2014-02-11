@@ -6,6 +6,7 @@
   tags:
     - Maps
     - Architecture
+    - History
   links:
     portal: "http://www.europeana.eu/portal/search.html?query=DATA_PROVIDER:%22Cat%C3%A1logo%20Colectivo%20de%20la%20Red%20de%20Bibliotecas%20de%20los%20Archivos%20Estatales%22&qf=TYPE:IMAGE"
     console: "http://europeana.eu/portal/api/console.html?function=search&query=DATA_PROVIDER:%22Catálogo%20Colectivo%20de%20la%20Red%20de%20Bibliotecas%20de%20los%20Archivos%20Estatales%22&qf=TYPE:IMAGE"
@@ -21,6 +22,7 @@
   tags:
     - Maps
     - Drawings
+    - History
   links:
     portal: "http://www.europeana.eu/portal/search.html?query=DATA_PROVIDER:%22Biblioteca%20Virtual%20del%20Patrimonio%20Bibliogr%C3%A1fico%22&qf=TYPE:IMAGE"
     console: "http://europeana.eu/portal/api/console.html?function=search&query=DATA_PROVIDER:%22Biblioteca%20Virtual%20del%20Patrimonio%20Bibliogr%C3%A1fico%22&qf=TYPE:IMAGE"
