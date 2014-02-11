@@ -95,7 +95,7 @@
   contact: mi@ut.ee
   description: "More than 15,000 fossils from the Museum of Geology, University of Tartu. In English with Latin species names."
   tags:
-    - Natural History
+    - Natural History Museum
   links:
     portal: "http://www.europeana.eu/portal/search.html?query=DATA_PROVIDER%3A%22Institute+of+Geology+at+TUT%22&rows=12"
     console: "http://www.europeana.eu/portal/api/console.html?function=search&query=DATA_PROVIDER%3A%22Institute+of+Geology+at+TUT%22&rows=12"
