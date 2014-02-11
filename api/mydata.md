@@ -15,12 +15,16 @@ MyData is used to access your own MyEuroepana data through the API.
 
 MyData methods use your public and private api keys to authenticate.
 POST a http login to 
+
   http://europeana.eu/api/v2/login.do
+
 with the parameters:
+
 | Field |Description |
 |:-------------:-----|
 | j_username | Your PUBLIC apikey |
 | j_password | Your PRIVATE apikey |
+
 For a succesfull login, you should get a status 200 back, otherwise 
 it will trigger a redirect to a login html page.
 
