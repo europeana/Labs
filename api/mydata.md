@@ -20,8 +20,8 @@ POST a http login to
 
 with the parameters:
 
-| Field |Description |
-|:-------------:-----|
+| Field | Description |
+|:------|:------------|
 | j_username | Your PUBLIC apikey |
 | j_password | Your PRIVATE apikey |
 
@@ -41,7 +41,7 @@ The request doesn't take any parameters.
 ### Response
 
 | Field | Datatype | Description |
-|:-------------|:-------------|:-----|
+|:------|:---------|:------------|
 | ? | ? | ? |
 
 
@@ -53,6 +53,7 @@ The request doesn't take any parameters.
 
 Request parameter action is general for all actions, but can be replaced by 
 REST http request types.
+
 | Parameter | Datatype | Description |
 |:-------------|:-------------|:-----|
 | action | String | empty / "LIST" / "CREATE" / "DELETE" |
@@ -100,6 +101,7 @@ Modifying object tags
 
 Request parameter action is general for all actions, but can be replaced by 
 REST http request types.
+
 | Parameter | Datatype | Description |
 |:-------------|:-------------|:-----|
 | action | String | empty / "LIST" / "TAGCLOUD" / "CREATE" / "DELETE" |
