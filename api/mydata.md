@@ -19,16 +19,11 @@ MyData is used to access your own MyEuroepana data through the API.
 
 Retrieve your MyEuropeana profile, including statistics.
 
-```
-http://europeana.eu/api/v2/mydata/profile.json
-```
+  http://europeana.eu/api/v2/mydata/profile.json
 
 ### Request
 
-| Parameter | Datatype | Description |
-|:-------------|:-------------|:-----|
-| ? | ? | ? |
-
+The request doesn't take any parameters.
 
 ### Response
 
@@ -41,30 +36,52 @@ http://europeana.eu/api/v2/mydata/profile.json
 
 ...
 
-```
-http://europeana.eu/api/v2/mydata/saveditem.json
-```
+  http://europeana.eu/api/v2/mydata/saveditem.json
 
-### Request
+### Get saved items
+
+#### Request for LIST
+HTTP request type: get
 
 | Parameter | Datatype | Description |
 |:-------------|:-------------|:-----|
-| ? | ? | ? |
+| action | String | empty or "LIST" |
+| europeanaid | String | (optional) check the existance of a specific saved item |
 
 
-### Response
+#### Response for LIST
 
 | Field | Datatype | Description |
 |:-------------|:-------------|:-----|
 | ? | ? | ? |
 
+### Create saved items
+
+#### Request for CREATE
+HTTP request type: get / post or put
+
+| Parameter | Datatype | Description |
+|:-------------|:-------------|:-----|
+| action | String | "CREATE" in case of a http get request |
+| europeanaid | String | (optional) check the existance of a specific saved item |
+
+
+### Delete saved items
+
+#### Request for DELETE
+HTTP request type: get / delete
+
+| Parameter | Datatype | Description |
+|:-------------|:-------------|:-----|
+| action | String | "DELETE" in case of a http get request |
+| itemid | String | itemid (returned by LIST action) |
+| europeanaid | String | The Europeana ID of the record to delete |
+
 ## Saved Tags
 
 ...
 
-```
-http://europeana.eu/api/v2/mydata/tag.json
-```
+  http://europeana.eu/api/v2/mydata/tag.json
 
 ### Request
 
@@ -84,9 +101,7 @@ http://europeana.eu/api/v2/mydata/tag.json
 
 ...
 
-```
-http://europeana.eu/api/v2/mydata/savedsearch.json
-```
+  http://europeana.eu/api/v2/mydata/savedsearch.json
 
 ### Request
 

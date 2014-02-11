@@ -76,7 +76,7 @@
     preview: /img/datasets/valenciana_1_800.jpeg
 
 - name: "Butterflies and Moths from the University of Tartu and the Museum of Natural History Berlin"
-  provider: "University of Tartu, Natural History, Museum Natural History Museum Berlin"
+  provider: "University of Tartu, Natural History Museum, Natural History Museum Berlin"
   contact: loodusmuuseum@ut.ee, info@mfn-berlin.de
   description: "More than 11,000 butterflies and moths from the Natural History Museum at the University of Tartu and the Natural History Museum in Berlin. In English with Latin species names."
   tags:
@@ -93,16 +93,16 @@
 - name: "Fossils from the University of Tartu"
   provider: "Museum of Geology, University of Tartu"
   contact: mi@ut.ee
-  description: "More than 9,000 fossils from the Museum of Geology, University of Tartu. In English with Latin species names."
+  description: "More than 15,000 fossils from the Museum of Geology, University of Tartu. In English with Latin species names."
   tags:
     - Natural History
   links:
-    portal: "http://www.europeana.eu/portal/search.html?query=DATA_PROVIDER%3A%22Museum+of+Geology%2C+University+of+Tartu%22"
-    console: "http://www.europeana.eu/portal/api/console.html?function=search&query=DATA_PROVIDER%3A%22Museum+of+Geology%2C+University+of+Tartu%22"
+    portal: "http://www.europeana.eu/portal/search.html?query=DATA_PROVIDER%3A%22Institute+of+Geology+at+TUT%22&rows=12"
+    console: "http://www.europeana.eu/portal/api/console.html?function=search&query=DATA_PROVIDER%3A%22Institute+of+Geology+at+TUT%22&rows=12"
     provider: http://www.ut.ee/BGGM/museum.html
     licenses: 
       - by
-      - sa
+      - nc
     preview: /img/datasets/geology_1_800.jpeg
 
 - name: "Flowers and Trees from the Royal Botanic Garden in Edinburgh"
@@ -146,4 +146,48 @@
     provider: https://www.rijksmuseum.nl/
     licenses: 
       - pd
+    preview: /img/datasets/edinburgh_1_800.jpeg
+
+- name: "Beetles from the Royal Belgian Institute of Natural Sciences"
+  provider: "Royal Belgian Institute of Natural Sciences"
+  contact: info@naturalsciences.be
+  description: "More than 4,000 photographs of beetles from the collections of the  Royal Belgian Institute of Natural Sciences. In English with Latin species names."
+  tags:
+    - Natural History
+  links:
+    portal: "http://www.europeana.eu/portal/search.html?query=europeana_collectionName%3A11625*&rows=12"
+    console: "http://www.europeana.eu/portal/api/console.html?function=search&query=europeana_collectionName%3A11625*&rows=12"
+    provider: http://www.naturalsciences.be/
+    licenses: 
+      - by
+      - sa
+    preview: /img/datasets/edinburgh_1_800.jpeg
+
+- name: "Minerals and rocks from the Museum of Natural History in Berlin"
+  provider: "Museum of Natural History Berlin"
+  contact: info@mfn-berlin.de
+  description: "More than 1,000 photographs of minerals and rocks from the mineralogical collections of the  Museum of Natural History Berlin. In English with scientific names of minerals and rocks."
+  tags:
+    - Natural History
+  links:
+    portal: "http://www.europeana.eu/portal/search.html?query=%28europeana_collectionName%3A11622*%29+AND+NOT+%28Etikett%29&start=1&rows=12"
+    console: "http://www.europeana.eu/portal/api/console.html?function=search&query=%28europeana_collectionName%3A11622*%29+AND+NOT+%28Etikett%29&start=1&rows=12"
+    provider: http://www.naturkundemuseum-berlin.de/
+    licenses: 
+      - by
+      - sa
+    preview: /img/datasets/edinburgh_1_800.jpeg
+
+- name: "Bryozoa from the National Museum Prague"
+  provider: "National Museum Prague"
+  contact: nm@nm.cz
+  description: "More than 500 photographs of Bryozoans from the palaeontological collections of the  National Museum Prague. In English with latin species names."
+  tags:
+    - Natural History
+  links:
+    portal: "http://www.europeana.eu/portal/search.html?query=europeana_collectionName%3A11613*+AND+Z%C3%A1gor%C5%A1ek&rows=12"
+    console: "http://www.europeana.eu/portal/api/console.html?function=search&query=europeana_collectionName%3A11613*+AND+Z%C3%A1gor%C5%A1ek&rows=12"
+    provider: http://www.nm.cz/
+    licenses: 
+      - by
     preview: /img/datasets/edinburgh_1_800.jpeg
