@@ -9,41 +9,56 @@ published: true
 
 ## Introduction
 
-MyData is used to access your own MyEuroepana data through the API. 
+MyData is used to access your own MyEuroepana data through the API.
 
 ## Authentication
 
-MyData methods use your public and private api keys to authenticate.
-POST a http login to 
+MyData methods use your public and private api keys to authenticate. Logging 
+in is done by send a POST request to the following url and use the described 
+parameters filled with the combination of both API keys.
 
   http://europeana.eu/api/v2/login.do
-
-with the parameters:
 
 | Field | Description |
 |:------|:------------|
 | j_username | Your PUBLIC apikey |
 | j_password | Your PRIVATE apikey |
 
-For a succesfull login, you should get a status 200 back, otherwise 
-it will trigger a redirect to a login html page.
+For a succesfull login, you should get a status 200 back, otherwise it will 
+trigger a redirect to a login html page. This can be ignored, the login page is
+for testing purposes only.
 
 ## Profile
 
-Retrieve your MyEuropeana profile, including statistics.
+Retrieve your MyEuropeana profile, including statistics. Profile information is read-only.
 
   http://europeana.eu/api/v2/mydata/profile.json
 
-### Request
+#### Request
 
 The request doesn't take any parameters.
 
-### Response
+#### Response
+
+Fields containing no data are not included in json response.
 
 | Field | Datatype | Description |
 |:------|:---------|:------------|
-| ? | ? | ? |
-
+| email | Text |  |
+| userName | Text |  |
+| registrationDate | Timestamp | In timestamp format (Date.toLong) |
+| lastLogin | Timestamp | In timestamp format (Date.toLong) |
+| firstName | Text |  |
+| lastName | Text |  |
+| company | Text |  |
+| country | Text |  |
+| phone | Text |  |
+| address | Text |  |
+| website | Text |  |
+| fieldOfWork | Text |  |
+| nrOfSavedItems | Number | Number of saved items |
+| nrOfSavedSearches | Number | Number of saved searches |
+| nrOfSocialTags | Number | Number of tags |
 
 ## Saved Items
 
