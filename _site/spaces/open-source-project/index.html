@@ -25,8 +25,7 @@
 	<script src="/js/date.format.js" type="text/javascript" charset="utf-8"></script>
 	<script src="/js/URI.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="/js/jquery.lunr.search.js" type="text/javascript" charset="utf-8"></script>
-	
-	
+	<script src="/js/jquery.pages.js"></script>		
     <script src="/js/labs.js"></script>
 </head>
 <body class="sg-single-pattern svg"><!--
@@ -97,8 +96,18 @@
 		</ul>
 
 	</div><!--
-	 --><div class="grid__item three-quarters palm--one-whole">
-    <ul class="post-list grid">
+	 --><script>
+	$(document).ready(function(){
+		
+		$("div.pagination-holder").jPages({
+	    containerID : "GalleryList",
+	    perPage: 10
+	    });
+	});
+</script>
+
+<div class="grid__item three-quarters palm--one-whole">
+    <ul id="GalleryList" class="post-list grid">
         <!--
         --><li class="grid__item one-whole desk--one-half">
             <div class="block block-thumb   block-thumb-small ">
@@ -114,13 +123,13 @@
                     
 						<h5><a href="/gallery/europeana4j">europeana4j</a></h5>
                     
-					<a href="/gallery/europeana4j" title="europeana4j" class="text-btn">Read more&rarr;</a>
+					<a href="/gallery/europeana4j" title="europeana4j" class="text-btn">Read more about europeana4j</a>
                     <div class="tags">
                         <i class="icon icon-tag"></i>
 						
-							<a href="#" class="tag_alt">API Implementation</a>
+						<a href="/gallery/api-implementation/" class="tag_alt">API Implementation</a>
 						
-							<a href="#" class="tag_alt">Open Source Project</a>
+						<a href="/gallery/open-source-project/" class="tag_alt">Open Source Project</a>
 						
                     </div>
                 </div>
@@ -129,7 +138,10 @@
         </li>
     </ul>
     
-<!--
+    <div class="pagination-holder">
+    	
+    </div>
+    <br/><!--
 --></div>
 ﻿<!-- Begin Footer -->
 <footer class="footer" role="contentinfo">

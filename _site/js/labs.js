@@ -3,7 +3,13 @@ $(document).ready(function(){
 	$("#homepage").parent().attr("id", "homepagebody");
 	
 	$("#hamMenu").click(function(){
-		$("#nav").css("max-height","999px");
+		if($("#nav").hasClass("menu-opened")){
+			$("#nav").css("max-height","0");
+			$("#nav").removeClass("menu-opened");
+		}else{
+			$("#nav").css("max-height","999px");
+			$("#nav").addClass("menu-opened");
+		}
 	});
 	
 	$("#homepage ul.nav-footer").append("<br class='clear'/>");
@@ -15,8 +21,13 @@ $(document).ready(function(){
 	$("ul.tags li a").click(function(){
 		$("ul.post-list li").hide();
 		$("ul.post-list li."+$(this).attr("rel")).show();
-		
 	});
+	
+	$("a.datasetstag-at-item").click(function(){
+		$("ul.post-list li").hide();
+		$("ul.post-list li."+$(this).attr("rel")).show();
+		
+	});	
 	
 	$(".obfuscate").each(function(){
 		var currentMailto = $(this).attr("href");
@@ -44,7 +55,11 @@ $(document).ready(function(){
 	if($("#homepage").length <= 0){
 		$("footer").attr("id", "nothomepagefooter");
 	}
+	
+	
 });
+
+
 
 var semLabs = {
 	initMenu:function(){

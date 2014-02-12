@@ -25,8 +25,7 @@
 	<script src="/js/date.format.js" type="text/javascript" charset="utf-8"></script>
 	<script src="/js/URI.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="/js/jquery.lunr.search.js" type="text/javascript" charset="utf-8"></script>
-	
-	
+	<script src="/js/jquery.pages.js"></script>		
     <script src="/js/labs.js"></script>
 </head>
 <body class="sg-single-pattern svg"><!--
@@ -97,8 +96,18 @@
 		</ul>
 
 	</div><!--
-	 --><div class="grid__item three-quarters palm--one-whole">
-    <ul class="post-list grid">
+	 --><script>
+	$(document).ready(function(){
+		
+		$("div.pagination-holder").jPages({
+	    containerID : "GalleryList",
+	    perPage: 10
+	    });
+	});
+</script>
+
+<div class="grid__item three-quarters palm--one-whole">
+    <ul id="GalleryList" class="post-list grid">
         <!--
         --><li class="grid__item one-whole desk--one-half">
             <div class="block block-thumb ">
@@ -117,11 +126,11 @@
 	                        <p>Europeana Culture Collage is developed by Monique Szpak (@zenlan) and started as a simple exercise in mashing up a few of the new web technologies, incl. Europeana API and Europeana visual data.</p>                        
 	                    </div>
 					
-					<a href="/gallery/culture-collage" title="Europeana Culture Collage" class="text-btn">Read more&rarr;</a>
+					<a href="/gallery/culture-collage" title="Europeana Culture Collage" class="text-btn">Read more about Europeana Culture Collage</a>
                     <div class="tags">
                         <i class="icon icon-tag"></i>
 						
-							<a href="#" class="tag_alt">API Implementation</a>
+						<a href="/gallery/api-implementation/" class="tag_alt">API Implementation</a>
 						
                     </div>
                 </div>
@@ -145,11 +154,11 @@
 	                        <p>The National Library of Spain has implemented the Europeana API in their online portal, Biblioteca Digital Hispánica. The portal now enables their users to access related Europeana content via single link on their search result header.</p>                        
 	                    </div>
 					
-					<a href="/gallery/biblioteca" title="Biblioteca Digital Hispánica" class="text-btn">Read more&rarr;</a>
+					<a href="/gallery/biblioteca" title="Biblioteca Digital Hispánica" class="text-btn">Read more about Biblioteca Digital Hispánica</a>
                     <div class="tags">
                         <i class="icon icon-tag"></i>
 						
-							<a href="#" class="tag_alt">API Implementation</a>
+						<a href="/gallery/api-implementation/" class="tag_alt">API Implementation</a>
 						
                     </div>
                 </div>
@@ -170,11 +179,11 @@
                     
 						<h5><a href="/gallery/kringla">Kringla</a></h5>
                     
-					<a href="/gallery/kringla" title="Kringla" class="text-btn">Read more&rarr;</a>
+					<a href="/gallery/kringla" title="Kringla" class="text-btn">Read more about Kringla</a>
                     <div class="tags">
                         <i class="icon icon-tag"></i>
 						
-							<a href="#" class="tag_alt">API Implementation</a>
+						<a href="/gallery/api-implementation/" class="tag_alt">API Implementation</a>
 						
                     </div>
                 </div>
@@ -195,11 +204,11 @@
                     
 						<h5><a href="/gallery/inventing-europe">Inventing Europe</a></h5>
                     
-					<a href="/gallery/inventing-europe" title="Inventing Europe" class="text-btn">Read more&rarr;</a>
+					<a href="/gallery/inventing-europe" title="Inventing Europe" class="text-btn">Read more about Inventing Europe</a>
                     <div class="tags">
                         <i class="icon icon-tag"></i>
 						
-							<a href="#" class="tag_alt">API Implementation</a>
+						<a href="/gallery/api-implementation/" class="tag_alt">API Implementation</a>
 						
                     </div>
                 </div>
@@ -220,11 +229,11 @@
                     
 						<h5><a href="/gallery/hispana">Hispana</a></h5>
                     
-					<a href="/gallery/hispana" title="Hispana" class="text-btn">Read more&rarr;</a>
+					<a href="/gallery/hispana" title="Hispana" class="text-btn">Read more about Hispana</a>
                     <div class="tags">
                         <i class="icon icon-tag"></i>
 						
-							<a href="#" class="tag_alt">API Implementation</a>
+						<a href="/gallery/api-implementation/" class="tag_alt">API Implementation</a>
 						
                     </div>
                 </div>
@@ -245,13 +254,13 @@
                     
 						<h5><a href="/gallery/europeana4j">europeana4j</a></h5>
                     
-					<a href="/gallery/europeana4j" title="europeana4j" class="text-btn">Read more&rarr;</a>
+					<a href="/gallery/europeana4j" title="europeana4j" class="text-btn">Read more about europeana4j</a>
                     <div class="tags">
                         <i class="icon icon-tag"></i>
 						
-							<a href="#" class="tag_alt">API Implementation</a>
+						<a href="/gallery/api-implementation/" class="tag_alt">API Implementation</a>
 						
-							<a href="#" class="tag_alt">Open Source Project</a>
+						<a href="/gallery/open-source-project/" class="tag_alt">Open Source Project</a>
 						
                     </div>
                 </div>
@@ -272,11 +281,11 @@
                     
 						<h5><a href="/gallery/python">Europeana Search Python</a></h5>
                     
-					<a href="/gallery/python" title="Europeana Search Python" class="text-btn">Read more&rarr;</a>
+					<a href="/gallery/python" title="Europeana Search Python" class="text-btn">Read more about Europeana Search Python</a>
                     <div class="tags">
                         <i class="icon icon-tag"></i>
 						
-							<a href="#" class="tag_alt">API Implementation</a>
+						<a href="/gallery/api-implementation/" class="tag_alt">API Implementation</a>
 						
                     </div>
                 </div>
@@ -297,11 +306,11 @@
                     
 						<h5><a href="/gallery/remix">Europeana Remix</a></h5>
                     
-					<a href="/gallery/remix" title="Europeana Remix" class="text-btn">Read more&rarr;</a>
+					<a href="/gallery/remix" title="Europeana Remix" class="text-btn">Read more about Europeana Remix</a>
                     <div class="tags">
                         <i class="icon icon-tag"></i>
 						
-							<a href="#" class="tag_alt">API Implementation</a>
+						<a href="/gallery/api-implementation/" class="tag_alt">API Implementation</a>
 						
                     </div>
                 </div>
@@ -322,11 +331,11 @@
                     
 						<h5><a href="/gallery/europeana-local-austria">Europeana Local Austria</a></h5>
                     
-					<a href="/gallery/europeana-local-austria" title="Europeana Local Austria" class="text-btn">Read more&rarr;</a>
+					<a href="/gallery/europeana-local-austria" title="Europeana Local Austria" class="text-btn">Read more about Europeana Local Austria</a>
                     <div class="tags">
                         <i class="icon icon-tag"></i>
 						
-							<a href="#" class="tag_alt">API Implementation</a>
+						<a href="/gallery/api-implementation/" class="tag_alt">API Implementation</a>
 						
                     </div>
                 </div>
@@ -347,11 +356,11 @@
                     
 						<h5><a href="/gallery/europeana-ecloud">Europeana eCloud</a></h5>
                     
-					<a href="/gallery/europeana-ecloud" title="Europeana eCloud" class="text-btn">Read more&rarr;</a>
+					<a href="/gallery/europeana-ecloud" title="Europeana eCloud" class="text-btn">Read more about Europeana eCloud</a>
                     <div class="tags">
                         <i class="icon icon-tag"></i>
 						
-							<a href="#" class="tag_alt">API Implementation</a>
+						<a href="/gallery/api-implementation/" class="tag_alt">API Implementation</a>
 						
                     </div>
                 </div>
@@ -372,11 +381,11 @@
                     
 						<h5><a href="/gallery/eclap">The ECLAP e-library of performing arts</a></h5>
                     
-					<a href="/gallery/eclap" title="The ECLAP e-library of performing arts" class="text-btn">Read more&rarr;</a>
+					<a href="/gallery/eclap" title="The ECLAP e-library of performing arts" class="text-btn">Read more about The ECLAP e-library of performing arts</a>
                     <div class="tags">
                         <i class="icon icon-tag"></i>
 						
-							<a href="#" class="tag_alt">API Implementation</a>
+						<a href="/gallery/api-implementation/" class="tag_alt">API Implementation</a>
 						
                     </div>
                 </div>
@@ -397,11 +406,11 @@
                     
 						<h5><a href="/gallery/dutch-natural-history">Dutch Museum of Natural History</a></h5>
                     
-					<a href="/gallery/dutch-natural-history" title="Dutch Museum of Natural History" class="text-btn">Read more&rarr;</a>
+					<a href="/gallery/dutch-natural-history" title="Dutch Museum of Natural History" class="text-btn">Read more about Dutch Museum of Natural History</a>
                     <div class="tags">
                         <i class="icon icon-tag"></i>
 						
-							<a href="#" class="tag_alt">API Implementation</a>
+						<a href="/gallery/api-implementation/" class="tag_alt">API Implementation</a>
 						
                     </div>
                 </div>
@@ -422,11 +431,11 @@
                     
 						<h5><a href="/gallery/django">Django Europeana 0.1.5</a></h5>
                     
-					<a href="/gallery/django" title="Django Europeana 0.1.5" class="text-btn">Read more&rarr;</a>
+					<a href="/gallery/django" title="Django Europeana 0.1.5" class="text-btn">Read more about Django Europeana 0.1.5</a>
                     <div class="tags">
                         <i class="icon icon-tag"></i>
 						
-							<a href="#" class="tag_alt">API Implementation</a>
+						<a href="/gallery/api-implementation/" class="tag_alt">API Implementation</a>
 						
                     </div>
                 </div>
@@ -447,11 +456,11 @@
                     
 						<h5><a href="/gallery/athena">ATHENA</a></h5>
                     
-					<a href="/gallery/athena" title="ATHENA" class="text-btn">Read more&rarr;</a>
+					<a href="/gallery/athena" title="ATHENA" class="text-btn">Read more about ATHENA</a>
                     <div class="tags">
                         <i class="icon icon-tag"></i>
 						
-							<a href="#" class="tag_alt">API Implementation</a>
+						<a href="/gallery/api-implementation/" class="tag_alt">API Implementation</a>
 						
                     </div>
                 </div>
@@ -472,11 +481,11 @@
                     
 						<h5><a href="/gallery/e4e">Europeana4Education (E4E)</a></h5>
                     
-					<a href="/gallery/e4e" title="Europeana4Education (E4E)" class="text-btn">Read more&rarr;</a>
+					<a href="/gallery/e4e" title="Europeana4Education (E4E)" class="text-btn">Read more about Europeana4Education (E4E)</a>
                     <div class="tags">
                         <i class="icon icon-tag"></i>
 						
-							<a href="#" class="tag_alt">API Implementation</a>
+						<a href="/gallery/api-implementation/" class="tag_alt">API Implementation</a>
 						
                     </div>
                 </div>
@@ -497,11 +506,11 @@
                     
 						<h5><a href="/gallery/bibheritagespain">Digital Library of Bibliographic Heritage, Spain</a></h5>
                     
-					<a href="/gallery/bibheritagespain" title="Digital Library of Bibliographic Heritage, Spain" class="text-btn">Read more&rarr;</a>
+					<a href="/gallery/bibheritagespain" title="Digital Library of Bibliographic Heritage, Spain" class="text-btn">Read more about Digital Library of Bibliographic Heritage, Spain</a>
                     <div class="tags">
                         <i class="icon icon-tag"></i>
 						
-							<a href="#" class="tag_alt">API Implementation</a>
+						<a href="/gallery/api-implementation/" class="tag_alt">API Implementation</a>
 						
                     </div>
                 </div>
@@ -522,11 +531,11 @@
                     
 						<h5><a href="/gallery/digital-humanities-observatory">Digital Humanities Observatory</a></h5>
                     
-					<a href="/gallery/digital-humanities-observatory" title="Digital Humanities Observatory" class="text-btn">Read more&rarr;</a>
+					<a href="/gallery/digital-humanities-observatory" title="Digital Humanities Observatory" class="text-btn">Read more about Digital Humanities Observatory</a>
                     <div class="tags">
                         <i class="icon icon-tag"></i>
 						
-							<a href="#" class="tag_alt">API Implementation</a>
+						<a href="/gallery/api-implementation/" class="tag_alt">API Implementation</a>
 						
                     </div>
                 </div>
@@ -547,11 +556,11 @@
                     
 						<h5><a href="/gallery/ch-context-widget">CH Context widget</a></h5>
                     
-					<a href="/gallery/ch-context-widget" title="CH Context widget" class="text-btn">Read more&rarr;</a>
+					<a href="/gallery/ch-context-widget" title="CH Context widget" class="text-btn">Read more about CH Context widget</a>
                     <div class="tags">
                         <i class="icon icon-tag"></i>
 						
-							<a href="#" class="tag_alt">API Implementation</a>
+						<a href="/gallery/api-implementation/" class="tag_alt">API Implementation</a>
 						
                     </div>
                 </div>
@@ -572,11 +581,11 @@
                     
 						<h5><a href="/gallery/cerl-thesaurus">CERL Thesaurus Search</a></h5>
                     
-					<a href="/gallery/cerl-thesaurus" title="CERL Thesaurus Search" class="text-btn">Read more&rarr;</a>
+					<a href="/gallery/cerl-thesaurus" title="CERL Thesaurus Search" class="text-btn">Read more about CERL Thesaurus Search</a>
                     <div class="tags">
                         <i class="icon icon-tag"></i>
 						
-							<a href="#" class="tag_alt">API Implementation</a>
+						<a href="/gallery/api-implementation/" class="tag_alt">API Implementation</a>
 						
                     </div>
                 </div>
@@ -597,11 +606,11 @@
                     
 						<h5><a href="/gallery/carare-map">CARARE Map</a></h5>
                     
-					<a href="/gallery/carare-map" title="CARARE Map" class="text-btn">Read more&rarr;</a>
+					<a href="/gallery/carare-map" title="CARARE Map" class="text-btn">Read more about CARARE Map</a>
                     <div class="tags">
                         <i class="icon icon-tag"></i>
 						
-							<a href="#" class="tag_alt">API Implementation</a>
+						<a href="/gallery/api-implementation/" class="tag_alt">API Implementation</a>
 						
                     </div>
                 </div>
@@ -622,11 +631,11 @@
                     
 						<h5><a href="/gallery/biblioteca-virtual">Biblioteca Virtual Ignacio Larramendi</a></h5>
                     
-					<a href="/gallery/biblioteca-virtual" title="Biblioteca Virtual Ignacio Larramendi" class="text-btn">Read more&rarr;</a>
+					<a href="/gallery/biblioteca-virtual" title="Biblioteca Virtual Ignacio Larramendi" class="text-btn">Read more about Biblioteca Virtual Ignacio Larramendi</a>
                     <div class="tags">
                         <i class="icon icon-tag"></i>
 						
-							<a href="#" class="tag_alt">API Implementation</a>
+						<a href="/gallery/api-implementation/" class="tag_alt">API Implementation</a>
 						
                     </div>
                 </div>
@@ -635,7 +644,10 @@
         </li>
     </ul>
     
-<!--
+    <div class="pagination-holder">
+    	
+    </div>
+    <br/><!--
 --></div>
 ﻿<!-- Begin Footer -->
 <footer class="footer" role="contentinfo">
