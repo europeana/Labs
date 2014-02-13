@@ -129,8 +129,17 @@
 
 
 	
-	<div class="grid__item palm--one-whole three-quarters">
-    <ul class="post-list grid">
+	<script>
+	$(document).ready(function(){
+		
+		$("div.pagination-holder").jPages({
+	    containerID : "DatasetsList",
+	    perPage: 5
+	    });
+	});
+</script>
+<div class="grid__item palm--one-whole three-quarters">
+    <ul id="DatasetsList"  class="post-list grid">
         <!--
         --><li class="grid__item one-whole maps architecture history ">
             <div class="block block-thumb  ">
@@ -751,9 +760,13 @@
             </div>
         </li>
     </ul>
+    
+    <div class="pagination-holder">
+    	
+    </div>
+    <br/>
 </div>
-
-<ul><!--
+<!--
 --></div>
 ﻿<!-- Begin Footer -->
 <footer class="footer" role="contentinfo">

@@ -85,8 +85,16 @@
 			<li><a href="">Help improve this content</a></li>
 		</ul>
 	</div><!--
-	 --><div class="grid__item three-quarters palm--one-whole">
-    <ul class="post-list grid">
+	 --><script>
+	$(document).ready(function(){
+		repageDatasets();
+	});
+	
+
+</script>
+
+<div class="grid__item three-quarters palm--one-whole">
+    <ul id="SpacesList" class="post-list grid">
         <!--
         --><li class="grid__item one-whole">
             <div class="block block-thumb block-thumb-small">
@@ -169,7 +177,13 @@
             </div>
         </li>
     </ul>
+        <div class="pagination-holder">
+    	
+    </div>
+    <br/>
 </div>
+
+
 <!--
 --></div>
 ﻿<!-- Begin Footer -->

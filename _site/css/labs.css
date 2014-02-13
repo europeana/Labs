@@ -310,6 +310,10 @@ display: inline-block;
 .pagination-holder span { margin: 0 5px; }
 
 
+ul.post-list li {overflow: hidden;}
+
+ul.tags li a.current-tag{background: #611a1a;}
+
 /*RESPONSIVE*/
 
 @media (max-width: 1200px){

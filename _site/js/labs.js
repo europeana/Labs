@@ -19,14 +19,15 @@ $(document).ready(function(){
 	}
 	
 	$("ul.tags li a").click(function(){
-		$("ul.post-list li").hide();
-		$("ul.post-list li."+$(this).attr("rel")).show();
+		$("ul.tags li a").removeClass("current-tag");
+		$(this).addClass("current-tag");
+		$("div.pagination-holder").jPages("destroy");
+		$("ul.post-list li").removeClass("filtered-by-tag").hide();
+		$("ul.post-list li."+$(this).attr("rel")).addClass("filtered-by-tag").show();
 	});
 	
 	$("a.datasetstag-at-item").click(function(){
-		$("ul.post-list li").hide();
-		$("ul.post-list li."+$(this).attr("rel")).show();
-		
+		$("ul.tags li a[rel='"+$(this).attr("rel")+"']").click();
 	});	
 	
 	$(".obfuscate").each(function(){
@@ -56,10 +57,22 @@ $(document).ready(function(){
 		$("footer").attr("id", "nothomepagefooter");
 	}
 	
+	//select gallery tag if selected
+	var splitedGalleryUrl = window.location.pathname.split('/');
+	if(splitedGalleryUrl[1]=="gallery" && splitedGalleryUrl.length>2){
+		$("ul.tags li a[rel='"+splitedGalleryUrl[2]+"']").addClass("current-tag");
+	}
 	
 });
 
-
+	function repageDatasets()
+	{
+		$("div.pagination-holder").jPages({
+	    	containerID : "SpacesList",
+	    	perPage: 10
+	    });;
+		
+	}
 
 var semLabs = {
 	initMenu:function(){

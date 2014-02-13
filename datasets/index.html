@@ -1,9 +1,17 @@
 ---
 layout: data-list
 ---
-
+<script>
+	$(document).ready(function(){
+		
+		$("div.pagination-holder").jPages({
+	    containerID : "DatasetsList",
+	    perPage: 5
+	    });
+	});
+</script>
 <div class="grid__item palm--one-whole three-quarters">
-    <ul class="post-list grid">
+    <ul id="DatasetsList"  class="post-list grid">
         {% for dataset in site.data.datasets %}<!--
         --><li class="grid__item one-whole {% for tag in dataset.tags %}{{tag | tags_links}} {% endfor %}">
             <div class="block block-thumb  {%if counter > 1 %} block-thumb-small {% endif %}">
@@ -45,6 +53,9 @@ layout: data-list
             </div>
         </li>{% endfor %}
     </ul>
+    
+    <div class="pagination-holder">
+    	
+    </div>
+    <br/>
 </div>
-
-<ul>
