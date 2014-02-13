@@ -2,26 +2,22 @@
 category: gallery
 layout: "gallery-item"
 published: true
-title: "Europeana Remix"
+title: Europeana Remix
 featured: false
-permalink: "gallery/remix"
+permalink: gallery/remix
 tags: 
   - API Implementation
 links: 
   - "http://pro.europeana.eu/web/guest/europeana-remix"
   - "http://remix.europeana.eu/"
-imageurl:
+imageurl: 
   - "/img/gallery/europeana-remix/remix.jpg"
   - "/img/gallery/europeana-remix/remix_2.jpg"
   - "/img/gallery/europeana-remix/remix_3.jpg"
-contact:
+contact: 
   name: "Europeana Remix was developed in cooperation with Kennisland, Three Eyed Labs, and BigUp."
 ---
 
-Europeana Culture Collage is developed by Monique Szpak (@zenlan) and started as a simple exercise in mashing up a few of the newer web technologies, incl. Europeana API and Europeana visual data.
+[Europeana Remix](http://remix.europeana.eu/ "Europeana Remix") is an interactive platform based on the film 'Otto & Bernard'. This short film was produced for the project [Europeana 1914-1918](http://www.europeana1914-1918.eu/ "Europeana 1914-1918"), encouraging families to share photos, letters and memorabilia of World War I. Now, the film forms the basis of the Remix initiative, combining cutting-edge technology ([Popcorn.js](http://popcornjs.org/ "Popcorn"), the [HTML5](http://en.wikipedia.org/wiki/HTML5 "Link to HTML5-article on Wikipedia") video framework) and a variety of resources from Europeana (via the API) and across the web.
 
-The Europeana API proved to be easy to use and provides access to over 14 million images, which made it perfect for a very visual application and has the added advantage of being able to connect the user to both famous and obscure collections and sources.
-
-Searches for a specific keyword result in a 'visual river' of related Europeana images. Clicking on an image leads to the object's page on the Europeana portal, without losing the initial position in the visual stream. Searches can be linked by using keywords in the URL, e.g. this example allowing themed image streams to be shared.
-
-A newer version called Culture Collage plugs in a few more collections APIs and adds a 'scrapbook' feature that allows users to bookmark items with one mouse-click and without interrupting the stream.
+Europeana Remix was developed in cooperation with [Kennisland](http://www.knowledgeland.org/ "Link to the Kennisland website"), [Three Eyed Labs](http://www.chirls.com/ "Link to the Three Eyed Labs website"), and [BigUp](http://werk.bigup.nl/ "Link to the BigUp website").

@@ -1,4 +1,3 @@
-
 .clear{clear: both;}
 
 #documentation p{max-width: 500px;}
@@ -267,6 +266,53 @@ ul.tags li a.tag:focus{color:white;}
 #nothomepagefooter p.copyright {margin-top:-10px;}
 #nothomepagefooter a.licensehr img {margin-top:-10px;}
 
+
+a.text-btn{color:#b13030;}
+a.text-btn:hover{border-bottom: 1px dotted  #b13030;}
+div.prose ul.sg-icons {margin-left: 0;}
+
+
+
+/*
+  @@ Pagination
+*/
+.pagination-holder { margin: 5px 0; }
+
+.pagination-holder a {
+    cursor: pointer;
+  margin: 0 5px;
+  color: #333;
+  padding: 0.5rem 1rem;
+display: inline-block;
+}
+
+.pagination-holder a:hover {
+  background-color: #222;
+  color: #fff;
+}
+
+.pagination-holder a.jp-previous { margin-right: 15px; }
+.pagination-holder a.jp-next { margin-left: 15px; }
+
+.pagination-holder a.jp-current, a.jp-current:hover { 
+  	color: white;
+	font-weight: bold;
+	background-color: #b13030;
+}
+
+.pagination-holder a.jp-disabled, a.jp-disabled:hover { color: #bbb; }
+
+.pagination-holder a.jp-current, a.jp-current:hover,
+.pagination-holder a.jp-disabled, a.jp-disabled:hover {
+  cursor: pointer; 
+}
+
+.pagination-holder span { margin: 0 5px; }
+
+
+ul.post-list li {overflow: hidden;}
+
+ul.tags li a.current-tag{background: #611a1a;}
 
 /*RESPONSIVE*/
 

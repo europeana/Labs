@@ -1,8 +1,17 @@
 ---
 layout: spaces-list
 ---
+
+<script>
+	$(document).ready(function(){
+		repageDatasets();
+	});
+	
+
+</script>
+
 <div class="grid__item three-quarters palm--one-whole">
-    <ul class="post-list grid">
+    <ul id="SpacesList" class="post-list grid">
         {% for post in site.categories.spaces %}<!--
         --><li class="grid__item one-whole">
             <div class="block block-thumb block-thumb-small">
@@ -19,10 +28,16 @@ layout: spaces-list
                     <div class="description">
                         {{post.excerpt}}                        
                     </div>
-					<a href="{{site.baseurl}}{{post.url}}" title="{{post.title}}" class="text-btn pull-right">Read more&rarr;</a>
+					<a href="{{site.baseurl}}{{post.url}}" title="{{post.title}}" class="text-btn">Read more about {{post.title}}</a>
                 </div>
 
             </div>
         </li>{% endfor %}
     </ul>
+        <div class="pagination-holder">
+    	
+    </div>
+    <br/>
 </div>
+
+
