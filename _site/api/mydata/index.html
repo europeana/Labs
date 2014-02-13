@@ -25,8 +25,7 @@
 	<script src="/js/date.format.js" type="text/javascript" charset="utf-8"></script>
 	<script src="/js/URI.min.js" type="text/javascript" charset="utf-8"></script>
 	<script src="/js/jquery.lunr.search.js" type="text/javascript" charset="utf-8"></script>
-	
-	
+	<script src="/js/jquery.pages.js"></script>		
     <script src="/js/labs.js"></script>
 </head>
 <body class="sg-single-pattern svg"><!--
@@ -89,6 +88,7 @@
 			<li><a href="/api/search" title="API Search Method">Search Method</a></li>
 			<li><a href="/api/object" title="API Object Method">Object Method</a></li>
 			<li><a href="/api/myeuropeana" title="Accessing MyEuropeana via API">My Europeana</a></li>
+			<li><a href="/api/mydata" title="Accessing own MyEuropeana data via API">MyData</a></li>
 			<li><a href="/api/provider" title="Accessing Provider/Collection via API">Provider/Collection</a></li>
 			<li><a href="/api/error" title="API Error Code">Error Codes</a></li>
 		</ul>
@@ -106,26 +106,33 @@
 
 		
 	<div id="documentation" class="prose grid__item palm--one-whole push--palm-none one-half"><!--
-	--><div class="maruku_toc"><ul><li><a href="#introduction">Introduction</a></li><li><a href="#authentication">Authentication</a></li><li><a href="#profile">Profile</a><ul><li><a href="#request">Request</a></li><li><a href="#response">Response</a></li></ul></li><li><a href="#saved_items">Saved Items</a><ul><li><a href="#request_2">Request</a></li><li><a href="#response_2">Response</a></li></ul></li><li><a href="#saved_tags">Saved Tags</a><ul><li><a href="#request_3">Request</a></li><li><a href="#response_3">Response</a></li></ul></li><li><a href="#saved_searches">Saved Searches</a><ul><li><a href="#request_4">Request</a></li><li><a href="#response_4">Response</a></li></ul></li></ul></div>
+	--><div class="maruku_toc"><ul><li><a href="#introduction">Introduction</a></li><li><a href="#authentication">Authentication</a></li><li><a href="#profile">Profile</a><ul><li><a href="#request">Request</a></li><li><a href="#response">Response</a></li></ul></li><li><a href="#saved_items">Saved Items</a><ul><li><a href="#get_saved_items">Get saved items</a><ul><li><a href="#request_for_list">Request for LIST</a></li><li><a href="#response_for_list">Response for LIST</a></li></ul></li><li><a href="#create_saved_items">Create saved items</a><ul><li><a href="#request_for_create">Request for CREATE</a></li></ul></li><li><a href="#delete_saved_items">Delete saved items</a><ul><li><a href="#request_for_delete">Request for DELETE</a></li></ul></li></ul></li><li><a href="#tags">Tags</a><ul><li><a href="#get_tags">Get tags</a><ul><li><a href="#request_for_list_2">Request for LIST</a></li><li><a href="#response_for_list_2">Response for LIST</a></li><li><a href="#request_for_tag_cloud">Request for TAG CLOUD</a></li><li><a href="#response_for_tag_cloud">Response for TAG CLOUD</a></li></ul></li><li><a href="#create_saved_items_2">Create saved items</a><ul><li><a href="#request_for_create_2">Request for CREATE</a></li></ul></li><li><a href="#delete_saved_items_2">Delete saved items</a><ul><li><a href="#request_for_delete_2">Request for DELETE</a></li></ul></li></ul></li><li><a href="#saved_searches">Saved Searches</a><ul><li><a href="#request_2">Request</a></li><li><a href="#response_2">Response</a></li></ul></li></ul></div>
 <h2 id="introduction">Introduction</h2>
 
 <p>MyData is used to access your own MyEuroepana data through the API.</p>
 
 <h2 id="authentication">Authentication</h2>
 
-<p>….</p>
+<p>MyData methods use your public and private api keys to authenticate. POST a http login to</p>
+
+<p>http://europeana.eu/api/v2/login.do</p>
+
+<p>with the parameters:</p>
+<table><thead><tr><th>Field</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">j_username</td><td style="text-align: left;">Your PUBLIC apikey</td></tr>
+<tr><td style="text-align: left;">j_password</td><td style="text-align: left;">Your PRIVATE apikey</td></tr>
+</tbody></table>
+<p>For a succesfull login, you should get a status 200 back, otherwise it will trigger a redirect to a login html page.</p>
 
 <h2 id="profile">Profile</h2>
 
 <p>Retrieve your MyEuropeana profile, including statistics.</p>
 
-<pre><code>
-http://europeana.eu/api/v2/mydata/profile.json
-</code></pre>
+<p>http://europeana.eu/api/v2/mydata/profile.json</p>
 
 <h3 id="request">Request</h3>
-<table><thead><tr><th>Parameter</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">?</td><td style="text-align: left;">?</td><td style="text-align: left;">?</td></tr>
-</tbody></table>
+
+<p>The request doesn’t take any parameters.</p>
+
 <h3 id="response">Response</h3>
 <table><thead><tr><th>Field</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">?</td><td style="text-align: left;">?</td><td style="text-align: left;">?</td></tr>
 </tbody></table>
@@ -133,42 +140,98 @@ http://europeana.eu/api/v2/mydata/profile.json
 
 <p></p>
 
-<pre><code>
-http://europeana.eu/api/v2/mydata/saveditem.json
-</code></pre>
+<p>http://europeana.eu/api/v2/mydata/saveditem.json</p>
+
+<p>Request parameter action is general for all actions, but can be replaced by REST http request types.</p>
+<table><thead><tr><th>Parameter</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">action</td><td style="text-align: left;">String</td><td style="text-align: left;">empty / “LIST” / “CREATE” / “DELETE”</td></tr>
+</tbody></table>
+<h3 id="get_saved_items">Get saved items</h3>
+
+<h4 id="request_for_list">Request for LIST</h4>
+
+<p>HTTP request type: get</p>
+<table><thead><tr><th>Parameter</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">europeanaid</td><td style="text-align: left;">String</td><td style="text-align: left;">(optional) check the existance of a specific saved item</td></tr>
+</tbody></table>
+<h4 id="response_for_list">Response for LIST</h4>
+<table><thead><tr><th>Field</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">?</td><td style="text-align: left;">?</td><td style="text-align: left;">?</td></tr>
+</tbody></table>
+<h3 id="create_saved_items">Create saved items</h3>
+
+<h4 id="request_for_create">Request for CREATE</h4>
+
+<p>HTTP request type: get / post or put</p>
+<table><thead><tr><th>Parameter</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">europeanaid</td><td style="text-align: left;">String</td><td style="text-align: left;">(optional) check the existance of a specific saved item</td></tr>
+</tbody></table>
+<h3 id="delete_saved_items">Delete saved items</h3>
+
+<h4 id="request_for_delete">Request for DELETE</h4>
+
+<p>HTTP request type: get / delete</p>
+<table><thead><tr><th>Parameter</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">itemid</td><td style="text-align: left;">String</td><td style="text-align: left;">itemid (returned by LIST action)</td></tr>
+<tr><td style="text-align: left;">europeanaid</td><td style="text-align: left;">String</td><td style="text-align: left;">The Europeana ID of the record to delete</td></tr>
+</tbody></table>
+<h2 id="tags">Tags</h2>
+
+<p>Modifying object tags</p>
+
+<p>http://europeana.eu/api/v2/mydata/tag.json</p>
+
+<p>Request parameter action is general for all actions, but can be replaced by REST http request types.</p>
+<table><thead><tr><th>Parameter</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">action</td><td style="text-align: left;">String</td><td style="text-align: left;">empty / “LIST” / “TAGCLOUD” / “CREATE” / “DELETE”</td></tr>
+</tbody></table>
+<h3 id="get_tags">Get tags</h3>
+
+<h4 id="request_for_list_2">Request for LIST</h4>
+
+<p>REST HTTP request type: get</p>
+<table><thead><tr><th>Parameter</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">europeanaid</td><td style="text-align: left;">String</td><td style="text-align: left;">(optional) check the existance of a specific saved item</td></tr>
+</tbody></table>
+<h4 id="response_for_list_2">Response for LIST</h4>
+<table><thead><tr><th>Field</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">?</td><td style="text-align: left;">?</td><td style="text-align: left;">?</td></tr>
+</tbody></table>
+<h4 id="request_for_tag_cloud">Request for TAG CLOUD</h4>
+
+<p>REST HTTP request type: get (action parameter is required)</p>
+<table><thead><tr><th>Parameter</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">action</td><td style="text-align: left;">String</td><td style="text-align: left;">“TAGCLOUD”</td></tr>
+</tbody></table>
+<ul>
+<li>the tagcloud action does not take any aditional parameters</li>
+</ul>
+
+<h4 id="response_for_tag_cloud">Response for TAG CLOUD</h4>
+<table><thead><tr><th>Field</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">?</td><td style="text-align: left;">?</td><td style="text-align: left;">?</td></tr>
+</tbody></table>
+<h3 id="create_saved_items_2">Create saved items</h3>
+
+<h4 id="request_for_create_2">Request for CREATE</h4>
+
+<p>REST HTTP request type: get / post or put</p>
+<table><thead><tr><th>Parameter</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">europeanaid</td><td style="text-align: left;">String</td><td style="text-align: left;">(optional) check the existance of a specific saved item</td></tr>
+<tr><td style="text-align: left;">tag</td><td style="text-align: left;">String</td><td style="text-align: left;">The tag to add for this object</td></tr>
+</tbody></table>
+<h3 id="delete_saved_items_2">Delete saved items</h3>
+
+<h4 id="request_for_delete_2">Request for DELETE</h4>
+
+<p>REST HTTP request type: get / delete</p>
+<table><thead><tr><th>Parameter</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">tagid</td><td style="text-align: left;">String</td><td style="text-align: left;">delete by tagid (returned by LIST action)</td></tr>
+<tr><td style="text-align: left;">tag</td><td style="text-align: left;">String</td><td style="text-align: left;">delete by tag (can delete multiple tags)</td></tr>
+<tr><td style="text-align: left;">europeanaid</td><td style="text-align: left;">String</td><td style="text-align: left;">Remove all tags binded to a Europeana Record (can delete multiple tags)</td></tr>
+</tbody></table>
+<ul>
+<li>tag and europeanaid parameters can be used combined, tagid works only as single selection parameter.</li>
+</ul>
+
+<h2 id="saved_searches">Saved Searches</h2>
+
+<p></p>
+
+<p>http://europeana.eu/api/v2/mydata/savedsearch.json</p>
 
 <h3 id="request_2">Request</h3>
 <table><thead><tr><th>Parameter</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">?</td><td style="text-align: left;">?</td><td style="text-align: left;">?</td></tr>
 </tbody></table>
 <h3 id="response_2">Response</h3>
-<table><thead><tr><th>Field</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">?</td><td style="text-align: left;">?</td><td style="text-align: left;">?</td></tr>
-</tbody></table>
-<h2 id="saved_tags">Saved Tags</h2>
-
-<p></p>
-
-<pre><code>
-http://europeana.eu/api/v2/mydata/tag.json
-</code></pre>
-
-<h3 id="request_3">Request</h3>
-<table><thead><tr><th>Parameter</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">?</td><td style="text-align: left;">?</td><td style="text-align: left;">?</td></tr>
-</tbody></table>
-<h3 id="response_3">Response</h3>
-<table><thead><tr><th>Field</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">?</td><td style="text-align: left;">?</td><td style="text-align: left;">?</td></tr>
-</tbody></table>
-<h2 id="saved_searches">Saved Searches</h2>
-
-<p></p>
-
-<pre><code>
-http://europeana.eu/api/v2/mydata/savedsearch.json
-</code></pre>
-
-<h3 id="request_4">Request</h3>
-<table><thead><tr><th>Parameter</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">?</td><td style="text-align: left;">?</td><td style="text-align: left;">?</td></tr>
-</tbody></table>
-<h3 id="response_4">Response</h3>
 <table><thead><tr><th>Field</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">?</td><td style="text-align: left;">?</td><td style="text-align: left;">?</td></tr>
 </tbody></table><!--
 --></div>
