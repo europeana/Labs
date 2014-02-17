@@ -18,6 +18,23 @@ The provided methods are the same, with a path difference in the url's.
 
 ## OAuth2 User Authentication
 
+OAuth2 is a token based authentication and authorisation system where your
+user gets redirected to a login page on our server. After the login page the
+user have to give permition to give access to the users data. On both steps
+succesfully finished, the API server redirects back to a given url with an 
+access token which can be used to access or modify data on our servers. 
+The access token has a limited time life, but can be refreshed with a refresh 
+token also given by the authorisation process.
+
+This two url's are important for the process:
+
+  * *authorize*: `http://europeana.eu/api/oauth/authorize`
+  * *token refresh*: `http://europeana.eu/api/oauth/token`
+
+There are many open source libraries available for a big variation of 
+languages to help you implement this into your own project. See the page 
+mentioned below for more information and a list of libraries.
+
 More information: [OAuth.net/2/](http://oauth.net/2/).
 
 ## MyData Authentication
@@ -26,7 +43,7 @@ MyData methods use your public and private api keys to authenticate. Logging
 in is done by send a POST request to the following url and use the described 
 parameters filled with the combination of both API keys.
 
-  http://europeana.eu/api/v2/login.do
+* `http://europeana.eu/api/v2/login.do`
 
 | Field | Description |
 |:------|:------------|
@@ -56,8 +73,8 @@ The API will return the general API response, where the following fields are imp
 
 Retrieve your MyEuropeana profile, including statistics. Profile information is read-only.
 
-`http://europeana.eu/api/v2/user/profile.json`
-`http://europeana.eu/api/v2/mydata/profile.json`
+* `http://europeana.eu/api/v2/user/profile.json`
+* `http://europeana.eu/api/v2/mydata/profile.json`
 
 **Request**
 
@@ -132,6 +149,7 @@ REST http request types.
 ### Create saved items
 
 **Request for CREATE**
+
   * HTTP request: get (required param action=CREATE) 
   * HTTP REST request: post or put
 
@@ -142,6 +160,7 @@ REST http request types.
 ### Delete saved items
 
 **Request for DELETE**
+
   * HTTP request: get (required param action=DELETE) 
   * HTTP REST request: delete
 
@@ -167,6 +186,7 @@ REST http request types.
 ### Get tags
 
 **Request for LIST**
+
   * REST HTTP request type: get
 
 | Parameter | Datatype | Description |
@@ -198,6 +218,7 @@ REST http request types.
 ### Get Tag Cloud 
 
 **Request for TAG CLOUD**
+
   * REST HTTP request type: get (action parameter is required)
 
 | Parameter | Datatype | Description |
@@ -223,6 +244,7 @@ REST http request types.
 ### Create saved items
 
 **Request for CREATE**
+
   * HTTP request: get (required param action=CREATE) 
   * HTTP REST request: post or put
 
@@ -234,6 +256,7 @@ REST http request types.
 ### Delete saved items
 
 **Request for DELETE**
+
   * HTTP request: get (required param action=DELETE) 
   * HTTP REST request: delete
 
@@ -262,6 +285,7 @@ REST http request types.
 ### Get Saved Searches
 
 **Request for LIST**
+
   * REST HTTP request: get
 
 List action takes no additional parameters
@@ -287,6 +311,7 @@ List action takes no additional parameters
 Create a new saved search. Parameters are similar to API search.json (or on the portal).
 
 **Request for CREATE**
+
   * HTTP request: get (required param action=CREATE) 
   * HTTP REST request: post or put
 
@@ -299,6 +324,7 @@ Create a new saved search. Parameters are similar to API search.json (or on the 
 ### Delete saved search
 
 **Request for DELETE**
+
   * HTTP request: get (required param action=DELETE) 
   * HTTP REST request: delete
 
