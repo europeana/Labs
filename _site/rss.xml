@@ -68,7 +68,7 @@
     <item>
       <title>Europeana Remix</title>
       <link>http://localhost:4000/gallery/remix</link>
-      <description>&lt;p&gt;Europeana Culture Collage is developed by Monique Szpak (@zenlan) and started as a simple exercise in mashing up a few of the newer web technologies, incl. Europeana API and Europeana visual data.&lt;/p&gt;</description>
+      <description>&lt;p&gt;&lt;a href='http://remix.europeana.eu/' title='Europeana Remix'&gt;Europeana Remix&lt;/a&gt; is an interactive platform based on the film ‘Otto &amp;amp; Bernard’. This short film was produced for the project &lt;a href='http://www.europeana1914-1918.eu/' title='Europeana 1914-1918'&gt;Europeana 1914-1918&lt;/a&gt;, encouraging families to share photos, letters and memorabilia of World War I. Now, the film forms the basis of the Remix initiative, combining cutting-edge technology (&lt;a href='http://popcornjs.org/' title='Popcorn'&gt;Popcorn.js&lt;/a&gt;, the &lt;a href='http://en.wikipedia.org/wiki/HTML5' title='Link to HTML5-article on Wikipedia'&gt;HTML5&lt;/a&gt; video framework) and a variety of resources from Europeana (via the API) and across the web.&lt;/p&gt;</description>
       <pubDate>Wed, 22 Jan 2014 00:00:00 +0100</pubDate>
       <guid>http://localhost:4000/gallery/remix</guid>
       <dc:date>2014-01-22T00:00:00+01:00</dc:date>
@@ -103,14 +103,6 @@
       <description>&lt;p&gt;The Dutch Museum of National History presents the history of Dutch people in images and stories. Should a user search for a historical person, the result pages include also Europeana content related to this individual.&lt;/p&gt;</description>
       <pubDate>Wed, 22 Jan 2014 00:00:00 +0100</pubDate>
       <guid>http://localhost:4000/gallery/dutch-natural-history</guid>
-      <dc:date>2014-01-22T00:00:00+01:00</dc:date>
-    </item>
-    <item>
-      <title>Django Europeana 0.1.5</title>
-      <link>http://localhost:4000/gallery/django</link>
-      <description>&lt;p&gt;The app is a programming library for Django, the free and open source web framework written in Python and used in Pinterest, Instagram, Mozilla and The Washington Times.&lt;/p&gt;</description>
-      <pubDate>Wed, 22 Jan 2014 00:00:00 +0100</pubDate>
-      <guid>http://localhost:4000/gallery/django</guid>
       <dc:date>2014-01-22T00:00:00+01:00</dc:date>
     </item>
     <item>
