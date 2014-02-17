@@ -28,8 +28,8 @@ token also given by the authorisation process.
 
 This two url's are important for the process:
 
-  * *authorize*: `http://europeana.eu/api/oauth/authorize`
-  * *token refresh*: `http://europeana.eu/api/oauth/token`
+* *authorize*: `http://europeana.eu/api/oauth/authorize`
+* *token refresh*: `http://europeana.eu/api/oauth/token`
 
 There are many open source libraries available for a big variation of 
 languages to help you implement this into your own project. See the page 
@@ -106,8 +106,8 @@ Fields containing no data are not included in json response.
 
 Retrieve or modify saved items (favorites) in your MyEuropeana account
 
-  http://europeana.eu/api/v2/user/saveditem.json
-  http://europeana.eu/api/v2/mydata/saveditem.json
+* `http://europeana.eu/api/v2/user/saveditem.json`
+* `http://europeana.eu/api/v2/mydata/saveditem.json`
 
 Request parameter action is general for all actions, but can be replaced by 
 REST http request types.
@@ -119,6 +119,7 @@ REST http request types.
 ### Get saved items
 
 **Request for LIST**
+
   * HTTP request type: get
 
 | Parameter | Datatype | Description |
@@ -173,8 +174,8 @@ REST http request types.
 
 Modifying object tags
 
-  http://europeana.eu/api/v2/user/tag.json
-  http://europeana.eu/api/v2/mydata/tag.json
+* `http://europeana.eu/api/v2/user/tag.json`
+* `http://europeana.eu/api/v2/mydata/tag.json`
 
 Request parameter action is general for all actions, but can be replaced by 
 REST http request types.
@@ -272,8 +273,8 @@ REST http request types.
 
 Retrieve or modify saved searches in your MyEuropeana account
 
-  http://europeana.eu/api/v2/user/savedsearch.json
-  http://europeana.eu/api/v2/mydata/savedsearch.json
+* `http://europeana.eu/api/v2/user/savedsearch.json`
+* `http://europeana.eu/api/v2/mydata/savedsearch.json`
 
 Request parameter action is general for all actions, but can be replaced by 
 REST http request types.
