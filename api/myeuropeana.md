@@ -18,6 +18,8 @@ The provided methods are the same, with a path difference in the url's.
 
 ## OAuth2 User Authentication
 
+More information: [OAuth.net/2/](http://oauth.net/2/).
+
 ## MyData Authentication
 
 MyData methods use your public and private api keys to authenticate. Logging 
@@ -54,8 +56,8 @@ The API will return the general API response, where the following fields are imp
 
 Retrieve your MyEuropeana profile, including statistics. Profile information is read-only.
 
-  http://europeana.eu/api/v2/user/profile.json
-  http://europeana.eu/api/v2/mydata/profile.json
+`http://europeana.eu/api/v2/user/profile.json`
+`http://europeana.eu/api/v2/mydata/profile.json`
 
 **Request**
 
