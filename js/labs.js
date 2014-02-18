@@ -103,7 +103,6 @@ function convertEmails() {
 	
 	var bodyHtml = $("body").html();	
 	var emails = extractEmails($("body").html());
-	alert(emails.length);
 	
 	$.each(emails, function( index, value ) {
 	  bodyHtml = bodyHtml.replace("<a href=\"mailto:"+value+"\">"+value+"</a>", value);
