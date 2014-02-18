@@ -114,11 +114,27 @@
 
 <h2 id="oauth2_user_authentication">OAuth2 User Authentication</h2>
 
+<p>OAuth2 is a token based authentication and authorisation system where your user gets redirected to a login page on our server. After the login page the user have to give permition to give access to the users data. On both steps succesfully finished, the API server redirects back to a given url with an access token which can be used to access or modify data on our servers. The access token has a limited time life, but can be refreshed with a refresh token also given by the authorisation process.</p>
+
+<p>This two url’s are important for the process:</p>
+
+<ul>
+<li><em>authorize</em>: <code>http://europeana.eu/api/oauth/authorize</code></li>
+
+<li><em>token refresh</em>: <code>http://europeana.eu/api/oauth/token</code></li>
+</ul>
+
+<p>There are many open source libraries available for a big variation of languages to help you implement this into your own project. See the page mentioned below for more information and a list of libraries.</p>
+
+<p>More information: <a href="http://oauth.net/2/">OAuth.net/2/</a>.</p>
+
 <h2 id="mydata_authentication">MyData Authentication</h2>
 
 <p>MyData methods use your public and private api keys to authenticate. Logging in is done by send a POST request to the following url and use the described parameters filled with the combination of both API keys.</p>
 
-<p>http://europeana.eu/api/v2/login.do</p>
+<ul>
+<li><code>http://europeana.eu/api/v2/login.do</code></li>
+</ul>
 <table><thead><tr><th>Field</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">j_username</td><td style="text-align: left;">Your PUBLIC apikey</td></tr>
 <tr><td style="text-align: left;">j_password</td><td style="text-align: left;">Your PRIVATE apikey</td></tr>
 </tbody></table>
@@ -138,7 +154,11 @@
 
 <p>Retrieve your MyEuropeana profile, including statistics. Profile information is read-only.</p>
 
-<p>http://europeana.eu/api/v2/user/profile.json http://europeana.eu/api/v2/mydata/profile.json</p>
+<ul>
+<li><code>http://europeana.eu/api/v2/user/profile.json</code></li>
+
+<li><code>http://europeana.eu/api/v2/mydata/profile.json</code></li>
+</ul>
 
 <p><strong>Request</strong></p>
 
@@ -167,14 +187,22 @@
 
 <p>Retrieve or modify saved items (favorites) in your MyEuropeana account</p>
 
-<p>http://europeana.eu/api/v2/user/saveditem.json http://europeana.eu/api/v2/mydata/saveditem.json</p>
+<ul>
+<li><code>http://europeana.eu/api/v2/user/saveditem.json</code></li>
+
+<li><code>http://europeana.eu/api/v2/mydata/saveditem.json</code></li>
+</ul>
 
 <p>Request parameter action is general for all actions, but can be replaced by REST http request types.</p>
 <table><thead><tr><th>Parameter</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">action</td><td style="text-align: left;">String</td><td style="text-align: left;">empty / “LIST” / “CREATE” / “DELETE”</td></tr>
 </tbody></table>
 <h3 id="get_saved_items">Get saved items</h3>
 
-<p><strong>Request for LIST</strong> * HTTP request type: get</p>
+<p><strong>Request for LIST</strong></p>
+
+<ul>
+<li>HTTP request type: get</li>
+</ul>
 <table><thead><tr><th>Parameter</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">europeanaid</td><td style="text-align: left;">String</td><td style="text-align: left;">(optional) check the existance of a specific saved item</td></tr>
 </tbody></table>
 <p><strong>Response for LIST</strong></p>
@@ -218,14 +246,22 @@
 
 <p>Modifying object tags</p>
 
-<p>http://europeana.eu/api/v2/user/tag.json http://europeana.eu/api/v2/mydata/tag.json</p>
+<ul>
+<li><code>http://europeana.eu/api/v2/user/tag.json</code></li>
+
+<li><code>http://europeana.eu/api/v2/mydata/tag.json</code></li>
+</ul>
 
 <p>Request parameter action is general for all actions, but can be replaced by REST http request types.</p>
 <table><thead><tr><th>Parameter</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">action</td><td style="text-align: left;">String</td><td style="text-align: left;">empty / “LIST” / “TAGCLOUD” / “CREATE” / “DELETE”</td></tr>
 </tbody></table>
 <h3 id="get_tags">Get tags</h3>
 
-<p><strong>Request for LIST</strong> * REST HTTP request type: get</p>
+<p><strong>Request for LIST</strong></p>
+
+<ul>
+<li>REST HTTP request type: get</li>
+</ul>
 <table><thead><tr><th>Parameter</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">europeanaid</td><td style="text-align: left;">String</td><td style="text-align: left;">(optional) check the existance of a specific saved item</td></tr>
 </tbody></table>
 <p><strong>Response for LIST</strong></p>
@@ -245,7 +281,11 @@
 </tbody></table>
 <h3 id="get_tag_cloud">Get Tag Cloud</h3>
 
-<p><strong>Request for TAG CLOUD</strong> * REST HTTP request type: get (action parameter is required)</p>
+<p><strong>Request for TAG CLOUD</strong></p>
+
+<ul>
+<li>REST HTTP request type: get (action parameter is required)</li>
+</ul>
 <table><thead><tr><th>Parameter</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">action</td><td style="text-align: left;">String</td><td style="text-align: left;">“TAGCLOUD”</td></tr>
 </tbody></table>
 <ul>
@@ -293,14 +333,22 @@
 
 <p>Retrieve or modify saved searches in your MyEuropeana account</p>
 
-<p>http://europeana.eu/api/v2/user/savedsearch.json http://europeana.eu/api/v2/mydata/savedsearch.json</p>
+<ul>
+<li><code>http://europeana.eu/api/v2/user/savedsearch.json</code></li>
+
+<li><code>http://europeana.eu/api/v2/mydata/savedsearch.json</code></li>
+</ul>
 
 <p>Request parameter action is general for all actions, but can be replaced by REST http request types.</p>
 <table><thead><tr><th>Parameter</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">action</td><td style="text-align: left;">String</td><td style="text-align: left;">empty / “LIST” / “CREATE” / “DELETE”</td></tr>
 </tbody></table>
 <h3 id="get_saved_searches">Get Saved Searches</h3>
 
-<p><strong>Request for LIST</strong> * REST HTTP request: get</p>
+<p><strong>Request for LIST</strong></p>
+
+<ul>
+<li>REST HTTP request: get</li>
+</ul>
 
 <p>List action takes no additional parameters</p>
 

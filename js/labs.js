@@ -1,4 +1,5 @@
 $(document).ready(function(){
+	convertEmails();
 	semLabs.initMenu();
 	$("#homepage").parent().attr("id", "homepagebody");
 	
@@ -63,16 +64,60 @@ $(document).ready(function(){
 		$("ul.tags li a[rel='"+splitedGalleryUrl[2]+"']").addClass("current-tag");
 	}
 	
+	
 });
 
-	function repageDatasets()
-	{
+function repageDatasets()
+{
 		$("div.pagination-holder").jPages({
 	    	containerID : "SpacesList",
 	    	perPage: 10
 	    });;
 		
-	}
+}
+
+    
+
+function extractEmails (text)
+{
+    return text.match(/([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9._-]+)/gi);
+}
+
+function GetUnique(inputArray)
+{
+    var outputArray = [];
+    
+    for (var i = 0; i < inputArray.length; i++)
+    {
+        if ((jQuery.inArray(inputArray[i], outputArray)) == -1)
+        {
+            outputArray.push(inputArray[i]);
+        }
+    }
+   
+    return outputArray;
+}
+
+
+function convertEmails() {
+	
+	var bodyHtml = $("body").html();	
+	var emails = extractEmails($("body").html());
+	alert(emails.length);
+	
+	$.each(emails, function( index, value ) {
+	  bodyHtml = bodyHtml.replace("<a href=\"mailto:"+value+"\">"+value+"</a>", value);
+	});
+	
+	var Uniqemails = GetUnique(emails);
+	
+	$.each(Uniqemails, function( index, value ) {
+	  bodyHtml = bodyHtml.replace(value, "<a href='mailto:"+value+"'>"+value+"</a>");
+	});
+	
+	$("body").html(bodyHtml);
+
+}
 
 var semLabs = {
 	initMenu:function(){
