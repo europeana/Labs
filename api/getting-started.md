@@ -4,8 +4,7 @@ title: Getting Started with the Search API
 published: true
 ---
 
-
-In this section you will find information necessary to jump-start using Europeana API.
+In this section you will find all information necessary to jump-start using Europeana API.
 
 ## Request
 
