@@ -63,7 +63,7 @@ An EDM Agent object. This EDM Agent class comprises people, either individually 
 
 
 | Field | Qualified Name | Datatype | Description |
-|:-------------|:-------------|:-----|
+|:-------------|:-------------|:-----|:-----|
 |about|     rdf:about|     String|     The URI of the object, usually a DBpedia URL.|
 |prefLabel|     skos:prefLabel|     LangMap|     SKOS preferred lexical label.|
 |altLabel|     skos:altLabel|     LangMap|     SKOS alternative lexical label.|
@@ -96,7 +96,7 @@ An EDM Agent object. This EDM Agent class comprises people, either individually 
 EDM Aggregation. The set of resources related to a single cultural heritage object that collectively represent that object in Europeana. Such set consists of: all descriptions about the object that Europeana collects from (possibly different) content providers, including thumbnails and other forms of abstractions, as well as of the description of the object Europeana builds. Find more in the EDM Definition.
 
 | Field | Qualified Name | Datatype | Description |
-|:-------------|:-------------|:-----|
+|:-------------|:-------------|:-----|:-----|
 |about|     rdf:about|     String|     URI of the aggregation|
 |edmDataProvider|     edm:dataProvider|     LangMap|     A name or identifier of organizations that contributed objects in this aggregation.|
 |edmIsShownBy|     edm:isShownBy|     String|     An unambiguous URL reference to the digital object on the provider’s web site in the best available resolution/quality.|
@@ -120,7 +120,7 @@ SKOS* Concept. A SKOS concept can be viewed as an idea or notion; a unit of thou
 * SKOS stands for Simple Knowledge Organization System, a W3C standard
 
 | Field | Qualified Name | Datatype | Description |
-|:-------------|:-------------|:-----|
+|:-------------|:-------------|:-----|:-----|
 |about|     rdf:about|     String|     Defines the resource being described|
 |prefLabel|     skos:prefLabel|     LangMap|     Preferred lexical label.|
 |altLabel|     skos:altLabel|     LangMap|     Alternative lexical label.|
@@ -146,7 +146,7 @@ SKOS* Concept. A SKOS concept can be viewed as an idea or notion; a unit of thou
 EDM Europeana Aggregation. The set of resources related to a single cultural heritage object that collectively represent that object in Europeana. Such set consists of: all descriptions about the object that Europeana collects from (possibly different) content providers, including thumbnails and other forms of abstractions, as well as of the description of the object Europeana builds.
 
 | Field | Qualified Name | Datatype | Description |
-|:-------------|:-------------|:-----|
+|:-------------|:-------------|:-----|:-----|
 |about|     rdf:about|     String|     URI of the europeanaAggregation|
 |webResources|     edm:WebResources|     Array ([WebResource](#WebResource))|     A collection of webResource objects|
 |aggregatedcHO|     edm:aggregatedcHO|     String|     The ID of the record corresponding to the CHO of this aggregation|
@@ -166,7 +166,7 @@ EDM Europeana Aggregation. The set of resources related to a single cultural her
 EDM Place. An "extent in space, in particular on the surface of the earth, in the pure sense of physics: independent from temporal phenomena and matter" (CIDOC CRM).
 
 | Field | Qualified Name | Datatype | Description |
-|:-------------|:-------------|:-----|
+|:-------------|:-------------|:-----|:-----|
 |about|     rdf:about|     String|     Defines the resource being described|
 |prefLabel|     skos:prefLabel|     LangMap|     Preferred lexical label.|
 |altLabel|     skos:altLabel|     LangMap|     Alternative lexical label.|
@@ -187,7 +187,7 @@ EDM Place. An "extent in space, in particular on the surface of the earth, in th
 EDM ProvidedcHO (Provided Cultural Heritage Object). This class comprises the Cultural Heritage objects that Europeana collects descriptions about.
 
 | Field | Qualified Name | Datatype | Description |
-|:-------------|:-------------|:-----|
+|:-------------|:-------------|:-----|:-----|
 |about|     rdf:about|     String|     Defines the resource being described |
 |owlSameAs|     owl:sameAs|     Array (String)|     owl:sameAs links an individual to an individual. Such an owl:sameAs statement indicates that two URI references actually refer to the same thing: the individuals have the same "identity". |
 
@@ -198,7 +198,7 @@ ORE* Proxy. Europeana uses proxies as place-holders for cultural heritage object
 * ORE stands for Open Archives Initiative Object Reuse and Exchange
 
 | Field | Qualified Name | Datatype | Description |
-|:-------------|:-------------|:-----|
+|:-------------|:-------------|:-----|:-----|
 |about|     rdf:about|     String|     Defines the resource being described |
 |dcContributor|     dc:contributor|     LangMap|     An entity responsible for making contributions to the resource.|
 |dcCoverage|     dc:coverage|     LangMap|     The spatial or temporal topic of the resource, the spatial applicability of the resource, or the jurisdiction under which the resource is relevant.|
@@ -260,7 +260,7 @@ ORE* Proxy. Europeana uses proxies as place-holders for cultural heritage object
 
 
 | Field | Qualified Name | Datatype | Description |
-|:-------------|:-------------|:-----|
+|:-------------|:-------------|:-----|:-----|
 |about|     rdf:about|     String|     Defines the resource being described|
 |prefLabel|     skos:prefLabel|     LangMap|     Preferred lexical label.|
 |altLabel|     skos:altLabel|     LangMap|     Alternative lexical label.|
@@ -276,7 +276,7 @@ ORE* Proxy. Europeana uses proxies as place-holders for cultural heritage object
 ### EDM WebResource
 
 | Field | Qualified Name | Datatype | Description |
-|:-------------|:-------------|:-----|
+|:-------------|:-------------|:-----|:-----|
 |about|     rdf:about|     String|     URI of the webResource |
 |webResourceDcRights|     dc:rights|     LangMap|     Free text information about the rights in this object |
 |webResourceEdmRights|     edm:rights|     LangMap|     URI of the licence applied to the WebResource |
