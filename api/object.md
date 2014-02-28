@@ -16,7 +16,7 @@ Retrieve a single record from the Europeana dataset. A terminological note: TBD.
 
 | Parameter | Datatype | Description |
 |:-------------|:-------------|:-----|
-| recordID | String | The [Europeana ID](http://www.europeana.eu/portal/api-data-structure.html#EuropeanaID) of the record to retrieve. |
+| recordID | String | [Europeana ID](http://labs.europeana.eu/api/repository/#identifying_records) of the record to retrieve. |
 | callback| String| Name of a [client side callback function](http://labs.europeana.eu/api/getting-started#callback).|
 | profile | String | A number of profiles can be added to a search to control the format and richness of the response TBD (add profiles) |
 
@@ -33,7 +33,7 @@ Retrieve a single record from the Europeana dataset. A terminological note: TBD.
 
 | Field | Datatype | Description |
 |:-------------|:-------------|:-----|
-|about|     String|The [Europeana ID](http://www.europeana.eu/portal/api-data-structure.html#EuropeanaID) of the returned object.|
+|about|     String| [Europeana ID](http://labs.europeana.eu/api/repository/#identifying_records) of the returned object.|
 |agents|Array([Agent](#Agent))|A collection of EDM Agent objects contextually related to the object. Find more in the EDM Definition.|
 |aggregations|Array([Aggregation](#Aggregation))|A collection of EDM Aggregation objects related to the object. Find more in the EDM Definition.|
 |concepts|Array([Concept](#Concept))|A collection of EDM Concept objects contextually related to the object. Find more in the EDM Definition.|
