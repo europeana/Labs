@@ -3,7 +3,7 @@
 <head>
 	<link href='http://fonts.googleapis.com/css?family=Noto+Sans|Noto+Serif:400,700&subset=latin,greek,cyrillic,latin-ext' rel='stylesheet' type='text/css'>	    
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>  Getting Started with the Search API |  Europeana Labs </title>
+	<title>  Europeana Repository |  Europeana Labs </title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
 	<!-- never cache patterns -->
@@ -72,7 +72,7 @@
 <div role="main" class="grid">
 	<div class="block block-content-header">
 		<div class="grid__item palm--one-whole push--palm--none three-quarters push--one-quarter">
-			<h2 class="title">Getting Started with the Search API</h2>
+			<h2 class="title">Europeana Repository</h2>
 		</div>
 	</div>
 
@@ -101,48 +101,42 @@
 		</ul>
 		
 		<ul class="tabs tabs-v">
-			<li><a href="http://prose.io/#europeana/Labs/edit/gh-pages/api/getting-started.md" title="Edit Getting Started with the Search API in Prose.io" target="_blank">Help Improve This Content</a></li>
+			<li><a href="http://prose.io/#europeana/Labs/edit/gh-pages/api/repository.md" title="Edit Europeana Repository in Prose.io" target="_blank">Help Improve This Content</a></li>
 
 		</ul>
 	</div>
 
 		
 	<div id="documentation" class="prose grid__item palm--one-whole push--palm-none one-half"><!--
-	--><p>In this section you will find all information necessary to jump-start using Europeana API.</p>
+	--><div class="maruku_toc"><ul><li><a href="#identifying_records">Identifying Records</a></li><li><a href="#fields">Fields</a></li><li><a href="#aggregated_fields">Aggregated Fields</a></li><li><a href="#facets">Facets</a></li></ul></div>
+<p>To organize its data Europeana uses a complex data model which is called the Europeana Data Model (EDM). A detailed description of EDM is beyond the scope of this documentation: the reader is referred to the extensive documentation on Europeana website. However, a basic understanding of the data organization is necessary for implementing the API. The objective of this section is to provide this basic understanding.</p>
 
-<h2 id="request">Request</h2>
+<h2 id="identifying_records">Identifying Records</h2>
 
-<p>Every Europeana Search API call is an HTTP request in a specified format that is sent to the Europeana API service. The API root URL is located at:</p>
+<p>Digital records delivered to Europeana are assigned a unique identifier, Europeana ID, that serves to further identify the records when using the API. Usually, this identifier is based on the original metadata that are provided for the record and internal Europeana identifiers of the provider and the dataset containing the record. For example, a Europeana ID of an object can look as follows:</p>
 
-<pre><code>http://www.europeana.eu/api/v2</code></pre>
+<pre><code>/09102/_GNM_1234</code></pre>
 
-<h3 id="authentication_parameter">Authentication Parameter</h3>
+<p>where 091 is the identifier of the provider, 02 is the id of the dataset and <em>GNM</em>1234_ is derived from the unique identifier of the record in the context of the provider.</p>
 
-<p>Every API call must be provided a special authentication parameter wskey. This parameter should contain your private key that you got during the registration process.</p>
+<h2 id="fields">Fields</h2>
 
-<h2 id="response">Response</h2>
+<p>Europeana data is organized in records which correspond to cultural heritage objects. Each object is described by a number of fields in the record which contain information such as the title of the object, its description, the date, persons and concepts related to it.</p>
 
-<p>A response to an API call will always contain a number of standard fields that precede the fields specific for the call. The standard part contains the following fields:</p>
-<table><thead><tr><th>Field</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">apikey</td><td style="text-align: center;">String</td><td style="text-align: left;">the authentication parameter sent out by the client (the wskey parameter)</td></tr>
-<tr><td style="text-align: left;">action</td><td style="text-align: center;">String</td><td style="text-align: left;">the name of the API method that was called</td></tr>
-<tr><td style="text-align: left;">success</td><td style="text-align: center;">Boolean</td><td style="text-align: left;">a boolean (true/false) flag denoting the successful execution of the call</td></tr>
-<tr><td style="text-align: left;">statsDuration</td><td style="text-align: center;">Number</td><td style="text-align: left;">the time (in milliseconds) taken to serve the request</td></tr>
-<tr><td style="text-align: left;">requestNumber</td><td style="text-align: center;">Number</td><td style="text-align: left;">a positive number denoting the number of request by this API key within the last 24 hours</td></tr>
-<tr><td style="text-align: left;">error</td><td style="text-align: center;">String</td><td style="text-align: left;">if the call was not successful this fields will contain a detailed text message. See <a href="labs.europeana.eu/documentation/error-codes.html">Error Codes</a> for more information.</td></tr>
-<tr><td style="text-align: left;">params</td><td style="text-align: center;">Object</td><td style="text-align: left;">original request parameters. If an invalid request parameter was submitted, this response parameter will contain the default value (see individual calls for the default values). Shown up only if the profile parameter contains “params”.</td></tr>
-</tbody></table>
-<h2 id="datatypes">Datatypes</h2>
+<h2 id="aggregated_fields">Aggregated Fields</h2>
 
-<p>Europeana API uses the following datatypes:</p>
-<table><thead><tr><th>Datatype</th><th>Description</th><th></th></tr></thead><tbody><tr><td style="text-align: left;">Number</td><td style="text-align: left;">integer or double precision floating-point number</td><td style="text-align: left;">String</td></tr>
-<tr><td style="text-align: left;">double-quoted Unicode, with backslash escaping</td><td style="text-align: left;">Boolean</td><td style="text-align: left;">true or false</td></tr>
-<tr><td style="text-align: left;">Array</td><td style="text-align: left;">an ordered sequence of values, comma-separated and enclosed in square brackets; the values do not need to be of the same type</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">Array([Datatype])</td><td style="text-align: left;">an ordered sequence values of Datatype (e.g. String or Object), comma-separated and enclosed in square brackets</td><td style="text-align: left;">Object</td></tr>
-<tr><td style="text-align: left;">an unordered collection of key:value pairs with the ‘:’ character separating the key and the value, comma-separated and enclosed in curly braces; the keys must be strings and should be distinct from each other</td><td style="text-align: left;">LangMap</td><td style="text-align: left;">TBD</td></tr>
-</tbody></table>
-<h2 id="callback_function">Callback Function</h2>
+<p>Europeana aggregates its data from cultural institutions that can use diverse, fine-grained systems and methodologies. As a result, a link between for example an object and a person may be stored in different specialized fields. To provide simpler views on this data, Europeana has introduced several general Aggregated Fields: title, who, what, when, and where. In these fields we gather together information from different record fields in order to make the discovery of objects easier. Title, for example, aggregates data from the dc:title and dcterms:alternative fields which are part of Dublin Core, a popular general standard for describing different types of resources.</p>
 
-<p>TBD</p><!--
+<h2 id="facets">Facets</h2>
+
+<p>The number of records that Europeana contains is very big and growing. Therefore we need efficient ways to allow our users to discover what they need easily. One such technique is a faceted indexing system that classifies each record along multiple dimensions. The facets, seen on the left side of the Europeana portal, can be useful for filtering search results and can also be used by API users. Currently we support the following facets:</p>
+<table><thead><tr><th>Facet</th><th>Description</th><th></th></tr></thead><tbody><tr><td style="text-align: left;">Media Type</td><td style="text-align: left;">A broad classification of objects into five material types that users may find useful for filtering purposes: text, image, sound, video, 3D.</td><td style="text-align: left;">Language</td></tr>
+<tr><td style="text-align: left;">A language of the record.</td><td style="text-align: left;">Date</td><td style="text-align: left;">A point or period of time associated with an event in the lifecycle of the record</td></tr>
+<tr><td style="text-align: left;">Country</td><td style="text-align: left;">The name of the country of the data provider or “Europe” in the case of Europe-wide projects.</td><td style="text-align: left;">Copyrights</td></tr>
+<tr><td style="text-align: left;">Information about rights held in and over the resource.</td><td style="text-align: left;">Provider</td><td style="text-align: left;">Europeana Provider</td></tr>
+<tr><td style="text-align: left;">Completeness</td><td style="text-align: left;">Internal Europeana measure of the completeness of the metadata of the record.</td><td style="text-align: left;">UGC</td></tr>
+<tr><td style="text-align: left;">Whether the record has been contributed by the user community</td></tr>
+</tbody></table><!--
 --></div>
 </div>
 ﻿<!-- Begin Footer -->

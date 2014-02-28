@@ -101,53 +101,20 @@ function GetUnique(inputArray)
 
 function convertEmails() {
 	
-var bodyHtml = $("body").html();	
-var emails = extractEmails($("body").html());
-alert(emails.length);
-
-$.each(emails, function( index, value ) {
-  bodyHtml = bodyHtml.replace("<a href=\"mailto:"+value+"\">"+value+"</a>", value);
-});
-
-var Uniqemails = GetUnique(emails);
-
-$.each(Uniqemails, function( index, value ) {
-  bodyHtml = bodyHtml.replace(value, "<a href='mailto:"+value+"'>"+value+"</a>");
-});
-
-$("body").html(bodyHtml);
-
-
-
-
+	var bodyHtml = $("body").html();	
+	var emails = extractEmails($("body").html());
 	
-	
-	
-	/*var replaced = bodyHtml.replace("alen.bratanovic@semantika.si", "<a href='mailto:alen.bratanovic@semantika.si'>alen.bratanovic@semantika.si</a>");
-	alert(replaced.indexOf("alen.bratanovic"));
-	$("body").html(replaced);*/
-
-/*	try{
-	$("div").each(function(){
-		var html = $(this).html();
-	    var emailPattern = /[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}/;
-	    
-	    var matched_str = $(this).html().match(emailPattern);
-	    
-	    if(matched_str){
-	    	
-	    	if(matched_str.indexOf("alen")!=-1){
-		    	var replacedHtml = html.replace(emailPattern,"<a href='mailto:"+matched_str+"'>"+matched_str+"</a>");
-				   	
-		    	alert(replacedHtml);
-				$(this).html(replacedHtml);
-				}
-	    }
+	$.each(emails, function( index, value ) {
+	  bodyHtml = bodyHtml.replace("<a href=\"mailto:"+value+"\">"+value+"</a>", value);
 	});
-	}catch(e){
-		alert(e.message);
-	}
-	*/
+	
+	var Uniqemails = GetUnique(emails);
+	
+	$.each(Uniqemails, function( index, value ) {
+	  bodyHtml = bodyHtml.replace(value, "<a href='mailto:"+value+"'>"+value+"</a>");
+	});
+	
+	$("body").html(bodyHtml);
 
 }
 
