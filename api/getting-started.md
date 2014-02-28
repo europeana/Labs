@@ -34,14 +34,17 @@ A response to an API call will always contain a number of standard fields that p
 
 Europeana API uses the following datatypes:
 
-| Datatype        | Description       | 
-| ------------- |-------------| 
+| Datatype      | Description| 
+| ------------- |:-------------| 
 | Number |	integer or double precision floating-point number |
 | String |	double-quoted Unicode, with backslash escaping |
 | Boolean |	true or false |
 | Array |	an ordered sequence of values, comma-separated and enclosed in square brackets; the values do not need to be of the same type | 
-| Array | ([Datatype])	an ordered sequence of another data type (such as String or an object), comma-separated and enclosed in square brackets; the values do not need to be of the same type |
+| Array([Datatype]) |	an ordered sequence values of Datatype (e.g. String or Object), comma-separated and enclosed in square brackets |
 | Object |	an unordered collection of key:value pairs with the ':' character separating the key and the value, comma-separated and enclosed in curly braces; the keys must be strings and should be distinct from each other|
 | LangMap |	A special data type we use in the API Object Call, to provide values in various languages. It is an associative array where the keys are ISO language codes or "def" (where the language is not given), and the value is an array of strings. For example: "dcTitle": {"por": ["Paris"]}. Here the data type of dcTitle is a LanguageMap: the language code is "por" (stands for Portuguese), and the value is a list with only one element: "Paris". |
 
 
+## Callback Function
+
+TBD
