@@ -70,6 +70,8 @@ A collection of search queries that were applied in this call.
 |last       | Boolean   | Boolean value indicating whether the current breadcrumb is the last one |
 
 
+#### 4-th level heading
+
 ### facet
 
 A collection of facets that describe the resultant dataset.
