@@ -1,4 +1,13 @@
 
+---
+layout: "api-page"
+title: Europeana Repository
+published: true
+---
+
+* TOC
+{:toc}
+
 To organize its data Europeana uses a complex data model which is called the Europeana Data Model (EDM). A detailed description of EDM is beyond the scope of this documentation: the reader is referred to the extensive documentation on Europeana website. However, a basic understanding of the data organization is necessary for implementing the API. The objective of this section is to provide this basic understanding.
 
 ## Identifying Records
