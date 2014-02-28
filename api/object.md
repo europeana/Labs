@@ -74,8 +74,8 @@ An EDM Agent object. This EDM Agent class comprises people, either individually 
 |edmWasPresentAt|     edm:wasPresentAt|     Array (String)| Consult the EDM Definition.  |
 |edmHasMet|     edm:hasMet|     LangMap| Consult the EDM Definition. |
 |edmIsRelatedTo|     edm:isRelatedTo|     LangMap|  Consult the EDM Definition. |
-|owlSameAs|     owl:sameAs|     Array (String)| owl:sameAs links an individual to an individual. Such an owl:sameAs statement indicates that two URI references actually refer to the same thing: the individuals have the same "identity". Find more in the [OWL Reference](http://www.w3.org/TR/owl-ref/)|
-|foafName|     foaf:name|     LangMap | Name of some thing. Consult the [FOAF Reference](http://xmlns.com/foaf/spec/#term_name)|    
+|owlSameAs|     owl:sameAs|     Array (String)| owl:sameAs links an individual to an individual. Such an owl:sameAs statement indicates that two URI references actually refer to the same thing: the individuals have the same "identity". Find more in the [OWL Reference](http://www.w3.org/TR/owl-ref/).|
+|foafName|     foaf:name|     LangMap | Name of some thing. Consult the [FOAF Reference](http://xmlns.com/foaf/spec/#term_name). |    
 |dcDate|     dc:date|     LangMap|     A point or period of time associated with an event in the lifecycle of the resource.|
 |dcIdentifier|     dc:identifier|     LangMap|     An unambiguous reference to the resource within a given context.|
 |rdaGr2DateOfBirth|     rdaGr2:dateOfBirth|     LangMap|     The year a person was born. Date of birth may also include the month and day of the person’s birth.|
