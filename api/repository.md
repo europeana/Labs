@@ -30,8 +30,8 @@ Europeana aggregates its data from cultural institutions that can use diverse, f
 
 The number of records that Europeana contains is very big and growing. Therefore we need efficient ways to allow our users to discover what they need easily. One such technique is a faceted indexing system that classifies each record along multiple dimensions. The facets, seen on the left side of the Europeana portal, can be useful for filtering search results and can also be used by API users. Currently we support the following facets:
 
-| Facet        | Description    | 
-| ------------- |:-------------| 
+| Facet | Descriptio | 
+|:-------------|:-------------|
 | Media Type  |	A broad classification of objects into five material types that users may find useful for filtering purposes: text, image, sound, video, 3D. |
 |Language |	A language of the record. |
 |Date |	A point or period of time associated with an event in the lifecycle of the record |
