@@ -7,7 +7,7 @@ published: true
 * TOC
 {:toc}
 
-Retrieve a single record from the Europeana dataset.
+Retrieve a single record from the Europeana dataset. A terminological note: TBD.
 
     http://europeana.eu/api/v2/record/[recordID].json
     
@@ -17,7 +17,7 @@ Retrieve a single record from the Europeana dataset.
 | Parameter | Datatype | Description |
 |:-------------|:-------------|:-----|
 | recordID | String | The [Europeana ID](http://www.europeana.eu/portal/api-data-structure.html#EuropeanaID) of the record to retrieve. |
-| callback| String| Name of a client side callback function.|
+| callback| String| Name of a [client side callback function](http://labs.europeana.eu/api/getting-started#callback).|
 | profile | String | A number of profiles can be added to a search to control the format and richness of the response TBD (add profiles) |
 
 
@@ -25,56 +25,57 @@ Retrieve a single record from the Europeana dataset.
 
 | Field | Datatype | Description |
 |:-------------|:-------------|:-----|
-| object |   [Object](#object) |  The object representing an EDM metadata record |
-| similarItems |   Array([item](#item)) |  A collection of metadata records similar to the current one. Available only if profile parameter’s value is set to **similar**. The structure of each record is the same as the structure of the items collection returned by the [search](http://labs.europeana.eu/api/search) method. |
+| object |   [Object](#object) |  The object representing the EDM metadata record. (see the note above) |
+| similarItems |   Array([item](#item)) |  The collection of metadata records similar to the current one. Available when profile parameter value is set to **similar**. The structure of each record is the same as the structure of the items collection returned by the [search](http://labs.europeana.eu/api/search) method. |
 
 
-### object 
+### object
 
 | Field | Datatype | Description |
 |:-------------|:-------------|:-----|
-|about|     String|The Europeana ID of the returned record.|
-|agents|Array (Agent)|A collection of Agent objects contextually related to this record. Find more in the EDM Definition.|
-|aggregations|Array (Aggregation)|A collection of Aggregation objects related to the record. Find more in the EDM Definition.|
-|concepts|Array (Concept)|A collection of Concept objects contextually related to this record. Find more in the EDM Definition.|
-|country|Array (String)| TBD |
-|europeanaAggregation|Array (EuropeanaAggregation)|A collection of Europeana Aggregation objects related to the record. Find more in the EDM Definition.|
-|europeanaCollectionName|Array (String)|A collection of collection identifiers that this record belongs to (TBD).|
-|europeanaCompleteness|Number|     A number between 0 and 10 representing the metadata quality of the record. |
-|language|     Array (String)|     |
-|optOut|     Boolean|     |
-|places|     Array (Place)|     A collection of Place objects contextually related to the record. Find more in the EDM Definition.|
-|provider|     Array (String)|     |
+|about|     String|The [Europeana ID](http://www.europeana.eu/portal/api-data-structure.html#EuropeanaID) of the returned object.|
+|agents|Array([Agent](#Agent))|A collection of EDM Agent objects contextually related to the object. Find more in the EDM Definition.|
+|aggregations|Array([Aggregation](#Aggregation))|A collection of EDM Aggregation objects related to the object. Find more in the EDM Definition.|
+|concepts|Array([Concept](#Concept))|A collection of EDM Concept objects contextually related to the object. Find more in the EDM Definition.|
+|country|Array(String)| TBD |
+|europeanaAggregation|Array([EuropeanaAggregation](#EuropeanaAggregation))|A collection of EDM Europeana Aggregation objects related to the object. Find more in the EDM Definition.|
+|europeanaCollectionName|Array(String)|A collection of names of the datasets the object belongs to.|
+|europeanaCompleteness|Number|  A number between 0 and 10 representing the metadata quality of the object. |
+|language|     Array(String) | A singleton collection with the language of the object.    |
+|optOut|     Boolean | Flag indicating whether the provider allowed retrieval of thumbnail of the record |
+|places|     Array([Place](#Place))|     A collection of EDM Place objects contextually related to the object. Find more in the EDM Definition.|
+|provider|     Array(String) | A singleton collection with the name of the organization that delivered this object to Europeana.     |
 |providedcHOs|     Array ([ProvidedCHO](#ProvidedCHO)|     A collection of Provided Cultural Heritage Objects related to the record. Find more in the EDM Definition.|
 |proxies|     Array ([Proxy](#Proxy))|     A collection of proxy objects for Provided Cultural Heritage Objects. Find more in the EDM Definition.|
-|timespans|     Array ([TimeSpan](#TimeSpan))|     |
-|timestamp|     Date|     |
-|title|     Array (String)|     The main and alternative titles of the item. |
-|type|     String|     The type of the object (see the TYPE facet) |
-|userTags|     Array (String)|     |
-|year|     Array (String)|     |
+|timespans|     Array ([TimeSpan](#TimeSpan))| A collection of EDM TimeSpan objects contextually related to the object. Find more in the EDM Definition.    |
+|timestamp_created_epoch | Number | Unix time of the date when the object was created. |
+|timestamp_update_epoch| Number | Unix time of the date when the object was last updated. |
+|timestamp_created | String | ISO 8601 format of the date when the object was created. |
+|timestamp_update | String | ISO 8601 format of the date when the object was last updated.|
+|title|     Array (String)|     A collection with the main and alternative titles of the object. |
+|type|     String|     The type of the object (see the TYPE facet) TBD: add link |
+|year|     Array (String)| TBD |
 
 
 ### EDM Agent
 
-An EDM Agent class. This class comprises people, either individually or in groups, who have the potential to perform intentional actions for which they can be held responsible.
+An EDM Agent object. This EDM Agent class comprises people, either individually or in groups, who have the potential to perform intentional actions for which they can be held responsible. Find more in the EDM Definition.
 
 
 | Field | Qualified Name | Datatype | Description |
 |:-------------|:-------------|:-----|
-|Field|     Qualified Name|     Data type|     Description |
 |about|     rdf:about|     String|     The URI of the object, usually a DBpedia URL.|
-|prefLabel|     skos:prefLabel|     LangMap|     Preferred lexical label.|
-|altLabel|     skos:altLabel|     LangMap|     Alternative lexical label.|
-|hiddenLabel|     skos:hiddenLabel|     LangMap|     A hidden lexical label, represented by means of the skos:hiddenLabel property, is a lexical label for a resource, where a KOS designer would like that character string to be accessible to applications performing text-based indexing and search operations, but would not like that label to be visible otherwise.|
-|note|     skos:note|     LangMap|     Property for general documentation purposes.|
-|begin|     edm:begin|     LangMap|     This property denotes the start date of a period of time.|
-|end|     edm:end|     LangMap|     This property denotes the end date of a period of time.|
-|edmWasPresentAt|     edm:wasPresentAt|     Array (String)|     This property associates the people, things or information resources with an event at which they were present|
-|edmHasMet|     edm:hasMet|     LangMap|     edm:hasMet relates a resource with the objects or phenomena that have happened to or have happened together with the resource under consideration. We can abstractly think of history and the present as a series of "meetings" between people and other things in space-time. Therefore we name this relationship as the things the object “has met” in the course of its existence.|
-|edmIsRelatedTo|     edm:isRelatedTo|     LangMap|     edm:isRelatedTo is the most general contextual property in EDM. Contextual properties have typically to do either with the things that have happened to or together with the object under consideration, or what the object refers to by its shape, form or features in a figural or encoded form.|
-|owlSameAs|     owl:sameAs|     Array (String)|     owl:sameAs links an individual to an individual. Such an owl:sameAs statement indicates that two URI references actually refer to the same thing: the individuals have the same "identity".|
-|foafName|     foaf:name|     LangMap|     
+|prefLabel|     skos:prefLabel|     LangMap|     SKOS preferred lexical label.|
+|altLabel|     skos:altLabel|     LangMap|     SKOS alternative lexical label.|
+|hiddenLabel|     skos:hiddenLabel|     LangMap|     SKOS hidden lexical label. (Accessible to text-based indexing and search applications, but not visible otherwise) |
+|note|     skos:note|     LangMap|     SKOS note. (Used for general documentation purposes).|
+|begin|     edm:begin|     LangMap|     TBD.|
+|end|     edm:end|     LangMap|     TBD.|
+|edmWasPresentAt|     edm:wasPresentAt|     Array (String)| Consult the EDM Definition.  |
+|edmHasMet|     edm:hasMet|     LangMap| Consult the EDM Definition. |
+|edmIsRelatedTo|     edm:isRelatedTo|     LangMap|  Consult the EDM Definition. |
+|owlSameAs|     owl:sameAs|     Array (String)| owl:sameAs links an individual to an individual. Such an owl:sameAs statement indicates that two URI references actually refer to the same thing: the individuals have the same "identity". Find more in the [OWL Reference](http://www.w3.org/TR/owl-ref/)|
+|foafName|     foaf:name|     LangMap | Name of some thing. Consult the [FOAF Reference](http://xmlns.com/foaf/spec/#term_name)|    
 |dcDate|     dc:date|     LangMap|     A point or period of time associated with an event in the lifecycle of the resource.|
 |dcIdentifier|     dc:identifier|     LangMap|     An unambiguous reference to the resource within a given context.|
 |rdaGr2DateOfBirth|     rdaGr2:dateOfBirth|     LangMap|     The year a person was born. Date of birth may also include the month and day of the person’s birth.|
