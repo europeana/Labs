@@ -7,7 +7,7 @@ published: true
 * TOC
 {:toc}
 
-Retrieve a single record from the Europeana repository.
+Retrieve a single record from the Europeana dataset.
 
     http://europeana.eu/api/v2/record/[recordID].json
     
