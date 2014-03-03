@@ -278,7 +278,7 @@ ORE* Proxy. Europeana uses proxies as place-holders for cultural heritage object
 | Field | Qualified Name | Datatype | Description |
 |:-------------|:-------------|:-----|:-----|
 |about|     rdf:about|     String|     URI of the webResource |
-|webResourceDcRights|     dc:rights|     LangMap|     Free text information about the rights in this object |
+|webResourceDcRights|     dc:rights|     LangMap|     Free text information about the rights in this object. |
 |webResourceEdmRights|     edm:rights|     LangMap|     URI of the licence applied to the WebResource |
 |dcDescription|     dc:description|     LangMap|     An account of the resource. |
 |dcFormat|     dc:format|     LangMap|     The file format, physical medium or dimensions of the resource. |
