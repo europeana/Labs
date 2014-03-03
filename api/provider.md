@@ -27,10 +27,10 @@ Retrieve information about all Europeana data providers.
 
 | Field | Datatype | Description |
 |:-------------|:-------------|:-----|
-| identifier  | Number |  |
-| country     | String |  |
-| name        | String |  |
-| acronym     | String |  |
+| identifier  | Number | The identifier of a provider assigned by Europeana, (ie 00916) |
+| country     | String | The iso value of the provider country, (ie fr) |
+| name        | String | The provider name (ie K-samsök) |
+| acronym     | String | The provider acronym (ie SOCH) |
 | altname     | String |  |
 | scope       | String |  |
 | domain      | String |  |
