@@ -7,7 +7,7 @@ published: true
 * TOC
 {:toc}
 
-This page describes API calls that retrieve information about Europeana data providers and datasets that comprise the repository.
+This page describes the API calls that retrieve information about Europeana data providers and datasets that comprise the repository.
 
 ## Providers
 
@@ -89,9 +89,3 @@ Retrieve information about a specific dataset. Returns the same fields as the pr
 | Parameter | Datatype | Type | Description |
 |:-------------|:-------------|:-----|:-----|
 | datasetID | Number |  path | Identifier of the dataset to retrieve|
-
-
-
-
-    
-    
