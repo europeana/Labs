@@ -68,14 +68,14 @@ Retrieve information about datasets supplied by a given data provider.
 
 | Field | Datatype | Description |
 |:-------------|:-------------|:-----|
-| identifier  | Number |  |
-| provIdentifier     | Number |  |
-| providerName     | String |  |
-| name     | String |  |
-| status     | String |  |
-| publishedRecords     | Number |  |
-| deleteRecords     | Number |  |
-| creationDate     | Date |  |
+| identifier  | String | The dataset identifier assigned by Europeana (ie: 0091650) |
+| provIdentifier     | String | The identifier of the provider of the dataset, (ie: 00916)  |
+| providerName     | String | The name of the provider of the dataset (ie: K-samsök) |
+| name     | String | The name of the dataset (ie: 91626_Ag_SE_SwedishNationalHeritage_tm_obj) |
+| status     | String | The current status of the specific dataset in the europeana ingestion lifecycle |
+| publishedRecords     | Number | The number of cerords that belong to this dataset and are publiched to the portal |
+| deleteRecords     | Number | The number opf records that heve been Removed/Deleted |
+| creationDate     | Date | The Registration Data of this dataset |
 
 
 ## Dataset
