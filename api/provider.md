@@ -31,12 +31,12 @@ Retrieve information about all Europeana data providers.
 | country     | String | The iso value of the provider country, (ie fr) |
 | name        | String | The provider name (ie K-samsök) |
 | acronym     | String | The provider acronym (ie SOCH) |
-| altname     | String |  |
-| scope       | String |  |
-| domain      | String |  |
-| geolevel    | String |  |
-| role        | String |  |
-| website     | String |  |
+| altname     | String | The provider alternative name |
+| scope       | String | The provider scope (ie Cross/Single/Thematic/Individual) |
+| domain      | String | The provider domain (ie Gallery/Library/Archive/Museum) |
+| geolevel    | String | The provider geographic level of operation (Regiona/Nationa/European/Worldwide) |
+| role        | String | The provider Role/ Relationship to Europeana (Aggregator/Data Provider)  |
+| website     | String | The oragization's website |
 
 
 ## Provider
