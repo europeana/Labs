@@ -51,7 +51,6 @@ Retrieve information about a single data provider. Returns the same fields as th
 |:-------------|:-------------|:-----|:-----|
 | providerID | String |  path | The ID of the provider to retrieve |
 
-    
 ## Datasets by Provider
 
 Retrieve information about datasets supplied by a given data provider.

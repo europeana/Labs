@@ -123,16 +123,16 @@
 <tr><td style="text-align: left;">countryCode</td><td style="text-align: left;">String</td><td style="text-align: left;">query</td><td style="text-align: left;">coide</td></tr>
 </tbody></table>
 <h3 id="response">Response</h3>
-<table><thead><tr><th>Field</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">identifier</td><td style="text-align: left;">Number</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">country</td><td style="text-align: left;">String</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">name</td><td style="text-align: left;">String</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">acronym</td><td style="text-align: left;">String</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">altname</td><td style="text-align: left;">String</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">scope</td><td style="text-align: left;">String</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">domain</td><td style="text-align: left;">String</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">geolevel</td><td style="text-align: left;">String</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">role</td><td style="text-align: left;">String</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">website</td><td style="text-align: left;">String</td><td style="text-align: left;"></td></tr>
+<table><thead><tr><th>Field</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">identifier</td><td style="text-align: left;">String</td><td style="text-align: left;">The identifier of a provider assigned by Europeana, (ie 00916)</td></tr>
+<tr><td style="text-align: left;">country</td><td style="text-align: left;">String</td><td style="text-align: left;">The iso value of the provider country, (ie fr)</td></tr>
+<tr><td style="text-align: left;">name</td><td style="text-align: left;">String</td><td style="text-align: left;">The provider name (ie K-samsök)</td></tr>
+<tr><td style="text-align: left;">acronym</td><td style="text-align: left;">String</td><td style="text-align: left;">The provider acronym (ie SOCH)</td></tr>
+<tr><td style="text-align: left;">altname</td><td style="text-align: left;">String</td><td style="text-align: left;">The provider alternative name</td></tr>
+<tr><td style="text-align: left;">scope</td><td style="text-align: left;">String</td><td style="text-align: left;">The provider scope (ie Cross/Single/Thematic/Individual)</td></tr>
+<tr><td style="text-align: left;">domain</td><td style="text-align: left;">String</td><td style="text-align: left;">The provider domain (ie Gallery/Library/Archive/Museum)</td></tr>
+<tr><td style="text-align: left;">geolevel</td><td style="text-align: left;">String</td><td style="text-align: left;">The provider geographic level of operation (Regiona/Nationa/European/Worldwide)</td></tr>
+<tr><td style="text-align: left;">role</td><td style="text-align: left;">String</td><td style="text-align: left;">The provider Role/ Relationship to Europeana (Aggregator/Data Provider)</td></tr>
+<tr><td style="text-align: left;">website</td><td style="text-align: left;">String</td><td style="text-align: left;">The oragization’s website</td></tr>
 </tbody></table>
 <h2 id="provider">Provider</h2>
 
@@ -153,14 +153,14 @@
 <table><thead><tr><th>Parameter</th><th>Datatype</th><th>Type</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">providerID</td><td style="text-align: left;">String</td><td style="text-align: left;">path</td><td style="text-align: left;">The ID of the provider</td></tr>
 </tbody></table>
 <h3 id="response_2">Response</h3>
-<table><thead><tr><th>Field</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">identifier</td><td style="text-align: left;">Number</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">provIdentifier</td><td style="text-align: left;">Number</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">providerName</td><td style="text-align: left;">String</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">name</td><td style="text-align: left;">String</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">status</td><td style="text-align: left;">String</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">publishedRecords</td><td style="text-align: left;">Number</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">deleteRecords</td><td style="text-align: left;">Number</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">creationDate</td><td style="text-align: left;">Date</td><td style="text-align: left;"></td></tr>
+<table><thead><tr><th>Field</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">identifier</td><td style="text-align: left;">String</td><td style="text-align: left;">The dataset identifier assigned by Europeana (ie: 0091650)</td></tr>
+<tr><td style="text-align: left;">provIdentifier</td><td style="text-align: left;">String</td><td style="text-align: left;">The identifier of the provider of the dataset, (ie: 00916)</td></tr>
+<tr><td style="text-align: left;">providerName</td><td style="text-align: left;">String</td><td style="text-align: left;">The name of the provider of the dataset (ie: K-samsök)</td></tr>
+<tr><td style="text-align: left;">name</td><td style="text-align: left;">String</td><td style="text-align: left;">The name of the dataset (ie: 91626_Ag_SE_SwedishNationalHeritage_tm_obj)</td></tr>
+<tr><td style="text-align: left;">status</td><td style="text-align: left;">String</td><td style="text-align: left;">The current status of the specific dataset in the europeana ingestion lifecycle</td></tr>
+<tr><td style="text-align: left;">publishedRecords</td><td style="text-align: left;">Number</td><td style="text-align: left;">The number of cerords that belong to this dataset and are publiched to the portal</td></tr>
+<tr><td style="text-align: left;">deleteRecords</td><td style="text-align: left;">Number</td><td style="text-align: left;">The number opf records that heve been Removed/Deleted</td></tr>
+<tr><td style="text-align: left;">creationDate</td><td style="text-align: left;">Date</td><td style="text-align: left;">The Registration Data of this dataset</td></tr>
 </tbody></table>
 <h2 id="dataset">Dataset</h2>
 
