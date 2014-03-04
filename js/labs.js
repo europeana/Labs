@@ -1,6 +1,12 @@
 $(document).ready(function(){
-	convertEmails();
-	semLabs.initMenu();
+	try{
+		convertEmails();
+		semLabs.initMenu();
+	
+		}catch(e){
+			//alert(e.message);
+		}
+	
 	$("#homepage").parent().attr("id", "homepagebody");
 	
 	$("#hamMenu").click(function(){
@@ -64,19 +70,17 @@ $(document).ready(function(){
 		$("ul.tags li a[rel='"+splitedGalleryUrl[2]+"']").addClass("current-tag");
 	}
 	
-	
+
 });
 
 function repageDatasets()
 {
 		$("div.pagination-holder").jPages({
 	    	containerID : "SpacesList",
-	    	perPage: 10
+	    	perPage: 5
 	    });;
 		
 }
-
-    
 
 function extractEmails (text)
 {

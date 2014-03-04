@@ -47,7 +47,7 @@
         this._previous = $(this.options.previous);
         this._next = $(this.options.next);
         this._last = $(this.options.last);
-        this._items = this._container.children(":visible:not('.filtered-by-tag')");
+        this._items = this._container.children(); //":visible:not('.filtered-by-tag')
         this._itemsShowing = $([]);
         this._itemsHiding = $([]);
         this._numPages = Math.ceil(this._items.length / this.options.perPage);
