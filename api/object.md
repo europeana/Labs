@@ -94,22 +94,20 @@ EDM Aggregation. The set of resources related to a single cultural heritage obje
 
 | Field | Qualified Name | Datatype | Description |
 |:-------------|:-------------|:-----|:-----|
-|about|     rdf:about|     String|     URI of the aggregation|
-|edmDataProvider|     edm:dataProvider|     LangMap|     A name or identifier of organizations that contributed objects in this aggregation.|
-|edmIsShownBy|     edm:isShownBy|     String|     An unambiguous URL reference to the digital object on the provider’s web site in the best available resolution/quality.|
-|edmIsShownAt|     edm:isShownAt|     String|     An unambiguous URL reference to the digital object on the provider’s web site in its full information context.|
-|edmObject|     edm:object|     String|     The URL of a thumbnail representing the digital object.|
-|edmProvider|     edm:provider|     LangMap|     A name or identifier of organizations that delivered the objects in this aggregation.|
-|edmRights|     edm:rights|     LangMap|     Information about copyright of the digital objects in this aggregation.|
-|edmUgc|     edm:ugc|     String|     This element is used to identify user generated content (also called user created content). It should be applied to all digitised or born digital content contributed by the general public and collected by Europeana through a crowdsourcing initiative or project.|
-|dcRights|     dc:rights|     LangMap|     Information about rights held in and over the resource.|
-|hasView|     edm:hasView|     Array (String)|     This property relates a ORE aggregation about a CHO with a web resource providing a view of that CHO. Examples of view are: a thumbnail, a textual abstract and a table of contents.|
-|aggregatedcHO|     edm:aggregatedcHO|     String|     The Europeana ID of the record corresponding to the CHO of this aggregation.|
-|aggregates|     ore:aggregates|     Array (String)|     This is a container element which includes all relevant information that otherwise cannot be mapped to another element in the ESE.|
-|edmUnstored|     edm:unstored|     Array (String)|     |
-|webResources|     edm:WebResource|     Array ([WebResource](#WebResource))|     Information Resources that have at least one Web Representation and at least a URI.|
-
-
+| about | rdf:about | String | URI of the aggregation |
+| edmDataProvider | edm:dataProvider | LangMap | The name or identifier of the data provider of the object (i.e. the organisation providing data to an aggregator). |
+| edmIsShownBy | edm:isShownBy | String | The URL of a web view of the object. |
+| edmIsShownAt | edm:isShownAt | String | The URL of a web view of the object in full information context. |
+| edmObject | edm:object | String | The URL of a representation of the CHO which will be used for generating previews for use in the Europeana portal. This may be the same URL as edm:isShownBy. |
+| edmProvider | edm:provider | LangMap | The name or identifier of the provider of the object (i.e. the organisation providing data directly to Europeana). |
+| edmRights | edm:rights | LangMap | The rights statement that applies to the digital representation as given (for example) in edm:object or edm:isShownAt/By, when these resources are not provided with their own edm:rights. |
+| edmUgc | edm:ugc | String | This is a mandatory property for objects that are user generated or user created that have been collected by crowdsourcing or project activity.  The property is used to identify such content and can only take the value “true” (lower case). |
+| dcRights | dc:rights | LangMap | Information about rights held in and over the resource. |
+| hasView | edm:hasView | Array(String) | The URL of a web resource which is a digital representation of the CHO.  This may be the source object itself in the case of a born digital cultural heritage object. |
+| aggregatedCHO | edm:aggregatedcHO | String | The identifier of the source object e.g. the Mona Lisa itself.  This could be a full linked open data URI or an internal identifier. |
+| aggregates | ore:aggregates | Array(String) | This is a container element which includes all relevant information that otherwise cannot be mapped to another element in the ESE. |
+| edmUnstored | edm:unstored | Array(String) | This property should not be used and is only included here for backward compatibility with ESE. |
+| webResources | edm:WebResource | Array([WebResource](#WebResource)) | Information Resources that have at least one Web Representation and at least a URI. |
 
 ### EDM Concept 
 
