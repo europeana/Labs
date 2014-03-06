@@ -79,6 +79,7 @@ module Jekyll
         self.read_yaml(template_dir, template)
         self.data['category']    = category
         self.data['tag'] = tags
+        
         # Set the title for this page.
         title_prefix             = site.config['category_title_prefix'] || 'Category: '
         self.data['title']       = "#{title_prefix}#{category}"
@@ -106,7 +107,7 @@ module Jekyll
     #  +category_dir+ is the String path between <source> and the category folder.
     #  +category+     is the category currently being processed.
     def initialize(site, base, category_dir, category, tags)
-      template_path = File.join(base, '_layouts', 'category_index.html')
+      template_path = File.join(base, '_layouts', category+'_index.html')
       super(template_path, 'index.html', site, base, category_dir, category, tags)
     end
 
@@ -162,9 +163,11 @@ module Jekyll
     # Loops through the list of category pages and processes each one.
     def write_category_indexes
       if self.layouts.key? 'category_index'
-        self.categories.keys.each do |category| 
-          self.tags.keys.each do |tag|
-            self.write_category_index(category, tag)
+        self.categories.keys.each do |category|
+            self.tags.keys.each do |tag|
+              if (self.categories[category] & self.tags[tag]).length > 0
+                self.write_category_index(category, tag)
+              end
           end
         end
 
