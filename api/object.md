@@ -64,30 +64,27 @@ An EDM Agent object. This EDM Agent class comprises people, either individually 
 
 | Field | Qualified Name | Datatype | Description |
 |:-------------|:-------------|:-----|:-----|
-|about|     rdf:about|     String|     The URI of the object, usually a DBpedia URL.|
-|prefLabel|     skos:prefLabel|     LangMap|     SKOS preferred lexical label.|
-|altLabel|     skos:altLabel|     LangMap|     SKOS alternative lexical label.|
-|hiddenLabel|     skos:hiddenLabel|     LangMap|     SKOS hidden lexical label. (Accessible to text-based indexing and search applications, but not visible otherwise) |
-|note|     skos:note|     LangMap|     SKOS note. (Used for general documentation purposes).|
-|begin|     edm:begin|     LangMap|     TBD.|
-|end|     edm:end|     LangMap|     TBD.|
-|edmWasPresentAt|     edm:wasPresentAt|     Array (String)| Consult the EDM Definition.  |
-|edmHasMet|     edm:hasMet|     LangMap| Consult the EDM Definition. |
-|edmIsRelatedTo|     edm:isRelatedTo|     LangMap|  Consult the EDM Definition. |
-|owlSameAs|     owl:sameAs|     Array (String)| owl:sameAs links an individual to an individual. Such an owl:sameAs statement indicates that two URI references actually refer to the same thing: the individuals have the same "identity". Find more in the [OWL Reference](http://www.w3.org/TR/owl-ref/).|
-|foafName|     foaf:name|     LangMap | Name of some thing. Consult the [FOAF Reference](http://xmlns.com/foaf/spec/#term_name). |    
-|dcDate|     dc:date|     LangMap|     A point or period of time associated with an event in the lifecycle of the resource.|
-|dcIdentifier|     dc:identifier|     LangMap|     An unambiguous reference to the resource within a given context.|
-|rdaGr2DateOfBirth|     rdaGr2:dateOfBirth|     LangMap|     The year a person was born. Date of birth may also include the month and day of the person’s birth.|
-|rdaGr2DateOfDeath|     rdaGr2:dateOfDeath|     LangMap|     The year a person died. Date of death may also include the month and day of the person’s death.|
-|rdaGr2DateOfEstablishment|     rdaGr2:dateOfEstablishment|     LangMap|     The date on which a corporate body was established or founded.|
-|rdaGr2DateOfTermination|     rdaGr2:dateOfTermination|     LangMap|     The date on which a corporate body was terminated or dissolved.|
-|rdaGr2Gender|     rdaGr2:gender|     LangMap|     The gender with which a person identifies.|
-|rdaGr2ProfessionOrOccupation|     rdaGr2:professionOrOccupation|     LangMap|     A profession or occupation in which a person works or has worked.|
-|rdaGr2BiographicalInformation|     rdaGr2:biographicalInformation|     LangMap|     Information pertaining to the life or history of a person.|
-
-
-
+| about | rdf:about | String | The URI of the object, usually a DBpedia URL. |
+| prefLabel | skos:prefLabel | LangMap | The preferred form of the name of the agent.|
+| altLabel | skos:altLabel | LangMap | Alternative forms of the name of the agent.|
+| hiddenLabel |  skos:hiddenLabel | LangMap | SKOS hidden lexical label. (Accessible to text-based indexing and search applications, but not visible otherwise) |
+| note | skos:note | LangMap | A note about the agent e.g. biographical notes. |
+| begin | edm:begin | LangMap | The date the agent was born/established. |
+| end | edm:end | LangMap | The date the agent died/terminated. |
+| edmWasPresentAt | edm:wasPresentAt | Array(String) | Consult the EDM Definition. |
+| edmHasMet | edm:hasMet | LangMap | Reference to another entity which the agent has “met” in a broad sense. For example a reference to a Place class. |
+| edmIsRelatedTo | edm:isRelatedTo | LangMap | Reference to other entities, particularly other agents, with whom the agent is related in a generic sense. |
+| owlSameAs | owl:sameAs | Array(String) | Another URI of the same agent. |
+| foafName | foaf:name | LangMap | The name of the agent as a simple textual string. |    
+| dcDate | dc:date | LangMap | A significant date associated with the agent. |
+| dcIdentifier | dc:identifier | LangMap | An identifier of the agent. |
+| rdaGr2DateOfBirth | rdaGr2:dateOfBirth | LangMap | The date the agent (person) was born. |
+| rdaGr2DateOfDeath | rdaGr2:dateOfDeath | LangMap | The date the agent (person) died. |
+| rdaGr2DateOfEstablishment | rdaGr2:dateOfEstablishment | LangMap | The date on which the agent (corporate body) was established or founded. |
+| rdaGr2DateOfTermination | rdaGr2:dateOfTermination | LangMap | The date on which the agent (corporate body) was terminated or dissolved. |
+| rdaGr2Gender | rdaGr2:gender | LangMap | The gender with which the agent identifies. |
+| rdaGr2ProfessionOrOccupation | rdaGr2:professionOrOccupation | LangMap | The profession or occupation in which the agent works or has worked. |
+| rdaGr2BiographicalInformation | rdaGr2:biographicalInformation | LangMap | Information pertaining to the life or history of the agent. |
 
 
 ### EDM Aggregation
