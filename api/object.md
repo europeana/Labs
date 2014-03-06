@@ -152,27 +152,24 @@ EDM Europeana Aggregation. The set of resources related to a single cultural her
 |edmRights|     edm:rights|     LangMap|     Information about copyright of the digital object as specified by isShownBy and isShownAt.|
 |edmPreview|     edm:preview|     String|     |
 
-
 ### EDM Place
 
 EDM Place. An "extent in space, in particular on the surface of the earth, in the pure sense of physics: independent from temporal phenomena and matter" (CIDOC CRM).
 
 | Field | Qualified Name | Datatype | Description |
 |:-------------|:-------------|:-----|:-----|
-|about|     rdf:about|     String|     Defines the resource being described|
-|prefLabel|     skos:prefLabel|     LangMap|     Preferred lexical label.|
-|altLabel|     skos:altLabel|     LangMap|     Alternative lexical label.|
-|hiddenLabel|     skos:hiddenLabel|     LangMap|     A hidden lexical label, represented by means of the skos:hiddenLabel property, is a lexical label for a resource, where a KOS designer would like that character string to be accessible to applications performing text-based indexing and search operations, but would not like that label to be visible otherwise.|
-|note|     skos:note|     LangMap|     Property for general documentation purposes.|
-|isPartOf|     dcterms:isPartOf|     LangMap|     A related resource in which the described resource is physically or logically included.|
-|latitude|     wgs84:lat|     Number|     The latitude of the Place|
-|longitude|     wgs84:long|     Number|     The longitude of the Place|
-|altitude|     wgs84:alt|     Number|     The altitude of the Place|
-|position|     wgs84:lat_long|     Object|     A comma-separated representation of a latitude, longitude coordinate.|
-|dcTermsHasPart|     dcterms:hasPart|     LangMap|     A related resource that is included either physically or logically in the described resource.|
-|owlSameAs|     owl:sameAs|     Array (String)|     owl:sameAs links an individual to an individual. Such an owl:sameAs statement indicates that two URI references actually refer to the same thing: the individuals have the same "identity".|
-
-
+| about | rdf:about | String | Defines the resource being described |
+| prefLabel | skos:prefLabel | LangMap | The preferred form of the name of the place. |
+| altLabel | skos:altLabel | LangMap | Alternative forms of the name of the place. |
+| hiddenLabel | skos:hiddenLabel | LangMap | A hidden lexical label, represented by means of the skos:hiddenLabel property, is a lexical label for a resource, where a KOS designer would like that character string to be accessible to applications performing text-based indexing and search operations, but would not like that label to be visible otherwise. |
+| note | skos:note | LangMap | Information relating to the place. |
+| isPartOf | dcterms:isPartOf | LangMap | Reference to a place that the described place is part of. |
+| latitude | wgs84:lat | Number | The latitude of a spatial thing (decimal degrees). |
+| longitude | wgs84:long | Number | The longitude of a spatial thing (decimal degrees). |
+| altitude | wgs84:alt | Number | The altitude of a spatial thing (decimal metres above the reference). |
+| position | wgs84:lat_long | Object | A comma-separated representation of a latitude, longitude coordinate. |
+| dcTermsHasPart | dcterms:hasPart | LangMap | Reference to a place that is part of the place being described. |
+| owlSameAs | owl:sameAs | Array(String) | URI of a Place. |
 
 ### EDM ProvidedcHO
 
