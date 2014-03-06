@@ -4,10 +4,11 @@ title: API Provider Query
 published: true
 ---
 
+This page describes the API calls that retrieve information about Europeana data providers and datasets that comprise the repository.
+
 * TOC
 {:toc}
 
-This page describes the API calls that retrieve information about Europeana data providers and datasets that comprise the repository.
 
 ## Providers
 
