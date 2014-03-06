@@ -171,9 +171,9 @@ EDM Place. An "extent in space, in particular on the surface of the earth, in th
 | dcTermsHasPart | dcterms:hasPart | LangMap | Reference to a place that is part of the place being described. |
 | owlSameAs | owl:sameAs | Array(String) | URI of a Place. |
 
-### EDM ProvidedcHO
+### EDM ProvidedCHO
 
-EDM ProvidedcHO (Provided Cultural Heritage Object). This class comprises the Cultural Heritage objects that Europeana collects descriptions about.
+EDM ProvidedCHO (Provided Cultural Heritage Object). This class comprises the Cultural Heritage objects that Europeana collects descriptions about.
 
 | Field | Qualified Name | Datatype | Description |
 |:-------------|:-------------|:-----|:-----|
@@ -244,22 +244,20 @@ ORE* Proxy. Europeana uses proxies as place-holders for cultural heritage object
 |proxyFor|     ore:proxyFor|     String|     Proxy objects are used to represent a resource as it is aggregated in a particular aggregation. The ore:proxyFor relationship is used to link the proxy to the aggregated resource it is a proxy for. The subject of the relationship is a proxy object, and the object of the relationship is the aggregated resource.|
 |proxyIn|     ore:proxyIn|     Array (String)|     Proxy objects must also link to the aggregation in which the resource being proxied is aggregated. The ore:proxyIn relationship is used for this purpose. The subject of the relationship is a proxy object, and the object of the relationship is the aggregation.|
 
-
-### EDM Timespan 
-
+### EDM Timespan
 
 | Field | Qualified Name | Datatype | Description |
 |:-------------|:-------------|:-----|:-----|
-|about|     rdf:about|     String|     Defines the resource being described|
-|prefLabel|     skos:prefLabel|     LangMap|     Preferred lexical label.|
-|altLabel|     skos:altLabel|     LangMap|     Alternative lexical label.|
-|hiddenLabel|     skos:hiddenLabel|     LangMap|     A hidden lexical label, represented by means of the skos:hiddenLabel property, is a lexical label for a resource, where a KOS designer would like that character string to be accessible to applications performing text-based indexing and search operations, but would not like that label to be visible otherwise.|
-|note|     skos:note|     LangMap|     Property for general documentation purposes.|
-|begin|     edm:begin|     LangMap|     This property denotes the start date of a period of time.|
-|end|     edm:end|     LangMap|     This property denotes the end date of a period of time.|
-|isPartOf|     dcterms:isPartOf|     LangMap|     A related resource in which the described resource is physically or logically included.|
-|dctermsHasPart|     dcterms:hasPart|     LangMap|     A related resource that is included either physically or logically in the described resource.|
-|owlSameAs|     owl:sameAs|     Array (String)|     owl:sameAs links an individual to an individual. Such an owl:sameAs statement indicates that two URI references actually refer to the same thing: the individuals have the same "identity".|
+| about | rdf:about | String | Defines the resource being described. |
+| prefLabel | skos:prefLabel | LangMap | The preferred form of the name of the timespan or period. |
+| altLabel | skos:altLabel | LangMap | Alternative forms of the name of the timespan or period. |
+| hiddenLabel | skos:hiddenLabel | LangMap | A hidden lexical label, represented by means of the skos:hiddenLabel property, is a lexical label for a resource, where a KOS designer would like that character string to be accessible to applications performing text-based indexing and search operations, but would not like that label to be visible otherwise. |
+| note | skos:note | LangMap | Information relating to the timespan or period. |
+| begin | edm:begin | LangMap | The date the timespan started. |
+| end | edm:end | LangMap | The date the timespan finished. |
+| isPartOf | dcterms:isPartOf | LangMap | Reference to a timespan of which the described timespan is a part. |
+| dctermsHasPart | dcterms:hasPart | LangMap | Reference to a timespan which is part of the described timespan. |
+| owlSameAs | owl:sameAs | Array(String) | The URI of a timespan. |
 
 
 ### EDM WebResource
