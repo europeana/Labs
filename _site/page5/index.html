@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<link href='http://fonts.googleapis.com/css?family=Noto+Sans|Noto+Serif:400,700&subset=latin,greek,cyrillic,latin-ext' rel='stylesheet' type='text/css'>	    
@@ -30,8 +30,9 @@
     <script type="text/javascript" src="//use.typekit.net/ifv4urq.js"></script>
 	<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
-<body class="sg-single-pattern svg"><!--
--->﻿<!-- Begin header -->
+<body class="sg-single-pattern svg">
+<div id="homepage">
+﻿<!-- Begin header -->
 <header class="header cf" role="banner">
     <div class="lc">
         <a href="/" class="logo ir">Europeana</a>	
@@ -71,153 +72,155 @@
 <!-- End header --><!--
 --><div role="main" class="grid">
 
-	<div class="block block-content-header">
-		<div class="grid__item palm--one-whole push--palm--none three-quarters push--one-quarter">
-				<h1 class="title">Search results</h1>
-				<p class="subhead grid grid__item desk--one-half">
-				</p>
+<div class="block block-hero"> 
+	<div class="b-thumb">
+		<img src="/img/hero_bg.png" width="100%" />
+	</div>
+	<div class="b-text"> 
+		<h1>Europeana Labs</h1>
+		<div class="byline">
+			<br>
+			<p>Giving developers access to cultural and scientific images, texts and audiovisual collections<br> from Europe's leading cultural organisations <br>&mdash; all rights-cleared and ready to use.</p>
+			<div class="startBtn">
+				<a href="#tblKey">GET STARTED</a>
+			</div>
+			<div id="useOurAPI">
+				<span class="byline-author"><a href="/api" title="API Documentation">Use our API</a></span> or go and experiment at one of our <span class="byline-author"><a href="/spaces" title="Lab Spaces">Spaces</a></span>.
+			</div> 
+		</div>
+	</div> 
+</div>
+
+<br><br>
+
+<div  class="block">
+	<div id="apikey-block" >
+	<div class="grid--center">
+		<table id="tblKey">
+			<tr>
+				<td class="key-image"><img src="/img/key.png"></td>
+				<td class="key-form">
+					<h3>Get your API key.</h3>
+					<p>Sign up for your free API key and get developing! <br>The rest is up to you.</p>
+						<form id="model" action="http://europeana.eu/portal/api/registration.html" method="POST" class="inline-form newsletter-form">
+	<fieldset>
+		<input id="requestedAction" name="requestedAction" value="RequestAPI" type="hidden"><label for="register_email">Email address:</label>
+		<div class="inline-container">
+			<input id="register_email" name="email" type="text" placeholder="" maxlength="50" class="newsletter-field">
+			<input type="submit" name="submit_button" value="Sign up" class="newsletter-submit">
+		</div>
+	</fieldset>
+</form>
+				</td>
+			</tr>
+		</table>
+
+	</div>
+	</div>
+	<div id="beinspired" class="block">
+		<div class="grid--center" style="text-align: left;">
+			<h3 style="font-weight: bold;">Be inspired &hellip;</h3>
 		</div>
 	</div>
-<!---->
-<script id="search-results-template" type="text/mustache">
-  {{#entries}}
- 	<li class="grid__item one-whole {{tags}}">
-            <div class="block block-thumb ">
+	<div class="grid__item one-whole palm--one-whole grid--center">
+	    <ul id="homepage-postsl-list" class="post-list grid">
+	        
+			<!--
+	        --><li class="grid__item three-eighths desk--three-eighths">
+	            <div class="block block-thumb">
 
-                <div class="b-thumb">
-                    <a href="{{url}}">
-                        <img src="http://lorempixel.com/148/148" alt=""/>
-                    </a>
-                </div>
+	                <div class="b-thumb">
+	                    <a href="/gallery/culture-collage">
+	                        <img src="/img/gallery/europeana-culture-collage/Culture_Collage.jpg" alt="Europeana Culture Collage">
+	                    </a>
+	                </div>
 
-                <div class="b-text">
-	                    <h1 class="headline gamma"><a href="{{url}}">{{title}}</a></h1>
-	                    <div class="description">
-	                        <p>{{body}}</p>                        
-	                    </div>
-	                    <a href="{{url}}" title="{{title}}" class="text-btn pull-right">Read more→</a>
-	                    <div class="clear"></div>
-						<div class="tags">
-	                        <i class="icon icon-tag"></i>
-							{{#tags}}
-								<a href="#" class="tag_alt">{{.}}</a>
-	                    	{{/tags}}
-	                   
-	                    </div>
+	                <div class="b-text">
+
+	                    
+		                    <h1 class="headline gamma"><a href="/gallery/culture-collage">Europeana Culture Collage</a></h1>
+		                    <div class="description">
+		                        <p>Europeana Culture Collage is developed by Monique Szpak (@zenlan) and started as a simple exercise in mashing up a few of the new web technologies, incl. Europeana API and Europeana visual data.</p>                        
+		                    </div>
 						
-                </div>
+						<a href="/gallery/culture-collage" title="Europeana Culture Collage" class="text-btn-homepage">Find out more</a>
+	                </div>
+	            </div>
+	        </li>
+			
+			
+			<!--
+	        --><li class="grid__item three-eighths desk--three-eighths">
+	            <div class="block block-thumb">
 
-            </div>
-        </li>
-  {{/entries}}
-</script>
+	                <div class="b-thumb">
+	                    <a href="/gallery/biblioteca">
+	                        <img src="/img/gallery/biblioteca-digital-hispanica/Hispania1.png" alt="Biblioteca Digital Hispánica">
+	                    </a>
+	                </div>
 
+	                <div class="b-text">
 
-<script type="text/javascript">
-  $(document).ready(function() {
-  	try{
-		var inputFieldQ = $("#search-query");
-    inputFieldQ.lunrSearch({
-      indexUrl: '/search.json',             // URL of the `search.json` index data for your site
-      results:  '#search-results',          // jQuery selector for the search results container
-      entries:  '.entries',                 // jQuery selector for the element to contain the results list, must be a child of the results element above.
-      template: '#search-results-template'  // jQuery selector for the Mustache.js template
-    });
-   
-    inputFieldQ.focus();
-    
-   }catch(e){
-   	alert(e.message);
-   }
-   
-	$("a.tag").click(function(){
-		var clickedTagText = $(this).text();
-		$("#search-results li").show();
-		$("#search-results li").each(function(){
-  			var iskaniTag = $(this).find('a').filter(function(index) { return $(this).text() === clickedTagText; });
-  			if(iskaniTag.length>0){
-  					
-  			}else{
-  				$(this).hide();
-  			}
-  			
-  		});
-	}); 
-    
-  });
-
-</script>
-
-<div class="grid__item one-quarter palm--one-whole">
-	<div class="subnav">
-	    <h4 class="label epsilon"> Filter by:</h4>
-	    <ul class="tags tags-large">
-
-					
-		
-			<li><a href="#archaeology" rel="archaeology" class="tag">Archaeology</a></li>
-					
-		
-			<li><a href="#natural-history" rel="natural-history" class="tag">Natural History</a></li>
-					
-		
-			<li><a href="#photographs" rel="photographs" class="tag">Photographs</a></li>
-					
-		
-			<li><a href="#prints" rel="prints" class="tag">Prints</a></li>
-					
-		
-			<li><a href="#drawings" rel="drawings" class="tag">Drawings</a></li>
-					
-		
-			<li><a href="#maps" rel="maps" class="tag">Maps</a></li>
-					
-		
-			<li><a href="#history" rel="history" class="tag">History</a></li>
-					
-		
-			<li><a href="#architecture" rel="architecture" class="tag">Architecture</a></li>
-					
-		
-			<li><a href="#api-implementation" rel="api-implementation" class="tag">API Implementation</a></li>
-					
-		
-			<li><a href="#blog-tag" rel="blog-tag" class="tag">Blog tag</a></li>
-					
-		
-			<li><a href="#blog-tagtest" rel="blog-tagtest" class="tag">Blog tagtest</a></li>
-					
-		
-			<li><a href="#event-tag" rel="event-tag" class="tag">Event tag</a></li>
-					
-		
-			<li><a href="#event-tagtest" rel="event-tagtest" class="tag">Event tagtest</a></li>
-					
-		
-			<li><a href="#open-source-project" rel="open-source-project" class="tag">Open Source Project</a></li>
-					
-		
-				
- 
+	                    
+		                    <h1 class="headline gamma"><a href="/gallery/biblioteca">Biblioteca Digital Hispánica</a></h1>
+		                    <div class="description">
+		                        <p>The National Library of Spain has implemented the Europeana API in their online portal, Biblioteca Digital Hispánica. The portal now enables their users to access related Europeana content via single link on their search result header.</p>                        
+		                    </div>
+						
+						<a href="/gallery/biblioteca" title="Biblioteca Digital Hispánica" class="text-btn-homepage">Find out more</a>
+	                </div>
+	            </div>
+	        </li>
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
 	    </ul>
-    </div>
-	
-   <ul class="tabs tabs-v">
-     <li><a href="">Suggest a Dataset</a></li>
-     <li><a href="">Help improve this content</a></li>
-   </ul>
-</div>
+	</div>
 
-
-<div class="grid__item palm--one-whole three-quarters">
-	<section id="search-results" style="display: none;">
-	  <div class="entries">
-	  </div>
-	</section>
+<div class="grid--center">
+	<div class="grid__item palm--one-whole one-third">
+		<hr class="top-no-margin">
+		<p class="text-btn" align="center"><a href="/gallery" class="seemoreapi" title="Application Gallery"><strong>See more examples in the Application Gallery&nbsp;&rarr;</strong></a></p>
+	</div>
+	<br/><br/><br/><br/>
 </div>
-<!--
---></div>
-﻿<!-- Begin Footer -->
+</div><!--
+-->﻿<!-- Begin Footer -->
 <footer class="footer" role="contentinfo">
     <div class="lc">
 		<div class="social-icons">
@@ -237,5 +240,5 @@
     </div>
 </footer>
 <!-- End Footer --><!--
---></body>
+--></div></body>
 </html>

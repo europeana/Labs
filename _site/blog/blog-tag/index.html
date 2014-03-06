@@ -1,9 +1,9 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 <head>
 	<link href='http://fonts.googleapis.com/css?family=Noto+Sans|Noto+Serif:400,700&subset=latin,greek,cyrillic,latin-ext' rel='stylesheet' type='text/css'>	    
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-	<title>  Europeana Labs </title>
+	<title>  Category: blog |  Europeana Labs </title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
 	<!-- never cache patterns -->
@@ -73,149 +73,342 @@
 
 	<div class="block block-content-header">
 		<div class="grid__item palm--one-whole push--palm--none three-quarters push--one-quarter">
-				<h1 class="title">Search results</h1>
+				<h1 class="title">Blog</h1>
 				<p class="subhead grid grid__item desk--one-half">
+					<a href="http://europeana.eu" title="Europeana Search Portal">Europeana</a> is a database of some 30 million cultural and historical documents, images, sound and video files from Europe's museums, libraries, galleries and archives.
 				</p>
 		</div>
 	</div>
-<!---->
-<script id="search-results-template" type="text/mustache">
-  {{#entries}}
- 	<li class="grid__item one-whole {{tags}}">
-            <div class="block block-thumb ">
+	
+	<div class="grid__item one-quarter palm--one-whole">
+	<div class="subnav">
+	   					
+					 <h4 class="label epsilon"> Filter by:</h4>
+	    			 <ul class="tags tags-large">
+	    			 		    			 	
+	    			 
+			
+			
+			
+				
+										
+	    			
+					
+				
+				
+										
+	    			
+					
+				
+				
+				
+				
+				
+					
+		
+			
+			
+			
+				
+										
+	    			
+					
+				
+				
+										
+	    			
+					
+				
+				
+				
+				
+				
+					
+		
+			
+			
+			
+				
+										
+	    			
+					
+				
+				
+										
+	    			
+					
+				
+				
+				
+				
+				
+					
+		
+			
+			
+			
+				
+										
+	    			
+					
+				
+				
+										
+	    			
+					
+				
+				
+				
+				
+				
+					
+		
+			
+			
+			
+				
+										
+	    			
+					
+				
+				
+										
+	    			
+					
+				
+				
+				
+				
+				
+					
+		
+			
+			
+			
+				
+										
+	    			
+					
+				
+				
+										
+	    			
+					
+				
+				
+				
+				
+				
+					
+		
+			
+			
+			
+				
+										
+	    			
+					
+				
+				
+										
+	    			
+					
+				
+				
+				
+				
+				
+					
+		
+			
+			
+			
+				
+										
+	    			
+					
+				
+				
+										
+	    			
+					
+				
+				
+				
+				
+				
+					
+		
+			
+			
+			
+				
+										
+	    			
+					
+				
+				
+										
+	    			
+					
+				
+				
+				
+				
+				
+					
+		
+			
+			
+			
+				
+										
+	    			
+						<li><a href="/blog/blog-tag/" rel="blog-tag" class="tag">Blog tag</a></li>
+						
+						
+						
+				
+				
+							
+		
+			
+			
+			
+				
+										
+	    			
+					
+				
+				
+										
+	    			
+						<li><a href="/blog/blog-tagtest/" rel="blog-tagtest" class="tag">Blog tagtest</a></li>
+						
+						
+						
+				
+				
+							
+		
+			
+			
+			
+				
+										
+	    			
+					
+				
+				
+										
+	    			
+					
+				
+				
+				
+				
+				
+					
+		
+			
+			
+			
+				
+										
+	    			
+					
+				
+				
+										
+	    			
+					
+				
+				
+				
+				
+				
+					
+		
+			
+			
+			
+				
+										
+	    			
+					
+				
+				
+										
+	    			
+					
+				
+				
+				
+				
+				
+					
+		
+						
+						 </ul>
+
+					
+   <ul class="tabs tabs-v">
+     <li><a href="">Suggest an article</a></li>
+     <li><a href="">Help improve this content</a></li>
+   </ul>
+   </div>
+</div>
+
+
+	
+	<script>
+	$(document).ready(function(){
+		
+		$("div.pagination-holder").jPages({
+	    containerID : "BlogList",
+	    perPage: 10
+	    });
+	});
+</script>
+
+<div class="grid__item three-quarters palm--one-whole">
+    <ul id="BlogList" class="post-list grid">
+        <!--
+        --><li class="grid__item one-whole desk--one-whole">
+            <div class="block block-thumb   block-thumb-small ">
 
                 <div class="b-thumb">
-                    <a href="{{url}}">
-                        <img src="http://lorempixel.com/148/148" alt=""/>
+                    <a href="/blog/carare-map">
+                        <img src="/img/gallery/carare-map/CarareMap.jpg" alt="Blog test">
                     </a>
                 </div>
 
                 <div class="b-text">
-	                    <h1 class="headline gamma"><a href="{{url}}">{{title}}</a></h1>
+
+	                    <h1 class="headline gamma"><a href="/blog/carare-map">Blog test</a></h1>
 	                    <div class="description">
-	                        <p>{{body}}</p>                        
+	                        <p>CARARE Map is a web-based mapping tool for archaeological/architectural sites.</p>                        
 	                    </div>
-	                    <a href="{{url}}" title="{{title}}" class="text-btn pull-right">Read more→</a>
-	                    <div class="clear"></div>
-						<div class="tags">
-	                        <i class="icon icon-tag"></i>
-							{{#tags}}
-								<a href="#" class="tag_alt">{{.}}</a>
-	                    	{{/tags}}
-	                   
-	                    </div>
+					
+					<a href="/blog/carare-map" title="Blog test" class="text-btn">Read more about Blog test</a>
+                    <div class="tags">
+                        <i class="icon icon-tag"></i>
 						
+						<a href="/blog/blog-tag/" class="tag_alt">Blog tag</a>
+						
+						<a href="/blog/blog-tagtest/" class="tag_alt">Blog tagtest</a>
+						
+                    </div>
                 </div>
 
             </div>
         </li>
-  {{/entries}}
-</script>
-
-
-<script type="text/javascript">
-  $(document).ready(function() {
-  	try{
-		var inputFieldQ = $("#search-query");
-    inputFieldQ.lunrSearch({
-      indexUrl: '/search.json',             // URL of the `search.json` index data for your site
-      results:  '#search-results',          // jQuery selector for the search results container
-      entries:  '.entries',                 // jQuery selector for the element to contain the results list, must be a child of the results element above.
-      template: '#search-results-template'  // jQuery selector for the Mustache.js template
-    });
-   
-    inputFieldQ.focus();
+    </ul>
     
-   }catch(e){
-   	alert(e.message);
-   }
-   
-	$("a.tag").click(function(){
-		var clickedTagText = $(this).text();
-		$("#search-results li").show();
-		$("#search-results li").each(function(){
-  			var iskaniTag = $(this).find('a').filter(function(index) { return $(this).text() === clickedTagText; });
-  			if(iskaniTag.length>0){
-  					
-  			}else{
-  				$(this).hide();
-  			}
-  			
-  		});
-	}); 
-    
-  });
-
-</script>
-
-<div class="grid__item one-quarter palm--one-whole">
-	<div class="subnav">
-	    <h4 class="label epsilon"> Filter by:</h4>
-	    <ul class="tags tags-large">
-
-					
-		
-			<li><a href="#archaeology" rel="archaeology" class="tag">Archaeology</a></li>
-					
-		
-			<li><a href="#natural-history" rel="natural-history" class="tag">Natural History</a></li>
-					
-		
-			<li><a href="#photographs" rel="photographs" class="tag">Photographs</a></li>
-					
-		
-			<li><a href="#prints" rel="prints" class="tag">Prints</a></li>
-					
-		
-			<li><a href="#drawings" rel="drawings" class="tag">Drawings</a></li>
-					
-		
-			<li><a href="#maps" rel="maps" class="tag">Maps</a></li>
-					
-		
-			<li><a href="#history" rel="history" class="tag">History</a></li>
-					
-		
-			<li><a href="#architecture" rel="architecture" class="tag">Architecture</a></li>
-					
-		
-			<li><a href="#api-implementation" rel="api-implementation" class="tag">API Implementation</a></li>
-					
-		
-			<li><a href="#blog-tag" rel="blog-tag" class="tag">Blog tag</a></li>
-					
-		
-			<li><a href="#blog-tagtest" rel="blog-tagtest" class="tag">Blog tagtest</a></li>
-					
-		
-			<li><a href="#event-tag" rel="event-tag" class="tag">Event tag</a></li>
-					
-		
-			<li><a href="#event-tagtest" rel="event-tagtest" class="tag">Event tagtest</a></li>
-					
-		
-			<li><a href="#open-source-project" rel="open-source-project" class="tag">Open Source Project</a></li>
-					
-		
-				
- 
-	    </ul>
+    <div class="pagination-holder">
+    	
     </div>
-	
-   <ul class="tabs tabs-v">
-     <li><a href="">Suggest a Dataset</a></li>
-     <li><a href="">Help improve this content</a></li>
-   </ul>
-</div>
-
-
-<div class="grid__item palm--one-whole three-quarters">
-	<section id="search-results" style="display: none;">
-	  <div class="entries">
-	  </div>
-	</section>
-</div>
-<!--
+    <br/><!--
 --></div>
 ﻿<!-- Begin Footer -->
 <footer class="footer" role="contentinfo">

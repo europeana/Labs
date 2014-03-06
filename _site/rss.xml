@@ -146,6 +146,14 @@
       <dc:date>2014-01-09T00:00:00+01:00</dc:date>
     </item>
     <item>
+      <title>Event test</title>
+      <link>http://labs.europeana.eu/events/carare-map</link>
+      <description>&lt;p&gt;CARARE Map is a web-based mapping tool for archaeological/architectural sites.&lt;/p&gt;</description>
+      <pubDate>Tue, 07 Jan 2014 00:00:00 +0100</pubDate>
+      <guid>http://labs.europeana.eu/events/carare-map</guid>
+      <dc:date>2014-01-07T00:00:00+01:00</dc:date>
+    </item>
+    <item>
       <title>Digital Library of Bibliographic Heritage, Spain</title>
       <link>http://labs.europeana.eu/gallery/bibheritagespain</link>
       <description>&lt;p&gt;As part of HISPANA, the Digital Library of Bibliographic Heritage has chosen to use the Europeana API to complement results in their own search services with relevant links from Europeana.&lt;/p&gt;</description>
@@ -183,6 +191,14 @@
       <description>&lt;p&gt;CARARE Map is a web-based mapping tool for archaeological/architectural sites.&lt;/p&gt;</description>
       <pubDate>Tue, 07 Jan 2014 00:00:00 +0100</pubDate>
       <guid>http://labs.europeana.eu/gallery/carare-map</guid>
+      <dc:date>2014-01-07T00:00:00+01:00</dc:date>
+    </item>
+    <item>
+      <title>Blog test</title>
+      <link>http://labs.europeana.eu/blog/carare-map</link>
+      <description>&lt;p&gt;CARARE Map is a web-based mapping tool for archaeological/architectural sites.&lt;/p&gt;</description>
+      <pubDate>Tue, 07 Jan 2014 00:00:00 +0100</pubDate>
+      <guid>http://labs.europeana.eu/blog/carare-map</guid>
       <dc:date>2014-01-07T00:00:00+01:00</dc:date>
     </item>
     <item>
