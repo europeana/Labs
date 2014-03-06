@@ -109,34 +109,31 @@ EDM Aggregation. The set of resources related to a single cultural heritage obje
 | edmUnstored | edm:unstored | Array(String) | This property should not be used and is only included here for backward compatibility with ESE. |
 | webResources | edm:WebResource | Array([WebResource](#WebResource)) | Information Resources that have at least one Web Representation and at least a URI. |
 
-### EDM Concept 
+### EDM Concept
 
 SKOS* Concept. A SKOS concept can be viewed as an idea or notion; a unit of thought. All element of this class belong to the skos namespace.
 * SKOS stands for Simple Knowledge Organization System, a W3C standard
 
 | Field | Qualified Name | Datatype | Description |
 |:-------------|:-------------|:-----|:-----|
-|about|     rdf:about|     String|     Defines the resource being described|
-|prefLabel|     skos:prefLabel|     LangMap|     Preferred lexical label.|
-|altLabel|     skos:altLabel|     LangMap|     Alternative lexical label.|
-|hiddenLabel|     skos:hiddenLabel|     LangMap|     A hidden lexical label, represented by means of the skos:hiddenLabel property, is a lexical label for a resource, where a KOS designer would like that character string to be accessible to applications performing text-based indexing and search operations, but would not like that label to be visible otherwise.|
-|note|     skos:note|     LangMap|     Property for general documentation purposes.|
-|broader|     skos:broader|     Array (String)|     Asserts a direct hierarchical link between two SKOS concepts. A triple A skos:broader B asserts that B, the object of the triple, is a broader concept than A, the subject of the triple.|
-|narrower|     skos:narrower|     Array (String)|     Asserts a direct hierarchical link between two SKOS concepts. A triple C skos:narrower D asserts that D, the object of the triple, is a narrower concept than C, the subject of the triple.|
-|related|     skos:related|     Array (String)|     Asserts an associative link between two SKOS concepts.|
-|broadMatch|     skos:broadMatch|     Array (String)|     skos:broadMatch is used to state a hierarchical mapping link between two conceptual resources in different concept schemes.|
-|narrowMatch|     skos:narrowMatch|     Array (String)|     skos:narrowMatch is used to state a hierarchical mapping link between two conceptual resources in different concept schemes.|
-|exactMatch|     skos:exactMatch|     Array (String)|     skos:exactMatch is used to link two concepts, indicating a high degree of confidence that the concepts can be used interchangeably across a wide range of information retrieval applications. skos:exactMatch is a transitive property, and is a sub-property of skos:closeMatch.|
-|relatedMatch|     skos:relatedMatch|     Array (String)|     skos:relatedMatch is used to state an associative mapping link between two conceptual resources in different concept schemes.|
-|closeMatch|     skos:closeMatch|     Array (String)|     A skos:closeMatch assertion indicates that two concepts are sufficiently similar that they can be used interchangeably in applications that consider the two concept schemes they belong to. However, skos:closeMatch is not defined as transitive, which prevents such similarity assessments to propagate beyond these two schemes. If a concept ex1:A is a close match for another concept ex2:B which is itself a close match for ex3:C, it does not follow from the SKOS data model that ex1:A is a close match for ex3:C.|
-|notation|     skos:skosnotation|     LangMap|     A notation is a string of characters such as "T58.5" or "303.4833" used to uniquely identify a concept within the scope of a given concept scheme.|
-|inScheme|     skos:inScheme|     Array (String)|     Relates a resource (for example a concept) to a concept scheme in which it is included.|
+| about | rdf:about | String | Defines the resource being described |
+| prefLabel | skos:prefLabel | LangMap | The preferred form of the name of the concept. |
+| altLabel | skos:altLabel | LangMap | Alternative forms of the name of the concept. |
+| hiddenLabel | skos:hiddenLabel | LangMap | A hidden lexical label, represented by means of the skos:hiddenLabel property, is a lexical label for a resource, where a KOS designer would like that character string to be accessible to applications performing text-based indexing and search operations, but would not like that label to be visible otherwise. |
+| note | skos:note | LangMap | Information relating to the concept. |
+| broader | skos:broader | Array(String) | The identifier of a broader concept in the same thesaurus or controlled vocabulary. |
+| narrower | skos:narrower | Array(String) | The identifier of a narrower concept. |
+| related | skos:related | Array(String) | The identifier of a related concept. |
+| broadMatch | skos:broadMatch | Array(String) | The identifier of a broader matching concepts from other concept schemes. |
+| narrowMatch | skos:narrowMatch | Array(String) | The identifier of a narrower matching concepts from other concept schemes. |
+| exactMatch | skos:exactMatch | Array(String) | The identifier of exactly matching concepts from other concept schemes. |
+| relatedMatch | skos:relatedMatch | Array(String) | The identifier of a related matching concepts from other concept schemes. |
+| closeMatch | skos:closeMatch | Array(String) | The identifier of close matching concepts from other concept schemes. |
+| notation | skos:skosnotation | LangMap | The notation in which the concept is represented.  This may not be words in natural language for some knowledge organisation systems e.g. algebra. |
+| inScheme | skos:inScheme | Array(String) | The URI of a concept scheme. |
 
 
 ### EDM EuropeanaAggregation 
-
-
-
 
 EDM Europeana Aggregation. The set of resources related to a single cultural heritage object that collectively represent that object in Europeana. Such set consists of: all descriptions about the object that Europeana collects from (possibly different) content providers, including thumbnails and other forms of abstractions, as well as of the description of the object Europeana builds.
 
