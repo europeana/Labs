@@ -1,0 +1,51 @@
+---
+layout: blog-list
+---
+
+
+<script>
+	$(document).ready(function(){
+		
+		$("div.pagination-holder").jPages({
+	    containerID : "BlogList",
+	    perPage: 10
+	    });
+	});
+</script>
+
+<div class="grid__item three-quarters palm--one-whole">
+    <ul id="BlogList" class="post-list grid">
+        {% for post in site.tags[page.tag] %}<!--
+        --><li class="grid__item one-whole desk--one-whole">
+            <div class="block block-thumb {%if post.featured != true %}  block-thumb-small {% endif %}">
+
+                <div class="b-thumb">
+                    <a href="{{site.baseurl}}{{post.url}}">
+                        <img src="{{site.baseurl}}{{post.imageurl}}" alt="{{post.title}}">
+                    </a>
+                </div>
+
+                <div class="b-text">
+
+	                    <h1 class="headline gamma"><a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a></h1>
+	                    <div class="description">
+	                        {{post.excerpt}}                        
+	                    </div>
+					
+					<a href="{{site.baseurl}}{{post.url}}" title="{{post.title}}" class="text-btn">Read more about {{post.title}}</a>
+                    <div class="tags">
+                        <i class="icon icon-tag"></i>
+						{% for tag in post.tags %}
+						<a href="{{site.baseurl}}/blog/{{ tag | tags_links }}/" class="tag_alt">{{tag}}</a>
+						{% endfor %}
+                    </div>
+                </div>
+
+            </div>
+        </li>{% endfor %}
+    </ul>
+    
+    <div class="pagination-holder">
+    	
+    </div>
+    <br/>

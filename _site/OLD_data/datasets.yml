@@ -1,0 +1,237 @@
+---
+- name: "Maps and Drawings from the Catálogo Colectivo De La Red De Bibliotecas De Los Archivos Estatales"
+  provider: "Catálogo Colectivo de la Red de Bibliotecas de los Archivos Estatales"
+  contact: ccbae.dglab@mcu.es
+  description: "More than 7,000 maps, city plans & architectural drawings/plans from the Catálogo Colectivo de la Red de Bibliotecas de los Archivos Estatales. The collection is a union catalog of state archives and libraries in Spain. Spanish language."
+  tags:
+    - Maps
+    - Architecture
+    - History
+  links:
+    portal: "http://www.europeana.eu/portal/search.html?query=DATA_PROVIDER:%22Cat%C3%A1logo%20Colectivo%20de%20la%20Red%20de%20Bibliotecas%20de%20los%20Archivos%20Estatales%22&qf=TYPE:IMAGE"
+    console: "http://europeana.eu/portal/api/console.html?function=search&query=DATA_PROVIDER:%22Catálogo%20Colectivo%20de%20la%20Red%20de%20Bibliotecas%20de%20los%20Archivos%20Estatales%22&qf=TYPE:IMAGE"
+    provider: http://www.mcu.es/ccbae/es/inicio/inicio.cmd
+    licenses: 
+      - pd
+    preview: /img/datasets/catalogo_1_800.jpeg
+      
+- name: "Maps and Drawings from the Biblioteca Virtual Del Patrimonio Bibliográfico"
+  provider: "Biblioteca Virtual del Patrimonio Bibliográfico"
+  contact: ccbae.dglab@mcu.es
+  description: "More than 4,000 maps and drawings from the Biblioteca Virtual del Patrimonio Bibliográfico. Spanish language."
+  tags:
+    - Maps
+    - Drawings
+    - History
+  links:
+    portal: "http://www.europeana.eu/portal/search.html?query=DATA_PROVIDER:%22Biblioteca%20Virtual%20del%20Patrimonio%20Bibliogr%C3%A1fico%22&qf=TYPE:IMAGE"
+    console: "http://europeana.eu/portal/api/console.html?function=search&query=DATA_PROVIDER:%22Biblioteca%20Virtual%20del%20Patrimonio%20Bibliogr%C3%A1fico%22&qf=TYPE:IMAGE"
+    provider: http://bvpb.mcu.es/es/estaticos/contenido.cmd?pagina=estaticos/presentacion
+    licenses: 
+      - pd
+    preview: /img/datasets/bvirtual_1_800.jpeg
+
+- name: "Drawings, Prints and Artwork from the National Library of Poland"
+  provider: "The National Library of Poland - Biblioteka Narodowa"
+  contact: biblnar@bn.org.pl
+  description: "More than 16,000 examples of drawings, prints, artwork, posters, engravings, postcards, photographs, portraits and caricatures from the National Library of Poland. Polish language."
+  tags:
+    - Photographs
+    - Prints
+    - Drawings
+  links:
+    portal: "http://www.europeana.eu/portal/search.html?query=DATA_PROVIDER%3A%22The+National+Library+of+Poland+-+Biblioteka+Narodowa%22+AND+NOT+book"
+    console: "http://europeana.eu/portal/api/console.html?function=search&query=DATA_PROVIDER%3A%22The+National+Library+of+Poland+-+Biblioteka+Narodowa%22+AND+NOT+book"
+    provider: http://bn.org.pl/en/
+    licenses: 
+      - pd
+    preview: /img/datasets/narodowa_1_800.jpeg
+
+- name: "Archaeological Artefacts from the Institute of Balkan Studies and Thracology"
+  provider: "Institute of Balkan Studies and Thracology - Институт за балканистика с Център по тракология"
+  contact: balkani@cl.bas.bg
+  description: "500 examples of archaeological artefacts from the Institute of Balkan Studies and Thracology. Bulgarian language."
+  tags:
+    - Archaeology
+  links:
+    portal: "http://www.europeana.eu/portal/search.html?query=DATA_PROVIDER%3a%22%D0%98%D0%BD%D1%81%D1%82%D0%B8%D1%82%D1%83%D1%82+%D0%B7%D0%B0+%D0%B1%D0%B0%D0%BB%D0%BA%D0%B0%D0%BD%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B0+%D1%81+%D0%A6%D0%B5%D0%BD%D1%82%D1%8A%D1%80+%D0%BF%D0%BE+%D1%82%D1%80%D0%B0%D0%BA%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%8F%22"
+    console: "http://www.europeana.eu/portal/api/console.html?function=search&query=DATA_PROVIDER%3a%22%D0%98%D0%BD%D1%81%D1%82%D0%B8%D1%82%D1%83%D1%82+%D0%B7%D0%B0+%D0%B1%D0%B0%D0%BB%D0%BA%D0%B0%D0%BD%D0%B8%D1%81%D1%82%D0%B8%D0%BA%D0%B0+%D1%81+%D0%A6%D0%B5%D0%BD%D1%82%D1%8A%D1%80+%D0%BF%D0%BE+%D1%82%D1%80%D0%B0%D0%BA%D0%BE%D0%BB%D0%BE%D0%B3%D0%B8%D1%8F%22"
+    provider: http://balkanstudies.bg
+    licenses: 
+      - by
+      - sa
+    preview: /img/datasets/balkan_1_800.jpeg
+
+- name: "Photographs, Prints and Posters from the Biblioteca Valenciana Digital"
+  provider: "Biblioteca Valenciana Digital"
+  contact: bivaldi@gva.es
+  description: "More than 500 examples of photographs, prints and posters from the Biblioteca Valenciana Digital. Spanish language."
+  tags:
+    - Photographs
+    - Prints
+  links:
+    portal: "http://www.europeana.eu/portal/search.html?query=DATA_PROVIDER:%22Biblioteca%20Valenciana%20Digital%22&qf=TYPE:IMAGE"
+    console: "http://www.europeana.eu/portal/api/console.html?function=search&query=DATA_PROVIDER:%22Biblioteca%20Valenciana%20Digital%22&qf=TYPE:IMAGE"
+    provider: http://bv2.gva.es/es/cms/elemento.cmd?id=estaticos/paginas/inicio.html
+    licenses: 
+      - pd
+    preview: /img/datasets/valenciana_1_800.jpeg
+
+- name: "Butterflies, moths, plants and mushrooms from the University of Tartu and the Museum of Natural History Berlin"
+  provider: "University of Tartu, Natural History Museum"
+  contact: loodusmuuseum@ut.ee
+  description: "More than 11,000 butterflies and moths, more than 5,000 plants and more than 2,000 mushrooms from the Natural History Museum at the University of Tartu and the Natural History Museum in Berlin. In English with Latin species names."
+  tags:
+    - Natural History
+  links:
+    portal: "http://www.europeana.eu/portal/search.html?query=europeana_collectionName%3A11617*&rows=12"
+    console: "http://www.europeana.eu/portal/api/console.html?function=search&query=europeana_collectionName%3A11617*&rows=12"
+    provider: http://www.natmuseum.ut.ee
+    licenses: 
+      - by
+      - sa
+    preview: /img/datasets/tartu_1_800.jpeg
+
+- name: "Flowers and Trees from the Royal Botanic Garden in Edinburgh"
+  provider: "The Royal Botanic Garden Edinburgh"
+  contact: webmaster@rbge.org.uk
+  description: "More than 3,000 flowers and trees from the collections of the  Royal Botanic Garden in Edinburgh. In English with Latin species names."
+  tags:
+    - Natural History
+  links:
+    portal: "http://www.europeana.eu/portal/search.html?query=DATA_PROVIDER:%22The%20Royal%20Botanic%20Garden%20Edinburgh%22&qf=RIGHTS:http://creativecommons.org/licenses/by-sa/*&rows=24"
+    console: "http://www.europeana.eu/portal/api/console.html?function=search&query=DATA_PROVIDER:%22The%20Royal%20Botanic%20Garden%20Edinburgh%22&qf=RIGHTS:http://creativecommons.org/licenses/by-sa/*&rows=24"
+    provider: http://www.rbge.org.uk
+    licenses: 
+      - by
+      - sa
+    preview: /img/datasets/edinburgh_1_800.jpeg
+
+- name: "Early Photographs from the Fondo Fotográfico De La Universidad De Navarra"
+  provider: "Fondo Fotográfico de la Universidad de Navarra"
+  contact: dirmuseo@unav.es
+  description: "More than 4,000 early photographs from 19th-century Spain in the collections of the Universidad de Navarra. Spanish language."
+  tags:
+    - Photographs
+  links:
+    portal: "http://www.europeana.eu/portal/search.html?query=DATA_PROVIDER%3a%22Fondo+Fotogr%C3%A1fico+de+la+Universidad+de+Navarra%22"
+    console: "http://www.europeana.eu/portal/api/console.html?function=search&query=DATA_PROVIDER%3a%22Fondo+Fotogr%C3%A1fico+de+la+Universidad+de+Navarra%22"
+    provider: "http://coleccionfff.unav.es/bvunav/i18n/estaticos/contenido.cmd?pagina=estaticos/presentacion"
+    licenses: 
+      - pd
+    preview: /img/datasets/navarra_1_800.jpeg
+    
+- name: "Natural History Art from the Rijksmuseum in Amsterdam (Netherlands)"
+  provider: "Rijksmuseum"
+  contact: info@rijksmuseum.nl
+  description: "More than 75 paintings and drawings of flowers and animals from the collections of the  Rijksmuseum. In Dutch."
+  tags:
+    - Natural History
+  links:
+    portal: "http://www.europeana.eu/portal/search.html?query=%28europeana_collectionName%3A90402*%29+AND+%28%22stilleven+met+bloemen%22+OR+%22koson%22+OR+%22Insecten%2C+bloemen+en+vruchten%22+OR+%28%22dieren%22+AND+%22goes%22%29+OR+%28marrel+AND+tulpen%29%29&rows=96"
+    console: "http://www.europeana.eu/portal/api/console.html?function=search&query=%28europeana_collectionName%3A90402*%29+AND+%28%22stilleven+met+bloemen%22+OR+%22koson%22+OR+%22Insecten%2C+bloemen+en+vruchten%22+OR+%28%22dieren%22+AND+%22goes%22%29+OR+%28marrel+AND+tulpen%29%29&rows=96"
+    provider: https://www.rijksmuseum.nl/
+    licenses: 
+      - pd
+    preview: /img/datasets/rijksmuseum_1_800.jpg
+
+- name: "Beetles from the Royal Belgian Institute of Natural Sciences"
+  provider: "Royal Belgian Institute of Natural Sciences"
+  contact: info@naturalsciences.be
+  description: "More than 4,000 photographs of beetles from the collections of the  Royal Belgian Institute of Natural Sciences. In English with Latin species names."
+  tags:
+    - Natural History
+  links:
+    portal: "http://www.europeana.eu/portal/search.html?query=europeana_collectionName%3A11625*&rows=12"
+    console: "http://www.europeana.eu/portal/api/console.html?function=search&query=europeana_collectionName%3A11625*&rows=12"
+    provider: http://www.naturalsciences.be/
+    licenses: 
+      - by
+      - sa
+    preview: /img/datasets/rbins_1_800.jpg
+
+- name: "Minerals and rocks from the Museum of Natural History in Berlin"
+  provider: "Museum of Natural History Berlin"
+  contact: info@mfn-berlin.de
+  description: "More than 1,000 photographs of minerals and rocks from the mineralogical collections of the  Museum of Natural History Berlin. In English with scientific names of minerals and rocks."
+  tags:
+    - Natural History
+  links:
+    portal: "http://www.europeana.eu/portal/search.html?query=%28europeana_collectionName%3A11622*%29+AND+NOT+%28Etikett%29&start=1&rows=12"
+    console: "http://www.europeana.eu/portal/api/console.html?function=search&query=%28europeana_collectionName%3A11622*%29+AND+NOT+%28Etikett%29&start=1&rows=12"
+    provider: http://www.naturkundemuseum-berlin.de/
+    licenses: 
+      - by
+      - sa
+    preview: /img/datasets/MfNGold_1_800.jpg
+
+- name: "Bryozoa from the National Museum Prague"
+  provider: "National Museum Prague"
+  contact: nm@nm.cz
+  description: "More than 500 photographs of Bryozoans from the palaeontological collections of the  National Museum Prague. In English with latin species names."
+  tags:
+    - Natural History
+  links:
+    portal: "http://www.europeana.eu/portal/search.html?query=europeana_collectionName%3A11613*+AND+Z%C3%A1gor%C5%A1ek&rows=12"
+    console: "http://www.europeana.eu/portal/api/console.html?function=search&query=europeana_collectionName%3A11613*+AND+Z%C3%A1gor%C5%A1ek&rows=12"
+    provider: http://www.nm.cz/
+    licenses: 
+      - by
+    preview: /img/datasets/prague_1_800.jpg
+
+- name: "Postcards from Europeana 1914 - 1918"
+  provider: "Europeana 1914 – 1918"
+  contact: Ad.Polle@europeana.eu
+  description: "More than 2,500 Postcards telling the story of the first World War."
+  tags:
+    - History
+  links:
+    portal: "http://www.europeana.eu/portal/search.html?query=PROVIDER:%22Europeana%201914%20-%201918%22&qf=REUSABILITY:open&qf=TYPE:IMAGE&qf=postcards"
+    console: "http://www.europeana.eu/portal/api/console.html?function=search&query=PROVIDER:%22Europeana%201914%20-%201918%22&qf=REUSABILITY:open&qf=TYPE:IMAGE&qf=postcards"
+    provider: http://www.europeana1914-1918.eu/
+    licenses: 
+      - by
+      - sa
+    preview: /img/datasets/worldwar1_1_800.jpg
+
+- name: "Battles on artwork and drawings from the Rijksmuseum in the Netherlands"
+  provider: "Rijksmuseum"
+  contact: info@rijksmuseum.nl
+  description: "A collection of  thousand drawings, prints and artworks of battles across Europe through the centuries."
+  tags:
+    - History
+  links:
+    portal: "http://www.europeana.eu/portal/search.html?query=PROVIDER:Rijksmuseum&qf=slag"
+    console: "http://www.europeana.eu/portal/api/console.html?function=search&query=PROVIDER:Rijksmuseum&qf=slag"
+    provider: https://www.rijksmuseum.nl/
+    licenses: 
+      - pd
+    preview: /img/datasets/battle_1_800.jpg
+
+- name: "Popes on artwork, drawings and documents from the Rijksmuseum in the Netherlands"
+  provider: "Rijksmuseum"
+  contact: info@rijksmuseum.nl
+  description: "A collection of  more than 500 drawings, prints and artworks of popes through the centuries and related documents."
+  tags:
+    - History
+  links:
+    portal: "http://www.europeana.eu/portal/search.html?query=%28europeana_collectionName%3A90402*%29+AND+paus+&rows=12"
+    console: "http://www.europeana.eu/portal/api/console.html?function=search&query=%28europeana_collectionName%3A90402*%29+AND+paus+&rows=12"
+    provider: https://www.rijksmuseum.nl/
+    licenses: 
+      - pd
+    preview: /img/datasets/pope_1_800.jpg
+
+- name: "Napoleon on artwork, drawings and documents from the Amsterdam Museum"
+  provider: "Amsterdam Museum"
+  contact: info@amsterdammuseum.nl
+  description: "A beautiful collection of about 70 items related to Napoleon Bonaparte (1769 – 1829)."
+  tags:
+    - History
+  links:
+    portal: "http://www.europeana.eu/portal/search.html?query=europeana_collectionName:2021608*%20&qf=REUSABILITY:open&qf=TYPE:IMAGE&qf=napoleon"
+    console: "http://www.europeana.eu/portal/api/console.html?function=search&query=europeana_collectionName:2021608*%20&qf=REUSABILITY:open&qf=TYPE:IMAGE&qf=napoleon"
+    provider: http://www.amsterdammuseum.nl/
+    licenses: 
+      - by
+    preview: /img/datasets/napoleon_1_800.jpg

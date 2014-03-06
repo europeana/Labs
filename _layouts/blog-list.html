@@ -1,0 +1,19 @@
+{% include start.html %}<!--
+-->{% include header.html %}<!--
+--><div role="main" class="grid">
+
+	<div class="block block-content-header">
+		<div class="grid__item palm--one-whole push--palm--none three-quarters push--one-quarter">
+				<h1 class="title">Blog</h1>
+				<p class="subhead grid grid__item desk--one-half">
+					<a href="http://europeana.eu" title="Europeana Search Portal">Europeana</a> is a database of some 30 million cultural and historical documents, images, sound and video files from Europe's museums, libraries, galleries and archives.
+				</p>
+		</div>
+	</div>
+	
+	{% include blog-subnav.html %}
+	
+	{{ content}}<!--
+--></div>
+{% include footer.html %}<!--
+-->{% include end.html %}

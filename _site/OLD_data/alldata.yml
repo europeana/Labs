@@ -1,0 +1,70 @@
+---
+  version: "1.0"
+  encoding: "UTF-8"
+  feed: 
+    xmlns: "http://www.w3.org/2005/Atom"
+    xmlns$openSearch: "http://a9.com/-/spec/opensearchrss/1.0/"
+    xmlns$gsx: "http://schemas.google.com/spreadsheets/2006/extended"
+    id: 
+      $t: "https://spreadsheets.google.com/feeds/list/0AkgODhu1_EEkdGw3T3BRLWNFbVkxTkNoVHFXekFNd2c/1/public/values"
+    updated: 
+      $t: "2014-01-22T15:11:44.010Z"
+    category: 
+      - 
+        scheme: "http://schemas.google.com/spreadsheets/2006"
+        term: "http://schemas.google.com/spreadsheets/2006#list"
+    title: 
+      type: "text"
+      $t: "datasets"
+    link: 
+      - 
+        rel: "alternate"
+        type: "text/html"
+        href: "https://spreadsheets.google.com/pub?key=0AkgODhu1_EEkdGw3T3BRLWNFbVkxTkNoVHFXekFNd2c"
+      - 
+        rel: "http://schemas.google.com/g/2005#feed"
+        type: "application/atom+xml"
+        href: "https://spreadsheets.google.com/feeds/list/0AkgODhu1_EEkdGw3T3BRLWNFbVkxTkNoVHFXekFNd2c/1/public/values"
+      - 
+        rel: "self"
+        type: "application/atom+xml"
+        href: "https://spreadsheets.google.com/feeds/list/0AkgODhu1_EEkdGw3T3BRLWNFbVkxTkNoVHFXekFNd2c/1/public/values?alt=json"
+    author: 
+      - 
+        name: 
+          $t: "b"
+        email: 
+          $t: "b@breandan.org"
+    openSearch$totalResults: 
+      $t: "1"
+    openSearch$startIndex: 
+      $t: "1"
+    entry: 
+      - 
+        id: 
+          $t: "https://spreadsheets.google.com/feeds/list/0AkgODhu1_EEkdGw3T3BRLWNFbVkxTkNoVHFXekFNd2c/1/public/values/cokwr"
+        updated: 
+          $t: "2014-01-22T15:11:44.010Z"
+        category: 
+          - 
+            scheme: "http://schemas.google.com/spreadsheets/2006"
+            term: "http://schemas.google.com/spreadsheets/2006#list"
+        title: 
+          type: "text"
+          $t: "Maps and Drawings from the Catálogo Colectivo de la Red de Bibliotecas de los Archivos Estatales"
+        content: 
+          type: "text"
+          $t: "provider: Catálogo Colectivo de la Red de Bibliotecas de los Archivos Estatales, contact: ccbae.dglab@mcu.es, description: More than 7,000 Maps, city plans & architectural drawings/plans from the Catálogo Colectivo de la Red de Bibliotecas de los Archivos Estatales. The collection is a union catalog of state archives and libraries in Spain. Spanish language."
+        link: 
+          - 
+            rel: "self"
+            type: "application/atom+xml"
+            href: "https://spreadsheets.google.com/feeds/list/0AkgODhu1_EEkdGw3T3BRLWNFbVkxTkNoVHFXekFNd2c/1/public/values/cokwr"
+        gsx$name: 
+          $t: "Maps and Drawings from the Catálogo Colectivo de la Red de Bibliotecas de los Archivos Estatales"
+        gsx$provider: 
+          $t: "Catálogo Colectivo de la Red de Bibliotecas de los Archivos Estatales"
+        gsx$contact: 
+          $t: "ccbae.dglab@mcu.es"
+        gsx$description: 
+          $t: "More than 7,000 Maps, city plans & architectural drawings/plans from the Catálogo Colectivo de la Red de Bibliotecas de los Archivos Estatales. The collection is a union catalog of state archives and libraries in Spain. Spanish language."

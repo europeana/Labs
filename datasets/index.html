@@ -1,0 +1,68 @@
+---
+layout: data-list
+---
+<script>
+	$(document).ready(function(){
+		
+		$("div.pagination-holder").jPages({
+	    	containerID : "DatasetsList",
+	    	perPage: 5
+	    });
+	});
+</script>
+<div class="grid__item palm--one-whole three-quarters">
+    <ul id="DatasetsList"  class="post-list grid">
+        {% for dataset in site.categories.datasets %}<!--
+        --><li class="grid__item one-whole {% for tag in dataset.tags %}{{tag | tags_links}} {% endfor %}">
+            <div class="block block-thumb  {%if counter > 1 %} block-thumb-small {% endif %}">
+
+				{% if dataset.imageurl.first.match(/^http/) %}
+					<div class="b-thumb">
+	                    <img src="{{site.baseurl}}{{dataset.imageurl.first}}" alt="{{dataset.name}}">
+	                </div>
+                {%else%}
+	                <div class="b-thumb">
+	                    <img src="{{dataset.imageurl.first}}" alt="{{dataset.name}}">
+	                </div>
+				{% endif %}
+                
+
+                <div class="b-text">
+                    <!--<h1 class="headline gamma"><a href="{{dataset.links.portal}}">{{dataset.name}}</a></h1>-->
+                    <h1 class="headline gamma">{{dataset.title}}</h1>
+					<div class="prose">
+	                    <div class="description">
+	                        {{dataset.description}}                        
+	                    </div>
+						<p><small>Dataset provided by <a href="{{dataset.providerurl}}" title="Link to {{dataset.provider}}">{{dataset.provider}}</a>. Contact <a href="mailto:{{dataset.contact}}">{{dataset.contact}}</a> for more details.</small></p>
+						{%if dataset.licenses %}
+							<ul class="sg-icons inline-list">
+							{% for license in dataset.licenses %}
+								<li class="icon-license-{{license}}"></li>
+							{% endfor %}
+							</ul>
+						{% else %}
+							<br />
+						{% endif %}
+					</div>
+					<h6>View this data in:</h6>
+					<a href="{{dataset.portal}}" title="View {{dataset.name}} in Europeana" class="btn">Portal</a>
+					<a href="{{dataset.console}}" title="View {{dataset.name}} in the API Console" class="btn">API Console</a>
+                    <div class="tags">
+                        <i class="icon icon-tag"></i>
+						{% for tag in dataset.tags %}
+							<a href="#{{tag | tags_links}}" rel="{{tag | tags_links}}" class="tag_alt datasetstag-at-item">{{tag}}</a>
+						{% endfor %}
+						
+						
+                    </div>
+                </div>
+            </div>
+        </li>{% endfor %}
+    </ul>
+    
+    <div class="pagination-holder">
+    	
+    </div>
+    <br/>
+</div>
