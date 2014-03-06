@@ -264,16 +264,16 @@ ORE* Proxy. Europeana uses proxies as place-holders for cultural heritage object
 
 | Field | Qualified Name | Datatype | Description |
 |:-------------|:-------------|:-----|:-----|
-|about|     rdf:about|     String|     URI of the webResource |
-|webResourceDcRights|     dc:rights|     LangMap|     Free text information about the rights in this object. |
-|webResourceEdmRights|     edm:rights|     LangMap|     URI of the licence applied to the WebResource |
-|dcDescription|     dc:description|     LangMap|     An account of the resource. |
-|dcFormat|     dc:format|     LangMap|     The file format, physical medium or dimensions of the resource. |
-|dcSource|     dc:source|     LangMap|     A related resource from which the described resource is derived in whole or in part. |
-|dctermsExtent|     dcterms:extent|     LangMap|     The size or duration of the resource.|
-|dctermsIssued|     dcterms:issued|     LangMap|     Date of formal issuance (e.g., publication) of the resource.|
-|dctermsConformsTo|     dcterms:conformsTo|     LangMap|     An established standard to which the described resource conforms.|
-|dctermsCreated|     dcterms:created|     LangMap|     Date of creation of the resource.|
-|dctermsIsFormatOf|     dcterms:isFormatOf|     LangMap|     A related resource that is substantially the same as the described resource, but in another format.|
-|dctermsHasPart|     dcterms:hasPart|     LangMap|     A related resource that is included either physically or logically in the described resource.|
-|isNextInSequence|     edm:isNextInSequence|     String|     edm:isNextInSequence relates two resources S and R that are ordered parts of the same resource A, and such that S comes immediately after R in the order created by their being parts of A.|
+| about | rdf:about | String | URI of the webResource |
+| webResourceDcRights | dc:rights | LangMap | Free text information about the rights in this object. |
+| webResourceEdmRights | edm:rights | LangMap | The value in this element will indicate the usage and access rights that apply to this digital representation. The rights statement specified at the level of the web resource will ‘override’ the statement specified at the level of the aggregation. The value in this element is a URI taken from the set of those defined for use in Europeana.  A list of these can be found at http://pro.europeana.eu/web/available-rights-statements. |
+| dcDescription | dc:description | LangMap | An account or description of this digital representation. |
+| dcFormat | dc:format | LangMap | The file format, physical medium or dimensions of the resource. |
+| dcSource | dc:source | LangMap | A related resource from which the web resource is derived in whole or in part. |
+| dctermsExtent | dcterms:extent | LangMap | The size or duration of the digital resource. |
+| dctermsIssued | dcterms:issued | LangMap | Date of formal issuance (e.g., publication) of the resource. |
+| dctermsConformsTo | dcterms:conformsTo | LangMap | An established standard to which the web resource conforms. |
+| dctermsCreated | dcterms:created | LangMap | Date of creation of the web resource. |
+| dctermsIsFormatOf | dcterms:isFormatOf | LangMap | A related resource that is substantially the same as the described resource, but in another format. |
+| dctermsHasPart | dcterms:hasPart | LangMap | A related resource that is included either physically or logically in the web resource. |
+| isNextInSequence | edm:isNextInSequence | String | Where one CHO has several web resources, shown by multiple instances of the edm:hasView property on the ore:Aggregation this property can be used to show the sequence of the objects.  Each web resource (apart from the first in the sequence) should use this property to give the URI of the preceding resource in the sequence. |
