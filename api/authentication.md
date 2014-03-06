@@ -18,7 +18,7 @@ This form of authentication is used when an application wishes to access MyEurop
 
 with the following two parameters that contain authentication credentials:
 
-| Parameter | Description| 
+|Parameter|Description|
 |:-------------|:-------------|
 |j_username | Your PUBLIC apikey |
 |j_password | Your PRIVATE apikey |
