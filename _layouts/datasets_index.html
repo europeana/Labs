@@ -18,11 +18,11 @@ layout: data-list
 
 				{% if dataset.imageurl.first.match(/^http/) %}
 					<div class="b-thumb">
-	                    <img src="{{site.baseurl}}{{dataset.imageurl.first}}" alt="{{dataset.name}}">
+	                    <img src="{{site.baseurl}}{{dataset.imageurl.first}}" alt="{{dataset.title}}">
 	                </div>
                 {%else%}
 	                <div class="b-thumb">
-	                    <img src="{{dataset.imageurl.first}}" alt="{{dataset.name}}">
+	                    <img src="{{dataset.imageurl.first}}" alt="{{dataset.title}}">
 	                </div>
 				{% endif %}
                 

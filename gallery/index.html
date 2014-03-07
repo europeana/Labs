@@ -18,11 +18,20 @@ layout: gallery-list
         --><li class="grid__item one-whole desk--one-half">
             <div class="block block-thumb {%if post.featured != true %}  block-thumb-small {% endif %}">
 
-                <div class="b-thumb">
-                    <a href="{{site.baseurl}}{{post.url}}">
-                        <img src="{{site.baseurl}}{{post.imageurl.first}}" alt="{{post.title}}">
-                    </a>
-                </div>
+               
+                {% if dataset.imageurl.first.match(/^http/) %}
+					<div class="b-thumb">
+						 <a href="{{site.baseurl}}{{post.url}}">
+	                    	<img src="{{site.baseurl}}{{post.imageurl.first}}" alt="{{post.title}}">
+	                      </a>
+	                </div>
+                {%else%}
+	                <div class="b-thumb">
+	                	<a href="{{site.baseurl}}{{post.url}}">
+	                    	<img src="{{post.imageurl.first}}" alt="{{post.name}}">
+	                   </a>
+	                </div>
+				{% endif %}
 
                 <div class="b-text">
 
