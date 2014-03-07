@@ -1,3 +1,4 @@
+_site/
 .bundle/install.log
 .bundle/
 .DS_Store

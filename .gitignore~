@@ -2,6 +2,5 @@
 .bundle/
 .DS_Store
 .ruby-version
-_site/
 _plugins/jekyll_lunr_js_search.rb
 *.log
