@@ -188,26 +188,26 @@ ORE* Proxy. Europeana uses proxies as place-holders for cultural heritage object
 
 | Field | Qualified Name | Datatype | Description |
 |:-------------|:-------------|:-----|:-----|
-|about|     rdf:about|     String|     Defines the resource being described |
-|dcContributor|     dc:contributor|     LangMap|     An entity responsible for making contributions to the resource.|
-|dcCoverage|     dc:coverage|     LangMap|     The spatial or temporal topic of the resource, the spatial applicability of the resource, or the jurisdiction under which the resource is relevant.|
-|dcCreator|     dc:creator|     LangMap|     An entity primarily responsible for making the resource. This may be a person, organisation or a service.|
-|dcDate|     dc:date|     LangMap|     A point or period of time associated with an event in the lifecycle of the resource.|
-|dcDescription|     dc:description|     LangMap|     An account of the resource.|
-|dcFormat|     dc:format|     LangMap|     The file format, physical medium or dimensions of the resource.|
-|dcIdentifier|     dc:identifier|     LangMap|     An unambiguous reference to the resource within a given context.|
-|dcLanguage|     dc:language|     LangMap|     A language of the resource |
-|dcPublisher|     dc:publisher|     LangMap|     An entity responsible for making the resource available. Examples of a publisher include a person, an organisation and a service.|
-|dcRelation|     dc:relation|     LangMap|     A related resource. The recommended best practice is to identify the resource using a formal identification scheme.|
-|dcRights|     dc:rights|     LangMap|     Information about rights held in and over the resource.|
-|dcSource|     dc:source|     LangMap|     A related resource from which the described resource is derived in whole or in part.|
-|dcSubject|     dc:subject|     LangMap|     The topic of the resource.|
-|dcTitle|     dc:title|     LangMap|     A name given to the resource. Typically, a Title will be a name by which the resource is formally known.|
-|dcType|     dc:type|     LangMap|     The nature or genre of the resource. Type includes terms describing general categories, functions, genres, or aggregation levels for content.|
-|dctermsAlternative|     dcterms:alternative|     LangMap|     An alternative name for the resource. This can be any form of the title that is used as a substitute or an alternative to the formal title of the resource including abbreviations or translations of the title.|
-|dctermsConformsTo|     dcterms:conformsTo|     LangMap|     An established standard to which the described resource conforms.|
-|dctermsCreated|     dcterms:created|     LangMap|     Date of creation of the resource.|
-|dctermsExtent|     dcterms:extent|     LangMap|     The size or duration of the resource.|
+| about | rdf:about | String | Defines the resource being described |
+| dcContributor | dc:contributor | LangMap | An entity responsible for making contributions to the resource. |
+| dcCoverage | dc:coverage | LangMap | The spatial or temporal topic of the resource, the spatial applicability of the resource, or the jurisdiction under which the resource is relevant. |
+| dcCreator | dc:creator | LangMap | An entity primarily responsible for making the resource. This may be a person, organisation or a service. |
+| dcDate | dc:date | LangMap | A point or period of time associated with an event in the lifecycle of the resource. |
+| dcDescription | dc:description | LangMap | A description of the resource. |
+| dcFormat | dc:format | LangMap | The file format, physical medium or dimensions of the resource. |
+| dcIdentifier | dc:identifier | LangMap | An unambiguous reference to the resource within a given context. |
+| dcLanguage | dc:language | LangMap | A language of the resource |
+| dcPublisher | dc:publisher | LangMap | An entity responsible for making the resource available. Examples of a publisher include a person, an organisation and a service. |
+| dcRelation | dc:relation | LangMap | The name or identifier of a related resource, generally used for other related CHOs. The recommended best practice is to identify the resource using a formal identification scheme. |
+| dcRights | dc:rights | LangMap | Name of the rights holder of the CHO or more general rights information.  (Note that the controlled edm:rights property relates to the digital objects and applies to the edm:WebResource and/or edm:Aggregation). |
+| dcSource | dc:source | LangMap | A related resource from which the described resource is derived in whole or in part, i.e. the source of the original CHO. |
+| dcSubject | dc:subject | LangMap | The topic of the resource. |
+| dcTitle | dc:title | LangMap | A name given to the resource. Typically, a Title will be a name by which the resource is formally known. |
+| dcType | dc:type | LangMap | The nature or genre of the resource. Type includes terms describing general categories, functions, genres, or aggregation levels for content. |
+| dctermsAlternative | dcterms:alternative | LangMap | An alternative name for the resource. This can be any form of the title that is used as a substitute or an alternative to the formal title of the resource including abbreviations or translations of the title. |
+| dctermsConformsTo | dcterms:conformsTo | LangMap | An established standard to which the described resource conforms. |
+| dctermsCreated | dcterms:created | LangMap | Date of creation of the resource. |
+| dctermsExtent | dcterms:extent | LangMap | The size or duration of the resource. |
 |dctermsHasFormat|     dcterms:hasFormat|     LangMap|     A related resource that is substantially the same as the pre-existing described resource, but in another format.|
 |dctermsHasPart|     dcterms:hasPart|     LangMap|     A related resource that is included either physically or logically in the described resource.|
 |dctermsHasVersion|     dcterms:hasVersion|     LangMap|     A related resource that is a version, edition, or adaptation of the described resource. Changes in version imply substantive changes in content rather than differences in format.|
