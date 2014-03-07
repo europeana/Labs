@@ -1,12 +1,15 @@
 $(document).ready(function(){
+	
+	semLabs.initMenu();
+	
 	try{
 		convertEmails();
-		semLabs.initMenu();
-	
 		}catch(e){
 			//alert(e.message);
 		}
+
 	
+		
 	$("#homepage").parent().attr("id", "homepagebody");
 	
 	$("#hamMenu").click(function(){
@@ -125,6 +128,7 @@ function convertEmails() {
 var semLabs = {
 	initMenu:function(){
 		$("nav a").removeClass("current");
+		
 		var baseUrl = $("a.logo").attr("href").toString();
 		var currentUrl = window.location.pathname;
 		
