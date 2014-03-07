@@ -74,7 +74,7 @@ An EDM Agent object. This EDM Agent class comprises people, either individually 
 | edmHasMet | edm:hasMet | LangMap | Reference to another entity which the agent has “met” in a broad sense. For example a reference to a Place class. |
 | edmIsRelatedTo | edm:isRelatedTo | LangMap | Reference to other entities, particularly other agents, with whom the agent is related in a generic sense. |
 | owlSameAs | owl:sameAs | Array(String) | Another URI of the same agent. |
-| foafName | foaf:name | LangMap | The name of the agent as a simple textual string. |    
+| foafName | foaf:name | LangMap | The name of the agent as a simple textual string. |
 | dcDate | dc:date | LangMap | A significant date associated with the agent. |
 | dcIdentifier | dc:identifier | LangMap | An identifier of the agent. |
 | rdaGr2DateOfBirth | rdaGr2:dateOfBirth | LangMap | The date the agent (person) was born. |
