@@ -11,7 +11,6 @@ Retrieve a single record from the Europeana dataset. A terminological note: TBD.
 
     http://europeana.eu/api/v2/record/[recordID].json
     
-    
 ## Request
 
 | Parameter | Datatype | Description |
@@ -184,6 +183,7 @@ EDM ProvidedCHO (Provided Cultural Heritage Object). This class comprises the Cu
 ### EDM Proxy 
 
 ORE* Proxy. Europeana uses proxies as place-holders for cultural heritage objects within aggregations (whether Europeana aggregations or not) to the end of making assertions about the corresponding cultural heritage objects while distinguishing the provenance of these assertions. This class is used to create aliases of cultural heritage objects to which descriptions are attached. This allows Europeana to keep track of provenance of descriptions. See chapter 6.1 Introducing proxies in the EDM primer
+
 * ORE stands for Open Archives Initiative Object Reuse and Exchange
 
 | Field | Qualified Name | Datatype | Description |
@@ -266,7 +266,7 @@ ORE* Proxy. Europeana uses proxies as place-holders for cultural heritage object
 |:-------------|:-------------|:-----|:-----|
 | about | rdf:about | String | URI of the webResource |
 | webResourceDcRights | dc:rights | LangMap | Free text information about the rights in this object. |
-| webResourceEdmRights | edm:rights | LangMap | The value in this element will indicate the usage and access rights that apply to this digital representation. The rights statement specified at the level of the web resource will ‘override’ the statement specified at the level of the aggregation. The value in this element is a URI taken from the set of those defined for use in Europeana.  A list of these can be found at http://pro.europeana.eu/web/available-rights-statements. |
+| webResourceEdmRights | edm:rights | LangMap | The value in this element will indicate the usage and access rights that apply to this digital representation. The rights statement specified at the level of the web resource will ‘override’ the statement specified at the level of the aggregation. The value in this element is a URI taken from the set of those defined for use in Europeana.  A list of these can be found at [http://pro.europeana.eu/web/available-rights-statements](http://pro.europeana.eu/web/available-rights-statements). |
 | dcDescription | dc:description | LangMap | An account or description of this digital representation. |
 | dcFormat | dc:format | LangMap | The file format, physical medium or dimensions of the resource. |
 | dcSource | dc:source | LangMap | A related resource from which the web resource is derived in whole or in part. |
