@@ -56,36 +56,6 @@ Retrieve a single record from the Europeana dataset. A terminological note: TBD.
 |year|     Array (String)| TBD |
 
 
-### EDM Agent
-
-An EDM Agent object. This EDM Agent class comprises people, either individually or in groups, who have the potential to perform intentional actions for which they can be held responsible. Find more in the EDM Definition.
-
-
-| Field | Qualified Name | Datatype | Description |
-|:-------------|:-------------|:-----|:-----|
-| about | rdf:about | String | The URI of the object, usually a DBpedia URL. |
-| prefLabel | skos:prefLabel | LangMap | The preferred form of the name of the agent.|
-| altLabel | skos:altLabel | LangMap | Alternative forms of the name of the agent.|
-| hiddenLabel |  skos:hiddenLabel | LangMap | SKOS hidden lexical label. (Accessible to text-based indexing and search applications, but not visible otherwise) |
-| note | skos:note | LangMap | A note about the agent e.g. biographical notes. |
-| begin | edm:begin | LangMap | The date the agent was born/established. |
-| end | edm:end | LangMap | The date the agent died/terminated. |
-| edmWasPresentAt | edm:wasPresentAt | Array(String) | Consult the EDM Definition. |
-| edmHasMet | edm:hasMet | LangMap | Reference to another entity which the agent has “met” in a broad sense. For example a reference to a Place class. |
-| edmIsRelatedTo | edm:isRelatedTo | LangMap | Reference to other entities, particularly other agents, with whom the agent is related in a generic sense. |
-| owlSameAs | owl:sameAs | Array(String) | Another URI of the same agent. |
-| foafName | foaf:name | LangMap | The name of the agent as a simple textual string. |
-| dcDate | dc:date | LangMap | A significant date associated with the agent. |
-| dcIdentifier | dc:identifier | LangMap | An identifier of the agent. |
-| rdaGr2DateOfBirth | rdaGr2:dateOfBirth | LangMap | The date the agent (person) was born. |
-| rdaGr2DateOfDeath | rdaGr2:dateOfDeath | LangMap | The date the agent (person) died. |
-| rdaGr2DateOfEstablishment | rdaGr2:dateOfEstablishment | LangMap | The date on which the agent (corporate body) was established or founded. |
-| rdaGr2DateOfTermination | rdaGr2:dateOfTermination | LangMap | The date on which the agent (corporate body) was terminated or dissolved. |
-| rdaGr2Gender | rdaGr2:gender | LangMap | The gender with which the agent identifies. |
-| rdaGr2ProfessionOrOccupation | rdaGr2:professionOrOccupation | LangMap | The profession or occupation in which the agent works or has worked. |
-| rdaGr2BiographicalInformation | rdaGr2:biographicalInformation | LangMap | Information pertaining to the life or history of the agent. |
-
-
 ### EDM Aggregation
 
 
@@ -108,30 +78,6 @@ EDM Aggregation. The set of resources related to a single cultural heritage obje
 | edmUnstored | edm:unstored | Array(String) | This property should not be used and is only included here for backward compatibility with ESE. |
 | webResources | edm:WebResource | Array([WebResource](#WebResource)) | Information Resources that have at least one Web Representation and at least a URI. |
 
-### EDM Concept
-
-SKOS* Concept. A SKOS concept can be viewed as an idea or notion; a unit of thought. All element of this class belong to the skos namespace.
-* SKOS stands for Simple Knowledge Organization System, a W3C standard
-
-| Field | Qualified Name | Datatype | Description |
-|:-------------|:-------------|:-----|:-----|
-| about | rdf:about | String | Defines the resource being described |
-| prefLabel | skos:prefLabel | LangMap | The preferred form of the name of the concept. |
-| altLabel | skos:altLabel | LangMap | Alternative forms of the name of the concept. |
-| hiddenLabel | skos:hiddenLabel | LangMap | A hidden lexical label, represented by means of the skos:hiddenLabel property, is a lexical label for a resource, where a KOS designer would like that character string to be accessible to applications performing text-based indexing and search operations, but would not like that label to be visible otherwise. |
-| note | skos:note | LangMap | Information relating to the concept. |
-| broader | skos:broader | Array(String) | The identifier of a broader concept in the same thesaurus or controlled vocabulary. |
-| narrower | skos:narrower | Array(String) | The identifier of a narrower concept. |
-| related | skos:related | Array(String) | The identifier of a related concept. |
-| broadMatch | skos:broadMatch | Array(String) | The identifier of a broader matching concepts from other concept schemes. |
-| narrowMatch | skos:narrowMatch | Array(String) | The identifier of a narrower matching concepts from other concept schemes. |
-| exactMatch | skos:exactMatch | Array(String) | The identifier of exactly matching concepts from other concept schemes. |
-| relatedMatch | skos:relatedMatch | Array(String) | The identifier of a related matching concepts from other concept schemes. |
-| closeMatch | skos:closeMatch | Array(String) | The identifier of close matching concepts from other concept schemes. |
-| notation | skos:skosnotation | LangMap | The notation in which the concept is represented.  This may not be words in natural language for some knowledge organisation systems e.g. algebra. |
-| inScheme | skos:inScheme | Array(String) | The URI of a concept scheme. |
-
-
 ### EDM EuropeanaAggregation 
 
 EDM Europeana Aggregation. The set of resources related to a single cultural heritage object that collectively represent that object in Europeana. Such set consists of: all descriptions about the object that Europeana collects from (possibly different) content providers, including thumbnails and other forms of abstractions, as well as of the description of the object Europeana builds.
@@ -151,24 +97,6 @@ EDM Europeana Aggregation. The set of resources related to a single cultural her
 |edmRights|     edm:rights|     LangMap|     Information about copyright of the digital object as specified by isShownBy and isShownAt.|
 |edmPreview|     edm:preview|     String|     |
 
-### EDM Place
-
-EDM Place. An "extent in space, in particular on the surface of the earth, in the pure sense of physics: independent from temporal phenomena and matter" (CIDOC CRM).
-
-| Field | Qualified Name | Datatype | Description |
-|:-------------|:-------------|:-----|:-----|
-| about | rdf:about | String | Defines the resource being described |
-| prefLabel | skos:prefLabel | LangMap | The preferred form of the name of the place. |
-| altLabel | skos:altLabel | LangMap | Alternative forms of the name of the place. |
-| hiddenLabel | skos:hiddenLabel | LangMap | A hidden lexical label, represented by means of the skos:hiddenLabel property, is a lexical label for a resource, where a KOS designer would like that character string to be accessible to applications performing text-based indexing and search operations, but would not like that label to be visible otherwise. |
-| note | skos:note | LangMap | Information relating to the place. |
-| isPartOf | dcterms:isPartOf | LangMap | Reference to a place that the described place is part of. |
-| latitude | wgs84:lat | Number | The latitude of a spatial thing (decimal degrees). |
-| longitude | wgs84:long | Number | The longitude of a spatial thing (decimal degrees). |
-| altitude | wgs84:alt | Number | The altitude of a spatial thing (decimal metres above the reference). |
-| position | wgs84:lat_long | Object | A comma-separated representation of a latitude, longitude coordinate. |
-| dcTermsHasPart | dcterms:hasPart | LangMap | Reference to a place that is part of the place being described. |
-| owlSameAs | owl:sameAs | Array(String) | URI of a Place. |
 
 ### EDM ProvidedCHO
 
@@ -244,21 +172,6 @@ ORE* Proxy. Europeana uses proxies as place-holders for cultural heritage object
 |proxyFor|     ore:proxyFor|     String|     Proxy objects are used to represent a resource as it is aggregated in a particular aggregation. The ore:proxyFor relationship is used to link the proxy to the aggregated resource it is a proxy for. The subject of the relationship is a proxy object, and the object of the relationship is the aggregated resource.|
 |proxyIn|     ore:proxyIn|     Array (String)|     Proxy objects must also link to the aggregation in which the resource being proxied is aggregated. The ore:proxyIn relationship is used for this purpose. The subject of the relationship is a proxy object, and the object of the relationship is the aggregation.|
 
-### EDM Timespan
-
-| Field | Qualified Name | Datatype | Description |
-|:-------------|:-------------|:-----|:-----|
-| about | rdf:about | String | Defines the resource being described. |
-| prefLabel | skos:prefLabel | LangMap | The preferred form of the name of the timespan or period. |
-| altLabel | skos:altLabel | LangMap | Alternative forms of the name of the timespan or period. |
-| hiddenLabel | skos:hiddenLabel | LangMap | A hidden lexical label, represented by means of the skos:hiddenLabel property, is a lexical label for a resource, where a KOS designer would like that character string to be accessible to applications performing text-based indexing and search operations, but would not like that label to be visible otherwise. |
-| note | skos:note | LangMap | Information relating to the timespan or period. |
-| begin | edm:begin | LangMap | The date the timespan started. |
-| end | edm:end | LangMap | The date the timespan finished. |
-| isPartOf | dcterms:isPartOf | LangMap | Reference to a timespan of which the described timespan is a part. |
-| dctermsHasPart | dcterms:hasPart | LangMap | Reference to a timespan which is part of the described timespan. |
-| owlSameAs | owl:sameAs | Array(String) | The URI of a timespan. |
-
 
 ### EDM WebResource
 
@@ -277,3 +190,94 @@ ORE* Proxy. Europeana uses proxies as place-holders for cultural heritage object
 | dctermsIsFormatOf | dcterms:isFormatOf | LangMap | A related resource that is substantially the same as the described resource, but in another format. |
 | dctermsHasPart | dcterms:hasPart | LangMap | A related resource that is included either physically or logically in the web resource. |
 | isNextInSequence | edm:isNextInSequence | String | Where one CHO has several web resources, shown by multiple instances of the edm:hasView property on the ore:Aggregation this property can be used to show the sequence of the objects.  Each web resource (apart from the first in the sequence) should use this property to give the URI of the preceding resource in the sequence. |
+
+### Contextual resources
+
+#### EDM Agent
+
+An EDM Agent object. This EDM Agent class comprises people, either individually or in groups, who have the potential to perform intentional actions for which they can be held responsible. Find more in the EDM Definition.
+
+
+| Field | Qualified Name | Datatype | Description |
+|:-------------|:-------------|:-----|:-----|
+| about | rdf:about | String | The URI of the object, usually a DBpedia URL. |
+| prefLabel | skos:prefLabel | LangMap | The preferred form of the name of the agent.|
+| altLabel | skos:altLabel | LangMap | Alternative forms of the name of the agent.|
+| hiddenLabel |  skos:hiddenLabel | LangMap | SKOS hidden lexical label. (Accessible to text-based indexing and search applications, but not visible otherwise) |
+| note | skos:note | LangMap | A note about the agent e.g. biographical notes. |
+| begin | edm:begin | LangMap | The date the agent was born/established. |
+| end | edm:end | LangMap | The date the agent died/terminated. |
+| edmWasPresentAt | edm:wasPresentAt | Array(String) | Consult the EDM Definition. |
+| edmHasMet | edm:hasMet | LangMap | Reference to another entity which the agent has “met” in a broad sense. For example a reference to a Place class. |
+| edmIsRelatedTo | edm:isRelatedTo | LangMap | Reference to other entities, particularly other agents, with whom the agent is related in a generic sense. |
+| owlSameAs | owl:sameAs | Array(String) | Another URI of the same agent. |
+| foafName | foaf:name | LangMap | The name of the agent as a simple textual string. |
+| dcDate | dc:date | LangMap | A significant date associated with the agent. |
+| dcIdentifier | dc:identifier | LangMap | An identifier of the agent. |
+| rdaGr2DateOfBirth | rdaGr2:dateOfBirth | LangMap | The date the agent (person) was born. |
+| rdaGr2DateOfDeath | rdaGr2:dateOfDeath | LangMap | The date the agent (person) died. |
+| rdaGr2DateOfEstablishment | rdaGr2:dateOfEstablishment | LangMap | The date on which the agent (corporate body) was established or founded. |
+| rdaGr2DateOfTermination | rdaGr2:dateOfTermination | LangMap | The date on which the agent (corporate body) was terminated or dissolved. |
+| rdaGr2Gender | rdaGr2:gender | LangMap | The gender with which the agent identifies. |
+| rdaGr2ProfessionOrOccupation | rdaGr2:professionOrOccupation | LangMap | The profession or occupation in which the agent works or has worked. |
+| rdaGr2BiographicalInformation | rdaGr2:biographicalInformation | LangMap | Information pertaining to the life or history of the agent. |
+
+
+#### EDM Concept
+
+SKOS* Concept. A SKOS concept can be viewed as an idea or notion; a unit of thought. All element of this class belong to the skos namespace.
+* SKOS stands for Simple Knowledge Organization System, a W3C standard
+
+| Field | Qualified Name | Datatype | Description |
+|:-------------|:-------------|:-----|:-----|
+| about | rdf:about | String | Defines the resource being described |
+| prefLabel | skos:prefLabel | LangMap | The preferred form of the name of the concept. |
+| altLabel | skos:altLabel | LangMap | Alternative forms of the name of the concept. |
+| hiddenLabel | skos:hiddenLabel | LangMap | A hidden lexical label, represented by means of the skos:hiddenLabel property, is a lexical label for a resource, where a KOS designer would like that character string to be accessible to applications performing text-based indexing and search operations, but would not like that label to be visible otherwise. |
+| note | skos:note | LangMap | Information relating to the concept. |
+| broader | skos:broader | Array(String) | The identifier of a broader concept in the same thesaurus or controlled vocabulary. |
+| narrower | skos:narrower | Array(String) | The identifier of a narrower concept. |
+| related | skos:related | Array(String) | The identifier of a related concept. |
+| broadMatch | skos:broadMatch | Array(String) | The identifier of a broader matching concepts from other concept schemes. |
+| narrowMatch | skos:narrowMatch | Array(String) | The identifier of a narrower matching concepts from other concept schemes. |
+| exactMatch | skos:exactMatch | Array(String) | The identifier of exactly matching concepts from other concept schemes. |
+| relatedMatch | skos:relatedMatch | Array(String) | The identifier of a related matching concepts from other concept schemes. |
+| closeMatch | skos:closeMatch | Array(String) | The identifier of close matching concepts from other concept schemes. |
+| notation | skos:skosnotation | LangMap | The notation in which the concept is represented.  This may not be words in natural language for some knowledge organisation systems e.g. algebra. |
+| inScheme | skos:inScheme | Array(String) | The URI of a concept scheme. |
+
+
+#### EDM Place
+
+EDM Place. An "extent in space, in particular on the surface of the earth, in the pure sense of physics: independent from temporal phenomena and matter" (CIDOC CRM).
+
+| Field | Qualified Name | Datatype | Description |
+|:-------------|:-------------|:-----|:-----|
+| about | rdf:about | String | Defines the resource being described |
+| prefLabel | skos:prefLabel | LangMap | The preferred form of the name of the place. |
+| altLabel | skos:altLabel | LangMap | Alternative forms of the name of the place. |
+| hiddenLabel | skos:hiddenLabel | LangMap | A hidden lexical label, represented by means of the skos:hiddenLabel property, is a lexical label for a resource, where a KOS designer would like that character string to be accessible to applications performing text-based indexing and search operations, but would not like that label to be visible otherwise. |
+| note | skos:note | LangMap | Information relating to the place. |
+| isPartOf | dcterms:isPartOf | LangMap | Reference to a place that the described place is part of. |
+| latitude | wgs84:lat | Number | The latitude of a spatial thing (decimal degrees). |
+| longitude | wgs84:long | Number | The longitude of a spatial thing (decimal degrees). |
+| altitude | wgs84:alt | Number | The altitude of a spatial thing (decimal metres above the reference). |
+| position | wgs84:lat_long | Object | A comma-separated representation of a latitude, longitude coordinate. |
+| dcTermsHasPart | dcterms:hasPart | LangMap | Reference to a place that is part of the place being described. |
+| owlSameAs | owl:sameAs | Array(String) | URI of a Place. |
+
+#### EDM Timespan
+
+| Field | Qualified Name | Datatype | Description |
+|:-------------|:-------------|:-----|:-----|
+| about | rdf:about | String | Defines the resource being described. |
+| prefLabel | skos:prefLabel | LangMap | The preferred form of the name of the timespan or period. |
+| altLabel | skos:altLabel | LangMap | Alternative forms of the name of the timespan or period. |
+| hiddenLabel | skos:hiddenLabel | LangMap | A hidden lexical label, represented by means of the skos:hiddenLabel property, is a lexical label for a resource, where a KOS designer would like that character string to be accessible to applications performing text-based indexing and search operations, but would not like that label to be visible otherwise. |
+| note | skos:note | LangMap | Information relating to the timespan or period. |
+| begin | edm:begin | LangMap | The date the timespan started. |
+| end | edm:end | LangMap | The date the timespan finished. |
+| isPartOf | dcterms:isPartOf | LangMap | Reference to a timespan of which the described timespan is a part. |
+| dctermsHasPart | dcterms:hasPart | LangMap | Reference to a timespan which is part of the described timespan. |
+| owlSameAs | owl:sameAs | Array(String) | The URI of a timespan. |
+
