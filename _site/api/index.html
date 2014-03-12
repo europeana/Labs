@@ -81,60 +81,32 @@
 	</div>
 	
 	<div class="grid__item one-quarter palm--one-whole">
-		<ul class="tabs tabs-v">
+
+				<ul class="tabs tabs-v">
 			<li><a href="/api" title="API Introduction">Introduction</a></li>
-			<li><a href="/api/getting-started" title="Getting Started with the Europeana API">Getting Started</a></li>
+			<li><a href="/api/getting-started" title="Getting Started with the Europeana API">Essentials</a></li>
 			<li><a href="http://europeana.eu/portal/api/registration.html" title="API Registration">Registration</a></li>
 			<li><a href="http://europeana.eu/portal/api/console.html" title="API Console">Console</a></li>
 			<li><a href="/api/changelog" title="API ChangeLog">Change Log</a></li>
 		</ul>
 		
-		<ul class="tabs tabs-v">
-		        <li><a href="/api/repository" title="Europeana Repository">Europeana Repository</a></li>
-			<li><a href="/api/authentication" title="API Authentication">Authentication</a></li>
-			<li><a href="/api/search" title="API Search Method">Search Method</a></li>
-			<li><a href="/api/object" title="API Object Method">Object Method</a></li>
-			<li><a href="/api/myeuropeana" title="Accessing MyEuropeana via API">MyEuropeana</a></li>
-			<li><a href="/api/provider" title="Accessing Provider/Collection via API">Provider/Collection</a></li>
-			<li><a href="/api/error" title="API Error Code">Error Codes</a></li>
-		</ul>
-
-		<ul class="tabs tabs-v">
+				<ul class="tabs tabs-v">
 			<li><a href="/api/search-widget" title="Search Widget">Search Widget</a></li>
 			<li><a href="/api/data-fields" title="API Data Fields Reference">Data Fields</a></li>
+			<li><a href="http://www.europeana.eu/portal/rights/api-terms-of-use.html" title="API Data Fields Reference">Term of Use</a></li>
 		</ul>
-		
-		<ul class="tabs tabs-v">
-			<li><a href="http://prose.io/#europeana/Labs/edit/gh-pages/api/index.md" title="Edit  in Prose.io" target="_blank">Help Improve This Content</a></li>
 
-		</ul>
 	</div>
 
 
 	<div id="documentation" class="prose grid__item palm--one-whole push--palm-none one-half"><!--
-	--><p>The Europeana API allows you to build applications that use the wealth of cultural heritage objects stored in the Europeana repository. The API uses the standard web technology of REST calls over HTTP. Responses are returned in the popular JSON format for data exchange.</p>
+	--><h3 id="introduction">Introduction</h3>
 
-<p>To get straight to the point of the API, you can go directly to the <a href="essentials">Essentials page</a> which tells you only what you have to know to start using the API.</p>
-
-<h3 id="registration">Registration</h3>
-
-<p>To start using the API you should register at the registration page. Upon registration you will get your individual private authentication key. This key should be used when calling API methods as a special wskey authentication parameter.</p>
-
-<h3 id="backward_compatibility">Backward Compatibility</h3>
-
-<p>The current version of the Europeana API (API2) is fully backward compatible with the previous version (API1). However, we encourage developers to switch to the new naming of the fields that were used in API1. For more information on the mapping between the new and the old fields, please see <a href="mapping">API1-API2 Fields Mapping</a>.</p>
-
-<h3 id="api_console">API Console</h3>
-
-<p>There is a method for developers to see how Europeana API works and test it for their needs without getting registered - the API console. This is an interactive tool that allows filling method parameters in an online form and see both the expected results and the exact format of the call that should be used by an application to get these results. The API console has been built by us for developers’ convenience. You are encouraged to use it and provide us feedback about its usability for the developer community.</p>
-
-<h3 id="discussion">Discussion</h3>
-
-<p>Join the <a href="https://groups.google.com/forum/?pli=1#!forum/europeanaapi">Europeana API discussion group at Google Groups</a> and get regular updates about the Europeana API, provide feedback and discuss it with other developer.</p>
-
-<h3 id="terms_of_use">Terms of Use</h3>
-
-<p>Please see here our <a href="terms">Terms of Use</a>.</p><!--
+<p>The Europeana datasets availble here all support a number of ways of querying and integrating the data into applications. The below information provides pointers to more detailed API documentation.</p>
+<table><thead><tr><th>API Type</th><th>Usage</th></tr></thead><tbody><tr><td style="text-align: left;"><a href="/api/portal-api">Portal</a></td><td style="text-align: left;">Standard REST calls over HTTP. Response returned in JSON</td></tr>
+<tr><td style="text-align: left;"><a href="/api/linked-open-data">Linked Open Data</a></td><td style="text-align: left;">Find and extract data in SPARQL 1.1, supports Linked Open Data.</td></tr>
+<tr><td style="text-align: left;"><a href="/api">OAI-PMH</a></td><td style="text-align: left;">Hervest metadata invoked within HTTP.</td></tr>
+</tbody></table><!--
 --></div>
 </div>
 ﻿<!-- Begin Footer -->

@@ -78,15 +78,16 @@
 	</div>
 
 		<div class="grid__item one-quarter palm--one-whole">
-		<ul class="tabs tabs-v">
+
+				<ul class="tabs tabs-v">
 			<li><a href="/api" title="API Introduction">Introduction</a></li>
-			<li><a href="/api/getting-started" title="Getting Started with the Europeana API">Getting Started</a></li>
+			<li><a href="/api/getting-started" title="Getting Started with the Europeana API">Essentials</a></li>
 			<li><a href="http://europeana.eu/portal/api/registration.html" title="API Registration">Registration</a></li>
 			<li><a href="http://europeana.eu/portal/api/console.html" title="API Console">Console</a></li>
 			<li><a href="/api/changelog" title="API ChangeLog">Change Log</a></li>
 		</ul>
 		
-		<ul class="tabs tabs-v">
+			<ul class="tabs tabs-v">
 		        <li><a href="/api/repository" title="Europeana Repository">Europeana Repository</a></li>
 			<li><a href="/api/authentication" title="API Authentication">Authentication</a></li>
 			<li><a href="/api/search" title="API Search Method">Search Method</a></li>
@@ -96,15 +97,13 @@
 			<li><a href="/api/error" title="API Error Code">Error Codes</a></li>
 		</ul>
 
-		<ul class="tabs tabs-v">
+			<ul class="tabs tabs-v">
 			<li><a href="/api/search-widget" title="Search Widget">Search Widget</a></li>
 			<li><a href="/api/data-fields" title="API Data Fields Reference">Data Fields</a></li>
+			<li><a href="http://www.europeana.eu/portal/rights/api-terms-of-use.html" title="API Data Fields Reference">Term of Use</a></li>
 		</ul>
 		
-		<ul class="tabs tabs-v">
-			<li><a href="http://prose.io/#europeana/Labs/edit/gh-pages/api/object.md" title="Edit API Object Method in Prose.io" target="_blank">Help Improve This Content</a></li>
-
-		</ul>
+	
 	</div>
 
 		
@@ -250,7 +249,11 @@
 </tbody></table>
 <h3 id="edm_proxy">EDM Proxy</h3>
 
-<p>ORE* Proxy. Europeana uses proxies as place-holders for cultural heritage objects within aggregations (whether Europeana aggregations or not) to the end of making assertions about the corresponding cultural heritage objects while distinguishing the provenance of these assertions. This class is used to create aliases of cultural heritage objects to which descriptions are attached. This allows Europeana to keep track of provenance of descriptions. See chapter 6.1 Introducing proxies in the EDM primer * ORE stands for Open Archives Initiative Object Reuse and Exchange</p>
+<p>ORE* Proxy. Europeana uses proxies as place-holders for cultural heritage objects within aggregations (whether Europeana aggregations or not) to the end of making assertions about the corresponding cultural heritage objects while distinguishing the provenance of these assertions. This class is used to create aliases of cultural heritage objects to which descriptions are attached. This allows Europeana to keep track of provenance of descriptions. See chapter 6.1 Introducing proxies in the EDM primer</p>
+
+<ul>
+<li>ORE stands for Open Archives Initiative Object Reuse and Exchange</li>
+</ul>
 <table><thead><tr><th>Field</th><th>Qualified Name</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">about</td><td style="text-align: left;">rdf:about</td><td style="text-align: left;">String</td><td style="text-align: left;">Defines the resource being described</td></tr>
 <tr><td style="text-align: left;">dcContributor</td><td style="text-align: left;">dc:contributor</td><td style="text-align: left;">LangMap</td><td style="text-align: left;">An entity responsible for making contributions to the resource.</td></tr>
 <tr><td style="text-align: left;">dcCoverage</td><td style="text-align: left;">dc:coverage</td><td style="text-align: left;">LangMap</td><td style="text-align: left;">The spatial or temporal topic of the resource, the spatial applicability of the resource, or the jurisdiction under which the resource is relevant.</td></tr>
@@ -322,7 +325,7 @@
 <h3 id="edm_webresource">EDM WebResource</h3>
 <table><thead><tr><th>Field</th><th>Qualified Name</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">about</td><td style="text-align: left;">rdf:about</td><td style="text-align: left;">String</td><td style="text-align: left;">URI of the webResource</td></tr>
 <tr><td style="text-align: left;">webResourceDcRights</td><td style="text-align: left;">dc:rights</td><td style="text-align: left;">LangMap</td><td style="text-align: left;">Free text information about the rights in this object.</td></tr>
-<tr><td style="text-align: left;">webResourceEdmRights</td><td style="text-align: left;">edm:rights</td><td style="text-align: left;">LangMap</td><td style="text-align: left;">The value in this element will indicate the usage and access rights that apply to this digital representation. The rights statement specified at the level of the web resource will ‘override’ the statement specified at the level of the aggregation. The value in this element is a URI taken from the set of those defined for use in Europeana. A list of these can be found at http://pro.europeana.eu/web/available-rights-statements.</td></tr>
+<tr><td style="text-align: left;">webResourceEdmRights</td><td style="text-align: left;">edm:rights</td><td style="text-align: left;">LangMap</td><td style="text-align: left;">The value in this element will indicate the usage and access rights that apply to this digital representation. The rights statement specified at the level of the web resource will ‘override’ the statement specified at the level of the aggregation. The value in this element is a URI taken from the set of those defined for use in Europeana. A list of these can be found at <a href="http://pro.europeana.eu/web/available-rights-statements">http://pro.europeana.eu/web/available-rights-statements</a>.</td></tr>
 <tr><td style="text-align: left;">dcDescription</td><td style="text-align: left;">dc:description</td><td style="text-align: left;">LangMap</td><td style="text-align: left;">An account or description of this digital representation.</td></tr>
 <tr><td style="text-align: left;">dcFormat</td><td style="text-align: left;">dc:format</td><td style="text-align: left;">LangMap</td><td style="text-align: left;">The file format, physical medium or dimensions of the resource.</td></tr>
 <tr><td style="text-align: left;">dcSource</td><td style="text-align: left;">dc:source</td><td style="text-align: left;">LangMap</td><td style="text-align: left;">A related resource from which the web resource is derived in whole or in part.</td></tr>
