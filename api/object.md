@@ -7,7 +7,7 @@ published: true
 * TOC
 {:toc}
 
-Retrieve a single record from the Europeana dataset. A terminological note: TBD.
+Retrieve a single record from the Europeana dataset. On the relation between EDM and records read [this](http://labs.europeana.eu/api/repository/).
 
     http://europeana.eu/api/v2/record/[recordID].json
     
