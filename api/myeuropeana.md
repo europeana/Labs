@@ -9,50 +9,11 @@ published: true
 
 ## Introduction
 
-Europeana API is supporting two methods to access MyEuropeana user data.
-To access your own account only, you can use MyData methods providing 
-an easy username/password login mechanism.
-If you to get access to data of MyEuropeana users in your own application, 
-we provide a authentication method based on the OAuth2 standards.
-The provided methods are the same, with a path difference in the url's.
+Europeana API supports two methods to access MyEuropeana user data.
 
-## OAuth2 User Authentication
+To access data of a specific account you can use MyData methods which require [authentication using the public and private key of the user](http://labs.europeana.eu/api/authentication/user_authentication).
 
-OAuth2 is a token based authentication and authorisation system where your
-user gets redirected to a login page on our server. After the login page the
-user have to give permition to give access to the users data. On both steps
-succesfully finished, the API server redirects back to a given url with an 
-access token which can be used to access or modify data on our servers. 
-The access token has a limited time life, but can be refreshed with a refresh 
-token also given by the authorisation process.
-
-This two url's are important for the process:
-
-* *authorize*: `http://europeana.eu/api/oauth/authorize`
-* *token refresh*: `http://europeana.eu/api/oauth/token`
-
-There are many open source libraries available for a big variation of 
-languages to help you implement this into your own project. See the page 
-mentioned below for more information and a list of libraries.
-
-More information: [OAuth.net/2/](http://oauth.net/2/).
-
-## MyData Authentication
-
-MyData methods use your public and private api keys to authenticate. Logging 
-in is done by send a POST request to the following url and use the described 
-parameters filled with the combination of both API keys.
-
-* `http://europeana.eu/api/v2/login.do`
-
-| Field | Description |
-|:------|:------------|
-| j_username | Your PUBLIC apikey |
-| j_password | Your PRIVATE apikey |
-
-For a succesfull login, you should get a status 200 back, otherwise it will 
-trigger a redirect to a login html page. This can be ignored, the login page is
-for testing purposes only.
+Applications that wish to access MyEuropeana data of a specific end-user on his behalf need to authenticate using the [OAuth2 scheme](http://labs.europeana.eu/api/authentication/oauth2_authentication) and to use MyEuropeana set of methods.
 
 ## REST support
 
@@ -71,138 +32,130 @@ The API will return the general API response, where the following fields are imp
 
 ## Profile
 
-Retrieve your MyEuropeana profile, including statistics. Profile information is read-only.
+Retrieve your MyEuropeana profile, including statistics about user's activity. This call is read-only.
 
-* `http://europeana.eu/api/v2/user/profile.json`
-* `http://europeana.eu/api/v2/mydata/profile.json`
+    GET http://europeana.eu/api/v2/user/profile.json
+    GET http://europeana.eu/api/v2/mydata/profile.json
 
-**Request**
-
-The request doesn't take any parameters.
-
-**Response**
+### Response
 
 Fields containing no data are not included in json response.
 
 | Field | Datatype | Description |
 |:------|:---------|:------------|
-| email | String |  |
-| userName | String |  |
-| registrationDate | Timestamp | In timestamp format (Date.toLong) |
-| lastLogin | Timestamp | In timestamp format (Date.toLong) |
-| firstName | String |  |
-| lastName | String |  |
-| company | String |  |
-| country | String |  |
-| phone | String |  |
-| address | String |  |
-| website | String |  |
-| fieldOfWork | String |  |
-| nrOfSavedItems | Number | Number of saved items |
-| nrOfSavedSearches | Number | Number of saved searches |
-| nrOfSocialTags | Number | Number of tags |
+| email | String | TBD |
+| userName | String | TBD |
+| registrationDate | String | TBD (In timestamp format (Date.toLong)) |
+| lastLogin | String | TBD (In timestamp format (Date.toLong)) |
+| firstName | String | TBD |
+| lastName | String | TBD |
+| company | String | TBD |
+| country | String | TBD |
+| phone | String | TBD |
+| address | String | TBD |
+| website | String | TBD |
+| fieldOfWork | String | TBD  |
+| nrOfSavedItems | Number | The number of saved items |
+| nrOfSavedSearches | Number | The number of saved searches |
+| nrOfSocialTags | Number | The number of tags |
 
 ## Saved Items
 
-Retrieve or modify saved items (favorites) in your MyEuropeana account
-
-* `http://europeana.eu/api/v2/user/saveditem.json`
-* `http://europeana.eu/api/v2/mydata/saveditem.json`
-
-Request parameter action is general for all actions, but can be replaced by 
-REST http request types.
-
-| Parameter | Datatype | Description |
-|:-------------|:-------------|:-----|
-| action | String | empty / "LIST" / "CREATE" / "DELETE" |
+Retrieve or modify saved items (favorites) at your MyEuropeana account.
 
 ### Get saved items
 
-**Request for LIST**
+Retrieve saved items.
 
-  * HTTP request type: get
+    GET http://europeana.eu/api/v2/user/saveditem.json
+    GET http://europeana.eu/api/v2/mydata/saveditem.json
+
+#### Request
 
 | Parameter | Datatype | Description |
 |:-------------|:-------------|:-----|
-| europeanaid | String | (optional) check the existance of a specific saved item |
+| action | String | Action parameter (should be LIST for this call) |
+| europeanaID | String | (optional) The ID of a saved item |
 
-
-**Response for LIST**
+#### Response
 
 | Field | Datatype | Description |
 |:-------------|:-------------|:-----|
 | username | String |  |
-| items | SavedItem | See below |
+| items | Array([SavedItem](http://labs.europeana.eu/api/myeuropeana/saved_item)) |  |
 
-**SavedItem**
+#### SavedItem
+
+Information about one saved item.
 
 | Field | Datatype | Description |
 |:-------------|:-------------|:-----|
-| id | Number | Unique id for this specific Saved item record |
-| europeanaId | String | EuropeanaID existing of collection id and record id |
-| guid | String | Unique alternate id for record, can be used as link to europeana.eu portal |
+| id | Number | The unique ID of this item |
+| europeanaID | String | TBD (EuropeanaID existing of collection id and record id) |
+| guid | String | TBD (Unique alternate id for record, can be used as link to europeana.eu portal) |
 | link | String | Link to json version of record |
-| title | String |  |
+| title | String | TBD |
 | edmPreview | String | Link to image thumbnail, if available |
 | type | String | record type: IMAGE / VIDEO / TEXT / SOUND / 3D |
-| dateSaved | Timestamp | SavedItem creation date |
+| dateSaved | String | SavedItem creation date |
 
-### Create saved items
+### Create
 
-**Request for CREATE**
+Creates a new saved item.
 
-  * HTTP request: get (required param action=CREATE) 
-  * HTTP REST request: post or put
+    POST http://europeana.eu/api/v2/user/saveditem.json
+    POST http://europeana.eu/api/v2/mydata/saveditem.json
 
-| Parameter | Datatype | Description |
-|:-------------|:-------------|:-----|
-| europeanaid | String | (optional) check the existance of a specific saved item |
-
-### Delete saved items
-
-**Request for DELETE**
-
-  * HTTP request: get (required param action=DELETE) 
-  * HTTP REST request: delete
+#### Request
 
 | Parameter | Datatype | Description |
 |:-------------|:-------------|:-----|
-| itemid | String | itemid (returned by LIST action) |
-| europeanaid | String | The Europeana ID of the record to delete |
+| action | String | Action parameter (should be CREATE for this call) |
+| europeanaid | String | TBD: (optional) check the existance of a specific saved item |
+
+### Delete
+
+Creates a saved item.
+
+    DELETE http://europeana.eu/api/v2/user/saveditem.json
+    DELETE http://europeana.eu/api/v2/mydata/saveditem.json
+
+#### Request  
+
+| Parameter | Datatype | Description |
+|:-------------|:-------------|:-----|
+| action | String | Action parameter (should be DELETE for this call) |
+| itemid | String | The ID of the item to delete (use the IDs returned by LIST action) |
+| europeanaid | String | The Europeana ID of the record to delete (TBD) |
 
 ## Tags
 
-Modifying object tags
+Retrieve information about, create, or delete tags at MyEuropeana account.
 
-* `http://europeana.eu/api/v2/user/tag.json`
-* `http://europeana.eu/api/v2/mydata/tag.json`
+### Get 
 
-Request parameter action is general for all actions, but can be replaced by 
-REST http request types.
+Get a tag.
 
-| Parameter | Datatype | Description |
-|:-------------|:-------------|:-----|
-| action | String | empty / "LIST" / "TAGCLOUD" / "CREATE" / "DELETE" |
+    GET http://europeana.eu/api/v2/user/tag.json
+    GET http://europeana.eu/api/v2/mydata/tag.json
 
-### Get tags
-
-**Request for LIST**
-
-  * REST HTTP request type: get
+#### Request
 
 | Parameter | Datatype | Description |
 |:-------------|:-------------|:-----|
+| action | String | Action parameter (should be LIST for this call) |
 | europeanaid | String | (optional) check the existance of a specific saved item |
 
-
-**Response for LIST**
+#### Response
 
 | Field | Datatype | Description |
 |:-------------|:-------------|:-----|
 | username | String |  |
-| items | Tag | See below |
+| items | Array([Tag](http://labs.europeana.eu/api/myeuropeana/tag)) |  |
 
-**Tag**
+#### Tag
+
+Information about a single tag.
 
 | Field | Datatype | Description |
 |:-------------|:-------------|:-----|
@@ -218,48 +171,50 @@ REST http request types.
 
 ### Get Tag Cloud 
 
-**Request for TAG CLOUD**
-
-  * REST HTTP request type: get (action parameter is required)
+#### Request
 
 | Parameter | Datatype | Description |
 |:-------------|:-------------|:-----|
-| action | String | "TAGCLOUD" |
+| action | String | Action parameter (should be TAGCLOUD for this call) |
 
-* the tagcloud action does not take any aditional parameters
 
-**Response for TAG CLOUD**
+#### Response
 
 | Field | Datatype | Description |
 |:-------------|:-------------|:-----|
 | username | String |  |
-| items | TagCloud | See below |
+| items | Array([TagCloud](http://labs.europeana.eu/api/myeuropeana/tagcloud)) |  |
 
-**TagCloud**
+#### TagCloud
 
 | Field | Datatype | Description |
 |:-------------|:-------------|:-----|
 | label | String | The tag |
 | count | Number | tag count |
 
-### Create saved items
+### Create 
 
-**Request for CREATE**
+Create a new tag.
 
-  * HTTP request: get (required param action=CREATE) 
-  * HTTP REST request: post or put
+    GET http://europeana.eu/api/v2/user/tag.json
+    GET http://europeana.eu/api/v2/mydata/tag.json
+
+#### Request
 
 | Parameter | Datatype | Description |
 |:-------------|:-------------|:-----|
+| action | String | Action parameter (should be CREATE for this call) |
 | europeanaid | String | (optional) check the existance of a specific saved item |
 | tag | String | The tag to add for this object |
 
-### Delete saved items
+### Delete
 
-**Request for DELETE**
+Delete a tag.
 
-  * HTTP request: get (required param action=DELETE) 
-  * HTTP REST request: delete
+    DELETE http://europeana.eu/api/v2/user/tag.json
+    DELETE http://europeana.eu/api/v2/mydata/tag.json
+
+## Request
 
 | Parameter | Datatype | Description |
 |:-------------|:-------------|:-----|
@@ -273,32 +228,21 @@ REST http request types.
 
 Retrieve or modify saved searches in your MyEuropeana account
 
-* `http://europeana.eu/api/v2/user/savedsearch.json`
-* `http://europeana.eu/api/v2/mydata/savedsearch.json`
+### Get 
 
-Request parameter action is general for all actions, but can be replaced by 
-REST http request types.
+Get saved searches.
 
-| Parameter | Datatype | Description |
-|:-------------|:-------------|:-----|
-| action | String | empty / "LIST" / "CREATE" / "DELETE" |
+    GET http://europeana.eu/api/v2/user/savedsearch.json
+    GET http://europeana.eu/api/v2/mydata/savedsearch.json
 
-### Get Saved Searches
-
-**Request for LIST**
-
-  * REST HTTP request: get
-
-List action takes no additional parameters
-
-**Response for LIST**
+### Response
 
 | Field | Datatype | Description |
 |:-------------|:-------------|:-----|
 | username | String |  |
-| items | SavedSearch | See below |
+| items | Array([SavedSearch](http://labs.europeana.eu/api/myeuropeana/savedsearch)) |  |
 
-**SavedSearch**
+### SavedSearch
 
 | Field | Datatype | Description |
 |:-------------|:-------------|:-----|
@@ -307,28 +251,28 @@ List action takes no additional parameters
 | queryString | String | complete saved search including refinements and paging |
 | dateSaved | Timestamp | SavedItem creation date |
 
-### Create saved search
+### Create 
 
 Create a new saved search. Parameters are similar to API search.json (or on the portal).
 
-**Request for CREATE**
-
-  * HTTP request: get (required param action=CREATE) 
-  * HTTP REST request: post or put
+    POST http://europeana.eu/api/v2/user/savedsearch.json
+    POST http://europeana.eu/api/v2/mydata/savedsearch.json
 
 | Parameter | Datatype | Description |
 |:-------------|:-------------|:-----|
+| action | String | Action parameter (should be CREATE for this call) |
 | query | String | main search parameter |
 | qf[] | String array | Refinements parameters (zero or more) |
 | start | Number | Start number (paging) |
 
-### Delete saved search
+### Delete
 
-**Request for DELETE**
+Delete a saved search.
 
-  * HTTP request: get (required param action=DELETE) 
-  * HTTP REST request: delete
+    DELETE http://europeana.eu/api/v2/user/savedsearch.json
+    DELETE http://europeana.eu/api/v2/mydata/savedsearch.json
 
 | Parameter | Datatype | Description |
 |:-------------|:-------------|:-----|
+| action | String | Action parameter (should be DELETE for this call) |
 | searchid | String | saves search id (returned by LIST action) |
