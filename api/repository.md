@@ -7,7 +7,11 @@ published: true
 * TOC
 {:toc}
 
-To organize its data Europeana uses a complex data model which is called the Europeana Data Model (EDM). A detailed description of EDM is beyond the scope of this documentation: the reader is referred to the extensive documentation on Europeana website. However, a basic understanding of the data organization is necessary for implementing the API. The objective of this section is to provide this basic understanding.
+To organize its data Europeana uses a complex data model which is called the Europeana Data Model (EDM). A detailed description of EDM is beyond the scope of this documentation: the reader is referred to the extensive documentation [on Europeana website](http://pro.europeana.eu/edm-documentation). However, a basic understanding of the data organization is necessary for implementing the API. The objective of this section is to provide this basic understanding.
+
+## EDM and Records
+
+Europeana API provides access to the Europeana repository, which is modeled using EDM. While EDM is an open flexible data model featuring various kind of resources and relations between them, the Europeana API (and the Europeana portal) supports the retrieval of a defined subgraph of EDM for expository purposes. These ‘atomic' EDM subgraphs usually contain one cultural heritage object (CHO), the aggregation information which connects the metadata and the digital representations together and a number of contextual resources such as the agents, places, concepts and time pertaining to the CHO. The further API documentation, in particular the [/record]() call refers to this subgraph as _object_. 
 
 ## Identifying Records
 
