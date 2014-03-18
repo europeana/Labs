@@ -1,11 +1,24 @@
 ---
 layout: api-page
 ---
+<iframe id="console" src="" width="1000" height="800">
 <script type="text/javascript">
 <!--
-alert(location.search);
+var embedded = new URI('http://test.portal2.eanadev.org/portal/api/console.html');
+var allowedParams = ['function', 'callback', 'query', 'qf', 'profile', 'start', 'rows', 'sort', 'collectionId', 'recordId', 'phrases', 'latMin', 'latMax', 'longMin', 'longMax', 'yearMin', 'yearMax', 'reusability'];
+
+var params = {'embedded' : 'true'};
+
+var uri = new URI();
+var parsed = URI.parseQuery(uri.query());
+for (i in parsed) {
+	if ($.inArray(i, allowedParams)) {
+		params[i] = parsed[i];
+	}
+}
+embedded.query(params);
+$('#console').attr('src', embedded.toString());
 //-->
 </script>
-<iframe id="console" src="http://test.portal2.eanadev.org/portal/api/console.html?embedded=true" width="1000" height="800">
 	
 </iframe>
