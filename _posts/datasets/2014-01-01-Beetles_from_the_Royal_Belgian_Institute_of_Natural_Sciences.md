@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: data-item
 category: datasets
 title: Beetles from the Royal Belgian Institute of Natural Sciences
 provider: Royal Belgian Institute of Natural Sciences

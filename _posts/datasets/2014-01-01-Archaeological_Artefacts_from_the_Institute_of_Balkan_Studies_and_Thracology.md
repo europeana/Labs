@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: data-item
 category: datasets
 title: Archaeological Artefacts from the Institute of Balkan Studies and Thracology
 provider: Institute of Balkan Studies and Thracology - Институт за балканистика с Център по тракология

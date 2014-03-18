@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: data-item
 category: datasets
 title: Maps and Drawings from the Catálogo Colectivo De La Red De Bibliotecas De Los Archivos Estatales
 provider: Catálogo Colectivo de la Red de Bibliotecas de los Archivos Estatales

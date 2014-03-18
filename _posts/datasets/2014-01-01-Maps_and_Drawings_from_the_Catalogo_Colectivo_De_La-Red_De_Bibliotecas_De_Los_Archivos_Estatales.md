@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: data-item
 category: datasets
 title: Battles on artwork and drawings from the Rijksmuseum in the Netherlands
 provider: Rijksmuseum

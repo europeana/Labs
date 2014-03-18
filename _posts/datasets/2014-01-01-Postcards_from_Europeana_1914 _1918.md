@@ -1,6 +1,7 @@
 ---
-layout: default
+layout: data-item
 category: datasets
+permalink: datasets/postcards-from-europeana
 title: Postcards from Europeana 1914 - 1918
 provider: Europeana 1914 – 1918
 description: More than 2,500 Postcards telling the story of the first World War.

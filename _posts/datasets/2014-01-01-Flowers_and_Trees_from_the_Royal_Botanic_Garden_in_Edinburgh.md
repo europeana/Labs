@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: data-item
 category: datasets
 title: Flowers and Trees from the Royal Botanic Garden in Edinburgh
 provider: The Royal Botanic Garden Edinburgh

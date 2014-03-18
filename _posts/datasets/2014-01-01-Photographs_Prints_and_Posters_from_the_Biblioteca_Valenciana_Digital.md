@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: data-item
 category: datasets
 title: Photographs, Prints and Posters from the Biblioteca Valenciana Digital
 provider: Biblioteca Valenciana Digital

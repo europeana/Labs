@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: data-item
 category: datasets
 title: Butterflies, moths, plants and mushrooms from the University of Tartu and the Museum of Natural History Berlin
 provider: University of Tartu, Natural History Museum

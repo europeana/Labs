@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: data-item
 category: datasets
 title: Early Photographs from the Fondo Fotográfico De La Universidad De Navarra
 provider: Fondo Fotográfico de la Universidad de Navarra

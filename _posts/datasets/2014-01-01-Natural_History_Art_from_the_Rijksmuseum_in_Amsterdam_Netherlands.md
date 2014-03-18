@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: data-item
 category: datasets
 title: Natural History Art from the Rijksmuseum in Amsterdam (Netherlands)
 provider: Rijksmuseum

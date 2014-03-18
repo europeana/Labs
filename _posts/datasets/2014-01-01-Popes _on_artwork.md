@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: data-item
 category: datasets
 title: Popes on artwork, drawings and documents from the Rijksmuseum in the Netherlands
 provider: Rijksmuseum

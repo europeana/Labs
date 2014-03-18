@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: data-item
 category: datasets
 title: Napoleon on artwork, drawings and documents from the Amsterdam Museum
 provider: Amsterdam Museum

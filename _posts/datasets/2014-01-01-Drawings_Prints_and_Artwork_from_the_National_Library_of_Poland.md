@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: data-item
 category: datasets
 title: Drawings, Prints and Artwork from the National Library of Poland
 provider: The National Library of Poland - Biblioteka Narodowa

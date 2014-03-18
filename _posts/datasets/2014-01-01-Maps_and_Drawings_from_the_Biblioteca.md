@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: data-item
 category: datasets
 title: Maps and Drawings from the Biblioteca Virtual Del Patrimonio Bibliográfico
 provider: Biblioteca Virtual del Patrimonio Bibliográfico

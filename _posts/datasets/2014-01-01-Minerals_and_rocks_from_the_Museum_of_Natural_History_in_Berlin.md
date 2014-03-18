@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: data-item
 category: datasets
 title: Minerals and rocks from the Museum of Natural History in Berlin
 provider: Museum of Natural History Berlin

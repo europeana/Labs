@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: data-item
 category: datasets
 title: Bryozoa from the National Museum Prague
 provider: National Museum Prague
