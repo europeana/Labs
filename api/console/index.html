@@ -2,9 +2,15 @@
 layout: api-page
 title: API Console
 ---
-<iframe id="console" src="" width="1000" frameborder="0"></iframe>
+
+<iframe id="console" src="" width="1000" frameborder="0" onload="javascript:resizeIframe(this);"></iframe>
 <script type="text/javascript">
 <!--
+function resizeIframe(obj) {
+	alert("resizeIframe");
+	obj.style.height = obj.contentWindow.document.body.scrollHeight + 'px';
+}
+
 var embeddedConsole = new URI('http://test.portal2.eanadev.org/portal/api/console.html');
 var allowedParams = ['function', 'callback', 'query', 'qf', 'profile', 'start', 'rows', 'sort', 'collectionId', 'recordId', 'phrases', 'latMin', 'latMax', 'longMin', 'longMax', 'yearMin', 'yearMax', 'reusability'];
 
