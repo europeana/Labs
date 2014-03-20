@@ -1,4 +1,38 @@
-<form id="model" action="http://europeana.eu/portal/api/registration.html" method="POST" class="inline-form newsletter-form">
+<script type="text/javascript">
+$(document).ready(function(){
+	$("#messageContainer").hide();
+	$("#loadingIcon").hide();
+});
+
+function requestAPIKey(){
+	$("#loadingIcon").show();
+	var url = "http://dev.museu.ms/Labs/RegisterApi?email="+$("#register_email").val();
+	 	$.ajax({
+	 			url: url,
+                dataType: 'jsonp',
+                success:function(data){
+                	
+                	if(data.Success==false){
+	                	$("#messageContainer")
+	                	.removeClass("alert-success")
+	                	.removeClass("alert-error")
+	                	.addClass("alert-error");
+	                	
+	                	$("#messageContainer").html(data.Message);
+	                	$("#messageContainer").show();
+                	}else{
+						$("#messageContainer").removeClass("alert-error").addClass("alert-success");
+	                	$("#messageContainer").html(data.Message);
+	                	$("#messageContainer").show();
+                	}
+                	
+                	$("#loadingIcon").hide();
+                }
+		});
+}
+</script>
+
+<!--<form id="model" action="http://europeana.eu/portal/api/registration.html" method="POST" class="inline-form newsletter-form">
 	<fieldset>
 		<input id="requestedAction" name="requestedAction" value="RequestAPI" type="hidden"><label for="register_email">Email address:</label>
 		<div class="inline-container">
@@ -6,4 +40,16 @@
 			<input type="submit" name="submit_button" value="Sign up" class="newsletter-submit">
 		</div>
 	</fieldset>
+</form>-->
+
+
+<form id="model" class="inline-form newsletter-form">
+	<fieldset>
+		<input id="requestedAction" name="requestedAction" value="RequestAPI" type="hidden"><label for="register_email">Email address:</label>
+		<div class="inline-container">
+			<input id="register_email" name="email" type="text" placeholder="" maxlength="50" class="newsletter-field">
+			<input type="submit" onclick="requestAPIKey();return false;" name="submit_button" value="Sign up" class="newsletter-submit">
+		</div>
+	</fieldset>
+
 </form>
