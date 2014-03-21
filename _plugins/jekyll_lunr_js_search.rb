@@ -8,9 +8,9 @@ module Jekyll
 
     def initialize(config = {})
       super(config)
-      
+            
       lunr_config = { 
-        'excludes' => [],
+        'excludes' => ['excerpt', 'imageurl'],
         'strip_index_html' => false,
         'min_length' => 3,
         'stopwords' => 'stopwords.txt'
@@ -37,18 +37,23 @@ module Jekyll
       index = []
 
       items.each do |item|
+        
         entry = SearchEntry.create(item, content_renderer)
 
         entry.strip_index_suffix_from_url! if @strip_index_html
         entry.strip_stopwords!(stopwords, @min_length) if File.exists?(@stopwords_file) 
-        
+
+       
+
         index << {
           :title => entry.title, 
           :url => entry.url,
           :date => entry.date,
           :categories => entry.categories,
           :body => entry.body,
-          :tags => entry.tags
+          :tags => entry.tags,
+          :imageurl => entry.imageurl,
+          :excerpt => entry.excerpt
         }
         
         #puts 'Indexed ' << "#{entry.title} (#{entry.url})"
@@ -78,11 +83,13 @@ module Jekyll
     end
     
     def pages_to_index(site)
+
       items = []
       
       # deep copy pages
-      site.pages.each {|page| items << page.dup }
-      site.posts.each {|post| items << post.dup }
+      
+      #site.pages.each {|page| items << page.dup }
+      site.posts.each {|post| items << post.dup }   
 
       # only process files that will be converted to .html and only non excluded files 
       items.select! {|i| i.output_ext == '.html' && ! @excludes.any? {|s| (i.url =~ Regexp.new(s)) != nil } } 
@@ -124,23 +131,29 @@ module Jekyll
     end
     
     def self.create_from_page(page, renderer)
+      
       title, url = extract_title_and_url(page)
       body = renderer.render(page)
       date = nil
       categories = []
       tags = []
+      imageurl = [""]
+      excerpt = ""
       
-      SearchEntry.new(title, url, date, categories, body, tags)
+      SearchEntry.new(title, url, date, categories, body, tags, imageurl, excerpt)
     end
     
     def self.create_from_post(post, renderer)
+      
       title, url = extract_title_and_url(post)
       body = renderer.render(post)
       date = post.date
       categories = post.categories
       tags = post.tags
-      
-      SearchEntry.new(title, url, date, categories, body, tags)
+      imageurl = post.data["imageurl"].first
+      excerpt = post.excerpt
+                  
+      SearchEntry.new(title, url, date, categories, body, tags, imageurl, excerpt)
     end
 
     def self.extract_title_and_url(item)
@@ -148,10 +161,10 @@ module Jekyll
       [ data['title'], data['url'] ]
     end
 
-    attr_reader :title, :url, :date, :categories, :body, :tags
+    attr_reader :title, :url, :date, :categories, :body, :tags, :imageurl, :excerpt
     
-    def initialize(title, url, date, categories, body, tags)
-      @title, @url, @date, @categories, @body, @tags = title, url, date, categories, body, tags
+    def initialize(title, url, date, categories, body, tags, imageurl, excerpt)
+      @title, @url, @date, @categories, @body, @tags, @imageurl, @excerpt = title, url, date, categories, body, tags, imageurl, excerpt
     end
     
     def strip_index_suffix_from_url!
