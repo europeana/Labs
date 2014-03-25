@@ -1,14 +1,15 @@
 ---
-layout: api-page
+layout: "api-page"
 title: API Console
+published: true
 ---
 
 <iframe id="console" src="" width="100%" frameborder="0" height="800"></iframe>
 <script type="text/javascript">
-<!--
+<!-- 
 window.addEventListener('message', function(e) {
-  	var message = e.data;
-	$('#console').css('height', message);
+  var message = e.data;
+  $('#console').css('height', message);
 });
 
 
@@ -20,12 +21,11 @@ var params = {'embedded' : 'true'};
 var uri = new URI();
 var parsed = URI.parseQuery(uri.query());
 for (i in parsed) {
-	if ($.inArray(i, allowedParams)) {
-		params[i] = parsed[i];
-	}
+  if ($.inArray(i, allowedParams)) {
+    params[i] = parsed[i];
+  }
 }
 embeddedConsole.query(params);
-console.log("embeddedConsole's URL: " + embeddedConsole.toString());
 $('#console').attr('src', embeddedConsole.toString());
 //-->
 </script>
