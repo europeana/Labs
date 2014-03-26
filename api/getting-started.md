@@ -1,6 +1,6 @@
 ---
 layout: "api-page"
-title: Getting Started with the Search API
+title: Getting Started with Europeana REST API
 published: true
 excerpt: Everything you need to know to start using Europeana API right away.
 ---
