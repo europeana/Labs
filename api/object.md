@@ -1,6 +1,6 @@
 ---
 layout: "api-page"
-title: API Object Method
+title: Record
 published: true
 ---
 
