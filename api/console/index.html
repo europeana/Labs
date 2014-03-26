@@ -21,6 +21,7 @@ var params = {'embedded' : 'true'};
 var uri = new URI();
 var parsed = URI.parseQuery(uri.query());
 for (i in parsed) {
+  console.log(i + ') ' + parsed[i]);
   if ($.inArray(i, allowedParams)) {
     params[i] = parsed[i];
   }
