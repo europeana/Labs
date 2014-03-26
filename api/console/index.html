@@ -22,7 +22,7 @@ var uri = new URI();
 var parsed = URI.parseQuery(uri.query());
 for (i in parsed) {
   console.log(i + ') ' + parsed[i]);
-  if ($.inArray(i, allowedParams)) {
+  if ($.inArray(i, allowedParams) > -1) {
     console.log('passed');
     params[i] = parsed[i];
   }
