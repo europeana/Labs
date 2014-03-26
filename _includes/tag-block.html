@@ -4,5 +4,11 @@
 		{% for tag in page.tags %}
 			<a href="#" class="tag_alt">{{tag}}</a>
 		{% endfor %}
+		
+		{% for tag in page.secondarytags %}
+			<a href="#" class="tag_alt">{{tag}}</a>
+		{% endfor %}		
+		
+		
 	</div>
 {% endif %}
