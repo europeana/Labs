@@ -14,21 +14,17 @@ window.addEventListener('message', function(e) {
 
 
 var embeddedConsole = new URI('http://branch.portal2.eanadev.org/portal/api/console.html');
-var allowedParams = ['callback', 'query', 'qf', 'profile', 'start', 'rows', 'sort', 'collectionId', 'recordId', 'phrases', 'latMin', 'latMax', 'longMin', 'longMax', 'yearMin', 'yearMax', 'reusability', 'function'];
-console.log('allowedParams: ' + allowedParams.join(', '));
+var allowedParams = ['function', 'callback', 'query', 'qf', 'profile', 'start', 'rows', 'sort', 'collectionId', 'recordId', 'phrases', 'latMin', 'latMax', 'longMin', 'longMax', 'yearMin', 'yearMax', 'reusability'];
 var params = {'embedded' : 'true'};
 
 var uri = new URI();
 var parsed = URI.parseQuery(uri.query());
 for (i in parsed) {
-  console.log(i + ') ' + parsed[i]);
   if ($.inArray(i, allowedParams) > -1) {
-    console.log('passed');
     params[i] = parsed[i];
   }
 }
 embeddedConsole.query(params);
-console.log(embeddedConsole.toString());
 $('#console').attr('src', embeddedConsole.toString());
 //-->
 </script>
