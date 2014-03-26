@@ -15,7 +15,7 @@ window.addEventListener('message', function(e) {
 
 var embeddedConsole = new URI('http://branch.portal2.eanadev.org/portal/api/console.html');
 var allowedParams = ['callback', 'query', 'qf', 'profile', 'start', 'rows', 'sort', 'collectionId', 'recordId', 'phrases', 'latMin', 'latMax', 'longMin', 'longMax', 'yearMin', 'yearMax', 'reusability', 'function'];
-
+console.log('allowedParams: ' + allowedParams.join(', '));
 var params = {'embedded' : 'true'};
 
 var uri = new URI();
