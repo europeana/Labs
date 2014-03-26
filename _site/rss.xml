@@ -5,9 +5,9 @@
   xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
   xmlns:trackback="http://madskills.com/public/xml/rss/module/trackback/">
   <channel>
-    <title>Labs</title>
-    <link>http://localhost:4000</link>
-    <description>RSS feed for Labs</description>
+    <title>Europeana Labs</title>
+    <link>http://labs.europeana.eu</link>
+    <description>RSS feed for Europeana Labs</description>
     <pubDate>Fri, 01 Jan 9999 00:00:00 +0100</pubDate>
     <item>
       <title>Europeana Culture Collage</title>
@@ -212,25 +212,25 @@
     <item>
       <title>Platoniq | Palma</title>
       <link>http://labs.europeana.eu/spaces/platoniq</link>
-      <description>&lt;p&gt;The Future Classroom Lab in Brussels is a fully equipped, reconfigurable, teaching and learning space developed by &lt;a href='http://eun.org'&gt;European Schoolnet&lt;/a&gt;, its 30 supporting Ministries of Education and leading educational technology providers.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Platoniq’s YOUCOOP is a collaboration space in Palma de Mallorca and an online research platform born from &lt;a href='http://goteo.org'&gt;Goteo.org&lt;/a&gt; and other experiences applying the working methods of the Internet and P2P to several environments, such as education, economics and social innovation.&lt;/p&gt;</description>
       <pubDate>Sat, 04 Jan 2014 00:00:00 +0100</pubDate>
       <guid>http://labs.europeana.eu/spaces/platoniq</guid>
       <dc:date>2014-01-04T00:00:00+01:00</dc:date>
     </item>
     <item>
       <title>Postcards from Europeana 1914 - 1918</title>
-      <link>http://labs.europeana.eu/datasets/2014/01/01/Postcards_from_Europeana_1914+_1918/</link>
+      <link>http://labs.europeana.eu/datasets/postcards-from-europeana</link>
       <description></description>
       <pubDate>Wed, 01 Jan 2014 00:00:00 +0100</pubDate>
-      <guid>http://labs.europeana.eu/datasets/2014/01/01/Postcards_from_Europeana_1914+_1918/</guid>
+      <guid>http://labs.europeana.eu/datasets/postcards-from-europeana</guid>
       <dc:date>2014-01-01T00:00:00+01:00</dc:date>
     </item>
     <item>
       <title>Popes on artwork, drawings and documents from the Rijksmuseum in the Netherlands</title>
-      <link>http://labs.europeana.eu/datasets/2014/01/01/Popes+_on_artwork/</link>
+      <link>http://labs.europeana.eu/datasets/popes-on-artwork-drawings-and-documents-from-the-rijksmuseum-in-the-netherlands</link>
       <description></description>
       <pubDate>Wed, 01 Jan 2014 00:00:00 +0100</pubDate>
-      <guid>http://labs.europeana.eu/datasets/2014/01/01/Popes+_on_artwork/</guid>
+      <guid>http://labs.europeana.eu/datasets/popes-on-artwork-drawings-and-documents-from-the-rijksmuseum-in-the-netherlands</guid>
       <dc:date>2014-01-01T00:00:00+01:00</dc:date>
     </item>
     <item>
@@ -303,6 +303,14 @@
       <description></description>
       <pubDate>Wed, 01 Jan 2014 00:00:00 +0100</pubDate>
       <guid>http://labs.europeana.eu/datasets/2014/01/01/Early_Photographs_from_the_Fondo_Fotogr%C3%A1fico_De_La_Universidad_De_Navarra/</guid>
+      <dc:date>2014-01-01T00:00:00+01:00</dc:date>
+    </item>
+    <item>
+      <title>Early Photographs from the Fondo Fotográfico De La Universidad De Navarra</title>
+      <link>http://labs.europeana.eu/datasets/2014/01/01/Early_Photographs_from_the_Fondo_Fotogra%CC%81fico_De_La_Universidad_De_Navarra/</link>
+      <description></description>
+      <pubDate>Wed, 01 Jan 2014 00:00:00 +0100</pubDate>
+      <guid>http://labs.europeana.eu/datasets/2014/01/01/Early_Photographs_from_the_Fondo_Fotogra%CC%81fico_De_La_Universidad_De_Navarra/</guid>
       <dc:date>2014-01-01T00:00:00+01:00</dc:date>
     </item>
     <item>
