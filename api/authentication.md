@@ -1,6 +1,6 @@
 ---
 layout: "api-page"
-title: API Authentication
+title: Authentication
 published: true
 ---
 
