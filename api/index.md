@@ -9,6 +9,6 @@ The below information provides pointers to more detailed API documentation.
 
 |API Type|Usage|
 |:-------------|:-------------|
-|[Portal](/api/portal-api)| Standard REST calls over HTTP. Response returned in JSON |
+|[REST API](/api/portal-api)| Standard REST calls over HTTP. Response returned in JSON |
 |[Linked Open Data](/api/linked-open-data) | Find and extract data in SPARQL 1.1, supports Linked Open Data.|
 |[OAI-PMH](/api) | Hervest metadata invoked within HTTP. |
