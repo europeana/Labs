@@ -20,29 +20,29 @@ Retrieve information about all Europeana data providers.
 
 | Parameter | Datatype | Type | Description |
 |:-------------|:-------------|:-----|:-----|
-| offset | String |  query | offset |
-| pageSize | Number | query  | pageSize|
-| countryCode | String | query | coide |
+| offset | String |  query | for paging needs - offset to start with |
+| pageSize | Number | query  | for paging needs - size of the result set to fetch |
+| countryCode | String | query | two-letters ISO 3166-1 country code. (TBD - is it so?) |
 
 ### Response
 
 | Field | Datatype | Description |
 |:-------------|:-------------|:-----|
-| identifier  | String | The identifier of a provider assigned by Europeana, (ie 00916) |
-| country     | String | The iso value of the provider country, (ie fr) |
-| name        | String | The provider name (ie K-samsök) |
-| acronym     | String | The provider acronym (ie SOCH) |
-| altname     | String | The provider alternative name |
-| scope       | String | The provider scope (ie Cross/Single/Thematic/Individual) |
-| domain      | String | The provider domain (ie Gallery/Library/Archive/Museum) |
-| geolevel    | String | The provider geographic level of operation (Regiona/Nationa/European/Worldwide) |
-| role        | String | The provider Role/ Relationship to Europeana (Aggregator/Data Provider)  |
-| website     | String | The oragization's website |
+| identifier  | String | the internal identifier of the provider in Europeana |
+| country     | String | two-letters ISO 3166-1 code of the provider country |
+| name        | String | the name of the provider |
+| acronym     | String | the acronym |
+| altname     | String | the alternative name |
+| scope       | String | the scope (TBD: Cross/Single/Thematic/Individual) |
+| domain      | String | the domain (TBD: Gallery/Library/Archive/Museum) |
+| geolevel    | String | the level of operations (Regional/Nationa/European/Worldwide) |
+| role        | String | the type of the organisation with relation to Europeana (Aggregator/Data Provider)  |
+| website     | String | The website of the provider  |
 
 
 ## Provider
 
-Retrieve information about a single data provider. Returns the same fields as the previous call.
+Retrieve information about a provider. Returns the same fields as the previous call.
 
 	http://europeana.eu/api/v2/provider/[providerID].json
     
@@ -50,11 +50,11 @@ Retrieve information about a single data provider. Returns the same fields as th
 
 | Parameter | Datatype | Type | Description |
 |:-------------|:-------------|:-----|:-----|
-| providerID | String |  path | The ID of the provider to retrieve |
+| providerID | String |  path | The identifier of the provider. |
 
 ## Datasets by Provider
 
-Retrieve information about datasets supplied by a given data provider.
+Retrieve information about datasets supplied by a specific data provider.
 
 	http://europeana.eu/api/v2/provider/[providerID]/datasets.json
 
@@ -62,25 +62,25 @@ Retrieve information about datasets supplied by a given data provider.
 
 | Parameter | Datatype | Type | Description |
 |:-------------|:-------------|:-----|:-----|
-| providerID | String |  path | The ID of the provider |
+| providerID | String |  path | The identifier of the provider |
 
 ### Response
 
 | Field | Datatype | Description |
 |:-------------|:-------------|:-----|
-| identifier  | String | The dataset identifier assigned by Europeana (ie: 0091650) |
-| provIdentifier     | String | The identifier of the provider of the dataset, (ie: 00916)  |
-| providerName     | String | The name of the provider of the dataset (ie: K-samsök) |
-| name     | String | The name of the dataset (ie: 91626_Ag_SE_SwedishNationalHeritage_tm_obj) |
-| status     | String | The current status of the specific dataset in the europeana ingestion lifecycle |
-| publishedRecords     | Number | The number of cerords that belong to this dataset and are publiched to the portal |
-| deleteRecords     | Number | The number opf records that heve been Removed/Deleted |
-| creationDate     | Date | The Registration Data of this dataset |
+| identifier  | String | the internal identifier of the dataset in Europeana  |
+| provIdentifier     | String | the internal identifier of the provider of the dataset  |
+| providerName     | String | the name of the provider of the dataset  |
+| name     | String | the name of the dataset (TBD: add information on identifying datasets to the repository page?) |
+| status     | String | the current status of the dataset in the europeana ingestion lifecycle |
+| publishedRecords     | Number | the number of records that belong to this dataset and are published on the Europeana Portal |
+| deleteRecords     | Number | The number of records that have been removed or deleted (TBD: more info?) |
+| creationDate     | Date | the date the dataset was created |
 
 
 ## Dataset
 
-Retrieve information about a specific dataset. Returns the same fields as the previous call.
+Retrieve information about a dataset. Returns the same fields as the previous call.
 
 	http://europeana.eu/api/v2/dataset/[datasetID].json
 
