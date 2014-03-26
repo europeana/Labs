@@ -318,6 +318,7 @@ ul.post-list li {overflow: hidden;}
 
 ul.tags li a.current-tag{background: #611a1a;}
 
+
 /*RESPONSIVE*/
 
 @media all
@@ -379,7 +380,7 @@ ul.tags li a.current-tag{background: #611a1a;}
 
 .featureBanner:before {
     position: absolute;
-    content: "Alpha";
+    content: "Beta";
     top: 5px;
     left: -8px;
     padding-right: 10px;
