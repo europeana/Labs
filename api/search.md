@@ -1,6 +1,6 @@
 ---
 layout: "api-page"
-title: API Search Method
+title: Search
 published: true
 ---
 
