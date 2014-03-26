@@ -49,7 +49,7 @@ module Jekyll
         site.posts.reverse[0..post_limit].each do |post|
           post.render(site.layouts, site.site_payload)
           maker.items.new_item do |item|
-            link = "http://labs.europeana.eu#{post.url}"
+            link = "{{site.url}}#{post.url}"
             item.guid.content = link
             item.title = post.title
             item.link = link

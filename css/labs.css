@@ -287,7 +287,7 @@ div.prose ul.sg-icons {margin-left: 0;}
   margin: 0 5px;
   color: #333;
   padding: 0.5rem 1rem;
-display: inline-block;
+	display: inline-block;
 }
 
 .pagination-holder a:hover {
@@ -320,7 +320,10 @@ ul.tags li a.current-tag{background: #611a1a;}
 
 /*RESPONSIVE*/
 
-
+@media all
+{
+	.prose a {font-family: Arial;}
+}
 
 @media (max-width: 1200px){
 

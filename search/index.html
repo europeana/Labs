@@ -40,8 +40,8 @@ title: Search
 <script type="text/javascript">
   $(document).ready(function() {
   	try{
-		var inputFieldQ = $("#search-query");
-    inputFieldQ.lunrSearch({
+			var inputFieldQ = $("#search-query");
+   inputFieldQ.lunrSearch({
       indexUrl: '/search.json',             // URL of the `search.json` index data for your site
       results:  '#search-results',          // jQuery selector for the search results container
       entries:  '.entries',                 // jQuery selector for the element to contain the results list, must be a child of the results element above.
@@ -54,10 +54,17 @@ title: Search
    	alert(e.message);
    }
    
-	$("a.tag").click(function(){
+
+   	
+	$("ul.tags li a").click(function(event){
+
+		event.preventDefault();		
+		$("ul.tags li a").removeClass("current-tag");
+		$(this).addClass("current-tag");
 		var clickedTagText = $(this).text();
 		$("#search-results li").show();
 		$("#search-results li").each(function(){
+			
   			var iskaniTag = $(this).find('a').filter(function(index) { return $(this).text() === clickedTagText; });
   			if(iskaniTag.length>0){
   					

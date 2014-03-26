@@ -17,6 +17,7 @@ $(document).ready(function(){
 			$("#nav").css("max-height","0");
 			$("#nav").removeClass("menu-opened");
 		}else{
+			
 			$("#nav").css("max-height","999px");
 			$("#nav").addClass("menu-opened");
 		}
@@ -26,15 +27,18 @@ $(document).ready(function(){
 	
 	if(document.referrer.indexOf("/search") != -1 && document.URL.indexOf("/search")==-1){
 		$("#search").append("<a style='display:block; font-size:0.8em; text-align:center;' href='"+document.referrer+"'>Back to search results</a>");
+		
+		$("div.tabs ul").prepend("<li>"+"<a href='"+document.referrer+"'>← Back to search results</a>"+"</li>");
 	}
 	
-	$("ul.tags li a").click(function(){
+	/*$("ul.tags li a").click(function(){
+		alert("OK");
 		$("ul.tags li a").removeClass("current-tag");
 		$(this).addClass("current-tag");
 		$("div.pagination-holder").jPages("destroy");
 		$("ul.post-list li").removeClass("filtered-by-tag").hide();
 		$("ul.post-list li."+$(this).attr("rel")).addClass("filtered-by-tag").show();
-	});
+	});*/
 	
 	$("a.datasetstag-at-item").click(function(){
 		$("ul.tags li a[rel='"+$(this).attr("rel")+"']").click();
@@ -69,7 +73,7 @@ $(document).ready(function(){
 	
 	//select gallery tag if selected
 	var splitedGalleryUrl = window.location.pathname.split('/');
-	if(splitedGalleryUrl[1]=="gallery" && splitedGalleryUrl.length>2){
+	if( splitedGalleryUrl.length>2){
 		$("ul.tags li a[rel='"+splitedGalleryUrl[2]+"']").addClass("current-tag");
 	}
 	
