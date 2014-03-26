@@ -1,6 +1,6 @@
 ---
 layout: "api-page"
-title: API Provider Query
+title: Querying Providers and Datasets
 published: true
 ---
 
