@@ -1,11 +1,11 @@
 ---
 layout: api-page
-title: Portal API
+title: Europeana REST API
 published: true
 ---
 
 
-The Europeana API allows you to build applications that use the wealth of cultural heritage objects stored in the Europeana repository. The API uses the standard web technology of REST calls over HTTP. Responses are returned in the popular JSON format.
+The Europeana REST API allows you to build applications that use the wealth of cultural heritage objects stored in the Europeana repository. The API uses the standard web technology of REST calls over HTTP. Responses are returned in the popular JSON format.
 
 To get straight to the point of the API, you can go directly to the [Essentials page](/api/getting-started) which tells you only what you have to know to start using the API.
 
