@@ -1,6 +1,6 @@
 ---
 layout: "api-page"
-title: Accessing My Europeana via API
+title: Accessing MyEuropeana
 published: true
 ---
 
