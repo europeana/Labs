@@ -4,8 +4,8 @@ published: true
 ---
 
 ### Introduction
-The Europeana datasets availble here all support a number of ways of querying and integrating the data into applications.
-The below information provides pointers to more detailed API documentation.
+The Europeana datasets available here all support a number of ways of querying and integrating the data into applications.
+The links below provide pointers to more detailed API documentation.
 
 |API Type|Usage|
 |:-------------|:-------------|
