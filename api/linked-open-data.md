@@ -1,6 +1,6 @@
 ---
 layout: api-page
-title: Linked Open Data
+title: Europeana Linked Open Data
 published: true
 ---
 
