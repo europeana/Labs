@@ -1,7 +1,8 @@
 ---
 layout: data-item
-category: datasets
+category: data
 title: Bryozoa from the National Museum Prague
+permalink: data/Bryozoa-from-the-National-Museum-Prague
 provider: National Museum Prague
 description: More than 500 photographs of Bryozoans from the palaeontological collections of the  National Museum Prague. In English with latin species names.
 contact: nm@nm.cz

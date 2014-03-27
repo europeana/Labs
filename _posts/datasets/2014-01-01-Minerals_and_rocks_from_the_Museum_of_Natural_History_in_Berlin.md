@@ -1,7 +1,8 @@
 ---
 layout: data-item
-category: datasets
+category: data
 title: Minerals and rocks from the Museum of Natural History in Berlin
+permalink: data/Minerals-and-rocks-from-the-Museum-of-Natural-History-in-Berlin
 provider: Museum of Natural History Berlin
 description: More than 1,000 photographs of minerals and rocks from the mineralogical collections of the  Museum of Natural History Berlin. In English with scientific names of minerals and rocks.
 contact: info@mfn-berlin.de

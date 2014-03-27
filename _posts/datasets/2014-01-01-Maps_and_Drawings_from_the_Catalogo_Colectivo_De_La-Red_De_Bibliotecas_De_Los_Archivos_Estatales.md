@@ -1,7 +1,8 @@
 ---
 layout: data-item
-category: datasets
+category: data
 title: Battles on artwork and drawings from the Rijksmuseum in the Netherlands
+permalink: data/Battles-on-artwork-and-drawings-from-the-Rijksmuseum-in-the-Netherlands
 provider: Rijksmuseum
 description: A collection of  thousand drawings, prints and artworks of battles across Europe through the centuries.
 contact: info@rijksmuseum.nl

@@ -1,7 +1,8 @@
 ---
 layout: data-item
-category: datasets
+category: data
 title: Flowers and Trees from the Royal Botanic Garden in Edinburgh
+permalink: data/Flowers-and-Trees-from-the-Royal-Botanic-Garden-in-Edinburgh
 provider: The Royal Botanic Garden Edinburgh
 description: More than 3,000 flowers and trees from the collections of the  Royal Botanic Garden in Edinburgh. In English with Latin species names.
 contact: webmaster@rbge.org.uk

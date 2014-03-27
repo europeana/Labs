@@ -1,7 +1,8 @@
 ---
 layout: data-item
-category: datasets
+category: data
 title: Maps and Drawings from the Biblioteca Virtual Del Patrimonio Bibliográfico
+permalink: data/Maps-and-Drawings-from-the-Biblioteca-Virtual-Del-Patrimonio-Bibliografico
 provider: Biblioteca Virtual del Patrimonio Bibliográfico
 description: More than 4,000 maps and drawings from the Biblioteca Virtual del Patrimonio Bibliográfico. Spanish language.
 contact: ccbae.dglab@mcu.es

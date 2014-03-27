@@ -1,7 +1,8 @@
 ---
 layout: data-item
-category: datasets
+category: data
 title: Maps and Drawings from the Catálogo Colectivo De La Red De Bibliotecas De Los Archivos Estatales
+permalink: data/Maps-and-Drawings-from-the-Catálogo-Colectivo-De-La-Red-De-Bibliotecas-De-Los-Archivos-Estatales
 provider: Catálogo Colectivo de la Red de Bibliotecas de los Archivos Estatales
 description: More than 7,000 maps, city plans & architectural drawings/plans from the Catálogo Colectivo de la Red de Bibliotecas de los Archivos Estatales. The collection is a union catalog of state archives and libraries in Spain. Spanish language.
 contact: ccbae.dglab@mcu.es

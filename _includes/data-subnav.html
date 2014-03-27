@@ -6,11 +6,11 @@
 					 {% for tag in site.tags %}
 			{% assign z = "0" %}
 			
-			{% for data in site.categories.datasets %}
+			{% for data in site.categories.data %}
 				{% for tag1 in data.tags %}
 										
 	    			{% if tag[0] == tag1 %}
-						<li><a href="{{site.baseurl}}/datasets/{{ tag | first | tags_links | slugize }}/" rel="{{ tag | first | tags_links | slugize }}" class="tag">{{ tag | first }}</a></li>
+						<li><a href="{{site.baseurl}}/data/{{ tag | first | tags_links | slugize }}/" rel="{{ tag | first | tags_links | slugize }}" class="tag">{{ tag | first }}</a></li>
 						{% assign z = "1" %}
 						
 						{% break %}

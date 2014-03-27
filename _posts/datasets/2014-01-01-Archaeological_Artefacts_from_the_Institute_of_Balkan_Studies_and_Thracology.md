@@ -1,7 +1,8 @@
 ---
 layout: data-item
-category: datasets
+category: data
 title: Archaeological Artefacts from the Institute of Balkan Studies and Thracology
+permalink: data/archaeological-artefacts-from-the-institute-of-balkan-Studies-and-Thracology   
 provider: Institute of Balkan Studies and Thracology - Институт за балканистика с Център по тракология
 description: 500 examples of archaeological artefacts from the Institute of Balkan Studies and Thracology. Bulgarian language.
 contact: balkani@cl.bas.bg
@@ -16,6 +17,6 @@ tags:
 licenses:
   - by
   - sa  
-      
+ 
 ---
 

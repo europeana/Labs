@@ -13,7 +13,7 @@ title: Datasets
 </script>
 <div class="grid__item palm--one-whole three-quarters">
     <ul id="DatasetsList"  class="post-list grid">
-        {% for dataset in site.categories.datasets %}<!--
+        {% for dataset in site.categories.data %}<!--
         --><li class="grid__item one-whole {% for tag in dataset.tags %}{{tag | tags_links}} {% endfor %}">
             <div class="block block-thumb  {%if counter > 1 %} block-thumb-small {% endif %}">
 

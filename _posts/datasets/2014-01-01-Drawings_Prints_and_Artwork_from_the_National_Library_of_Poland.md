@@ -1,7 +1,8 @@
 ---
 layout: data-item
-category: datasets
+category: data
 title: Drawings, Prints and Artwork from the National Library of Poland
+permalink: data/Drawings-Prints-and-Artwork-from-the-National-Library-of-Poland
 provider: The National Library of Poland - Biblioteka Narodowa
 description: More than 16,000 examples of drawings, prints, artwork, posters, engravings, postcards, photographs, portraits and caricatures from the National Library of Poland. Polish language.
 contact: biblnar@bn.org.pl

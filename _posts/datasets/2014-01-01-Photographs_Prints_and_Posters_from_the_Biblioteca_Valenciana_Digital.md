@@ -1,7 +1,8 @@
 ---
 layout: data-item
-category: datasets
+category: data
 title: Photographs, Prints and Posters from the Biblioteca Valenciana Digital
+paermalink: data/Photographs-Prints-and-Posters-from-the-Biblioteca-Valenciana-Digital
 provider: Biblioteca Valenciana Digital
 description: More than 500 examples of photographs, prints and posters from the Biblioteca Valenciana Digital. Spanish language.
 contact: bivaldi@gva.es

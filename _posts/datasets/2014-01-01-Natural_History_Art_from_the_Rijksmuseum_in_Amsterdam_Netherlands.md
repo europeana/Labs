@@ -1,7 +1,8 @@
 ---
 layout: data-item
-category: datasets
+category: data
 title: Natural History Art from the Rijksmuseum in Amsterdam (Netherlands)
+permalink: data/Natural-History-Art-from-the-Rijksmuseum-in-Amsterdam-Netherlands
 provider: Rijksmuseum
 description: More than 75 paintings and drawings of flowers and animals from the collections of the  Rijksmuseum. In Dutch.
 contact: info@rijksmuseum.nl

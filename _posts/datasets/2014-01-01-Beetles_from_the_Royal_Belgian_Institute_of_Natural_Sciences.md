@@ -1,7 +1,8 @@
 ---
 layout: data-item
-category: datasets
+category: data
 title: Beetles from the Royal Belgian Institute of Natural Sciences
+permalink: data/Beetles-from-the-Royal-Belgian-Institute-of-Natural-Sciences
 provider: Royal Belgian Institute of Natural Sciences
 description: More than 4,000 photographs of beetles from the collections of the  Royal Belgian Institute of Natural Sciences. In English with Latin species names.
 contact: info@naturalsciences.be
