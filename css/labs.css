@@ -404,6 +404,6 @@ ul.tags li a.current-tag{background: #611a1a;}
     border-bottom-color: transparent;
 }
 
-body {font-family: 'Open Sans', sans-serif;}
-h1, h2, h3, h4, h5 {font-family: 'Ubuntu', sans-serif;}
+body {font-family: 'Open Sans', Arial, sans-serif;}
+h1, h3 {font-family: Ubuntu, Arial, sans-serif; }
 
