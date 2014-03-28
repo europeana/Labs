@@ -324,7 +324,7 @@ ul.tags li a.current-tag{background: #206a50;}
 
 @media all
 {
-	.prose a {font-family: Arial;}
+	.prose a {font-family: 'Open Sans', Arial, sans-serif;}
 }
 
 @media (max-width: 1200px){
@@ -406,5 +406,5 @@ ul.tags li a.current-tag{background: #206a50;}
 }
 
 body {font-family: 'Open Sans', Arial, sans-serif;}
-h1, h3 {font-family: Ubuntu, Arial, sans-serif; }
+h1, h2, h3, h4 {font-family: Ubuntu, Arial, sans-serif; }
 
