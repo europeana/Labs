@@ -9,7 +9,6 @@ $(document).ready(function(){
 		}
 
 	
-		
 	$("#homepage").parent().attr("id", "homepagebody");
 	
 	$("#hamMenu").click(function(){
@@ -78,6 +77,7 @@ $(document).ready(function(){
 	}
 	
 
+	sortTagsListOneLevel();
 });
 
 function repageDatasets()
@@ -147,3 +147,18 @@ var semLabs = {
 		}	
 	}
 };
+
+function sortTagsListOneLevel(){
+  var mylist = $('ul.tags');
+  var listitems = mylist.children('li').get();
+
+  listitems.sort(function(a, b) {
+    var compA = $(a).find("a").text().toUpperCase();
+    var compB = $(b).find("a").text().toUpperCase();
+    return (compA < compB) ? -1 : (compA > compB) ? 1 : 0;
+  });
+  $.each(listitems, function(idx, itm) { 
+    mylist.append(itm); 
+  });
+}
+

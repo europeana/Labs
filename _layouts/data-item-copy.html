@@ -1,13 +1,16 @@
-
-{% include item-header.html %}	
-	<div class="grid__item one-quarter tabs tabs-v">
-		<ul>
-			<li><a href="{{site.baseurl}}/data">&larr;&nbsp;Data</a></li>
-			{% include improve-content.html %}
-		</ul>
-	</div><!--
-	--><div class="grid__item palm--one-whole desk--one-half">
-		    <a href="{{ page.contact.website }}" title="{{page.title}} Website">
+{% include item-header.html %}
+<div class="l-two-col">
+	<div class="l-sidebar">
+		<div class="grid__item one-whole tabs tabs-v">
+			<ul>
+				<li><a href="{{site.baseurl}}/data">&larr;&nbsp;Data</a></li>
+				{% include improve-content.html %}
+			</ul>
+		</div>
+	</div>
+	<div class="l-main">
+		<article class="article">
+					    <a href="{{ page.contact.website }}" title="{{page.title}} Website">
 		        <img style="max-height: 500px;" src="{{site.baseurl}}{{page.imageurl.first}}" alt="{{page.title}}">
 		    </a>
 
@@ -41,7 +44,7 @@
 						
                     </div>-->
                 </div>
-		{% include contact-block.html %}
+                		{% include contact-block.html %}
 		{% include other-image-block.html %}
 		<hr />
 		{% include tag-block.html %}
@@ -65,8 +68,9 @@
 	<a href="https://plus.google.com/share?url={{site.url}}{{page.url}}" target="_blank"><img src="http://www.simplesharebuttons.com/images/somacro/google.png" alt="Google" /></a>
 	</div>
 </div>
-    </div>
-    
+		</article>
+	</div>
+</div>	
 
 {% include footer.html %}<!--
 -->{% include end.html %}
