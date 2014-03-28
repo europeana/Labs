@@ -366,7 +366,7 @@ ul.tags li a.current-tag{background: #206a50;}
 }
 
 @media (max-width: 800px){
-	div.b-text {
+	#homepage div.b-text {
 		display:none;
 	}
 	#homepage #register_email {width: 150px; margin-right: 10px;}

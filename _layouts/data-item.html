@@ -1,12 +1,13 @@
 
 {% include item-header.html %}	
-	<div class="grid__item one-quarter tabs tabs-v">
-		<ul>
+
+	<div class="grid__item one-quarter palm--one-whole">
+		<ul class="tabs tabs-v">
 			<li><a href="{{site.baseurl}}/data">&larr;&nbsp;Data</a></li>
 			{% include improve-content.html %}
 		</ul>
 	</div><!--
-	--><div class="grid__item palm--one-whole desk--one-half">
+	--><div class="grid__item three-quarters palm--one-whole">
 		    <a href="{{ page.contact.website }}" title="{{page.title}} Website">
 		        <img style="max-height: 500px;" src="{{site.baseurl}}{{page.imageurl.first}}" alt="{{page.title}}">
 		    </a>
