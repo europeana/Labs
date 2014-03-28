@@ -4,7 +4,7 @@ category: events
 permalink: /events/International_Business_Lounge_Future_Everything_Conference
 title: International Business Lounge, Future Everything Conference
 imageurl: 
-  - 
+  - "/img/events/2014-03-29_future-everything.svg"
 tags: 
   - apps4europe
 links:
