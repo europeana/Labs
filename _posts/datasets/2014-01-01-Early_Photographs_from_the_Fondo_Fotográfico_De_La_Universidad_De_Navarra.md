@@ -2,7 +2,7 @@
 layout: data-item
 category: data
 title: Early Photographs from the Fondo Fotográfico De La Universidad De Navarra
-permalnik: data/Early-Photographs-from-the-Fondo-Fotográfico-De-La-Universidad-De-Navarra
+permalink: data/Early-Photographs-from-the-Fondo-Fotografico-De-La-Universidad-De-Navarra
 provider: Fondo Fotográfico de la Universidad de Navarra
 description: More than 4,000 early photographs from 19th-century Spain in the collections of the Universidad de Navarra. Spanish language.
 contact: dirmuseo@unav.es
