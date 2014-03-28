@@ -14,11 +14,13 @@ links:
 
 This new Europeana Labs site is intended to provide all you need to get started using the Europeana API. Learn about the data, see what others have built, and find out how to build simple but powerful queries to extract bespoke results from a dataset of over 30 million openly licensed media objects - books, photos of art and artefacts, audio clips and more.
 
+Last year we consulted with the developer community asking them what things would help them to make best use of the Europeana API. This site is the first major step towards putting in place the things we were told.
+
 ## Contents
-- <a href="lookaround" title="Look around">Take a look around</a>
-- <a href="start" title="Getting started">Getting started</a>
-- <a href="documentation" title="Europeana documentation>API Documentation</a>
-- <a href Need help?
+- <a href="#lookaround" title="Look around">Take a look around</a>
+- <a href="#start" title="Getting started">Getting started</a>
+- <a href="#documentation" title="Europeana documentation">API Documentation</a>
+- <a href="#help" title="Help and Support">Need help?</a>
 - <a href="#feedback" title="Europeana Labs Beta feedback>Send us your feedback</a>
 
 <a name="lookaround"></a>
