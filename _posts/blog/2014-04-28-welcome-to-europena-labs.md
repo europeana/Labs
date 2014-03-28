@@ -19,8 +19,8 @@ Last year we consulted with the developer community asking them what things woul
 ## Contents
 - <a href="#lookaround" title="Look around">Take a look around</a>
 - <a href="#start" title="Getting started">Getting started</a>
-- <a href="#documentation" title="Europeana documentation">API Documentation</a>
 - <a href="#help" title="Help and Support">Need help?</a>
+- <a href="#documentation" title="Europeana documentation">API Documentation</a>
 - <a href="#feedback" title="Europeana Labs Beta feedback">Send us your feedback</a>
 
 <a name="lookaround"></a>
