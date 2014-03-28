@@ -14,7 +14,7 @@ links:
 
 This new Europeana Labs site is intended to provide all you need to get started using the Europeana API, and quickly progress to building simple but powerful queries to extract bespoke results from a dataset of over 30 million openly licensed media objects - books, photos of art and artefacts, audio clips and more.
 
-Contents:
+## Contents
 - Take a look around
 - Getting started
 - Hints and tips
