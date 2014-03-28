@@ -43,8 +43,6 @@ module Jekyll
         entry.strip_index_suffix_from_url! if @strip_index_html
         entry.strip_stopwords!(stopwords, @min_length) if File.exists?(@stopwords_file) 
 
-       
-
         index << {
           :title => entry.title, 
           :url => entry.url,
@@ -88,7 +86,7 @@ module Jekyll
       
       # deep copy pages
       
-      #site.pages.each {|page| items << page.dup }
+      site.pages.each {|page| items << page.dup }
       site.posts.each {|post| items << post.dup }   
 
       # only process files that will be converted to .html and only non excluded files 
@@ -140,6 +138,11 @@ module Jekyll
       imageurl = [""]
       excerpt = ""
       
+       if page.data["excerpt"]!= nil
+        excerpt = page.data["excerpt"]
+      end
+           
+      
       SearchEntry.new(title, url, date, categories, body, tags, imageurl, excerpt)
     end
     
@@ -152,6 +155,10 @@ module Jekyll
       tags = post.tags
       imageurl = post.data["imageurl"].first
       excerpt = post.excerpt
+      
+      if post.excerpt == nil
+        excerpt = post.data["excerpt"]
+      end
                   
       SearchEntry.new(title, url, date, categories, body, tags, imageurl, excerpt)
     end
