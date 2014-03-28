@@ -122,7 +122,7 @@ body header {border-top:6px solid #3f3f3f;}
 }
 #homepage h3{font-style: normal;}
 nav{ margin-top:1.5em; margin-left:0em;}
-nav ul li a {font-size: 0.9em;}
+nav ul li a {font-size: 1.0em;}
 
 
 #homepage div.b-text:before{ width: 45%; border-top: solid 10px white; margin: 3% auto 3%;}
@@ -240,7 +240,6 @@ nav ul li a {font-size: 0.9em;}
 	width:40px; 
 	height: 40px; 
 	margin-right: 5px; 
-	background: yellow; 
 	display: inline-block;
 }
 
@@ -404,7 +403,6 @@ ul.tags li a.current-tag{background: #611a1a;}
     border-bottom-color: transparent;
 }
 
-
-body *{font-family: 'Open Sans', sans-serif;}
-header *{font-family: 'Ubuntu', sans-serif;}
+body {font-family: 'Open Sans', Arial, sans-serif;}
+h1, h3 {font-family: Ubuntu, Arial, sans-serif; }
 
