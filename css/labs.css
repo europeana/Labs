@@ -122,7 +122,7 @@ body header {border-top:6px solid #37b98b;}
 }
 #homepage h3{font-style: normal;}
 nav{ margin-top:1.5em; margin-left:0em;}
-nav ul li a {font-size: 1.0em;}
+nav ul li a {font-size: 0.9em;}
 
 
 #homepage div.b-text:before{ width: 45%; border-top: solid 10px white; margin: 3% auto 3%;}
@@ -145,6 +145,7 @@ nav ul li a {font-size: 1.0em;}
 #homepage div.startBtn:after{width: 13%; border-bottom: solid 3px white; margin: 3% auto 1%; content: " "; display: block;}
 #homepage div.byline {font-style:normal; font-weight: bold; font-size:1em; }
 #homepage div.byline span.byline-author {font-style: normal; font-weight: bold; font-size: 1.8em; border-bottom: 3px solid white; }
+#homepage div.b-text a:focus {color:white;} 
 #homepage #apikey-block {
 	width: 75%; 
 	margin-left:auto;
