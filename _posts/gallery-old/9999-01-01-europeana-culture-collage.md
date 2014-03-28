@@ -4,7 +4,7 @@ layout: "gallery-item"
 published: true
 title: Europeana Culture Collage
 featured: true
-permalink: "gallery/culture-collage"
+permalink: gallery/culture-collage
 imageurl: 
   - "/img/gallery/europeana-culture-collage/Culture_Collage.jpg"
 tags: 

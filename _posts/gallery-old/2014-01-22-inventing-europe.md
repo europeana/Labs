@@ -4,7 +4,7 @@ layout: "gallery-item"
 published: true
 title: Inventing Europe
 featured: false
-permalink: "gallery/inventing-europe"
+permalink: gallery/inventing-europe
 tags: 
   - API Implementation
 imageurl: 

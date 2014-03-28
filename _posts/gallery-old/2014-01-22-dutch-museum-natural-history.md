@@ -2,7 +2,7 @@
 category: gallery
 layout: "gallery-item"
 published: true
-permalink: "gallery/dutch-natural-history"
+permalink: gallery/dutch-natural-history
 title: Dutch Museum of Natural History
 imageurl: 
   - "/img/gallery/dutch-museum-of-national-history/Dutch_Museum_of_National_History.jpg"

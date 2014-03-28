@@ -4,7 +4,7 @@ layout: "gallery-item"
 published: false
 title: EOD Search
 featured: false
-permalink: "gallery/eod-search"
+permalink: gallery/eod-search
 tags: 
   - API Implementation
 imageurl:

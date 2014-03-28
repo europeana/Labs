@@ -2,7 +2,7 @@
 layout: gallery-item
 category: gallery
 permalink: gallery/europeana-local-austria
-title: "Europeana Local Austria"
+title: Europeana Local Austria
 imageurl:
   - "/img/gallery/europeana-local-austria/eLocal.jpg"
 featured: false

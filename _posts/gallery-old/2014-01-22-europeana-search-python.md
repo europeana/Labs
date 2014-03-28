@@ -2,9 +2,9 @@
 category: gallery
 layout: "gallery-item"
 published: true
-title: "Europeana Search Python"
+title: Europeana Search Python
 featured: false
-permalink: "gallery/python"
+permalink: gallery/python
 tags: 
   - API Implementation
 links: 
