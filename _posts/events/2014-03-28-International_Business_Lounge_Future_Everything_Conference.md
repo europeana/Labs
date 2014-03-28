@@ -9,7 +9,7 @@ tags:
   - apps4europe
 links:
   - http://futureeverything.org/events/international-business-lounge-awards-preview/
-shortdescription:
+excerpt:
   - "The International Business Lounge is the culmination of the first year of Apps for Europe. From the various Business Lounge events that have taken place and an open call for participants, ten winners have been chosen to present their work at FutureEverything."
 startdate:
   - 31/03/2014
