@@ -37,6 +37,6 @@ Even if you’re new to Europeana or even using similar APIs, getting started is
 ## Need help?
 There are lots of ways you can get help using the Europeana API. You can contact us directly via our [contact form] or at api@europeana.eu. There’s also an [API Forum] where you can chat with other developers and you can [follow @EuropeanaTech] on Twitter.
 
-<a name="feedback">## Send us your feedback
+<a name="feedback"></a>## Send us your feedback
 The Labs site is currently in beta, with a full launch planned in late June. We’d love to have your feedback on the site and what you think works, and what needs improvements. We’re also happy to hear of any ideas you have.
 Please take a few minutes to <a href="https://www.surveymonkey.com/s/392VRKG" title="Europeana Labs Beta site feedback">fill out our simple survey and tell us what you think</a>.
