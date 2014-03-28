@@ -30,7 +30,7 @@ We’ve pulled together some great examples of both content and existing applica
 
 Take a look at the sample <a href="/data/" title="Europeana Data">Data</a>, chosen to highlight a wide range of content types and themes, such as photographs, maps and natural history. Each dataset gives you the chance to view the items in the Europeana Portal, but also to explore and edit the underlying query via the API Console.  
 
-If you need inspiration than to explore our <a href="/apps/" title="Application Gallery">Application Gallery</a> showcasing innovative projects that have already been built using the Europeana platform.
+If you need inspiration explore our <a href="/apps/" title="Application Gallery">Application Gallery</a> showcasing innovative projects that have already been built using the Europeana platform.
 
 You’ll also find details of <a href="/locations/" title="Europeana Locations">Locations</a>, hubs across Europe which offer online and real world places where you can go to play, develop, test and build.
 
