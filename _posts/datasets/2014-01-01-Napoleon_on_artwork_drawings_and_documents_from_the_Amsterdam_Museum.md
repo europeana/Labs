@@ -2,7 +2,7 @@
 layout: data-item
 category: data
 title: Napoleon on artwork, drawings and documents from the Amsterdam Museum
-paermalnik: data/Napoleon-on-artwork-drawings-and-documents-from-the-Amsterdam-Museum
+permalink: data/Napoleon-on-artwork-drawings-and-documents-from-the-Amsterdam-Museum
 provider: Amsterdam Museum
 description: A beautiful collection of about 70 items related to Napoleon Bonaparte (1769 – 1829).
 contact: info@amsterdammuseum.nl
