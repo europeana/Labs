@@ -4,7 +4,7 @@ category: blog
 permalink: blog/welcome-to-the-new-europeana-labs
 title: Welcome to the New Europeana Labs
 imageurl: 
-  - "/img/blogs/140328-introduction-blog-post.jpg"
+  - "/img/blog/140328-introduction-blog-post.jpg"
 tags: 
   - Introduction
   - Beta
