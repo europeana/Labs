@@ -12,7 +12,7 @@ links:
   - "http://bhl.nhm-wien.ac.at/scanlist/"
  
 imageurl: 
-  - "/img/gallery/BHL-Scan-List/"thoughtlab_image_0012_D---B.png
+  - "/img/gallery/BHL-Scan-List/thoughtlab_image_0012_D---B.png"
 
 contact: 
 
