@@ -150,8 +150,6 @@ module Jekyll
       
       title, url = extract_title_and_url(post)
       
-      puts "T=>"+title
-      
       body = renderer.render(post)
       date = post.date
       categories = post.categories

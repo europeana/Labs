@@ -14,6 +14,19 @@
 		<div class="b-text">
 		    <div class="prose description">
 		        {{ content}}   
+		        <br/>
+		        
+		        <p>
+		        	<strong>
+			        	{{page.streetaddress}}<br/>
+			        	{{page.city}}<br/>
+			        	{{page.country}}<br/>
+			        	<span class="icon icon-calendar">&nbsp;</span>{{page.startdate}}<br/>
+			        	<span class="icon icon-clock">&nbsp;</span>{{page.starttime}}<br/>
+		        	</strong>
+		        </p>
+		        
+		        
 		        {% include link-block.html %} 
 		       <!-- {% include tag-block.html %}-->                    
 		    </div>
