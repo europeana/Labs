@@ -40,7 +40,7 @@ But wherever you are, whatever your skills, and no matter what you're planning, 
 ##API Documentation
 Once you have an idea and you want to start building your application, head to our comprehensive <a href="/api/" title="API Documentation">online documentation</a>. It covers both the REST API and Linked Open Data, with extensive examples illustrating methods, syntax, and responses.
 
-You can also use the <a href="/api/console/" title="API Concole"> to build and test anything from the simplest search to a complex query using facets such as dates, geotags and permissions.
+You can also use the <a href="/api/console/" title="API Console">API Console</a> to build and test anything from the simplest search to a complex query using facets such as dates, geotags and permissions.
 
 <a name="start"></a>
 ## Getting started

@@ -167,7 +167,7 @@ body {
   hyphens: auto;
   word-wrap: break-word;
   background: #fcfcfc;
-  font: 100%/1.4 "proxima-nova", "HelveticaNeue", "Helvetica", "Arial", sans-serif;
+  font: 100%/1.4 "Open Sans", "Arial", sans-serif;
   -webkit-text-size-adjust: 100%;
   color: #232323; }
 
@@ -179,7 +179,7 @@ a {
   outline: 0; }
   /* line 7, scss/base/_links.scss */
   a:hover, a:focus {
-    color: #b13030; }
+    color: #37b98b; }
 
 /* Headings */
 /*Further Reading: http://typeplate.com/ */
@@ -253,12 +253,12 @@ h1, h2, h3, h4, h5, h6 {
 
 /* line 105, scss/base/_headings.scss */
 h1 {
-  font-family: 'ff-meta-web-pro', Georgia, Times, "Times New Roman", serif;
+  font-family: 'Open Sans', Arial, sans-serif;
   font-weight: normal; }
 
 /* line 118, scss/base/_headings.scss */
 h3 {
-  font-family: "ff-meta-web-pro", Georgia, Times, "Times New Roman", serif;
+  font-family: 'Open Sans', Arial, sans-serif;
   font-style: italic;
   font-weight: normal; }
 
@@ -269,7 +269,7 @@ h6 {
 /* Subheadings */
 /* line 146, scss/base/_headings.scss */
 .subheading {
-  font-family: "ff-meta-web-pro", Georgia, Times, "Times New Roman", serif;
+  font-family: 'Open Sans', Arial, sans-serif;
   font-weight: normal; }
 
 /* line 151, scss/base/_headings.scss */
@@ -3112,7 +3112,7 @@ td {
   clear: both;
   overflow: hidden;
   max-height: 0;
-  font-family: "ff-meta-web-pro", Georgia, Times, "Times New Roman", serif;
+  font-family: 'Open Sans', Arial, sans-serif;
   font-size: 16px;
   font-size: 1rem;
   font-weight: 700; }
@@ -3128,7 +3128,7 @@ td {
   .nav .current:after {
     content: '';
     display: block;
-    border-bottom: 5px solid #b13030; }
+    border-bottom: 5px solid #37b98b; }
   @media all and (min-width: 47em) {
     /* line 5, scss/objects/_nav.scss */
     .nav {
@@ -3146,7 +3146,7 @@ td {
 /* line 48, scss/objects/_nav.scss */
 .pagination {
   overflow: hidden;
-  font-family: "ff-meta-web-pro", Georgia, Times, "Times New Roman", serif;
+  font-family: 'Open Sans', Arial, sans-serif;
   margin-bottom: 1.6rem; }
   /* line 54, scss/objects/_nav.scss */
   .pagination li {
@@ -3174,16 +3174,16 @@ td {
   .pagination .current {
     color: white;
     font-weight: bold;
-    background-color: #b13030; }
+    background-color: #37b98b; }
     /* line 89, scss/objects/_nav.scss */
     .pagination .current:hover {
-      background-color: #b13030; }
+      background-color: #37b98b; }
 
 /* line 96, scss/objects/_nav.scss */
 .breadcrumbs {
   list-style: none;
   line-height: 1;
-  font-family: "ff-meta-web-pro", Georgia, Times, "Times New Roman", serif; }
+  font-family: 'Open Sans', Arial, sans-serif; }
   /* line 101, scss/objects/_nav.scss */
   .breadcrumbs a {
     display: inline-block;
@@ -3204,7 +3204,7 @@ td {
       z-index: 1; }
     /* line 122, scss/objects/_nav.scss */
     .breadcrumbs a:hover:after {
-      border-left-color: #b13030; }
+      border-left-color: #37b98b; }
   /* line 128, scss/objects/_nav.scss */
   .breadcrumbs > li {
     display: inline; }
@@ -3262,7 +3262,7 @@ td {
 /* Global Font Classes */
 /* line 2, scss/objects/_text.scss */
 .font-secondary {
-  font-family: "ff-meta-web-pro", Georgia, Times, "Times New Roman", serif; }
+  font-family: 'Open Sans', Arial, sans-serif; }
 
 /* line 7, scss/objects/_text.scss */
 .intro {
@@ -3280,7 +3280,7 @@ td {
   .pullquote:before, .pullquote:after {
     font-size: 64px;
     font-size: 4rem;
-    color: #b13030; }
+    color: #37b98b; }
   /* line 25, scss/objects/_text.scss */
   .pullquote:before {
     content: "\201C";
@@ -3305,10 +3305,10 @@ td {
   color: #232323; }
   /* line 52, scss/objects/_text.scss */
   .prose a {
-    color: #b13030; }
+    color: #37b98b; }
     /* line 55, scss/objects/_text.scss */
     .prose a:hover {
-      border-bottom: 1px dotted #b13030; }
+      border-bottom: 1px dotted #37b98b; }
   /* line 60, scss/objects/_text.scss */
   .prose li {
     margin-bottom: 0.8rem; }
@@ -3346,7 +3346,7 @@ td {
 /* line 16, scss/objects/_icons.scss */
 .icon-block, .icon-round {
   display: inline-block;
-  background-color: #b13030;
+  background-color: #37b98b;
   color: white;
   padding: 0.2em 0.4em 0; }
 
@@ -4390,8 +4390,8 @@ html:hover [class^="icon-"] {
   text-align: center; }
   /* line 17, scss/objects/_buttons.scss */
   .btn:hover, .btn:focus {
-    color: #b13030;
-    border-color: #b13030; }
+    color: #37b98b;
+    border-color: #37b98b; }
   /* line 22, scss/objects/_buttons.scss */
   .btn.disabled {
     background: #ebebeb;
@@ -4408,8 +4408,8 @@ html:hover [class^="icon-"] {
     border-color: #212121; }
     /* line 38, scss/objects/_buttons.scss */
     .btn.alt:hover {
-      background-color: #b13030;
-      border-color: #b13030; }
+      background-color: #37b98b;
+      border-color: #37b98b; }
 
 /* line 45, scss/objects/_buttons.scss */
 .btn-small {
@@ -4454,22 +4454,22 @@ html:hover [class^="icon-"] {
 
 /* line 22, scss/objects/_tags.scss */
 .tag {
-  background-color: #b13030;
+  background-color: #37b98b;
   color: #fcfcfc; }
   /* line 28, scss/objects/_tags.scss */
   .tag:hover {
     color: #fcfcfc;
-    background-color: #611a1a; }
+    background-color: #206a50; }
     /* line 34, scss/objects/_tags.scss */
     .tag:hover .icon {
-      color: #611a1a; }
+      color: #206a50; }
   /* line 39, scss/objects/_tags.scss */
   .tag .icon {
     font-size: 9px;
     text-align: center;
     background-color: white;
     border-radius: 5em;
-    color: #b13030;
+    color: #37b98b;
     display: block;
     width: 14px;
     height: 13px;
@@ -4486,8 +4486,8 @@ html:hover [class^="icon-"] {
   /* line 61, scss/objects/_tags.scss */
   .tag_alt:hover {
     background-color: #e5e5e5;
-    color: #b13030;
-    border-left-color: #b13030; }
+    color: #37b98b;
+    border-left-color: #37b98b; }
 
 /* line 69, scss/objects/_tags.scss */
 .tags-large .tag, .tag-large {
@@ -4785,7 +4785,7 @@ html:hover [class^="icon-"] {
 .acc-handle {
   background: #212121;
   color: white;
-  font-family: "ff-meta-web-pro", Georgia, Times, "Times New Roman", serif;
+  font-family: 'Open Sans', Arial, sans-serif;
   display: block;
   position: relative;
   padding: 0.5rem;
@@ -4808,7 +4808,7 @@ html:hover [class^="icon-"] {
 /* line 1, scss/objects/_tabs.scss */
 .tabs {
   overflow: hidden;
-  font-family: "ff-meta-web-pro", Georgia, Times, "Times New Roman", serif;
+  font-family: 'Open Sans', Arial, sans-serif;
   margin-bottom: 1.6rem; }
   /* line 7, scss/objects/_tabs.scss */
   .tabs a {

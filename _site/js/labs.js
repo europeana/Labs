@@ -9,7 +9,6 @@ $(document).ready(function(){
 		}
 
 	
-		
 	$("#homepage").parent().attr("id", "homepagebody");
 	
 	$("#hamMenu").click(function(){
@@ -26,7 +25,7 @@ $(document).ready(function(){
 	$("#homepage ul.nav-footer").append("<br class='clear'/>");
 	
 	if(document.referrer.indexOf("/search") != -1 && document.URL.indexOf("/search")==-1){
-		$("#search").append("<a style='display:block; font-size:0.8em; text-align:center;' href='"+document.referrer+"'>Back to search results</a>");
+		//$("#search").append("<a style='display:block; font-size:0.8em; text-align:center;' href='"+document.referrer+"'>Back to search results</a>");
 		
 		$("div.tabs ul").prepend("<li>"+"<a href='"+document.referrer+"'>← Back to search results</a>"+"</li>");
 	}
@@ -78,6 +77,7 @@ $(document).ready(function(){
 	}
 	
 
+	sortTagsListOneLevel();
 });
 
 function repageDatasets()
@@ -147,3 +147,18 @@ var semLabs = {
 		}	
 	}
 };
+
+function sortTagsListOneLevel(){
+  var mylist = $('ul.tags');
+  var listitems = mylist.children('li').get();
+
+  listitems.sort(function(a, b) {
+    var compA = $(a).find("a").text().toUpperCase();
+    var compB = $(b).find("a").text().toUpperCase();
+    return (compA < compB) ? -1 : (compA > compB) ? 1 : 0;
+  });
+  $.each(listitems, function(idx, itm) { 
+    mylist.append(itm); 
+  });
+}
+
