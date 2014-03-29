@@ -1,5 +1,5 @@
 ---
-layout: events-item
+layout: gallery-item
 category: events
 permalink: /events/International_Business_Lounge_Future_Everything_Conference
 title: International Business Lounge, Future Everything Conference
