@@ -12,9 +12,8 @@ links:
   - "http://bhl.nhm-wien.ac.at/scanlist/"
  
 imageurl: 
-  - "/img/gallery/europeana-remix/"
-  - "/img/gallery/europeana-remix/"
-  - "/img/gallery/europeana-remix/"
+  - "/img/gallery/BHL-Scan-List/"thoughtlab_image_0012_D---B.png
+
 contact: 
   name: For more information, or to give feedback, please contact: [Wolfgang Koller] (mailto:wolfgang.koller@nhm-wien.ac.at?subject=ThoughtLab%20BHL%20Scan%20List%20Feedback)
 
