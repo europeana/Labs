@@ -149,11 +149,17 @@ module Jekyll
     def self.create_from_post(post, renderer)
       
       title, url = extract_title_and_url(post)
+      
+      puts "T=>"+title
+      
       body = renderer.render(post)
       date = post.date
       categories = post.categories
       tags = post.tags
-      imageurl = post.data["imageurl"].first
+      
+      if post.data["imageurl"]!=nil
+        imageurl = post.data["imageurl"].first
+      end
       excerpt = post.excerpt
       
       if post.excerpt == nil

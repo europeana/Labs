@@ -11,7 +11,7 @@ links:
   - "http://prestoprime.joanneum.at/"
 imageurl: 
   - "/img/gallery/PrestoPrime-mapping-tool/thoughtlab_image_0005_I---M.png"
-contact: 
+contact:
   name: "For more information, or to give feedback, please contact: [Kurt Majcen](kurt.majcen@joanneum.at?subject=ThoughtLab:%20PrestoPrime%20Metadata%20Mapping" prototype).
   
 ---
