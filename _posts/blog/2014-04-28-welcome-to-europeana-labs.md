@@ -2,7 +2,7 @@
 layout: blog-item
 category: blog
 permalink: blog/welcome-to-the-new-europeana-labs
-title: Welcome to the New Europeana Labs
+title: Welcome to the new Europeana Labs
 imageurl: 
   - "/img/blog/140328-introduction-blog-post.jpg"
 tags: 
