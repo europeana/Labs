@@ -47,3 +47,5 @@ There are lots of ways you can get help with using the Europeana APIs. Contact u
 
 The Labs site is currently in beta, with a full launch planned in late June. We’d love to have your feedback on what you think works, and what needs improvement. We’re also happy to hear of any ideas you have.
 Please take a few minutes to <a href="https://www.surveymonkey.com/s/392VRKG" title="Europeana Labs Beta site feedback">fill out our quick survey and tell us what you think</a>.
+
+<p>Image credit: "<a href="http://europeana.eu/portal/record/90402/collectie_RP_P_OB_51_159.html" title="La chimie by Bernard Picart on Europeana Portal">La chimie</a>" by Bernard Picart. Courtesy of the <a href="http://www.rijksmuseum.nl" title="Rijksmuseum">Rijksmuseum</a>. The image is in the <a href="http://creativecommons.org/publicdomain/mark/1.0/" title="Creative Commons Public Domain 1.0">public domain</a>.</p>
