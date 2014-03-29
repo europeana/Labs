@@ -1,5 +1,5 @@
 ---
-layout: gallery-item
+layout: blog-item
 category: blog
 permalink: blog/welcome-to-the-new-europeana-labs
 title: Welcome to the New Europeana Labs
