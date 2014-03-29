@@ -17,11 +17,11 @@ This new Europeana Labs site is intended to provide all you need to get started 
 Last year we consulted with the developer community asking them what things would help them to make best use of the Europeana API. This Earopeana Labs Beta site is the first major step towards putting in place the things we were told, but also a chance for us to learn more and make improvements before a full launch in late June.
 
 ## Contents
-- <a href="#lookaround" title="Look around">Take a look around</a>
-- <a href="#start" title="Getting started">Getting started</a>
-- <a href="#help" title="Help and Support">Need help?</a>
-- <a href="#documentation" title="Europeana documentation">API Documentation</a>
-- <a href="#feedback" title="Europeana Labs Beta feedback">Send us your feedback</a>
+* <a href="#lookaround" title="Look around">Take a look around</a>
+* <a href="#start" title="Getting started">Getting started</a>
+* <a href="#help" title="Help and Support">Need help?</a>
+* <a href="#documentation" title="Europeana documentation">API Documentation</a>
+* <a href="#feedback" title="Europeana Labs Beta feedback">Send us your feedback</a>
 
 <a name="lookaround"></a>
 ## Take a look around
