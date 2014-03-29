@@ -12,7 +12,7 @@ links:
 imageurl: 
   - "/img/gallery/Amsterdam-Museum-LOD/Amsterdam-linkedopendata.gif"
 contact: 
-  name: More information can also be found on the [CKAN.net](http://ckan.net/package/amsterdam-museum-as-edm-lod) page.
+  name: "More information can also be found on the [CKAN.net](http://ckan.net/package/amsterdam-museum-as-edm-lod) page."
 
 ---
 **Amsterdam Museum Linked Open Data**- The [Linked Open Data Cloud](http://richard.cyganiak.de/2007/10/lod/) connects items from various domains, including cultural heritage. By using unique web-identifiers (URIs) for objects and a common framework for describing them (RDF), and by linking to existing resources, a web of semantically-linked data emerges.

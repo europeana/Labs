@@ -16,7 +16,7 @@ imageurl:
 
 contact: 
 
-  name: For more information, or to give feedback, please contact: [Wolfgang Koller](wolfgang.koller@nhm-wien.ac.at?subject=ThoughtLab%20BHL%20Scan%20List%20Feedback)
+  name: "For more information, or to give feedback, please contact: [Wolfgang Koller](wolfgang.koller@nhm-wien.ac.at?subject=ThoughtLab%20BHL%20Scan%20List%20Feedback)"
 
 ---
 **BHL Scan List** - A tool to co-ordinate scanning efforts across biodiversity heritage organisations.
