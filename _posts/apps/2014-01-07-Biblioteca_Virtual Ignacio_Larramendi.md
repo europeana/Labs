@@ -10,7 +10,7 @@ imageurl:
 tags: 
   - API Implementation 
 secondarytags:
-  - TEST
+  -
 links:
   - http://www.larramendi.es/i18n/consulta/busqueda.cmd
 ---
