@@ -1,0 +1,28 @@
+{% include item-header.html %}	
+	<div class="grid__item one-quarter palm--one-whole">
+		<ul class="tabs tabs-v">
+			<li><a href="{{site.baseurl}}/locations">&larr;&nbsp;Blog</a></li>
+		</ul>
+	</div>
+	
+	<div class="grid__item three-quarters palm--one-whole">
+		    <a href="{{ page.contact.website }}" title="{{page.title}} Website">
+		        <img src="{{site.baseurl}}{{page.imageurl}}" alt="{{page.title}}">
+		    </a>
+
+		<div class="b-text">
+		    <div class="prose description">
+		        {{ content}}   
+		        {% include link-block.html %} 
+		       <!-- {% include tag-block.html %}-->                    
+		    </div>
+		</div>
+		{% include contact-block.html %}
+		<hr />
+		{% include tag-block.html %}
+    </div>
+
+</div>
+
+{% include footer.html %}<!--
+-->{% include end.html %}
