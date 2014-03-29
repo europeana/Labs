@@ -8,8 +8,6 @@ imageurl:
 tags: 
   - Introduction
   - Beta
-links:
-  - http://labs.europeana.eu
 ---
 
 This new Europeana Labs website is intended to provide all you need to get started using the Europeana APIs. Learn about the data, see what others have built, and find out how to build simple but powerful queries to extract bespoke results from a dataset of over 30 million objects - books, photos of art and artefacts, audio clips and more.
