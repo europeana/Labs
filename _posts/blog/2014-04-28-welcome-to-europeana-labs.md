@@ -14,7 +14,7 @@ This new Europeana Labs website is intended to provide all you need to get start
 
 Last year we consulted with the developer community asking them what things would help them to make best use of the Europeana APIs. This Europeana Labs Beta site is the first major step towards putting in place the things we were told, but also a chance for us to learn more and make improvements before a full launch in late June.
 
-## <a name="whatsnew"></a>What's New?
+## <a name="whatsnew">What's New?</a>
 
 We’ve pulled together some great examples of both content and existing applications to give you a real taste for what is possible. This is backed up by a revamp of the API documentation, providing everything you should need to exploit the full potemtial of the Europeana platform and get creative with the content.
 
@@ -26,24 +26,24 @@ You’ll also find details of <a href="/locations/" title="Europeana Locations">
 
 But wherever you are, whatever your skills, and no matter what you're planning, don't be afraid to <a href="#help" title="help &amp; support">ask for help</a> as we're here to support you.
 
-## <a name="documentation"></a>API Documentation
+## <a name="documentation">API Documentation</a>
 
 Once you have an idea and you want to start building your application, head to our comprehensive <a href="/api/" title="API Documentation">online documentation</a>. It covers both the REST API and Linked Open Data, with extensive examples illustrating methods, syntax, and responses.
 
 You can also use the <a href="/api/console/" title="API Console">API Console</a> to build and test anything from the simplest search to a complex query using facets such as dates, geotags and permissions.
 
-## <a name="start"></a>Getting started
+## <a name="start">Getting started</a>
 
 Even if you’re new to Europeana, getting started is simple.
 1. <a href="/api/registration/">Register for an API key</a>
 2. Use the <a href="/api/console/" title="API Console">API Console</a> to explore the content and customise queries. If you need help or inspiration, check out the example <a href="/data/" title="Example Data">Datasets</a> and consult our extensive <a href="/api/" title="API Documentation">API documentation</a>.
 3. Build your application. If you don’t know where to start, find inspiration in the <a href="/apps/" title="Application Gallery">Application Gallery</a> - many applications have public code repositories and there’s also a Java library and Python wrapper available.
 
-## <a name="help"></a>Need help?
+## <a name="help">Need help?</a>
 
 There are lots of ways you can get help with using the Europeana APIs. Contact us directly via our <a href="/support/" title="Europeana API Support">contact form</a> or at api@europeana.eu. If you want to chat with fellow developers head over to the <a href="https://groups.google.com/forum/#!forum/europeanaapi">API Forum on Google Groups</a> and you can also <a href="http://twitter.com/europeanatech">follow @EuropeanaTech</a> on Twitter.
 
-## <a name="feedback"></a>Send us your feedback!
+## <a name="feedback">Send us your feedback!</a>
 
 The Labs site is currently in beta, with a full launch planned in late June. We’d love to have your feedback on what you think works, and what needs improvement. We’re also happy to hear of any ideas you have.
 Please take a few minutes to <a href="https://www.surveymonkey.com/s/392VRKG" title="Europeana Labs Beta site feedback">fill out our quick survey and tell us what you think</a>.
