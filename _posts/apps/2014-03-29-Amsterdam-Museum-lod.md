@@ -10,7 +10,7 @@ tags:
 links: 
   - "http://semanticweb.cs.vu.nl/lod/am/"
 imageurl: 
-  - "/img/gallery/Amsterdam-Museum-LOD/"Amsterdam-linkedopendata.gif
+  - "/img/gallery/Amsterdam-Museum-LOD/Amsterdam-linkedopendata.gif"
 contact: 
   name: More information can also be found on the [CKAN.net](http://ckan.net/package/amsterdam-museum-as-edm-lod) page.
 
