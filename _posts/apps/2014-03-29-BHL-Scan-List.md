@@ -21,17 +21,17 @@ contact:
 ---
 **BHL Scan List** - A tool to co-ordinate scanning efforts across biodiversity heritage organisations.
 
-BHL-Europe and BHL member institutions can work together to improve their scanning efforts using this tool. It is based on the Biodiversity Heritage Library Serials Union Catalogue, developed at [NHM London](http://www.nhm.ac.uk/ "Click here to visit the NHM London website") for the [BHL project](http://www.biodiversitylibrary.org/ "Click here to visit the BHL project website").
+BHL-Europe and BHL member institutions can work together to improve their scanning efforts using this tool. It is based on the Biodiversity Heritage Library Serials Union Catalogue, developed at [NHM London](http://www.nhm.ac.uk/) for the [BHL project](http://www.biodiversitylibrary.org/).
 
-Currently, there are over 85,000 records of serials relevant to the biodiversity community in the BHL Scan List. The database will be continuously expanded to also include monographs from [BHL-Europe](http://www.bhl-europe.eu/ "Click here to visit the BHL-Europe website" libraries.
+Currently, there are over 85,000 records of serials relevant to the biodiversity community in the BHL Scan List. The database will be continuously expanded to also include monographs from [BHL-Europe](http://www.bhl-europe.eu/) libraries.
 
 The BHL Scan List provides an overview of shared and existing serials and monographs, can be used to identify duplicate records, and helps in the co-ordination of the digitisation process.
 
 All users can browse and search the BHL Scan List. For proposing items to be scanned, a valid account is required that will be given to BHL and BHL-Europe member institutions on request.
 
-[BHL Scan List demo](http://gso.gbv.de/DB=1.83/ "Click here to visit the BHL Scan List website")
+[BHL Scan List demo](http://gso.gbv.de/DB=1.83/)
 
-[See the BHL Scan List prototype:](http://bhl.nhm-wien.ac.at/scanlist/ "Click here to view the BHL Scan List Prototype")
+[See the BHL Scan List prototype:](http://bhl.nhm-wien.ac.at/scanlist/)
 
 
 	
