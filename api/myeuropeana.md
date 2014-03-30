@@ -7,27 +7,11 @@ published: true
 * TOC
 {:toc}
 
-## Introduction
-
 Europeana API supports two methods to access MyEuropeana user data.
 
-To access data of a specific account you can use MyData methods which require [authentication using the public and private key of the user](http://labs.europeana.eu/api/authentication/user_authentication).
+To access data of a specific account you can use MyData methods which require [authentication using the public and private key of the user](http://labs.europeana.eu/api/authentication/#user_authentication).
 
-Applications that wish to access MyEuropeana data of a specific end-user on his behalf need to authenticate using the [OAuth2 scheme](http://labs.europeana.eu/api/authentication/oauth2_authentication) and to use MyEuropeana set of methods.
-
-## REST support
-
-MyData methods (except from profile.json) support REST support. If you use
-REST requests, don't include the action parameter.
-
-## General response for all CREATE & DELETE actions
-
-The API will return the general API response, where the following fields are important.
-
-| Field | Datatype | Description |
-|:------|:---------|:------------|
-| success | Boolean | true for success |
-| error | String | Containing error message on unsuccesfull actions |
+Applications that wish to access MyEuropeana data of a specific end-user on her behalf need to authenticate using the [OAuth2 scheme](http://labs.europeana.eu/api/authentication/#oauth2_authentication) and to use MyEuropeana set of methods.
 
 
 ## Profile
@@ -39,22 +23,22 @@ Retrieve your MyEuropeana profile, including statistics about user's activity. T
 
 ### Response
 
-Fields containing no data are not included in json response.
+Fields containing no data are not included in JSON response. We added description where needed.
 
 | Field | Datatype | Description |
 |:------|:---------|:------------|
-| email | String | TBD |
-| userName | String | TBD |
+| email | String |  |
+| userName | String |  |
 | registrationDate | String | TBD (In timestamp format (Date.toLong)) |
-| lastLogin | String | TBD (In timestamp format (Date.toLong)) |
-| firstName | String | TBD |
-| lastName | String | TBD |
-| company | String | TBD |
-| country | String | TBD |
-| phone | String | TBD |
-| address | String | TBD |
-| website | String | TBD |
-| fieldOfWork | String | TBD  |
+| lastLogin | String | (In timestamp format (Date.toLong)) |
+| firstName | String |  |
+| lastName | String |  |
+| company | String |  |
+| country | String |  |
+| phone | String |  |
+| address | String |  |
+| website | String |  |
+| fieldOfWork | String |   |
 | nrOfSavedItems | Number | The number of saved items |
 | nrOfSavedSearches | Number | The number of saved searches |
 | nrOfSocialTags | Number | The number of tags |
