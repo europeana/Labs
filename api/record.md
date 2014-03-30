@@ -2,6 +2,7 @@
 layout: "api-page"
 title: Record
 published: true
+excerpt: "Retrieving a single record from the dataset"
 ---
 
 * TOC
