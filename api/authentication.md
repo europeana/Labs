@@ -2,6 +2,7 @@
 layout: "api-page"
 title: Authentication
 published: true
+excerpt: "Uset authentication in Europeana REST API"
 ---
 
 Europeana API supports three kinds of user authentication that are used in three different application scenarios. To perform general API calls, like [search](http://labs.europeana.eu/api/search), [object](http://labs.europeana.eu/api/object) or [provider/collection](http://labs.europeana.eu/api/provider), which do not involve user-specific information, the most basic authentication scheme is used. For accessing user-specific data stored on MyEuropeana accounts using [MyData](http://labs.europeana.eu/api/myeuropeana) calls, a caller application is to be identified by the user credentials. Finally, for applications wishing to get 3rd party access on behalf of a registered user, OAuth2 authentication scheme is supported.
