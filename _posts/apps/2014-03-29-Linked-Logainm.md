@@ -21,7 +21,7 @@ contact:
 
 **Europeana Linked Open Data feeds Irish place name database**
 
-*With the input from Rebecca Grant,[Digital Repository of Ireland](http://www.dri.ie/) and Nuno Lopes,[INSIGHT @ NUI Galway](http://www.insight-centre.org/").*
+*With the input from Rebecca Grant,[Digital Repository of Ireland](http://www.dri.ie/) and Nuno Lopes,[INSIGHT @ NUI Galway](http://www.insight-centre.org/).*
 
 The Linked Logainm dataset and Location LODer website were launched on 10 September 2013 by Jimmy Deenihan, TD, Minister for Arts, Heritage and the Gaeltacht at the National Library of Ireland.
 

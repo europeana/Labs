@@ -76,13 +76,17 @@
     <item>
       <title>MIMO-VOC - A multilingual vocabulary management tool</title>
       <link>{{site.url}}/apps/MIMO-VOC</link>
-      <description>&lt;p&gt;&lt;strong&gt;MIMO-VOC: A multilingual vocabulary management tool&lt;/strong&gt; - This tool was developed as part of the &lt;a href='http://www.mimo-project.eu/'&gt;MIMO Project&lt;/a&gt;(Musical Instrument Museums Online). MIMO-VOC manages two thesauri:&lt;/p&gt;&lt;ul&gt;
-&lt;li&gt;a 3-level hierarchy of musical instrument classes that contains keywords in 6 languages for the general public&lt;/li&gt;
-
-&lt;li&gt;a professional classification for organologists - The Hornbostel and Sax Classification&lt;/li&gt;
-&lt;/ul&gt;</description>
+      <description>&lt;p&gt;&lt;strong&gt;MIMO-VOC: A multilingual vocabulary management tool&lt;/strong&gt; - This tool was developed as part of the &lt;a href='http://www.mimo-project.eu/'&gt;MIMO Project&lt;/a&gt;(Musical Instrument Museums Online).&lt;/p&gt;</description>
       <pubDate>Sat, 29 Mar 2014 00:00:00 +0100</pubDate>
       <guid>{{site.url}}/apps/MIMO-VOC</guid>
+      <dc:date>2014-03-29T00:00:00+01:00</dc:date>
+    </item>
+    <item>
+      <title>Europeana Linked Open Data feeds Irish place name database</title>
+      <link>{{site.url}}/apps/Linked-Logainm</link>
+      <description>&lt;p&gt;&lt;strong&gt;Europeana Linked Open Data feeds Irish place name database&lt;/strong&gt;&lt;/p&gt;</description>
+      <pubDate>Sat, 29 Mar 2014 00:00:00 +0100</pubDate>
+      <guid>{{site.url}}/apps/Linked-Logainm</guid>
       <dc:date>2014-03-29T00:00:00+01:00</dc:date>
     </item>
     <item>
