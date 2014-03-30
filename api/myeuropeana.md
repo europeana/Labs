@@ -47,7 +47,7 @@ Fields containing no data are not included in JSON response. We added descriptio
 
 Retrieve or modify saved items (favorites) at your MyEuropeana account.
 
-### Get saved items
+### Get 
 
 Retrieve saved items.
 
@@ -66,7 +66,7 @@ Retrieve saved items.
 | Field | Datatype | Description |
 |:-------------|:-------------|:-----|
 | username | String |  |
-| items | Array([SavedItem](http://labs.europeana.eu/api/myeuropeana/saved_item)) |  |
+| items | Array([SavedItem](http://labs.europeana.eu/api/myeuropeana/saved_item)) | Collection of saved items |
 
 #### SavedItem
 
@@ -75,13 +75,13 @@ Information about one saved item.
 | Field | Datatype | Description |
 |:-------------|:-------------|:-----|
 | id | Number | The unique ID of this item |
-| europeanaID | String | TBD (EuropeanaID existing of collection id and record id) |
-| guid | String | TBD (Unique alternate id for record, can be used as link to europeana.eu portal) |
-| link | String | Link to json version of record |
-| title | String | TBD |
-| edmPreview | String | Link to image thumbnail, if available |
-| type | String | record type: IMAGE / VIDEO / TEXT / SOUND / 3D |
-| dateSaved | String | SavedItem creation date |
+| europeanaID | String | [Europeana ID](http://labs.europeana.eu/api/data-hierarchy/#identifying_records) of the item |
+| guid | String | Link to the item on Europeana Portal |
+| link | String | Link to the JSON representation of the item |
+| title | String |  |
+| edmPreview | String | Link to the content thumbnail, if available |
+| type | String | Media type of the record: IMAGE / VIDEO / TEXT / SOUND / 3D |
+| dateSaved | String | Creation date |
 
 ### Create
 
@@ -99,7 +99,7 @@ Creates a new saved item.
 
 ### Delete
 
-Creates a saved item.
+Deletes a saved item.
 
     DELETE http://europeana.eu/api/v2/user/saveditem.json
     DELETE http://europeana.eu/api/v2/mydata/saveditem.json
@@ -110,7 +110,7 @@ Creates a saved item.
 |:-------------|:-------------|:-----|
 | action | String | Action parameter (should be DELETE for this call) |
 | itemid | String | The ID of the item to delete (use the IDs returned by LIST action) |
-| europeanaid | String | The Europeana ID of the record to delete (TBD) |
+| europeanaid | String | [Europeana ID](http://labs.europeana.eu/api/data-hierarchy/#identifying_records) of the record to delete (TBD) |
 
 ## Tags
 
@@ -128,7 +128,7 @@ Get a tag.
 | Parameter | Datatype | Description |
 |:-------------|:-------------|:-----|
 | action | String | Action parameter (should be LIST for this call) |
-| europeanaid | String | (optional) check the existance of a specific saved item |
+| europeanaid | String |  |
 
 #### Response
 
@@ -141,17 +141,7 @@ Get a tag.
 
 Information about a single tag.
 
-| Field | Datatype | Description |
-|:-------------|:-------------|:-----|
-| id | Number | Unique id for this specific tag record |
-| europeanaId | String | EuropeanaID existing of collection id and record id |
-| guid | String | Unique alternate id for record, can be used as link to europeana.eu portal |
-| link | String | Link to json version of record |
-| title | String |  |
-| edmPreview | String | Link to image thumbnail, if available |
-| type | String | record type: IMAGE / VIDEO / TEXT / SOUND / 3D |
-| dateSaved | Timestamp | SavedItem creation date |
-| tag | String |  |
+TBD
 
 ### Get Tag Cloud 
 
@@ -173,8 +163,8 @@ Information about a single tag.
 
 | Field | Datatype | Description |
 |:-------------|:-------------|:-----|
-| label | String | The tag |
-| count | Number | tag count |
+| label | String | The tag name |
+| count | Number | Tag count |
 
 ### Create 
 
@@ -188,7 +178,7 @@ Create a new tag.
 | Parameter | Datatype | Description |
 |:-------------|:-------------|:-----|
 | action | String | Action parameter (should be CREATE for this call) |
-| europeanaid | String | (optional) check the existance of a specific saved item |
+| europeanaid | String | TBD |
 | tag | String | The tag to add for this object |
 
 ### Delete
@@ -202,11 +192,11 @@ Delete a tag.
 
 | Parameter | Datatype | Description |
 |:-------------|:-------------|:-----|
-| tagid | String | delete by tagid (returned by LIST action) |
-| tag | String | delete by tag (can delete multiple tags) |
-| europeanaid | String | Remove all tags binded to a Europeana Record (can delete multiple tags) |
+| tagid | String | Delete by tagid (returned by LIST action) |
+| tag | String | Delete by tag name (can resut in deletion of many tags) |
+| europeanaid | String | Remove all the tags bound to this Europeana Record |
 
-* tag and europeanaid parameters can be used combined, tagid works only as single selection parameter.
+* tag and europeanaid parameters can be used together, tagid works only as single selection parameter.
 
 ## Saved Searches
 
@@ -224,20 +214,20 @@ Get saved searches.
 | Field | Datatype | Description |
 |:-------------|:-------------|:-----|
 | username | String |  |
-| items | Array([SavedSearch](http://labs.europeana.eu/api/myeuropeana/savedsearch)) |  |
+| items | Array([SavedSearch](http://labs.europeana.eu/api/myeuropeana/savedsearch)) | Collection of saved searches  |
 
 ### SavedSearch
 
 | Field | Datatype | Description |
 |:-------------|:-------------|:-----|
-| id | Number | Unique id for this specific saved search record |
-| query | String | query part of SavedSearch |
-| queryString | String | complete saved search including refinements and paging |
-| dateSaved | Timestamp | SavedItem creation date |
+| id | Number | ID of the saved search |
+| query | String | Query executed by this saved search |
+| queryString | String | Complete query string of this saved search, including refinements and paging |
+| dateSaved | Timestamp | Creation date |
 
 ### Create 
 
-Create a new saved search. Parameters are similar to API search.json (or on the portal).
+Create a new saved search. Read more on the search parameters in [Query Syntax](http://labs.europeana.eu/api/query/).
 
     POST http://europeana.eu/api/v2/user/savedsearch.json
     POST http://europeana.eu/api/v2/mydata/savedsearch.json
@@ -245,9 +235,9 @@ Create a new saved search. Parameters are similar to API search.json (or on the 
 | Parameter | Datatype | Description |
 |:-------------|:-------------|:-----|
 | action | String | Action parameter (should be CREATE for this call) |
-| query | String | main search parameter |
-| qf[] | String array | Refinements parameters (zero or more) |
-| start | Number | Start number (paging) |
+| query | String | Main query parameter |
+| qf | Array(String)| [Refinements](http://labs.europeana.eu/api/query/#refinements) array |
+| start | Number | Start number for paging |
 
 ### Delete
 
@@ -259,4 +249,4 @@ Delete a saved search.
 | Parameter | Datatype | Description |
 |:-------------|:-------------|:-----|
 | action | String | Action parameter (should be DELETE for this call) |
-| searchid | String | saves search id (returned by LIST action) |
+| searchid | String | ID of the saved search (as returned by LIST action) |
