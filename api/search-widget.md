@@ -3,7 +3,7 @@ layout: api-page
 title: Search Widget
 ---
 
-You can add a Europeana search facility to your blog or website. Our simple wizard takes you through the process step-by-step and gives you a snippet of code to embed.
+You can add a Europeana search box to your blog or website. Our [simple wizard](http://www.europeana.eu/portal/widget/editor.html "search widget wizard") takes you through the process step-by-step and gives you a snippet of code to embed.
 
 Configure the widget to search all collections and data providers within Europeana, or refine it to suit your website, e.g. to search only within Public Domain or Creative Commons, or only content from a specific country.
 
