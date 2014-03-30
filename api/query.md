@@ -36,7 +36,7 @@ To combine several fields in one search one can use boolean operators AND, OR, a
 Boolean operators can also be combined with the search by fields. The following example searches for objects whose location is in _Paris_ or in _London_:
 
     http://www.europeana.eu/api/v2/search.json?wskey=xxxx&query=where: (Paris OR London)
-[Test on API Console](http://labs.europeana.eu/api/console.html?function=search&query=where:%20%28Paris%20OR%20London%29
+[Test on API Console](http://labs.europeana.eu/api/console.html?function=search&query=where:%20%28Paris%20OR%20London%29)
 
 The boolean NOT operator cannot be used alone but only in conjunction with another boolean operator. For example, looking for objects which contain the term _Lisa_ but do not contain the term _Mona_ is done by the following:
 
