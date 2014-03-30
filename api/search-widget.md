@@ -18,10 +18,10 @@ Blogs hosted on Wordpress.com
 ## Set up your Europeana Search Widget
 1. Go to the search widget page.
 2. Introduction tab: The Europeana Search widget is presented. A progress bar shows you how far you are through the process. To start configuring your widget, tap 'Next' or the 'Filter' tab heading.
-3. Filter tab: If you want your widget to include the entire Europeana dataset, you can go straight to the 'Style' tab. Tap 'Next' or the 'Style' tab heading. To tailor your search widget:
+3. Filter tab: If you want your widget to include the entire Europeana dataset, you can go straight to the 'Style' tab. Tap      'Next' or the 'Style' tab heading. To tailor your search widget:
   *Keyword search*: By default, the widget searches the entire Europeana dataset. You can restrict the search to a key word or   phrase. To do this, enter the key word(s) in the 'Search for' field. For example, if you are adding a widget to your First     World War blog about military uniform, you might type 'uniform'.
   All the normal search functions work in this field, for example, use double quotes for a phrase, e.g. "military uniform", use   'AND' to include searches on two words or 'NOT' to hide results for a particular word, e.g. 'uniform AND war' or 'uniform NOT   school'.
-  
+
   *Providers*: By default, the widget returns results from all of Europeana's providers. You can restrict it to your chosen      providers. Tap 'Change' next to 'All Providers' and select the providers you need. You can search for a provider using the     search field above the list. The providers are presented in order of the size of their contributions to Europeana. The number   in brackets shows how many items from that provider are available. If the name of the provider is followed by an arrow, then   they are a data aggregator, tap the arrow to see the institutions included in their collection. Note: you can select more      than one.
   
   *Countries*: By default, the widget returns results from all countries. You can restrict it to your chosen countries. Tap      'Change' next to 'All Providing Countries' and select the countries you need. The countries are presented in order of the      size of their contributions to Europeana. The number in brackets shows how many items from that country are available. Note:   you can select more than one. To clear your selection and start again, tap 'Clear'.
