@@ -91,9 +91,13 @@
 
 		<div class="grid__item one-quarter palm--one-whole">
 
-			<style type="text/css">
+		<style type="text/css">
 		  ul.notabs {display: none;}
-		  ul.notabs li a {border: 0;}			
+		  ul.notabs li a {border: 0;}
+
+		  ul ul li { margin:0; margin-left: 30px;}
+		  ul.notabs a { padding: 0.5rem; }	
+		  ul ul li a.current{text-decoration: underline; }		
 		</style>
 		
 		<script type="application/javascript">
@@ -102,65 +106,67 @@
 				$(this).parent().find("ul.notabs").slideToggle();
 				return e.preventDefault();
 			});
+			
+			
+			$("ul.notabs li a").removeClass("current");
+			var baseUrl = $("a.logo").attr("href").toString();
+			var currentUrl = window.location.pathname;
+			
+			$("ul.notabs li a").each(function(){
+				if(currentUrl.match("^"+$(this).attr("href"))){
+					$(this).addClass("current");
+					$(this).parent().parent().parent().find("a:first").click();
+				}
+			});	
 		});
 			
 		</script>
 		
 		<ul class="tabs tabs-v">
 			<li><a href="/api" title="API Introduction">Introduction</a></li>
-			<li><a href="/api/getting-started" title="Getting Started with the Europeana REST API">Getting Started</a></li>
-			<li><a href="/api/registration" title="API Registration">Registration</a></li>
-			<li><a href="/api/console" title="API Console">Console</a></li>
 			<li>
-				<a href="" title="" class="menuTrigger">Europeana Repository</a>
-						<ul class="notabs tabs-v">
-		    <li><a href="/api/repository" title="Europeana Repository">Europeana Repository</a></li>
-			<li><a href="/api/authentication" title="Authentication">Authentication</a></li>
-			<li><a href="/api/search" title="Search">Search Method</a></li>
-			<li><a href="/api/query" title="Query">Query Syntax</a></li>
-			<li><a href="/api/object" title="Object">Object Method</a></li>
-			<li><a href="/api/myeuropeana" title="Accessing MyEuropeana">MyEuropeana</a></li>
-			<li><a href="/api/provider" title="Querying Providers and Datasets">Provider and Datasets</a></li>
-			<li><a href="/api/error" title="Error Codes">Error Codes</a></li>
-		</ul>
-
+				<a href="" class="menuTrigger">REST API</a>
+				<ul class="notabs tabs-v">
+					<li><a href="/api/getting-started" title="Getting Started with the Europeana REST API">Getting Started</a></li>
+					<li><a href="/api/registration" title="API Registration">Get an API-key</a></li>
+					<li><a href="/api/console" title="API Console">Console</a></li>
+					<li><a href="/api/authentication" title="Authentication">Authentication</a></li>
+					<li><a href="/api/search" title="Search">Search</a></li>
+					<li><a href="/api/query" title="Query">Query Syntax</a></li>
+					<li><a href="/api/record" title="Record">Record</a></li>
+					<li><a href="/api/myeuropeana" title="Accessing MyEuropeana">MyEuropeana</a></li>
+					<li><a href="/api/provider" title="Querying Providers and Datasets">Provider and Datasets</a></li>
+					<!--<li><a href="/api/data-fields" title="API Data Fields Reference">Data Fields</a></li>-->					
+					<li><a href="/api/hierarchy" title="Data Hierarchy">Data Hierarchy</a></li>					
+					<li><a href="/api/error" title="Error Codes">Error Codes</a></li>	
+					<li><a href="/api/changelog" title="API ChangeLog">Change Log</a></li>
+				</ul>
 			</li>
-			<li><a href="/api/changelog" title="API ChangeLog">Change Log</a></li>
-		</ul>
-
-		
-	
-
-			<ul class="tabs tabs-v">
-			<li><a href="/api/search-widget" title="Search Widget">Search Widget</a></li>
-			<li><a href="/api/data-fields" title="API Data Fields Reference">Data Fields</a></li>
-			<li><a href="http://www.europeana.eu/portal/rights/api-terms-of-use.html" title="API Data Fields Reference">Term of Use</a></li>
-		</ul>
-		
-	
+			<li>
+				<a href="" class="menuTrigger">Linked Open Data</a>
+				<ul class="notabs tabs-v">
+					<li><a href="/api/linked-open-data/introduction">Introduction</a></li>
+					<li><a href="/api/linked-open-data/data-downloads">Data Downloads</a></li>
+					<li><a href="/api/linked-open-data/SPARQL-endpoint">SPARQL-endpoint</a></li>
+					<li><a href="/api/linked-open-data/data-hierarchy">Data Hierarchy</a></li>
+					<li><a href="/api/linked-open-data/FAQ">FAQ</a></li>
+					<li><a href="/api/linked-open-data/credits">Credits</a></li>
+				</ul>
+			</li>
+			<li><a href="/api/search-widget" title="Search Widget">Search Widget</a></li>			
+			<li><a href="http://www.europeana.eu/portal/rights/api-terms-of-use.html" title="API Data Fields Reference">Term of Use</a></li>						
+		</ul>	
 	</div>
 
 		
 	<div id="documentation" class="prose grid__item palm--one-whole push--palm-none one-half"><!--
-	--><div class="maruku_toc"><ul><li><a href="#introduction">Introduction</a></li><li><a href="#rest_support">REST support</a></li><li><a href="#general_response_for_all_create__delete_actions">General response for all CREATE &amp; DELETE actions</a></li><li><a href="#profile">Profile</a><ul><li><a href="#response">Response</a></li></ul></li><li><a href="#saved_items">Saved Items</a><ul><li><a href="#get_saved_items">Get saved items</a><ul><li><a href="#request">Request</a></li><li><a href="#response_2">Response</a></li><li><a href="#saveditem">SavedItem</a></li></ul></li><li><a href="#create">Create</a><ul><li><a href="#request_2">Request</a></li></ul></li><li><a href="#delete">Delete</a><ul><li><a href="#request_3">Request</a></li></ul></li></ul></li><li><a href="#tags">Tags</a><ul><li><a href="#get">Get</a><ul><li><a href="#request_4">Request</a></li><li><a href="#response_3">Response</a></li><li><a href="#tag">Tag</a></li></ul></li><li><a href="#get_tag_cloud">Get Tag Cloud</a><ul><li><a href="#request_5">Request</a></li><li><a href="#response_4">Response</a></li><li><a href="#tagcloud">TagCloud</a></li></ul></li><li><a href="#create_2">Create</a><ul><li><a href="#request_6">Request</a></li></ul></li><li><a href="#delete_2">Delete</a></li></ul></li><li><a href="#request_7">Request</a></li><li><a href="#saved_searches">Saved Searches</a><ul><li><a href="#get_2">Get</a></li><li><a href="#response_5">Response</a></li><li><a href="#savedsearch">SavedSearch</a></li><li><a href="#create_3">Create</a></li><li><a href="#delete_3">Delete</a></li></ul></li></ul></div>
-<h2 id="introduction">Introduction</h2>
-
+	--><div class="maruku_toc"><ul><li><a href="#profile">Profile</a><ul><li><a href="#response">Response</a></li></ul></li><li><a href="#saved_items">Saved Items</a><ul><li><a href="#get_saved_items">Get saved items</a><ul><li><a href="#request">Request</a></li><li><a href="#response_2">Response</a></li><li><a href="#saveditem">SavedItem</a></li></ul></li><li><a href="#create">Create</a><ul><li><a href="#request_2">Request</a></li></ul></li><li><a href="#delete">Delete</a><ul><li><a href="#request_3">Request</a></li></ul></li></ul></li><li><a href="#tags">Tags</a><ul><li><a href="#get">Get</a><ul><li><a href="#request_4">Request</a></li><li><a href="#response_3">Response</a></li><li><a href="#tag">Tag</a></li></ul></li><li><a href="#get_tag_cloud">Get Tag Cloud</a><ul><li><a href="#request_5">Request</a></li><li><a href="#response_4">Response</a></li><li><a href="#tagcloud">TagCloud</a></li></ul></li><li><a href="#create_2">Create</a><ul><li><a href="#request_6">Request</a></li></ul></li><li><a href="#delete_2">Delete</a></li></ul></li><li><a href="#request_7">Request</a></li><li><a href="#saved_searches">Saved Searches</a><ul><li><a href="#get_2">Get</a></li><li><a href="#response_5">Response</a></li><li><a href="#savedsearch">SavedSearch</a></li><li><a href="#create_3">Create</a></li><li><a href="#delete_3">Delete</a></li></ul></li></ul></div>
 <p>Europeana API supports two methods to access MyEuropeana user data.</p>
 
-<p>To access data of a specific account you can use MyData methods which require <a href="http://labs.europeana.eu/api/authentication/user_authentication">authentication using the public and private key of the user</a>.</p>
+<p>To access data of a specific account you can use MyData methods which require <a href="http://labs.europeana.eu/api/authentication/#user_authentication">authentication using the public and private key of the user</a>.</p>
 
-<p>Applications that wish to access MyEuropeana data of a specific end-user on his behalf need to authenticate using the <a href="http://labs.europeana.eu/api/authentication/oauth2_authentication">OAuth2 scheme</a> and to use MyEuropeana set of methods.</p>
+<p>Applications that wish to access MyEuropeana data of a specific end-user on her behalf need to authenticate using the <a href="http://labs.europeana.eu/api/authentication/#oauth2_authentication">OAuth2 scheme</a> and to use MyEuropeana set of methods.</p>
 
-<h2 id="rest_support">REST support</h2>
-
-<p>MyData methods (except from profile.json) support REST support. If you use REST requests, don’t include the action parameter.</p>
-
-<h2 id="general_response_for_all_create__delete_actions">General response for all CREATE &amp; DELETE actions</h2>
-
-<p>The API will return the general API response, where the following fields are important.</p>
-<table><thead><tr><th>Field</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">success</td><td style="text-align: left;">Boolean</td><td style="text-align: left;">true for success</td></tr>
-<tr><td style="text-align: left;">error</td><td style="text-align: left;">String</td><td style="text-align: left;">Containing error message on unsuccesfull actions</td></tr>
-</tbody></table>
 <h2 id="profile">Profile</h2>
 
 <p>Retrieve your MyEuropeana profile, including statistics about user’s activity. This call is read-only.</p>
@@ -170,19 +176,19 @@ GET http://europeana.eu/api/v2/mydata/profile.json</code></pre>
 
 <h3 id="response">Response</h3>
 
-<p>Fields containing no data are not included in json response.</p>
-<table><thead><tr><th>Field</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">email</td><td style="text-align: left;">String</td><td style="text-align: left;">TBD</td></tr>
-<tr><td style="text-align: left;">userName</td><td style="text-align: left;">String</td><td style="text-align: left;">TBD</td></tr>
+<p>Fields containing no data are not included in JSON response. We added description where needed.</p>
+<table><thead><tr><th>Field</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">email</td><td style="text-align: left;">String</td><td style="text-align: left;"></td></tr>
+<tr><td style="text-align: left;">userName</td><td style="text-align: left;">String</td><td style="text-align: left;"></td></tr>
 <tr><td style="text-align: left;">registrationDate</td><td style="text-align: left;">String</td><td style="text-align: left;">TBD (In timestamp format (Date.toLong))</td></tr>
-<tr><td style="text-align: left;">lastLogin</td><td style="text-align: left;">String</td><td style="text-align: left;">TBD (In timestamp format (Date.toLong))</td></tr>
-<tr><td style="text-align: left;">firstName</td><td style="text-align: left;">String</td><td style="text-align: left;">TBD</td></tr>
-<tr><td style="text-align: left;">lastName</td><td style="text-align: left;">String</td><td style="text-align: left;">TBD</td></tr>
-<tr><td style="text-align: left;">company</td><td style="text-align: left;">String</td><td style="text-align: left;">TBD</td></tr>
-<tr><td style="text-align: left;">country</td><td style="text-align: left;">String</td><td style="text-align: left;">TBD</td></tr>
-<tr><td style="text-align: left;">phone</td><td style="text-align: left;">String</td><td style="text-align: left;">TBD</td></tr>
-<tr><td style="text-align: left;">address</td><td style="text-align: left;">String</td><td style="text-align: left;">TBD</td></tr>
-<tr><td style="text-align: left;">website</td><td style="text-align: left;">String</td><td style="text-align: left;">TBD</td></tr>
-<tr><td style="text-align: left;">fieldOfWork</td><td style="text-align: left;">String</td><td style="text-align: left;">TBD</td></tr>
+<tr><td style="text-align: left;">lastLogin</td><td style="text-align: left;">String</td><td style="text-align: left;">(In timestamp format (Date.toLong))</td></tr>
+<tr><td style="text-align: left;">firstName</td><td style="text-align: left;">String</td><td style="text-align: left;"></td></tr>
+<tr><td style="text-align: left;">lastName</td><td style="text-align: left;">String</td><td style="text-align: left;"></td></tr>
+<tr><td style="text-align: left;">company</td><td style="text-align: left;">String</td><td style="text-align: left;"></td></tr>
+<tr><td style="text-align: left;">country</td><td style="text-align: left;">String</td><td style="text-align: left;"></td></tr>
+<tr><td style="text-align: left;">phone</td><td style="text-align: left;">String</td><td style="text-align: left;"></td></tr>
+<tr><td style="text-align: left;">address</td><td style="text-align: left;">String</td><td style="text-align: left;"></td></tr>
+<tr><td style="text-align: left;">website</td><td style="text-align: left;">String</td><td style="text-align: left;"></td></tr>
+<tr><td style="text-align: left;">fieldOfWork</td><td style="text-align: left;">String</td><td style="text-align: left;"></td></tr>
 <tr><td style="text-align: left;">nrOfSavedItems</td><td style="text-align: left;">Number</td><td style="text-align: left;">The number of saved items</td></tr>
 <tr><td style="text-align: left;">nrOfSavedSearches</td><td style="text-align: left;">Number</td><td style="text-align: left;">The number of saved searches</td></tr>
 <tr><td style="text-align: left;">nrOfSocialTags</td><td style="text-align: left;">Number</td><td style="text-align: left;">The number of tags</td></tr>

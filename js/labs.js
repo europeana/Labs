@@ -51,6 +51,7 @@ $(document).ready(function(){
 		$(this).text(currentText.replace("[at]","@"));
 	});
 	
+	/*
 	$("div.startBtn a").click(function (event) {
 	    event.preventDefault();
 	    //calculate destination place
@@ -65,7 +66,7 @@ $(document).ready(function(){
 	        scrollTop: dest
 	    }, 2000, 'swing');
 	});
-	
+	*/
 	if($("#homepage").length <= 0){
 		$("footer").attr("id", "nothomepagefooter");
 	}

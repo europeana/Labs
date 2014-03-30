@@ -91,9 +91,13 @@
 
 		<div class="grid__item one-quarter palm--one-whole">
 
-			<style type="text/css">
+		<style type="text/css">
 		  ul.notabs {display: none;}
-		  ul.notabs li a {border: 0;}			
+		  ul.notabs li a {border: 0;}
+
+		  ul ul li { margin:0; margin-left: 30px;}
+		  ul.notabs a { padding: 0.5rem; }	
+		  ul ul li a.current{text-decoration: underline; }		
 		</style>
 		
 		<script type="application/javascript">
@@ -102,58 +106,72 @@
 				$(this).parent().find("ul.notabs").slideToggle();
 				return e.preventDefault();
 			});
+			
+			
+			$("ul.notabs li a").removeClass("current");
+			var baseUrl = $("a.logo").attr("href").toString();
+			var currentUrl = window.location.pathname;
+			
+			$("ul.notabs li a").each(function(){
+				if(currentUrl.match("^"+$(this).attr("href"))){
+					$(this).addClass("current");
+					$(this).parent().parent().parent().find("a:first").click();
+				}
+			});	
 		});
 			
 		</script>
 		
 		<ul class="tabs tabs-v">
 			<li><a href="/api" title="API Introduction">Introduction</a></li>
-			<li><a href="/api/getting-started" title="Getting Started with the Europeana REST API">Getting Started</a></li>
-			<li><a href="/api/registration" title="API Registration">Registration</a></li>
-			<li><a href="/api/console" title="API Console">Console</a></li>
 			<li>
-				<a href="" title="" class="menuTrigger">Europeana Repository</a>
-						<ul class="notabs tabs-v">
-		    <li><a href="/api/repository" title="Europeana Repository">Europeana Repository</a></li>
-			<li><a href="/api/authentication" title="Authentication">Authentication</a></li>
-			<li><a href="/api/search" title="Search">Search Method</a></li>
-			<li><a href="/api/query" title="Query">Query Syntax</a></li>
-			<li><a href="/api/object" title="Object">Object Method</a></li>
-			<li><a href="/api/myeuropeana" title="Accessing MyEuropeana">MyEuropeana</a></li>
-			<li><a href="/api/provider" title="Querying Providers and Datasets">Provider and Datasets</a></li>
-			<li><a href="/api/error" title="Error Codes">Error Codes</a></li>
-		</ul>
-
+				<a href="" class="menuTrigger">REST API</a>
+				<ul class="notabs tabs-v">
+					<li><a href="/api/getting-started" title="Getting Started with the Europeana REST API">Getting Started</a></li>
+					<li><a href="/api/registration" title="API Registration">Get an API-key</a></li>
+					<li><a href="/api/console" title="API Console">Console</a></li>
+					<li><a href="/api/authentication" title="Authentication">Authentication</a></li>
+					<li><a href="/api/search" title="Search">Search</a></li>
+					<li><a href="/api/query" title="Query">Query Syntax</a></li>
+					<li><a href="/api/record" title="Record">Record</a></li>
+					<li><a href="/api/myeuropeana" title="Accessing MyEuropeana">MyEuropeana</a></li>
+					<li><a href="/api/provider" title="Querying Providers and Datasets">Provider and Datasets</a></li>
+					<!--<li><a href="/api/data-fields" title="API Data Fields Reference">Data Fields</a></li>-->					
+					<li><a href="/api/hierarchy" title="Data Hierarchy">Data Hierarchy</a></li>					
+					<li><a href="/api/error" title="Error Codes">Error Codes</a></li>	
+					<li><a href="/api/changelog" title="API ChangeLog">Change Log</a></li>
+				</ul>
 			</li>
-			<li><a href="/api/changelog" title="API ChangeLog">Change Log</a></li>
-		</ul>
-
-		
-	
-
-			<ul class="tabs tabs-v">
-			<li><a href="/api/search-widget" title="Search Widget">Search Widget</a></li>
-			<li><a href="/api/data-fields" title="API Data Fields Reference">Data Fields</a></li>
-			<li><a href="http://www.europeana.eu/portal/rights/api-terms-of-use.html" title="API Data Fields Reference">Term of Use</a></li>
-		</ul>
-		
-	
+			<li>
+				<a href="" class="menuTrigger">Linked Open Data</a>
+				<ul class="notabs tabs-v">
+					<li><a href="/api/linked-open-data/introduction">Introduction</a></li>
+					<li><a href="/api/linked-open-data/data-downloads">Data Downloads</a></li>
+					<li><a href="/api/linked-open-data/SPARQL-endpoint">SPARQL-endpoint</a></li>
+					<li><a href="/api/linked-open-data/data-hierarchy">Data Hierarchy</a></li>
+					<li><a href="/api/linked-open-data/FAQ">FAQ</a></li>
+					<li><a href="/api/linked-open-data/credits">Credits</a></li>
+				</ul>
+			</li>
+			<li><a href="/api/search-widget" title="Search Widget">Search Widget</a></li>			
+			<li><a href="http://www.europeana.eu/portal/rights/api-terms-of-use.html" title="API Data Fields Reference">Term of Use</a></li>						
+		</ul>	
 	</div>
 
 		
 	<div id="documentation" class="prose grid__item palm--one-whole push--palm-none one-half"><!--
-	--><div class="maruku_toc"><ul><li><a href="#request">Request</a></li><li><a href="#response">Response</a><ul><li><a href="#item">item</a></li><li><a href="#breadcrumb">breadcrumb</a></li><li><a href="#facet">facet</a></li></ul></li></ul></div>
+	--><div class="maruku_toc"><ul><li><a href="#request">Request</a></li><li><a href="#response">Response</a><ul><li><a href="#item">item</a></li><li><a href="#breadcrumb">breadcrumb</a></li><li><a href="#facet">facet</a></li></ul></li><li><a href="#callback_function">Callback Function</a></li></ul></div>
 <p>Search for records.</p>
 
 <pre><code>http://europeana.eu/api/v2/search.json</code></pre>
 
 <h2 id="request">Request</h2>
-<table><thead><tr><th>Parameter</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">query</td><td style="text-align: left;">String</td><td style="text-align: left;">The search term(s). See <a href="http://labs.europeana.eu/api/query.html">Query Syntax</a> for information on forming complex queries and examples.</td></tr>
-<tr><td style="text-align: left;">callback</td><td style="text-align: left;">String</td><td style="text-align: left;">Name of a client side <a href="http://labs.europeana.eu/api/getting-started/callback-function/">callback function</a>.</td></tr>
-<tr><td style="text-align: left;">profile</td><td style="text-align: left;">String</td><td style="text-align: left;">Profile parameter controls the format and richness of the response: <ul><li>minimal - minimal set of metadata</li><li>standard - TBD</li><li>facets - information about [facets](http://labs.europeana.eu/api/repository/#facets) is added. For the records the Standard profile is used.</li><li>breadcrumbs - information about the query is added in the form of [breadcrumbs](http://labs.europeana.eu/api/search/#breadcrumb). Facets are added as well; for the records the Standard profile is used.</li><li>portal - TBD</li></ul></td></tr>
-<tr><td style="text-align: left;">qf</td><td style="text-align: left;">String</td><td style="text-align: left;">Facet filtering query. This parameter can be defined more than once. See faceted search (TBD: link) for more information.</td></tr>
+<table><thead><tr><th>Parameter</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">query</td><td style="text-align: left;">String</td><td style="text-align: left;">The search term(s). See <a href="http://labs.europeana.eu/api/query">Query Syntax</a> for information on forming complex queries and examples.</td></tr>
+<tr><td style="text-align: left;">profile</td><td style="text-align: left;">String</td><td style="text-align: left;">Profile parameter controls the format and richness of the response: <ul><li>minimal - minimal set of metadata</li><li>standard - TBD</li><li>facets - information about [facets](http://labs.europeana.eu/api/repository/#facets) is added. For the records the Standard profile is used.</li><li>breadcrumbs - information about the query is added in the form of [breadcrumbs](http://labs.europeana.eu/api/search/#breadcrumb). Facets are added as well; for the records the Standard profile is used.</li><li>portal - Standard, Facets, and Breadcrumb combined </li></ul></td></tr>
+<tr><td style="text-align: left;">qf</td><td style="text-align: left;">String</td><td style="text-align: left;">Facet filtering query. This parameter can be defined more than once. See <a href="http://labs.europeana.eu/api/query">Query Syntax</a> page for more information.</td></tr>
 <tr><td style="text-align: left;">rows</td><td style="text-align: left;">Number</td><td style="text-align: left;">The number of records to return. Maximum is 100. Defaults to 12.</td></tr>
 <tr><td style="text-align: left;">start</td><td style="text-align: left;">Number</td><td style="text-align: left;">The item in the search results to start with. The first item is 1. Defaults to 1.</td></tr>
+<tr><td style="text-align: left;">callback</td><td style="text-align: left;">String</td><td style="text-align: left;">Name of a client side <a href="#callback_function">callback function</a>.</td></tr>
 </tbody></table>
 <h2 id="response">Response</h2>
 <table><thead><tr><th>Field</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">items</td><td style="text-align: left;">Array (<a href="#item">Item</a>)</td><td style="text-align: left;">This is a collection of search results. Each item is represented by a summary of the metadata record. The actual content is dependent of the profile parameter.</td></tr>
@@ -186,7 +204,7 @@
 
 <p>A collection of search queries that were applied in this call.</p>
 <table><thead><tr><th>Field</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">display</td><td style="text-align: left;">String</td><td style="text-align: left;">Human-readable description of the search</td></tr>
-<tr><td style="text-align: left;">param</td><td style="text-align: left;">String</td><td style="text-align: left;">The search parameter name (query or qf)</td></tr>
+<tr><td style="text-align: left;">param</td><td style="text-align: left;">String</td><td style="text-align: left;">The search parameter name (<strong>query</strong> or <strong>qf</strong>)</td></tr>
 <tr><td style="text-align: left;">value</td><td style="text-align: left;">String</td><td style="text-align: left;">The search parameter value</td></tr>
 <tr><td style="text-align: left;">href</td><td style="text-align: left;">String</td><td style="text-align: left;">The search part of the URL which can be reused in further calls</td></tr>
 <tr><td style="text-align: left;">last</td><td style="text-align: left;">Boolean</td><td style="text-align: left;">Boolean value indicating whether the current breadcrumb is the last one</td></tr>
@@ -197,7 +215,9 @@
 <table><thead><tr><th>Field</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">name</td><td style="text-align: left;">String</td><td style="text-align: left;">The name of the facet (COUNTRY, DATA_PROVIDER, LANGUAGE, PROVIDER, RIGHTS, TYPE, UGC, YEAR)</td></tr>
 <tr><td style="text-align: left;">fields<sup>*</sup></td><td style="text-align: left;">Array (field)</td><td style="text-align: left;">A collection of facet fields. Each field is an object that has a label (String) and a count of objects (Number).</td></tr>
 </tbody></table>
-<p><sup>*</sup><em>indicates an obligatory property</em></p><!--
+<p><sup>*</sup><em>indicates an obligatory property</em></p>
+
+<h2 id="callback_function">Callback Function</h2><!--
 --></div>
 </div>
 ﻿<!-- Begin Footer -->
