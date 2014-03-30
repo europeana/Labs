@@ -11,4 +11,3 @@ The links below provide pointers to more detailed API documentation.
 |:-------------|:-------------|
 |[REST API](/api/portal-api)| Standard REST calls over HTTP. Response returned in JSON. |
 |[Linked Open Data](/api/linked-open-data) | Find and extract data in SPARQL 1.1, supports Linked Open Data.|
-|[OAI-PMH](/api) | Harvest metadata invoked within HTTP. |
