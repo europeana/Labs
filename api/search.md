@@ -79,3 +79,5 @@ A collection of facets that describe the resultant dataset.
 | fields<sup>\*</sup> |   Array (field) | A collection of facet fields. Each field is an object that has a label (String) and a count of objects (Number).|
 
 <sup>\*</sup> _indicates an obligatory property_
+
+## Callback Function
