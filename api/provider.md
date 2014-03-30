@@ -2,6 +2,7 @@
 layout: "api-page"
 title: Querying Providers and Datasets
 published: true
+excerpt: "How to retrieve information about Europeana data providers and datasets"
 ---
 
 This page describes the API calls that retrieve information about Europeana data providers and datasets that comprise the repository.
