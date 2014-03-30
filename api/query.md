@@ -31,17 +31,17 @@ Looking for one of several possible values in a data field is also possible. Her
 To combine several fields in one search one can use boolean operators AND, OR, and NOT (note the case-sensitivity). Use parentheses to group logical conditions. Note that two consecutive terms without any boolean operator in between default to the AND operator.
 
     http://www.europeana.eu/api/v2/search.json?wskey=xxxx&query=mona AND lisa
- [Test on API Console](http://labs.europeana.eu/api/console.html?function=search&query=mona AND lisa)
+ [Test on API Console](http://labs.europeana.eu/api/console.html?function=search&query=mona%20AND%20lisa)
 
 Boolean operators can also be combined with the search by fields. The following example searches for objects whose location is in _Paris_ or in _London_:
 
     http://www.europeana.eu/api/v2/search.json?wskey=xxxx&query=where: (Paris OR London)
-[Test on API Console](http://labs.europeana.eu/api/console.html?function=search&query=where: (Paris OR London)
+[Test on API Console](http://labs.europeana.eu/api/console.html?function=search&query=where:%20%28Paris%20OR%20London%29
 
 The boolean NOT operator cannot be used alone but only in conjunction with another boolean operator. For example, looking for objects which contain the term _Lisa_ but do not contain the term _Mona_ is done by the following:
 
     http://www.europeana.eu/api/v2/search.json?wskey=xxxx&query=lisa NOT mona
-[Test on API Console](http://labs.europeana.eu/api/console.html?function=search&query=lisa NOT mona)
+[Test on API Console](http://labs.europeana.eu/api/console.html?function=search&query=lisa%20NOT%20mona)
 
 ## Refinements
 
@@ -97,4 +97,4 @@ Looking for objects containing the term _Paris_ among objects provided by the us
 Looking for objects dated by a year between _1525_ and _1527_:
 
     http://www.europeana.eu/api/v2/search.json?wskey=xxxx&query=YEAR:[1525 TO 1527]
-[Test on API Console](http://labs.europeana.eu/api/console/console.html?function=search&query=YEAR:[1525 TO 1527])
+[Test on API Console](http://labs.europeana.eu/api/console/console.html?function=search&query=YEAR:[1525%20TO%201527])
