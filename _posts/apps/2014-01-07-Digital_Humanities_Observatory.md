@@ -1,13 +1,13 @@
 ---
-layout: gallery-item
+layout: apps-item
 category: apps
 permalink: apps/digital-humanities-observatory
 title: Digital Humanities Observatory
 imageurl: 
-  - "/img/gallery/digital-humanities-observatory/DHO_discovery.jpg"
-  - "/img/gallery/digital-humanities-observatory/DHO_discovery_2.jpg"
-  - "/img/gallery/digital-humanities-observatory/DHO_discovery_3.jpg"
-  - "/img/gallery/digital-humanities-observatory/DHO_discovery_4.png"
+  - "/img/apps/digital-humanities-observatory/DHO_discovery.jpg"
+  - "/img/apps/digital-humanities-observatory/DHO_discovery_2.jpg"
+  - "/img/apps/digital-humanities-observatory/DHO_discovery_3.jpg"
+  - "/img/apps/digital-humanities-observatory/DHO_discovery_4.png"
 tags: 
   - API Implementation
 links:

@@ -1,6 +1,6 @@
 ---
 category: apps
-layout: "gallery-item"
+layout: "apps-item"
 published: true
 title: Presto Prime- mapping tool
 featured: false
@@ -10,7 +10,7 @@ tags:
 links: 
   - "http://prestoprime.joanneum.at/"
 imageurl: 
-  - "/img/gallery/PrestoPrime-mapping-tool/thoughtlab_image_0005_I---M.png"
+  - "/img/apps/PrestoPrime-mapping-tool/thoughtlab_image_0005_I---M.png"
 contact:
   name: "For more information, or to give feedback, please contact: [Kurt Majcen](kurt.majcen@joanneum.at?subject=ThoughtLab:%20PrestoPrime%20Metadata%20Mapping" prototype).
   

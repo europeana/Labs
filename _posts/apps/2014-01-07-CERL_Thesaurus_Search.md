@@ -1,10 +1,10 @@
 ---
-layout: gallery-item
+layout: apps-item
 category: apps
 permalink: apps/cerl-thesaurus
 title: CERL Thesaurus Search
 imageurl: 
-  - "/img/gallery/cerl-thesaurus-search/CERL_Thesaurus.jpg"
+  - "/img/apps/cerl-thesaurus-search/CERL_Thesaurus.jpg"
 tags: 
   - API Implementation
 links:

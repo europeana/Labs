@@ -1,10 +1,10 @@
 ---
-layout: gallery-item
+layout: apps-item
 category: apps
 permalink: apps/europeana-local-austria
 title: "Europeana Local Austria"
 imageurl:
-  - "/img/gallery/europeana-local-austria/eLocal.jpg"
+  - "/img/apps/europeana-local-austria/eLocal.jpg"
 featured: false
 tags: 
   - API Implementation

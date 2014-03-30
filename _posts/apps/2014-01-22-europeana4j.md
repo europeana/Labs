@@ -1,6 +1,6 @@
 ---
 category: apps
-layout: "gallery-item"
+layout: "apps-item"
 published: true
 title: europeana4j
 featured: false
@@ -9,7 +9,7 @@ tags:
   - API Implementation
   - Open Source Project
 imageurl:
-  - "/img/gallery/europeana4j/europeana4j.jpg"
+  - "/img/apps/europeana4j/europeana4j.jpg"
 links: 
   - "http://code.google.com/p/europeana4j/"
 ---

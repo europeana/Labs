@@ -1,10 +1,10 @@
 ---
-layout: gallery-item
+layout: apps-item
 category: apps
 permalink: apps/e4e
 title: Europeana4Education (E4E)
 imageurl: 
-  - "http://lorempixel.com/400/400"
+  - "/img/no-image.gif"
 featured: false
 contact:
   name: Olivier

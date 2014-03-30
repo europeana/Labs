@@ -1,6 +1,6 @@
 ---
 category: apps
-layout: "gallery-item"
+layout: "apps-item"
 published: true
 title: BHL Scan List
 featured: false
@@ -12,7 +12,7 @@ links:
   - "http://bhl.nhm-wien.ac.at/scanlist/"
  
 imageurl: 
-  - "/img/gallery/BHL-Scan-List/thoughtlab_image_0012_D---B.png"
+  - "/img/apps/BHL-Scan-List/thoughtlab_image_0012_D---B.png"
 
 contact: 
 

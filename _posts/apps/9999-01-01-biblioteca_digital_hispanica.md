@@ -1,11 +1,11 @@
 ---
-layout: gallery-item
+layout: apps-item
 category: apps
 permalink: apps/biblioteca
 title: Biblioteca Digital Hispánica
 imageurl: 
-  - "/img/gallery/biblioteca-digital-hispanica/Hispania1.png"
-  - "/img/gallery/biblioteca-digital-hispanica/HIspania2.png"
+  - "/img/apps/biblioteca-digital-hispanica/Hispania1.png"
+  - "/img/apps/biblioteca-digital-hispanica/HIspania2.png"
 featured: true
 published: true
 contact:

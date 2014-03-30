@@ -1,6 +1,6 @@
 ---
 category: apps
-layout: "gallery-item"
+layout: "apps-item"
 published: true
 title: "Europeana Search Python"
 featured: false

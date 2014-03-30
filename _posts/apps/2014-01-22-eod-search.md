@@ -1,6 +1,6 @@
 ---
 category: apps
-layout: "gallery-item"
+layout: "apps-item"
 published: false
 title: EOD Search
 featured: false
@@ -8,8 +8,8 @@ permalink: "apps/eod-search"
 tags: 
   - API Implementation
 imageurl:
-  - "/img/gallery/eod-search/EOD.jpg"
-  - "/img/gallery/eod-search/EOD_2.jpg"
+  - "/img/apps/eod-search/EOD.jpg"
+  - "/img/apps/eod-search/EOD_2.jpg"
 links: 
   - "http://search.books2ebooks.eu/Record/vkol_vkol000457366"
 ---

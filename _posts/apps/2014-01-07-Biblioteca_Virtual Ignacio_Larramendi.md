@@ -1,12 +1,12 @@
 ---
-layout: gallery-item
+layout: apps-item
 category: apps
 permalink: apps/biblioteca-virtual
 title: Biblioteca Virtual Ignacio Larramendi
 imageurl: 
-  - "/img/gallery/biblioteca_virtual_ignacio_larramendi/larramendi-main.jpg"
-  - "/img/gallery/biblioteca_virtual_ignacio_larramendi/larramendi-1.jpg"
-  - "/img/gallery/biblioteca_virtual_ignacio_larramendi/larramendi-2.jpg"
+  - "/img/apps/biblioteca_virtual_ignacio_larramendi/larramendi-main.jpg"
+  - "/img/apps/biblioteca_virtual_ignacio_larramendi/larramendi-1.jpg"
+  - "/img/apps/biblioteca_virtual_ignacio_larramendi/larramendi-2.jpg"
 tags: 
   - API Implementation 
 secondarytags:

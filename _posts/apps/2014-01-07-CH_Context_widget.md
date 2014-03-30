@@ -1,10 +1,10 @@
 ---
-layout: gallery-item
+layout: apps-item
 category: apps
 permalink: apps/ch-context-widget
 title: CH Context widget
 imageurl: 
-  - "/img/gallery/ch-context-widget/MarcinGreece.jpg"
+  - "/img/apps/ch-context-widget/MarcinGreece.jpg"
 contact:
   name: "Poznań Supercomputing and Networking Center Digital Libraries Team - Marcin Mielnicki, Ola Nowak, Krzysztof Sielski and Marcin Werla"
 tags: 

@@ -1,11 +1,11 @@
 ---
 category: apps
-layout: "gallery-item"
+layout: "apps-item"
 published: true
 permalink: "apps/dutch-natural-history"
 title: Dutch Museum of Natural History
 imageurl: 
-  - "/img/gallery/dutch-museum-of-national-history/Dutch_Museum_of_National_History.jpg"
+  - "/img/apps/dutch-museum-of-national-history/Dutch_Museum_of_National_History.jpg"
 featured: false
 contact: 
   name: null

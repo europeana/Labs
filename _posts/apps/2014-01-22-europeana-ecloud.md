@@ -1,10 +1,10 @@
 ---
-layout: gallery-item
+layout: apps-item
 category: apps
 permalink: apps/europeana-ecloud
 title: "Europeana eCloud"
 imageurl:
-  - "/img/gallery/europeana_ecloud/eCloud.jpg"
+  - "/img/apps/europeana_ecloud/eCloud.jpg"
 featured: false
 tags: 
   - API Implementation

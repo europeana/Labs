@@ -1,6 +1,6 @@
 ---
 category: apps
-layout: "gallery-item"
+layout: "apps-item"
 published: true
 title: Europeana Connect Annotation Suite
 featured: false
@@ -10,7 +10,7 @@ tags:
 links: 
   - "http://dme.arcs.ac.at/annotation/"
 imageurl: 
-  - "/img/gallery/EuropeanaConnect-Annotation/thoughtlab_image_0001_UGC--.png"
+  - "/img/apps/EuropeanaConnect-Annotation/thoughtlab_image_0001_UGC--.png"
 contact: 
   name: "For more information, or to give feedback, please contact: [Rainer Simon](rainer.simon@ait.ac.at?subject=ThoughtLab:%20EuropeanaConnect%20Annotation%20Tool%20feedback)"
 ---

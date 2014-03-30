@@ -1,10 +1,10 @@
 ---
-layout: gallery-item
+layout: apps-item
 category: apps
 permalink: apps/bibheritagespain
 title: Digital Library of Bibliographic Heritage, Spain
 imageurl: 
-  - "/img/gallery/digital-library-of-bibliographic-heritage-spain/Digital_Library_Spain_jpg.jpg"
+  - "/img/apps/digital-library-of-bibliographic-heritage-spain/Digital_Library_Spain_jpg.jpg"
 tags: 
   - API Implementation
 links:

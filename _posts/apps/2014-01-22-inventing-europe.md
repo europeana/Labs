@@ -1,6 +1,6 @@
 ---
 category: apps
-layout: "gallery-item"
+layout: "apps-item"
 published: true
 title: Inventing Europe
 featured: false
@@ -8,9 +8,9 @@ permalink: "apps/inventing-europe"
 tags: 
   - API Implementation
 imageurl: 
-  - "/img/gallery/inventing-europe/image_gallery_nr2.jpg"
-  - "/img/gallery/inventing-europe/image_gallery_nr3.jpg"
-  - "/img/gallery/inventing-europe/image_gallery_nr4.jpg"
+  - "/img/apps/inventing-europe/image_gallery_nr2.jpg"
+  - "/img/apps/inventing-europe/image_gallery_nr3.jpg"
+  - "/img/apps/inventing-europe/image_gallery_nr4.jpg"
 links: 
   - "http://www.inventingeurope.eu/"
 ---
