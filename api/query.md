@@ -2,7 +2,7 @@
 layout: "api-page"
 title: Query Syntax
 published: true
-excerpt: "Does this field really work?"
+excerpt: "Search query syntax supported by the API"
 ---
 
 Internally, Europeana uses [Apache SOLR](http://lucene.apache.org/solr/) platform to store its data and thus [Apache Lucene Query Syntax](https://lucene.apache.org/core/4_1_0/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#package_description) is supported by queries. Advanced users are encouraged to use Lucene and Apache SOLR guides to get most out of the Europeana repository. For others, we supply a basic guide for querying Europeana.
