@@ -15,7 +15,7 @@ imageurl:
   - "/img/apps/EFG-authority-manager/thoughtlab_image_0008_IMQ--.png"
 
 contact: 
-  name: "For more information, or to give feedback, please contact: [Paolo Manghi](paolo.manghi@isti.cnr.it?subject=ThoughtLab:%20EFG%20Authority%20File%20Manager%20feedback)
+  - name: "For more information, or to give feedback, please contact: [Paolo Manghi](paolo.manghi@isti.cnr.it?subject=ThoughtLab:%20EFG%20Authority%20File%20Manager%20feedback)"
 ---
 **EFG Authority File Manager**- A tool to create unique records for people, organisations and film works.
 

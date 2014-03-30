@@ -12,7 +12,7 @@ links:
 imageurl: 
   - "/img/apps/PrestoPrime-mapping-tool/thoughtlab_image_0005_I---M.png"
 contact:
-  name: "For more information, or to give feedback, please contact: [Kurt Majcen](kurt.majcen@joanneum.at?subject=ThoughtLab:%20PrestoPrime%20Metadata%20Mapping" prototype).
+  name: "For more information, or to give feedback, please contact: [Kurt Majcen](kurt.majcen@joanneum.at?subject=ThoughtLab:%20PrestoPrime%20Metadata%20Mapping prototype)."
   
 ---
 **Metadata mapping** - The mapping and validation of metadata formats for audiovisual content, and visualisation of mappings.
