@@ -24,7 +24,7 @@ If you want to limit your search to a specific data field you should provide the
 Looking for one of several possible values in a data field is also possible. Here is how to look for records whose creator is one of the Dutch Golden Age maestros:
 
     http://www.europeana.eu/api/v2/search.json?wskey=xxxx&query=who:"Rembrandt Vermeer Steen"
-[Test on API Console](http://labs.europeana.eu/api/console.html?function=search&query=who:"Rembrandt Vermeer Steen")
+[Test on API Console](http://labs.europeana.eu/api/console.html?function=search&query=who:%22Rembrandt%20Vermeer%20Steen%22)
 
 ## Boolean Search
 
