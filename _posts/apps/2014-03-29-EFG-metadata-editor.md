@@ -15,7 +15,7 @@ imageurl:
   - "/img/apps/EFG-metadata-editor/thoughtlab_image_0007_IMQ--.png"
 
 contact: 
-  name: "For more information, or to give feedback, please contact: [Franca Debole](franca.debole@isti.cnr.it;?subject=ThoughtLab:%20Metadata%20Editor%20feedback)
+  name: "For more information, or to give feedback, please contact: [Franca Debole](franca.debole@isti.cnr.it;?subject=ThoughtLab:%20Metadata%20Editor%20feedback)"
 
 ---
 **EFG Metadata Editor** - A tool to add, edit and delete records from a federated repository.
