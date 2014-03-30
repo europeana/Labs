@@ -1,5 +1,6 @@
 $(document).ready(function(){
 	
+	 initApiMenu();
 	semLabs.initMenu();
 	
 	try{
@@ -161,5 +162,29 @@ function sortTagsListOneLevel(){
   $.each(listitems, function(idx, itm) { 
     mylist.append(itm); 
   });
+}
+
+
+function initApiMenu()
+{
+			
+			$("ul a.menuTrigger").click(function(e){
+				$(this).parent().find("ul.notabs").slideToggle();
+				return e.preventDefault();
+			});
+			
+			
+			$("ul.notabs li a").removeClass("current");
+			var baseUrl = $("a.logo").attr("href").toString();
+			var currentUrl = window.location.pathname;
+			
+			$("ul.notabs li a").each(function(){
+				if(currentUrl.match("^"+$(this).attr("href"))){
+					$(this).addClass("current");
+					$(this).parent().parent().parent().find("a:first").click();
+				}
+			});	
+
+
 }
 

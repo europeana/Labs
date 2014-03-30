@@ -1,5 +1,5 @@
 ---
-layout: api-page
+layout: api-landing
 title: Search Widget
 ---
 

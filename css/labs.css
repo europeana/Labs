@@ -366,9 +366,37 @@ ul.tags li a.current-tag{background: #206a50;}
 }
 
 @media (max-width: 800px){
-	#homepage div.b-text {
+	#homepage #banner div.block-hero{ position:relative; }
+	#homepage #banner div.b-thumb{ }
+	#homepage #banner div.b-text{ position: absolute; color:white; top:25%;  padding: 20px; margin: 10px; text-align: center;}
+	#homepage #banner div.b-text h1 {font-size: 2em;}
+	#homepage #register_email {width: 150px; margin-right: 10px;}
+	#homepage #tblKey td.key-image img {max-width: 80px;}
+}
+
+@media (max-width: 750px){
+	/*#homepage div.b-text {
 		display:none;
-	}
+	}*/
+	
+	#homepage #banner div.block-hero{ position:relative; }
+	#homepage #banner div.b-thumb{ }
+	#homepage #banner div.b-text{ position: absolute; color:white; top:15%;  padding: 20px; margin: 10px; text-align: center;}
+	#homepage #banner div.b-text h1 {font-size: 1.8em;}
+	#homepage #register_email {width: 150px; margin-right: 10px;}
+	#homepage #tblKey td.key-image img {max-width: 80px;}
+}
+
+@media (max-width: 435px){
+	/*#homepage div.b-text {
+		display:none;
+	}*/
+	
+	#homepage #banner div.block-hero{ position:relative; }
+	#homepage #banner div.b-thumb{ }
+	#homepage #banner div.b-text{ position: absolute; color:white; top:15%;  padding: 20px; margin: 10px; text-align: center;}
+	#homepage #banner div.b-text h1 {font-size: 1.8em;}
+	#homepage #banner div.b-text {font-size: 0.9em;}
 	#homepage #register_email {width: 150px; margin-right: 10px;}
 	#homepage #tblKey td.key-image img {max-width: 80px;}
 }
