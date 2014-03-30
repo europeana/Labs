@@ -1,10 +1,63 @@
 	<div class="grid__item one-quarter palm--one-whole">
 
-	{% include api-intro-menu.html%}
-		
-	
+		<style type="text/css">
+		  ul.notabs {display: none;}
+		  ul.notabs li a {border: 0;}
 
-	{% include api-tos-menu.html %}
+		  ul ul li { margin:0; margin-left: 30px;}
+		  ul.notabs a { padding: 0.5rem; }	
+		  ul ul li a.current{text-decoration: underline; }		
+		</style>
 		
-	
+		<script type="application/javascript">
+		$(document).ready(function(){
+			$("ul a.menuTrigger").click(function(e){
+				$(this).parent().find("ul.notabs").slideToggle();
+				return e.preventDefault();
+			});
+			
+			
+			$("ul.notabs li a").removeClass("current");
+			var baseUrl = $("a.logo").attr("href").toString();
+			var currentUrl = window.location.pathname;
+			
+			$("ul.notabs li a").each(function(){
+				if(currentUrl.match("^"+$(this).attr("href"))){
+					$(this).addClass("current");
+					$(this).parent().parent().parent().find("a:first").click();
+				}
+			});	
+		});
+			
+		</script>
+		
+		<ul class="tabs tabs-v">
+			<li><a href="{{site.baseurl}}/api" title="API Introduction">Introduction</a></li>
+			<li>
+				<a href="" class="menuTrigger">REST API</a>
+				<ul class="notabs tabs-v">
+					<li><a href="{{site.baseurl}}/api/getting-started" title="Getting Started with the Europeana REST API">Getting Started</a></li>
+					<li><a href="{{site.baseurl}}/api/registration" title="API Registration">Get an API-key</a></li>
+					<li><a href="{{site.baseurl}}/api/console" title="API Console">Console</a></li>
+					<li><a href="{{site.baseurl}}/api/authentication" title="Authentication">Authentication</a></li>
+					<li><a href="{{site.baseurl}}/api/search" title="Search">Search</a></li>
+					<li><a href="{{site.baseurl}}/api/query" title="Query">Query Syntax</a></li>
+					<li><a href="{{site.baseurl}}/api/object" title="Object">Object Method</a></li>
+					<li><a href="{{site.baseurl}}/api/myeuropeana" title="Accessing MyEuropeana">MyEuropeana</a></li>
+					<li><a href="{{site.baseurl}}/api/provider" title="Querying Providers and Datasets">Provider and Datasets</a></li>
+					<li><a href="{{site.baseurl}}/api/data-fields" title="API Data Fields Reference">Data Fields</a></li>					
+					<li><a href="{{site.baseurl}}/api/repository" title="Europeana Repository">Europeana Repository</a></li>					
+					<li><a href="{{site.baseurl}}/api/error" title="Error Codes">Error Codes</a></li>	
+					<li><a href="{{site.baseurl}}/api/changelog" title="API ChangeLog">Change Log</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="" class="menuTrigger">Linked Open Data</a>
+				<ul class="notabs tabs-v">
+					<li><a href="{{site.baseurl}}/api/linked-open-data/">Introduction</a></li>
+				</ul>
+			</li>
+			<li><a href="{{site.baseurl}}/api/search-widget" title="Search Widget">Search Widget</a></li>			
+			<li><a href="http://www.europeana.eu/portal/rights/api-terms-of-use.html" title="API Data Fields Reference">Term of Use</a></li>						
+		</ul>	
 	</div>
