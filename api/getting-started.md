@@ -14,6 +14,8 @@ The API root URL is located at:
 
     http://www.europeana.eu/api/v2
 
+For obligatory request parameters look into the documentation of specific calls. The [authentication](http://labs.europeana.eu/api/authentication/) section provides information on the obligatory authentication parameter _wskey_.
+
 
 ## Response
 
