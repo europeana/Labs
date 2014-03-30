@@ -14,7 +14,7 @@ This new Europeana Labs website is intended to provide all you need to get start
 
 Last year we consulted with the developer community asking them what things would help them to make best use of the Europeana APIs. This Europeana Labs Beta site is the first major step towards putting in place the things we were told, but also a chance for us to learn more and make improvements before a full launch in late June.
 
-## <a name="whatsnew">What's New?</a>
+## What's New?
 
 We’ve pulled together some great examples of both content and existing applications to give you a real taste for what is possible. This is backed up by a revamp of the API documentation, providing everything you should need to exploit the full potemtial of the Europeana platform and get creative with the content.
 
@@ -26,26 +26,26 @@ You’ll also find details of <a href="/locations/" title="Europeana Locations">
 
 But wherever you are, whatever your skills, and no matter what you're planning, don't be afraid to <a href="#help" title="help &amp; support">ask for help</a> as we're here to support you.
 
-## <a name="documentation">API Documentation</a>
+## API Documentation
 
 Once you have an idea and you want to start building your application, head to our comprehensive <a href="/api/" title="API Documentation">online documentation</a>. It covers both the REST API and Linked Open Data, with extensive examples illustrating methods, syntax, and responses.
 
 You can also use the <a href="/api/console/" title="API Console">API Console</a> to build and test anything from the simplest search to a complex query using facets such as dates, geotags and permissions.
 
-## <a name="start">Getting started</a>
+## Getting started
 
 Even if you’re new to Europeana, getting started is simple.
 1. <a href="/api/registration/">Register for an API key</a>
 2. Use the <a href="/api/console/" title="API Console">API Console</a> to explore the content and customise queries. If you need help or inspiration, check out the example <a href="/data/" title="Example Data">Datasets</a> and consult our extensive <a href="/api/" title="API Documentation">API documentation</a>.
 3. Build your application. If you don’t know where to start, find inspiration in the <a href="/apps/" title="Application Gallery">Application Gallery</a> - many applications have public code repositories and there’s also a Java library and Python wrapper available.
 
-## <a name="help">Need help?</a>
+## Need help?
 
 There are lots of ways you can get help with using the Europeana APIs. Contact us directly via our <a href="/support/" title="Europeana API Support">contact form</a> or at api@europeana.eu. If you want to chat with fellow developers head over to the <a href="https://groups.google.com/forum/#!forum/europeanaapi">API Forum on Google Groups</a> and you can also <a href="http://twitter.com/europeanatech">follow @EuropeanaTech</a> on Twitter.
 
-## <a name="feedback">Send us your feedback!</a>
+## Send us your feedback!
 
 The Labs site is currently in beta, with a full launch planned in late June. We’d love to have your feedback on what you think works, and what needs improvement. We’re also happy to hear of any ideas you have.
 Please take a few minutes to <a href="https://www.surveymonkey.com/s/392VRKG" title="Europeana Labs Beta site feedback">fill out our quick survey and tell us what you think</a>.
 
-<p>Image credit: "<a href="http://europeana.eu/portal/record/90402/collectie_RP_P_OB_51_159.html" title="La chimie by Bernard Picart on Europeana Portal">La chimie</a>" by Bernard Picart. Courtesy of the <a href="http://www.rijksmuseum.nl" title="Rijksmuseum">Rijksmuseum</a>. The image is in the <a href="http://creativecommons.org/publicdomain/mark/1.0/" title="Creative Commons Public Domain 1.0">public domain</a>.</p>
+<p><small>Image credit: "<a href="http://europeana.eu/portal/record/90402/collectie_RP_P_OB_51_159.html" title="La chimie by Bernard Picart on Europeana Portal">La chimie</a>" by Bernard Picart. Courtesy of the <a href="http://www.rijksmuseum.nl" title="Rijksmuseum">Rijksmuseum</a>. The image is in the <a href="http://creativecommons.org/publicdomain/mark/1.0/" title="Creative Commons Public Domain 1.0">public domain</a>.</small></p>
