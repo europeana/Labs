@@ -7,7 +7,7 @@ published: true
 * TOC
 {:toc}
 
-Retrieve a single record from the Europeana dataset. On the relation between EDM and records read [this](http://labs.europeana.eu/api/repository/).
+Retrieve a single record from the Europeana dataset. On the relation between EDM and records read [this](http://labs.europeana.eu/api/data-hierarchy/#edm_and_records).
 
     http://europeana.eu/api/v2/record/[recordID].json
     
@@ -15,9 +15,8 @@ Retrieve a single record from the Europeana dataset. On the relation between EDM
 
 | Parameter | Datatype | Description |
 |:-------------|:-------------|:-----|
-| recordID | String | [Europeana ID](http://labs.europeana.eu/api/repository/#identifying_records) of the record to retrieve. |
-| callback| String| Name of a [client side callback function](http://labs.europeana.eu/api/getting-started#callback).|
-| profile | String | A number of profiles can be added to a search to control the format and richness of the response TBD (add profiles) |
+| recordID | String | [Europeana ID](http://labs.europeana.eu/api/data-hierarchy/#identifying_records) of the record to retrieve. |
+| callback| String| Name of a [client side callback function](http://labs.europeana.eu/api/search/#callback_function).|
 
 
 ## Response
@@ -25,26 +24,26 @@ Retrieve a single record from the Europeana dataset. On the relation between EDM
 | Field | Datatype | Description |
 |:-------------|:-------------|:-----|
 | object |   [Object](#object) |  The object representing the EDM metadata record. (see the note above) |
-| similarItems |   Array([item](#item)) |  The collection of metadata records similar to the current one. Available when profile parameter value is set to **similar**. The structure of each record is the same as the structure of the items collection returned by the [search](http://labs.europeana.eu/api/search) method. |
+| similarItems |   Array([item](http://labs.europeana.eu/api/search/#item)) |  The collection of metadata records similar to the current one. Available when profile parameter value is set to **similar**. The structure of each record is the same as the structure of the items collection returned by the [search](http://labs.europeana.eu/api/search) method. |
 
 
 ### object
 
 | Field | Datatype | Description |
 |:-------------|:-------------|:-----|
-|about|     String| [Europeana ID](http://labs.europeana.eu/api/repository/#identifying_records) of the returned object.|
-|agents|Array([Agent](#Agent))|A collection of EDM Agent objects contextually related to the object. Find more in the EDM Definition.|
-|aggregations|Array([Aggregation](#Aggregation))|A collection of EDM Aggregation objects related to the object. Find more in the EDM Definition.|
-|concepts|Array([Concept](#Concept))|A collection of EDM Concept objects contextually related to the object. Find more in the EDM Definition.|
+|about|     String| [Europeana ID](http://labs.europeana.eu/api/data-hierarchy/#identifying_records) of the returned object.|
+|agents|Array([Agent](#edm_agent))|A collection of EDM Agent objects contextually related to the object. Find more in the EDM Definition.|
+|aggregations|Array([Aggregation](#edm_aggregation))|A collection of EDM Aggregation objects related to the object. Find more in the EDM Definition.|
+|concepts|Array([Concept](#edm_concept))|A collection of EDM Concept objects contextually related to the object. Find more in the EDM Definition.|
 |country|Array(String)| TBD |
-|europeanaAggregation|Array([EuropeanaAggregation](#EuropeanaAggregation))|A collection of EDM Europeana Aggregation objects related to the object. Find more in the EDM Definition.|
+|europeanaAggregation|Array([EuropeanaAggregation](#edm_EuropeanaAggregation))|A collection of EDM Europeana Aggregation objects related to the object. Find more in the EDM Definition.|
 |europeanaCollectionName|Array(String)|A collection of names of the datasets the object belongs to.|
 |europeanaCompleteness|Number|  A number between 0 and 10 representing the metadata quality of the object. |
 |language|     Array(String) | A singleton collection with the language of the object.    |
 |optOut|     Boolean | Flag indicating whether the provider allowed retrieval of thumbnail of the record |
-|places|     Array([Place](#Place))|     A collection of EDM Place objects contextually related to the object. Find more in the EDM Definition.|
+|places|     Array([Place](edm_#Place))|     A collection of EDM Place objects contextually related to the object. Find more in the EDM Definition.|
 |provider|     Array(String) | A singleton collection with the name of the organization that delivered this object to Europeana.     |
-|providedcHOs|     Array ([ProvidedCHO](#ProvidedCHO)|     A collection of Provided Cultural Heritage Objects related to the record. Find more in the EDM Definition.|
+|providedCHOs|     Array ([ProvidedCHO](#edm_ProvidedCHO)) |     A collection of Provided Cultural Heritage Objects related to the record. Find more in the EDM Definition.|
 |proxies|     Array ([Proxy](#Proxy))|     A collection of proxy objects for Provided Cultural Heritage Objects. Find more in the EDM Definition.|
 |timespans|     Array ([TimeSpan](#TimeSpan))| A collection of EDM TimeSpan objects contextually related to the object. Find more in the EDM Definition.    |
 |timestamp_created_epoch | Number | Unix time of the date when the object was created. |
@@ -53,13 +52,13 @@ Retrieve a single record from the Europeana dataset. On the relation between EDM
 |timestamp_update | String | ISO 8601 format of the date when the object was last updated.|
 |title|     Array (String)|     A collection with the main and alternative titles of the object. |
 |type|     String|     The type of the object (see the TYPE facet) TBD: add link |
-|year|     Array (String)| TBD |
+|year|     Array (String)|  |
 
 
 ### EDM Aggregation
 
 
-EDM Aggregation. The set of resources related to a single cultural heritage object that collectively represent that object in Europeana. Such set consists of: all descriptions about the object that Europeana collects from (possibly different) content providers, including thumbnails and other forms of abstractions, as well as of the description of the object Europeana builds. Find more in the EDM Definition.
+An EDM Aggregation object. The set of resources related to a single cultural heritage object that collectively represent that object in Europeana. Such set consists of: all descriptions about the object that Europeana collects from (possibly different) content providers, including thumbnails and other forms of abstractions, as well as of the description of the object Europeana builds. Find more in the EDM Definition.
 
 | Field | Qualified Name | Datatype | Description |
 |:-------------|:-------------|:-----|:-----|
@@ -80,7 +79,7 @@ EDM Aggregation. The set of resources related to a single cultural heritage obje
 
 ### EDM EuropeanaAggregation 
 
-EDM Europeana Aggregation. The set of resources related to a single cultural heritage object that collectively represent that object in Europeana. Such set consists of: all descriptions about the object that Europeana collects from (possibly different) content providers, including thumbnails and other forms of abstractions, as well as of the description of the object Europeana builds.
+An EDM Europeana Aggregation object. The set of resources related to a single cultural heritage object that collectively represent that object in Europeana. Such set consists of: all descriptions about the object that Europeana collects from (possibly different) content providers, including thumbnails and other forms of abstractions, as well as of the description of the object Europeana builds.
 
 | Field | Qualified Name | Datatype | Description |
 |:-------------|:-------------|:-----|:-----|
@@ -100,7 +99,7 @@ EDM Europeana Aggregation. The set of resources related to a single cultural her
 
 ### EDM ProvidedCHO
 
-EDM ProvidedCHO (Provided Cultural Heritage Object). This class comprises the Cultural Heritage objects that Europeana collects descriptions about.
+An EDM Provided CHO (Cultural Heritage Object) object. This class comprises the Cultural Heritage objects that Europeana collects descriptions about.
 
 | Field | Qualified Name | Datatype | Description |
 |:-------------|:-------------|:-----|:-----|
@@ -175,6 +174,8 @@ ORE* Proxy. Europeana uses proxies as place-holders for cultural heritage object
 
 ### EDM WebResource
 
+An EDM WebResource object.
+
 | Field | Qualified Name | Datatype | Description |
 |:-------------|:-------------|:-----|:-----|
 | about | rdf:about | String | URI of the webResource |
@@ -225,8 +226,7 @@ An EDM Agent object. This EDM Agent class comprises people, either individually 
 
 #### EDM Concept
 
-SKOS* Concept. A SKOS concept can be viewed as an idea or notion; a unit of thought. All element of this class belong to the skos namespace.
-* SKOS stands for Simple Knowledge Organization System, a W3C standard
+A [SKOS](http://www.w3.org/2004/02/skos/) Concept. A SKOS concept can be viewed as an idea or notion; a unit of thought. All elements of this class belong to the skos namespace.
 
 | Field | Qualified Name | Datatype | Description |
 |:-------------|:-------------|:-----|:-----|
@@ -249,7 +249,7 @@ SKOS* Concept. A SKOS concept can be viewed as an idea or notion; a unit of thou
 
 #### EDM Place
 
-EDM Place. An "extent in space, in particular on the surface of the earth, in the pure sense of physics: independent from temporal phenomena and matter" (CIDOC CRM).
+An EDM Place object - "extent in space, in particular on the surface of the earth, in the pure sense of physics: independent from temporal phenomena and matter" (CIDOC CRM).
 
 | Field | Qualified Name | Datatype | Description |
 |:-------------|:-------------|:-----|:-----|
@@ -267,6 +267,8 @@ EDM Place. An "extent in space, in particular on the surface of the earth, in th
 | owlSameAs | owl:sameAs | Array(String) | URI of a Place. |
 
 #### EDM Timespan
+
+An EDM Timespan object.
 
 | Field | Qualified Name | Datatype | Description |
 |:-------------|:-------------|:-----|:-----|
