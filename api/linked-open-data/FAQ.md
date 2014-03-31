@@ -28,7 +28,7 @@ In addition to the original data harvested by Europeana from its data providers,
 
 * links to other Linked Open Data services which hold information about objects that are also served by data.europeana.eu: for the moment this only concerns the Swedish cultural heritage aggregator (SOCH)
 	
-* semantic enrichment done at the Europeana Office, connecting Europeana objects to structured representations of places (using [GeoNames](http://geonames.org), concepts (using the [GEMET](http://www.eionet.europa.eu/gemet)thesaurus), people (using [DBpedia](http://dbpedia.org)) and time periods(from an adhoc time period vocabulary).
+* semantic enrichment done at the Europeana Office, connecting Europeana objects to structured representations of places (using [GeoNames](http://geonames.org), concepts (using the [GEMET](http://www.eionet.europa.eu/gemet) thesaurus), people (using [DBpedia](http://dbpedia.org)) and time periods(from an adhoc time period vocabulary).
 
 
 ### How can you access, use and contribute to Europeana's Linked Open Data?
@@ -40,20 +40,20 @@ File dumps of the RDF data are available on the data downloads</a> page. You can
 
 * [http://data.europeana.eu/item/92037/25F9104787668C4B5148BE8E5AB8DBEF5BE5FE03](http://data.europeana.eu/item/92037/25F9104787668C4B5148BE8E5AB8DBEF5BE5FE03) refers to a real-world object for which digital resources are available through Europeana ([access data](http://www.w3.org/RDF/Validator/ARPServlet?URI=http%3A%2F%2Fdata.europeana.eu%2Fdata%2Fitem%2F92037%2F25F9104787668C4B5148BE8E5AB8DBEF5BE5FE03)).
 
-* [http://data.europeana.eu/aggregation/provider/92037/25F9104787668C4B5148BE8E5AB8DBEF5BE5FE03](http://data.europeana.eu/aggregation/provider/92037/25F9104787668C4B5148BE8E5AB8DBEF5BE5FE03)links to the digital resources submitted on that object by its provider, and gives meta-information on the digital resource aggregation process, e.g., the name of the data provider ([raw data](http://www.w3.org/RDF/Validator/ARPServlet?URI=http%3A%2F%2Fdata.europeana.eu%2Fdata%2Faggregation%2Fprovider%2F92037%2F25F9104787668C4B5148BE8E5AB8DBEF5BE5FE03)).
+* [http://data.europeana.eu/aggregation/provider/92037/25F9104787668C4B5148BE8E5AB8DBEF5BE5FE03](http://data.europeana.eu/aggregation/provider/92037/25F9104787668C4B5148BE8E5AB8DBEF5BE5FE03) links to the digital resources submitted on that object by its provider, and gives meta-information on the digital resource aggregation process, e.g., the name of the data provider ([raw data](http://www.w3.org/RDF/Validator/ARPServlet?URI=http%3A%2F%2Fdata.europeana.eu%2Fdata%2Faggregation%2Fprovider%2F92037%2F25F9104787668C4B5148BE8E5AB8DBEF5BE5FE03)).
 
 * [http://data.europeana.eu/proxy/provider/92037/25F9104787668C4B5148BE8E5AB8DBEF5BE5FE03](http://data.europeana.eu/proxy/provider/92037/25F9104787668C4B5148BE8E5AB8DBEF5BE5FE03) gives all the data that applies to the real-world object, from the perspective of the Europeana provider ([raw data](http://www.w3.org/RDF/Validator/ARPServlet?URI=http%3A%2F%2Fdata.europeana.eu%2Fdata%2Fproxy%2Fprovider%2F92037%2F25F9104787668C4B5148BE8E5AB8DBEF5BE5FE03)).
 
 * [http://data.europeana.eu/proxy/europeana/92037/25F9104787668C4B5148BE8E5AB8DBEF5BE5FE03](http://data.europeana.eu/proxy/europeana/92037/25F9104787668C4B5148BE8E5AB8DBEF5BE5FE03) gives all the data that applies to the real-world object, from the perspective of Europeana. This is the resource to which Europeana semantic enrichments are attached ([raw data](http://www.w3.org/RDF/Validator/ARPServlet?URI=http%3A%2F%2Fdata.europeana.eu%2Fdata%2Fproxy%2Feuropeana%2F92037%2F25F9104787668C4B5148BE8E5AB8DBEF5BE5FE03)).
 
-* [http://data.europeana.eu/aggregation/europeana/92037/25F9104787668C4B5148BE8E5AB8DBEF5BE5FE03](http://data.europeana.eu/aggregation/europeana/92037/25F9104787668C4B5148BE8E5AB8DBEF5BE5FE03)links to the digital resources maintained by Europeana for the object, and gives meta-information on the data aggregation process, which is created by Europeana ([raw data](http://www.w3.org/RDF/Validator/ARPServlet?URI=http%3A%2F%2Fdata.europeana.eu%2Fdata%2Faggregation%2Feuropeana%2F92037%2F25F9104787668C4B5148BE8E5AB8DBEF5BE5FE03)).
+* [http://data.europeana.eu/aggregation/europeana/92037/25F9104787668C4B5148BE8E5AB8DBEF5BE5FE03](http://data.europeana.eu/aggregation/europeana/92037/25F9104787668C4B5148BE8E5AB8DBEF5BE5FE03) links to the digital resources maintained by Europeana for the object, and gives meta-information on the data aggregation process, which is created by Europeana ([raw data](http://www.w3.org/RDF/Validator/ARPServlet?URI=http%3A%2F%2Fdata.europeana.eu%2Fdata%2Faggregation%2Feuropeana%2F92037%2F25F9104787668C4B5148BE8E5AB8DBEF5BE5FE03)).
 
-* [http://data.europeana.eu/item/91622/1BF8BC466E65367929379C83FC639F27961ACD18](http://data.europeana.eu/item/91622/1BF8BC466E65367929379C83FC639F27961ACD18)is an object for which the Swedish Open Cultural Heritage also provides its own Linked Open Data representation ([raw data](http://www.w3.org/RDF/Validator/ARPServlet?URI=http%3A%2F%2Fdata.europeana.eu%2Fdata%2Fitem%2F91622%2F1BF8BC466E65367929379C83FC639F27961ACD18)).
+* [http://data.europeana.eu/item/91622/1BF8BC466E65367929379C83FC639F27961ACD18](http://data.europeana.eu/item/91622/1BF8BC466E65367929379C83FC639F27961ACD18) is an object for which the Swedish Open Cultural Heritage also provides its own Linked Open Data representation ([raw data](http://www.w3.org/RDF/Validator/ARPServlet?URI=http%3A%2F%2Fdata.europeana.eu%2Fdata%2Fitem%2F91622%2F1BF8BC466E65367929379C83FC639F27961ACD18)).
 
 We also provide the datasets as file dumps of the RDF data at data downloads page.
 
 ### How can you contribute?
-If you are a Europeana data provider, you don&#39;t need to submit your data again to Europeana. Once the [Data Exchange Agreement](http://pro.europeana.eu/web/data-exchange-agreement)(DEA) has been signed, we just fetch the metadata Europeana has already gathered. For technical reasons, we cannot continuously update the dataset we serve, but we plan to release batch updates, making all new datasets available at once.
+If you are a Europeana data provider, you don&#39;t need to submit your data again to Europeana. Once the [Data Exchange Agreement](http://pro.europeana.eu/web/data-exchange-agreement) (DEA) has been signed, we just fetch the metadata Europeana has already gathered. For technical reasons, we cannot continuously update the dataset we serve, but we plan to release batch updates, making all new datasets available at once.
 
 
 
