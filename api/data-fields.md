@@ -18,9 +18,9 @@ Meaning of columns
 * Aggregated Field/Facet: The name of aggregated fields and facets which cover this field.
 
 
+= edm:ProvidedCHO
 | EDM Field | Name in search | Datatype | Name in search result | Name (record) | Aggregated Field/Facet |
 |:-------------|:-------------|:-----|:-----|:-----|:-----|
-| edm:ProvidedCHO | | | | | |
 | @rdf:about | edm_europeana_proxy | string |  | Proxy.about | 
 | dc:contributor | proxy_dc_contributor | string | dcContributor | Proxy.dcContributor | who |
 | dc:coverage | proxy_dc_coverage | string |  | Proxy.dcCoverage | when, where, subject |
@@ -83,7 +83,10 @@ Meaning of columns
 | |proxy_ore_proxy | string |  | Proxy.europeanaProxy |   |
 | ore:proxyFor | proxy_ore_proxyFor | string |  | Proxy.proxyFor |   |
 | ore:proxyIn | proxy_ore_proxyIn | string |  | Proxy.proxyIn |   |
-| ore:Aggregation | | | | | |
+
+= ore:Aggregation
+| EDM Field | Name in search | Datatype | Name in search result | Name (record) | Aggregated Field/Facet |
+|:-------------|:-------------|:-----|:-----|:-----|:-----|
 | @rdf:about | provider_aggregation_ore_aggregation (?) | string |  | Aggregation.about | 
 | ore:aggregates | provider_aggregation_ore_aggregates | string |  | Aggregation.aggregates | 
 | edm:aggregatedCHO | provider_aggregation_edm_aggregatedCHO | string |  | Aggregation.aggregatedCHO | 
@@ -97,8 +100,11 @@ Meaning of columns
 | edm:rights | provider_aggregation_edm_rights | string |  | Aggregation.edmRights | RIGHTS
 | edm:ugc | edm_UGC | boolean | ugc | Aggregation.edmUgc | UGC
 | |provider_aggregation_edm_unstored | string |  | Aggregation.edmUnstored | 
-| edm_previewNoDistribute | boolean |  | Aggregation.edmPreviewNoDistribute | 
-| edm:EuropeanaAggregation
+| | edm_previewNoDistribute | boolean |  | Aggregation.edmPreviewNoDistribute | 
+
+= edm:EuropeanaAggregation
+| EDM Field | Name in search | Datatype | Name in search result | Name (record) | Aggregated Field/Facet |
+|:-------------|:-------------|:-----|:-----|:-----|:-----|
 | @rdf:about | edm_europeana_aggregation | string |  | EuropeanaAggregation.about | 
 | dc:creator | europeana_aggregation_dc_creator | string |  | EuropeanaAggregation.dcCreator | 
 | edm:country | europeana_aggregation_edm_country | string | country | EuropeanaAggregation.edmCountry | COUNTRY
@@ -109,7 +115,10 @@ Meaning of columns
 | edm:rights | europeana_aggregation_edm_rights | string |  | EuropeanaAggregation.edmRights | 
 | edm:aggregatedCHO | europeana_aggregation_ore_aggregatedCHO | string |  | EuropeanaAggregation.aggregatedCHO | 
 | ore:aggregates | europeana_aggregation_ore_aggregates | string |  | EuropeanaAggregation.aggregates | 
-| edm:WebResource
+
+= edm:WebResource
+| EDM Field | Name in search | Datatype | Name in search result | Name (record) | Aggregated Field/Facet |
+|:-------------|:-------------|:-----|:-----|:-----|:-----|
 | @rdf:about | edm_webResource (?) | string |  | WebResource.about | 
 | dc:description | wr_dc_description | string |  | WebResource.dcDescription | 
 | dc:format | wr_dc_format | string |  | WebResource.dcFormat | 
@@ -123,7 +132,11 @@ Meaning of columns
 | dcterms:issued | wr_dcterms_issued | string |  | WebResource.dctermsIssued | 
 | edm:isNextInSequence | wr_edm_isNextInSequence | string |  | WebResource.isNextInSequence | 
 | edm:rights | wr_edm_rights | string |  | WebResource.webResourceEdmRights | 
-| edm:Agent
+
+
+= edm:Agent
+| EDM Field | Name in search | Datatype | Name in search result | Name (record) | Aggregated Field/Facet |
+|:-------------|:-------------|:-----|:-----|:-----|:-----|
 | @rdf:about | edm_agent (?) | string | edmAgent | Agent.about | 
 | skos:prefLabel | ag_skos_prefLabel | text | edmAgentLabel | Agent.prefLabel | who
 | skos:altLabel | ag_skos_altLabel | text |  | Agent.altLabel | 
@@ -145,7 +158,10 @@ Meaning of columns
 | rdaGr2:gender | ag_rdagr2_gender | string |  | Agent.rdaGr2Gender | 
 | rdaGr2:professionOrOccupation | ag_rdagr2_professionOrOccupation | string |  | Agent.rdaGr2ProfessionOrOccupation | 
 | owl:sameAs | ag_owl_sameAs | string |  | Agent.owlSameAs | 
-| edm:Place
+
+= edm:Place
+| EDM Field | Name in search | Datatype | Name in search result | Name (record) | Aggregated Field/Facet |
+|:-------------|:-------------|:-----|:-----|:-----|:-----|
 | @rdf:about | edm_place (?) | string | edmPlace | Place.about | 
 | wgs84_pos:lat | pl_wgs84_pos_lat | string | edmPlaceLatitude | Place.latitude | 
 | wgs84_pos:long | pl_wgs84_pos_long | string | edmPlaceLongitude | Place.longitude | 
@@ -159,7 +175,10 @@ Meaning of columns
 | dcterms:isPartOf | pl_dcterms_isPartOf | string | edmPlaceBroaderTerm, dctermsIsPartOf | Place.isPartOf | |
 | owl:sameAs | pl_owl_sameAs | string |  | Place.owlSameAs   | |
 | |pl_dcterms_isPartOf_label | string |  |    |
-| edm:TimeSpan
+
+= edm:TimeSpan
+| EDM Field | Name in search | Datatype | Name in search result | Name (record) | Aggregated Field/Facet |
+|:-------------|:-------------|:-----|:-----|:-----|:-----|
 | @rdf:about | edm_timespan (?) | text | edmTimespan | TimeSpan.about | 
 | skos:prefLabel | ts_skos_prefLabel | text | edmTimespanLabel | TimeSpan.prefLabel | when
 | skos:altLabel | ts_skos_altLabel | text |  | TimeSpan.altLabel | 
@@ -174,7 +193,10 @@ Meaning of columns
 | crm:P80F.end_is_qualified_by |  |  |  | TimeSpan.crmP80FEndIsQualifiedBy | 
 | owl:sameAs | ts_owl_sameAs | string |  | TimeSpan.owlSameAs | 
 | ts_dcterms_isPartOf_label (?) | string |  |  | 
-| skos:Concept
+
+= skos:Concept
+| EDM Field | Name in search | Datatype | Name in search result | Name (record) | Aggregated Field/Facet |
+|:-------------|:-------------|:-----|:-----|:-----|:-----|
 | @rdf:about | skos_concept (?) | string | edmConceptTerm | Concept.about | 
 | skos:prefLabel | cc_skos_prefLabel | text | edmConceptPrefLabel | Concept.prefLabel | what
 | skos:altLabel | cc_skos_altLabel | text |  | Concept.altLabel | 
@@ -191,14 +213,20 @@ Meaning of columns
 | skos:note | cc_skos_note | string |  | Concept.note | 
 | skos:notation | cc_skos_notation | string |  | Concept.notation | 
 | skos:inScheme | cc_skos_inScheme | string |  | Concept.inScheme | 
-| Fields outside of EDM schema:
+
+= Fields outside of EDM schema:
+| EDM Field | Name in search | Datatype | Name in search result | Name (record) | Aggregated Field/Facet |
+|:-------------|:-------------|:-----|:-----|:-----|:-----|
 | | europeana_completeness | integer | europeanaCompleteness, completeness |  | COMPLETENESS
 | | europeana_previewNoDistribute | boolean |  |  | 
 | | timestamp | date |  |  | 
 | | europeana_id | string | id |  | 
 | | identifier | string |  |  | 
 | | europeana_collectionName | string | europeanaCollectionName |  | 
-| Aggregated field
+
+= Aggregated field
+| EDM Field | Name in search | Datatype | Name in search result | Name (record) | Aggregated Field/Facet |
+|:-------------|:-------------|:-----|:-----|:-----|:-----|
 | | country | text |  |  | 
 | | date | text |  |  | 
 | | description | text |  |  | 
@@ -216,7 +244,10 @@ Meaning of columns
 | | when | text |  |  | 
 | | where | text |  |  | 
 | | who | text |  |  | 
-| Facets
+
+= Facets
+| EDM Field | Name in search | Datatype | Name in search result | Name (record) | Aggregated Field/Facet |
+|:-------------|:-------------|:-----|:-----|:-----|:-----|
 | | COMPLETENESS | string |  |  | 
 | | CONTRIBUTOR | string |  |  | 
 | | COUNTRY | string |  |  | 
