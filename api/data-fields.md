@@ -7,75 +7,83 @@ published: true
 * TOC
 {:toc}
 
+Each Europeana field has different names in different contexts. We have a theoretical and RDF context, where we returns qualified names such as dc:title. In search the same field becomes proxy_dc_title, in search result it is simply title, and in object display it is the Proxy object's dcTitle field. Some fields as part of aggregated fields, and facets. These are special fields which cover the content of multiple fields to provide a common entry point for similar fields.
 
+Meaning of columns
+* EDM Field: The field's name in the Europeana metadata scheme
+* Name in search: The name we should use in search queries
+* Datatype: The fields data type in searching
+* Name in search result: The field's name in search call response
+* Name (record): The field's name in the object call response
+* Aggregated Field/Facet: The name of aggregated fields and facets which cover this field.
 
 
 | EDM Field | Name in search | Datatype | Name in search result | Name (record) | Aggregated Field/Facet |
 |:-------------|:-------------|:-----|:-----|:-----|:-----|
-|edm:ProvidedCHO| |||
+| edm:ProvidedCHO | | | | | |
 |@rdf:about   |   edm_europeana_proxy   |   string   |      |   Proxy.about   |   
-|dc:contributor   |   proxy_dc_contributor   |   string   |   dcContributor   |   Proxy.dcContributor   |   who
-|dc:coverage   |   proxy_dc_coverage   |   string   |      |   Proxy.dcCoverage   |   when, where, subject
-|dc:creator   |   proxy_dc_creator   |   string   |   dcCreator   |   Proxy.dcCreator   |   who
-|dc:date   |   proxy_dc_date   |   string   |      |   Proxy.dcDate   |   when
-|dc:description   |   proxy_dc_description   |   string   |      |   Proxy.dcDescription   |   description
-|dc:format   |   proxy_dc_format   |   string   |      |   Proxy.dcFormat   |   what
-|dc:identifier   |   proxy_dc_identifier   |   string   |      |   Proxy.dcIdentifier   |   identifier
-|dc:language   |   proxy_dc_language   |   string   |      |   Proxy.dcLanguage   |   
-|dc:publisher   |   proxy_dc_publisher   |   string   |      |   Proxy.dcPublisher   |   
-|dc:relation   |   proxy_dc_relation   |   string   |      |   Proxy.dcRelation   |   
-|dc:rights   |   proxy_dc_rights   |   string   |      |   Proxy.dcRights   |   
-|dc:source   |   proxy_dc_source   |   string   |      |   Proxy.dcDource   |   
-|dc:subject   |   proxy_dc_subject   |   string   |      |   Proxy.dcSubject   |   
-|dc:title   |   proxy_dc_title   |   string   |   title   |   Proxy.dcTitle   |   title
-|dc:type   |   proxy_dc_type   |   string   |      |   Proxy.dcType   |   what
-|dcterms:alternative   |   proxy_dcterms_alternative   |   text   |      |   Proxy.dctermsAlternative   |   title
-|dcterms:conformsTo   |   proxy_dcterms_conformsTo   |   string   |      |   Proxy.dctermsConformsTo   |   
-|dcterms:created   |   proxy_dcterms_created   |   string   |      |   Proxy.dctermsCreated   |   when, date
-|dcterms:extent   |   proxy_dcterms_extent   |   string   |      |   Proxy.dctermsExtent   |   
-|dcterms:hasFormat   |   proxy_dcterms_hasFormat   |   string   |      |   Proxy.dctermsHasFormat   |   
-|dcterms:hasPart   |   proxy_dcterms_hasPart   |   string   |   dctermsHasPart   |   Proxy.dctermsHasPart   |   
-|dcterms:hasVersion   |   proxy_dcterms_hasVersion   |   string   |      |   Proxy.dctermsHasVersion   |   
-|dcterms:isFormatOf   |   proxy_dcterms_isFormatOf   |   string   |      |   Proxy.dctermsIsFormatOf   |   
-|dcterms:isPartOf   |   proxy_dcterms_isPartOf   |   string   |      |   Proxy.dctermsIsPartOf   |   
-|dcterms:isReferencedBy   |   proxy_dcterms_isReferencedBy   |   string   |      |   Proxy.dctermsIsReferencedBy   |   
-|dcterms:isReplacedBy   |   proxy_dcterms_isReplacedBy   |   string   |      |   Proxy.dctermsIsReplacedBy   |   
-|dcterms:isRequiredBy   |   proxy_dcterms_isRequiredBy   |   string   |      |   Proxy.dctermsIsRequiredBy   |   
-|dcterms:issued   |   proxy_dcterms_issued   |   string   |      |   Proxy.dctermsIssued   |   
-|dcterms:isVersionOf   |   proxy_dcterms_isVersionOf   |   string   |      |   Proxy.dctermsIsVersionOf   |   
-|dcterms:medium   |   proxy_dcterms_medium   |   string   |      |   Proxy.dctermsMedium   |   
-|dcterms:provenance   |   proxy_dcterms_provenance   |   string   |      |   Proxy.dctermsProvenance   |   
-|dcterms:references   |   proxy_dcterms_references   |   string   |      |   Proxy.dctermsReferences   |   
-|dcterms:replaces   |   proxy_dcterms_replaces   |   string   |      |   Proxy.dctermsReplaces   |   
-|dcterms:requires   |   proxy_dcterms_requires   |   string   |      |   Proxy.dctermsRequires   |   
-|dcterms:spatial   |   proxy_dcterms_spatial   |   string   |   dctermsSpatial   |   Proxy.dctermsSpatial   |   where, location, subject
-|dcterms:tableOfContents   |   proxy_dcterms_tableOfContents   |   string   |      |   Proxy.dctermsTOC   |   description
-|dcterms:temporal   |   proxy_dcterms_temporal   |   string   |      |   Proxy.dctermsTemporal   |   when, subject
-|edm:currentLocation   |   proxy_edm_currentLocation   |   string   |      |   Proxy.edmCurrentLocation   |   
-|proxy_edm_currentLocation_lat   |   float   |      |      |   
-|proxy_edm_currentLocation_lon   |   float   |      |      |   
-|edm:hasMet   |   proxy_edm_hasMet   |   string   |      |   Proxy.edmHasMet   |   
-|edm:hasType   |   proxy_edm_hasType   |   string   |      |   Proxy.edmHasType   |   
-|edm:incorporates   |   proxy_edm_incorporates   |   string   |      |   Proxy.edmIncorporates   |   
-|edm:isDerivativeOf   |   proxy_edm_isDerivativeOf   |   string   |      |   Proxy.edmIsDerivativeOf   |   
-|edm:isNextInSequence   |   proxy_edm_isNextInSequence   |   string   |      |   Proxy.edmIsNextInSequence   |   
-|edm:isRelatedTo   |   proxy_edm_isRelatedTo   |   string   |      |   Proxy.edmIsRelatedTo   |   
-|edm:isRepresentationOf   |   proxy_edm_isRepresentationOf   |   string   |      |   Proxy.edmIsRepresentationOf   |   
-|edm:isSimilarTo   |   proxy_edm_isSimilarTo   |   string   |      |   Proxy.edmIsSimilarTo   |   
-|edm:isSuccessorOf   |   proxy_edm_isSuccessorOf   |   string   |      |   Proxy.edmIsSuccessorOf   |   
-|edm:realizes   |   proxy_edm_realizes   |   string   |      |   Proxy.edmRealizes   |   
-|edm:type   |   proxy_edm_type   |   string   |      |   Proxy.edmType   |   
-|edm:unstored   |   proxy_edm_unstored   |   string   |      |   Proxy.edmUnstored   |   
-|edm:wasPresentAt   |   proxy_edm_wasPresentAt   |   string   |      |      |   
-|owl:sameAs   |   proxy_owl_sameAs   |   string   |      |      |   
-|rdf:type   |      |      |      |      |   
-|edm:rights   |   proxy_edm_rights   |   string   |      |   Proxy.edmRights   |   
-|proxy_edm_userTags   |   string   |      |   Proxy.edmWasPresentAt   |   
-|proxy_edm_year   |   string   |      |      |   YEAR
-|proxy_ore_proxy   |   string   |      |   Proxy.europeanaProxy   |   
-|ore:proxyFor   |   proxy_ore_proxyFor   |   string   |      |   Proxy.proxyFor   |   
-|ore:proxyIn   |   proxy_ore_proxyIn   |   string   |      |   Proxy.proxyIn   |   
-|ore:Aggregation
+|dc:contributor   |   proxy_dc_contributor   |   string   |   dcContributor   |   Proxy.dcContributor   |   who |
+|dc:coverage   |   proxy_dc_coverage   |   string   |      |   Proxy.dcCoverage   |   when, where, subject |
+|dc:creator   |   proxy_dc_creator   |   string   |   dcCreator   |   Proxy.dcCreator   |   who |
+|dc:date   |   proxy_dc_date   |   string   |      |   Proxy.dcDate   |   when |
+|dc:description   |   proxy_dc_description   |   string   |      |   Proxy.dcDescription   |   description |
+|dc:format   |   proxy_dc_format   |   string   |      |   Proxy.dcFormat   |   what |
+|dc:identifier   |   proxy_dc_identifier   |   string   |      |   Proxy.dcIdentifier   |   identifier |
+|dc:language   |   proxy_dc_language   |   string   |      |   Proxy.dcLanguage   |    |
+|dc:publisher   |   proxy_dc_publisher   |   string   |      |   Proxy.dcPublisher   |   |
+|dc:relation   |   proxy_dc_relation   |   string   |      |   Proxy.dcRelation   |    |
+|dc:rights   |   proxy_dc_rights   |   string   |      |   Proxy.dcRights   |    |
+|dc:source   |   proxy_dc_source   |   string   |      |   Proxy.dcDource   |    |
+|dc:subject   | proxy_dc_subject | string | | Proxy.dcSubject | |
+|dc:title   |   proxy_dc_title   |   string   |   title   |   Proxy.dcTitle   | title |
+|dc:type   |   proxy_dc_type   |   string   |      |   Proxy.dcType   |   what |
+|dcterms:alternative   |   proxy_dcterms_alternative   |   text   |      |   Proxy.dctermsAlternative   |   title |
+|dcterms:conformsTo   |   proxy_dcterms_conformsTo   |   string   |      |   Proxy.dctermsConformsTo   |    |
+|dcterms:created   |   proxy_dcterms_created   |   string   |      |   Proxy.dctermsCreated   |   when, date |
+|dcterms:extent   |   proxy_dcterms_extent   |   string   |      |   Proxy.dctermsExtent   |    |
+|dcterms:hasFormat   |   proxy_dcterms_hasFormat   |   string   |      |   Proxy.dctermsHasFormat   |    |
+|dcterms:hasPart   |   proxy_dcterms_hasPart   |   string   |   dctermsHasPart   |   Proxy.dctermsHasPart   |    |
+|dcterms:hasVersion   |   proxy_dcterms_hasVersion   |   string   |      |   Proxy.dctermsHasVersion   |    |
+|dcterms:isFormatOf   |   proxy_dcterms_isFormatOf   |   string   |      |   Proxy.dctermsIsFormatOf   |    |
+|dcterms:isPartOf   |   proxy_dcterms_isPartOf   |   string   |      |   Proxy.dctermsIsPartOf   |    |
+|dcterms:isReferencedBy   |   proxy_dcterms_isReferencedBy   |   string   |      |   Proxy.dctermsIsReferencedBy   |    |
+|dcterms:isReplacedBy   |   proxy_dcterms_isReplacedBy   |   string   |      |   Proxy.dctermsIsReplacedBy   |    |
+|dcterms:isRequiredBy   |   proxy_dcterms_isRequiredBy   |   string   |      |   Proxy.dctermsIsRequiredBy   |    |
+|dcterms:issued   |   proxy_dcterms_issued   |   string   |      |   Proxy.dctermsIssued   |    |
+|dcterms:isVersionOf   |   proxy_dcterms_isVersionOf   |   string   |      |   Proxy.dctermsIsVersionOf   |    |
+|dcterms:medium   |   proxy_dcterms_medium   |   string   |      |   Proxy.dctermsMedium   |    |
+|dcterms:provenance   |   proxy_dcterms_provenance   |   string   |      |   Proxy.dctermsProvenance   |    |
+|dcterms:references   |   proxy_dcterms_references   |   string   |      |   Proxy.dctermsReferences   |    |
+|dcterms:replaces   |   proxy_dcterms_replaces   |   string   |      |   Proxy.dctermsReplaces   |    |
+|dcterms:requires   |   proxy_dcterms_requires   |   string   |      |   Proxy.dctermsRequires   |    |
+|dcterms:spatial   |   proxy_dcterms_spatial   |   string   |   dctermsSpatial   |   Proxy.dctermsSpatial   |   where, location, subject |
+|dcterms:tableOfContents   |   proxy_dcterms_tableOfContents   |   string   |      |   Proxy.dctermsTOC   |   description |
+|dcterms:temporal   |   proxy_dcterms_temporal   |   string   |      |   Proxy.dctermsTemporal   |   when, subject |
+|edm:currentLocation   |   proxy_edm_currentLocation   |   string   |      |   Proxy.edmCurrentLocation   |    |
+| |proxy_edm_currentLocation_lat   |   float   |      |      |    |
+| |proxy_edm_currentLocation_lon   |   float   |      |      |    |
+|edm:hasMet   |   proxy_edm_hasMet   |   string   |      |   Proxy.edmHasMet   |    |
+|edm:hasType   |   proxy_edm_hasType   |   string   |      |   Proxy.edmHasType   |    |
+|edm:incorporates   |   proxy_edm_incorporates   |   string   |      |   Proxy.edmIncorporates   |    |
+|edm:isDerivativeOf   |   proxy_edm_isDerivativeOf   |   string   |      |   Proxy.edmIsDerivativeOf   |    |
+|edm:isNextInSequence   |   proxy_edm_isNextInSequence   |   string   |      |   Proxy.edmIsNextInSequence   |    |
+|edm:isRelatedTo   |   proxy_edm_isRelatedTo   |   string   |      |   Proxy.edmIsRelatedTo   |    |
+|edm:isRepresentationOf   |   proxy_edm_isRepresentationOf   |   string   |      |   Proxy.edmIsRepresentationOf   |    |
+|edm:isSimilarTo   |   proxy_edm_isSimilarTo   |   string   |      |   Proxy.edmIsSimilarTo   |    |
+|edm:isSuccessorOf   |   proxy_edm_isSuccessorOf   |   string   |      |   Proxy.edmIsSuccessorOf   |    |
+|edm:realizes   |   proxy_edm_realizes   |   string   |      |   Proxy.edmRealizes   |    |
+|edm:type   |   proxy_edm_type   |   string   |      |   Proxy.edmType   |    |
+|edm:unstored   |   proxy_edm_unstored   |   string   |      |   Proxy.edmUnstored   |    |
+|edm:wasPresentAt   |   proxy_edm_wasPresentAt   |   string   |      |      |    |
+|owl:sameAs   |   proxy_owl_sameAs   |   string   |      |      |    |
+|rdf:type   |      |      |      |      |    |
+|edm:rights   |   proxy_edm_rights   |   string   |      |   Proxy.edmRights   |    |
+| |proxy_edm_userTags   |   string   |      |   Proxy.edmWasPresentAt   |     |
+| |proxy_edm_year   |   string   |      |      |   YEAR  |
+| |proxy_ore_proxy   |   string   |      |   Proxy.europeanaProxy   |     |
+|ore:proxyFor   |   proxy_ore_proxyFor   |   string   |      |   Proxy.proxyFor   |     |
+|ore:proxyIn   |   proxy_ore_proxyIn   |   string   |      |   Proxy.proxyIn   |     |
+|ore:Aggregation | | | | | |
 |@rdf:about   |   provider_aggregation_ore_aggregation (?)   |   string   |      |   Aggregation.about   |   
 |ore:aggregates   |   provider_aggregation_ore_aggregates   |   string   |      |   Aggregation.aggregates   |   
 |edm:aggregatedCHO   |   provider_aggregation_edm_aggregatedCHO   |   string   |      |   Aggregation.aggregatedCHO   |   
@@ -148,9 +156,9 @@ published: true
 |skos:hiddenLabel   |   pl_skos_hiddenLabel   |   string   |      |      |   
 |skos:note   |   pl_skos_note   |   string   |      |   Place.note   |   
 |dcterms:hasPart   |   pl_dcterms_hasPart   |   string   |      |   Place.dcTermsHasPart   |   
-|dcterms:isPartOf   |   pl_dcterms_isPartOf   |   string   |   edmPlaceBroaderTerm, dctermsIsPartOf   |   Place.isPartOf   |   
-|owl:sameAs   |   pl_owl_sameAs   |   string   |      |   Place.owlSameAs   |   
-|pl_dcterms_isPartOf_label   |   string   |      |      |   
+|dcterms:isPartOf | pl_dcterms_isPartOf | string | edmPlaceBroaderTerm, dctermsIsPartOf | Place.isPartOf | |
+|owl:sameAs   |   pl_owl_sameAs   |   string   |      |   Place.owlSameAs   | |
+| |pl_dcterms_isPartOf_label   |   string   |      |      |
 |edm:TimeSpan
 |@rdf:about   |   edm_timespan (?)   |   text   |   edmTimespan   |   TimeSpan.about   |   
 |skos:prefLabel   |   ts_skos_prefLabel   |   text   |   edmTimespanLabel   |   TimeSpan.prefLabel   |   when
