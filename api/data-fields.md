@@ -19,6 +19,7 @@ Meaning of columns
 
 
 = edm:ProvidedCHO
+
 | EDM Field | Name in search | Datatype | Name in search result | Name (record) | Aggregated Field/Facet |
 |:-------------|:-------------|:-----|:-----|:-----|:-----|
 | @rdf:about | edm_europeana_proxy | string |  | Proxy.about | 
@@ -85,6 +86,7 @@ Meaning of columns
 | ore:proxyIn | proxy_ore_proxyIn | string |  | Proxy.proxyIn |   |
 
 = ore:Aggregation
+
 | EDM Field | Name in search | Datatype | Name in search result | Name (record) | Aggregated Field/Facet |
 |:-------------|:-------------|:-----|:-----|:-----|:-----|
 | @rdf:about | provider_aggregation_ore_aggregation (?) | string |  | Aggregation.about | 
@@ -103,6 +105,7 @@ Meaning of columns
 | | edm_previewNoDistribute | boolean |  | Aggregation.edmPreviewNoDistribute | 
 
 = edm:EuropeanaAggregation
+
 | EDM Field | Name in search | Datatype | Name in search result | Name (record) | Aggregated Field/Facet |
 |:-------------|:-------------|:-----|:-----|:-----|:-----|
 | @rdf:about | edm_europeana_aggregation | string |  | EuropeanaAggregation.about | 
@@ -117,6 +120,7 @@ Meaning of columns
 | ore:aggregates | europeana_aggregation_ore_aggregates | string |  | EuropeanaAggregation.aggregates | 
 
 = edm:WebResource
+
 | EDM Field | Name in search | Datatype | Name in search result | Name (record) | Aggregated Field/Facet |
 |:-------------|:-------------|:-----|:-----|:-----|:-----|
 | @rdf:about | edm_webResource (?) | string |  | WebResource.about | 
@@ -135,6 +139,7 @@ Meaning of columns
 
 
 = edm:Agent
+
 | EDM Field | Name in search | Datatype | Name in search result | Name (record) | Aggregated Field/Facet |
 |:-------------|:-------------|:-----|:-----|:-----|:-----|
 | @rdf:about | edm_agent (?) | string | edmAgent | Agent.about | 
@@ -150,7 +155,7 @@ Meaning of columns
 | edm:isRelatedTo | ag_edm_isRelatedTo | string |  | Agent.edmIsRelatedTo | 
 | edm:wasPresentAt | ag_edm_wasPresentAt | string |  | Agent.edmWasPresentAt | 
 | foaf:name | ag_foaf_name | string |  | Agent.foafName | 
-| rdaGr2:biographicalInformation | ag_rdagr2_biographicalInformation | string |  | Agent.rdaGr2BiographicalInformation | 
+| rdaGr2:biographicalInformation | ag_rdagr2_biographicalInformation | string | | Agent.rdaGr2BiographicalInformation | 
 | rdaGr2:dateOfBirth | ag_rdagr2_dateOfBirth | string |  | Agent.rdaGr2DateOfBirth | 
 | rdaGr2:dateOfDeath | ag_rdagr2_dateOfDeath | string |  | Agent.rdaGr2DateOfDeath | 
 | rdaGr2:dateOfEstablishment | ag_rdagr2_dateOfEstablishment | string |  | Agent.rdaGr2DateOfEstablishment | 
@@ -160,6 +165,7 @@ Meaning of columns
 | owl:sameAs | ag_owl_sameAs | string |  | Agent.owlSameAs | 
 
 = edm:Place
+
 | EDM Field | Name in search | Datatype | Name in search result | Name (record) | Aggregated Field/Facet |
 |:-------------|:-------------|:-----|:-----|:-----|:-----|
 | @rdf:about | edm_place (?) | string | edmPlace | Place.about | 
@@ -177,6 +183,7 @@ Meaning of columns
 | |pl_dcterms_isPartOf_label | string |  |    |
 
 = edm:TimeSpan
+
 | EDM Field | Name in search | Datatype | Name in search result | Name (record) | Aggregated Field/Facet |
 |:-------------|:-------------|:-----|:-----|:-----|:-----|
 | @rdf:about | edm_timespan (?) | text | edmTimespan | TimeSpan.about | 
@@ -195,6 +202,7 @@ Meaning of columns
 | ts_dcterms_isPartOf_label (?) | string |  |  | 
 
 = skos:Concept
+
 | EDM Field | Name in search | Datatype | Name in search result | Name (record) | Aggregated Field/Facet |
 |:-------------|:-------------|:-----|:-----|:-----|:-----|
 | @rdf:about | skos_concept (?) | string | edmConceptTerm | Concept.about | 
@@ -214,7 +222,8 @@ Meaning of columns
 | skos:notation | cc_skos_notation | string |  | Concept.notation | 
 | skos:inScheme | cc_skos_inScheme | string |  | Concept.inScheme | 
 
-= Fields outside of EDM schema:
+= Fields outside of EDM schema
+
 | EDM Field | Name in search | Datatype | Name in search result | Name (record) | Aggregated Field/Facet |
 |:-------------|:-------------|:-----|:-----|:-----|:-----|
 | | europeana_completeness | integer | europeanaCompleteness, completeness |  | COMPLETENESS
@@ -224,7 +233,8 @@ Meaning of columns
 | | identifier | string |  |  | 
 | | europeana_collectionName | string | europeanaCollectionName |  | 
 
-= Aggregated field
+= Aggregated fields
+
 | EDM Field | Name in search | Datatype | Name in search result | Name (record) | Aggregated Field/Facet |
 |:-------------|:-------------|:-----|:-----|:-----|:-----|
 | | country | text |  |  | 
@@ -246,6 +256,7 @@ Meaning of columns
 | | who | text |  |  | 
 
 = Facets
+
 | EDM Field | Name in search | Datatype | Name in search result | Name (record) | Aggregated Field/Facet |
 |:-------------|:-------------|:-----|:-----|:-----|:-----|
 | | COMPLETENESS | string |  |  | 
