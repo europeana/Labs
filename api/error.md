@@ -21,4 +21,4 @@ The following HTTP status codes are returned:
 
 ### Usage Limit
 
-Applications are permitted to perform up to 10000 calls in 24 hours. If you need more than that please contact us at api\[at\]europeana.eu
+Applications are permitted to perform up to 10000 calls in 24 hours. If you need more than that please contact us at <api@europeana.eu>
