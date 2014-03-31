@@ -156,9 +156,9 @@ Meaning of columns
 |skos:hiddenLabel   |   pl_skos_hiddenLabel   |   string   |      |      |   
 |skos:note   |   pl_skos_note   |   string   |      |   Place.note   |   
 |dcterms:hasPart   |   pl_dcterms_hasPart   |   string   |      |   Place.dcTermsHasPart   |   
-|dcterms:isPartOf   |   pl_dcterms_isPartOf   |   string   |   edmPlaceBroaderTerm, dctermsIsPartOf   |   Place.isPartOf   |   
-|owl:sameAs   |   pl_owl_sameAs   |   string   |      |   Place.owlSameAs   |   
-|pl_dcterms_isPartOf_label   |   string   |      |      |   
+|dcterms:isPartOf | pl_dcterms_isPartOf | string | edmPlaceBroaderTerm, dctermsIsPartOf | Place.isPartOf | |
+|owl:sameAs   |   pl_owl_sameAs   |   string   |      |   Place.owlSameAs   | |
+| |pl_dcterms_isPartOf_label   |   string   |      |      |
 |edm:TimeSpan
 |@rdf:about   |   edm_timespan (?)   |   text   |   edmTimespan   |   TimeSpan.about   |   
 |skos:prefLabel   |   ts_skos_prefLabel   |   text   |   edmTimespanLabel   |   TimeSpan.prefLabel   |   when
