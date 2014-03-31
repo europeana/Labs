@@ -31,3 +31,25 @@ In addition to the original data harvested by Europeana from its data providers,
 * semantic enrichment done at the Europeana Office, connecting Europeana objects to structured representations of places (using [GeoNames](http://geonames.org), concepts (using the [GEMET](http://www.eionet.europa.eu/gemet)thesaurus), people (using [DBpedia](http://dbpedia.org)) and time periods(from an adhoc time period vocabulary).
 </ul>
 
+###How can you access, use and contribute to Europeana's Linked Open Data?
+As this project is about engaging users from different communities, we&#39;ve made sure that data from the pilot can be accessed, re-used, enriched and shared by everyone.
+
+data.europeana.eu is serving metadata following the terms of the <a href="http://creativecommons.org/publicdomain/zero/1.0/">Creative Commons CC0 public domain dedication.
+
+File dumps of the RDF data are available on the <a href="http://pro.europeana.eu/web/datasets"> datasets </a> page. You can also fetch a subset of this data over the HTTP protocol, using established <a href="http://www.w3.org/TR/cooluris/" title="Click here to view the W3C entry on linked data recipes">Linked Data recipes</a>, most notably the use of HTTP URIs as identifiers and entry points into data. Here are some examples of these data.europeana.eu resources:
+
+* [http://data.europeana.eu/item/92037/25F9104787668C4B5148BE8E5AB8DBEF5BE5FE03](http://data.europeana.eu/item/92037/25F9104787668C4B5148BE8E5AB8DBEF5BE5FE03) refers to a real-world object for which digital resources are available through Europeana ([access data](http://www.w3.org/RDF/Validator/ARPServlet?URI=http%3A%2F%2Fdata.europeana.eu%2Fdata%2Fitem%2F92037%2F25F9104787668C4B5148BE8E5AB8DBEF5BE5FE03)).
+
+* [http://data.europeana.eu/aggregation/provider/92037/25F9104787668C4B5148BE8E5AB8DBEF5BE5FE03](http://data.europeana.eu/aggregation/provider/92037/25F9104787668C4B5148BE8E5AB8DBEF5BE5FE03)links to the digital resources submitted on that object by its provider, and gives meta-information on the digital resource aggregation process, e.g., the name of the data provider ([raw data](http://www.w3.org/RDF/Validator/ARPServlet?URI=http%3A%2F%2Fdata.europeana.eu%2Fdata%2Faggregation%2Fprovider%2F92037%2F25F9104787668C4B5148BE8E5AB8DBEF5BE5FE03)).
+
+* [http://data.europeana.eu/proxy/provider/92037/25F9104787668C4B5148BE8E5AB8DBEF5BE5FE03](http://data.europeana.eu/proxy/provider/92037/25F9104787668C4B5148BE8E5AB8DBEF5BE5FE03) gives all the data that applies to the real-world object, from the perspective of the Europeana provider ([raw data](http://www.w3.org/RDF/Validator/ARPServlet?URI=http%3A%2F%2Fdata.europeana.eu%2Fdata%2Fproxy%2Fprovider%2F92037%2F25F9104787668C4B5148BE8E5AB8DBEF5BE5FE03)).
+
+* [http://data.europeana.eu/proxy/europeana/92037/25F9104787668C4B5148BE8E5AB8DBEF5BE5FE03](http://data.europeana.eu/proxy/europeana/92037/25F9104787668C4B5148BE8E5AB8DBEF5BE5FE03) gives all the data that applies to the real-world object, from the perspective of Europeana. This is the resource to which Europeana semantic enrichments are attached ([raw data](http://www.w3.org/RDF/Validator/ARPServlet?URI=http%3A%2F%2Fdata.europeana.eu%2Fdata%2Fproxy%2Feuropeana%2F92037%2F25F9104787668C4B5148BE8E5AB8DBEF5BE5FE03)).
+
+* [http://data.europeana.eu/aggregation/europeana/92037/25F9104787668C4B5148BE8E5AB8DBEF5BE5FE03](http://data.europeana.eu/aggregation/europeana/92037/25F9104787668C4B5148BE8E5AB8DBEF5BE5FE03)links to the digital resources maintained by Europeana for the object, and gives meta-information on the data aggregation process, which is created by Europeana ([raw data](http://www.w3.org/RDF/Validator/ARPServlet?URI=http%3A%2F%2Fdata.europeana.eu%2Fdata%2Faggregation%2Feuropeana%2F92037%2F25F9104787668C4B5148BE8E5AB8DBEF5BE5FE03)).
+
+* [http://data.europeana.eu/item/91622/1BF8BC466E65367929379C83FC639F27961ACD18](http://data.europeana.eu/item/91622/1BF8BC466E65367929379C83FC639F27961ACD18)is an object for which the Swedish Open Cultural Heritage also provides its own Linked Open Data representation ([raw data](http://www.w3.org/RDF/Validator/ARPServlet?URI=http%3A%2F%2Fdata.europeana.eu%2Fdata%2Fitem%2F91622%2F1BF8BC466E65367929379C83FC639F27961ACD18)).
+
+We also provide the datasets as file dumps of the RDF data at data downloads page.
+
+
