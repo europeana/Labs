@@ -7,7 +7,7 @@ This page addresses the most important points of the Linked Open Data pilot.
 
 ###Why is Linked Open Data important for Europeana and its community?
 
-Linked Data offers many opportunities to the cultural sector, as suggested in the recent [reports](href="http://www.w3.org/News/2011.html#entry-9239)from the W3C Library Linked Data incubator group and our own [animation](http://vimeo.com/36752317).
+Linked Data offers many opportunities to the cultural sector, as suggested in the recent [reports](href="http://www.w3.org/News/2011.html#entry-9239) from the W3C Library Linked Data incubator group and our own [animation](http://vimeo.com/36752317).
 
 Releasing Europeana metadata as Linked Open Data is an important step for Europeana, its partners and third parties. Linked Open Data has a key role in the [Europeana Strategic Plan 2011-2015](http://pro.europeana.eu/c/document_library/get_file?uuid=c4f19464-7504-44db-ac1e-3ddb78c922d7&amp;groupId=10602)&nbsp; and supports the idea that Europeana 'distributes' content and 'engages' its users:
 
@@ -17,9 +17,9 @@ Releasing Europeana metadata as Linked Open Data is an important step for Europe
 
 How can data.europeana.eu contribute to these goals ?
 
-First, Linked Data is a data-publishing technique that enables related data to be connected and makes it easily accessible using common Web technologies. See this [White Paper](http://pro.europeana.eu/c/document_library/get_file?uuid=cb417911-1ee0-473b-8840-bd7c6e9c93ae&groupId=10602)for further discussion on the scientific interest of Linked Data for the Europeana community.
+First, Linked Data is a data-publishing technique that enables related data to be connected and makes it easily accessible using common Web technologies. See this [White Paper](http://pro.europeana.eu/c/document_library/get_file?uuid=cb417911-1ee0-473b-8840-bd7c6e9c93ae&groupId=10602) for further discussion on the scientific interest of Linked Data for the Europeana community.
 
-Second, Linked Open Data realises this in an <i>open</i> manner, where everyone can access, re-use, enrich and share the data published. See this [business document](http://pro.europeana.eu/c/document_library/get_file?uuid=374c381f-a48b-4cf0-bbde-172cf03672a2&groupId=10602) for further explanation on why Europeana and its partners should open the metadata they gather from all around Europe, and the [Support for open data](http://pro.europeana.eu/support-for-open-data) section of our site for general information on Europeana's efforts. You may also be interested in this [paper](http://www.museumsandtheweb.com/mw2012/papers/sharing_cultural_heritage_the_linked_open_data)at Museum &amp; the Web that gives interesting context and pointers to current Linked Open Data developments.
+Second, Linked Open Data realises this in an <i>open</i> manner, where everyone can access, re-use, enrich and share the data published. See this [business document](http://pro.europeana.eu/c/document_library/get_file?uuid=374c381f-a48b-4cf0-bbde-172cf03672a2&groupId=10602) for further explanation on why Europeana and its partners should open the metadata they gather from all around Europe, and the [Support for open data](http://pro.europeana.eu/support-for-open-data) section of our site for general information on Europeana's efforts. You may also be interested in this [paper](http://www.museumsandtheweb.com/mw2012/papers/sharing_cultural_heritage_the_linked_open_data) at Museum &amp; the Web that gives interesting context and pointers to current Linked Open Data developments.
 
 ###What does our Linked Open Data look like?
 The data served by data.europeana.eu is generated from the metadata Europeana has harvested using the Europeana Semantic Elements (ESE)(http://pro.europeana.eu/technical-requirements)</a>. To make this data amenable to Linked Data publishing, we have converted it to the [Resource Description Framework (RDF)](http://en.wikipedia.org/wiki/Resource_Description_Framework) format, and structured it using the [Europeana Data Model](http://pro.europeana.eu/edm-documentation). We give more detail on the EDM data we publish on the [technical details page](http://pro.europeana.eu/technical-requirements).
@@ -34,9 +34,9 @@ In addition to the original data harvested by Europeana from its data providers,
 ###How can you access, use and contribute to Europeana's Linked Open Data?
 As this project is about engaging users from different communities, we&#39;ve made sure that data from the pilot can be accessed, re-used, enriched and shared by everyone.
 
-data.europeana.eu is serving metadata following the terms of the <a href="http://creativecommons.org/publicdomain/zero/1.0/">Creative Commons CC0 public domain dedication.
+data.europeana.eu is serving metadata following the terms of the [Creative Commons CC0](http://creativecommons.org/publicdomain/zero/1.0/) public domain dedication.
 
-File dumps of the RDF data are available on the <a href="http://pro.europeana.eu/web/datasets"> datasets </a> page. You can also fetch a subset of this data over the HTTP protocol, using established <a href="http://www.w3.org/TR/cooluris/" title="Click here to view the W3C entry on linked data recipes">Linked Data recipes</a>, most notably the use of HTTP URIs as identifiers and entry points into data. Here are some examples of these data.europeana.eu resources:
+File dumps of the RDF data are available on the data downloads</a> page. You can also fetch a subset of this data over the HTTP protocol, using established [Linked Data recipes](http://www.w3.org/TR/cooluris/), most notably the use of HTTP URIs as identifiers and entry points into data. Here are some examples of these data.europeana.eu resources:
 
 * [http://data.europeana.eu/item/92037/25F9104787668C4B5148BE8E5AB8DBEF5BE5FE03](http://data.europeana.eu/item/92037/25F9104787668C4B5148BE8E5AB8DBEF5BE5FE03) refers to a real-world object for which digital resources are available through Europeana ([access data](http://www.w3.org/RDF/Validator/ARPServlet?URI=http%3A%2F%2Fdata.europeana.eu%2Fdata%2Fitem%2F92037%2F25F9104787668C4B5148BE8E5AB8DBEF5BE5FE03)).
 
