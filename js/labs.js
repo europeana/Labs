@@ -50,7 +50,7 @@ $(document).ready(function(){
 		var currentText = $(this).text();
 		$(this).text(currentText.replace("[at]","@"));
 	});
-	
+		
 	/*
 	$("div.startBtn a").click(function (event) {
 	    event.preventDefault();
