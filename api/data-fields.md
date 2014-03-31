@@ -20,7 +20,7 @@ Meaning of columns
 
 | EDM Field | Name in search | Datatype | Name in search result | Name (record) | Aggregated Field/Facet |
 |:-------------|:-------------|:-----|:-----|:-----|:-----|
-| edm:ProvidedCHO | | | | | | 
+| edm:ProvidedCHO | | | | | |
 |@rdf:about   |   edm_europeana_proxy   |   string   |      |   Proxy.about   |   
 |dc:contributor   |   proxy_dc_contributor   |   string   |   dcContributor   |   Proxy.dcContributor   |   who
 |dc:coverage   |   proxy_dc_coverage   |   string   |      |   Proxy.dcCoverage   |   when, where, subject
