@@ -34,8 +34,8 @@ Retrieve information about all Europeana data providers.
 | name        | String | the name of the provider |
 | acronym     | String | the acronym |
 | altname     | String | the alternative name |
-| scope       | String | the scope (TBD: Cross/Single/Thematic/Individual) |
-| domain      | String | the domain (TBD: Gallery/Library/Archive/Museum) |
+| scope       | String | the scope (Cross/Single/Thematic/Individual) |
+| domain      | String | the domain (Gallery/Library/Archive/Museum) |
 | geolevel    | String | the level of operations (Regional/Nationa/European/Worldwide) |
 | role        | String | the type of the organisation with relation to Europeana (Aggregator/Data Provider)  |
 | website     | String | The website of the provider  |
@@ -72,10 +72,10 @@ Retrieve information about datasets supplied by a specific data provider.
 | identifier  | String | the internal identifier of the dataset in Europeana  |
 | provIdentifier     | String | the internal identifier of the provider of the dataset  |
 | providerName     | String | the name of the provider of the dataset  |
-| name     | String | the name of the dataset (TBD: add information on identifying datasets to the repository page?) |
+| name     | String | the name of the dataset  |
 | status     | String | the current status of the dataset in the europeana ingestion lifecycle |
 | publishedRecords     | Number | the number of records that belong to this dataset and are published on the Europeana Portal |
-| deleteRecords     | Number | The number of records that have been removed or deleted (TBD: more info?) |
+| deleteRecords     | Number | The number of records that have been removed or deleted |
 | creationDate     | Date | the date the dataset was created |
 
 
