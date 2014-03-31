@@ -34,7 +34,7 @@ Meaning of columns
 |dc:relation   |   proxy_dc_relation   |   string   |      |   Proxy.dcRelation   |    |
 |dc:rights   |   proxy_dc_rights   |   string   |      |   Proxy.dcRights   |    |
 |dc:source   |   proxy_dc_source   |   string   |      |   Proxy.dcDource   |    |
-|dc:subject   |   proxy_dc_subject   |   string   |      |   Proxy.dcSubject   |   | 
+|dc:subject   |   proxy_dc_subject   |   string   |      |   Proxy.dcSubject   |   |
 |dc:title   |   proxy_dc_title   |   string   |   title   |   Proxy.dcTitle   |   title |
 |dc:type   |   proxy_dc_type   |   string   |      |   Proxy.dcType   |   what |
 |dcterms:alternative   |   proxy_dcterms_alternative   |   text   |      |   Proxy.dctermsAlternative   |   title |
