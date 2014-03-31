@@ -7,6 +7,7 @@ imageurl:
   - "/img/events/2014-03-31_future-everything.jpg"
 tags: 
   - apps4europe
+  - business lounge
 links:
   - http://futureeverything.org/events/international-business-lounge-awards-preview/
 excerpt:
@@ -20,7 +21,7 @@ datenotconfirmed:
 starttime:
   - "11:30"
 streetaddress:
-  - "Town Hall, Albert Square,"
+  - "Town Hall, Albert Square"
 city:
   - "Manchester"
 country:
