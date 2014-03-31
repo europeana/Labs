@@ -11,7 +11,7 @@ Linked Data offers many opportunities to the cultural sector, as suggested in th
 
 Releasing Europeana metadata as Linked Open Data is an important step for Europeana, its partners and third parties. Linked Open Data has a key role in the [Europeana Strategic Plan 2011-2015](http://pro.europeana.eu/c/document_library/get_file?uuid=c4f19464-7504-44db-ac1e-3ddb78c922d7&amp;groupId=10602)&nbsp; and supports the idea that Europeana 'distributes' content and 'engages' its users:
 
-*Distribute*: the pilot will allow Europeana to distribute the cultural heritage content, in order to <em>‘Make their heritage available to users wherever they are, whenever they want it'.
+*Distribute*: the pilot will allow Europeana to distribute the cultural heritage content, in order to ‘Make their heritage available to users wherever they are, whenever they want it'.
 
 *Engage*: it will also enhance the engagement of the different communities represented by Europeana's content by allowing re-use and connectivity.
 
