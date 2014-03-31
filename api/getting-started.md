@@ -41,7 +41,7 @@ Europeana API uses the following datatypes:
 | String |	double-quoted Unicode, with backslash escaping |
 | Boolean |	true or false |
 | Array |	an ordered sequence of values, comma-separated and enclosed in square brackets; the values do not need to be of the same type |
-| Array([Datatype]) |	an ordered sequence values of Datatype (e.g. String or Object), comma-separated and enclosed in square brackets |
+| Array(\[Datatype\]) |	an ordered sequence values of Datatype (e.g. String or Object), comma-separated and enclosed in square brackets |
 | Object |	an unordered collection of key:value pairs with the ':' character separating the key and the value, comma-separated and enclosed in curly braces; the keys must be strings and should be distinct from each other|
 | LangMap |	TBD |
 
