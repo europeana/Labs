@@ -61,7 +61,7 @@ The following RDF namespace abbreviations are currently used in data.europeana.e
 	
 * foaf:[http://xmlns.com/foaf/0.1/](http://xmlns.com/foaf/0.1/)
 
-* edm:[http://www.europeana.eu/schemas/edm/">http://www.europeana.eu/schemas/edm/](http://www.europeana.eu/schemas/edm/)
+* edm:[http://www.europeana.eu/schemas/edm/](http://www.europeana.eu/schemas/edm/)
 
 
 
