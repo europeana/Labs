@@ -30,7 +30,7 @@ Meaning of columns
 |dc:format   |   proxy_dc_format   |   string   |      |   Proxy.dcFormat   |   what |
 |dc:identifier   |   proxy_dc_identifier   |   string   |      |   Proxy.dcIdentifier   |   identifier |
 |dc:language   |   proxy_dc_language   |   string   |      |   Proxy.dcLanguage   |    |
-|dc:publisher   |   proxy_dc_publisher   |   string   |      |   Proxy.dcPublisher   |   | 
+|dc:publisher   |   proxy_dc_publisher   |   string   |      |   Proxy.dcPublisher   |   |
 |dc:relation   |   proxy_dc_relation   |   string   |      |   Proxy.dcRelation   |    |
 |dc:rights   |   proxy_dc_rights   |   string   |      |   Proxy.dcRights   |    |
 |dc:source   |   proxy_dc_source   |   string   |      |   Proxy.dcDource   |    |
