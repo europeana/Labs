@@ -60,8 +60,8 @@ Meaning of columns
 |dcterms:tableOfContents   |   proxy_dcterms_tableOfContents   |   string   |      |   Proxy.dctermsTOC   |   description |
 |dcterms:temporal   |   proxy_dcterms_temporal   |   string   |      |   Proxy.dctermsTemporal   |   when, subject |
 |edm:currentLocation   |   proxy_edm_currentLocation   |   string   |      |   Proxy.edmCurrentLocation   |    |
-|proxy_edm_currentLocation_lat   |   float   |      |      |    |
-|proxy_edm_currentLocation_lon   |   float   |      |      |    |
+| |proxy_edm_currentLocation_lat   |   float   |      |      |    |
+| |proxy_edm_currentLocation_lon   |   float   |      |      |    |
 |edm:hasMet   |   proxy_edm_hasMet   |   string   |      |   Proxy.edmHasMet   |    |
 |edm:hasType   |   proxy_edm_hasType   |   string   |      |   Proxy.edmHasType   |    |
 |edm:incorporates   |   proxy_edm_incorporates   |   string   |      |   Proxy.edmIncorporates   |    |
