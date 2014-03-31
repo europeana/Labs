@@ -7,6 +7,8 @@ published: true
 * TOC
 {:toc}
 
+## Introduction
+
 Each Europeana field has different names in different contexts. We have a theoretical and RDF context, where we returns qualified names such as dc:title. In search the same field becomes proxy_dc_title, in search result it is simply title, and in object display it is the Proxy object's dcTitle field. Some fields as part of aggregated fields, and facets. These are special fields which cover the content of multiple fields to provide a common entry point for similar fields.
 
 Meaning of columns
@@ -18,7 +20,7 @@ Meaning of columns
 * Aggregated Field/Facet: The name of aggregated fields and facets which cover this field.
 
 
-# edm:ProvidedCHO
+## edm:ProvidedCHO
 
 | EDM Field | Name in search | Datatype | Name in search result | Name (record) | Aggregated Field/Facet |
 |:-------------|:-------------|:-----|:-----|:-----|:-----|
@@ -85,7 +87,7 @@ Meaning of columns
 | ore:proxyFor | proxy_ore_proxyFor | string |  | Proxy.proxyFor |   |
 | ore:proxyIn | proxy_ore_proxyIn | string |  | Proxy.proxyIn |   |
 
-# ore:Aggregation
+## ore:Aggregation
 
 | EDM Field | Name in search | Datatype | Name in search result | Name (record) | Aggregated Field/Facet |
 |:-------------|:-------------|:-----|:-----|:-----|:-----|
@@ -104,7 +106,7 @@ Meaning of columns
 | |provider_aggregation_edm_unstored | string |  | Aggregation.edmUnstored | 
 | | edm_previewNoDistribute | boolean |  | Aggregation.edmPreviewNoDistribute | 
 
-# edm:EuropeanaAggregation
+## edm:EuropeanaAggregation
 
 | EDM Field | Name in search | Datatype | Name in search result | Name (record) | Aggregated Field/Facet |
 |:-------------|:-------------|:-----|:-----|:-----|:-----|
@@ -119,7 +121,7 @@ Meaning of columns
 | edm:aggregatedCHO | europeana_aggregation_ore_aggregatedCHO | string |  | EuropeanaAggregation.aggregatedCHO | 
 | ore:aggregates | europeana_aggregation_ore_aggregates | string |  | EuropeanaAggregation.aggregates | 
 
-# edm:WebResource
+## edm:WebResource
 
 | EDM Field | Name in search | Datatype | Name in search result | Name (record) | Aggregated Field/Facet |
 |:-------------|:-------------|:-----|:-----|:-----|:-----|
@@ -138,7 +140,7 @@ Meaning of columns
 | edm:rights | wr_edm_rights | string |  | WebResource.webResourceEdmRights | 
 
 
-# edm:Agent
+## edm:Agent
 
 | EDM Field | Name in search | Datatype | Name in search result | Name (record) | Aggregated Field/Facet |
 |:-------------|:-------------|:-----|:-----|:-----|:-----|
@@ -164,44 +166,7 @@ Meaning of columns
 | rdaGr2:professionOrOccupation | ag_rdagr2_professionOrOccupation | string |  | Agent.rdaGr2ProfessionOrOccupation | 
 | owl:sameAs | ag_owl_sameAs | string |  | Agent.owlSameAs | 
 
-# edm:Place
-
-| EDM Field | Name in search | Datatype | Name in search result | Name (record) | Aggregated Field/Facet |
-|:-------------|:-------------|:-----|:-----|:-----|:-----|
-| @rdf:about | edm_place (?) | string | edmPlace | Place.about | 
-| wgs84_pos:lat | pl_wgs84_pos_lat | string | edmPlaceLatitude | Place.latitude | 
-| wgs84_pos:long | pl_wgs84_pos_long | string | edmPlaceLongitude | Place.longitude | 
-| wgs84_pos:alt | pl_wgs84_pos_alt | string |  | Place.altitude | 
-| wgs84_pos:lat_long | pl_wgs84_pos_lat_long | string |  |  | 
-| skos:prefLabel | pl_skos_prefLabel | text | edmPlaceLabel | Place.prefLabel | where
-| skos:altLabel | pl_skos_altLabel | text |  | Place.altLabel | 
-| skos:hiddenLabel | pl_skos_hiddenLabel | string |  |  | 
-| skos:note | pl_skos_note | string |  | Place.note | 
-| dcterms:hasPart | pl_dcterms_hasPart | string |  | Place.dcTermsHasPart | 
-| dcterms:isPartOf | pl_dcterms_isPartOf | string | edmPlaceBroaderTerm, dctermsIsPartOf | Place.isPartOf | |
-| owl:sameAs | pl_owl_sameAs | string |  | Place.owlSameAs   | |
-| |pl_dcterms_isPartOf_label | string |  |    |
-
-# edm:TimeSpan
-
-| EDM Field | Name in search | Datatype | Name in search result | Name (record) | Aggregated Field/Facet |
-|:-------------|:-------------|:-----|:-----|:-----|:-----|
-| @rdf:about | edm_timespan (?) | text | edmTimespan | TimeSpan.about | 
-| skos:prefLabel | ts_skos_prefLabel | text | edmTimespanLabel | TimeSpan.prefLabel | when
-| skos:altLabel | ts_skos_altLabel | text |  | TimeSpan.altLabel | 
-| skos:hiddenLabel | ts_skos_hiddenLabel | string |  |  | 
-| skos:note | ts_skos_note | string |  | TimeSpan.note | 
-| dcterms:hasPart | ts_dcterms_hasPart | string |  | TimeSpan.dcTermsHasPart | 
-| dcterms:isPartOf | ts_dcterms_isPartOf | string | edmTimespanBroaderTerm | TimeSpan.isPartOf | 
-| ts_dcterms_isPartOf | string | edmTimespanBroaderLabel |  | 
-| edm:begin | ts_edm_begin | string | edmTimespanBegin | TimeSpan.begin | 
-| edm:end | ts_edm_end | string | edmTimespanEnd | TimeSpan.end | 
-| crm:P79F.beginning_is_qualified_by |  |  |  | TimeSpan.crmP79FBeginningIsQualifiedBy | 
-| crm:P80F.end_is_qualified_by |  |  |  | TimeSpan.crmP80FEndIsQualifiedBy | 
-| owl:sameAs | ts_owl_sameAs | string |  | TimeSpan.owlSameAs | 
-| ts_dcterms_isPartOf_label (?) | string |  |  | 
-
-# skos:Concept
+## skos:Concept
 
 | EDM Field | Name in search | Datatype | Name in search result | Name (record) | Aggregated Field/Facet |
 |:-------------|:-------------|:-----|:-----|:-----|:-----|
@@ -222,54 +187,92 @@ Meaning of columns
 | skos:notation | cc_skos_notation | string |  | Concept.notation | 
 | skos:inScheme | cc_skos_inScheme | string |  | Concept.inScheme | 
 
-# Fields outside of EDM schema
+## edm:Place
 
 | EDM Field | Name in search | Datatype | Name in search result | Name (record) | Aggregated Field/Facet |
 |:-------------|:-------------|:-----|:-----|:-----|:-----|
-| | europeana_completeness | integer | europeanaCompleteness, completeness |  | COMPLETENESS
-| | europeana_previewNoDistribute | boolean |  |  | 
-| | timestamp | date |  |  | 
-| | europeana_id | string | id |  | 
-| | identifier | string |  |  | 
-| | europeana_collectionName | string | europeanaCollectionName |  | 
+| @rdf:about | edm_place (?) | string | edmPlace | Place.about | 
+| wgs84_pos:lat | pl_wgs84_pos_lat | string | edmPlaceLatitude | Place.latitude | 
+| wgs84_pos:long | pl_wgs84_pos_long | string | edmPlaceLongitude | Place.longitude | 
+| wgs84_pos:alt | pl_wgs84_pos_alt | string |  | Place.altitude | 
+| wgs84_pos:lat_long | pl_wgs84_pos_lat_long | string |  |  | 
+| skos:prefLabel | pl_skos_prefLabel | text | edmPlaceLabel | Place.prefLabel | where
+| skos:altLabel | pl_skos_altLabel | text |  | Place.altLabel | 
+| skos:hiddenLabel | pl_skos_hiddenLabel | string |  |  | 
+| skos:note | pl_skos_note | string |  | Place.note | 
+| dcterms:hasPart | pl_dcterms_hasPart | string |  | Place.dcTermsHasPart | 
+| dcterms:isPartOf | pl_dcterms_isPartOf | string | edmPlaceBroaderTerm, dctermsIsPartOf | Place.isPartOf | |
+| owl:sameAs | pl_owl_sameAs | string |  | Place.owlSameAs   | |
+| |pl_dcterms_isPartOf_label | string |  |    |
 
-# Aggregated fields
-
-| EDM Field | Name in search | Datatype | Name in search result | Name (record) | Aggregated Field/Facet |
-|:-------------|:-------------|:-----|:-----|:-----|:-----|
-| | country | text |  |  | 
-| | date | text |  |  | 
-| | description | text |  |  | 
-| | format | text |  |  | 
-| | language | text |  |  | 
-| | location | text |  |  | 
-| | publisher | text |  |  | 
-| | relation | text |  |  | 
-| | rights | text |  |  | 
-| | source | text |  |  | 
-| | subject | text |  |  | 
-| | text | text |  |  | 
-| | title | text |  |  | 
-| | what | text |  |  | 
-| | when | text |  |  | 
-| | where | text |  |  | 
-| | who | text |  |  | 
-
-# Facets
+## edm:TimeSpan
 
 | EDM Field | Name in search | Datatype | Name in search result | Name (record) | Aggregated Field/Facet |
 |:-------------|:-------------|:-----|:-----|:-----|:-----|
-| | COMPLETENESS | string |  |  | 
-| | CONTRIBUTOR | string |  |  | 
-| | COUNTRY | string |  |  | 
-| | DATA_PROVIDER | string |  |  | 
-| | LANGUAGE | string |  |  | 
-| | LOCATION | string |  |  | 
-| | PROVIDER | string |  |  | 
-| | RIGHTS | string |  |  | 
-| | SUBJECT | string |  |  | 
-| | TYPE | string |  |  | 
-| | UGC | string |  |  | 
-| | USERTAGS | string |  |  | 
-| | YEAR | string | 
+| @rdf:about | edm_timespan (?) | text | edmTimespan | TimeSpan.about | 
+| skos:prefLabel | ts_skos_prefLabel | text | edmTimespanLabel | TimeSpan.prefLabel | when
+| skos:altLabel | ts_skos_altLabel | text |  | TimeSpan.altLabel | 
+| skos:hiddenLabel | ts_skos_hiddenLabel | string |  |  | 
+| skos:note | ts_skos_note | string |  | TimeSpan.note | 
+| dcterms:hasPart | ts_dcterms_hasPart | string |  | TimeSpan.dcTermsHasPart | 
+| dcterms:isPartOf | ts_dcterms_isPartOf | string | edmTimespanBroaderTerm | TimeSpan.isPartOf | 
+| ts_dcterms_isPartOf | string | edmTimespanBroaderLabel |  | 
+| edm:begin | ts_edm_begin | string | edmTimespanBegin | TimeSpan.begin | 
+| edm:end | ts_edm_end | string | edmTimespanEnd | TimeSpan.end | 
+| crm:P79F.beginning_is_qualified_by |  |  |  | TimeSpan.crmP79FBeginningIsQualifiedBy | 
+| crm:P80F.end_is_qualified_by |  |  |  | TimeSpan.crmP80FEndIsQualifiedBy | 
+| owl:sameAs | ts_owl_sameAs | string |  | TimeSpan.owlSameAs | 
+| ts_dcterms_isPartOf_label (?) | string |  |  | 
+
+
+## Fields outside of EDM schema
+
+| Name in search | Datatype | Name in search result | Name (record) | Aggregated Field/Facet |
+|:-------------|:-----|:-----|:-----|:-----|
+| europeana_completeness | integer | europeanaCompleteness, completeness |  | COMPLETENESS
+| europeana_previewNoDistribute | boolean |  |  | 
+| timestamp | date |  |  | 
+| europeana_id | string | id |  | 
+| identifier | string |  |  | 
+| europeana_collectionName | string | europeanaCollectionName |  | 
+
+## Aggregated fields
+
+| Name in search | Datatype |
+|:-------------|:-----|
+| country | text |
+| date | text |
+| description | text |
+| format | text |
+| language | text |
+| location | text |
+| publisher | text |
+| relation | text |
+| rights | text |
+| source | text |
+| subject | text |
+| text | text |
+| title | text |
+| what | text |
+| when | text |
+| where | text |
+| who | text |
+
+## Facets
+
+| Name in search | Datatype |
+|:-------------|:-----|
+| COMPLETENESS | string |
+| CONTRIBUTOR | string |
+| COUNTRY | string |
+| DATA_PROVIDER | string |
+| LANGUAGE | string |
+| LOCATION | string |
+| PROVIDER | string |
+| RIGHTS | string |
+| SUBJECT | string |
+| TYPE | string |
+| UGC | string |
+| USERTAGS | string |
+| YEAR | string | 
 
