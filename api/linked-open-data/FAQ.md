@@ -5,7 +5,7 @@ title: Frequently Asked Questions
 This page addresses the most important points of the Linked Open Data pilot.
 
 
-## Why is Linked Open Data important for Europeana and its community?
+### Why is Linked Open Data important for Europeana and its community?
 
 Linked Data offers many opportunities to the cultural sector, as suggested in the recent [reports](href="http://www.w3.org/News/2011.html#entry-9239) from the W3C Library Linked Data incubator group and our own [animation](http://vimeo.com/36752317).
 
@@ -51,5 +51,9 @@ File dumps of the RDF data are available on the data downloads</a> page. You can
 * [http://data.europeana.eu/item/91622/1BF8BC466E65367929379C83FC639F27961ACD18](http://data.europeana.eu/item/91622/1BF8BC466E65367929379C83FC639F27961ACD18)is an object for which the Swedish Open Cultural Heritage also provides its own Linked Open Data representation ([raw data](http://www.w3.org/RDF/Validator/ARPServlet?URI=http%3A%2F%2Fdata.europeana.eu%2Fdata%2Fitem%2F91622%2F1BF8BC466E65367929379C83FC639F27961ACD18)).
 
 We also provide the datasets as file dumps of the RDF data at data downloads page.
+
+### How can you contribute?
+If you are a Europeana data provider, you don&#39;t need to submit your data again to Europeana. Once the [Data Exchange Agreement](http://pro.europeana.eu/web/data-exchange-agreement)(DEA) has been signed, we just fetch the metadata Europeana has already gathered. For technical reasons, we cannot continuously update the dataset we serve, but we plan to release batch updates, making all new datasets available at once.
+
 
 
