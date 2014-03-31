@@ -18,7 +18,7 @@ Meaning of columns
 * Aggregated Field/Facet: The name of aggregated fields and facets which cover this field.
 
 
-= edm:ProvidedCHO
+# edm:ProvidedCHO
 
 | EDM Field | Name in search | Datatype | Name in search result | Name (record) | Aggregated Field/Facet |
 |:-------------|:-------------|:-----|:-----|:-----|:-----|
@@ -85,7 +85,7 @@ Meaning of columns
 | ore:proxyFor | proxy_ore_proxyFor | string |  | Proxy.proxyFor |   |
 | ore:proxyIn | proxy_ore_proxyIn | string |  | Proxy.proxyIn |   |
 
-= ore:Aggregation
+# ore:Aggregation
 
 | EDM Field | Name in search | Datatype | Name in search result | Name (record) | Aggregated Field/Facet |
 |:-------------|:-------------|:-----|:-----|:-----|:-----|
@@ -104,7 +104,7 @@ Meaning of columns
 | |provider_aggregation_edm_unstored | string |  | Aggregation.edmUnstored | 
 | | edm_previewNoDistribute | boolean |  | Aggregation.edmPreviewNoDistribute | 
 
-= edm:EuropeanaAggregation
+# edm:EuropeanaAggregation
 
 | EDM Field | Name in search | Datatype | Name in search result | Name (record) | Aggregated Field/Facet |
 |:-------------|:-------------|:-----|:-----|:-----|:-----|
@@ -119,7 +119,7 @@ Meaning of columns
 | edm:aggregatedCHO | europeana_aggregation_ore_aggregatedCHO | string |  | EuropeanaAggregation.aggregatedCHO | 
 | ore:aggregates | europeana_aggregation_ore_aggregates | string |  | EuropeanaAggregation.aggregates | 
 
-= edm:WebResource
+# edm:WebResource
 
 | EDM Field | Name in search | Datatype | Name in search result | Name (record) | Aggregated Field/Facet |
 |:-------------|:-------------|:-----|:-----|:-----|:-----|
@@ -138,7 +138,7 @@ Meaning of columns
 | edm:rights | wr_edm_rights | string |  | WebResource.webResourceEdmRights | 
 
 
-= edm:Agent
+# edm:Agent
 
 | EDM Field | Name in search | Datatype | Name in search result | Name (record) | Aggregated Field/Facet |
 |:-------------|:-------------|:-----|:-----|:-----|:-----|
@@ -164,7 +164,7 @@ Meaning of columns
 | rdaGr2:professionOrOccupation | ag_rdagr2_professionOrOccupation | string |  | Agent.rdaGr2ProfessionOrOccupation | 
 | owl:sameAs | ag_owl_sameAs | string |  | Agent.owlSameAs | 
 
-= edm:Place
+# edm:Place
 
 | EDM Field | Name in search | Datatype | Name in search result | Name (record) | Aggregated Field/Facet |
 |:-------------|:-------------|:-----|:-----|:-----|:-----|
@@ -182,7 +182,7 @@ Meaning of columns
 | owl:sameAs | pl_owl_sameAs | string |  | Place.owlSameAs   | |
 | |pl_dcterms_isPartOf_label | string |  |    |
 
-= edm:TimeSpan
+# edm:TimeSpan
 
 | EDM Field | Name in search | Datatype | Name in search result | Name (record) | Aggregated Field/Facet |
 |:-------------|:-------------|:-----|:-----|:-----|:-----|
@@ -201,7 +201,7 @@ Meaning of columns
 | owl:sameAs | ts_owl_sameAs | string |  | TimeSpan.owlSameAs | 
 | ts_dcterms_isPartOf_label (?) | string |  |  | 
 
-= skos:Concept
+# skos:Concept
 
 | EDM Field | Name in search | Datatype | Name in search result | Name (record) | Aggregated Field/Facet |
 |:-------------|:-------------|:-----|:-----|:-----|:-----|
@@ -222,7 +222,7 @@ Meaning of columns
 | skos:notation | cc_skos_notation | string |  | Concept.notation | 
 | skos:inScheme | cc_skos_inScheme | string |  | Concept.inScheme | 
 
-= Fields outside of EDM schema
+# Fields outside of EDM schema
 
 | EDM Field | Name in search | Datatype | Name in search result | Name (record) | Aggregated Field/Facet |
 |:-------------|:-------------|:-----|:-----|:-----|:-----|
@@ -233,7 +233,7 @@ Meaning of columns
 | | identifier | string |  |  | 
 | | europeana_collectionName | string | europeanaCollectionName |  | 
 
-= Aggregated fields
+# Aggregated fields
 
 | EDM Field | Name in search | Datatype | Name in search result | Name (record) | Aggregated Field/Facet |
 |:-------------|:-------------|:-----|:-----|:-----|:-----|
@@ -255,7 +255,7 @@ Meaning of columns
 | | where | text |  |  | 
 | | who | text |  |  | 
 
-= Facets
+# Facets
 
 | EDM Field | Name in search | Datatype | Name in search result | Name (record) | Aggregated Field/Facet |
 |:-------------|:-------------|:-----|:-----|:-----|:-----|
