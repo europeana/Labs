@@ -2,12 +2,15 @@
 layout: "api-page"
 title: Accessing MyEuropeana
 published: true
+excerpt: "MyEuropeana API allows you accessing personal user data stored on MyEuropeana accounts."
 ---
 
 * TOC
 {:toc}
 
-Europeana API supports two methods to access MyEuropeana user data.
+The MyEuropeana part of the API allows you accessing personal user data stored on MyEuropeana accounts.
+
+There are two methods to access MyEuropeana user data.
 
 To access data of a specific account you can use MyData methods which require [authentication using the public and private key of the user](http://labs.europeana.eu/api/authentication/#user_authentication).
 
