@@ -16,7 +16,7 @@ title: Events
 
 <div class="grid__item palm--one-whole three-quarters">
     <ul id="EventsList"  class="post-list grid">
-    	{% assign sorted_events = site.categories.events | sort %}
+    	{% assign sorted_events = site.categories.events | sortEventByDate %}
         {% for post in sorted_events %}<!--
         --><li class="grid__item one-whole desk--one-whole">
             <div class="block block-thumb {%if post.featured != true %}  block-thumb-small {% endif %}">
