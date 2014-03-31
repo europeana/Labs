@@ -1,6 +1,6 @@
 ---
 layout: api-page
-title: Credits
+title: Data structure
 ---
 
 This page provides information on how the metadata served by data.europeana.eu is organised. It assumes that the reader has extensive knowledge of [Linked Data](http://linkeddata.org/) technology. The project has also been described in the [technical paper](http://dcevents.dublincore.org/index.php/IntConf/dc-2011/paper/view/55) presented at the Dublin Core 2011 conference.
