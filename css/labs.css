@@ -322,6 +322,8 @@ ul.post-list li {overflow: hidden;}
 ul.tags li a.current-tag{background: #206a50;}
 
 
+#mobileSearchForm {display: none;}
+
 /*RESPONSIVE*/
 
 @media all
@@ -399,7 +401,10 @@ ul.tags li a.current-tag{background: #206a50;}
 	#homepage #banner div.b-text h1 {font-size: 1.8em;}
 	#homepage #register_email {width: 150px; margin-right: 10px;}
 	#homepage #tblKey td.key-image img {max-width: 80px;}
+	
+	#mobileSearchForm {display: block;}
 }
+
 
 @media (max-width: 435px){
 	/*#homepage div.b-text {

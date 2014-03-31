@@ -41,7 +41,8 @@ title: Search
 <script type="text/javascript">
   $(document).ready(function() {
   	try{
-			var inputFieldQ = $("#search-query");
+	
+  var inputFieldQ = $(".search-query");
    inputFieldQ.lunrSearch({
       indexUrl: '/search.json',             // URL of the `search.json` index data for your site
       results:  '#search-results',          // jQuery selector for the search results container
@@ -103,6 +104,22 @@ title: Search
 
 
 <div class="grid__item palm--one-whole three-quarters">
+<div id="mobileSearchForm" style="padding: 3px; text-align: right;">
+		<form id="search" action="{{site.baseurl}}/search" method="get" class="inline-form">
+        	
+            <fieldset>
+                <legend class="is-vishidden">Search</legend>
+                <label for="search-field" class="is-vishidden">Search</label>
+                <input type="text" placeholder="Search" id="search-query" name="q" class="search-field search-query" autocomplete="off" style="max-width: 200px; height: 43px;">
+                <button class="search-submit">
+                    <span class="icon-search" aria-hidden="true"></span>
+                    <span class="is-vishidden">Search</span>
+                </button>
+            </fieldset>
+        </form>
+	</div>
+		
+	
 	<section id="search-results" style="display: none;">
 	  <div class="entries">
 	  </div>
