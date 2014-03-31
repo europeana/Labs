@@ -18,3 +18,7 @@ The following HTTP status codes are returned:
 | 404 | The requested record was not found. |
 | 429 | The request could be served because the application has reached its usage limit. |
 | 500 | Internal Server Error. Something has gone wrong, tell us!|
+
+### Usage Limit
+
+Applications are permitted to perform up to 10000 calls in 24 hours. If you need more than that please [contact us](mailto:api@europeana.eu).
