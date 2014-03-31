@@ -2,6 +2,8 @@
 layout: "api-page"
 title: Europeana Data Hierarchy
 published: true
+excerpt: "How Europeana data hierarchy is organized"
+
 ---
 
 * TOC
