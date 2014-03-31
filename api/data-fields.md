@@ -217,11 +217,11 @@ Meaning of columns
 | dcterms:hasPart | ts_dcterms_hasPart | string |  | TimeSpan.dcTermsHasPart | |
 | dcterms:isPartOf | ts_dcterms_isPartOf | string | edmTimespanBroaderTerm | TimeSpan.isPartOf | |
 | | ts_dcterms_isPartOf | string | edmTimespanBroaderLabel | | |
-| edm:begin | ts_edm_begin | string | edmTimespanBegin | TimeSpan.begin |
-| edm:end | ts_edm_end | string | edmTimespanEnd | TimeSpan.end |
-| crm:P79F.beginning_is_qualified_by |  |  |  | TimeSpan.crmP79FBeginningIsQualifiedBy |
-| crm:P80F.end_is_qualified_by |  |  |  | TimeSpan.crmP80FEndIsQualifiedBy |
-| owl:sameAs | ts_owl_sameAs | string |  | TimeSpan.owlSameAs |
+| edm:begin | ts_edm_begin | string | edmTimespanBegin | TimeSpan.begin | |
+| edm:end | ts_edm_end | string | edmTimespanEnd | TimeSpan.end | |
+| crm:P79F.beginning_is_qualified_by |  |  |  | TimeSpan.crmP79FBeginningIsQualifiedBy | |
+| crm:P80F.end_is_qualified_by |  |  |  | TimeSpan.crmP80FEndIsQualifiedBy | |
+| owl:sameAs | ts_owl_sameAs | string |  | TimeSpan.owlSameAs | |
 | | ts_dcterms_isPartOf_label (?) | string |  |  |
 
 
