@@ -19,7 +19,7 @@ Last year we consulted with the developer community asking them what things woul
 We’ve pulled together some great examples of both content and existing applications to give you a real taste for what is possible. This is backed up by a revamp of the API documentation, providing everything you should need to exploit the full potential of the Europeana platform and get creative with the content.
 
 - Take a look at sample <a href="/data/" title="Europeana Data">Data</a>, chosen to highlight a wide range of content types such as photographs, audio, and maps, and themes like archaeology and natural history. Each dataset gives you the chance to view the items in the Europeana Portal, but also to explore and edit the underlying query via the API Console.
-- If you need inspiration explore our <a href="/apps/" title="Application Gallery">Application Gallery</a> showcasing innovative applications that have already been built using the Europeana platform.
+- If you need inspiration explore our gallery of top <a href="/apps/" title="Apps Gallery">Apps</a>, showcasing innovative applications that have already been built using the Europeana platform.
 - You’ll also find details of <a href="/locations/" title="Europeana Locations">Locations</a>, labs and co-creation spaces across Europe which offer online and real-world places where you can go to play, develop, test and build.
 - All this is backed up by a new <a href="/blog/" title="Europeana Labs blog">Europeana Labs blog</a> where we'll be featuring hints & tips and all the latest developments, plus a calendar of <a href="/events/" title="Europeana Labs events">forthcoming events</a>.
 
