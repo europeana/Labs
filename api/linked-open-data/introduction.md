@@ -13,7 +13,7 @@ In October 2012, a large subset of this data was transformed into **linked data*
 
 ![Video](/img/api/Linked-Open-Data/Animation-ScreenShot.png)
 
-[Linked Open Data - What is it?](http://player.vimeo.com/video/36752317) from [Europeana](http://vimeo.com/europeana) on [Vimeo](http://vimeo.com) (also in [French](http://vimeo.com/album/2072014/video/49231111),[German](http://vimeo.com/album/2072014/video/49231110) ,[Italian](http://vimeo.com/album/2072014/video/49232562) and [Spanish] (https://vimeo.com/album/2072014/video/49231112) .)
+[Linked Open Data - What is it?](http://player.vimeo.com/video/36752317) from [Europeana](http://vimeo.com/europeana) on [Vimeo](http://vimeo.com) (also in [French](http://vimeo.com/album/2072014/video/49231111), [German](http://vimeo.com/album/2072014/video/49231110), [Italian](http://vimeo.com/album/2072014/video/49232562) and [Spanish](https://vimeo.com/album/2072014/video/49231112).)
 
 The described resources are each [addressable and dereferenceable](http://en.wikipedia.org/wiki/Dereferenceable_Uniform_Resource_Identifier) by their URIs; for instance, [http://data.europeana.eu/item/92056/BD9D5C6C6B02248F187238E9D7CC09EAF17BEA59](http://data.europeana.eu/item/92056/BD9D5C6C6B02248F187238E9D7CC09EAF17BEA59) leads either to an HTML page on the Europeana portal for the object it identifies or to raw, machine-processable data on this object. Please see the technical details and the animation above for background on our motivation.
 
@@ -22,7 +22,7 @@ The data is available in several ways:
 * **Current pilot datasets**
 All Europeana datasets can be explored and queried through an experimental SPARQL endpoint provided by Ontotext at [europeana.ontotext.com](http://europeana.ontotext.com/)
 
-Dump files for the entire Europeana dataset can be downloaded at the [datasets](http://pro.europeana.eu/datasets)page. This dataset is served according to the Linked Data recipes.
+Dump files for the entire Europeana dataset can be downloaded at the [datasets](http://pro.europeana.eu/datasets) page. This dataset is served according to the Linked Data recipes.
 
 * **First experimental datasets**
 The original pilot subset contains 2.4 million objects from 8 direct Europeana providers encompassing over 200 cultural institutions from 15 countries. This subset of data was [released] (http://pro.europeana.eu/web/guest/press-release?p_p_id=itemsindexportlet_WAR_europeanaportlet_INSTANCE_8k5F&amp;p_p_lifecycle=1&amp;p_p_state=normal&amp;p_p_mode=view&amp;p_p_col_id=column-2&amp;p_p_col_pos=1&amp;p_p_col_count=2&amp;_itemsindexportlet_WAR_europeanaportlet_INSTANCE_8k5F_itemId=994900&amp;_itemsindexportlet_WAR_europeanaportlet_INSTANCE_8k5F_javax.portlet.action=setItemId) on 17 February 2012. The project has been described in a [paper](http://dcevents.dublincore.org/index.php/IntConf/dc-2011/paper/view/55) presented at the Dublin Core 2011 conference.
