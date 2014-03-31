@@ -7,7 +7,7 @@ published: true
 * TOC
 {:toc}
 
-Each Europeana fields has different names in different contexts. We have a theoretical and RDF context, where we returns qualified names such as dc:title. In search the same field becomes proxy_dc_title, in search result it is simply title, and in object display it is the Proxy object's dcTitle field. Some fields as part of aggregated fields, and facets. These are special fields which cover the content of multiple fields to provide a common entry point for similar fields.
+Each Europeana field has different names in different contexts. We have a theoretical and RDF context, where we returns qualified names such as dc:title. In search the same field becomes proxy_dc_title, in search result it is simply title, and in object display it is the Proxy object's dcTitle field. Some fields as part of aggregated fields, and facets. These are special fields which cover the content of multiple fields to provide a common entry point for similar fields.
 
 Meaning of columns
 * EDM Field: The field's name in the Europeana metadata scheme
