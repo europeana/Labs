@@ -21,11 +21,6 @@ If you want to limit your search to a specific data field you should provide the
     http://www.europeana.eu/api/v2/search.json?wskey=xxxx&query=who:"Leonardo da Vinci"
 [Test on API Console](http://labs.europeana.eu/api/console/?function=search&query=who:%22Leonardo%20da%20Vinci%22)
 
-Looking for one of several possible values in a data field is also possible. Here is how to look for records whose creator is one of the Dutch Golden Age maestros:
-
-    http://www.europeana.eu/api/v2/search.json?wskey=xxxx&query=who:"Rembrandt Vermeer Steen"
-[Test on API Console](http://labs.europeana.eu/api/console/?function=search&query=who:%22Rembrandt%20Vermeer%20Steen%22)
-
 ## Boolean Search
 
 To combine several fields in one search one can use boolean operators AND, OR, and NOT (note the case-sensitivity). Use parentheses to group logical conditions. Note that two consecutive terms without any boolean operator in between default to the AND operator.
