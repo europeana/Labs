@@ -10,19 +10,18 @@ tags:
   - Beta
 ---
 
-This new Europeana Labs website is intended to provide all you need to get started using the Europeana APIs. Learn about the data, see what others have built, and find out how to build simple but powerful queries to extract bespoke results from a dataset of over 30 million objects - books, photos of art and artefacts, audio clips and more.
+This new Europeana Labs website is intended to provide all you need to get started using the Europeana APIs. Learn about the data, see what others have created, and find out how to build simple but powerful queries to extract bespoke results from a dataset of over 30 million objects - books, photos of art and artefacts, audio clips and more.
 
 Last year we consulted with the developer community asking them what things would help them to make best use of the Europeana APIs. This Europeana Labs Beta site is the first major step towards putting in place the things we were told, but also a chance for us to learn more and make improvements before a full launch in late June.
 
 ## What's New?
 
-We’ve pulled together some great examples of both content and existing applications to give you a real taste for what is possible. This is backed up by a revamp of the API documentation, providing everything you should need to exploit the full potemtial of the Europeana platform and get creative with the content.
+We’ve pulled together some great examples of both content and existing applications to give you a real taste for what is possible. This is backed up by a revamp of the API documentation, providing everything you should need to exploit the full potential of the Europeana platform and get creative with the content.
 
-Take a look at sample <a href="/data/" title="Europeana Data">Data</a>, chosen to highlight a wide range of content types such as photographs, audio, and maps, and themes like archaeology and natural history. Each dataset gives you the chance to view the items in the Europeana Portal, but also to explore and edit the underlying query via the API Console.  
-
-If you need inspiration explore our <a href="/apps/" title="Application Gallery">Application Gallery</a> showcasing innovative applications that have already been built using the Europeana platform.
-
-You’ll also find details of <a href="/locations/" title="Europeana Locations">Locations</a>, labs and co-creation spaces across Europe which offer online and real-world places where you can go to play, develop, test and build.
+- Take a look at sample <a href="/data/" title="Europeana Data">Data</a>, chosen to highlight a wide range of content types such as photographs, audio, and maps, and themes like archaeology and natural history. Each dataset gives you the chance to view the items in the Europeana Portal, but also to explore and edit the underlying query via the API Console.
+- If you need inspiration explore our <a href="/apps/" title="Application Gallery">Application Gallery</a> showcasing innovative applications that have already been built using the Europeana platform.
+- You’ll also find details of <a href="/locations/" title="Europeana Locations">Locations</a>, labs and co-creation spaces across Europe which offer online and real-world places where you can go to play, develop, test and build.
+- All this is backed up by a new <a href="/blog/" title="Europeana Labs blog">Europeana Labs blog</a> where we'll be featuring hints & tips and all the leatest developments, plus a calendar of <a href="/events/" title="Europeana Labs events">forthcoming events</a>.
 
 But wherever you are, whatever your skills, and no matter what you're planning, don't be afraid to <a href="#help" title="help &amp; support">ask for help</a> as we're here to support you.
 
@@ -36,7 +35,7 @@ You can also use the <a href="/api/console/" title="API Console">API Console</a>
 
 Even if you’re new to Europeana, getting started is simple.
 1. <a href="/api/registration/">Register for an API key</a>
-2. Use the <a href="/api/console/" title="API Console">API Console</a> to explore the content and customise queries. If you need help or inspiration, check out the example <a href="/data/" title="Example Data">Datasets</a> and consult our extensive <a href="/api/" title="API Documentation">API documentation</a>.
+2. Use the <a href="/api/console/" title="API Console">API Console</a> to explore the content and customise queries. If you need help, check out the example <a href="/data/" title="Example Data">Datasets</a> and consult our extensive <a href="/api/" title="API Documentation">API documentation</a>.
 3. Build your application. If you don’t know where to start, find inspiration in the <a href="/apps/" title="Application Gallery">Application Gallery</a> - many applications have public code repositories and there’s also a Java library and Python wrapper available.
 
 ## Need help?
