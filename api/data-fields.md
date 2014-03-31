@@ -212,7 +212,7 @@ Meaning of columns
 | @rdf:about | edm_timespan (?) | text | edmTimespan | TimeSpan.about | |
 | skos:prefLabel | ts_skos_prefLabel | text | edmTimespanLabel | TimeSpan.prefLabel | when |
 | skos:altLabel | ts_skos_altLabel | text |  | TimeSpan.altLabel |  |
-| skos:hiddenLabel | ts_skos_hiddenLabel | string |  |  |
+| skos:hiddenLabel | ts_skos_hiddenLabel | string | | | |
 | skos:note | ts_skos_note | string |  | TimeSpan.note | |
 | dcterms:hasPart | ts_dcterms_hasPart | string |  | TimeSpan.dcTermsHasPart | |
 | dcterms:isPartOf | ts_dcterms_isPartOf | string | edmTimespanBroaderTerm | TimeSpan.isPartOf | |
