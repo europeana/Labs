@@ -7,6 +7,7 @@ imageurl:
   - "/img/events/2014-03-31_future-everything.jpg"
 tags: 
   - apps4europe
+  - business lounge
 links:
   - http://futureeverything.org/events/international-business-lounge-awards-preview/
 excerpt:
