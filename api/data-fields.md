@@ -174,8 +174,8 @@ Meaning of columns
 | skos:prefLabel | cc_skos_prefLabel | text | edmConceptPrefLabel | Concept.prefLabel | what
 | skos:altLabel | cc_skos_altLabel | text |  | Concept.altLabel | 
 | skos:hiddenLabel | cc_skos_hiddenLabel | string |  |  | 
-| skos:broader | cc_skos_broader | string | edmConceptBroaderTerm | Concept.broader | 
-| cc_skos_broaderLabel | string | edmConceptBroaderLabel |  | what
+| skos:broader | cc_skos_broader | string | edmConceptBroaderTerm | Concept.broader | |
+| | cc_skos_broaderLabel | string | edmConceptBroaderLabel |  | what |
 | skos:narrower | cc_skos_narrower | string |  | Concept.narrower | 
 | skos:related | cc_skos_related | string |  | Concept.related | 
 | skos:broadMatch | cc_skos_broadMatch | string |  | Concept.broadMatch | 
