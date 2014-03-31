@@ -21,7 +21,7 @@ datenotconfirmed:
 starttime:
   - "11:30"
 streetaddress:
-  - "Town Hall, Albert Square,"
+  - "Town Hall, Albert Square"
 city:
   - "Manchester"
 country:
