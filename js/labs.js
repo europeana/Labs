@@ -15,10 +15,12 @@ $(document).ready(function(){
 		if($("#nav").hasClass("menu-opened")){
 			$("#nav").css("max-height","0");
 			$("#nav").removeClass("menu-opened");
+			$("#homepage #banner").show();
 		}else{
 			
 			$("#nav").css("max-height","999px");
 			$("#nav").addClass("menu-opened");
+			$("#homepage #banner").hide();
 		}
 	});
 	
