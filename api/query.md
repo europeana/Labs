@@ -54,37 +54,37 @@ Refinement parameters can be concatenated. Each such parameter and the mandatory
 Querying by [facets](http://labs.europeana.eu/api/search/#facet) is also done using the refinement parameter **qf**. The following example looks for objects containing the term _Paris_ among images:
 
     http://www.europeana.eu/api/v2/search.json?wskey=xxxx&query=Paris&qf=TYPE:IMAGE
-[Test on API Console](http://labs.europeana.eu/api/console/console/?function=search&query=Paris&qf=TYPE:IMAGE)
+[Test on API Console](http://labs.europeana.eu/api/console/?function=search&query=Paris&qf=TYPE:IMAGE)
 
 Here are more examples of faceted search. Looking for objects containing the term _Paris_ among objects described in _French_:
 
     http://www.europeana.eu/api/v2/search.json?wskey=xxxx&query=Paris&qf=LANGUAGE:FR
-[Test on API Console](http://labs.europeana.eu/api/console/console/?function=search&query=Paris&qf=LANGUAGE:FR)
+[Test on API Console](http://labs.europeana.eu/api/console/?function=search&query=Paris&qf=LANGUAGE:FR)
 
 Looking for objects containing the term _Paris_ among objects dated by the year _1789_:
 
     http://www.europeana.eu/api/v2/search.json?wskey=xxxx&query=Paris&qf=YEAR:1789
-[Test on API Console](http://labs.europeana.eu/api/console/console/?function=search&query=Paris&qf=YEAR:1789)
+[Test on API Console](http://labs.europeana.eu/api/console/?function=search&query=Paris&qf=YEAR:1789)
     
 Looking for objects containing the term Paris among objects provided by an institution based in _France_:
 
     http://www.europeana.eu/api/v2/search.json?wskey=xxxx&query=Paris&qf=COUNTRY:france
-[Test on API Console](http://labs.europeana.eu/api/console/console/?function=search&query=Paris&qf=COUNTRY:france)
+[Test on API Console](http://labs.europeana.eu/api/console/?function=search&query=Paris&qf=COUNTRY:france)
 
 Looking for objects containing the term _Paris_ among objects protected by the [_Rights Reserved - Free Access_](http://www.europeana.eu/portal/rights/rr-f.html) licence:
 
     http://www.europeana.eu/api/v2/search.json?wskey=xxxx&query=Paris&qf=RIGHTS:http://www.europeana.eu/rights/rr-f/
-[Test on API Console](http://labs.europeana.eu/api/console/console/?function=search&query=Paris&qf=RIGHTS:http://www.europeana.eu/rights/rr-f/)
+[Test on API Console](http://labs.europeana.eu/api/console/?function=search&query=Paris&qf=RIGHTS:http://www.europeana.eu/rights/rr-f/)
     
 Looking for objects containing the term _Paris_ among objects provided by _The European Library_:
 
     http://www.europeana.eu/api/v2/search.json?wskey=xxxx&query=Paris&qf=PROVIDER:The+European+Library
-[Test on API Console](http://labs.europeana.eu/api/console/console/?function=search&query=Paris&qf=PROVIDER:The+European+Library)
+[Test on API Console](http://labs.europeana.eu/api/console/?function=search&query=Paris&qf=PROVIDER:The+European+Library)
     
 Looking for objects containing the term _Paris_ among objects provided by the user community:
 
     http://www.europeana.eu/api/v2/search.json?wskey=xxxx&query=Paris&qf=UGC:true
-[Test on API Console](http://labs.europeana.eu/api/console/console/?function=search&query=Paris&qf=UGC:true)
+[Test on API Console](http://labs.europeana.eu/api/console/?function=search&query=Paris&qf=UGC:true)
     
     
 ## Time Range Search
@@ -92,4 +92,4 @@ Looking for objects containing the term _Paris_ among objects provided by the us
 Looking for objects dated by a year between _1525_ and _1527_:
 
     http://www.europeana.eu/api/v2/search.json?wskey=xxxx&query=YEAR:[1525 TO 1527]
-[Test on API Console](http://labs.europeana.eu/api/console/console/?function=search&query=YEAR:[1525%20TO%201527])
+[Test on API Console](http://labs.europeana.eu/api/console/?function=search&query=YEAR:[1525%20TO%201527])
