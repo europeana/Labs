@@ -1,6 +1,5 @@
 $(document).ready(function(){
-	
-	 initApiMenu();
+
 	semLabs.initMenu();
 	
 	try{
@@ -80,6 +79,9 @@ $(document).ready(function(){
 	
 
 	sortTagsListOneLevel();
+	
+		initApiMenu();
+		 
 });
 
 function repageDatasets()
@@ -169,6 +171,7 @@ function initApiMenu()
 {
 			
 			$("ul a.menuTrigger").click(function(e){
+				//alert("OK");
 				$(this).parent().find("ul.notabs").slideToggle();
 				return e.preventDefault();
 			});
@@ -179,7 +182,7 @@ function initApiMenu()
 			var currentUrl = window.location.pathname;
 			
 			$("ul.notabs li a").each(function(){
-				if(currentUrl.match("^"+$(this).attr("href"))){
+				if(currentUrl.match("^"+$(this).attr("href")+"(/?)$")){
 					$(this).addClass("current");
 					$(this).parent().parent().parent().find("a:first").click();
 				}
