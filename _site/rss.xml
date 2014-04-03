@@ -26,12 +26,28 @@
       <dc:date>9999-01-01T00:00:00+01:00</dc:date>
     </item>
     <item>
+      <title>First Europeana Creative Challenge Award Ceremony</title>
+      <link>http://labs.europeana.eu/events/1stEuropeanaCreativeChallengeAwardCeremony</link>
+      <description>[&quot;The event formally closes the first challenge on history education and natural history education themes.&quot;]</description>
+      <pubDate>Tue, 29 Apr 2014 00:00:00 +0200</pubDate>
+      <guid>http://labs.europeana.eu/events/1stEuropeanaCreativeChallengeAwardCeremony</guid>
+      <dc:date>2014-04-29T00:00:00+02:00</dc:date>
+    </item>
+    <item>
       <title>Welcome to the new Europeana Labs</title>
       <link>http://labs.europeana.eu/blog/welcome-to-the-new-europeana-labs</link>
-      <description>&lt;p&gt;This new Europeana Labs website is intended to provide all you need to get started using the Europeana APIs. Learn about the data, see what others have built, and find out how to build simple but powerful queries to extract bespoke results from a dataset of over 30 million objects - books, photos of art and artefacts, audio clips and more.&lt;/p&gt;</description>
+      <description>&lt;p&gt;This new Europeana Labs website is intended to provide all you need to get started using the Europeana APIs. Learn about the data, see what others have created, and find out how to build simple but powerful queries to extract bespoke results from a dataset of over 30 million objects - books, photos of art and artefacts, audio clips and more.&lt;/p&gt;</description>
       <pubDate>Mon, 28 Apr 2014 00:00:00 +0200</pubDate>
       <guid>http://labs.europeana.eu/blog/welcome-to-the-new-europeana-labs</guid>
       <dc:date>2014-04-28T00:00:00+02:00</dc:date>
+    </item>
+    <item>
+      <title>Coding Da Vinci</title>
+      <link>http://labs.europeana.eu/events/Coding_DaVinci</link>
+      <description>[&quot;Coding Da Vinci is organised by the German Digital Library, Digital Service Center Berlin, Open Knowledge Foundation Germany and Wikimedia Germany. It brings together developers, web and game designers and representatives of cultural institutions to explore ideas for re-use of cultural content.&quot;]</description>
+      <pubDate>Sat, 26 Apr 2014 00:00:00 +0200</pubDate>
+      <guid>http://labs.europeana.eu/events/Coding_DaVinci</guid>
+      <dc:date>2014-04-26T00:00:00+02:00</dc:date>
     </item>
     <item>
       <title>International Business Lounge, Future Everything Conference</title>
@@ -51,10 +67,10 @@
     </item>
     <item>
       <title>VAMP Metadata validation</title>
-      <link>http://labs.europeana.eu/apps/VAMP - R&amp;D results</link>
+      <link>http://labs.europeana.eu/apps/VAMP</link>
       <description>&lt;p&gt;&lt;strong&gt;VAMP Metadata validation&lt;/strong&gt; - Semantic validation of MPEG-7 documents.&lt;/p&gt;</description>
       <pubDate>Sat, 29 Mar 2014 00:00:00 +0100</pubDate>
-      <guid>http://labs.europeana.eu/apps/VAMP - R&amp;D results</guid>
+      <guid>http://labs.europeana.eu/apps/VAMP</guid>
       <dc:date>2014-03-29T00:00:00+01:00</dc:date>
     </item>
     <item>
@@ -236,7 +252,7 @@
     <item>
       <title>Europeana4Education (E4E)</title>
       <link>http://labs.europeana.eu/apps/e4e</link>
-      <description>&lt;p&gt;E4E is a set of two widgets that automatically suggest cultural resources from Europeana and learning resources from Open Discovery Space. It is aimed at authors of educational pathways. E4E widgets can be integrated into an authoring environment such as OMEKA to augment the authoring process and to enhance the educational impact of a pathway. The main rationale behind E4E development was to explore the educational uses of items on Europeana. The E4E widgets were developed in the context of the Natural Europe and Open Discovery Space projects. Winner in the category ‘Social Inclusion’&lt;/p&gt;</description>
+      <description>&lt;p&gt;E4E is a set of two widgets that automatically suggest cultural resources from Europeana and learning resources from Open Discovery Space. It is aimed at authors of educational pathways. E4E widgets can be integrated into an authoring environment such as OMEKA to augment the authoring process and to enhance the educational impact of a pathway. The main rationale behind E4E development was to explore the educational uses of items on Europeana. The E4E widgets were developed in the context of the Natural Europe and Open Discovery Space projects. Winner in the category ‘Social Inclusion’.&lt;/p&gt;</description>
       <pubDate>Wed, 15 Jan 2014 00:00:00 +0100</pubDate>
       <guid>http://labs.europeana.eu/apps/e4e</guid>
       <dc:date>2014-01-15T00:00:00+01:00</dc:date>
@@ -399,14 +415,6 @@
       <description></description>
       <pubDate>Wed, 01 Jan 2014 00:00:00 +0100</pubDate>
       <guid>http://labs.europeana.eu/data/Flowers-and-Trees-from-the-Royal-Botanic-Garden-in-Edinburgh</guid>
-      <dc:date>2014-01-01T00:00:00+01:00</dc:date>
-    </item>
-    <item>
-      <title>Early Photographs from the Fondo Fotográfico De La Universidad De Navarra</title>
-      <link>http://labs.europeana.eu/data/Early-Photographs-from-the-Fondo-Fotografico-De-La-Universidad-De-Navarra</link>
-      <description></description>
-      <pubDate>Wed, 01 Jan 2014 00:00:00 +0100</pubDate>
-      <guid>http://labs.europeana.eu/data/Early-Photographs-from-the-Fondo-Fotografico-De-La-Universidad-De-Navarra</guid>
       <dc:date>2014-01-01T00:00:00+01:00</dc:date>
     </item>
     <item>

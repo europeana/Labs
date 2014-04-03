@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
 	<link href='http://fonts.googleapis.com/css?family=Noto+Sans|Noto+Serif:400,700&subset=latin,greek,cyrillic,latin-ext' rel='stylesheet' type='text/css'>	    
@@ -14,7 +14,7 @@
 	<meta http-equiv="pragma" content="no-cache">
     <link rel="stylesheet" href="/css/styleguide.css"/>
     <link rel="stylesheet" href="/css/screen.css" media="all" />
-    
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
     <script type="text/javascript" src="//use.typekit.net/otu7ppb.js"></script>
 	<style type="text/css">.tk-dejarip{font-family:"dejarip",sans-serif;}.tk-ff-more-web-pro{font-family:"ff-more-web-pro",serif;}</style><link rel="stylesheet" href="http://use.typekit.net/c/a93097/dejarip:i4:i7:n4:n7,ff-more-web-pro:i4:i5:n4:n5.Pyq:N:2,Pyv:N:2,Pyp:N:2,Pyt:N:2,VVb:N:2,VVf:N:2,VQP:N:2,VVd:N:2/d?3bb2a6e53c9684ffdc9a9bf71c5b2a6272be58e6824d2f2e6fb239e8cf4203049013567d271eb11e88b702a26bb8a567985e44d5fde55c54845fe9b45d924f4b355fc32a2986e0d7fa1266c0d2c63e917d6d7dab80e03b8c354710c21216000daed902279c6555b7e05ebfc7ad2788d2c5b10957"><script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 	<link href='http://fonts.googleapis.com/css?family=Ubuntu|Open+Sans' rel='stylesheet' type='text/css'>
@@ -46,7 +46,7 @@
 ﻿<!-- Begin header -->
 <header class="header cf" role="banner">
     <div class="lc">
-        <a href="/" class="logo ir">Europeana</a>	
+        <a href="/" class="logo ir"> </a>	
         <a id="hamMenu" href="#" class="nav-toggle nav-toggle-menu icon-rows"><span class="is-vishidden">Menu</span></a>
         <a href="/rss.xml" class="nav-toggle nav-toggle-search icon-rss"><span class="is-vishidden">Rss</span></a>
         <a href="/search" class="nav-toggle nav-toggle-search icon-search"><span class="is-vishidden">Search</span></a>
@@ -58,7 +58,7 @@
             <fieldset>
                 <legend class="is-vishidden">Search</legend>
                 <label for="search-field" class="is-vishidden">Search</label>
-                <input type="text" placeholder="Search" id="search-query" name="q" class="search-field" autocomplete="off">
+                <input type="text" placeholder="Search" id="search-query" name="q" class="search-field search-query" autocomplete="off">
                 <button class="search-submit">
                     <span class="icon-search" aria-hidden="true"></span>
                     <span class="is-vishidden">Search</span>
@@ -84,15 +84,15 @@
 <!--
 --><div role="main" class="grid">
 
-<div class="block block-hero"> 
+<div id="banner" class="block block-hero"> 
 	<div class="b-thumb">
 		<img src="/img/hero_bg.jpg" width="100%" />
 	</div>
 	<div class="b-text"> 
 		<h1>Europeana Labs</h1>
 		<div class="byline">
-			<br>
-			<p>Giving developers access to cultural and scientific images, texts and audio-visual collections<br> from Europe's cultural organisations to re-use and build on <br>&mdash;  rights-cleared and ready to use!</p>
+			<p>A playground for remixing and using your cultural and scientific heritage.<br />A place for inspiration, innovation and sharing.</p>
+			<p>This is your code, this is your heritage, these are your labs.</p>
 			<div class="startBtn">
 				<a href="http://labs.europeana.eu/blog/welcome-to-the-new-europeana-labs/">GET STARTED</a>
 			</div>
@@ -319,7 +319,7 @@ function requestAPIKey(){
             <li><a href="/">Home</a></li>
             <li><a href="/about">About us</a></li>
             <li><a href="http://europeana.eu/portal/rights/terms-and-policies.html">Terms &amp; policies</a></li>
-            <li><a href="#">Sitemap</a></li>
+            <!--<li><a href="#">Sitemap</a></li>-->
         </ul>
         <p class="copyright">Co-funded by the European Union.</p>
         <a class="licensehr" rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="/img/cc.png"></a>

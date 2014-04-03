@@ -128,6 +128,7 @@ nav ul li a {font-size: 0.9em;}
 #homepage div.b-text:before{ width: 45%; border-top: solid 10px white; margin: 3% auto 3%;}
 #homepage div.b-text h1 { font-weight: bold; margin-bottom: 2%; }
 #homepage div.byline p {font-style: normal; font-weight: bold; font-size:1em;}
+
 #homepage div.startBtn a{
 	display: inline-block; 
 	width:300px; 
@@ -139,6 +140,7 @@ nav ul li a {font-size: 0.9em;}
  	text-transform: uppercase;
  	font-size:1.5em;
  	letter-spacing: 2pt;
+ 	z-index: 999;
  }
 
 #homepage div.startBtn a:hover{color:white;}
@@ -320,6 +322,8 @@ ul.post-list li {overflow: hidden;}
 ul.tags li a.current-tag{background: #206a50;}
 
 
+#mobileSearchForm {display: none;}
+
 /*RESPONSIVE*/
 
 @media all
@@ -361,18 +365,63 @@ ul.tags li a.current-tag{background: #206a50;}
 }
 
 @media (max-width: 900px){
-	#homepage div.startBtn {display:none;}
+	/*#homepage div.startBtn {display:none;}*/
 	#homepage #tblKey td.key-image img {max-width: 100px;}
 }
 
 @media (max-width: 800px){
-	#homepage div.b-text {
-		display:none;
+	#homepage #banner div.block-hero{ position:relative; }
+	#homepage #banner div.b-thumb{ }
+	#homepage #banner div.b-text{ 
+		position: absolute;
+		color:white; 
+		top:200px;  
+		padding: 20px;
+		margin: 10px;
+		text-align: center;
+		margin-top: 0;
+		padding: 0;
+		width: 100%;
 	}
+	#homepage #banner div.b-text p{padding: 0; margin: 0;}
+	#homepage #banner div.b-text h1 {font-size: 2em;}
 	#homepage #register_email {width: 150px; margin-right: 10px;}
 	#homepage #tblKey td.key-image img {max-width: 80px;}
 }
 
+@media (max-width: 750px){
+	/*#homepage div.b-text {
+		display:none;
+	}*/
+	#homepage div.startBtn {height: 50px;line-height:50px;}
+	#homepage div.startBtn a {width: 170px; background-size: contain; background-repeat: no-repeat; font-size:0.8em; line-height:50px; height: 50px;}
+	#homepage #banner div.block-hero{ position:relative; }
+	#homepage #banner div.b-thumb{ }
+	#homepage #banner div.b-text{ position: absolute; color:white; top:130px;  padding: 20px; margin: 10px; text-align: center; font-size: 0.8em;}
+	#homepage #banner div.b-text h1 {font-size: 1.8em;}
+	#homepage #register_email {width: 150px; margin-right: 10px;}
+	#homepage #tblKey td.key-image img {max-width: 80px;}
+	
+	#mobileSearchForm {display: block;}
+}
+
+
+@media (max-width: 435px){
+	/*#homepage div.b-text {
+		display:none;
+	}*/
+	
+	#homepage div.startBtn {height: 35px;line-height:34px;}
+	#homepage div.startBtn a {width: 120px; background-size: contain; background-repeat: no-repeat; font-size:0.8em; line-height:35px; height: 35px;}
+	
+	#homepage #banner div.block-hero{ position:relative; }
+	#homepage #banner div.b-thumb{ }
+	#homepage #banner div.b-text{ position: absolute; color:white; top:110px;  padding: 20px; margin: 10px; text-align: center;}
+	#homepage #banner div.b-text h1 {font-size: 1.8em;}
+	#homepage #banner div.b-text {font-size: 0.7em;}
+	#homepage #register_email {width: 150px; margin-right: 10px;}
+	#homepage #tblKey td.key-image img {max-width: 80px;}
+}
 
 .featureBanner {
     position: fixed;
@@ -398,7 +447,7 @@ ul.tags li a.current-tag{background: #206a50;}
 .featureBanner:after {
     content: "";
     position: absolute;
-    top: 35px;
+    top: 35px;0
     left: -8px;
     border: 4px solid #89540c;
     border-left-color: transparent;

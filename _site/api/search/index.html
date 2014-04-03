@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
 	<link href='http://fonts.googleapis.com/css?family=Noto+Sans|Noto+Serif:400,700&subset=latin,greek,cyrillic,latin-ext' rel='stylesheet' type='text/css'>	    
@@ -14,7 +14,7 @@
 	<meta http-equiv="pragma" content="no-cache">
     <link rel="stylesheet" href="/css/styleguide.css"/>
     <link rel="stylesheet" href="/css/screen.css" media="all" />
-    
+    <link rel="icon" href="/img/favicon.ico" type="image/x-icon">
     <script type="text/javascript" src="//use.typekit.net/otu7ppb.js"></script>
 	<style type="text/css">.tk-dejarip{font-family:"dejarip",sans-serif;}.tk-ff-more-web-pro{font-family:"ff-more-web-pro",serif;}</style><link rel="stylesheet" href="http://use.typekit.net/c/a93097/dejarip:i4:i7:n4:n7,ff-more-web-pro:i4:i5:n4:n5.Pyq:N:2,Pyv:N:2,Pyp:N:2,Pyt:N:2,VVb:N:2,VVf:N:2,VQP:N:2,VVd:N:2/d?3bb2a6e53c9684ffdc9a9bf71c5b2a6272be58e6824d2f2e6fb239e8cf4203049013567d271eb11e88b702a26bb8a567985e44d5fde55c54845fe9b45d924f4b355fc32a2986e0d7fa1266c0d2c63e917d6d7dab80e03b8c354710c21216000daed902279c6555b7e05ebfc7ad2788d2c5b10957"><script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 	<link href='http://fonts.googleapis.com/css?family=Ubuntu|Open+Sans' rel='stylesheet' type='text/css'>
@@ -45,7 +45,7 @@
 -->﻿<!-- Begin header -->
 <header class="header cf" role="banner">
     <div class="lc">
-        <a href="/" class="logo ir">Europeana</a>	
+        <a href="/" class="logo ir"> </a>	
         <a id="hamMenu" href="#" class="nav-toggle nav-toggle-menu icon-rows"><span class="is-vishidden">Menu</span></a>
         <a href="/rss.xml" class="nav-toggle nav-toggle-search icon-rss"><span class="is-vishidden">Rss</span></a>
         <a href="/search" class="nav-toggle nav-toggle-search icon-search"><span class="is-vishidden">Search</span></a>
@@ -57,7 +57,7 @@
             <fieldset>
                 <legend class="is-vishidden">Search</legend>
                 <label for="search-field" class="is-vishidden">Search</label>
-                <input type="text" placeholder="Search" id="search-query" name="q" class="search-field" autocomplete="off">
+                <input type="text" placeholder="Search" id="search-query" name="q" class="search-field search-query" autocomplete="off">
                 <button class="search-submit">
                     <span class="icon-search" aria-hidden="true"></span>
                     <span class="is-vishidden">Search</span>
@@ -82,6 +82,7 @@
 <!-- End header -->
 <!--
 -->
+
 <div role="main" class="grid">
 	<div class="block block-content-header">
 		<div class="grid__item palm--one-whole push--palm--none three-quarters push--one-quarter">
@@ -89,8 +90,7 @@
 		</div>
 	</div>
 
-		<div class="grid__item one-quarter palm--one-whole">
-
+		<div class="grid__item one-quarter palm--one-whole">		
 		<style type="text/css">
 		  ul.notabs {display: none;}
 		  ul.notabs li a {border: 0;}
@@ -99,33 +99,10 @@
 		  ul.notabs a { padding: 0.5rem; }	
 		  ul ul li a.current{text-decoration: underline; }		
 		</style>
-		
-		<script type="application/javascript">
-		$(document).ready(function(){
-			$("ul a.menuTrigger").click(function(e){
-				$(this).parent().find("ul.notabs").slideToggle();
-				return e.preventDefault();
-			});
-			
-			
-			$("ul.notabs li a").removeClass("current");
-			var baseUrl = $("a.logo").attr("href").toString();
-			var currentUrl = window.location.pathname;
-			
-			$("ul.notabs li a").each(function(){
-				if(currentUrl.match("^"+$(this).attr("href"))){
-					$(this).addClass("current");
-					$(this).parent().parent().parent().find("a:first").click();
-				}
-			});	
-		});
-			
-		</script>
-		
 		<ul class="tabs tabs-v">
 			<li><a href="/api" title="API Introduction">Introduction</a></li>
 			<li>
-				<a href="" class="menuTrigger">REST API</a>
+				<a class="menuTrigger">REST API</a>
 				<ul class="notabs tabs-v">
 					<li><a href="/api/getting-started" title="Getting Started with the Europeana REST API">Getting Started</a></li>
 					<li><a href="/api/registration" title="API Registration">Get an API-key</a></li>
@@ -137,24 +114,25 @@
 					<li><a href="/api/myeuropeana" title="Accessing MyEuropeana">MyEuropeana</a></li>
 					<li><a href="/api/provider" title="Querying Providers and Datasets">Provider and Datasets</a></li>
 					<!--<li><a href="/api/data-fields" title="API Data Fields Reference">Data Fields</a></li>-->					
-					<li><a href="/api/hierarchy" title="Data Hierarchy">Data Hierarchy</a></li>					
+					<li><a href="/api/data-hierarchy" title="Data Hierarchy">Data Hierarchy</a></li>					
+                    <li><a href="/api/data-fields" title="Data Fields">Data Fields</a></li>
 					<li><a href="/api/error" title="Error Codes">Error Codes</a></li>	
 					<li><a href="/api/changelog" title="API ChangeLog">Change Log</a></li>
 				</ul>
 			</li>
 			<li>
-				<a href="" class="menuTrigger">Linked Open Data</a>
+				<a class="menuTrigger">Linked Open Data</a>
 				<ul class="notabs tabs-v">
 					<li><a href="/api/linked-open-data/introduction">Introduction</a></li>
 					<li><a href="/api/linked-open-data/data-downloads">Data Downloads</a></li>
 					<li><a href="/api/linked-open-data/SPARQL-endpoint">SPARQL-endpoint</a></li>
-					<li><a href="/api/linked-open-data/data-hierarchy">Data Hierarchy</a></li>
+					<li><a href="/api/linked-open-data/data-structure">Data Structure</a></li>
 					<li><a href="/api/linked-open-data/FAQ">FAQ</a></li>
 					<li><a href="/api/linked-open-data/credits">Credits</a></li>
 				</ul>
 			</li>
 			<li><a href="/api/search-widget" title="Search Widget">Search Widget</a></li>			
-			<li><a href="http://www.europeana.eu/portal/rights/api-terms-of-use.html" title="API Data Fields Reference">Term of Use</a></li>						
+			<li><a href="http://www.europeana.eu/portal/rights/api-terms-of-use.html" title="API Data Fields Reference">Terms of Use</a></li>						
 		</ul>	
 	</div>
 
@@ -234,7 +212,7 @@
             <li><a href="/">Home</a></li>
             <li><a href="/about">About us</a></li>
             <li><a href="http://europeana.eu/portal/rights/terms-and-policies.html">Terms &amp; policies</a></li>
-            <li><a href="#">Sitemap</a></li>
+            <!--<li><a href="#">Sitemap</a></li>-->
         </ul>
         <p class="copyright">Co-funded by the European Union.</p>
         <a class="licensehr" rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="/img/cc.png"></a>
