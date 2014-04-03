@@ -2,11 +2,10 @@ $(document).ready(function(){
 
 	semLabs.initMenu();
 	
-/*	try{
+	try{
 		convertEmails();
-		}catch(e){
-			//alert(e.message);
-		}*/
+	}catch(e){
+	}
 
 	
 	$("#homepage").parent().attr("id", "homepagebody");

@@ -117,9 +117,12 @@ function GetUnique(inputArray)
 
 
 function convertEmails() {
+	if ($(".post-list").length==0) {
+		return;
+	}
 	
-	var bodyHtml = $("body").html();	
-	var emails = extractEmails($("body").html());
+	var bodyHtml = $(".post-list").html();	
+	var emails = extractEmails($(".post-list").html());
 	
 	$.each(emails, function( index, value ) {
 	  bodyHtml = bodyHtml.replace("<a href=\"mailto:"+value+"\">"+value+"</a>", value);
@@ -131,7 +134,7 @@ function convertEmails() {
 	  bodyHtml = bodyHtml.replace(value, "<a href='mailto:"+value+"'>"+value+"</a>");
 	});
 	
-	$("body").html(bodyHtml);
+	$(".post-list").html(bodyHtml);
 
 }
 
