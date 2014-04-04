@@ -12,7 +12,7 @@ links:
 imageurl: 
   - "/img/apps/SearchEngineEuropeana/thoughtlab_image_0004_SS---.png"
 contact: 
-  name: "For more information, or to give feedback, please contact: [Jan Wielemaker](j.wielemaker@cs.vu.nl)
+  name: "For more information, or to give feedback, please contact: [Jan Wielemaker](j.wielemaker@cs.vu.nl)"
 ---
 **Search Engine For Europeana** - A search engine that links data together to enable improved search.
 
