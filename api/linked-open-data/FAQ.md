@@ -55,5 +55,7 @@ We also provide the datasets as file dumps of the RDF data at data downloads pag
 ### How can you contribute?
 If you are a Europeana data provider, you don&#39;t need to submit your data again to Europeana. Once the [Data Exchange Agreement](http://pro.europeana.eu/web/data-exchange-agreement) (DEA) has been signed, we just fetch the metadata Europeana has already gathered. For technical reasons, we cannot continuously update the dataset we serve, but we plan to release batch updates, making all new datasets available at once.
 
+If you have any questions or feedback, contact us at [europeana-lod@googlegroups.com](europeana-lod@googlegroups.com)
+
 
 
