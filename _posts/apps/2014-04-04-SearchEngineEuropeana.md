@@ -9,7 +9,7 @@ tags:
   - R&D results
 links: 
   - "http://eculture.cs.vu.nl/europeana/session/search"
- imageurl: 
+imageurl: 
   - "/img/apps/SearchEngineEuropeana/thoughtlab_image_0004_SS---.png"
 contact: 
   name: "For more information, or to give feedback, please contact: [Jan Wielemaker](j.wielemaker@cs.vu.nl)
