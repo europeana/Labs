@@ -28,3 +28,5 @@ Dump files for the entire Europeana dataset can be downloaded at the [datasets](
 The original pilot subset contains 2.4 million objects from 8 direct Europeana providers encompassing over 200 cultural institutions from 15 countries. This subset of data was [released] (http://pro.europeana.eu/web/guest/press-release?p_p_id=itemsindexportlet_WAR_europeanaportlet_INSTANCE_8k5F&amp;p_p_lifecycle=1&amp;p_p_state=normal&amp;p_p_mode=view&amp;p_p_col_id=column-2&amp;p_p_col_pos=1&amp;p_p_col_count=2&amp;_itemsindexportlet_WAR_europeanaportlet_INSTANCE_8k5F_itemId=994900&amp;_itemsindexportlet_WAR_europeanaportlet_INSTANCE_8k5F_javax.portlet.action=setItemId) on 17 February 2012. The project has been described in a [paper](http://dcevents.dublincore.org/index.php/IntConf/dc-2011/paper/view/55) presented at the Dublin Core 2011 conference.
 
 **Disclaimer:** data.europeana.eu is currently in a pilot stage, and can thus be changed at any moment! Your feedback is more than welcome, and may lead to updates in the prototype service.
+
+If you have any questions or feedback, contact us at [europeana-lod@googlegroups.com](europeana-lod@googlegroups.com)
