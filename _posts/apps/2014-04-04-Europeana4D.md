@@ -22,4 +22,4 @@ The amount of online services supplying geo-spatial and temporal metadata has gr
 
 Try the[Europeana 4D demo](http://www.tinyurl.com/e4d-demo)!
 
-Read more about [Europeana 4D]("http://www.tinyurl.com/e4d-project)
+Read more about [Europeana 4D](http://www.tinyurl.com/e4d-project)
