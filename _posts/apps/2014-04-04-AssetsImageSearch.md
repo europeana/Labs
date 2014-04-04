@@ -2,7 +2,7 @@
 category: apps
 layout: "apps-item"
 published: true
-title: Europeana 4D
+title: ASSETS image search
 featured: false
 permalink: apps/AssetsImageSearch
 tags: 
@@ -12,7 +12,7 @@ links:
 contact: 
   name: "For more information, or to give feedback, please contact: [Giuseppe Amato](giuseppe.amato@isti.cnr.it)"
 ---
-**ASSETS image search demo** - The ASSETS image search demo presents a technology that searches for similar images.
+**ASSETS image search** - The ASSETS image search demo presents a technology that searches for similar images.
 
 The demo uses 70,000 images from Europeana data providers. All image rights remain with the individual data provider. The service allows you to perform image searches based on a content-based retrieval technology using MPEG-7 as the visual descriptor to decide on the similarity of images.
 
