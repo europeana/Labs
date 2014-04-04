@@ -10,11 +10,11 @@ tags:
 links: 
   - "http://www.paths-project.eu/"
   - "http://explorer.paths-project.eu/"
-  - "http://ixa2.si.ehu.es/paths_wp2/paths_wp2.pl"
+  - "http://ixa2.si.ehu.es/paths_wp2/paths_wp2.pl/"
 imageurl: 
   - "/img/apps/PATHSenrich/PATHS demo.jpg"
 contact: 
-  name: "For more information, or to give feedback, please contact [Arantxa Otegi](arantza.otegi@ehu.es)".
+  name: "For more information, or to give feedback, please contact [Arantxa Otegi](arantza.otegi@ehu.es)"
 ---
 **PATHSenrich** – A web service prototype developed by [PATHS](http://www.paths-project.eu/) project allowing independent content providers to enrich their cultural heritage at item level.
 The aim of PATHS project is to enable exploration and discovery within cultural heritage collections. In order to support this, the project developed a range of enrichment techniques which augmented these collections with additional information to enhance users's browsing experience. The semantic enrichment techniques developed in PATHS are summarised in [this document](http://www.paths-project.eu/eng/Resources/Semantic-Enrichment-of-Cultural-Heritage-content-in-PATHS), which details how these techniques are applied to the Europeana data. The demonstration system developed for PATHS that uses the content from Europeana is available [here](http://explorer.paths-project.eu/). 
