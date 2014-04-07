@@ -10,5 +10,5 @@ The second API is more experimental and supports download of complete datasets a
 
 |API|Usage|
 |:-------------|:-------------|
-|[REST API](/api/portal-api)| Standard REST calls over HTTP. Responses returned in JSON. |
+|[REST API](/api/introduction)| Standard REST calls over HTTP. Responses returned in JSON. |
 |[Linked Open Data](/api/linked-open-data/introduction) | Query and retrieve data in SPARQL 1.1. |
