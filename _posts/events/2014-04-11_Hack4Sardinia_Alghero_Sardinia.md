@@ -29,4 +29,4 @@ featured:
   - ""
 ---
 
-During the event developers are encouraged to try out their ideas and design prototypes of new products and services based on Europeana datasets and API. On the second day they will also have the opportunity to present their projects to Italian investors and business angels who can help them turn their prototypes into commercially viable projects and start-ups.
+During the event developers are encouraged to try out their ideas and design prototypes of new products and services based on Europeana datasets and API. On the second day they will also have the opportunity to present their projects to Italian investors and business angels who can help them turn their prototypes into commercially viable projects and start-ups. The winner will be awarded a pitch slot at the international business lounge during the FutureEverything conference in March 2015.
