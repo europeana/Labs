@@ -1,12 +1,12 @@
 ---
 layout: events-item
 category: events
-permalink: /events/Hack4Sardinia
-title: Hack4Sardinia
+permalink: /events/Hack4Europe-Alghero
+title: Hack4Europe! Alghero, Sardinia
 tags: 
   - hackathon
 links:
-  - http://castrasardiniae.it/eventi.html
+  - https://www.eventbrite.it/e/hack4europe-alghero-2014-tickets-10141029091
 excerpt:
   - "A two-day hackathon and a business lounge organised by Europeana und University of Sassari-ArsLab in collaboration of Azienda Speciale Parco di Porto Conte and Castra Sardiniae."
 startdate:
@@ -29,4 +29,4 @@ featured:
   - ""
 ---
 
-During the event developers are encouraged to try out their ideas and design prototypes of new products and services based on Europeana datasets and API. On the second day they will also have the opportunity to present their projects to Italian investors and business angels who can help them turn their prototypes into commercially viable projects and start-ups."
+During the event developers are encouraged to try out their ideas and design prototypes of new products and services based on Europeana datasets and API. On the second day they will also have the opportunity to present their projects to Italian investors and business angels who can help them turn their prototypes into commercially viable projects and start-ups.
