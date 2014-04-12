@@ -1,11 +1,11 @@
 ---
-published: false
+published: true
 layout: events-item
 category: events
 permalink: /events/2nd_Europeana_Creative_Challenge
 title: 2nd Europeana Creative Challenge on Tourism and Social Networks (online)
 imageurl: 
-  - "/img/events/2014-04-29-2nd-creative-challenge.png"
+  - "/img/events/2nd-creative-challenge.png"
 tags: 
   - challenge
 links:
