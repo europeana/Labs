@@ -28,7 +28,7 @@ country:
 europeanaevent:
   - ""
 featured:
-  - ""
+  - "true"
 ---
 
 The ceremony is preceded by a get together BBQ for all participants. On Day 2 the hackathon finalists will present their project and win cool prizes.
