@@ -14,6 +14,8 @@ excerpt:
   - "App developers, e-book publishers, web and game designers will be invited to submit their ideas for the re-use of cultural content in tourism and social network applications."
 datenotconfirmed:
   - "September 2014"
+startdate:
+  - 11/04/2014  
 starttime:
   - ""
 streetaddress:
