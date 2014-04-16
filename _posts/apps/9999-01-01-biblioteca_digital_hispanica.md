@@ -4,7 +4,6 @@ category: apps
 permalink: apps/biblioteca
 title: Biblioteca Digital Hispánica
 imageurl: 
-  - "/img/apps/biblioteca-digital-hispanica/Hispania1.png"
   - "/img/apps/biblioteca-digital-hispanica/HIspania2.png"
 featured: true
 published: true
@@ -20,5 +19,5 @@ links:
   - http://bdh.bne.es/bnesearch/
 ---
 
-The National Library of Spain has implemented the Europeana API in their online portal, Biblioteca Digital Hispánica. The portal now enables their users to access related Europeana content via single link on their search result header.
+The National Library of Spain has implemented the Europeana API in their online portal, Biblioteca Digital Hispánica. The portal now enables their users to access related Europeana content via a single link on their search results header.
 

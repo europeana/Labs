@@ -3,6 +3,8 @@ layout: events-item
 category: events
 permalink: /events/Hack4Europe-Alghero
 title: Hack4Europe! Alghero, Sardinia
+imageurl:
+  - "/img/events/_dummy-img.jpg
 tags: 
   - hackathon
 links:

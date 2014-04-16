@@ -1,0 +1,22 @@
+---
+layout: apps-item
+category: apps
+permalink: apps/Biblioteca-Digital-Patrimonio-Iberoamericano
+title: Biblioteca Digital del Patrimonio Iberoamericano
+imageurl: 
+  - "/img/no-image.gif"
+featured: false
+published: true
+contact:
+  name: 
+  email: 
+  website: 
+  address: 
+  telephone: 
+tags: 
+  - API Implementation
+links:
+  - http://www.iberoamericadigital.net/BDPI/
+---
+
+The Biblioteca Digital del Patrimonio Iberoamericano (BDPI, the Digital Library of Ibero-American Heritage, a cooperative project with Ibero-American National Libraries) allows users to access related Europeana content via a single link on their search results header. The idea is that the Europeana API serves as a bridge between European and Ibero-American heritage, thus connecting cultures through technology.
