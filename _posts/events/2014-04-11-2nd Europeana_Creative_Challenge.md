@@ -15,7 +15,7 @@ excerpt:
 datenotconfirmed:
   - "September 2014"
 startdate:
-  - 11/04/2014  
+  - ""  
 starttime:
   - ""
 streetaddress:
