@@ -20,7 +20,7 @@
     <item>
       <title>Biblioteca Digital Hispánica</title>
       <link>http://labs.europeana.eu/apps/biblioteca</link>
-      <description>&lt;p&gt;The National Library of Spain has implemented the Europeana API in their online portal, Biblioteca Digital Hispánica. The portal now enables their users to access related Europeana content via single link on their search result header.&lt;/p&gt;</description>
+      <description>&lt;p&gt;The National Library of Spain has implemented the Europeana API in their online portal, Biblioteca Digital Hispánica. The portal now enables their users to access related Europeana content via a single link on their search results header.&lt;/p&gt;</description>
       <pubDate>Fri, 01 Jan 9999 00:00:00 +0100</pubDate>
       <guid>http://labs.europeana.eu/apps/biblioteca</guid>
       <dc:date>9999-01-01T00:00:00+01:00</dc:date>
@@ -48,6 +48,118 @@
       <pubDate>Sat, 26 Apr 2014 00:00:00 +0200</pubDate>
       <guid>http://labs.europeana.eu/events/Coding_DaVinci</guid>
       <dc:date>2014-04-26T00:00:00+02:00</dc:date>
+    </item>
+    <item>
+      <title>Untold stories of Norwegian history</title>
+      <link>http://labs.europeana.eu/data/Kulturradet-Norway-History</link>
+      <description></description>
+      <pubDate>Fri, 18 Apr 2014 00:00:00 +0200</pubDate>
+      <guid>http://labs.europeana.eu/data/Kulturradet-Norway-History</guid>
+      <dc:date>2014-04-18T00:00:00+02:00</dc:date>
+    </item>
+    <item>
+      <title>Hack4Europe! Alghero, Sardinia</title>
+      <link>http://labs.europeana.eu/events/Hack4Europe-Alghero</link>
+      <description>[&quot;A two-day hackathon and a business lounge organised by Europeana und University of Sassari-ArsLab in collaboration of Azienda Speciale Parco di Porto Conte and Castra Sardiniae.&quot;]</description>
+      <pubDate>Fri, 11 Apr 2014 00:00:00 +0200</pubDate>
+      <guid>http://labs.europeana.eu/events/Hack4Europe-Alghero</guid>
+      <dc:date>2014-04-11T00:00:00+02:00</dc:date>
+    </item>
+    <item>
+      <title>Coding Da Vinci competition award ceremony</title>
+      <link>http://labs.europeana.eu/events/Coding_DaVinci_award_ceremony</link>
+      <description>[&quot;The ceremony is preceded by a get together BBQ for all participants. On Day 2 the hackathon finalists will present their project and win cool prizes.&quot;]</description>
+      <pubDate>Fri, 11 Apr 2014 00:00:00 +0200</pubDate>
+      <guid>http://labs.europeana.eu/events/Coding_DaVinci_award_ceremony</guid>
+      <dc:date>2014-04-11T00:00:00+02:00</dc:date>
+    </item>
+    <item>
+      <title>2nd Europeana Creative Challenge on Tourism and Social Networks (online)</title>
+      <link>http://labs.europeana.eu/events/2nd_Europeana_Creative_Challenge</link>
+      <description>[&quot;App developers, e-book publishers, web and game designers will be invited to submit their ideas for the re-use of cultural content in tourism and social network applications.&quot;]</description>
+      <pubDate>Fri, 11 Apr 2014 00:00:00 +0200</pubDate>
+      <guid>http://labs.europeana.eu/events/2nd_Europeana_Creative_Challenge</guid>
+      <dc:date>2014-04-11T00:00:00+02:00</dc:date>
+    </item>
+    <item>
+      <title>Stanbol</title>
+      <link>http://labs.europeana.eu/apps/Stanbol</link>
+      <description>&lt;p&gt;&lt;strong&gt;Stanbol&lt;/strong&gt;- The &lt;a href='http://incubator.apache.org/stanbol/'&gt;Apache Stanbol&lt;/a&gt; project was initiated by the European R&amp;amp;D project &lt;a href='http://www.iks-project'&gt;IKS&lt;/a&gt; (Interactive Knowledge Stack).&lt;/p&gt;</description>
+      <pubDate>Fri, 04 Apr 2014 00:00:00 +0200</pubDate>
+      <guid>http://labs.europeana.eu/apps/Stanbol</guid>
+      <dc:date>2014-04-04T00:00:00+02:00</dc:date>
+    </item>
+    <item>
+      <title>Search Engine For Europeana</title>
+      <link>http://labs.europeana.eu/apps/SearchEngineEuropeana</link>
+      <description>&lt;p&gt;&lt;strong&gt;Search Engine For Europeana&lt;/strong&gt; - A search engine that links data together to enable improved search.&lt;/p&gt;</description>
+      <pubDate>Fri, 04 Apr 2014 00:00:00 +0200</pubDate>
+      <guid>http://labs.europeana.eu/apps/SearchEngineEuropeana</guid>
+      <dc:date>2014-04-04T00:00:00+02:00</dc:date>
+    </item>
+    <item>
+      <title>Pundit</title>
+      <link>http://labs.europeana.eu/apps/Pundit</link>
+      <description>&lt;p&gt;&lt;strong&gt;Pundit&lt;/strong&gt; – &lt;a href='http://www.thepund.it/'&gt;Pundit&lt;/a&gt; is an open source semantic annotation tool developed by &lt;a href='http://www.netseven.it'&gt;Net7&lt;/a&gt; allowing users to create structured data annotating the web. Pundit not only enables users to annotate Web pages in various ways (comments, citations, boo kmarks…) but also to convert these annotations into semantically structured data that can be later integrated to the “Semantic Web”.&lt;/p&gt;</description>
+      <pubDate>Fri, 04 Apr 2014 00:00:00 +0200</pubDate>
+      <guid>http://labs.europeana.eu/apps/Pundit</guid>
+      <dc:date>2014-04-04T00:00:00+02:00</dc:date>
+    </item>
+    <item>
+      <title>PATHSenrich</title>
+      <link>http://labs.europeana.eu/apps/PATHSenrich</link>
+      <description>&lt;p&gt;&lt;strong&gt;PATHSenrich&lt;/strong&gt; – A web service prototype developed by &lt;a href='http://www.paths-project.eu/'&gt;PATHS&lt;/a&gt; project allowing independent content providers to enrich their cultural heritage at item level. The aim of PATHS project is to enable exploration and discovery within cultural heritage collections. In order to support this, the project developed a range of enrichment techniques which augmented these collections with additional information to enhance users’s browsing experience. The semantic enrichment techniques developed in PATHS are summarised in &lt;a href='http://www.paths-project.eu/eng/Resources/Semantic-Enrichment-of-Cultural-Heritage-content-in-PATHS'&gt;this document&lt;/a&gt;, which details how these techniques are applied to the Europeana data. The demonstration system developed for PATHS that uses the content from Europeana is available &lt;a href='http://explorer.paths-project.eu/'&gt;here&lt;/a&gt;.&lt;/p&gt;</description>
+      <pubDate>Fri, 04 Apr 2014 00:00:00 +0200</pubDate>
+      <guid>http://labs.europeana.eu/apps/PATHSenrich</guid>
+      <dc:date>2014-04-04T00:00:00+02:00</dc:date>
+    </item>
+    <item>
+      <title>MyStoryPlayer</title>
+      <link>http://labs.europeana.eu/apps/MyStoryPlayer</link>
+      <description>&lt;p&gt;&lt;strong&gt;MyStoryPlayer&lt;/strong&gt; - MyStoryPlayer is an audiovisual annotation tool developed by the project&lt;a href='http://www.eclap.eu/'&gt;ECLAP&lt;/a&gt;, the e-library for performing arts.&lt;/p&gt;</description>
+      <pubDate>Fri, 04 Apr 2014 00:00:00 +0200</pubDate>
+      <guid>http://labs.europeana.eu/apps/MyStoryPlayer</guid>
+      <dc:date>2014-04-04T00:00:00+02:00</dc:date>
+    </item>
+    <item>
+      <title>MIMO&amp;#45;DB&amp;#58; MIMO Aggregator BackOffice</title>
+      <link>http://labs.europeana.eu/apps/MIMO-DB</link>
+      <description>&lt;p&gt;&lt;strong&gt;MIMO-DB: MIMO Aggregator BackOffice&lt;/strong&gt; - The MIMO-DB was developed as part of the &lt;a href='http://www.mimo-project.eu/'&gt;MIMO Project&lt;/a&gt; (Musical Instrument Museums Online). This service is used by all partners to monitor the harvesting and enrichment of their metadata. It allows for multilingual search. The MIMO-DB is a professional front-end to an XML database using the new &lt;a href='http://www.lido-schema.org/'&gt;LIDO&lt;/a&gt; museum metadata model.&lt;/p&gt;</description>
+      <pubDate>Fri, 04 Apr 2014 00:00:00 +0200</pubDate>
+      <guid>http://labs.europeana.eu/apps/MIMO-DB</guid>
+      <dc:date>2014-04-04T00:00:00+02:00</dc:date>
+    </item>
+    <item>
+      <title>EuropeanaConnect Gazetteer</title>
+      <link>http://labs.europeana.eu/apps/EuropeanaConnect-Gazetteer</link>
+      <description>&lt;p&gt;&lt;strong&gt;EuropeanaConnect Gazetteer&lt;/strong&gt; - A rich data resource including over 9m geographic names, co-ordinates, and boundaries.&lt;/p&gt;</description>
+      <pubDate>Fri, 04 Apr 2014 00:00:00 +0200</pubDate>
+      <guid>http://labs.europeana.eu/apps/EuropeanaConnect-Gazetteer</guid>
+      <dc:date>2014-04-04T00:00:00+02:00</dc:date>
+    </item>
+    <item>
+      <title>EuropeanaConnect Geoparser</title>
+      <link>http://labs.europeana.eu/apps/EuropeanaConnect-Geoparser</link>
+      <description>&lt;p&gt;&lt;strong&gt;EuropeanaConnect Geoparser&lt;/strong&gt; - A tool to extract place names from text.&lt;/p&gt;</description>
+      <pubDate>Fri, 04 Apr 2014 00:00:00 +0200</pubDate>
+      <guid>http://labs.europeana.eu/apps/EuropeanaConnect-Geoparser</guid>
+      <dc:date>2014-04-04T00:00:00+02:00</dc:date>
+    </item>
+    <item>
+      <title>Europeana 4D</title>
+      <link>http://labs.europeana.eu/apps/Europeana4D</link>
+      <description>&lt;p&gt;&lt;strong&gt;Europeana 4D&lt;/strong&gt;&lt;/p&gt;</description>
+      <pubDate>Fri, 04 Apr 2014 00:00:00 +0200</pubDate>
+      <guid>http://labs.europeana.eu/apps/Europeana4D</guid>
+      <dc:date>2014-04-04T00:00:00+02:00</dc:date>
+    </item>
+    <item>
+      <title>ASSETS image search</title>
+      <link>http://labs.europeana.eu/apps/AssetsImageSearch</link>
+      <description>&lt;p&gt;&lt;strong&gt;ASSETS image search&lt;/strong&gt; - The ASSETS image search demo presents a technology that searches for similar images.&lt;/p&gt;</description>
+      <pubDate>Fri, 04 Apr 2014 00:00:00 +0200</pubDate>
+      <guid>http://labs.europeana.eu/apps/AssetsImageSearch</guid>
+      <dc:date>2014-04-04T00:00:00+02:00</dc:date>
     </item>
     <item>
       <title>International Business Lounge, Future Everything Conference</title>
