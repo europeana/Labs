@@ -13,7 +13,7 @@ imageurl:
   - "/img/datasets/2022608_Norway.jpg"
 tags:
   - History
-  - Photography
+  - Photographs
 
 licenses:
   - 
