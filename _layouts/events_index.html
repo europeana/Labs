@@ -16,7 +16,7 @@ layout: events-list
 <div class="grid__item three-quarters palm--one-whole">
     <ul id="EventList" class="post-list grid">
     		{% assign sorted_events = site.tags[page.tag]  | sortEventByDate %}
-        {% for post in sorted_eventslablabs %}<!--
+        {% for post in sorted_events %}<!--
         --><li class="grid__item one-whole desk--one-whole">
             <div class="block block-thumb {%if post.featured != true %}  block-thumb-small {% endif %}">
 
