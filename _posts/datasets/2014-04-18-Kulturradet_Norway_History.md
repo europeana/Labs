@@ -4,17 +4,18 @@ category: data
 title: Untold stories of Norwegian history
 permalink: data/Kulturradet-Norway-History
 provider: Kulturrådet
-description: More than 800,000 images of Norwegian history from more than 130 cultural heritage institutions across Norway.
+description: More than 1 000 000 images of Norwegian history from more than 130 cultural heritage institutions across Norway. All images are either in the Public Domain or have Open licences.
 contact: post@kulturrad.no
-portal: "http://www.europeana.eu/portal/search.html?query=europeana_collectionName:2022608*&qf=RIGHTS:http://creativecommons.org/publicdomain/zero/1.0/*&rows=12" 
-console: "http://labs.europeana.eu/api/console/?function=search&query=europeana_collectionName:2022608*&qf=RIGHTS:http://creativecommons.org/publicdomain/zero/1.0/*&rows=12"
+portal: "http://www.europeana.eu/portal/search.html?query=europeana_collectionName%3A2022608*&rows=12&qf=REUSABILITY%3Aopen" 
+console: "http://labs.europeana.eu/api/console/?function=search&query=europeana_collectionName%3A2022608*&start=1&rows=12&profile=standard&reusability=open"
 providerurl: "http://kulturradet.no/english"
 imageurl: 
   - "/img/datasets/2022608_Norway.jpg"
 tags:
   - History
+  - Photography
 
 licenses:
-  - 0
+  - 
       
 ---
