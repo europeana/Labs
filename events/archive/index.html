@@ -1,22 +1,23 @@
 ---
 layout: events-list
+title: Events
 ---
-
 
 <script>
 	$(document).ready(function(){
 		
 		$("div.pagination-holder").jPages({
-	    containerID : "EventList",
-	    perPage: 10
+	    containerID : "EventsList",
+	    perPage: 10,
+	    startPage:1
 	    });
 	});
 </script>
 
-<div class="grid__item three-quarters palm--one-whole">
-    <ul id="EventList" class="post-list grid">
-    		{% assign sorted_events = site.tags[page.tag]  | sortEventByDate %}
-        {% for post in sorted_eventslablabs %}<!--
+<div class="grid__item palm--one-whole three-quarters">
+    <ul id="EventsList"  class="post-list grid">
+    	{% assign sorted_events = site.categories.events | sortEventByDateArchive %}
+        {% for post in sorted_events %}<!--
         --><li class="grid__item one-whole desk--one-whole">
             <div class="block block-thumb {%if post.featured != true %}  block-thumb-small {% endif %}">
 
@@ -56,4 +57,5 @@ layout: events-list
     <div class="pagination-holder">
     	
     </div>
-    <br/>
+
+</div>
