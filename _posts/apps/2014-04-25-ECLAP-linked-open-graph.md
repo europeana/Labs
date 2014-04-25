@@ -27,7 +27,7 @@ These resources consist of:
 
 * Collections: users have the possibility to create collections by using the ECLAP content.
 
-* Annotations: Users can create annotations on the ECLAP platform thanks to the[MyStory Player tool](http://www.eclap.eu/3748)
+* Annotations: Users can create annotations on the ECLAP platform thanks to the [MyStory Player tool](http://www.eclap.eu/3748)
 
 * Publications: to connect user that published the content
 
