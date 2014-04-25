@@ -16,7 +16,7 @@ contact:
 
 The demo uses 70,000 images from Europeana data providers. All image rights remain with the individual data provider. The service allows you to perform image searches based on a content-based retrieval technology using MPEG-7 as the visual descriptor to decide on the similarity of images.
 
-Scalability has been tested with 100 million images taken from the[CoPhiR](http://cophir.isti.cnr.it/) dataset. It is important to stress that despite the large dataset indexed, the system is able to respond rapidly to image similarity queries.
+Scalability has been tested with 100 million images taken from the [CoPhiR](http://cophir.isti.cnr.it/) dataset. It is important to stress that despite the large dataset indexed, the system is able to respond rapidly to image similarity queries.
 
 In order to achieve this performance, the index was built using technology developed by ISTI-CNR - approximate similarity searches in metric spaces using inverted files and content-based image retrieval based on the Lucene search engine library.
 
