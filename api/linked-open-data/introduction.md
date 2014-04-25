@@ -11,7 +11,7 @@ In October 2012, a large subset of this data was transformed into **linked data*
 
 **data.europeana.eu** started as an experimental pilot &nbsp;in February 2012 with a small number of data providers who committed at an early stage to Europeana&#39;s initiative of promoting more open data. The current version of the pilot contains metadata on 20 million texts, images, videos and sounds gathered by Europeana. They cover a great variety of heritage objects, such as this [slovenian version of &quot;O Sole Mio&quot; &nbsp;](http://data.europeana.eu/item/92056/BD9D5C6C6B02248F187238E9D7CC09EAF17BEA59) from the National Library of Slovenia, or Neil Robson&#39;s [memories of the herring business] (http://data.europeana.eu/item/09405f/533F9A826CB038D02C05A9814CF97E5D1B49BBEE) from the Tyne and Wear Archives &amp; Museums.
 
-![Video](/img/api/Linked-Open-Data/Animation-ScreenShot.png)
+![Video](http://vimeo.com/36752317)
 
 [Linked Open Data - What is it?](http://player.vimeo.com/video/36752317) from [Europeana](http://vimeo.com/europeana) on [Vimeo](http://vimeo.com) (also in [French](http://vimeo.com/album/2072014/video/49231111), [German](http://vimeo.com/album/2072014/video/49231110), [Italian](http://vimeo.com/album/2072014/video/49232562) and [Spanish](https://vimeo.com/album/2072014/video/49231112).)
 
