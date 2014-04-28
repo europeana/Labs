@@ -3,7 +3,7 @@ published: true
 layout: blog-item
 category: blog
 permalink: blog/can-i-use-it
-title: Can I use it?
+title: "Can I use it?"
 imageurl: 
   - "/img/blog/2014-04-25-Can-I-use-it.png"
 tags: 
