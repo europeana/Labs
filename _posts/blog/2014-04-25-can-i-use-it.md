@@ -41,7 +41,7 @@ Explore this on the Portal: [europeana.eu](http://www.europeana.eu "Europeana po
 
 In the API we introduced the ”reusability” parameter with the same options as in the portal: "open", "restricted" and "permission".
 
-Example API call: [http://europeana.eu/api/v2/search.json?wskey=%5BYOUR%20API%20KEY%5D&query=*%3A*&reusability=open](http://europeana.eu/api/v2/search.json?wskey=%5BYOUR%20API%20KEY%5D%26query=*%3A*%26reusability=open)
+Example API call: [http://europeana.eu/api/v2/search.json?wskey=%5BYOUR%20API%20KEY%5D&query=*%3A*&reusability=open](http://europeana.eu/api/v2/search.json?wskey=%5BYOUR%20API%20KEY%5D&amp;query=*%3A*&amp;reusability=open)
 
 Explore this in the API console: [labs.europeana.eu/api/console/](http://labs.europeana.eu/api/console/ "Europeana APi console")
 
