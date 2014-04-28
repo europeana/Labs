@@ -141,18 +141,17 @@
 	<div id="documentation" class="prose grid__item palm--one-whole push--palm-none one-half"><!--
 	--><p>This document describes the changes of Europeana API. The changes are grouped by new API versions. We deploy new versions of the portal and the API quite regularly, but not all new versions has change in the interface. The API documentation always describes the current version of the API. We don’t have (yet?) however API call to get the actual version, so the API users should see the date of changes.</p>
 
-<h3 id="version-206-2013-08-09">Version 2.0.6 (2013-08-09)</h3>
+<h3 id="version_206_20130809">Version 2.0.6 (2013-08-09)</h3>
 
 <p>New allowable value for the <em>profile</em> parameter: <code>params</code>. When client adds <code>params</code> to the <em>profile</em> parameter, the header of the response will contain a <code>params</code> key, which lists the requested and default parameters of the API call. The client can use profile <em>profile</em> parameter in search and object calls. The parameter accepts both single and multiple values separated by comma or space (such as <code>&amp;profile=standard</code> or <code>&amp;profile=standard,params</code> or <code>&amp;amp;profile=standard%20params</code>).</p>
 
 <h4 id="example">Example</h4>
 
-<p><code>
+<pre><code>
 http://europeana.eu/api/v2/search.json?wskey=xxxxxxxx&amp;amp;query=mona+lisa&amp;amp;profile=standard%20params
-</code></p>
+</code></pre>
 
 <p>returns</p>
-
 <pre>
 {
   "apikey": "xxxxxxxxx",
@@ -169,8 +168,7 @@ http://europeana.eu/api/v2/search.json?wskey=xxxxxxxx&amp;amp;query=mona+lisa&am
   "totalResults": 195,
   "items": [...]
 }
-</pre>
-<!--
+</pre><!--
 --></div>
 </div>
 ﻿<!-- Begin Footer -->

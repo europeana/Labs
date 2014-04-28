@@ -141,56 +141,35 @@
 	<div id="documentation" class="prose grid__item palm--one-whole push--palm-none one-half"><!--
 	--><p>Europeana API supports three kinds of user authentication that are used in three different application scenarios. To perform general API calls, like <a href="http://labs.europeana.eu/api/search">search</a>, <a href="http://labs.europeana.eu/api/object">object</a> or <a href="http://labs.europeana.eu/api/provider">provider/collection</a>, which do not involve user-specific information, the most basic authentication scheme is used. For accessing user-specific data stored on MyEuropeana accounts using <a href="http://labs.europeana.eu/api/myeuropeana">MyData</a> calls, a caller application is to be identified by the user credentials. Finally, for applications wishing to get 3rd party access on behalf of a registered user, OAuth2 authentication scheme is supported.</p>
 
-<h3 id="basic-authentication">Basic Authentication</h3>
+<h3 id="basic_authentication">Basic Authentication</h3>
 
 <p>This is the simplest form of authentication which does not involve accessing user-specific information. To perform a call using this authentication every API call must be provided a special authentication parameter <em>wskey</em>. This value of this parameter should be the private key that you got during the API user registration process. We use these keys to anonymously gather interesting statistics about API usage.</p>
 
-<h3 id="user-authentication">User Authentication</h3>
+<h3 id="user_authentication">User Authentication</h3>
 
 <p>This form of authentication is used when an application wishes to access MyEuropeana data of a specific user and the public and the private keys of this user are known available in advance. In this case login is done by calling a POST method</p>
 
-<pre><code>http://europeana.eu/api/v2/login.do    
-</code></pre>
+<pre><code>http://europeana.eu/api/v2/login.do    </code></pre>
 
 <p>with the following two parameters that contain authentication credentials:</p>
+<table><thead><tr><th>Parameter</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">j_username</td><td style="text-align: left;">Your PUBLIC apikey</td></tr>
+<tr><td style="text-align: left;">j_password</td><td style="text-align: left;">Your PRIVATE apikey</td></tr>
+</tbody></table>
+<p>When a login is successful a status 200 is returned, otherwise a redirect to the login page is triggered.</p>
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">Parameter</th>
-      <th style="text-align: left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">j_username</td>
-      <td style="text-align: left">Your PUBLIC apikey</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">j_password</td>
-      <td style="text-align: left">Your PRIVATE apikey</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>When a login is successful a status 200 is returned, otherwise a redirect to the login page is triggered. </p>
-
-<h3 id="oauth2-authentication">OAuth2 Authentication</h3>
+<h3 id="oauth2_authentication">OAuth2 Authentication</h3>
 
 <p>For applications that wish to access MyEuropeana data of a specific end-user on his behalf, we use the standard <a href="http://oauth.net/2/">OAuth2</a> authentication scheme. This scheme works by redirecting the application to a dedicated login page provided by the server and issuing to the application an authenticating token with a limited lifetime when the login is succesful. The token can be refreshed later on by the application. To use this kind of authentication the application should first access the URL</p>
 
-<pre><code>http://europeana.eu/api/oauth/authorize
-</code></pre>
+<pre><code>http://europeana.eu/api/oauth/authorize</code></pre>
 
 <p>and further on the URL</p>
 
-<pre><code>http://europeana.eu/api/oauth/token
-</code></pre>
+<pre><code>http://europeana.eu/api/oauth/token</code></pre>
 
 <p>to refresh the token.</p>
 
-<p>There are many open source libraries available for various languages to help you implement this authentication scheme in your project. For more information, consult the <a href="http://oauth.net/2/">OAuth2 reference page</a>.</p>
-<!--
+<p>There are many open source libraries available for various languages to help you implement this authentication scheme in your project. For more information, consult the <a href="http://oauth.net/2/">OAuth2 reference page</a>.</p><!--
 --></div>
 </div>
 ﻿<!-- Begin Footer -->

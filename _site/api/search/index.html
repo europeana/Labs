@@ -139,272 +139,64 @@
 
 		
 	<div id="documentation" class="prose grid__item palm--one-whole push--palm-none one-half"><!--
-	--><ul id="markdown-toc">
-  <li><a href="#request">Request</a></li>
-  <li><a href="#response">Response</a>    <ul>
-      <li><a href="#item">item</a></li>
-      <li><a href="#breadcrumb">breadcrumb</a></li>
-      <li><a href="#facet">facet</a></li>
-    </ul>
-  </li>
-  <li><a href="#callback-function">Callback Function</a></li>
-</ul>
-
+	--><div class="maruku_toc"><ul><li><a href="#request">Request</a></li><li><a href="#response">Response</a><ul><li><a href="#item">item</a></li><li><a href="#breadcrumb">breadcrumb</a></li><li><a href="#facet">facet</a></li></ul></li><li><a href="#callback_function">Callback Function</a></li></ul></div>
 <p>Search for records.</p>
 
-<pre><code>http://europeana.eu/api/v2/search.json
-</code></pre>
+<pre><code>http://europeana.eu/api/v2/search.json</code></pre>
 
 <h2 id="request">Request</h2>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">Parameter</th>
-      <th style="text-align: left">Datatype</th>
-      <th style="text-align: left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">query</td>
-      <td style="text-align: left">String</td>
-      <td style="text-align: left">The search term(s). See <a href="http://labs.europeana.eu/api/query">Query Syntax</a> for information on forming complex queries and examples.</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">profile</td>
-      <td style="text-align: left">String</td>
-      <td style="text-align: left">Profile parameter controls the format and richness of the response: &lt;ul&gt;&lt;li&gt;minimal - minimal set of metadata&lt;/li&gt;&lt;li&gt;standard - TBD&lt;/li&gt;&lt;li&gt;facets - information about <a href="http://labs.europeana.eu/api/repository/#facets">facets</a> is added. For the records the Standard profile is used.&lt;/li&gt;&lt;li&gt;breadcrumbs - information about the query is added in the form of <a href="http://labs.europeana.eu/api/search/#breadcrumb">breadcrumbs</a>. Facets are added as well; for the records the Standard profile is used.&lt;/li&gt;&lt;li&gt;portal - Standard, Facets, and Breadcrumb combined &lt;/li&gt;&lt;/ul&gt;</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">qf</td>
-      <td style="text-align: left">String</td>
-      <td style="text-align: left">Facet filtering query. This parameter can be defined more than once. See <a href="http://labs.europeana.eu/api/query">Query Syntax</a> page for more information.</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">rows</td>
-      <td style="text-align: left">Number</td>
-      <td style="text-align: left">The number of records to return. Maximum is 100. Defaults to 12.</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">start</td>
-      <td style="text-align: left">Number</td>
-      <td style="text-align: left">The item in the search results to start with. The first item is 1. Defaults to 1.</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">callback</td>
-      <td style="text-align: left">String</td>
-      <td style="text-align: left">Name of a client side <a href="#callback_function">callback function</a>.</td>
-    </tr>
-  </tbody>
-</table>
-
+<table><thead><tr><th>Parameter</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">query</td><td style="text-align: left;">String</td><td style="text-align: left;">The search term(s). See <a href="http://labs.europeana.eu/api/query">Query Syntax</a> for information on forming complex queries and examples.</td></tr>
+<tr><td style="text-align: left;">profile</td><td style="text-align: left;">String</td><td style="text-align: left;">Profile parameter controls the format and richness of the response: <ul><li>minimal - minimal set of metadata</li><li>standard - TBD</li><li>facets - information about [facets](http://labs.europeana.eu/api/repository/#facets) is added. For the records the Standard profile is used.</li><li>breadcrumbs - information about the query is added in the form of [breadcrumbs](http://labs.europeana.eu/api/search/#breadcrumb). Facets are added as well; for the records the Standard profile is used.</li><li>portal - Standard, Facets, and Breadcrumb combined </li></ul></td></tr>
+<tr><td style="text-align: left;">qf</td><td style="text-align: left;">String</td><td style="text-align: left;">Facet filtering query. This parameter can be defined more than once. See <a href="http://labs.europeana.eu/api/query">Query Syntax</a> page for more information.</td></tr>
+<tr><td style="text-align: left;">rows</td><td style="text-align: left;">Number</td><td style="text-align: left;">The number of records to return. Maximum is 100. Defaults to 12.</td></tr>
+<tr><td style="text-align: left;">start</td><td style="text-align: left;">Number</td><td style="text-align: left;">The item in the search results to start with. The first item is 1. Defaults to 1.</td></tr>
+<tr><td style="text-align: left;">callback</td><td style="text-align: left;">String</td><td style="text-align: left;">Name of a client side <a href="#callback_function">callback function</a>.</td></tr>
+</tbody></table>
 <h2 id="response">Response</h2>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">Field</th>
-      <th style="text-align: left">Datatype</th>
-      <th style="text-align: left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">items</td>
-      <td style="text-align: left">Array (<a href="#item">Item</a>)</td>
-      <td style="text-align: left">This is a collection of search results. Each item is represented by a summary of the metadata record. The actual content is dependent of the profile parameter.</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">facets</td>
-      <td style="text-align: left">Array (<a href="#facet">Facet</a>)</td>
-      <td style="text-align: left">A collection of facets that describe the resultant dataset.</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">breadcrumbs</td>
-      <td style="text-align: left">Array (<a href="#breadcrumb">Breadcrumb</a>)</td>
-      <td style="text-align: left">A collection of search queries that were applied in this call.</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">itemsCount</td>
-      <td style="text-align: left">Number</td>
-      <td style="text-align: left">The number of retrieved records</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">totalResults</td>
-      <td style="text-align: left">Number</td>
-      <td style="text-align: left">The total number of results</td>
-    </tr>
-  </tbody>
-</table>
-
+<table><thead><tr><th>Field</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">items</td><td style="text-align: left;">Array (<a href="#item">Item</a>)</td><td style="text-align: left;">This is a collection of search results. Each item is represented by a summary of the metadata record. The actual content is dependent of the profile parameter.</td></tr>
+<tr><td style="text-align: left;">facets</td><td style="text-align: left;">Array (<a href="#facet">Facet</a>)</td><td style="text-align: left;">A collection of facets that describe the resultant dataset.</td></tr>
+<tr><td style="text-align: left;">breadcrumbs</td><td style="text-align: left;">Array (<a href="#breadcrumb">Breadcrumb</a>)</td><td style="text-align: left;">A collection of search queries that were applied in this call.</td></tr>
+<tr><td style="text-align: left;">itemsCount</td><td style="text-align: left;">Number</td><td style="text-align: left;">The number of retrieved records</td></tr>
+<tr><td style="text-align: left;">totalResults</td><td style="text-align: left;">Number</td><td style="text-align: left;">The total number of results</td></tr>
+</tbody></table>
 <h3 id="item">item</h3>
 
 <p>Each item is a search result and is represented by a summary of its metadata record. The actual content depends of the profile parameter.</p>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">Field</th>
-      <th style="text-align: left">Datatype</th>
-      <th style="text-align: left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">completeness</td>
-      <td style="text-align: left">Number</td>
-      <td style="text-align: left">A number from 1 to 10 that is an internal measure of the metadata quality. It is based on the availability of mandatory and optional schema fields.</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">dataProvider<sup>*</sup></td>
-      <td style="text-align: left">Array (String)</td>
-      <td style="text-align: left">The names of Europeana Data Providers who provided the object.</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">europeanaCollectionName<sup>*</sup></td>
-      <td style="text-align: left">Array (String)</td>
-      <td style="text-align: left">The names of the Europeana collections that contain the item</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">id<sup>*</sup></td>
-      <td style="text-align: left">String</td>
-      <td style="text-align: left">The Europeana ID of the record.</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">guid<sup>*</sup></td>
-      <td style="text-align: left">String</td>
-      <td style="text-align: left">A link to the object page on the Europeana portal to be used by client applications.</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">link<sup>*</sup></td>
-      <td style="text-align: left">String</td>
-      <td style="text-align: left">A link to the API object call. This link should be used to retrieve the full metadata object.</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">provider<sup>*</sup></td>
-      <td style="text-align: left">String</td>
-      <td style="text-align: left">The name or identifier of the provider of the object.</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">rights<sup>*</sup></td>
-      <td style="text-align: left">Array (String)</td>
-      <td style="text-align: left">A collection of URLs referring to the object rights.</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">type<sup>*</sup></td>
-      <td style="text-align: left">String</td>
-      <td style="text-align: left">The type of the provided object (TEXT, VIDEO, SOUND, IMAGE, 3D)</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">dcCreator</td>
-      <td style="text-align: left">Array (String)</td>
-      <td style="text-align: left">A collection entities primarily responsible for making the resource.</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">edmConceptLabel</td>
-      <td style="text-align: left">String</td>
-      <td style="text-align: left">The label of the SKOS Concept of the record. Find more in <a href="http://pro.europeana.eu/documents/900548/bb6b51df-ad11-4a78-8d8a-44cc41810f22">EDM Definition</a></td>
-    </tr>
-    <tr>
-      <td style="text-align: left">edmPreview</td>
-      <td style="text-align: left">String</td>
-      <td style="text-align: left">A link to the representation of the object on Europeana.</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">edmTimespanLabel</td>
-      <td style="text-align: left">String</td>
-      <td style="text-align: left">The label of EDM Time Span object of the record. Find more in <a href="http://pro.europeana.eu/documents/900548/bb6b51df-ad11-4a78-8d8a-44cc41810f22">EDM Definition</a></td>
-    </tr>
-    <tr>
-      <td style="text-align: left">language</td>
-      <td style="text-align: left">Array (String)</td>
-      <td style="text-align: left">Languages assigned to the resource with reference to the Provider.  Usually, this field contains the languages of the metadata of the record.</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">title</td>
-      <td style="text-align: left">Array (String)</td>
-      <td style="text-align: left">The main and alternative titles of the item.</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">year</td>
-      <td style="text-align: left">Array (String)</td>
-      <td style="text-align: left">A point of time associated with an event in the life of the original analog or born digital object. Find more in <a href="http://pro.europeana.eu/documents/900548/bb6b51df-ad11-4a78-8d8a-44cc41810f22">EDM Definition</a></td>
-    </tr>
-  </tbody>
-</table>
-
+<table><thead><tr><th>Field</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">completeness</td><td style="text-align: left;">Number</td><td style="text-align: left;">A number from 1 to 10 that is an internal measure of the metadata quality. It is based on the availability of mandatory and optional schema fields.</td></tr>
+<tr><td style="text-align: left;">dataProvider<sup>*</sup></td><td style="text-align: left;">Array (String)</td><td style="text-align: left;">The names of Europeana Data Providers who provided the object.</td></tr>
+<tr><td style="text-align: left;">europeanaCollectionName<sup>*</sup></td><td style="text-align: left;">Array (String)</td><td style="text-align: left;">The names of the Europeana collections that contain the item</td></tr>
+<tr><td style="text-align: left;">id<sup>*</sup></td><td style="text-align: left;">String</td><td style="text-align: left;">The Europeana ID of the record.</td></tr>
+<tr><td style="text-align: left;">guid<sup>*</sup></td><td style="text-align: left;">String</td><td style="text-align: left;">A link to the object page on the Europeana portal to be used by client applications.</td></tr>
+<tr><td style="text-align: left;">link<sup>*</sup></td><td style="text-align: left;">String</td><td style="text-align: left;">A link to the API object call. This link should be used to retrieve the full metadata object.</td></tr>
+<tr><td style="text-align: left;">provider<sup>*</sup></td><td style="text-align: left;">String</td><td style="text-align: left;">The name or identifier of the provider of the object.</td></tr>
+<tr><td style="text-align: left;">rights<sup>*</sup></td><td style="text-align: left;">Array (String)</td><td style="text-align: left;">A collection of URLs referring to the object rights.</td></tr>
+<tr><td style="text-align: left;">type<sup>*</sup></td><td style="text-align: left;">String</td><td style="text-align: left;">The type of the provided object (TEXT, VIDEO, SOUND, IMAGE, 3D)</td></tr>
+<tr><td style="text-align: left;">dcCreator</td><td style="text-align: left;">Array (String)</td><td style="text-align: left;">A collection entities primarily responsible for making the resource.</td></tr>
+<tr><td style="text-align: left;">edmConceptLabel</td><td style="text-align: left;">String</td><td style="text-align: left;">The label of the SKOS Concept of the record. Find more in <a href="http://pro.europeana.eu/documents/900548/bb6b51df-ad11-4a78-8d8a-44cc41810f22">EDM Definition</a></td></tr>
+<tr><td style="text-align: left;">edmPreview</td><td style="text-align: left;">String</td><td style="text-align: left;">A link to the representation of the object on Europeana.</td></tr>
+<tr><td style="text-align: left;">edmTimespanLabel</td><td style="text-align: left;">String</td><td style="text-align: left;">The label of EDM Time Span object of the record. Find more in <a href="http://pro.europeana.eu/documents/900548/bb6b51df-ad11-4a78-8d8a-44cc41810f22">EDM Definition</a></td></tr>
+<tr><td style="text-align: left;">language</td><td style="text-align: left;">Array (String)</td><td style="text-align: left;">Languages assigned to the resource with reference to the Provider. Usually, this field contains the languages of the metadata of the record.</td></tr>
+<tr><td style="text-align: left;">title</td><td style="text-align: left;">Array (String)</td><td style="text-align: left;">The main and alternative titles of the item.</td></tr>
+<tr><td style="text-align: left;">year</td><td style="text-align: left;">Array (String)</td><td style="text-align: left;">A point of time associated with an event in the life of the original analog or born digital object. Find more in <a href="http://pro.europeana.eu/documents/900548/bb6b51df-ad11-4a78-8d8a-44cc41810f22">EDM Definition</a></td></tr>
+</tbody></table>
 <h3 id="breadcrumb">breadcrumb</h3>
 
 <p>A collection of search queries that were applied in this call.</p>
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">Field</th>
-      <th style="text-align: left">Datatype</th>
-      <th style="text-align: left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">display</td>
-      <td style="text-align: left">String</td>
-      <td style="text-align: left">Human-readable description of the search</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">param</td>
-      <td style="text-align: left">String</td>
-      <td style="text-align: left">The search parameter name (<strong>query</strong> or <strong>qf</strong>)</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">value</td>
-      <td style="text-align: left">String</td>
-      <td style="text-align: left">The search parameter value</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">href</td>
-      <td style="text-align: left">String</td>
-      <td style="text-align: left">The search part of the URL which can be reused in further calls</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">last</td>
-      <td style="text-align: left">Boolean</td>
-      <td style="text-align: left">Boolean value indicating whether the current breadcrumb is the last one</td>
-    </tr>
-  </tbody>
-</table>
-
+<table><thead><tr><th>Field</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">display</td><td style="text-align: left;">String</td><td style="text-align: left;">Human-readable description of the search</td></tr>
+<tr><td style="text-align: left;">param</td><td style="text-align: left;">String</td><td style="text-align: left;">The search parameter name (<strong>query</strong> or <strong>qf</strong>)</td></tr>
+<tr><td style="text-align: left;">value</td><td style="text-align: left;">String</td><td style="text-align: left;">The search parameter value</td></tr>
+<tr><td style="text-align: left;">href</td><td style="text-align: left;">String</td><td style="text-align: left;">The search part of the URL which can be reused in further calls</td></tr>
+<tr><td style="text-align: left;">last</td><td style="text-align: left;">Boolean</td><td style="text-align: left;">Boolean value indicating whether the current breadcrumb is the last one</td></tr>
+</tbody></table>
 <h3 id="facet">facet</h3>
 
 <p>A collection of facets that describe the resultant dataset.</p>
+<table><thead><tr><th>Field</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">name</td><td style="text-align: left;">String</td><td style="text-align: left;">The name of the facet (COUNTRY, DATA_PROVIDER, LANGUAGE, PROVIDER, RIGHTS, TYPE, UGC, YEAR)</td></tr>
+<tr><td style="text-align: left;">fields<sup>*</sup></td><td style="text-align: left;">Array (field)</td><td style="text-align: left;">A collection of facet fields. Each field is an object that has a label (String) and a count of objects (Number).</td></tr>
+</tbody></table>
+<p><sup>*</sup><em>indicates an obligatory property</em></p>
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">Field</th>
-      <th style="text-align: left">Datatype</th>
-      <th style="text-align: left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">name</td>
-      <td style="text-align: left">String</td>
-      <td style="text-align: left">The name of the facet (COUNTRY, DATA_PROVIDER, LANGUAGE, PROVIDER, RIGHTS, TYPE, UGC, YEAR)</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">fields<sup>*</sup></td>
-      <td style="text-align: left">Array (field)</td>
-      <td style="text-align: left">A collection of facet fields. Each field is an object that has a label (String) and a count of objects (Number).</td>
-    </tr>
-  </tbody>
-</table>
-
-<p><sup>*</sup> <em>indicates an obligatory property</em></p>
-
-<h2 id="callback-function">Callback Function</h2>
-<!--
+<h2 id="callback_function">Callback Function</h2><!--
 --></div>
 </div>
 ﻿<!-- Begin Footer -->

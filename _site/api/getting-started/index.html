@@ -143,149 +143,48 @@
 
 <h2 id="request">Request</h2>
 
-<p>Every Europeana Search API call is an HTTP request in a specified format that is sent to the Europeana API service.
-The API root URL is located at: </p>
+<p>Every Europeana Search API call is an HTTP request in a specified format that is sent to the Europeana API service. The API root URL is located at:</p>
 
-<pre><code>http://www.europeana.eu/api/v2
-</code></pre>
+<pre><code>http://www.europeana.eu/api/v2</code></pre>
 
 <p>For obligatory request parameters look into the documentation of specific calls. The <a href="http://labs.europeana.eu/api/authentication/">authentication</a> section provides information on the obligatory authentication parameter <em>wskey</em>.</p>
 
 <h2 id="response">Response</h2>
 
 <p>A response to an API call will always contain a number of standard fields that precede the fields specific for the call. The standard part contains the following fields:</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Field</th>
-      <th style="text-align: left">Datatype</th>
-      <th style="text-align: left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>apikey</td>
-      <td style="text-align: left">String</td>
-      <td style="text-align: left">the authentication parameter sent out by the client (the wskey parameter)</td>
-    </tr>
-    <tr>
-      <td>action</td>
-      <td style="text-align: left">String</td>
-      <td style="text-align: left">the name of the API method that was called</td>
-    </tr>
-    <tr>
-      <td>success</td>
-      <td style="text-align: left">Boolean</td>
-      <td style="text-align: left">a boolean (true/false) flag denoting the successful execution of the call</td>
-    </tr>
-    <tr>
-      <td>statsDuration</td>
-      <td style="text-align: left">Number</td>
-      <td style="text-align: left">the time (in milliseconds) taken to serve the request</td>
-    </tr>
-    <tr>
-      <td>requestNumber</td>
-      <td style="text-align: left">Number</td>
-      <td style="text-align: left">a positive number denoting the number of request by this API key within the last 24 hours</td>
-    </tr>
-    <tr>
-      <td>error</td>
-      <td style="text-align: left">String</td>
-      <td style="text-align: left">if the call was not successful this fields will contain a detailed text message. See <a href="labs.europeana.eu/documentation/error-codes.html">Error Codes</a> for more information.</td>
-    </tr>
-    <tr>
-      <td>params</td>
-      <td style="text-align: left">Object</td>
-      <td style="text-align: left">original request parameters. If an invalid request parameter was submitted, this response parameter will contain the default value (see individual calls for the default values). Shown up only if the profile parameter contains “params”.</td>
-    </tr>
-  </tbody>
-</table>
-
+<table><thead><tr><th>Field</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">apikey</td><td style="text-align: left;">String</td><td style="text-align: left;">the authentication parameter sent out by the client (the wskey parameter)</td></tr>
+<tr><td style="text-align: left;">action</td><td style="text-align: left;">String</td><td style="text-align: left;">the name of the API method that was called</td></tr>
+<tr><td style="text-align: left;">success</td><td style="text-align: left;">Boolean</td><td style="text-align: left;">a boolean (true/false) flag denoting the successful execution of the call</td></tr>
+<tr><td style="text-align: left;">statsDuration</td><td style="text-align: left;">Number</td><td style="text-align: left;">the time (in milliseconds) taken to serve the request</td></tr>
+<tr><td style="text-align: left;">requestNumber</td><td style="text-align: left;">Number</td><td style="text-align: left;">a positive number denoting the number of request by this API key within the last 24 hours</td></tr>
+<tr><td style="text-align: left;">error</td><td style="text-align: left;">String</td><td style="text-align: left;">if the call was not successful this fields will contain a detailed text message. See <a href="labs.europeana.eu/documentation/error-codes.html">Error Codes</a> for more information.</td></tr>
+<tr><td style="text-align: left;">params</td><td style="text-align: left;">Object</td><td style="text-align: left;">original request parameters. If an invalid request parameter was submitted, this response parameter will contain the default value (see individual calls for the default values). Shown up only if the profile parameter contains “params”.</td></tr>
+</tbody></table>
 <h2 id="datatypes">Datatypes</h2>
 
 <p>Europeana API uses the following datatypes:</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>Datatype</th>
-      <th style="text-align: left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>Number</td>
-      <td style="text-align: left">integer or double precision floating-point number</td>
-    </tr>
-    <tr>
-      <td>String</td>
-      <td style="text-align: left">double-quoted Unicode, with backslash escaping</td>
-    </tr>
-    <tr>
-      <td>Boolean</td>
-      <td style="text-align: left">true or false</td>
-    </tr>
-    <tr>
-      <td>Array</td>
-      <td style="text-align: left">an ordered sequence of values, comma-separated and enclosed in square brackets; the values do not need to be of the same type</td>
-    </tr>
-    <tr>
-      <td>Array([Datatype])</td>
-      <td style="text-align: left">an ordered sequence values of Datatype (e.g. String or Object), comma-separated and enclosed in square brackets</td>
-    </tr>
-    <tr>
-      <td>Object</td>
-      <td style="text-align: left">an unordered collection of key:value pairs with the ‘:’ character separating the key and the value, comma-separated and enclosed in curly braces; the keys must be strings and should be distinct from each other</td>
-    </tr>
-    <tr>
-      <td>LangMap</td>
-      <td style="text-align: left">TBD</td>
-    </tr>
-  </tbody>
-</table>
-
-<h2 id="error-codes">Error Codes</h2>
+<table><thead><tr><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">Number</td><td style="text-align: left;">integer or double precision floating-point number</td></tr>
+<tr><td style="text-align: left;">String</td><td style="text-align: left;">double-quoted Unicode, with backslash escaping</td></tr>
+<tr><td style="text-align: left;">Boolean</td><td style="text-align: left;">true or false</td></tr>
+<tr><td style="text-align: left;">Array</td><td style="text-align: left;">an ordered sequence of values, comma-separated and enclosed in square brackets; the values do not need to be of the same type</td></tr>
+<tr><td style="text-align: left;">Array([Datatype])</td><td style="text-align: left;">an ordered sequence values of Datatype (e.g. String or Object), comma-separated and enclosed in square brackets</td></tr>
+<tr><td style="text-align: left;">Object</td><td style="text-align: left;">an unordered collection of key:value pairs with the ‘:’ character separating the key and the value, comma-separated and enclosed in curly braces; the keys must be strings and should be distinct from each other</td></tr>
+<tr><td style="text-align: left;">LangMap</td><td style="text-align: left;">TBD</td></tr>
+</tbody></table>
+<h2 id="error_codes">Error Codes</h2>
 
 <p>An error during processing of an API method is reported by (1) a relevant HTTP status code, (2) a value of the success field and (3) a meaningful error message in the error field (see the Response section).</p>
 
 <p>The following HTTP status codes are returned:</p>
+<table><thead><tr><th>HTTP Status Code</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">200</td><td style="text-align: left;">The request was executed successfully.</td></tr>
+<tr><td style="text-align: left;">401</td><td style="text-align: left;">Authentication credentials were missing or authentication failed.</td></tr>
+<tr><td style="text-align: left;">404</td><td style="text-align: left;">The requested record was not found.</td></tr>
+<tr><td style="text-align: left;">429</td><td style="text-align: left;">The request could be served because the application has reached its usage limit.</td></tr>
+<tr><td style="text-align: left;">500</td><td style="text-align: left;">Internal Server Error. Something has gone wrong, tell us!</td></tr>
+</tbody></table>
+<h2 id="callback_function">Callback Function</h2>
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">HTTP Status Code</th>
-      <th style="text-align: left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">200</td>
-      <td style="text-align: left">The request was executed successfully.</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">401</td>
-      <td style="text-align: left">Authentication credentials were missing or authentication failed.</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">404</td>
-      <td style="text-align: left">The requested record was not found.</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">429</td>
-      <td style="text-align: left">The request could be served because the application has reached its usage limit.</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">500</td>
-      <td style="text-align: left">Internal Server Error. Something has gone wrong, tell us!</td>
-    </tr>
-  </tbody>
-</table>
-
-<h2 id="callback-function">Callback Function</h2>
-
-<p>TBD</p>
-<!--
+<p>TBD</p><!--
 --></div>
 </div>
 ﻿<!-- Begin Footer -->
