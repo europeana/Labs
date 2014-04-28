@@ -139,7 +139,59 @@
 
 		
 	<div id="documentation" class="prose grid__item palm--one-whole push--palm-none one-half"><!--
-	--><div class="maruku_toc"><ul><li><a href="#profile">Profile</a><ul><li><a href="#response">Response</a></li></ul></li><li><a href="#saved_items">Saved Items</a><ul><li><a href="#get">Get</a><ul><li><a href="#request">Request</a></li><li><a href="#response_2">Response</a></li><li><a href="#saveditem">SavedItem</a></li></ul></li><li><a href="#create">Create</a><ul><li><a href="#request_2">Request</a></li></ul></li><li><a href="#delete">Delete</a><ul><li><a href="#request_3">Request</a></li></ul></li></ul></li><li><a href="#tags">Tags</a><ul><li><a href="#get_2">Get</a><ul><li><a href="#request_4">Request</a></li><li><a href="#response_3">Response</a></li><li><a href="#tag">Tag</a></li></ul></li><li><a href="#get_tag_cloud">Get Tag Cloud</a><ul><li><a href="#request_5">Request</a></li><li><a href="#response_4">Response</a></li><li><a href="#tagcloud">TagCloud</a></li></ul></li><li><a href="#create_2">Create</a><ul><li><a href="#request_6">Request</a></li></ul></li><li><a href="#delete_2">Delete</a></li></ul></li><li><a href="#request_7">Request</a></li><li><a href="#saved_searches">Saved Searches</a><ul><li><a href="#get_3">Get</a></li><li><a href="#response_5">Response</a></li><li><a href="#savedsearch">SavedSearch</a></li><li><a href="#create_3">Create</a></li><li><a href="#delete_3">Delete</a></li></ul></li></ul></div>
+	--><ul id="markdown-toc">
+  <li><a href="#profile">Profile</a>    <ul>
+      <li><a href="#response">Response</a></li>
+    </ul>
+  </li>
+  <li><a href="#saved-items">Saved Items</a>    <ul>
+      <li><a href="#get">Get</a>        <ul>
+          <li><a href="#request">Request</a></li>
+          <li><a href="#response-1">Response</a></li>
+          <li><a href="#saveditem">SavedItem</a></li>
+        </ul>
+      </li>
+      <li><a href="#create">Create</a>        <ul>
+          <li><a href="#request-1">Request</a></li>
+        </ul>
+      </li>
+      <li><a href="#delete">Delete</a>        <ul>
+          <li><a href="#request-2">Request</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li><a href="#tags">Tags</a>    <ul>
+      <li><a href="#get-1">Get</a>        <ul>
+          <li><a href="#request-3">Request</a></li>
+          <li><a href="#response-2">Response</a></li>
+          <li><a href="#tag">Tag</a></li>
+        </ul>
+      </li>
+      <li><a href="#get-tag-cloud">Get Tag Cloud</a>        <ul>
+          <li><a href="#request-4">Request</a></li>
+          <li><a href="#response-3">Response</a></li>
+          <li><a href="#tagcloud">TagCloud</a></li>
+        </ul>
+      </li>
+      <li><a href="#create-1">Create</a>        <ul>
+          <li><a href="#request-5">Request</a></li>
+        </ul>
+      </li>
+      <li><a href="#delete-1">Delete</a></li>
+    </ul>
+  </li>
+  <li><a href="#request-6">Request</a></li>
+  <li><a href="#saved-searches">Saved Searches</a>    <ul>
+      <li><a href="#get-2">Get</a></li>
+      <li><a href="#response-4">Response</a></li>
+      <li><a href="#savedsearch">SavedSearch</a></li>
+      <li><a href="#create-2">Create</a></li>
+      <li><a href="#delete-2">Delete</a></li>
+    </ul>
+  </li>
+</ul>
+
 <p>The MyEuropeana part of the API allows you accessing personal user data stored on MyEuropeana accounts.</p>
 
 <p>There are two methods to access MyEuropeana user data.</p>
@@ -153,28 +205,101 @@
 <p>Retrieve your MyEuropeana profile, including statistics about user’s activity. This call is read-only.</p>
 
 <pre><code>GET http://europeana.eu/api/v2/user/profile.json
-GET http://europeana.eu/api/v2/mydata/profile.json</code></pre>
+GET http://europeana.eu/api/v2/mydata/profile.json
+</code></pre>
 
 <h3 id="response">Response</h3>
 
 <p>Fields containing no data are not included in JSON response. We added description where needed.</p>
-<table><thead><tr><th>Field</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">email</td><td style="text-align: left;">String</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">userName</td><td style="text-align: left;">String</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">registrationDate</td><td style="text-align: left;">String</td><td style="text-align: left;">TBD (In timestamp format (Date.toLong))</td></tr>
-<tr><td style="text-align: left;">lastLogin</td><td style="text-align: left;">String</td><td style="text-align: left;">(In timestamp format (Date.toLong))</td></tr>
-<tr><td style="text-align: left;">firstName</td><td style="text-align: left;">String</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">lastName</td><td style="text-align: left;">String</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">company</td><td style="text-align: left;">String</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">country</td><td style="text-align: left;">String</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">phone</td><td style="text-align: left;">String</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">address</td><td style="text-align: left;">String</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">website</td><td style="text-align: left;">String</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">fieldOfWork</td><td style="text-align: left;">String</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">nrOfSavedItems</td><td style="text-align: left;">Number</td><td style="text-align: left;">The number of saved items</td></tr>
-<tr><td style="text-align: left;">nrOfSavedSearches</td><td style="text-align: left;">Number</td><td style="text-align: left;">The number of saved searches</td></tr>
-<tr><td style="text-align: left;">nrOfSocialTags</td><td style="text-align: left;">Number</td><td style="text-align: left;">The number of tags</td></tr>
-</tbody></table>
-<h2 id="saved_items">Saved Items</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Field</th>
+      <th style="text-align: left">Datatype</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">email</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">userName</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">registrationDate</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left">TBD (In timestamp format (Date.toLong))</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">lastLogin</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left">(In timestamp format (Date.toLong))</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">firstName</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">lastName</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">company</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">country</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">phone</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">address</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">website</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">fieldOfWork</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">nrOfSavedItems</td>
+      <td style="text-align: left">Number</td>
+      <td style="text-align: left">The number of saved items</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">nrOfSavedSearches</td>
+      <td style="text-align: left">Number</td>
+      <td style="text-align: left">The number of saved searches</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">nrOfSocialTags</td>
+      <td style="text-align: left">Number</td>
+      <td style="text-align: left">The number of tags</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="saved-items">Saved Items</h2>
 
 <p>Retrieve or modify saved items (favorites) at your MyEuropeana account.</p>
 
@@ -183,158 +308,535 @@ GET http://europeana.eu/api/v2/mydata/profile.json</code></pre>
 <p>Retrieve saved items.</p>
 
 <pre><code>GET http://europeana.eu/api/v2/user/saveditem.json
-GET http://europeana.eu/api/v2/mydata/saveditem.json</code></pre>
+GET http://europeana.eu/api/v2/mydata/saveditem.json
+</code></pre>
 
 <h4 id="request">Request</h4>
-<table><thead><tr><th>Parameter</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">action</td><td style="text-align: left;">String</td><td style="text-align: left;">Action parameter (should be LIST for this call)</td></tr>
-<tr><td style="text-align: left;">europeanaID</td><td style="text-align: left;">String</td><td style="text-align: left;">(optional) The ID of a saved item</td></tr>
-</tbody></table>
-<h4 id="response_2">Response</h4>
-<table><thead><tr><th>Field</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">username</td><td style="text-align: left;">String</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">items</td><td style="text-align: left;">Array(<a href="http://labs.europeana.eu/api/myeuropeana/saved_item">SavedItem</a>)</td><td style="text-align: left;">Collection of saved items</td></tr>
-</tbody></table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Parameter</th>
+      <th style="text-align: left">Datatype</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">action</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left">Action parameter (should be LIST for this call)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">europeanaID</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left">(optional) The ID of a saved item</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="response-1">Response</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Field</th>
+      <th style="text-align: left">Datatype</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">username</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">items</td>
+      <td style="text-align: left">Array(<a href="http://labs.europeana.eu/api/myeuropeana/saved_item">SavedItem</a>)</td>
+      <td style="text-align: left">Collection of saved items</td>
+    </tr>
+  </tbody>
+</table>
+
 <h4 id="saveditem">SavedItem</h4>
 
 <p>Information about one saved item.</p>
-<table><thead><tr><th>Field</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">id</td><td style="text-align: left;">Number</td><td style="text-align: left;">The unique ID of this item</td></tr>
-<tr><td style="text-align: left;">europeanaID</td><td style="text-align: left;">String</td><td style="text-align: left;"><a href="http://labs.europeana.eu/api/data-hierarchy/#identifying_records">Europeana ID</a> of the item</td></tr>
-<tr><td style="text-align: left;">guid</td><td style="text-align: left;">String</td><td style="text-align: left;">Link to the item on Europeana Portal</td></tr>
-<tr><td style="text-align: left;">link</td><td style="text-align: left;">String</td><td style="text-align: left;">Link to the JSON representation of the item</td></tr>
-<tr><td style="text-align: left;">title</td><td style="text-align: left;">String</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">edmPreview</td><td style="text-align: left;">String</td><td style="text-align: left;">Link to the content thumbnail, if available</td></tr>
-<tr><td style="text-align: left;">type</td><td style="text-align: left;">String</td><td style="text-align: left;">Media type of the record: IMAGE / VIDEO / TEXT / SOUND / 3D</td></tr>
-<tr><td style="text-align: left;">dateSaved</td><td style="text-align: left;">String</td><td style="text-align: left;">Creation date</td></tr>
-</tbody></table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Field</th>
+      <th style="text-align: left">Datatype</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">id</td>
+      <td style="text-align: left">Number</td>
+      <td style="text-align: left">The unique ID of this item</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">europeanaID</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left"><a href="http://labs.europeana.eu/api/data-hierarchy/#identifying_records">Europeana ID</a> of the item</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">guid</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left">Link to the item on Europeana Portal</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">link</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left">Link to the JSON representation of the item</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">title</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edmPreview</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left">Link to the content thumbnail, if available</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">type</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left">Media type of the record: IMAGE / VIDEO / TEXT / SOUND / 3D</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dateSaved</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left">Creation date</td>
+    </tr>
+  </tbody>
+</table>
+
 <h3 id="create">Create</h3>
 
 <p>Creates a new saved item.</p>
 
 <pre><code>POST http://europeana.eu/api/v2/user/saveditem.json
-POST http://europeana.eu/api/v2/mydata/saveditem.json</code></pre>
+POST http://europeana.eu/api/v2/mydata/saveditem.json
+</code></pre>
 
-<h4 id="request_2">Request</h4>
-<table><thead><tr><th>Parameter</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">action</td><td style="text-align: left;">String</td><td style="text-align: left;">Action parameter (should be CREATE for this call)</td></tr>
-<tr><td style="text-align: left;">europeanaid</td><td style="text-align: left;">String</td><td style="text-align: left;">TBD: (optional) check the existance of a specific saved item</td></tr>
-</tbody></table>
+<h4 id="request-1">Request</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Parameter</th>
+      <th style="text-align: left">Datatype</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">action</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left">Action parameter (should be CREATE for this call)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">europeanaid</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left">TBD: (optional) check the existance of a specific saved item</td>
+    </tr>
+  </tbody>
+</table>
+
 <h3 id="delete">Delete</h3>
 
 <p>Deletes a saved item.</p>
 
 <pre><code>DELETE http://europeana.eu/api/v2/user/saveditem.json
-DELETE http://europeana.eu/api/v2/mydata/saveditem.json</code></pre>
+DELETE http://europeana.eu/api/v2/mydata/saveditem.json
+</code></pre>
 
-<h4 id="request_3">Request</h4>
-<table><thead><tr><th>Parameter</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">action</td><td style="text-align: left;">String</td><td style="text-align: left;">Action parameter (should be DELETE for this call)</td></tr>
-<tr><td style="text-align: left;">itemid</td><td style="text-align: left;">String</td><td style="text-align: left;">The ID of the item to delete (use the IDs returned by LIST action)</td></tr>
-<tr><td style="text-align: left;">europeanaid</td><td style="text-align: left;">String</td><td style="text-align: left;"><a href="http://labs.europeana.eu/api/data-hierarchy/#identifying_records">Europeana ID</a> of the record to delete (TBD)</td></tr>
-</tbody></table>
+<h4 id="request-2">Request</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Parameter</th>
+      <th style="text-align: left">Datatype</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">action</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left">Action parameter (should be DELETE for this call)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">itemid</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left">The ID of the item to delete (use the IDs returned by LIST action)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">europeanaid</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left"><a href="http://labs.europeana.eu/api/data-hierarchy/#identifying_records">Europeana ID</a> of the record to delete (TBD)</td>
+    </tr>
+  </tbody>
+</table>
+
 <h2 id="tags">Tags</h2>
 
 <p>Retrieve information about, create, or delete tags at MyEuropeana account.</p>
 
-<h3 id="get_2">Get</h3>
+<h3 id="get-1">Get</h3>
 
 <p>Get a tag.</p>
 
 <pre><code>GET http://europeana.eu/api/v2/user/tag.json
-GET http://europeana.eu/api/v2/mydata/tag.json</code></pre>
+GET http://europeana.eu/api/v2/mydata/tag.json
+</code></pre>
 
-<h4 id="request_4">Request</h4>
-<table><thead><tr><th>Parameter</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">action</td><td style="text-align: left;">String</td><td style="text-align: left;">Action parameter (should be LIST for this call)</td></tr>
-<tr><td style="text-align: left;">europeanaid</td><td style="text-align: left;">String</td><td style="text-align: left;"></td></tr>
-</tbody></table>
-<h4 id="response_3">Response</h4>
-<table><thead><tr><th>Field</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">username</td><td style="text-align: left;">String</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">items</td><td style="text-align: left;">Array(<a href="http://labs.europeana.eu/api/myeuropeana/tag">Tag</a>)</td><td style="text-align: left;"></td></tr>
-</tbody></table>
+<h4 id="request-3">Request</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Parameter</th>
+      <th style="text-align: left">Datatype</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">action</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left">Action parameter (should be LIST for this call)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">europeanaid</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="response-2">Response</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Field</th>
+      <th style="text-align: left">Datatype</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">username</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">items</td>
+      <td style="text-align: left">Array(<a href="http://labs.europeana.eu/api/myeuropeana/tag">Tag</a>)</td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+</table>
+
 <h4 id="tag">Tag</h4>
 
 <p>Information about a single tag.</p>
 
 <p>TBD</p>
 
-<h3 id="get_tag_cloud">Get Tag Cloud</h3>
+<h3 id="get-tag-cloud">Get Tag Cloud</h3>
 
-<h4 id="request_5">Request</h4>
-<table><thead><tr><th>Parameter</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">action</td><td style="text-align: left;">String</td><td style="text-align: left;">Action parameter (should be TAGCLOUD for this call)</td></tr>
-</tbody></table>
-<h4 id="response_4">Response</h4>
-<table><thead><tr><th>Field</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">username</td><td style="text-align: left;">String</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">items</td><td style="text-align: left;">Array(<a href="http://labs.europeana.eu/api/myeuropeana/tagcloud">TagCloud</a>)</td><td style="text-align: left;"></td></tr>
-</tbody></table>
+<h4 id="request-4">Request</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Parameter</th>
+      <th style="text-align: left">Datatype</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">action</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left">Action parameter (should be TAGCLOUD for this call)</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="response-3">Response</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Field</th>
+      <th style="text-align: left">Datatype</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">username</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">items</td>
+      <td style="text-align: left">Array(<a href="http://labs.europeana.eu/api/myeuropeana/tagcloud">TagCloud</a>)</td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+</table>
+
 <h4 id="tagcloud">TagCloud</h4>
-<table><thead><tr><th>Field</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">label</td><td style="text-align: left;">String</td><td style="text-align: left;">The tag name</td></tr>
-<tr><td style="text-align: left;">count</td><td style="text-align: left;">Number</td><td style="text-align: left;">Tag count</td></tr>
-</tbody></table>
-<h3 id="create_2">Create</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Field</th>
+      <th style="text-align: left">Datatype</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">label</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left">The tag name</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">count</td>
+      <td style="text-align: left">Number</td>
+      <td style="text-align: left">Tag count</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="create-1">Create</h3>
 
 <p>Create a new tag.</p>
 
 <pre><code>GET http://europeana.eu/api/v2/user/tag.json
-GET http://europeana.eu/api/v2/mydata/tag.json</code></pre>
+GET http://europeana.eu/api/v2/mydata/tag.json
+</code></pre>
 
-<h4 id="request_6">Request</h4>
-<table><thead><tr><th>Parameter</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">action</td><td style="text-align: left;">String</td><td style="text-align: left;">Action parameter (should be CREATE for this call)</td></tr>
-<tr><td style="text-align: left;">europeanaid</td><td style="text-align: left;">String</td><td style="text-align: left;">TBD</td></tr>
-<tr><td style="text-align: left;">tag</td><td style="text-align: left;">String</td><td style="text-align: left;">The tag to add for this object</td></tr>
-</tbody></table>
-<h3 id="delete_2">Delete</h3>
+<h4 id="request-5">Request</h4>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Parameter</th>
+      <th style="text-align: left">Datatype</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">action</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left">Action parameter (should be CREATE for this call)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">europeanaid</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left">TBD</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">tag</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left">The tag to add for this object</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="delete-1">Delete</h3>
 
 <p>Delete a tag.</p>
 
 <pre><code>DELETE http://europeana.eu/api/v2/user/tag.json
-DELETE http://europeana.eu/api/v2/mydata/tag.json</code></pre>
+DELETE http://europeana.eu/api/v2/mydata/tag.json
+</code></pre>
 
-<h2 id="request_7">Request</h2>
-<table><thead><tr><th>Parameter</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">tagid</td><td style="text-align: left;">String</td><td style="text-align: left;">Delete by tagid (returned by LIST action)</td></tr>
-<tr><td style="text-align: left;">tag</td><td style="text-align: left;">String</td><td style="text-align: left;">Delete by tag name (can resut in deletion of many tags)</td></tr>
-<tr><td style="text-align: left;">europeanaid</td><td style="text-align: left;">String</td><td style="text-align: left;">Remove all the tags bound to this Europeana Record</td></tr>
-</tbody></table>
+<h2 id="request-6">Request</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Parameter</th>
+      <th style="text-align: left">Datatype</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">tagid</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left">Delete by tagid (returned by LIST action)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">tag</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left">Delete by tag name (can resut in deletion of many tags)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">europeanaid</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left">Remove all the tags bound to this Europeana Record</td>
+    </tr>
+  </tbody>
+</table>
+
 <ul>
-<li>tag and europeanaid parameters can be used together, tagid works only as single selection parameter.</li>
+  <li>tag and europeanaid parameters can be used together, tagid works only as single selection parameter.</li>
 </ul>
 
-<h2 id="saved_searches">Saved Searches</h2>
+<h2 id="saved-searches">Saved Searches</h2>
 
 <p>Retrieve or modify saved searches in your MyEuropeana account</p>
 
-<h3 id="get_3">Get</h3>
+<h3 id="get-2">Get</h3>
 
 <p>Get saved searches.</p>
 
 <pre><code>GET http://europeana.eu/api/v2/user/savedsearch.json
-GET http://europeana.eu/api/v2/mydata/savedsearch.json</code></pre>
+GET http://europeana.eu/api/v2/mydata/savedsearch.json
+</code></pre>
 
-<h3 id="response_5">Response</h3>
-<table><thead><tr><th>Field</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">username</td><td style="text-align: left;">String</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">items</td><td style="text-align: left;">Array(<a href="http://labs.europeana.eu/api/myeuropeana/savedsearch">SavedSearch</a>)</td><td style="text-align: left;">Collection of saved searches</td></tr>
-</tbody></table>
+<h3 id="response-4">Response</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Field</th>
+      <th style="text-align: left">Datatype</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">username</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">items</td>
+      <td style="text-align: left">Array(<a href="http://labs.europeana.eu/api/myeuropeana/savedsearch">SavedSearch</a>)</td>
+      <td style="text-align: left">Collection of saved searches</td>
+    </tr>
+  </tbody>
+</table>
+
 <h3 id="savedsearch">SavedSearch</h3>
-<table><thead><tr><th>Field</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">id</td><td style="text-align: left;">Number</td><td style="text-align: left;">ID of the saved search</td></tr>
-<tr><td style="text-align: left;">query</td><td style="text-align: left;">String</td><td style="text-align: left;">Query executed by this saved search</td></tr>
-<tr><td style="text-align: left;">queryString</td><td style="text-align: left;">String</td><td style="text-align: left;">Complete query string of this saved search, including refinements and paging</td></tr>
-<tr><td style="text-align: left;">dateSaved</td><td style="text-align: left;">Timestamp</td><td style="text-align: left;">Creation date</td></tr>
-</tbody></table>
-<h3 id="create_3">Create</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Field</th>
+      <th style="text-align: left">Datatype</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">id</td>
+      <td style="text-align: left">Number</td>
+      <td style="text-align: left">ID of the saved search</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">query</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left">Query executed by this saved search</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">queryString</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left">Complete query string of this saved search, including refinements and paging</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dateSaved</td>
+      <td style="text-align: left">Timestamp</td>
+      <td style="text-align: left">Creation date</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="create-2">Create</h3>
 
 <p>Create a new saved search. Read more on the search parameters in <a href="http://labs.europeana.eu/api/query/">Query Syntax</a>.</p>
 
 <pre><code>POST http://europeana.eu/api/v2/user/savedsearch.json
-POST http://europeana.eu/api/v2/mydata/savedsearch.json</code></pre>
-<table><thead><tr><th>Parameter</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">action</td><td style="text-align: left;">String</td><td style="text-align: left;">Action parameter (should be CREATE for this call)</td></tr>
-<tr><td style="text-align: left;">query</td><td style="text-align: left;">String</td><td style="text-align: left;">Main query parameter</td></tr>
-<tr><td style="text-align: left;">qf</td><td style="text-align: left;">Array(String)</td><td style="text-align: left;"><a href="http://labs.europeana.eu/api/query/#refinements">Refinements</a> array</td></tr>
-<tr><td style="text-align: left;">start</td><td style="text-align: left;">Number</td><td style="text-align: left;">Start number for paging</td></tr>
-</tbody></table>
-<h3 id="delete_3">Delete</h3>
+POST http://europeana.eu/api/v2/mydata/savedsearch.json
+</code></pre>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Parameter</th>
+      <th style="text-align: left">Datatype</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">action</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left">Action parameter (should be CREATE for this call)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">query</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left">Main query parameter</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">qf</td>
+      <td style="text-align: left">Array(String)</td>
+      <td style="text-align: left"><a href="http://labs.europeana.eu/api/query/#refinements">Refinements</a> array</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">start</td>
+      <td style="text-align: left">Number</td>
+      <td style="text-align: left">Start number for paging</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="delete-2">Delete</h3>
 
 <p>Delete a saved search.</p>
 
 <pre><code>DELETE http://europeana.eu/api/v2/user/savedsearch.json
-DELETE http://europeana.eu/api/v2/mydata/savedsearch.json</code></pre>
-<table><thead><tr><th>Parameter</th><th>Datatype</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">action</td><td style="text-align: left;">String</td><td style="text-align: left;">Action parameter (should be DELETE for this call)</td></tr>
-<tr><td style="text-align: left;">searchid</td><td style="text-align: left;">String</td><td style="text-align: left;">ID of the saved search (as returned by LIST action)</td></tr>
-</tbody></table><!--
+DELETE http://europeana.eu/api/v2/mydata/savedsearch.json
+</code></pre>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Parameter</th>
+      <th style="text-align: left">Datatype</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">action</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left">Action parameter (should be DELETE for this call)</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">searchid</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left">ID of the saved search (as returned by LIST action)</td>
+    </tr>
+  </tbody>
+</table>
+<!--
 --></div>
 </div>
 ﻿<!-- Begin Footer -->

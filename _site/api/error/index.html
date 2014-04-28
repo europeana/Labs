@@ -139,19 +139,49 @@
 
 		
 	<div id="documentation" class="prose grid__item palm--one-whole push--palm-none one-half"><!--
-	--><div class="maruku_toc"><ul></ul></div>
+	--><ul id="markdown-toc">
+  <li><a href="#usage-limit">Usage Limit</a></li>
+</ul>
+
 <p>An error during processing of an API method is reported by (1) a relevant HTTP status code, (2) a value of the success field and (3) a meaningful error message in the error field (see the Response section).</p>
 
 <p>The following HTTP status codes are returned:</p>
-<table><thead><tr><th>HTTP Status Code</th><th>Description</th></tr></thead><tbody><tr><td style="text-align: left;">200</td><td style="text-align: left;">The request was executed successfully.</td></tr>
-<tr><td style="text-align: left;">401</td><td style="text-align: left;">Authentication credentials were missing or authentication failed.</td></tr>
-<tr><td style="text-align: left;">404</td><td style="text-align: left;">The requested record was not found.</td></tr>
-<tr><td style="text-align: left;">429</td><td style="text-align: left;">The request could be served because the application has reached its usage limit.</td></tr>
-<tr><td style="text-align: left;">500</td><td style="text-align: left;">Internal Server Error. Something has gone wrong, tell us!</td></tr>
-</tbody></table>
-<h3 id="usage_limit">Usage Limit</h3>
 
-<p>Applications are permitted to perform up to 10000 calls in 24 hours. If you need more than that please contact us at <a href="mailto:&#097;&#112;&#105;&#064;&#101;&#117;&#114;&#111;&#112;&#101;&#097;&#110;&#097;&#046;&#101;&#117;">&#097;&#112;&#105;&#064;&#101;&#117;&#114;&#111;&#112;&#101;&#097;&#110;&#097;&#046;&#101;&#117;</a></p><!--
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">HTTP Status Code</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">200</td>
+      <td style="text-align: left">The request was executed successfully.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">401</td>
+      <td style="text-align: left">Authentication credentials were missing or authentication failed.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">404</td>
+      <td style="text-align: left">The requested record was not found.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">429</td>
+      <td style="text-align: left">The request could be served because the application has reached its usage limit.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">500</td>
+      <td style="text-align: left">Internal Server Error. Something has gone wrong, tell us!</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="usage-limit">Usage Limit</h3>
+
+<p>Applications are permitted to perform up to 10000 calls in 24 hours. If you need more than that please contact us at <a href="&#109;&#097;&#105;&#108;&#116;&#111;:&#097;&#112;&#105;&#064;&#101;&#117;&#114;&#111;&#112;&#101;&#097;&#110;&#097;&#046;&#101;&#117;">&#097;&#112;&#105;&#064;&#101;&#117;&#114;&#111;&#112;&#101;&#097;&#110;&#097;&#046;&#101;&#117;</a></p>
+<!--
 --></div>
 </div>
 ﻿<!-- Begin Footer -->

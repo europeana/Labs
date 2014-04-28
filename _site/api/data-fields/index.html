@@ -139,249 +139,1678 @@
 
 		
 	<div id="documentation" class="prose grid__item palm--one-whole push--palm-none one-half"><!--
-	--><div class="maruku_toc"><ul><li><a href="#introduction">Introduction</a></li><li><a href="#edmprovidedcho">edm:ProvidedCHO</a></li><li><a href="#oreaggregation">ore:Aggregation</a></li><li><a href="#edmeuropeanaaggregation">edm:EuropeanaAggregation</a></li><li><a href="#edmwebresource">edm:WebResource</a></li><li><a href="#edmagent">edm:Agent</a></li><li><a href="#skosconcept">skos:Concept</a></li><li><a href="#edmplace">edm:Place</a></li><li><a href="#edmtimespan">edm:TimeSpan</a></li><li><a href="#fields_outside_of_edm_schema">Fields outside of EDM schema</a></li><li><a href="#aggregated_fields">Aggregated fields</a></li><li><a href="#facets">Facets</a></li></ul></div>
+	--><ul id="markdown-toc">
+  <li><a href="#introduction">Introduction</a></li>
+  <li><a href="#edmprovidedcho">edm:ProvidedCHO</a></li>
+  <li><a href="#oreaggregation">ore:Aggregation</a></li>
+  <li><a href="#edmeuropeanaaggregation">edm:EuropeanaAggregation</a></li>
+  <li><a href="#edmwebresource">edm:WebResource</a></li>
+  <li><a href="#edmagent">edm:Agent</a></li>
+  <li><a href="#skosconcept">skos:Concept</a></li>
+  <li><a href="#edmplace">edm:Place</a></li>
+  <li><a href="#edmtimespan">edm:TimeSpan</a></li>
+  <li><a href="#fields-outside-of-edm-schema">Fields outside of EDM schema</a></li>
+  <li><a href="#aggregated-fields">Aggregated fields</a></li>
+  <li><a href="#facets">Facets</a></li>
+</ul>
+
 <h2 id="introduction">Introduction</h2>
 
 <p>Each Europeana field has different names in different contexts. We have a theoretical and RDF context, where we returns qualified names such as dc:title. In search the same field becomes proxy_dc_title, in search result it is simply title, and in object display it is the Proxy object’s dcTitle field. Some fields as part of aggregated fields, and facets. These are special fields which cover the content of multiple fields to provide a common entry point for similar fields.</p>
 
-<p>Meaning of columns</p>
-
-<ul>
-<li>EDM Field: The field’s name in the Europeana metadata scheme</li>
-
-<li>Name in search: The name we should use in search queries</li>
-
-<li>Datatype: The fields data type in searching</li>
-
-<li>Name in search result: The field’s name in search call response</li>
-
-<li>Name (record): The field’s name in the object call response</li>
-
-<li>Aggregated Field/Facet: The name of aggregated fields and facets which cover this field.</li>
-</ul>
+<p>Meaning of columns
+* EDM Field: The field’s name in the Europeana metadata scheme
+* Name in search: The name we should use in search queries
+* Datatype: The fields data type in searching
+* Name in search result: The field’s name in search call response
+* Name (record): The field’s name in the object call response
+* Aggregated Field/Facet: The name of aggregated fields and facets which cover this field.</p>
 
 <h2 id="edmprovidedcho">edm:ProvidedCHO</h2>
-<table><thead><tr><th>EDM Field</th><th>Name in search</th><th>Datatype</th><th>Name in search result</th><th>Name (record)</th><th>Aggregated Field/Facet</th></tr></thead><tbody><tr><td style="text-align: left;">@rdf:about</td><td style="text-align: left;">edm_europeana_proxy</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Proxy.about</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">dc:contributor</td><td style="text-align: left;">proxy_dc_contributor</td><td style="text-align: left;">string</td><td style="text-align: left;">dcContributor</td><td style="text-align: left;">Proxy.dcContributor</td><td style="text-align: left;">who</td></tr>
-<tr><td style="text-align: left;">dc:coverage</td><td style="text-align: left;">proxy_dc_coverage</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Proxy.dcCoverage</td><td style="text-align: left;">when, where, subject</td></tr>
-<tr><td style="text-align: left;">dc:creator</td><td style="text-align: left;">proxy_dc_creator</td><td style="text-align: left;">string</td><td style="text-align: left;">dcCreator</td><td style="text-align: left;">Proxy.dcCreator</td><td style="text-align: left;">who</td></tr>
-<tr><td style="text-align: left;">dc:date</td><td style="text-align: left;">proxy_dc_date</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Proxy.dcDate</td><td style="text-align: left;">when</td></tr>
-<tr><td style="text-align: left;">dc:description</td><td style="text-align: left;">proxy_dc_description</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Proxy.dcDescription</td><td style="text-align: left;">description</td></tr>
-<tr><td style="text-align: left;">dc:format</td><td style="text-align: left;">proxy_dc_format</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Proxy.dcFormat</td><td style="text-align: left;">what</td></tr>
-<tr><td style="text-align: left;">dc:identifier</td><td style="text-align: left;">proxy_dc_identifier</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Proxy.dcIdentifier</td><td style="text-align: left;">identifier</td></tr>
-<tr><td style="text-align: left;">dc:language</td><td style="text-align: left;">proxy_dc_language</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Proxy.dcLanguage</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">dc:publisher</td><td style="text-align: left;">proxy_dc_publisher</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Proxy.dcPublisher</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">dc:relation</td><td style="text-align: left;">proxy_dc_relation</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Proxy.dcRelation</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">dc:rights</td><td style="text-align: left;">proxy_dc_rights</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Proxy.dcRights</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">dc:source</td><td style="text-align: left;">proxy_dc_source</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Proxy.dcDource</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">dc:subject</td><td style="text-align: left;">proxy_dc_subject</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Proxy.dcSubject</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">dc:title</td><td style="text-align: left;">proxy_dc_title</td><td style="text-align: left;">string</td><td style="text-align: left;">title</td><td style="text-align: left;">Proxy.dcTitle</td><td style="text-align: left;">title</td></tr>
-<tr><td style="text-align: left;">dc:type</td><td style="text-align: left;">proxy_dc_type</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Proxy.dcType</td><td style="text-align: left;">what</td></tr>
-<tr><td style="text-align: left;">dcterms:alternative</td><td style="text-align: left;">proxy_dcterms_alternative</td><td style="text-align: left;">text</td><td style="text-align: left;"></td><td style="text-align: left;">Proxy.dctermsAlternative</td><td style="text-align: left;">title</td></tr>
-<tr><td style="text-align: left;">dcterms:conformsTo</td><td style="text-align: left;">proxy_dcterms_conformsTo</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Proxy.dctermsConformsTo</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">dcterms:created</td><td style="text-align: left;">proxy_dcterms_created</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Proxy.dctermsCreated</td><td style="text-align: left;">when, date</td></tr>
-<tr><td style="text-align: left;">dcterms:extent</td><td style="text-align: left;">proxy_dcterms_extent</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Proxy.dctermsExtent</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">dcterms:hasFormat</td><td style="text-align: left;">proxy_dcterms_hasFormat</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Proxy.dctermsHasFormat</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">dcterms:hasPart</td><td style="text-align: left;">proxy_dcterms_hasPart</td><td style="text-align: left;">string</td><td style="text-align: left;">dctermsHasPart</td><td style="text-align: left;">Proxy.dctermsHasPart</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">dcterms:hasVersion</td><td style="text-align: left;">proxy_dcterms_hasVersion</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Proxy.dctermsHasVersion</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">dcterms:isFormatOf</td><td style="text-align: left;">proxy_dcterms_isFormatOf</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Proxy.dctermsIsFormatOf</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">dcterms:isPartOf</td><td style="text-align: left;">proxy_dcterms_isPartOf</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Proxy.dctermsIsPartOf</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">dcterms:isReferencedBy</td><td style="text-align: left;">proxy_dcterms_isReferencedBy</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Proxy.dctermsIsReferencedBy</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">dcterms:isReplacedBy</td><td style="text-align: left;">proxy_dcterms_isReplacedBy</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Proxy.dctermsIsReplacedBy</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">dcterms:isRequiredBy</td><td style="text-align: left;">proxy_dcterms_isRequiredBy</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Proxy.dctermsIsRequiredBy</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">dcterms:issued</td><td style="text-align: left;">proxy_dcterms_issued</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Proxy.dctermsIssued</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">dcterms:isVersionOf</td><td style="text-align: left;">proxy_dcterms_isVersionOf</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Proxy.dctermsIsVersionOf</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">dcterms:medium</td><td style="text-align: left;">proxy_dcterms_medium</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Proxy.dctermsMedium</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">dcterms:provenance</td><td style="text-align: left;">proxy_dcterms_provenance</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Proxy.dctermsProvenance</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">dcterms:references</td><td style="text-align: left;">proxy_dcterms_references</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Proxy.dctermsReferences</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">dcterms:replaces</td><td style="text-align: left;">proxy_dcterms_replaces</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Proxy.dctermsReplaces</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">dcterms:requires</td><td style="text-align: left;">proxy_dcterms_requires</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Proxy.dctermsRequires</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">dcterms:spatial</td><td style="text-align: left;">proxy_dcterms_spatial</td><td style="text-align: left;">string</td><td style="text-align: left;">dctermsSpatial</td><td style="text-align: left;">Proxy.dctermsSpatial</td><td style="text-align: left;">where, location, subject</td></tr>
-<tr><td style="text-align: left;">dcterms:tableOfContents</td><td style="text-align: left;">proxy_dcterms_tableOfContents</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Proxy.dctermsTOC</td><td style="text-align: left;">description</td></tr>
-<tr><td style="text-align: left;">dcterms:temporal</td><td style="text-align: left;">proxy_dcterms_temporal</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Proxy.dctermsTemporal</td><td style="text-align: left;">when, subject</td></tr>
-<tr><td style="text-align: left;">edm:currentLocation</td><td style="text-align: left;">proxy_edm_currentLocation</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Proxy.edmCurrentLocation</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;"></td><td style="text-align: left;">proxy_edm_currentLocation_lat</td><td style="text-align: left;">float</td><td style="text-align: left;"></td><td style="text-align: left;"></td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;"></td><td style="text-align: left;">proxy_edm_currentLocation_lon</td><td style="text-align: left;">float</td><td style="text-align: left;"></td><td style="text-align: left;"></td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">edm:hasMet</td><td style="text-align: left;">proxy_edm_hasMet</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Proxy.edmHasMet</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">edm:hasType</td><td style="text-align: left;">proxy_edm_hasType</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Proxy.edmHasType</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">edm:incorporates</td><td style="text-align: left;">proxy_edm_incorporates</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Proxy.edmIncorporates</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">edm:isDerivativeOf</td><td style="text-align: left;">proxy_edm_isDerivativeOf</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Proxy.edmIsDerivativeOf</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">edm:isNextInSequence</td><td style="text-align: left;">proxy_edm_isNextInSequence</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Proxy.edmIsNextInSequence</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">edm:isRelatedTo</td><td style="text-align: left;">proxy_edm_isRelatedTo</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Proxy.edmIsRelatedTo</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">edm:isRepresentationOf</td><td style="text-align: left;">proxy_edm_isRepresentationOf</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Proxy.edmIsRepresentationOf</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">edm:isSimilarTo</td><td style="text-align: left;">proxy_edm_isSimilarTo</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Proxy.edmIsSimilarTo</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">edm:isSuccessorOf</td><td style="text-align: left;">proxy_edm_isSuccessorOf</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Proxy.edmIsSuccessorOf</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">edm:realizes</td><td style="text-align: left;">proxy_edm_realizes</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Proxy.edmRealizes</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">edm:type</td><td style="text-align: left;">proxy_edm_type</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Proxy.edmType</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">edm:unstored</td><td style="text-align: left;">proxy_edm_unstored</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Proxy.edmUnstored</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">edm:wasPresentAt</td><td style="text-align: left;">proxy_edm_wasPresentAt</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;"></td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">owl:sameAs</td><td style="text-align: left;">proxy_owl_sameAs</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;"></td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">rdf:type</td><td style="text-align: left;"></td><td style="text-align: left;"></td><td style="text-align: left;"></td><td style="text-align: left;"></td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">edm:rights</td><td style="text-align: left;">proxy_edm_rights</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Proxy.edmRights</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;"></td><td style="text-align: left;">proxy_edm_userTags</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Proxy.edmWasPresentAt</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;"></td><td style="text-align: left;">proxy_edm_year</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;"></td><td style="text-align: left;">YEAR</td></tr>
-<tr><td style="text-align: left;"></td><td style="text-align: left;">proxy_ore_proxy</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Proxy.europeanaProxy</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">ore:proxyFor</td><td style="text-align: left;">proxy_ore_proxyFor</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Proxy.proxyFor</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">ore:proxyIn</td><td style="text-align: left;">proxy_ore_proxyIn</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Proxy.proxyIn</td><td style="text-align: left;"></td></tr>
-</tbody></table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">EDM Field</th>
+      <th style="text-align: left">Name in search</th>
+      <th style="text-align: left">Datatype</th>
+      <th style="text-align: left">Name in search result</th>
+      <th style="text-align: left">Name (record)</th>
+      <th style="text-align: left">Aggregated Field/Facet</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">@rdf:about</td>
+      <td style="text-align: left">edm_europeana_proxy</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Proxy.about</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dc:contributor</td>
+      <td style="text-align: left">proxy_dc_contributor</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">dcContributor</td>
+      <td style="text-align: left">Proxy.dcContributor</td>
+      <td style="text-align: left">who</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dc:coverage</td>
+      <td style="text-align: left">proxy_dc_coverage</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Proxy.dcCoverage</td>
+      <td style="text-align: left">when, where, subject</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dc:creator</td>
+      <td style="text-align: left">proxy_dc_creator</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">dcCreator</td>
+      <td style="text-align: left">Proxy.dcCreator</td>
+      <td style="text-align: left">who</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dc:date</td>
+      <td style="text-align: left">proxy_dc_date</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Proxy.dcDate</td>
+      <td style="text-align: left">when</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dc:description</td>
+      <td style="text-align: left">proxy_dc_description</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Proxy.dcDescription</td>
+      <td style="text-align: left">description</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dc:format</td>
+      <td style="text-align: left">proxy_dc_format</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Proxy.dcFormat</td>
+      <td style="text-align: left">what</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dc:identifier</td>
+      <td style="text-align: left">proxy_dc_identifier</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Proxy.dcIdentifier</td>
+      <td style="text-align: left">identifier</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dc:language</td>
+      <td style="text-align: left">proxy_dc_language</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Proxy.dcLanguage</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dc:publisher</td>
+      <td style="text-align: left">proxy_dc_publisher</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Proxy.dcPublisher</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dc:relation</td>
+      <td style="text-align: left">proxy_dc_relation</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Proxy.dcRelation</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dc:rights</td>
+      <td style="text-align: left">proxy_dc_rights</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Proxy.dcRights</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dc:source</td>
+      <td style="text-align: left">proxy_dc_source</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Proxy.dcDource</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dc:subject</td>
+      <td style="text-align: left">proxy_dc_subject</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Proxy.dcSubject</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dc:title</td>
+      <td style="text-align: left">proxy_dc_title</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">title</td>
+      <td style="text-align: left">Proxy.dcTitle</td>
+      <td style="text-align: left">title</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dc:type</td>
+      <td style="text-align: left">proxy_dc_type</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Proxy.dcType</td>
+      <td style="text-align: left">what</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dcterms:alternative</td>
+      <td style="text-align: left">proxy_dcterms_alternative</td>
+      <td style="text-align: left">text</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Proxy.dctermsAlternative</td>
+      <td style="text-align: left">title</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dcterms:conformsTo</td>
+      <td style="text-align: left">proxy_dcterms_conformsTo</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Proxy.dctermsConformsTo</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dcterms:created</td>
+      <td style="text-align: left">proxy_dcterms_created</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Proxy.dctermsCreated</td>
+      <td style="text-align: left">when, date</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dcterms:extent</td>
+      <td style="text-align: left">proxy_dcterms_extent</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Proxy.dctermsExtent</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dcterms:hasFormat</td>
+      <td style="text-align: left">proxy_dcterms_hasFormat</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Proxy.dctermsHasFormat</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dcterms:hasPart</td>
+      <td style="text-align: left">proxy_dcterms_hasPart</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">dctermsHasPart</td>
+      <td style="text-align: left">Proxy.dctermsHasPart</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dcterms:hasVersion</td>
+      <td style="text-align: left">proxy_dcterms_hasVersion</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Proxy.dctermsHasVersion</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dcterms:isFormatOf</td>
+      <td style="text-align: left">proxy_dcterms_isFormatOf</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Proxy.dctermsIsFormatOf</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dcterms:isPartOf</td>
+      <td style="text-align: left">proxy_dcterms_isPartOf</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Proxy.dctermsIsPartOf</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dcterms:isReferencedBy</td>
+      <td style="text-align: left">proxy_dcterms_isReferencedBy</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Proxy.dctermsIsReferencedBy</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dcterms:isReplacedBy</td>
+      <td style="text-align: left">proxy_dcterms_isReplacedBy</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Proxy.dctermsIsReplacedBy</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dcterms:isRequiredBy</td>
+      <td style="text-align: left">proxy_dcterms_isRequiredBy</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Proxy.dctermsIsRequiredBy</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dcterms:issued</td>
+      <td style="text-align: left">proxy_dcterms_issued</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Proxy.dctermsIssued</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dcterms:isVersionOf</td>
+      <td style="text-align: left">proxy_dcterms_isVersionOf</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Proxy.dctermsIsVersionOf</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dcterms:medium</td>
+      <td style="text-align: left">proxy_dcterms_medium</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Proxy.dctermsMedium</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dcterms:provenance</td>
+      <td style="text-align: left">proxy_dcterms_provenance</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Proxy.dctermsProvenance</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dcterms:references</td>
+      <td style="text-align: left">proxy_dcterms_references</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Proxy.dctermsReferences</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dcterms:replaces</td>
+      <td style="text-align: left">proxy_dcterms_replaces</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Proxy.dctermsReplaces</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dcterms:requires</td>
+      <td style="text-align: left">proxy_dcterms_requires</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Proxy.dctermsRequires</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dcterms:spatial</td>
+      <td style="text-align: left">proxy_dcterms_spatial</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">dctermsSpatial</td>
+      <td style="text-align: left">Proxy.dctermsSpatial</td>
+      <td style="text-align: left">where, location, subject</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dcterms:tableOfContents</td>
+      <td style="text-align: left">proxy_dcterms_tableOfContents</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Proxy.dctermsTOC</td>
+      <td style="text-align: left">description</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dcterms:temporal</td>
+      <td style="text-align: left">proxy_dcterms_temporal</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Proxy.dctermsTemporal</td>
+      <td style="text-align: left">when, subject</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edm:currentLocation</td>
+      <td style="text-align: left">proxy_edm_currentLocation</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Proxy.edmCurrentLocation</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">proxy_edm_currentLocation_lat</td>
+      <td style="text-align: left">float</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">proxy_edm_currentLocation_lon</td>
+      <td style="text-align: left">float</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edm:hasMet</td>
+      <td style="text-align: left">proxy_edm_hasMet</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Proxy.edmHasMet</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edm:hasType</td>
+      <td style="text-align: left">proxy_edm_hasType</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Proxy.edmHasType</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edm:incorporates</td>
+      <td style="text-align: left">proxy_edm_incorporates</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Proxy.edmIncorporates</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edm:isDerivativeOf</td>
+      <td style="text-align: left">proxy_edm_isDerivativeOf</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Proxy.edmIsDerivativeOf</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edm:isNextInSequence</td>
+      <td style="text-align: left">proxy_edm_isNextInSequence</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Proxy.edmIsNextInSequence</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edm:isRelatedTo</td>
+      <td style="text-align: left">proxy_edm_isRelatedTo</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Proxy.edmIsRelatedTo</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edm:isRepresentationOf</td>
+      <td style="text-align: left">proxy_edm_isRepresentationOf</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Proxy.edmIsRepresentationOf</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edm:isSimilarTo</td>
+      <td style="text-align: left">proxy_edm_isSimilarTo</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Proxy.edmIsSimilarTo</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edm:isSuccessorOf</td>
+      <td style="text-align: left">proxy_edm_isSuccessorOf</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Proxy.edmIsSuccessorOf</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edm:realizes</td>
+      <td style="text-align: left">proxy_edm_realizes</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Proxy.edmRealizes</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edm:type</td>
+      <td style="text-align: left">proxy_edm_type</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Proxy.edmType</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edm:unstored</td>
+      <td style="text-align: left">proxy_edm_unstored</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Proxy.edmUnstored</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edm:wasPresentAt</td>
+      <td style="text-align: left">proxy_edm_wasPresentAt</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">owl:sameAs</td>
+      <td style="text-align: left">proxy_owl_sameAs</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">rdf:type</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edm:rights</td>
+      <td style="text-align: left">proxy_edm_rights</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Proxy.edmRights</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">proxy_edm_userTags</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Proxy.edmWasPresentAt</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">proxy_edm_year</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">YEAR</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">proxy_ore_proxy</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Proxy.europeanaProxy</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">ore:proxyFor</td>
+      <td style="text-align: left">proxy_ore_proxyFor</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Proxy.proxyFor</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">ore:proxyIn</td>
+      <td style="text-align: left">proxy_ore_proxyIn</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Proxy.proxyIn</td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+</table>
+
 <h2 id="oreaggregation">ore:Aggregation</h2>
-<table><thead><tr><th>EDM Field</th><th>Name in search</th><th>Datatype</th><th>Name in search result</th><th>Name (record)</th><th>Aggregated Field/Facet</th></tr></thead><tbody><tr><td style="text-align: left;">@rdf:about</td><td style="text-align: left;">provider_aggregation_ore_aggregation (?)</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Aggregation.about</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">ore:aggregates</td><td style="text-align: left;">provider_aggregation_ore_aggregates</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Aggregation.aggregates</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">edm:aggregatedCHO</td><td style="text-align: left;">provider_aggregation_edm_aggregatedCHO</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Aggregation.aggregatedCHO</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">edm:dataProvider</td><td style="text-align: left;">provider_aggregation_edm_dataProvider</td><td style="text-align: left;">string</td><td style="text-align: left;">edmDataProvider</td><td style="text-align: left;">Aggregation.edmDataProvider</td><td style="text-align: left;">DATA_PROVIDER</td></tr>
-<tr><td style="text-align: left;">edm:hasView</td><td style="text-align: left;">provider_aggregation_edm_hasView</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Aggregation.hasView</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">edm:isShownAt</td><td style="text-align: left;">provider_aggregation_edm_isShownAt</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Aggregation.edmIsShownAt</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">edm:isShownBy</td><td style="text-align: left;">provider_aggregation_edm_isShownBy</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Aggregation.edmIsShownBy</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">edm:object</td><td style="text-align: left;">provider_aggregation_edm_object</td><td style="text-align: left;">string</td><td style="text-align: left;">edmObject</td><td style="text-align: left;">Aggregation.edmObject</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">edm:provider</td><td style="text-align: left;">provider_aggregation_edm_provider</td><td style="text-align: left;">string</td><td style="text-align: left;">provider</td><td style="text-align: left;">Aggregation.edmProvider</td><td style="text-align: left;">PROVIDER</td></tr>
-<tr><td style="text-align: left;">dc:rights</td><td style="text-align: left;">provider_aggregation_dc_rights</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Aggregation.dcRights</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">edm:rights</td><td style="text-align: left;">provider_aggregation_edm_rights</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Aggregation.edmRights</td><td style="text-align: left;">RIGHTS</td></tr>
-<tr><td style="text-align: left;">edm:ugc</td><td style="text-align: left;">edm_UGC</td><td style="text-align: left;">boolean</td><td style="text-align: left;">ugc</td><td style="text-align: left;">Aggregation.edmUgc</td><td style="text-align: left;">UGC</td></tr>
-<tr><td style="text-align: left;"></td><td style="text-align: left;">provider_aggregation_edm_unstored</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Aggregation.edmUnstored</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;"></td><td style="text-align: left;">edm_previewNoDistribute</td><td style="text-align: left;">boolean</td><td style="text-align: left;"></td><td style="text-align: left;">Aggregation.edmPreviewNoDistribute</td><td style="text-align: left;"></td></tr>
-</tbody></table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">EDM Field</th>
+      <th style="text-align: left">Name in search</th>
+      <th style="text-align: left">Datatype</th>
+      <th style="text-align: left">Name in search result</th>
+      <th style="text-align: left">Name (record)</th>
+      <th style="text-align: left">Aggregated Field/Facet</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">@rdf:about</td>
+      <td style="text-align: left">provider_aggregation_ore_aggregation (?)</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Aggregation.about</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">ore:aggregates</td>
+      <td style="text-align: left">provider_aggregation_ore_aggregates</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Aggregation.aggregates</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edm:aggregatedCHO</td>
+      <td style="text-align: left">provider_aggregation_edm_aggregatedCHO</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Aggregation.aggregatedCHO</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edm:dataProvider</td>
+      <td style="text-align: left">provider_aggregation_edm_dataProvider</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">edmDataProvider</td>
+      <td style="text-align: left">Aggregation.edmDataProvider</td>
+      <td style="text-align: left">DATA_PROVIDER</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edm:hasView</td>
+      <td style="text-align: left">provider_aggregation_edm_hasView</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Aggregation.hasView</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edm:isShownAt</td>
+      <td style="text-align: left">provider_aggregation_edm_isShownAt</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Aggregation.edmIsShownAt</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edm:isShownBy</td>
+      <td style="text-align: left">provider_aggregation_edm_isShownBy</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Aggregation.edmIsShownBy</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edm:object</td>
+      <td style="text-align: left">provider_aggregation_edm_object</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">edmObject</td>
+      <td style="text-align: left">Aggregation.edmObject</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edm:provider</td>
+      <td style="text-align: left">provider_aggregation_edm_provider</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">provider</td>
+      <td style="text-align: left">Aggregation.edmProvider</td>
+      <td style="text-align: left">PROVIDER</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dc:rights</td>
+      <td style="text-align: left">provider_aggregation_dc_rights</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Aggregation.dcRights</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edm:rights</td>
+      <td style="text-align: left">provider_aggregation_edm_rights</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Aggregation.edmRights</td>
+      <td style="text-align: left">RIGHTS</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edm:ugc</td>
+      <td style="text-align: left">edm_UGC</td>
+      <td style="text-align: left">boolean</td>
+      <td style="text-align: left">ugc</td>
+      <td style="text-align: left">Aggregation.edmUgc</td>
+      <td style="text-align: left">UGC</td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">provider_aggregation_edm_unstored</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Aggregation.edmUnstored</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">edm_previewNoDistribute</td>
+      <td style="text-align: left">boolean</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Aggregation.edmPreviewNoDistribute</td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+</table>
+
 <h2 id="edmeuropeanaaggregation">edm:EuropeanaAggregation</h2>
-<table><thead><tr><th>EDM Field</th><th>Name in search</th><th>Datatype</th><th>Name in search result</th><th>Name (record)</th><th>Aggregated Field/Facet</th></tr></thead><tbody><tr><td style="text-align: left;">@rdf:about</td><td style="text-align: left;">edm_europeana_aggregation</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">EuropeanaAggregation.about</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">dc:creator</td><td style="text-align: left;">europeana_aggregation_dc_creator</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">EuropeanaAggregation.dcCreator</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">edm:country</td><td style="text-align: left;">europeana_aggregation_edm_country</td><td style="text-align: left;">string</td><td style="text-align: left;">country</td><td style="text-align: left;">EuropeanaAggregation.edmCountry</td><td style="text-align: left;">COUNTRY</td></tr>
-<tr><td style="text-align: left;">edm:hasView</td><td style="text-align: left;">europeana_aggregation_edm_hasView</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">EuropeanaAggregation.edmHasView</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">edm:isShownBy</td><td style="text-align: left;">europeana_aggregation_edm_isShownBy</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">EuropeanaAggregation.edmIsShownBy</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">edm:landingPage</td><td style="text-align: left;">europeana_aggregation_edm_landingPage</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">EuropeanaAggregation.edmLandingPage</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">edm:language</td><td style="text-align: left;">europeana_aggregation_edm_language</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">EuropeanaAggregation.edmLanguage</td><td style="text-align: left;">LANGUAGE</td></tr>
-<tr><td style="text-align: left;">edm:rights</td><td style="text-align: left;">europeana_aggregation_edm_rights</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">EuropeanaAggregation.edmRights</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">edm:aggregatedCHO</td><td style="text-align: left;">europeana_aggregation_ore_aggregatedCHO</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">EuropeanaAggregation.aggregatedCHO</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">ore:aggregates</td><td style="text-align: left;">europeana_aggregation_ore_aggregates</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">EuropeanaAggregation.aggregates</td><td style="text-align: left;"></td></tr>
-</tbody></table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">EDM Field</th>
+      <th style="text-align: left">Name in search</th>
+      <th style="text-align: left">Datatype</th>
+      <th style="text-align: left">Name in search result</th>
+      <th style="text-align: left">Name (record)</th>
+      <th style="text-align: left">Aggregated Field/Facet</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">@rdf:about</td>
+      <td style="text-align: left">edm_europeana_aggregation</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">EuropeanaAggregation.about</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dc:creator</td>
+      <td style="text-align: left">europeana_aggregation_dc_creator</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">EuropeanaAggregation.dcCreator</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edm:country</td>
+      <td style="text-align: left">europeana_aggregation_edm_country</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">country</td>
+      <td style="text-align: left">EuropeanaAggregation.edmCountry</td>
+      <td style="text-align: left">COUNTRY</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edm:hasView</td>
+      <td style="text-align: left">europeana_aggregation_edm_hasView</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">EuropeanaAggregation.edmHasView</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edm:isShownBy</td>
+      <td style="text-align: left">europeana_aggregation_edm_isShownBy</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">EuropeanaAggregation.edmIsShownBy</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edm:landingPage</td>
+      <td style="text-align: left">europeana_aggregation_edm_landingPage</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">EuropeanaAggregation.edmLandingPage</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edm:language</td>
+      <td style="text-align: left">europeana_aggregation_edm_language</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">EuropeanaAggregation.edmLanguage</td>
+      <td style="text-align: left">LANGUAGE</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edm:rights</td>
+      <td style="text-align: left">europeana_aggregation_edm_rights</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">EuropeanaAggregation.edmRights</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edm:aggregatedCHO</td>
+      <td style="text-align: left">europeana_aggregation_ore_aggregatedCHO</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">EuropeanaAggregation.aggregatedCHO</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">ore:aggregates</td>
+      <td style="text-align: left">europeana_aggregation_ore_aggregates</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">EuropeanaAggregation.aggregates</td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+</table>
+
 <h2 id="edmwebresource">edm:WebResource</h2>
-<table><thead><tr><th>EDM Field</th><th>Name in search</th><th>Datatype</th><th>Name in search result</th><th>Name (record)</th><th>Aggregated Field/Facet</th></tr></thead><tbody><tr><td style="text-align: left;">@rdf:about</td><td style="text-align: left;">edm_webResource (?)</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">WebResource.about</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">dc:description</td><td style="text-align: left;">wr_dc_description</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">WebResource.dcDescription</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">dc:format</td><td style="text-align: left;">wr_dc_format</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">WebResource.dcFormat</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">dc:rights</td><td style="text-align: left;">wr_dc_rights</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">WebResource.webResourceDcRights</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">dc:source</td><td style="text-align: left;">wr_dc_source</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">WebResource.dcSource</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">dcterms:conformsTo</td><td style="text-align: left;">wr_dcterms_conformsTo</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">WebResource.dctermsConformsTo</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">dcterms:created</td><td style="text-align: left;">wr_dcterms_created</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">WebResource.dctermsCreated</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">dcterms:extent</td><td style="text-align: left;">wr_dcterms_extent</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">WebResource.dctermsExtent</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">dcterms:hasPart</td><td style="text-align: left;">wr_dcterms_hasPart</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">WebResource.dctermsHasPart</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">dcterms:isFormatOf</td><td style="text-align: left;">wr_dcterms_isFormatOf</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">WebResource.dctermsIsFormatOf</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">dcterms:issued</td><td style="text-align: left;">wr_dcterms_issued</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">WebResource.dctermsIssued</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">edm:isNextInSequence</td><td style="text-align: left;">wr_edm_isNextInSequence</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">WebResource.isNextInSequence</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">edm:rights</td><td style="text-align: left;">wr_edm_rights</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">WebResource.webResourceEdmRights</td><td style="text-align: left;"></td></tr>
-</tbody></table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">EDM Field</th>
+      <th style="text-align: left">Name in search</th>
+      <th style="text-align: left">Datatype</th>
+      <th style="text-align: left">Name in search result</th>
+      <th style="text-align: left">Name (record)</th>
+      <th style="text-align: left">Aggregated Field/Facet</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">@rdf:about</td>
+      <td style="text-align: left">edm_webResource (?)</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">WebResource.about</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dc:description</td>
+      <td style="text-align: left">wr_dc_description</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">WebResource.dcDescription</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dc:format</td>
+      <td style="text-align: left">wr_dc_format</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">WebResource.dcFormat</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dc:rights</td>
+      <td style="text-align: left">wr_dc_rights</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">WebResource.webResourceDcRights</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dc:source</td>
+      <td style="text-align: left">wr_dc_source</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">WebResource.dcSource</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dcterms:conformsTo</td>
+      <td style="text-align: left">wr_dcterms_conformsTo</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">WebResource.dctermsConformsTo</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dcterms:created</td>
+      <td style="text-align: left">wr_dcterms_created</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">WebResource.dctermsCreated</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dcterms:extent</td>
+      <td style="text-align: left">wr_dcterms_extent</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">WebResource.dctermsExtent</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dcterms:hasPart</td>
+      <td style="text-align: left">wr_dcterms_hasPart</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">WebResource.dctermsHasPart</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dcterms:isFormatOf</td>
+      <td style="text-align: left">wr_dcterms_isFormatOf</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">WebResource.dctermsIsFormatOf</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dcterms:issued</td>
+      <td style="text-align: left">wr_dcterms_issued</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">WebResource.dctermsIssued</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edm:isNextInSequence</td>
+      <td style="text-align: left">wr_edm_isNextInSequence</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">WebResource.isNextInSequence</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edm:rights</td>
+      <td style="text-align: left">wr_edm_rights</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">WebResource.webResourceEdmRights</td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+</table>
+
 <h2 id="edmagent">edm:Agent</h2>
-<table><thead><tr><th>EDM Field</th><th>Name in search</th><th>Datatype</th><th>Name in search result</th><th>Name (record)</th><th>Aggregated Field/Facet</th></tr></thead><tbody><tr><td style="text-align: left;">@rdf:about</td><td style="text-align: left;">edm_agent (?)</td><td style="text-align: left;">string</td><td style="text-align: left;">edmAgent</td><td style="text-align: left;">Agent.about</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">skos:prefLabel</td><td style="text-align: left;">ag_skos_prefLabel</td><td style="text-align: left;">text</td><td style="text-align: left;">edmAgentLabel</td><td style="text-align: left;">Agent.prefLabel</td><td style="text-align: left;">who</td></tr>
-<tr><td style="text-align: left;">skos:altLabel</td><td style="text-align: left;">ag_skos_altLabel</td><td style="text-align: left;">text</td><td style="text-align: left;"></td><td style="text-align: left;">Agent.altLabel</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">skos:hiddenLabel</td><td style="text-align: left;">ag_skos_hiddenLabel</td><td style="text-align: left;">text</td><td style="text-align: left;"></td><td style="text-align: left;"></td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">skos:note</td><td style="text-align: left;">ag_skos_note</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Agent.note</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">dc:date</td><td style="text-align: left;">ag_dc_date</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Agent.dcDate</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">dc:identifier</td><td style="text-align: left;">ag_dc_identifier</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Agent.dcIdentifier</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">edm:begin</td><td style="text-align: left;">ag_edm_begin</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Agent.begin</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">edm:end</td><td style="text-align: left;">ag_edm_end</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Agent.end</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">edm:hasMet</td><td style="text-align: left;">ag_edm_hasMet</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Agent.edmHasMet</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">edm:isRelatedTo</td><td style="text-align: left;">ag_edm_isRelatedTo</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Agent.edmIsRelatedTo</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">edm:wasPresentAt</td><td style="text-align: left;">ag_edm_wasPresentAt</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Agent.edmWasPresentAt</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">foaf:name</td><td style="text-align: left;">ag_foaf_name</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Agent.foafName</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">rdaGr2:biographicalInformation</td><td style="text-align: left;">ag_rdagr2_biographicalInformation</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Agent.rdaGr2BiographicalInformation</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">rdaGr2:dateOfBirth</td><td style="text-align: left;">ag_rdagr2_dateOfBirth</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Agent.rdaGr2DateOfBirth</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">rdaGr2:dateOfDeath</td><td style="text-align: left;">ag_rdagr2_dateOfDeath</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Agent.rdaGr2DateOfDeath</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">rdaGr2:dateOfEstablishment</td><td style="text-align: left;">ag_rdagr2_dateOfEstablishment</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Agent.rdaGr2DateOfEstablishment</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">rdaGr2:dateOfTermination</td><td style="text-align: left;">ag_rdagr2_dateOfTermination</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Agent.rdaGr2DateOfTermination</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">rdaGr2:gender</td><td style="text-align: left;">ag_rdagr2_gender</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Agent.rdaGr2Gender</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">rdaGr2:professionOrOccupation</td><td style="text-align: left;">ag_rdagr2_professionOrOccupation</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Agent.rdaGr2ProfessionOrOccupation</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">owl:sameAs</td><td style="text-align: left;">ag_owl_sameAs</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Agent.owlSameAs</td><td style="text-align: left;"></td></tr>
-</tbody></table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">EDM Field</th>
+      <th style="text-align: left">Name in search</th>
+      <th style="text-align: left">Datatype</th>
+      <th style="text-align: left">Name in search result</th>
+      <th style="text-align: left">Name (record)</th>
+      <th style="text-align: left">Aggregated Field/Facet</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">@rdf:about</td>
+      <td style="text-align: left">edm_agent (?)</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">edmAgent</td>
+      <td style="text-align: left">Agent.about</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">skos:prefLabel</td>
+      <td style="text-align: left">ag_skos_prefLabel</td>
+      <td style="text-align: left">text</td>
+      <td style="text-align: left">edmAgentLabel</td>
+      <td style="text-align: left">Agent.prefLabel</td>
+      <td style="text-align: left">who</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">skos:altLabel</td>
+      <td style="text-align: left">ag_skos_altLabel</td>
+      <td style="text-align: left">text</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Agent.altLabel</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">skos:hiddenLabel</td>
+      <td style="text-align: left">ag_skos_hiddenLabel</td>
+      <td style="text-align: left">text</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">skos:note</td>
+      <td style="text-align: left">ag_skos_note</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Agent.note</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dc:date</td>
+      <td style="text-align: left">ag_dc_date</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Agent.dcDate</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dc:identifier</td>
+      <td style="text-align: left">ag_dc_identifier</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Agent.dcIdentifier</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edm:begin</td>
+      <td style="text-align: left">ag_edm_begin</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Agent.begin</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edm:end</td>
+      <td style="text-align: left">ag_edm_end</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Agent.end</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edm:hasMet</td>
+      <td style="text-align: left">ag_edm_hasMet</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Agent.edmHasMet</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edm:isRelatedTo</td>
+      <td style="text-align: left">ag_edm_isRelatedTo</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Agent.edmIsRelatedTo</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edm:wasPresentAt</td>
+      <td style="text-align: left">ag_edm_wasPresentAt</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Agent.edmWasPresentAt</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">foaf:name</td>
+      <td style="text-align: left">ag_foaf_name</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Agent.foafName</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">rdaGr2:biographicalInformation</td>
+      <td style="text-align: left">ag_rdagr2_biographicalInformation</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Agent.rdaGr2BiographicalInformation</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">rdaGr2:dateOfBirth</td>
+      <td style="text-align: left">ag_rdagr2_dateOfBirth</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Agent.rdaGr2DateOfBirth</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">rdaGr2:dateOfDeath</td>
+      <td style="text-align: left">ag_rdagr2_dateOfDeath</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Agent.rdaGr2DateOfDeath</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">rdaGr2:dateOfEstablishment</td>
+      <td style="text-align: left">ag_rdagr2_dateOfEstablishment</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Agent.rdaGr2DateOfEstablishment</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">rdaGr2:dateOfTermination</td>
+      <td style="text-align: left">ag_rdagr2_dateOfTermination</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Agent.rdaGr2DateOfTermination</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">rdaGr2:gender</td>
+      <td style="text-align: left">ag_rdagr2_gender</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Agent.rdaGr2Gender</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">rdaGr2:professionOrOccupation</td>
+      <td style="text-align: left">ag_rdagr2_professionOrOccupation</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Agent.rdaGr2ProfessionOrOccupation</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">owl:sameAs</td>
+      <td style="text-align: left">ag_owl_sameAs</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Agent.owlSameAs</td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+</table>
+
 <h2 id="skosconcept">skos:Concept</h2>
-<table><thead><tr><th>EDM Field</th><th>Name in search</th><th>Datatype</th><th>Name in search result</th><th>Name (record)</th><th>Aggregated Field/Facet</th></tr></thead><tbody><tr><td style="text-align: left;">@rdf:about</td><td style="text-align: left;">skos_concept (?)</td><td style="text-align: left;">string</td><td style="text-align: left;">edmConceptTerm</td><td style="text-align: left;">Concept.about</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">skos:prefLabel</td><td style="text-align: left;">cc_skos_prefLabel</td><td style="text-align: left;">text</td><td style="text-align: left;">edmConceptPrefLabel</td><td style="text-align: left;">Concept.prefLabel</td><td style="text-align: left;">what</td></tr>
-<tr><td style="text-align: left;">skos:altLabel</td><td style="text-align: left;">cc_skos_altLabel</td><td style="text-align: left;">text</td><td style="text-align: left;"></td><td style="text-align: left;">Concept.altLabel</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">skos:hiddenLabel</td><td style="text-align: left;">cc_skos_hiddenLabel</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;"></td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">skos:broader</td><td style="text-align: left;">cc_skos_broader</td><td style="text-align: left;">string</td><td style="text-align: left;">edmConceptBroaderTerm</td><td style="text-align: left;">Concept.broader</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;"></td><td style="text-align: left;">cc_skos_broaderLabel</td><td style="text-align: left;">string</td><td style="text-align: left;">edmConceptBroaderLabel</td><td style="text-align: left;"></td><td style="text-align: left;">what</td></tr>
-<tr><td style="text-align: left;">skos:narrower</td><td style="text-align: left;">cc_skos_narrower</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Concept.narrower</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">skos:related</td><td style="text-align: left;">cc_skos_related</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Concept.related</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">skos:broadMatch</td><td style="text-align: left;">cc_skos_broadMatch</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Concept.broadMatch</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">skos:narrowMatch</td><td style="text-align: left;">cc_skos_narrowMatch</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Concept.narrowMatch</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">skos:relatedMatch</td><td style="text-align: left;">cc_skos_relatedMatch</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Concept.relatedMatch</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">skos:exactMatch</td><td style="text-align: left;">cc_skos_exactMatch</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Concept.exactMatch</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">skos:closeMatch</td><td style="text-align: left;">cc_skos_closeMatch</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Concept.closeMatch</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">skos:note</td><td style="text-align: left;">cc_skos_note</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Concept.note</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">skos:notation</td><td style="text-align: left;">cc_skos_notation</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Concept.notation</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">skos:inScheme</td><td style="text-align: left;">cc_skos_inScheme</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Concept.inScheme</td><td style="text-align: left;"></td></tr>
-</tbody></table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">EDM Field</th>
+      <th style="text-align: left">Name in search</th>
+      <th style="text-align: left">Datatype</th>
+      <th style="text-align: left">Name in search result</th>
+      <th style="text-align: left">Name (record)</th>
+      <th style="text-align: left">Aggregated Field/Facet</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">@rdf:about</td>
+      <td style="text-align: left">skos_concept (?)</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">edmConceptTerm</td>
+      <td style="text-align: left">Concept.about</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">skos:prefLabel</td>
+      <td style="text-align: left">cc_skos_prefLabel</td>
+      <td style="text-align: left">text</td>
+      <td style="text-align: left">edmConceptPrefLabel</td>
+      <td style="text-align: left">Concept.prefLabel</td>
+      <td style="text-align: left">what</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">skos:altLabel</td>
+      <td style="text-align: left">cc_skos_altLabel</td>
+      <td style="text-align: left">text</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Concept.altLabel</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">skos:hiddenLabel</td>
+      <td style="text-align: left">cc_skos_hiddenLabel</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">skos:broader</td>
+      <td style="text-align: left">cc_skos_broader</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">edmConceptBroaderTerm</td>
+      <td style="text-align: left">Concept.broader</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">cc_skos_broaderLabel</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">edmConceptBroaderLabel</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">what</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">skos:narrower</td>
+      <td style="text-align: left">cc_skos_narrower</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Concept.narrower</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">skos:related</td>
+      <td style="text-align: left">cc_skos_related</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Concept.related</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">skos:broadMatch</td>
+      <td style="text-align: left">cc_skos_broadMatch</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Concept.broadMatch</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">skos:narrowMatch</td>
+      <td style="text-align: left">cc_skos_narrowMatch</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Concept.narrowMatch</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">skos:relatedMatch</td>
+      <td style="text-align: left">cc_skos_relatedMatch</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Concept.relatedMatch</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">skos:exactMatch</td>
+      <td style="text-align: left">cc_skos_exactMatch</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Concept.exactMatch</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">skos:closeMatch</td>
+      <td style="text-align: left">cc_skos_closeMatch</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Concept.closeMatch</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">skos:note</td>
+      <td style="text-align: left">cc_skos_note</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Concept.note</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">skos:notation</td>
+      <td style="text-align: left">cc_skos_notation</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Concept.notation</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">skos:inScheme</td>
+      <td style="text-align: left">cc_skos_inScheme</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Concept.inScheme</td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+</table>
+
 <h2 id="edmplace">edm:Place</h2>
-<table><thead><tr><th>EDM Field</th><th>Name in search</th><th>Datatype</th><th>Name in search result</th><th>Name (record)</th><th>Aggregated Field/Facet</th></tr></thead><tbody><tr><td style="text-align: left;">@rdf:about</td><td style="text-align: left;">edm_place (?)</td><td style="text-align: left;">string</td><td style="text-align: left;">edmPlace</td><td style="text-align: left;">Place.about</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">wgs84_pos:lat</td><td style="text-align: left;">pl_wgs84_pos_lat</td><td style="text-align: left;">string</td><td style="text-align: left;">edmPlaceLatitude</td><td style="text-align: left;">Place.latitude</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">wgs84_pos:long</td><td style="text-align: left;">pl_wgs84_pos_long</td><td style="text-align: left;">string</td><td style="text-align: left;">edmPlaceLongitude</td><td style="text-align: left;">Place.longitude</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">wgs84_pos:alt</td><td style="text-align: left;">pl_wgs84_pos_alt</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Place.altitude</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">wgs84_pos:lat_long</td><td style="text-align: left;">pl_wgs84_pos_lat_long</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;"></td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">skos:prefLabel</td><td style="text-align: left;">pl_skos_prefLabel</td><td style="text-align: left;">text</td><td style="text-align: left;">edmPlaceLabel</td><td style="text-align: left;">Place.prefLabel</td><td style="text-align: left;">where</td></tr>
-<tr><td style="text-align: left;">skos:altLabel</td><td style="text-align: left;">pl_skos_altLabel</td><td style="text-align: left;">text</td><td style="text-align: left;"></td><td style="text-align: left;">Place.altLabel</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">skos:hiddenLabel</td><td style="text-align: left;">pl_skos_hiddenLabel</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;"></td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">skos:note</td><td style="text-align: left;">pl_skos_note</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Place.note</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">dcterms:hasPart</td><td style="text-align: left;">pl_dcterms_hasPart</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Place.dcTermsHasPart</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">dcterms:isPartOf</td><td style="text-align: left;">pl_dcterms_isPartOf</td><td style="text-align: left;">string</td><td style="text-align: left;">edmPlaceBroaderTerm, dctermsIsPartOf</td><td style="text-align: left;">Place.isPartOf</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">owl:sameAs</td><td style="text-align: left;">pl_owl_sameAs</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">Place.owlSameAs</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;"></td><td style="text-align: left;">pl_dcterms_isPartOf_label</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;"></td></tr>
-</tbody></table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">EDM Field</th>
+      <th style="text-align: left">Name in search</th>
+      <th style="text-align: left">Datatype</th>
+      <th style="text-align: left">Name in search result</th>
+      <th style="text-align: left">Name (record)</th>
+      <th style="text-align: left">Aggregated Field/Facet</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">@rdf:about</td>
+      <td style="text-align: left">edm_place (?)</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">edmPlace</td>
+      <td style="text-align: left">Place.about</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">wgs84_pos:lat</td>
+      <td style="text-align: left">pl_wgs84_pos_lat</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">edmPlaceLatitude</td>
+      <td style="text-align: left">Place.latitude</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">wgs84_pos:long</td>
+      <td style="text-align: left">pl_wgs84_pos_long</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">edmPlaceLongitude</td>
+      <td style="text-align: left">Place.longitude</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">wgs84_pos:alt</td>
+      <td style="text-align: left">pl_wgs84_pos_alt</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Place.altitude</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">wgs84_pos:lat_long</td>
+      <td style="text-align: left">pl_wgs84_pos_lat_long</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">skos:prefLabel</td>
+      <td style="text-align: left">pl_skos_prefLabel</td>
+      <td style="text-align: left">text</td>
+      <td style="text-align: left">edmPlaceLabel</td>
+      <td style="text-align: left">Place.prefLabel</td>
+      <td style="text-align: left">where</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">skos:altLabel</td>
+      <td style="text-align: left">pl_skos_altLabel</td>
+      <td style="text-align: left">text</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Place.altLabel</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">skos:hiddenLabel</td>
+      <td style="text-align: left">pl_skos_hiddenLabel</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">skos:note</td>
+      <td style="text-align: left">pl_skos_note</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Place.note</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dcterms:hasPart</td>
+      <td style="text-align: left">pl_dcterms_hasPart</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Place.dcTermsHasPart</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dcterms:isPartOf</td>
+      <td style="text-align: left">pl_dcterms_isPartOf</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">edmPlaceBroaderTerm, dctermsIsPartOf</td>
+      <td style="text-align: left">Place.isPartOf</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">owl:sameAs</td>
+      <td style="text-align: left">pl_owl_sameAs</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Place.owlSameAs</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">pl_dcterms_isPartOf_label</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+</table>
+
 <h2 id="edmtimespan">edm:TimeSpan</h2>
-<table><thead><tr><th>EDM Field</th><th>Name in search</th><th>Datatype</th><th>Name in search result</th><th>Name (record)</th><th>Aggregated Field/Facet</th></tr></thead><tbody><tr><td style="text-align: left;">@rdf:about</td><td style="text-align: left;">edm_timespan (?)</td><td style="text-align: left;">text</td><td style="text-align: left;">edmTimespan</td><td style="text-align: left;">TimeSpan.about</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">skos:prefLabel</td><td style="text-align: left;">ts_skos_prefLabel</td><td style="text-align: left;">text</td><td style="text-align: left;">edmTimespanLabel</td><td style="text-align: left;">TimeSpan.prefLabel</td><td style="text-align: left;">when</td></tr>
-<tr><td style="text-align: left;">skos:altLabel</td><td style="text-align: left;">ts_skos_altLabel</td><td style="text-align: left;">text</td><td style="text-align: left;"></td><td style="text-align: left;">TimeSpan.altLabel</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">skos:hiddenLabel</td><td style="text-align: left;">ts_skos_hiddenLabel</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;"></td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">skos:note</td><td style="text-align: left;">ts_skos_note</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">TimeSpan.note</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">dcterms:hasPart</td><td style="text-align: left;">ts_dcterms_hasPart</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">TimeSpan.dcTermsHasPart</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">dcterms:isPartOf</td><td style="text-align: left;">ts_dcterms_isPartOf</td><td style="text-align: left;">string</td><td style="text-align: left;">edmTimespanBroaderTerm</td><td style="text-align: left;">TimeSpan.isPartOf</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;"></td><td style="text-align: left;">ts_dcterms_isPartOf</td><td style="text-align: left;">string</td><td style="text-align: left;">edmTimespanBroaderLabel</td><td style="text-align: left;"></td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">edm:begin</td><td style="text-align: left;">ts_edm_begin</td><td style="text-align: left;">string</td><td style="text-align: left;">edmTimespanBegin</td><td style="text-align: left;">TimeSpan.begin</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">edm:end</td><td style="text-align: left;">ts_edm_end</td><td style="text-align: left;">string</td><td style="text-align: left;">edmTimespanEnd</td><td style="text-align: left;">TimeSpan.end</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">crm:P79F.beginning_is_qualified_by</td><td style="text-align: left;"></td><td style="text-align: left;"></td><td style="text-align: left;"></td><td style="text-align: left;">TimeSpan.crmP79FBeginningIsQualifiedBy</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">crm:P80F.end_is_qualified_by</td><td style="text-align: left;"></td><td style="text-align: left;"></td><td style="text-align: left;"></td><td style="text-align: left;">TimeSpan.crmP80FEndIsQualifiedBy</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">owl:sameAs</td><td style="text-align: left;">ts_owl_sameAs</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;">TimeSpan.owlSameAs</td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;"></td><td style="text-align: left;">ts_dcterms_isPartOf_label (?)</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;"></td></tr>
-</tbody></table>
-<h2 id="fields_outside_of_edm_schema">Fields outside of EDM schema</h2>
-<table><thead><tr><th>Name in search</th><th>Datatype</th><th>Name in search result</th><th>Name (record)</th><th>Aggregated Field/Facet</th></tr></thead><tbody><tr><td style="text-align: left;">europeana_completeness</td><td style="text-align: left;">integer</td><td style="text-align: left;">europeanaCompleteness, completeness</td><td style="text-align: left;"></td><td style="text-align: left;">COMPLETENESS</td></tr>
-<tr><td style="text-align: left;">europeana_previewNoDistribute</td><td style="text-align: left;">boolean</td><td style="text-align: left;"></td><td style="text-align: left;"></td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">timestamp</td><td style="text-align: left;">date</td><td style="text-align: left;"></td><td style="text-align: left;"></td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">europeana_id</td><td style="text-align: left;">string</td><td style="text-align: left;">id</td><td style="text-align: left;"></td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">identifier</td><td style="text-align: left;">string</td><td style="text-align: left;"></td><td style="text-align: left;"></td><td style="text-align: left;"></td></tr>
-<tr><td style="text-align: left;">europeana_collectionName</td><td style="text-align: left;">string</td><td style="text-align: left;">europeanaCollectionName</td><td style="text-align: left;"></td><td style="text-align: left;"></td></tr>
-</tbody></table>
-<h2 id="aggregated_fields">Aggregated fields</h2>
-<table><thead><tr><th>Name in search</th><th>Datatype</th></tr></thead><tbody><tr><td style="text-align: left;">country</td><td style="text-align: left;">text</td></tr>
-<tr><td style="text-align: left;">date</td><td style="text-align: left;">text</td></tr>
-<tr><td style="text-align: left;">description</td><td style="text-align: left;">text</td></tr>
-<tr><td style="text-align: left;">format</td><td style="text-align: left;">text</td></tr>
-<tr><td style="text-align: left;">language</td><td style="text-align: left;">text</td></tr>
-<tr><td style="text-align: left;">location</td><td style="text-align: left;">text</td></tr>
-<tr><td style="text-align: left;">publisher</td><td style="text-align: left;">text</td></tr>
-<tr><td style="text-align: left;">relation</td><td style="text-align: left;">text</td></tr>
-<tr><td style="text-align: left;">rights</td><td style="text-align: left;">text</td></tr>
-<tr><td style="text-align: left;">source</td><td style="text-align: left;">text</td></tr>
-<tr><td style="text-align: left;">subject</td><td style="text-align: left;">text</td></tr>
-<tr><td style="text-align: left;">text</td><td style="text-align: left;">text</td></tr>
-<tr><td style="text-align: left;">title</td><td style="text-align: left;">text</td></tr>
-<tr><td style="text-align: left;">what</td><td style="text-align: left;">text</td></tr>
-<tr><td style="text-align: left;">when</td><td style="text-align: left;">text</td></tr>
-<tr><td style="text-align: left;">where</td><td style="text-align: left;">text</td></tr>
-<tr><td style="text-align: left;">who</td><td style="text-align: left;">text</td></tr>
-</tbody></table>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">EDM Field</th>
+      <th style="text-align: left">Name in search</th>
+      <th style="text-align: left">Datatype</th>
+      <th style="text-align: left">Name in search result</th>
+      <th style="text-align: left">Name (record)</th>
+      <th style="text-align: left">Aggregated Field/Facet</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">@rdf:about</td>
+      <td style="text-align: left">edm_timespan (?)</td>
+      <td style="text-align: left">text</td>
+      <td style="text-align: left">edmTimespan</td>
+      <td style="text-align: left">TimeSpan.about</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">skos:prefLabel</td>
+      <td style="text-align: left">ts_skos_prefLabel</td>
+      <td style="text-align: left">text</td>
+      <td style="text-align: left">edmTimespanLabel</td>
+      <td style="text-align: left">TimeSpan.prefLabel</td>
+      <td style="text-align: left">when</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">skos:altLabel</td>
+      <td style="text-align: left">ts_skos_altLabel</td>
+      <td style="text-align: left">text</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">TimeSpan.altLabel</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">skos:hiddenLabel</td>
+      <td style="text-align: left">ts_skos_hiddenLabel</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">skos:note</td>
+      <td style="text-align: left">ts_skos_note</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">TimeSpan.note</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dcterms:hasPart</td>
+      <td style="text-align: left">ts_dcterms_hasPart</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">TimeSpan.dcTermsHasPart</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dcterms:isPartOf</td>
+      <td style="text-align: left">ts_dcterms_isPartOf</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">edmTimespanBroaderTerm</td>
+      <td style="text-align: left">TimeSpan.isPartOf</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">ts_dcterms_isPartOf</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">edmTimespanBroaderLabel</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edm:begin</td>
+      <td style="text-align: left">ts_edm_begin</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">edmTimespanBegin</td>
+      <td style="text-align: left">TimeSpan.begin</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edm:end</td>
+      <td style="text-align: left">ts_edm_end</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">edmTimespanEnd</td>
+      <td style="text-align: left">TimeSpan.end</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">crm:P79F.beginning_is_qualified_by</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">TimeSpan.crmP79FBeginningIsQualifiedBy</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">crm:P80F.end_is_qualified_by</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">TimeSpan.crmP80FEndIsQualifiedBy</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">owl:sameAs</td>
+      <td style="text-align: left">ts_owl_sameAs</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">TimeSpan.owlSameAs</td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">ts_dcterms_isPartOf_label (?)</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="fields-outside-of-edm-schema">Fields outside of EDM schema</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Name in search</th>
+      <th style="text-align: left">Datatype</th>
+      <th style="text-align: left">Name in search result</th>
+      <th style="text-align: left">Name (record)</th>
+      <th style="text-align: left">Aggregated Field/Facet</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">europeana_completeness</td>
+      <td style="text-align: left">integer</td>
+      <td style="text-align: left">europeanaCompleteness, completeness</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">COMPLETENESS</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">europeana_previewNoDistribute</td>
+      <td style="text-align: left">boolean</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">timestamp</td>
+      <td style="text-align: left">date</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">europeana_id</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">id</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">identifier</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+    <tr>
+      <td style="text-align: left">europeana_collectionName</td>
+      <td style="text-align: left">string</td>
+      <td style="text-align: left">europeanaCollectionName</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left"> </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="aggregated-fields">Aggregated fields</h2>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Name in search</th>
+      <th style="text-align: left">Datatype</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">country</td>
+      <td style="text-align: left">text</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">date</td>
+      <td style="text-align: left">text</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">description</td>
+      <td style="text-align: left">text</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">format</td>
+      <td style="text-align: left">text</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">language</td>
+      <td style="text-align: left">text</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">location</td>
+      <td style="text-align: left">text</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">publisher</td>
+      <td style="text-align: left">text</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">relation</td>
+      <td style="text-align: left">text</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">rights</td>
+      <td style="text-align: left">text</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">source</td>
+      <td style="text-align: left">text</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">subject</td>
+      <td style="text-align: left">text</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">text</td>
+      <td style="text-align: left">text</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">title</td>
+      <td style="text-align: left">text</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">what</td>
+      <td style="text-align: left">text</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">when</td>
+      <td style="text-align: left">text</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">where</td>
+      <td style="text-align: left">text</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">who</td>
+      <td style="text-align: left">text</td>
+    </tr>
+  </tbody>
+</table>
+
 <h2 id="facets">Facets</h2>
-<table><thead><tr><th>Name in search</th><th>Datatype</th></tr></thead><tbody><tr><td style="text-align: left;">COMPLETENESS</td><td style="text-align: left;">string</td></tr>
-<tr><td style="text-align: left;">CONTRIBUTOR</td><td style="text-align: left;">string</td></tr>
-<tr><td style="text-align: left;">COUNTRY</td><td style="text-align: left;">string</td></tr>
-<tr><td style="text-align: left;">DATA_PROVIDER</td><td style="text-align: left;">string</td></tr>
-<tr><td style="text-align: left;">LANGUAGE</td><td style="text-align: left;">string</td></tr>
-<tr><td style="text-align: left;">LOCATION</td><td style="text-align: left;">string</td></tr>
-<tr><td style="text-align: left;">PROVIDER</td><td style="text-align: left;">string</td></tr>
-<tr><td style="text-align: left;">RIGHTS</td><td style="text-align: left;">string</td></tr>
-<tr><td style="text-align: left;">SUBJECT</td><td style="text-align: left;">string</td></tr>
-<tr><td style="text-align: left;">TYPE</td><td style="text-align: left;">string</td></tr>
-<tr><td style="text-align: left;">UGC</td><td style="text-align: left;">string</td></tr>
-<tr><td style="text-align: left;">USERTAGS</td><td style="text-align: left;">string</td></tr>
-<tr><td style="text-align: left;">YEAR</td><td style="text-align: left;">string</td></tr>
-<tr><td style="text-align: left;"></td></tr>
-</tbody></table><!--
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Name in search</th>
+      <th style="text-align: left">Datatype</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">COMPLETENESS</td>
+      <td style="text-align: left">string</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">CONTRIBUTOR</td>
+      <td style="text-align: left">string</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">COUNTRY</td>
+      <td style="text-align: left">string</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">DATA_PROVIDER</td>
+      <td style="text-align: left">string</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">LANGUAGE</td>
+      <td style="text-align: left">string</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">LOCATION</td>
+      <td style="text-align: left">string</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">PROVIDER</td>
+      <td style="text-align: left">string</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">RIGHTS</td>
+      <td style="text-align: left">string</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">SUBJECT</td>
+      <td style="text-align: left">string</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">TYPE</td>
+      <td style="text-align: left">string</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">UGC</td>
+      <td style="text-align: left">string</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">USERTAGS</td>
+      <td style="text-align: left">string</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">YEAR</td>
+      <td style="text-align: left">string</td>
+    </tr>
+  </tbody>
+</table>
+
+<!--
 --></div>
 </div>
 ﻿<!-- Begin Footer -->
