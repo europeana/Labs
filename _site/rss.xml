@@ -50,6 +50,38 @@
       <dc:date>2014-04-26T00:00:00+02:00</dc:date>
     </item>
     <item>
+      <title>vieu- europeana cultural heritage visual search</title>
+      <link>http://labs.europeana.eu/apps/VIEU</link>
+      <description>&lt;p&gt;&lt;strong&gt;vieu- europeana cultural heritage visual search&lt;/strong&gt; - vieu is a visual search engine focusing on cultural heritage content. Starting from a random set of query suggestions, the user can get a list of matching images ranked by visual similarity. These results are retrieved from a collection of images from Europeana data providers. Along with the results, the user is presented with a direct link to the image page in the Europeana portal.&lt;/p&gt;</description>
+      <pubDate>Fri, 25 Apr 2014 00:00:00 +0200</pubDate>
+      <guid>http://labs.europeana.eu/apps/VIEU</guid>
+      <dc:date>2014-04-25T00:00:00+02:00</dc:date>
+    </item>
+    <item>
+      <title>PATHS- Personalised Access to Cultural Heritage Spaces</title>
+      <link>http://labs.europeana.eu/apps/PATHS</link>
+      <description>&lt;p&gt;&lt;strong&gt;PATHS- Personalised Access to Cultural Heritage Spaces&lt;/strong&gt; The latest &lt;a href='http://paths-project.eu/eng/Prototype'&gt;prototype&lt;/a&gt; of the  &lt;a href='http://paths-project.eu/eng/About'&gt;PATHS&lt;/a&gt; system offers users a collection discovery environment which personalises their access and use of very large digital libraries.  The prototype demonstrates search and visualisation techniques based on enriched metadata.  For users it offers narrative pathways which can be followed step by step, while allowing them to leave at any time by following recommendations and links to related items and contextual resources.  Users who are logged in to the system can search and browse the collections using these tools and can save interesting items to their workspace for use in creating, publishing and sharing their pathways.&lt;/p&gt;</description>
+      <pubDate>Fri, 25 Apr 2014 00:00:00 +0200</pubDate>
+      <guid>http://labs.europeana.eu/apps/PATHS</guid>
+      <dc:date>2014-04-25T00:00:00+02:00</dc:date>
+    </item>
+    <item>
+      <title>ECLAP Linked Open Graph</title>
+      <link>http://labs.europeana.eu/apps/ECLAP-linked-open-graph</link>
+      <description>&lt;p&gt;&lt;strong&gt;ECLAP Linked Open Graph&lt;/strong&gt; –&lt;a href='http://www.eclap.eu/116088'&gt;The Linked Open Graph&lt;/a&gt; has been developed by the project &lt;a href='http://www.eclap.eu/'&gt;ECLAP&lt;/a&gt;, the e-library for performing arts. ECLAP provides Europeana with a variety of performing-arts resources such as videos of dance rehearsals, dance, theatre performances, animations, playlists. The Linked Open Graph allows users to see, explore and browse the relationships among the ECLAP content and other types of resource created on the ECLAP platform.&lt;/p&gt;</description>
+      <pubDate>Fri, 25 Apr 2014 00:00:00 +0200</pubDate>
+      <guid>http://labs.europeana.eu/apps/ECLAP-linked-open-graph</guid>
+      <dc:date>2014-04-25T00:00:00+02:00</dc:date>
+    </item>
+    <item>
+      <title>ASSETS 3D search</title>
+      <link>http://labs.europeana.eu/apps/Assets3D-search</link>
+      <description>&lt;p&gt;&lt;strong&gt;ASSETS 3D search&lt;/strong&gt; - The ASSETS 3D search demo allows users to search for 3D models that are similar to a returned search query. In this demonstrator, users can search among 300 3D models from the Google 3D Warehouse using one model as a template for finding other models similar to it. This is made possible by analysing and indexing the shape of each 3D model and using the index as a basis for search.&lt;/p&gt;</description>
+      <pubDate>Fri, 25 Apr 2014 00:00:00 +0200</pubDate>
+      <guid>http://labs.europeana.eu/apps/Assets3D-search</guid>
+      <dc:date>2014-04-25T00:00:00+02:00</dc:date>
+    </item>
+    <item>
       <title>Untold stories of Norwegian history</title>
       <link>http://labs.europeana.eu/data/Kulturradet-Norway-History</link>
       <description></description>
@@ -519,14 +551,6 @@
       <description></description>
       <pubDate>Wed, 01 Jan 2014 00:00:00 +0100</pubDate>
       <guid>http://labs.europeana.eu/data/Maps-and-Drawings-from-the-Biblioteca-Virtual-Del-Patrimonio-Bibliografico</guid>
-      <dc:date>2014-01-01T00:00:00+01:00</dc:date>
-    </item>
-    <item>
-      <title>Flowers and Trees from the Royal Botanic Garden in Edinburgh</title>
-      <link>http://labs.europeana.eu/data/Flowers-and-Trees-from-the-Royal-Botanic-Garden-in-Edinburgh</link>
-      <description></description>
-      <pubDate>Wed, 01 Jan 2014 00:00:00 +0100</pubDate>
-      <guid>http://labs.europeana.eu/data/Flowers-and-Trees-from-the-Royal-Botanic-Garden-in-Edinburgh</guid>
       <dc:date>2014-01-01T00:00:00+01:00</dc:date>
     </item>
     <item>

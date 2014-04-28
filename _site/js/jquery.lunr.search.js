@@ -146,6 +146,13 @@
       
       $results.show();
       
+      $("div.tags").each(function(){
+      	//alert("OK");
+      	if($(this).find("a").length<=0){
+      		$(this).hide();
+      	}
+      });
+      
       
     };
     
