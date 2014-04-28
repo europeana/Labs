@@ -11,9 +11,9 @@ tags:
   - Facets
 ---
 
-Uncovering the technology behind providing portal and API users with a simple search tool to discover reusable content.
+Uncovering the technology behind the simple search tool to discover reusable content available in both the Europeana  portal and API.
 
-<em>This is an extract from a blog post previously published by Peter Kiraly, software developer at Europeana. To read the full article visit <a href="http://kirunews.blog.hu/2014/02/13/solr_query_facets_in_europeana">http://kirunews.blog.hu/2014/02/13/solr_query_facets_in_europeana</a></em>
+<em>This is an extract from a blog post previously published by P&eacute;ter Kir&aacute;ly, software developer at Europeana. To read the full article visit <a href="http://kirunews.blog.hu/2014/02/13/solr_query_facets_in_europeana">http://kirunews.blog.hu/2014/02/13/solr_query_facets_in_europeana</a></em>
 
 One of Europeana's important aims is to make the rights statements of records clear and straightforward. You can imagine, our >2,400 partners have different approaches for licensing their objects, and right now in the database we have 60+ different licence types, in other words the RIGHTS facet has 60+ individual values. Some of them are language or version variations of the same CC licence. Most users don't want to select from that range of options. But we can categorize these rights statements under 3 main categories:
 
@@ -53,5 +53,5 @@ For details of how this is implemented, including the actual Solr queries, read 
 For more information about the Europeana Data Model see [http://pro.europeana.eu/edm-documentation](http://pro.europeana.eu/edm-documentation "Europeana Data Model")
 To find out more about the Europeana API check the extensive online documentation section at [http://labs.europeana.eu/api/](http://labs.europeana.eu/api/ "Europeana API documentation")
 
-Peter Kiraly, April 2014
+P&eacute;ter Kir&aacute;ly, April 2014  
 [http://nl.linkedin.com/in/peterkiraly/](http://nl.linkedin.com/in/peterkiraly/)
