@@ -1,5 +1,5 @@
 ---
-layout: "data-item"
+layout: "data-page"
 title: Europeana Logs
 published: true
 ---
