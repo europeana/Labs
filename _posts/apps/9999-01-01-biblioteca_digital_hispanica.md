@@ -5,7 +5,7 @@ permalink: apps/biblioteca
 title: Biblioteca Digital Hispánica
 imageurl: 
   - "/img/apps/biblioteca-digital-hispanica/HIspania2.png"
-featured: true
+featured: false
 published: true
 contact:
   name: 
