@@ -1,19 +1,21 @@
-{% include start.html %}<!--
--->{% include header.html %}<!--
--->
-
-<div role="main" class="grid">
-	<div class="block block-content-header">
-		<div class="grid__item palm--one-whole push--palm--none three-quarters push--one-quarter">
-			<h2 class="title">{{page.title}}</h2>
-		</div>
+{% include item-header.html %}	
+	<div class="grid__item one-quarter palm--one-whole">
+		<ul class="tabs tabs-v">
+			<li><a href="{{site.baseurl}}/data">&larr;&nbsp;data</a></li>
+		</ul>
 	</div>
+	
+	<div class="grid__item three-quarters palm--one-whole">
 
-	{% include data-subnav.html %}
-		
-	<div id="documentation" class="prose grid__item palm--one-whole push--palm-none one-half"><!--
-	-->{{ content}}<!--
---></div>
+
+		<div class="b-text">
+		    <div class="prose description">
+		        {{ content}}                     
+		    </div>
+		</div>
+    </div>
+
 </div>
+
 {% include footer.html %}<!--
 -->{% include end.html %}
