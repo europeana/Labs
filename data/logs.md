@@ -8,7 +8,7 @@ We record user interactions with the Europeana portal. The log files provides ac
 
 Our logs have been analysed and used in the past by various research projects:
 
-* The [CLEF](http://www.clef-initiative.eu/)initiative 
+* The [CLEF](http://www.clef-initiative.eu/) initiative 
 * The PATHS project: see more [documentation](http://paths-project.eu/eng/News/Participation-by-PATHS-partners-in-Cultural-Heritage-in-CLEF-CHiC) project
 * ASSETS- Advanced Service Search and Enhancing Technological Solutions: see the related [report](http://pro.europeana.eu/web/assets/outcomes/-/document_library_display/rbR2/view/1977472)
 * Europeana Connect for analysing users' attitudes and needs and opens new ways of discovering cultural heritage in Europeana: see the [results](http://www.europeanaconnect.eu/results-and-resources.php?page=3)
@@ -66,7 +66,7 @@ We describe below the details of the Europeana Logs actions and the Europeana se
 ##Europeana session clickstream
 
 | Field|Example|Explanation|
-|:-----|:------|:----------|
+|:-----|:------|:-------|
 |**Session statistics**|
 |IP|B7A5C7280ACDE2F373D32BC53B7[…]|Unique identifier replacing IP address.|
 |Countries55|BR|Country code derived from IP address.|
