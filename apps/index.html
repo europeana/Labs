@@ -4,19 +4,28 @@ title: Apps
 ---
 
 <script>
-	$(document).ready(function(){
+/*	$(document).ready(function(){
 		
 		$("div.pagination-holder").jPages({
 	    containerID : "GalleryList",
 	    perPage: 10
 	    });
-	});
+	});*/
+	
+	$(document).ready(function() {
+        $("a.tag").listFilters({
+        	listid:"#filtered-list",
+        	paginationContainerId:"GalleryList",
+        	activeTagClass: "current-tag"
+        });
+    });
 </script>
 
-<div class="grid__item three-quarters palm--one-whole">
+<div id="filtered-list" class="grid__item three-quarters palm--one-whole">
+
     <ul id="GalleryList"  class="post-list grid">
         {% for post in site.categories.apps %}<!--
-        --><li class="grid__item one-whole desk--one-half">
+        --><li class="grid__item one-whole desk--one-half {% for tag in post.tags %} {{ tag | tags_links }}{% endfor %}">
             <div class="block block-thumb {%if post.featured != true %}  block-thumb-small {% endif %}">
 
                
@@ -50,7 +59,7 @@ title: Apps
                     <div class="tags">
                         <i class="icon icon-tag"> </i>
 						{% for tag in post.tags %}
-							<a href="{{site.baseurl}}/apps/{{ tag | tags_links }}/" class="tag_alt">{{tag}}</a>
+							<a class="tag_alt {{ tag | tags_links }}">{{tag}}</a>
 						{% endfor %}
                     </div>
                 </div>

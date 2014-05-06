@@ -3,18 +3,25 @@ layout: data-list
 title: Datasets
 ---
 <script>
-	$(document).ready(function(){
+	/*$(document).ready(function(){
 		
 		$("div.pagination-holder").jPages({
 	    	containerID : "DatasetsList",
 	    	perPage: 5
 	    });
-	});
+	});*/
+	$(document).ready(function() {
+        $("a.tag").listFilters({
+        	listid:"#filtered-list",
+        	paginationContainerId:"DatasetsList",
+        	activeTagClass: "current-tag"
+        });
+    });	
 </script>
-<div class="grid__item palm--one-whole three-quarters">
+<div id="filtered-list" class="grid__item palm--one-whole three-quarters">
     <ul id="DatasetsList"  class="post-list grid">
         {% for dataset in site.categories.data %}<!--
-        --><li class="grid__item one-whole {% for tag in dataset.tags %}{{tag | tags_links}} {% endfor %}">
+        --><li class="grid__item one-whole {% for tag in dataset.tags %} {{tag | tags_links}} {% endfor %}">
             <div class="block block-thumb  {%if counter > 1 %} block-thumb-small {% endif %}">
 
 				{% if dataset.imageurl.first.match(/^http/) %}
@@ -52,7 +59,7 @@ title: Datasets
                     <div class="tags">
                         <i class="icon icon-tag"></i>
 						{% for tag in dataset.tags %}
-							<a href="{{tag | tags_links}}" rel="{{tag | tags_links}}" class="tag_alt datasetstag-at-item">{{tag}}</a>
+							<a class="tag_alt {{tag | tags_links}} datasetstag-at-item">{{tag}}</a>
 						{% endfor %}
 						
 						
