@@ -9,7 +9,7 @@ This page provides information on how the metadata served by data.europeana.eu i
 
 ## Background - The Europeana Data Model (EDM)
 
-The Europeana Data Model was designed to replace the Europeana Semantic Elements (ESE). EDM will gradually make Europeana fit within a networked data environment. It is a much more flexible and precise model than ESE, and offers the opportunity to attach every statement to the specific resource it applies to, and to reflect some basic form of data provenance. The main EDM requirements include:
+The Europeana Data Model was designed to replace the Europeana Semantic Elements (ESE). EDM is now gradually making Europeana fit within a networked data environment. It is a much more flexible and precise model than ESE, and offers the opportunity to attach every statement to the specific resource it applies to, and to reflect some basic form of data provenance. The main EDM requirements include:
 
 * distinguishing between a &#39;provided item&#39; (painting, book) and its digital representations
 	
@@ -23,7 +23,7 @@ For more information on EDM, we refer to the *EDM Definitions* and *EDM Primer* 
 
 ## Generating EDM data for Europeana
 
-Currently, Europeana does not harvest metadata in the EDM format. We thus had to convert legacy ESE data into EDM. This entails creating resources for the main EDM classes, and distributing ESE metadata fields over these various resources, as presented in this [mapping](http://europeanalabs.eu/wiki/EDMPrototypingTask15). The resulting data does not realise the full potential offered by EDM but it allows us to make some distinctions, which we believe are useful for data consumers.
+The data available in the pilot results from a conversion of legacy ESE data into EDM. This entails creating resources for the main EDM classes, and distributing ESE metadata fields over these various resources, as presented in this [mapping](http://europeanalabs.eu/wiki/EDMPrototypingTask15). The resulting data does not realise the full potential offered by EDM but it allows us to make some distinctions, which we believe are useful for data consumers.
 
 Additionally, data.europeana.eu includes semantic connections to external (linked data) sources. We serve links to other linked data services already maintained by Europeana providers - currently only the Swedish cultural heritage aggregator (SOCH). The vast majority of external links come from semantic enrichment realised at the Europeana Office, connecting Europeana items to places (as provided by [GeoNames](http://geonames.org)), concepts (from the [GEMET](http://www.eionet.europa.eu/gemet) thesaurus), persons (from [DBpedia](http://dbpedia.org)) and time periods (from an adhoc time period vocabulary).
 
