@@ -32,7 +32,9 @@
             animation: "",
             fallback: 400,
             minHeight: true,
-            callback: undefined
+            callback: undefined,
+            filteredSelector: "ul.tags a.current-tag",
+            filteredClass:".filtered"
         };
 
     function Plugin(element, options) {
@@ -47,7 +49,15 @@
         this._previous = $(this.options.previous);
         this._next = $(this.options.next);
         this._last = $(this.options.last);
-        this._items = this._container.children(); //":visible:not('.filtered-by-tag')
+
+        if ($(this.options.filteredSelector).length > 0) {
+            this._items = this._container.children(this.options.filteredClass);
+            this._container.children(".not-filtered").hide();
+
+        } else {
+            this._items = this._container.children();
+        }
+
         this._itemsShowing = $([]);
         this._itemsHiding = $([]);
         this._numPages = Math.ceil(this._items.length / this.options.perPage);
@@ -104,35 +114,35 @@
             if (this.options.scrollBrowse) this.bindNavScrollBrowse();
         },
         writeNav: function () {
-        	var i = 1, navhtml;
-        	if(this._numPages>1){
-            
-            navhtml = this.writeBtn("first") + this.writeBtn("previous");
-            
-            for (; i <= this._numPages; i++) {
-                if (i === 1 && this.options.startRange === 0) navhtml += "<span>...</span>";
-                if (i > this.options.startRange && i <= this._numPages - this.options.endRange) navhtml += "<a href='#' class='jp-hidden'>";
-                else
-                    navhtml += "<a>";
-                switch (this.options.links) {
-                case "numeric":
-                    navhtml += i;
-                    break;
-                case "blank":
-                    break;
-                case "title":
-                    var title = this._items.eq(i - 1).attr("data-title");
-                    navhtml += title !== undefined ? title : "";
-                    break;
+            var i = 1, navhtml;
+            if (this._numPages > 1) {
+
+                navhtml = this.writeBtn("first") + this.writeBtn("previous");
+
+                for (; i <= this._numPages; i++) {
+                    if (i === 1 && this.options.startRange === 0) navhtml += "<span>...</span>";
+                    if (i > this.options.startRange && i <= this._numPages - this.options.endRange) navhtml += "<a href='#' class='jp-hidden'>";
+                    else
+                        navhtml += "<a>";
+                    switch (this.options.links) {
+                        case "numeric":
+                            navhtml += i;
+                            break;
+                        case "blank":
+                            break;
+                        case "title":
+                            var title = this._items.eq(i - 1).attr("data-title");
+                            navhtml += title !== undefined ? title : "";
+                            break;
+                    }
+                    navhtml += "</a>";
+                    if (i === this.options.startRange || i === this._numPages - this.options.endRange) navhtml += "<span>...</span>";
                 }
-                navhtml += "</a>";
-                if (i === this.options.startRange || i === this._numPages - this.options.endRange) navhtml += "<span>...</span>";
+
+                navhtml += this.writeBtn("next") + this.writeBtn("last") + "</div>";
+
             }
-            
-            navhtml += this.writeBtn("next") + this.writeBtn("last") + "</div>";
-            
-           }
-           return navhtml;
+            return navhtml;
         },
         writeBtn: function (which) {
             return this.options[which] !== false && !$(this["_" + which]).length ? "<a class='jp-" + which + "'>" + this.options[which] + "</a>" : "";
@@ -304,19 +314,19 @@
         getDirectedItems: function (page) {
             var itemsToShow;
             switch (this.options.direction) {
-            case "backwards":
-                itemsToShow = $(this._itemsShowing.get().reverse());
-                break;
-            case "random":
-                itemsToShow = $(this._itemsShowing.get().sort(function () {
-                    return (Math.round(Math.random()) - 0.5);
-                }));
-                break;
-            case "auto":
-                itemsToShow = page >= this._currentPageNum ? this._itemsShowing : $(this._itemsShowing.get().reverse());
-                break;
-            default:
-                itemsToShow = this._itemsShowing;
+                case "backwards":
+                    itemsToShow = $(this._itemsShowing.get().reverse());
+                    break;
+                case "random":
+                    itemsToShow = $(this._itemsShowing.get().sort(function () {
+                        return (Math.round(Math.random()) - 0.5);
+                    }));
+                    break;
+                case "auto":
+                    itemsToShow = page >= this._currentPageNum ? this._itemsShowing : $(this._itemsShowing.get().reverse());
+                    break;
+                default:
+                    itemsToShow = this._itemsShowing;
             }
             return itemsToShow;
         },
@@ -384,11 +394,11 @@
                 interval: pageInterval,
                 count: this._numPages
             }, items = {
-                    showing: this._itemsShowing,
-                    oncoming: this._items.slice(itemRange.start + this.options.perPage, itemRange.end + this.options.perPage),
-                    range: itemRange,
-                    count: this._items.length
-                };
+                showing: this._itemsShowing,
+                oncoming: this._items.slice(itemRange.start + this.options.perPage, itemRange.end + this.options.perPage),
+                range: itemRange,
+                count: this._items.length
+            };
             pages.interval.start = pages.interval.start + 1;
             items.range.start = items.range.start + 1;
             this.options.callback(pages, items);
