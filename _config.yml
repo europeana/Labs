@@ -8,6 +8,10 @@ pygments: true
 exclude: ['README.md', 'Gemfile', 'Gemfile.lock']
 baseurl: ""
 
+markdown: kramdown
+markdown_ext: markdown,mkdown,mkdn,mkd,md
+textile_ext: textile
+
 lunr_search:
   excludes: [rss.xml, atom.xml]
 
