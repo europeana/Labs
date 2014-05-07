@@ -7,6 +7,9 @@ featured: false
 permalink: apps/EFG-authority-manager
 tags: 
   - R&D results
+secondarytags: 
+  - Alignment tools
+  - Metadata mapping/conversion/normalisation
 links: 
   - "http://www.europeanfilmgateway.eu/"
   - "http://demo.authfile.research-infrastructures.eu/"
