@@ -7,6 +7,9 @@ featured: false
 permalink: apps/EuropeanaConnect-Geoparser
 tags: 
   - R&D results
+secondarytags:
+  - Semantic extraction
+  - Geo-spatial applications
 links: 
   - "http://europeana-geo.isti.cnr.it/geoparser"
 imageurl: 
