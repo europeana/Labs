@@ -7,6 +7,9 @@ featured: false
 permalink: apps/AssetsImageSearch
 tags: 
   - R&D results
+secondarytags:
+  - Image search
+  - Image similarity 
 links: 
   - "http://virserv.isti.cnr.it:8080/assetsIRService/index"
 contact: 
