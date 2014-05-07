@@ -7,6 +7,11 @@ featured: false
 permalink: apps/MyStoryPlayer
 tags: 
   - R&D results
+secondarytags:
+  -  Media annotation/tagging
+  -  Semantic enrichment
+  -  Media applications 
+  -  Social applications
 links: 
   - "http://www.eclap.eu/drupal/?q=en-US/node/3748"
   - "http://www.disit.dsi.unifi.it/mystoryplayer.html"
