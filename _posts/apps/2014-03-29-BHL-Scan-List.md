@@ -7,6 +7,8 @@ featured: false
 permalink: apps/BHL Scan List
 tags: 
   - R&D results
+secondarytags:
+  - Digital Asset Management
 links: 
   - "http://www.bhl-europe.eu/"
   - "http://bhl.nhm-wien.ac.at/scanlist/"
