@@ -7,6 +7,8 @@ featured: false
 permalink: apps/PATHSenrich
 tags: 
   - R&D results
+secondarytags:
+  - Semantic enrichment
 links: 
   - "http://www.paths-project.eu/"
   - "http://explorer.paths-project.eu/"
