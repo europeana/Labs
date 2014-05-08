@@ -23,23 +23,25 @@ Search for records.
 | callback| String| Name of a client side [callback function](#callback_function).|
 
 ### The possible values of the profile parameter
+
 | Value | Description |
 |:------|:------------|
-| minimal | minimal set of metadata |
+| minimal | Returns minimal set of metadata |
 | standard | TBD |
-| facets | information about [facets](http://labs.europeana.eu/api/repository/#facets) is added. For the records the Standard profile is used. |
+| facets | Information about [facets](http://labs.europeana.eu/api/repository/#facets) is added. For the records the Standard profile is used. |
 | breadcrumbs | information about the query is added in the form of [breadcrumbs](http://labs.europeana.eu/api/search/#breadcrumb). Facets are added as well; for the records the Standard profile is used. |
 | portal | Standard, Facets, and Breadcrumb combined |
+| params | The header of the response will contain a params key, which lists the requested and default parameters of the API call. |
 
 ## Response
 
 | Field | Datatype | Description |
 |:-------------|:-------------|:-----|
-| items |   Array ([Item](#item)) |  This is a collection of search results. Each item is represented by a summary of the metadata record. The actual content is dependent of the profile parameter.|
-| facets |  Array ([Facet](#facet)) |    A collection of facets that describe the resultant dataset. |
-| breadcrumbs | Array ([Breadcrumb](#breadcrumb))| A collection of search queries that were applied in this call. |
-| itemsCount |  Number  | The number of retrieved records |
-| totalResults |    Number |    The total number of results |
+| items | Array ([Item](#item)) | This is a collection of search results. Each item is represented by a summary of the metadata record. The actual content is dependent of the profile parameter. |
+| facets | Array ([Facet](#facet)) | A collection of facets that describe the resultant dataset. |
+| breadcrumbs | Array ([Breadcrumb](#breadcrumb)) | A collection of search queries that were applied in this call. |
+| itemsCount | Number | The number of retrieved records |
+| totalResults | Number | The total number of results |
 
 
 ### item
