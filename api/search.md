@@ -35,13 +35,15 @@ Search for records.
 
 ## Response
 
+For the common data returned by both search and object response, see Getting started guide's [response](http://labs.europeana.eu/api/getting-started/#response) section.
+
 | Field | Datatype | Description |
 |:-------------|:-------------|:-----|
+| itemsCount | Number | The number of retrieved records |
+| totalResults | Number | The total number of results |
 | items | Array ([Item](#item)) | This is a collection of search results. Each item is represented by a summary of the metadata record. The actual content is dependent of the profile parameter. |
 | facets | Array ([Facet](#facet)) | A collection of facets that describe the resultant dataset. |
 | breadcrumbs | Array ([Breadcrumb](#breadcrumb)) | A collection of search queries that were applied in this call. |
-| itemsCount | Number | The number of retrieved records |
-| totalResults | Number | The total number of results |
 
 
 ### item
