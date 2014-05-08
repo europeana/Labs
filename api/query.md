@@ -129,5 +129,3 @@ Looking for objects containing the term _Paris_ among objects provided by the us
 
     http://www.europeana.eu/api/v2/search.json?wskey=xxxx&query=Paris&qf=UGC:true
 [Test on API Console](http://labs.europeana.eu/api/console/?function=search&query=Paris&qf=UGC:true)
-    
-    
