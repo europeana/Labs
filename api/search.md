@@ -52,23 +52,26 @@ Each item is a search result and is represented by a summary of its metadata rec
 
 | Field | Datatype | Description |
 |:-------------|:-------------|:-----|
-| completeness |    Number  | A number from 1 to 10 that is an internal measure of the metadata quality. It is based on the availability of mandatory and optional schema fields.|
-| dataProvider<sup>\*</sup> |  Array (String)  | The names of Europeana Data Providers who provided the object. |
-| europeanaCollectionName<sup>\*</sup> |  Array (String) |    The names of the Europeana collections that contain the item |
-| id<sup>\*</sup>         | String |   The Europeana ID of the record. |
-| guid<sup>\*</sup>       |    String |    A link to the object page on the Europeana portal to be used by client applications.|
-| link<sup>\*</sup>       | String |   A link to the API object call. This link should be used to retrieve the full metadata object.|
-| provider<sup>\*</sup>   |    String |    The name or identifier of the provider of the object.|
-| rights<sup>\*</sup>     | Array (String) |   A collection of URLs referring to the object rights.|
-|type<sup>\*</sup>        |    String  | The type of the provided object (TEXT, VIDEO, SOUND, IMAGE, 3D)|
-| dcCreator    |    Array (String) |    A collection entities primarily responsible for making the resource.|
-| edmConceptLabel | String |    The label of the SKOS Concept of the record. Find more in [EDM Definition](http://pro.europeana.eu/documents/900548/bb6b51df-ad11-4a78-8d8a-44cc41810f22) |
-|edmPreview    |String  |A link to the representation of the object on Europeana.|
-|edmTimespanLabel | String |    The label of EDM Time Span object of the record. Find more in [EDM Definition](http://pro.europeana.eu/documents/900548/bb6b51df-ad11-4a78-8d8a-44cc41810f22) |
-|language      |    Array (String) |    Languages assigned to the resource with reference to the Provider.  Usually, this field contains the languages of the metadata of the record.|
-|title         |    Array (String)| The main and alternative titles of the item.|
-|year          |    Array (String)| A point of time associated with an event in the life of the original analog or born digital object. Find more in [EDM Definition](http://pro.europeana.eu/documents/900548/bb6b51df-ad11-4a78-8d8a-44cc41810f22)|
-
+| completeness | Number | A number from 1 to 10 that is an internal measure of the metadata quality. It is based on the availability of mandatory and optional schema fields. |
+| dataProvider<sup>\*</sup> | Array (String) | The names of Europeana Data Providers who provided the object. |
+| europeanaCollectionName<sup>\*</sup> | Array (String) | The names of the Europeana collections that contain the item |
+| id<sup>\*</sup> | String | The Europeana ID of the record. |
+| guid<sup>\*</sup> | String | A link to the object page on the Europeana portal to be used by client applications. |
+| link<sup>\*</sup> | String | A link to the API object call. This link should be used to retrieve the full metadata object. |
+| provider<sup>\*</sup> | String | The name or identifier of the provider of the object.|
+| rights<sup>\*</sup> | Array (String) | A collection of URLs referring to the object rights. |
+|type<sup>\*</sup> | String | The type of the provided object (TEXT, VIDEO, SOUND, IMAGE, 3D) |
+| dcCreator | Array (String) | A collection entities primarily responsible for making the resource. |
+| edmConceptLabel | String | The label of the SKOS Concept of the record. Find more in [EDM Definition](http://pro.europeana.eu/documents/900548/bb6b51df-ad11-4a78-8d8a-44cc41810f22) |
+| edmPreview | String | A link to the representation of the object on Europeana. |
+| edmTimespanLabel | String | The label of EDM Time Span object of the record. Find more in [EDM Definition](http://pro.europeana.eu/documents/900548/bb6b51df-ad11-4a78-8d8a-44cc41810f22) |
+| language | Array (String) | Languages assigned to the resource with reference to the Provider.  Usually, this field contains the languages of the metadata of the record. |
+| title | Array (String) | The main and alternative titles of the item. |
+| year | Array (String) | A point of time associated with an event in the life of the original analog or born digital object. Find more in [EDM Definition](http://pro.europeana.eu/documents/900548/bb6b51df-ad11-4a78-8d8a-44cc41810f22) |
+| timestamp_created_epoch | Number | UNIX timestamp of the date when record were created |
+| timestamp_update_epoch | Number | UNIX timestamp of the date when record were last updated |
+| timestamp_created | String | ISO 8601 format of the date when record were created |
+| timestamp_update | String | ISO 8601 format of the date when record were last updated |
 
 ### breadcrumb
 
