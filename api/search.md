@@ -79,11 +79,11 @@ A collection of search queries that were applied in this call.
 
 | Field | Datatype | Description |
 |:-------------|:-------------|:-----|
-|display    | String    | Human-readable description of the search |
-|param      | String    | The search parameter name (**query** or **qf**)|
-|value      | String    | The search parameter value |
-|href       |  String   | The search part of the URL which can be reused in further calls|
-|last       | Boolean   | Boolean value indicating whether the current breadcrumb is the last one |
+| display | String | Human-readable description of the search |
+| param | String | The search parameter name (**query** or **qf**) |
+| value | String | The search parameter value |
+| href | String | The search part of the URL which can be reused in further calls |
+| last | Boolean | Boolean value indicating whether the current breadcrumb is the last one |
 
 ### facet
 
@@ -91,8 +91,8 @@ A collection of facets that describe the resultant dataset.
 
 | Field | Datatype | Description |
 |:-------------|:-------------|:-----|
-| name | String  | The name of the facet (COUNTRY, DATA_PROVIDER, LANGUAGE, PROVIDER, RIGHTS, TYPE, UGC, YEAR) |
-| fields<sup>\*</sup> |   Array (field) | A collection of facet fields. Each field is an object that has a label (String) and a count of objects (Number).|
+| name | String | The name of the facet (COUNTRY, DATA_PROVIDER, LANGUAGE, PROVIDER, RIGHTS, TYPE, UGC, YEAR or a custom facet) |
+| fields<sup>\*</sup> | Array (field) | A collection of facet fields. Each field is an object that has a label (String) and a count of objects (Number). |
 
 <sup>\*</sup> _indicates an obligatory property_
 
