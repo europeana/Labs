@@ -91,7 +91,7 @@ A callback can be added to any JSON-based call by appending &callback=callbackna
 
 returns
 
-    processEuropeanaSearch({"apikey":"xxxxx","action":"record.json","success":true,"statsDuration":22,"requestNumber":8,"object":{"type":"TEXT","title":["Bibliotheca Indica"],"about": "/9200143/41CCA52E2986E491BBA631D4899768A5002C455A",....}})
+    processEuropeanaSearch({"apikey":"xxxxx","action":"record.json","success":true,"statsDuration":22,"requestNumber":8,"object":{"type":"TEXT","title":["Bibliotheca Indica"],"about": "[record ID]",....}})
 
 The JSON response is wrapped into your function, and the function use JSON as input parameter, and it immediatelly runs when it returns. In your client you have to define the callback function before you call the API. A client side example:
 
