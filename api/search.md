@@ -35,7 +35,7 @@ Search for records.
 
 ## Response
 
-For the common data returned by both search and object response, see Getting started guide's [response](http://labs.europeana.eu/api/getting-started/#response) section.
+For the common data fields returned by both search and object response, see Getting started guide's [response](http://labs.europeana.eu/api/getting-started/#response) section.
 
 | Field | Datatype | Description |
 |:-------------|:-------------|:-----|
