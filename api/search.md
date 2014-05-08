@@ -16,7 +16,12 @@ Search for records.
 | Parameter | Datatype | Description |
 |:-------------|:-------------|:-----|
 | query | String | The search term(s). See [Query Syntax](http://labs.europeana.eu/api/query) for information on forming complex queries and examples. |
-| profile | String | Profile parameter controls the format and richness of the response: <ul><li>minimal - minimal set of metadata</li><li>standard - TBD</li><li>facets - information about [facets](http://labs.europeana.eu/api/repository/#facets) is added. For the records the Standard profile is used.</li><li>breadcrumbs - information about the query is added in the form of [breadcrumbs](http://labs.europeana.eu/api/search/#breadcrumb). Facets are added as well; for the records the Standard profile is used.</li><li>portal - Standard, Facets, and Breadcrumb combined </li></ul> |
+| profile | String | Profile parameter controls the format and richness of the response: 
+- minimal - minimal set of metadata
+- standard - TBD
+- facets - information about [facets](http://labs.europeana.eu/api/repository/#facets) is added. For the records the Standard profile is used.
+- breadcrumbs - information about the query is added in the form of [breadcrumbs](http://labs.europeana.eu/api/search/#breadcrumb). Facets are added as well; for the records the Standard profile is used.
+- portal - Standard, Facets, and Breadcrumb combined |
 | qf | String | Facet filtering query. This parameter can be defined more than once. See [Query Syntax](http://labs.europeana.eu/api/query) page for more information. |
 | rows | Number | The number of records to return. Maximum is 100. Defaults to 12. |
 | start | Number | The item in the search results to start with. The first item is 1. Defaults to 1. |
