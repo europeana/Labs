@@ -86,7 +86,7 @@ Name of a client side (JavaScript) callback function. If you set a funtion the J
 
 A callback can be added to any JSON-based call by appending &callback=callbackname to the call, where the callbackname should be an existing JavaScript function existing on the client side. The API returns JSONP response, like this one:
 
-    /api/v2/record/9200143/41CCA52E2986E491BBA631D4899768A5002C455A.json?wskey=xxxx&profile=similar&**callback=processEuropeanaSearch**
+    /api/v2/record/[record ID].json?wskey=xxxx&profile=similar&**callback=processEuropeanaSearch**
 
 returns
 
