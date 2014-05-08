@@ -2,7 +2,7 @@
 layout: "api-page"
 title: Query Syntax
 published: true
-excerpt: "Search query syntax supported by the API"
+excerpt: Search query syntax supported by the API
 ---
 
 Internally, Europeana uses [Apache SOLR](http://lucene.apache.org/solr/) platform to store its data and thus [Apache Lucene Query Syntax](https://lucene.apache.org/core/4_1_0/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#package_description) is supported by queries. Advanced users are encouraged to use Lucene and Apache SOLR guides to get most out of the Europeana repository. For others, we supply a basic guide for querying Europeana.
@@ -11,6 +11,7 @@ Internally, Europeana uses [Apache SOLR](http://lucene.apache.org/solr/) platfor
 
 To look for records that contain a search term in one of the data fields, provide the term as a **query** parameter:
 
+    Syntax: "Mona Lisa"
     http://www.europeana.eu/api/v2/search.json?wskey=xxxx&query="Mona Lisa"
 [Test on API Console](http://labs.europeana.eu/api/console/?function=search&query=%22Mona+Lisa%22)
 
@@ -18,6 +19,7 @@ Note that like in many other search applications omitting the quotes will result
 
 If you want to limit your search to a specific data field you should provide the name of the field using the following syntax. For example, to look for objects whose creator is _Leonardo da Vinci_:
 
+    Syntax: who:"Leonardo da Vinci"
     http://www.europeana.eu/api/v2/search.json?wskey=xxxx&query=who:"Leonardo da Vinci"
 [Test on API Console](http://labs.europeana.eu/api/console/?function=search&query=who:%22Leonardo%20da%20Vinci%22)
 
@@ -25,18 +27,60 @@ If you want to limit your search to a specific data field you should provide the
 
 To combine several fields in one search one can use boolean operators AND, OR, and NOT (note the case-sensitivity). Use parentheses to group logical conditions. Note that two consecutive terms without any boolean operator in between default to the AND operator.
 
+    Syntax: mona AND lisa
     http://www.europeana.eu/api/v2/search.json?wskey=xxxx&query=mona AND lisa
  [Test on API Console](http://labs.europeana.eu/api/console/?function=search&query=mona%20AND%20lisa)
 
 Boolean operators can also be combined with the search by fields. The following example searches for objects whose location is in _Paris_ or in _London_:
 
-    http://www.europeana.eu/api/v2/search.json?wskey=xxxx&query=where: (Paris OR London)
+    Syntax: where:(Paris OR London)
+    http://www.europeana.eu/api/v2/search.json?wskey=xxxx&query=where:(Paris OR London)
 [Test on API Console](http://labs.europeana.eu/api/console/?function=search&query=where:%20%28Paris%20OR%20London%29)
 
 The boolean NOT operator cannot be used alone but only in conjunction with another boolean operator. For example, looking for objects which contain the term _Lisa_ but do not contain the term _Mona_ is done by the following:
 
+    Syntax: lisa NOT mona
     http://www.europeana.eu/api/v2/search.json?wskey=xxxx&query=lisa NOT mona
 [Test on API Console](http://labs.europeana.eu/api/console/?function=search&query=lisa%20NOT%20mona)
+
+## Range Search
+
+To execute range queries, the range operator should be used. This example will search for objects whose field values fall between __a__ and __Z__:
+
+    Syntax: [a TO Z]
+    http://www.europeana.eu/api/v2/search.json?wskey=xxxx&query=[a TO Z]
+[Test on API Console](http://labs.europeana.eu/api/console/?function=search&query=[a+TO+Z])
+
+As well as for textual fields it can also be used for numeric values, date ranges, or geographical areas, as shown below.
+
+### Time Range Search
+
+Looking for objects dated by a year between _1525_ and _1527_:
+
+	Syntax: YEAR:[1525 TO 1527]
+    http://www.europeana.eu/api/v2/search.json?wskey=xxxx&query=YEAR:[1525 TO 1527]
+[Test on API Console](http://labs.europeana.eu/api/console/?function=search&query=YEAR:[1525%20TO%201527])
+
+### Geographical Bounding Box Search
+
+To search for objects by their geographic location you should specify the bounding box of the area. You need to use the range operator and the **pl_wgs84_pos_lat** (latitude position) and **pl_wgs84_pos_long** (longitude position) field. The following example will bring all the objects found between the latitude of 45° and 47° and between the longitude of 7° and 8°:
+
+    Syntax: pl_wgs84_pos_lat:[45 TO 47] AND pl_wgs84_pos_long:[7 TO 8]
+    http://www.europeana.eu/api/v2/search.json?wskey=xxxx&query=pl_wgs84_pos_lat:[45 TO 47] AND pl_wgs84_pos_long:[7 TO 8]
+[Test on API Console](http://labs.europeana.eu/api/console/?function=search&query=pl_wgs84_pos_lat:[45+TO+47]+AND+pl_wgs84_pos_long:[7+TO+8])
+
+
+## Date Search
+
+One can also search objects by date. Currently, full-fledge date search is supported only for the fields storing the creation and update dates of the objects which are available in two formats: the UNIX epoch timestamp and the ISO 8601 formatted date. To search for objects created or updated on a given date, use the following query:
+
+    Syntax: timestamp_created:"2013-03-16T20:26:27.168Z"
+    Syntax: timestamp_updated:"2013-03-16T20:26:27.168Z"
+    http://www.europeana.eu/api/v2/search.json?wskey=xxxx&query=timestamp_created:"2013-03-16T20:26:27.168Z"
+    http://www.europeana.eu/api/v2/search.json?wskey=xxxx&query=timestamp_updated:"2013-03-16T20:26:27.168Z"
+
+
+
 
 ## Refinements
 
@@ -87,9 +131,3 @@ Looking for objects containing the term _Paris_ among objects provided by the us
 [Test on API Console](http://labs.europeana.eu/api/console/?function=search&query=Paris&qf=UGC:true)
     
     
-## Time Range Search
-
-Looking for objects dated by a year between _1525_ and _1527_:
-
-    http://www.europeana.eu/api/v2/search.json?wskey=xxxx&query=YEAR:[1525 TO 1527]
-[Test on API Console](http://labs.europeana.eu/api/console/?function=search&query=YEAR:[1525%20TO%201527])
