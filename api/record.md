@@ -2,7 +2,7 @@
 layout: "api-page"
 title: Record
 published: true
-excerpt: "Retrieving a single record from the dataset"
+excerpt: Retrieving a single record from the dataset
 ---
 
 * TOC
@@ -17,47 +17,45 @@ Retrieve a single record from the Europeana dataset. On the relation between EDM
 | Parameter | Datatype | Description |
 |:-------------|:-------------|:-----|
 | recordID | String | [Europeana ID](http://labs.europeana.eu/api/data-hierarchy/#identifying_records) of the record to retrieve. |
-| callback| String| Name of a [client side callback function](http://labs.europeana.eu/api/search/#callback_function).|
+| callback | String | Name of a [client side callback function](http://labs.europeana.eu/api/search/#callback_function). |
 
 
 ## Response
 
 | Field | Datatype | Description |
 |:-------------|:-------------|:-----|
-| object |   [Object](#object) |  The object representing the EDM metadata record. (see the note above) |
-| similarItems |   Array([item](http://labs.europeana.eu/api/search/#item)) |  The collection of metadata records similar to the current one. Available when profile parameter value is set to **similar**. The structure of each record is the same as the structure of the items collection returned by the [search](http://labs.europeana.eu/api/search) method. |
+| object | [Object](#object) | The object representing the EDM metadata record. (see the note above) |
+| similarItems | Array([item](http://labs.europeana.eu/api/search/#item)) | The collection of metadata records similar to the current one. Available when profile parameter value is set to **similar**. The structure of each record is the same as the structure of the items collection returned by the [search](http://labs.europeana.eu/api/search) method. |
 
 
 ### object
 
 | Field | Datatype | Description |
 |:-------------|:-------------|:-----|
-|about|     String| [Europeana ID](http://labs.europeana.eu/api/data-hierarchy/#identifying_records) of the returned object.|
-|agents|Array([Agent](#edm_agent))|A collection of EDM Agent objects contextually related to the object. Find more in the EDM Definition.|
-|aggregations|Array([Aggregation](#edm_aggregation))|A collection of EDM Aggregation objects related to the object. Find more in the EDM Definition.|
-|concepts|Array([Concept](#edm_concept))|A collection of EDM Concept objects contextually related to the object. Find more in the EDM Definition.|
-|country|Array(String)| TBD |
-|europeanaAggregation|Array([EuropeanaAggregation](#edm_EuropeanaAggregation))|A collection of EDM Europeana Aggregation objects related to the object. Find more in the EDM Definition.|
-|europeanaCollectionName|Array(String)|A collection of names of the datasets the object belongs to.|
-|europeanaCompleteness|Number|  A number between 0 and 10 representing the metadata quality of the object. |
-|language|     Array(String) | A singleton collection with the language of the object.    |
-|optOut|     Boolean | Flag indicating whether the provider allowed retrieval of thumbnail of the record |
-|places|     Array([Place](edm_#Place))|     A collection of EDM Place objects contextually related to the object. Find more in the EDM Definition.|
-|provider|     Array(String) | A singleton collection with the name of the organization that delivered this object to Europeana.     |
-|providedCHOs|     Array ([ProvidedCHO](#edm_ProvidedCHO)) |     A collection of Provided Cultural Heritage Objects related to the record. Find more in the EDM Definition.|
-|proxies|     Array ([Proxy](#Proxy))|     A collection of proxy objects for Provided Cultural Heritage Objects. Find more in the EDM Definition.|
-|timespans|     Array ([TimeSpan](#TimeSpan))| A collection of EDM TimeSpan objects contextually related to the object. Find more in the EDM Definition.    |
-|timestamp_created_epoch | Number | Unix time of the date when the object was created. |
-|timestamp_update_epoch| Number | Unix time of the date when the object was last updated. |
-|timestamp_created | String | ISO 8601 format of the date when the object was created. |
-|timestamp_update | String | ISO 8601 format of the date when the object was last updated.|
-|title|     Array (String)|     A collection with the main and alternative titles of the object. |
-|type|     String|     The type of the object (see the TYPE facet) TBD: add link |
-|year|     Array (String)|  |
-
+| about | String | [Europeana ID](http://labs.europeana.eu/api/data-hierarchy/#identifying_records) of the returned object.|
+| agents | Array([Agent](#edm_agent)) | A collection of EDM Agent objects contextually related to the object. Find more in the EDM Definition. |
+| aggregations | Array([Aggregation](#edm_aggregation)) | A collection of EDM Aggregation objects related to the object. Find more in the EDM Definition. |
+| concepts | Array([Concept](#edm_concept)) | A collection of EDM Concept objects contextually related to the object. Find more in the EDM Definition. |
+| country | Array(String) | TBD |
+| europeanaAggregation | Array([EuropeanaAggregation](#edm_EuropeanaAggregation)) | A collection of EDM Europeana Aggregation objects related to the object. Find more in the EDM Definition.|
+| europeanaCollectionName | Array(String) | A collection of names of the datasets the object belongs to. |
+| europeanaCompleteness | Number | A number between 0 and 10 representing the metadata quality of the object. |
+| language | Array(String) | A singleton collection with the language of the object. |
+| optOut | Boolean | Flag indicating whether the provider allowed retrieval of thumbnail of the record |
+| places | Array([Place](edm_#Place)) | A collection of EDM Place objects contextually related to the object. Find more in the EDM Definition. |
+| provider | Array(String) | A singleton collection with the name of the organization that delivered this object to Europeana. |
+| providedCHOs | Array([ProvidedCHO](#edm_ProvidedCHO)) | A collection of Provided Cultural Heritage Objects related to the record. Find more in the EDM Definition. |
+| proxies | Array([Proxy](#Proxy)) | A collection of proxy objects for Provided Cultural Heritage Objects. Find more in the EDM Definition. |
+| timespans | Array([TimeSpan](#TimeSpan)) | A collection of EDM TimeSpan objects contextually related to the object. Find more in the EDM Definition. |
+| timestamp_created_epoch | Number | Unix time of the date when the object was created. |
+| timestamp_update_epoch | Number | Unix time of the date when the object was last updated. |
+| timestamp_created | String | ISO 8601 format of the date when the object was created. |
+| timestamp_update | String | ISO 8601 format of the date when the object was last updated.|
+| title | Array(String) | A collection with the main and alternative titles of the object. |
+| type | String | The type of the object (see the TYPE facet) TBD: add link |
+| year | Array(String) |  |
 
 ### EDM Aggregation
-
 
 An EDM Aggregation object. The set of resources related to a single cultural heritage object that collectively represent that object in Europeana. Such set consists of: all descriptions about the object that Europeana collects from (possibly different) content providers, including thumbnails and other forms of abstractions, as well as of the description of the object Europeana builds. Find more in the EDM Definition.
 
@@ -283,4 +281,3 @@ An EDM Timespan object.
 | isPartOf | dcterms:isPartOf | LangMap | Reference to a timespan of which the described timespan is a part. |
 | dctermsHasPart | dcterms:hasPart | LangMap | Reference to a timespan which is part of the described timespan. |
 | owlSameAs | owl:sameAs | Array(String) | The URI of a timespan. |
-
