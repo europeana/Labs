@@ -16,7 +16,7 @@ Search for records.
 | Parameter | Datatype | Description |
 |:-------------|:-------------|:-----|
 | query | String | The search term(s). See [Query Syntax](http://labs.europeana.eu/api/query) for information on forming complex queries and examples. |
-| profile | String | Profile parameter controls the format and richness of the response. See [the possible values of the profile parameter](#the_possible_values_of_the_profile_parameter). |
+| profile | String | Profile parameter controls the format and richness of the response. See [the possible values of the profile parameter](#the-possible-values-of-the-profile-parameter). |
 | qf | String | Facet filtering query. This parameter can be defined more than once. See [Query Syntax](http://labs.europeana.eu/api/query) page for more information. |
 | rows | Number | The number of records to return. Maximum is 100. Defaults to 12. |
 | start | Number | The item in the search results to start with. The first item is 1. Defaults to 1. |
