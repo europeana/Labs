@@ -24,43 +24,43 @@ We describe below the details of the Europeana Logs actions and the Europeana se
 | Action | Explanation |
 |:-------------|:-------------|
 | "BRIEF_RESULT"  | User launches a query and is directed to the brief result page.| 
-| "FULL_RESULT_HTML"    | User clicks on an object from the result list and is directed to the detailed full result presentation | 
-|"INDEXPAGE" | User views the homepage. |
-|"REDIRECT_OUTLINK" | User clicks on a link directing to the content provider. |
-|"RETURN_TO_RESULTS" | Users from a full view to the result list. |
-|"STATICPAGE" | Pages views with no dynamic parameter such as “contact us”, “terms of use and policies”. |
-|"BRIEF_RESULT" | Result list from a search query. |
-|"LANGUAGE_CHANGE" | A user switches the interface language via drop down menu. |
-|"LOGIN" | User logs in the user profile MyEuropeana. |
-|"LOGOUT" | User logs out from MyEuropeana. |
-|"LOGOUT_COOKIE_THEFT" | Matching of cookies fails. |
-|"REGISTER" | User registers for MyEuropeana. |
-|"REGISTER_FAILURE"| Registration process failed. |
-|"REGISTER_SUCCESS"| The registration was successfully confirmed. |
-|"EXCEPTION_CAUGHT"| Requested object was not found. |
+| "FULL_RESULT_HTML"    | User clicks on an object from the result list and is directed to the detailed full result presentation| 
+|"INDEXPAGE" | User views the homepage.|
+|"REDIRECT_OUTLINK" | User clicks on a link directing to the content provider.|
+|"RETURN_TO_RESULTS" | Users from a full view to the result list.|
+|"STATICPAGE" | Pages views with no dynamic parameter such as “contact us”, “terms of use and policies”.|
+|"BRIEF_RESULT" | Result list from a search query.|
+|"LANGUAGE_CHANGE" | A user switches the interface language via drop down menu.|
+|"LOGIN" | User logs in the user profile MyEuropeana.|
+|"LOGOUT" | User logs out from MyEuropeana.|
+|"LOGOUT_COOKIE_THEFT" | Matching of cookies fails.|
+|"REGISTER" | User registers for MyEuropeana.|
+|"REGISTER_FAILURE"| Registration process failed.|
+|"REGISTER_SUCCESS"| The registration was successfully confirmed.|
+|"EXCEPTION_CAUGHT"| Requested object was not found.|
 |"CONTACT_PAGE" | User clicks on the contact / feedback page.|
-|"FEEDBACK_SEND" | User has send a message at the feedback page. |
-|"FULL_RESULT_FROM_TIME_LINE_VIEW" | Object view presented at the timeline. |
-|"MY_EUROPEANA" | MyEuropeana link for registration or log in. |
-|"FEEDBACK_SEND_FAILURE" | User message from the feedback page. |
-|"CHANGE_PASSWORD_SUCCES" | User changed the log in password. |
-|"SITE_MAP_XML" | XML rendition of the sitemap so crawlers can navigate the website. |
-|"SAVE_ITEM" | Users saves an object in MyEuropeana. |
-|"SAVE_SOCIAL_TAG" | Users assigns a tag to an object saved in MyEuropeana. |
-|"CHANGE_PASSWORD_FAILURE" | Change of user profile password failed. |
-|"FULL_RESULT_FROM_SAVED_ITEM" | A user clicks on a saved object and views the full result representation. |
-|"SAVE_SEARCH" | User saves previous search terms in MyEuropeana. |
-|"BRIEF_RESULT_FROM_SAVED_SEARCH" | User clicks on a previous saved search and receives a result list. |
-|"REMOVE_SAVED_ITEM" | Users removes a saved object from MyEuropeana. |
-|"REMOVE_SOCIAL_TAG" | User removes a tag from MyEuropeana. |
-|"FULL_RESULT_FROM_CAROUSEL" | Users clicks on an object from the carousel. and is directed to the full result presentation. |
+|"FEEDBACK_SEND" | User has send a message at the feedback page.|
+|"FULL_RESULT_FROM_TIME_LINE_VIEW" | Object view presented at the timeline.|
+|"MY_EUROPEANA" | MyEuropeana link for registration or log in.|
+|"FEEDBACK_SEND_FAILURE" | User message from the feedback page.|
+|"CHANGE_PASSWORD_SUCCES" | User changed the log in password.|
+|"SITE_MAP_XML" | XML rendition of the sitemap so crawlers can navigate the website.|
+|"SAVE_ITEM" | Users saves an object in MyEuropeana.|
+|"SAVE_SOCIAL_TAG" | Users assigns a tag to an object saved in MyEuropeana.|
+|"CHANGE_PASSWORD_FAILURE" | Change of user profile password failed.|
+|"FULL_RESULT_FROM_SAVED_ITEM" | A user clicks on a saved object and views the full result representation.|
+|"SAVE_SEARCH" | User saves previous search terms in MyEuropeana.|
+|"BRIEF_RESULT_FROM_SAVED_SEARCH" | User clicks on a previous saved search and receives a result list.|
+|"REMOVE_SAVED_ITEM" | Users removes a saved object from MyEuropeana.|
+|"REMOVE_SOCIAL_TAG" | User removes a tag from MyEuropeana.|
+|"FULL_RESULT_FROM_CAROUSEL" | Users clicks on an object from the carousel. and is directed to the full result presentation.|
 |"ERROR_TOKEN_EXPIRED" | User session is terminated due to inactivity.|
 |"REMOVE_SAVED_SEARCH" | User removes saved search terms from MyEuropeana.|
 |"AJAX_ERROR” | Error with Java Script request from front-end to back-end service.|
-|"REDIRECT_TO_SECURE" | User is directed to a secure communication page (HTTPS). |
-|"FULL_RESULT_HMTL" | The HTML rendering of the full result page. |
-|"FULL_RESULT_SRW" | The XML SRU/SRW rendering of the full-result page. |
-|"FULL_RESULT_JSON" | JSON output of the full-result. |
+|"REDIRECT_TO_SECURE" | User is directed to a secure communication page (HTTPS).|
+|"FULL_RESULT_HMTL" | The HTML rendering of the full result page.|
+|"FULL_RESULT_SRW" | The XML SRU/SRW rendering of the full-result page.|
+|"FULL_RESULT_JSON" | JSON output of the full-result.|
 
 
 ##Europeana session clickstream
