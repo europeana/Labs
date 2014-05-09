@@ -13,7 +13,9 @@ In October 2012, a large subset of this data was transformed into **linked data*
 
 [**Linked Open Data - What is it?**](http://player.vimeo.com/video/36752317) from [Europeana](http://vimeo.com/europeana) on [Vimeo](http://vimeo.com) 
 
-<iframe markdown="0" title="Vimeo player" class="vimeo-player" type="text/html" width="480" height="390" src="//player.vimeo.com/video/36752317" frameborder="0" webkitallowfullscreen=”allowFullScreen” mozallowfullscreen=”allowFullScreen” allowFullScreen=”allowFullScreen”></iframe>
+{::nomarkdown}
+<iframe markdown="0" title="Vimeo player" class="vimeo-player" type="text/html" width="480" height="390" src="http://player.vimeo.com/video/36752317" frameborder="0" webkitallowfullscreen=”allowFullScreen” mozallowfullscreen=”allowFullScreen” allowFullScreen=”allowFullScreen”>
+{:/nomarkdown}
 
 (also in [French](http://vimeo.com/album/2072014/video/49231111), [German](http://vimeo.com/album/2072014/video/49231110), [Italian](http://vimeo.com/album/2072014/video/49232562) and [Spanish](https://vimeo.com/album/2072014/video/49231112).)
 
