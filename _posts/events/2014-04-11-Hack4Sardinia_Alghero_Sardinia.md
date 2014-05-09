@@ -1,4 +1,5 @@
 ---
+published: false
 layout: events-item
 category: events
 permalink: /events/Hack4Europe-Alghero
