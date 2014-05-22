@@ -1,0 +1,88 @@
+
+               ``-/+ooo+/:.``           
+           `.+ymMMMMMMMMMMMNdo:`        
+         `/hMMMMMMMNmmmNMMMMMMMNs-`     
+       `/dMMMMNy+-``   ``./odMMMMMy.`   
+      `yMMMMd/`             `-sNMMMN:`  
+     `hMMMMo`                 `.dMMMM/` 
+    `sMMMM/`                    `dMMMN-`
+    -MMMMy`           `-+oooooooomMMMMy`
+   `/MMMM/`          `:MMMMMMMMMMMMMMMm`    europeana
+   `+MMMM:`           `sdmmmmmmmmmmmmh/`    think culture
+    -MMMMs`                      ```    
+    `yMMMN:`                    `/so-`  
+     .dMMMN/`                  .yMMMN.  
+    ``yNmmmNh:`             ``+NMMMN+`  
+  `:+++oyyys++oo:.`      `-+yNMMMMh-`   
+ `o/+NMMMMMMMNy-dMNmddddmMMMMMMNy:`     
+`s/oMMMMMMMMMMMd.NMMMMMMMMMMmy/.        
+`m.mMMMMMMMMMMMM-hdssssso+:.            
+`h:yMMMMMMMMMMMN.m.                     
+ -h-yMMMMMMMMMd--+```                   
+  .oo/oydmmhs:.yNMMd:`                  
+    `/ossssss:yMMMMMN``                 
+         `   `-dMMMN+`                  
+              ``.:-``
+
+
+/* design and development team */
+	
+	-- Europeana Foundation --
+	
+		first product owner: Breandán Knowlton
+		contact: breandan.knowlton [at] wearewhatwedo.org
+	
+		second product owner: David Haskiya
+		contact: david.haskiya [at] europeana.eu
+
+		third product owner: James Morley
+		contact: james.morley [at] europeana.eu
+	
+		UX research and design: Dean Birkett
+		contact: dean.birkett [at] europeana.eu
+		
+		content analysis and apps documentation: Dasha Moskalenko
+		contact: dasha.moskalenko [at] europeana.eu
+		
+		Linked Open Data - and apps documentation: Valentine Charles
+		contact: valentine.charles [at] europeana.eu
+		
+		API-console and documentation: Péter Király
+		contact: peter.kiraly [at] europeana.eu
+	
+		API documentation: Pavel Kats
+		contact: pavel.kats [at] europeana.eu
+
+		dataset curation: Henning Schulz
+		contact: henning.schulz [at] europeana.eu
+
+		copy writing: Beth Daley
+		contact: beth.daley [at] europeana.eu
+
+	
+	-- Semantika --
+	
+		CTO: Sašo Zagoranski
+		contact: saso.zagoranski [at] semantika.si
+	
+		Development Manager: Marko Kokol
+		contact: marko.kokol [at] semantika.si
+	
+		Senior Systems Software Engineer: Alen Bratanović
+		contact: alen.bratanovic [at] semantika.si
+
+
+	-- uc48 design --
+	
+		Owner and Designer: Tim Harbour
+		contact: tim [at] uc48.net
+		
+
+/* ascii art */
+
+	website: http://www.text-image.com/convert/ascii.html
+	
+
+/* humans.txt */
+
+	last update: 2014/04/29
