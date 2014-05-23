@@ -22,7 +22,7 @@ Retrieve information about all Europeana data providers.
 | Parameter | Datatype | Type | Description |
 |:-------------|:-------------|:-----|:-----|
 | offset | String |  query | for paging needs - offset to start with |
-| pageSize | Number | query  | for paging needs - size of the result set to fetch |
+| pagesize | Number | query  | for paging needs - size of the result set to fetch |
 | countryCode | String | query | two-letters ISO 3166-1 country code. (TBD - is it so?) |
 
 ### Response
