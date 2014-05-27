@@ -19,7 +19,7 @@
 	                    <div class="description">
 	                        {{page.description}}                        
 	                    </div>
-						<p><small>Dataset provided by <a href="{{dataset.providerurl}}" title="Link to {{dataset.provider}}">{{page.provider}}</a>. Contact <a href="mailto:{{dataset.contact}}">{{page.contact}}</a> for more details.</small></p>
+						<p><small>Dataset provided by <a href="{{page.providerurl}}" title="Link to {{page.provider}}">{{page.provider}}</a>. Contact <a href="mailto:{{dataset.contact}}">{{page.contact}}</a> for more details.</small></p>
 						{%if page.licenses %}
 							<ul class="sg-icons inline-list">
 							{% for license in page.licenses %}
