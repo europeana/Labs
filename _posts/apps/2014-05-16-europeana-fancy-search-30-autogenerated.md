@@ -5,6 +5,7 @@ permalink: /apps/europeana-fancy-search
 title: "Europeana Fancy Search"
 imageurl:
   - "/img/apps/Europeana%20Fancy%20Search/europeana_fancy_search.png"
+featured: false
 tags:
   - Hackathon Prototype
   - CMS plugin

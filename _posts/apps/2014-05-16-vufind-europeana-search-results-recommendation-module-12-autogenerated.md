@@ -6,6 +6,7 @@ title: "VuFind Europeana search results recommendation module"
 imageurl:
   - "/img/apps/vufind/Vufind.jpg"
   - "/img/apps/vufind/Vufind_2.jpg"
+featured: false
 tags:
   - API Implementation
   - CMS plugin

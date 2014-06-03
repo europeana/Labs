@@ -6,6 +6,7 @@ title: "EOD search"
 imageurl:
   - "/img/apps/eod-search/EOD.jpg"
   - "/img/apps/eod-search/EOD_2.jpg"
+featured: false
 tags:
   - API Implementation
   - Search

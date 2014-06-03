@@ -5,6 +5,7 @@ permalink: /apps/europeana-field-game
 title: "Europeana Field Game"
 imageurl:
   - "/img/apps/Europeana%20Field%20Game/europeana_field_game.fw.png"
+featured: false
 tags:
   - Hackathon Prototype
   - Game

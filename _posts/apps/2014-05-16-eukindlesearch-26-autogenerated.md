@@ -5,6 +5,7 @@ permalink: /apps/eukindlesearch
 title: "eu:KindleSearch"
 imageurl:
   - "/img/apps/euKindleSearch/kindle_search.fw.png"
+featured: false
 tags:
   - Hackathon Prototype
   - Search

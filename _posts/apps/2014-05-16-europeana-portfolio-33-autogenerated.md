@@ -5,6 +5,7 @@ permalink: /apps/europeana-portfolio
 title: "Europeana Portfolio"
 imageurl:
   - "/img/apps/Europeana%20Portfolio/europeana_portfolio.png"
+featured: false
 tags:
   - Hackathon Prototype
   - Linked Open Data

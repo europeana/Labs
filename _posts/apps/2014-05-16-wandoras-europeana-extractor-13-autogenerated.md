@@ -6,6 +6,7 @@ title: "Wandora's Europeana Extractor"
 imageurl:
   - "/img/apps/wandora-europeana-extractor/Wandora.png"
   - "/img/apps/wandora-europeana-extractor/Wandora_2.png"
+featured: false
 tags:
   - API Implementation
   - Metadata enrichment

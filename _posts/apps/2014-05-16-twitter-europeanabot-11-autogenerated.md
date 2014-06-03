@@ -5,6 +5,7 @@ permalink: /apps/twitter-europeanabot
 title: "Twitter EuropeanaBot"
 imageurl:
   - "/img/apps/twitter-europeanabot/Twitterbot.png"
+featured: false
 tags:
   - API Implementation
   - Social media

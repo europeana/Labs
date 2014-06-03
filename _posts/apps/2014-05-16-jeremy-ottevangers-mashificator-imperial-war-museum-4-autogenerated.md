@@ -5,6 +5,7 @@ permalink: /apps/jeremy-ottevangers-mashificator-imperial-war-museum
 title: "Jeremy Ottevanger’s mashificator, Imperial War Museum"
 imageurl:
   - "/img/apps/Jeremy%20Ottevanger%E2%80%99s%20mashificator%2C%20Imperial%20War%20Museum/Jeremy%20Ottevanger%E2%80%99s%20mashificator%2C%20Imperial%20War%20Museum.jpg"
+featured: false
 tags:
   - API Implementation
 links:

@@ -6,6 +6,7 @@ title: "DISMARC"
 imageurl:
   - "/img/apps/dismarc/DISMARC.jpg"
   - "/img/apps/dismarc/DISMARC_2.gif"
+featured: false
 tags:
   - API Implementation
   - Search

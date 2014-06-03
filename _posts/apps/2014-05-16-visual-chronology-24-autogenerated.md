@@ -5,6 +5,7 @@ permalink: /apps/visual-chronology
 title: "Visual Chronology"
 imageurl:
   - "/img/apps/Visual%20Chronology/Visual%20Chronology.png"
+featured: false
 tags:
   - Hackathon Prototype
   - API Implementation

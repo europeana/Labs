@@ -5,6 +5,7 @@ permalink: /apps/postcards-from-baltics
 title: "Postcards from Baltics"
 imageurl:
   - "/img/apps/Postcards%20from%20Baltics/baltics.fw.png"
+featured: false
 tags:
   - Hackathon Prototype
   - Mobile

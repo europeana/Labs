@@ -5,6 +5,7 @@ permalink: /apps/institution-recommendations-based-on-geospatial-data
 title: "Institution Recommendations Based on Geospatial Data"
 imageurl:
   - "/img/apps/Institution%20Recommendations%20Based%20on%20Geospatial%20Data/Institution_Recommendations_Based_on_Geospatial_Data.fw.png"
+featured: false
 tags:
   - Hackathon Prototype
   - Geolocation

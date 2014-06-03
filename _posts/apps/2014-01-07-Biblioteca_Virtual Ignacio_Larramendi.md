@@ -7,6 +7,7 @@ imageurl:
   - "/img/apps/biblioteca_virtual_ignacio_larramendi/larramendi-main.jpg"
   - "/img/apps/biblioteca_virtual_ignacio_larramendi/larramendi-1.jpg"
   - "/img/apps/biblioteca_virtual_ignacio_larramendi/larramendi-2.jpg"
+featured: false  
 tags: 
   - API Implementation 
 secondarytags:

@@ -8,6 +8,7 @@ imageurl:
   - "/img/apps/digital-humanities-observatory/DHO_discovery_2.jpg"
   - "/img/apps/digital-humanities-observatory/DHO_discovery_3.jpg"
   - "/img/apps/digital-humanities-observatory/DHO_discovery_4.png"
+featured: false  
 tags: 
   - API Implementation
 links:

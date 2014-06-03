@@ -5,6 +5,7 @@ permalink: /apps/related-items-widget
 title: "Related items widget"
 imageurl:
   - "/img/apps/related-items-widget/Related_items_widget.jpg"
+featured: false
 tags:
   - API Implementation
   - Search

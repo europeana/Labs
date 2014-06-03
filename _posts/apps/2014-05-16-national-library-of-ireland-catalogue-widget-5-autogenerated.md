@@ -7,6 +7,7 @@ imageurl:
   - "/img/apps/national-library-of-ireland-catalogue-widget/National_Library_of_Ireland.jpg"
   - "/img/apps/national-library-of-ireland-catalogue-widget/National_Library_of_Ireland_2.jpg"
   - "/img/apps/national-library-of-ireland-catalogue-widget/National_Library_of_Ireland_3.jpg"
+featured: false
 tags:
   - API Implementation
   - Search

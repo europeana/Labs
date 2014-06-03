@@ -5,6 +5,7 @@ permalink: apps/cerl-thesaurus
 title: CERL Thesaurus Search
 imageurl: 
   - "/img/apps/cerl-thesaurus-search/CERL_Thesaurus.jpg"
+featured: false
 tags: 
   - API Implementation
 links:

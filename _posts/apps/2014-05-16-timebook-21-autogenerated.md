@@ -5,6 +5,7 @@ permalink: /apps/timebook
 title: "Timebook"
 imageurl:
   - "/img/apps/Timebook/timebook.fw.png"
+featured: false
 tags:
   - Hackathon Prototype
   - Visualisation

@@ -6,6 +6,7 @@ title: "Open Pics app"
 imageurl:
   - "/img/apps/open-pics-app/Open_pics_app.jpg"
   - "/img/apps/open-pics-app/Open_pics_app_2.jpg"
+featured: false
 tags:
   - API Implementation
   - Mobile

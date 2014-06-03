@@ -5,6 +5,7 @@ permalink: /apps/culture-globe
 title: "Culture Globe"
 imageurl:
   - "/img/apps/Culture%20Globe/culture_globe.jpg"
+featured: false
 tags:
   - Hackathon Prototype
   - Geolocation

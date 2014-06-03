@@ -5,6 +5,7 @@ permalink: /apps/art-terra
 title: "Art Terra "
 imageurl:
   - "/img/apps/Art%20Terra/art_terra.fw%20(1).png"
+featured: false
 tags:
   - Hackathon Prototype
   - Geolocation

@@ -5,6 +5,7 @@ permalink: /apps/django-europeana-0.1.5
 title: "Django Europeana 0.1.5"
 imageurl:
   - "/img/apps/django-europeana/Phyton_Django.jpg"
+featured: false
 tags:
   - API Implementation
   - Client library

@@ -5,6 +5,7 @@ permalink: /apps/europeana-on-free-image-search-tool
 title: "Europeana on Free Image Search Tool"
 imageurl:
   - "/img/apps/Europeana%20on%20Free%20Image%20Search%20Tool/Europeana_on_Free_Image_Search_Tool.png"
+featured: false
 tags:
   - Hackathon Prototype
   - Search

@@ -5,6 +5,7 @@ permalink: /apps/casual-curator
 title: "Casual Curator"
 imageurl:
   - "/img/apps/Casual%20Curator/casual_curator.jpg"
+featured: false
 tags:
   - Hackathon Prototype
   - Curation

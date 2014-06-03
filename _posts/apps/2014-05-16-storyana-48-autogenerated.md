@@ -5,6 +5,7 @@ permalink: /apps/storyana
 title: "Storyana"
 imageurl:
   - "/img/apps/Storyana/storyana.fw.png"
+featured: false
 tags:
   - Hackathon Prototype
   - Storytelling

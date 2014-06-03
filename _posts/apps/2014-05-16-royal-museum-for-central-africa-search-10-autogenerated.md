@@ -7,6 +7,7 @@ imageurl:
   - "/img/apps/royal-museum-for-central-africa-search/AMCA.jpg"
   - "/img/apps/royal-museum-for-central-africa-search/AMCA_2.jpg"
   - "/img/apps/royal-museum-for-central-africa-search/AMCA_3.jpg"
+featured: false
 tags:
   - API Implementation
   - Search

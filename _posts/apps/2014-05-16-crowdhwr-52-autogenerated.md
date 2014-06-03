@@ -5,6 +5,7 @@ permalink: /apps/crowdhwr
 title: "Crowdhwr"
 imageurl:
   - "/img/apps/Crowdhwr/crowdhwr.jpg"
+featured: false
 tags:
   - Hackathon Prototype
   - Annotation

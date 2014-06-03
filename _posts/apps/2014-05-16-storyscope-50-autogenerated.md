@@ -5,6 +5,7 @@ permalink: /apps/storyscope
 title: "Storyscope"
 imageurl:
   - "/img/apps/Storyscope/storyscope.jpg"
+featured: false
 tags:
   - API Implementation
   - Storytelling

@@ -5,6 +5,7 @@ permalink: /apps/programmenotes
 title: "ProgrammeNotes"
 imageurl:
   - "/img/apps/ProgrammeNotes/programmenotes.fw.png"
+featured: false
 tags:
   - Hackathon Prototype
   - Rich media

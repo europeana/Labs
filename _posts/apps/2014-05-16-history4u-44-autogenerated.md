@@ -5,6 +5,7 @@ permalink: /apps/history4u
 title: "History4u"
 imageurl:
   - "/img/apps/History4u/history4u.fw.png"
+featured: false
 tags:
   - Hackathon Prototype
   - Mobile

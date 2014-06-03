@@ -5,6 +5,7 @@ permalink: /apps/art-color-bits
 title: "Art Color Bits"
 imageurl:
   - "/img/apps/Art%20Color%20Bits/art_color.fw.png"
+featured: false
 tags:
   - Hackathon Prototype
   - Visualisation

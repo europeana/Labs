@@ -5,6 +5,7 @@ permalink: /apps/cultured-canvas
 title: "Cultured Canvas "
 imageurl:
   - "/img/apps/Cultured%20Canvas/cultured_canvas.fw.png"
+featured: false
 tags:
   - Hackathon Prototype
   - Social media

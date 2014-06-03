@@ -5,6 +5,7 @@ permalink: /apps/artspace
 title: "ArtSpace"
 imageurl:
   - "/img/apps/ArtSpace/artspace.fw.png"
+featured: false
 tags:
   - Hackathon Prototype
   - Rich media

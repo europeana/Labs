@@ -6,6 +6,7 @@ title: "PIONIER Network Digital Libraries Federation (Federacja Bibliotek Cyfrow
 imageurl:
   - "/img/apps/pionier/PIONIER.jpg"
   - "/img/apps/pionier/PIONIER_2.jpg"
+featured: false
 tags:
   - API Implementation
   - Search

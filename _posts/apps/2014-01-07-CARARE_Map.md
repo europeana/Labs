@@ -5,6 +5,7 @@ permalink: apps/carare-map
 title: CARARE Map
 imageurl: 
   - "/img/gallery/carare-map/CarareMap.jpg"
+featured: false
 tags: 
   - API Implementation
 links:

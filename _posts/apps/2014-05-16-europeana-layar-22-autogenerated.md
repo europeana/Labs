@@ -5,6 +5,7 @@ permalink: /apps/europeana-layar
 title: "Europeana Layar"
 imageurl:
   - "/img/apps/Europeana%20Layar/Europeana%20Layar.png"
+featured: false
 tags:
   - Hackathon Prototype
   - Geolocation

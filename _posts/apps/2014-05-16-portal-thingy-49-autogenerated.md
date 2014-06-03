@@ -5,6 +5,7 @@ permalink: /apps/portal-thingy
 title: "Portal Thingy"
 imageurl:
   - "/img/apps/Portal%20Thingy/portal_thingy.fw.png"
+featured: false
 tags:
   - Hackathon Prototype
   - Annotation

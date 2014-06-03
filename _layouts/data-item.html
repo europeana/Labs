@@ -13,13 +13,12 @@
 		    </a>
 
 			<div class="b-text">
-                    <!--<h1 class="headline gamma"><a href="{{dataset.links.portal}}">{{dataset.name}}</a></h1>-->
-                    <h1 class="headline gamma"><a href="{{site.baseurl}}{{dataset.url}}">{{page.title}}</a></h1>
+                    <h2 class="headline gamma"><a href="{{site.baseurl}}{{dataset.url}}">{{page.title}}</a></h2>
 					<div class="prose">
 	                    <div class="description">
 	                        {{page.description}}                        
 	                    </div>
-						<p><small>Dataset provided by <a href="{{page.providerurl}}" title="Link to {{page.provider}}">{{page.provider}}</a>. Contact <a href="mailto:{{dataset.contact}}">{{page.contact}}</a> for more details.</small></p>
+						<p><small>Dataset provided by <a href="{{page.providerurl}}" title="Link to {{page.provider}}">{{page.provider}}</a>. Contact <a href="mailto:{{page.contact}}">{{page.contact}}</a> for more details.</small></p>
 						{%if page.licenses %}
 							<ul class="sg-icons inline-list">
 							{% for license in page.licenses %}

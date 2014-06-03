@@ -5,6 +5,7 @@ permalink: /apps/museumville
 title: "MuseumVille"
 imageurl:
   - "/img/apps/MuseumVille/museumVille.png"
+featured: false
 tags:
   - Hackathon Prototype
   - Game

@@ -5,6 +5,7 @@ permalink: /apps/hackmemory
 title: "Hackmemory"
 imageurl:
   - "/img/apps/Hackmemory/hackmemory.fw.png"
+featured: false
 tags:
   - Hackathon Prototype
   - Game

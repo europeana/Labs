@@ -5,6 +5,7 @@ permalink: /apps/image-form-query-suggestions
 title: "Image Form Query Suggestions"
 imageurl:
   - "/img/apps/Image%20Form%20Query%20Suggestions/Image_Form_Query_Suggestions.jpg"
+featured: false
 tags:
   - Hackathon Prototype
   - Search

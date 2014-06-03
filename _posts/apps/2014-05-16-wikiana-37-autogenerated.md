@@ -5,6 +5,7 @@ permalink: /apps/wikiana
 title: "Wikiana"
 imageurl:
   - "/img/apps/Wikiana/wikiana.jpg"
+featured: false
 tags:
   - Hackathon Prototype
 links:

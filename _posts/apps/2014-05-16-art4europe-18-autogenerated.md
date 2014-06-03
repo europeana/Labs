@@ -5,6 +5,7 @@ permalink: /apps/art4europe
 title: "Art4Europe"
 imageurl:
   - "/img/apps/Art4Europe/art4europe.jpg"
+featured: false
 tags:
   - Hackathon Prototype
   - Rich media

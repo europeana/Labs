@@ -5,6 +5,7 @@ permalink: /apps/the-culture-center-tcc
 title: "The Culture Center (TCC)"
 imageurl:
   - "/img/apps/The%20Culture%20Center%20(TCC)/TCC.fw.png"
+featured: false
 tags:
   - Hackathon Prototype
   - Search

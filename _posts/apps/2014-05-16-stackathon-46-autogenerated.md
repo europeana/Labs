@@ -5,6 +5,7 @@ permalink: /apps/stackathon
 title: "Stackathon"
 imageurl:
   - "/img/apps/Stackathon/stackathon.fw.png"
+featured: false
 tags:
   - Hackathon Prototype
   - Mobile
