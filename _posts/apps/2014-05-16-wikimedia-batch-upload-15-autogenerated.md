@@ -12,11 +12,11 @@ tags:
 links:
   - http://commons.wikimedia.org/wiki/Category:Images_from_Europeana
 contact: 
-  name: "Maarten Zeinstra from Kennisland 
-
-Maarten Dammers, Independent developer"
+  name: "Maarten Zeinstra from Kennisland and Maarten Dammers, Independent developer"
 ---
 
-This prototype makes it possible to upload content to Wikimedia Commons from Europeana. The prototype has now been superceeded by the GLAMwiki toolset.
+This prototype makes it possible to upload content to Wikimedia Commons from Europeana. 
+
+NOTE: The prototype has now been superceeded by the [GLAMwiki toolset](http://commons.wikimedia.org/wiki/Commons:GLAMwiki_Toolset_Project "GLAMWiki Toolset").
 
 1st Hackathon 2011
