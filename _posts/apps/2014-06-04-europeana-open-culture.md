@@ -25,4 +25,4 @@ All relevant results will be shown as an interactive mosaic of image thumbnails 
 
 The app is available in seven languages (English, German, French, Spanish, Dutch, Bulgarian, and Swedish) and for all Apple and Android tablets.
 
-Europeana Open Culture is an open source app. Anyone can re-use the code - see "https://github.com/europeana/openculture/wiki"(https://github.com/europeana/openculture/wiki "Europeana Open Culture on GitHub") - and build their own app.
+Europeana Open Culture is an open source app. Anyone can re-use the code - see [https://github.com/europeana/openculture/wiki] (https://github.com/europeana/openculture/wiki "Europeana Open Culture on GitHub") - and build their own app.
