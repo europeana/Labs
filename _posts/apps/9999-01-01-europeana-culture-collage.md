@@ -2,11 +2,11 @@
 category: apps
 layout: "apps-item"
 published: true
-title: Europeana Culture Collage
+title: Culture Collage
 featured: true
 permalink: "apps/culture-collage"
 imageurl: 
-  - "/img/apps/europeana-culture-collage/Culture_Collage.jpg"
+  - "/img/apps/culture-collage.png"
 tags: 
   - API Implementation
 links: 
