@@ -6,7 +6,7 @@ title: Europeana Open Culture
 featured: true
 permalink: "/apps/europeana-open-culture"
 imageurl: 
-  - "/img/apps/Europeana_Open_Culture.jpg"
+  - "/img/apps/Europeana_Open_Culture.png"
 tags: 
   - API Implementation
 links: 
