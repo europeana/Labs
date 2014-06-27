@@ -31,4 +31,4 @@ The original pilot subset contains 2.4 million objects from 8 direct Europeana p
 
 **Disclaimer:** data.europeana.eu is currently in a pilot stage, and can thus be changed at any moment! Your feedback is more than welcome, and may lead to updates in the prototype service.
 
-If you have any questions or feedback, contact us at [europeana-lod@googlegroups.com](europeana-lod@googlegroups.com)
+If you have any questions or feedback, contact us on the [Europeana LOD group](https://groups.google.com/forum/#!forum/europeana-lod)
