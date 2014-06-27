@@ -1,7 +1,7 @@
 ---
 layout: data-item
 category: data
-title: Butterflies, moths, plants and mushrooms from the University of Tartu and the Museum of Natural History Berlin
+title: Butterflies, moths, plants and mushrooms from the University of Tartu
 permalink: data/Butterflies-moths-plants-and-mushrooms-from-the-University-of-Tartu-and-the-Museum-of-Natural-History-Berlin
 provider: University of Tartu, Natural History Museum
 description: More than 40,000 butterflies, moths, plants and mushrooms from the Natural History Museum at the University of Tartu. In English with Latin species names.

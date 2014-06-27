@@ -6,8 +6,8 @@ title: europeana4j
 featured: false
 permalink: apps/europeana4j
 tags: 
-  - API Implementation
   - Open Source Project
+  - Client Library
 imageurl:
   - "/img/apps/europeana4j/europeana4j.jpg"
 links: 

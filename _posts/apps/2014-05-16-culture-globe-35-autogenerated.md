@@ -11,7 +11,7 @@ tags:
   - Geolocation
   - 3D
 links:
-  - http://cultureglobe.de/
+  - http://cultureglobe.github.io/
   - http://www.youtube.com/watch?v=H_2pOU1FO6k
 contact: 
   name: ""
