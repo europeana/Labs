@@ -7,7 +7,6 @@ featured: false
 permalink: apps/Assets3D-search
 tags: 
   - R&D results
-secondarytags:
   - Search and browsing
 links: 
   - "http://assetstest.atc.gr/ASSETS3DSearch/"
