@@ -7,7 +7,6 @@ featured: false
 permalink: apps/Europeana4D
 tags: 
   - R&D results
--secondarytags:
   - Spatio-temporal search
   - Search and browsing
   - Geo-spatial applications

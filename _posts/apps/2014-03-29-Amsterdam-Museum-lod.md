@@ -7,7 +7,6 @@ featured: false
 permalink: apps/Amsterdam Museum Linked Open Data
 tags: 
   - R&D results
-secondarytags:
   - Linked Open Data
 links: 
   - "http://semanticweb.cs.vu.nl/lod/am/"

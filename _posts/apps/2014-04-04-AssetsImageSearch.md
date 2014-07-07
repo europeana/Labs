@@ -7,7 +7,6 @@ featured: false
 permalink: apps/AssetsImageSearch
 tags: 
   - R&D results
-secondarytags:
   - Image search
   - Image similarity 
 links: 

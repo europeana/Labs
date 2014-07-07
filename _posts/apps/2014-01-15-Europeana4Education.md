@@ -7,12 +7,13 @@ imageurl:
   - "/img/no-image.gif"
 featured: false
 contact:
-  name: Olivier
-  email: olivier@platoniq
-  website: http://www.youcoop.org
-  address: Palma
-  telephone:
-tags: [API Implementation]
+  - name: Olivier Schulbaum
+  - email: olivier@platoniq
+  - website: http://www.youcoop.org
+  - address: Palma
+  - telephone:
+tags: 
+  - API Implementation
 links:
   - http://www.athenaeurope.org/index.php?en/191/europeana-opensearch
 ---

@@ -7,8 +7,8 @@ featured: false
 permalink: apps/EuropeanaConnect-Gazetteer
 tags: 
   - R&D results
-secondarytags:
-  - Ontology/vocabulary building and management
+  - Ontology/vocabulary building
+  - Ontology/vocabulary management
   - Semantic enrichment
 links: 
   - "http://europeana-geo.isti.cnr.it/gazetteer"

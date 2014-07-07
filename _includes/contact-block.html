@@ -1,6 +1,6 @@
-{% if page.contact %}
 <br />
 <ul>
+{% if page.contact %}
 	{% if page.contact.name %}
 	<li class="contact"><i class="icon icon-user"></i>&nbsp;<strong>Contact:</strong>&nbsp;{{ page.contact.name }}</li>
 	{% endif %}
@@ -16,5 +16,12 @@
 	{% if page.contact.website %}
 	<li class="website"><i class="icon icon-link"></i>&nbsp;<strong>Website:</strong>&nbsp;<a href="{{page.contact.website}}" title="{{page.title}} Website">{{ page.contact.website }}</li>
 	{% endif %}
-</ul>
+	
+
 {% endif %}
+
+{% if page.floss%}
+ <li class="prose floss"><i class="icon icon-link"></i>&nbsp;<a href="http://bit.ly/CHFLOSS" target="_blank">View the full directory of Open Source Tools and suggest new entries</a></li>
+{%endif%}
+	
+</ul>

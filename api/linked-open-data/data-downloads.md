@@ -15,4 +15,4 @@ Datasets can also be explored through a SPARQL endpoint at [http://europeana.ont
 A **subset** of 2.4 million objects can be fetched over the HTTP protocol using standard Linked Data recipes. RDF files created for the individual collections are also available as dumps, either in N-Triple or XML RDF syntax. Note that single dumps of the RDF data for version 1.2 of data.europeana.eu are also available at [http://data.europeana.eu/download/1.2/](http://data.europeana.eu/download/1.2/).
 
 
-If you have any questions or feedback, contact us at [europeana-lod@googlegroups.com](europeana-lod@googlegroups.com)
+If you have any questions or feedback, contact us on the [Europeana LOD group](https://groups.google.com/forum/#!forum/europeana-lod)

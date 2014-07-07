@@ -28,6 +28,7 @@
 		setTimeout(function (){
 
              performFiltering();
+             
 
          }, 500);
          
@@ -94,6 +95,8 @@
 	            createFilter();
 	            performFilter();
 	            performPagination();   
+	            $(".show-more-tags").click();
+	            
         }
 
         function activateTagsByHashUrl() {
@@ -141,7 +144,7 @@
         }
 
         function performFilter() {
-    	
+
             $(settings.listid + " li")
                 .removeClass("not-filtered")
                 .removeClass("filtered")
@@ -155,6 +158,11 @@
 
 			
               $(settings.listid + " li" + fil).removeClass("not-filtered").addClass("filtered");
+              
+                if(settings.modelNoPagination){
+                	 $(settings.listid + " li.not-filtered").hide();
+                }                
+
 
               $("ul.tags a").parent().attr("data-count",0);
               

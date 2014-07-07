@@ -1,19 +1,24 @@
 {% include start.html %}<!--
 -->{% include header.html %}<!--
---><div role="main" class="grid">
-
+-->
+<div role="main" class="grid">
 	<div class="block block-content-header">
 		<div class="grid__item palm--one-whole push--palm--none three-quarters push--one-quarter">
-				<h1 class="title">Locations</h1>
+				<h1 class="title">{{page.title}}</h1>
 				<p class="subhead grid grid__item desk--one-half">
-				These labs across Europe offer online and real world places you can go to play, develop, test and build apps and products.
+				{{page.excerpt}}
 				</p>
 		</div>
 	</div>
+	
+	<div class="grid__item one-quarter palm--one-whole">		
+		
+	</div>
 
-{% include support-subnav.html %}
-	<!--
-	 -->{{ content}}<!--
+
+	<div id="incubation" class="prose grid__item palm--one-whole push--palm-none one-half"><!--
+	-->{{ content}}<!--
 --></div>
+</div>
 {% include footer.html %}<!--
 -->{% include end.html %}

@@ -7,7 +7,6 @@ featured: false
 permalink: apps/Linked-Logainm
 tags: 
   - Linked Open Data
-secondarytags:
   - Geo-spatial applications
   - Semantic enrichment
 links: 

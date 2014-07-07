@@ -21,8 +21,21 @@
 			        	{{page.streetaddress}}<br/>
 			        	{{page.city}}<br/>
 			        	{{page.country}}<br/>
-			        	<span class="icon icon-calendar">&nbsp;</span>{{page.startdate}}<br/>
+			        	<span class="icon icon-calendar">&nbsp;</span>{{page.startdate}}
+			        			{%  if page.enddate %}
+				        			{% if  page.startdate != page.enddate %}
+				        			<span>
+				        			  &nbsp; - {{page.enddate}}
+				        			   </span>
+				        			{% endif %}
+			        			{% endif %}
+			        	
+			        	<br/>
+			        	
+			        	{% if page.starttime%}
 			        	<span class="icon icon-clock">&nbsp;</span>{{page.starttime}}<br/>
+			        	
+			        	{% endif %}
 		        	</strong>
 		        </p>
 		        

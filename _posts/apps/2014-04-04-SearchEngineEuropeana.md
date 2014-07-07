@@ -2,12 +2,11 @@
 category: apps
 layout: "apps-item"
 published: true
-title: Semantic Search Engine For Europeana
+title: Search Engine For Europeana
 featured: false
 permalink: apps/SearchEngineEuropeana
 tags: 
   - R&D results
-secondarytags:
   - Linked Open Data
   - Search and browsing
 links: 
@@ -17,7 +16,7 @@ imageurl:
 contact: 
   name: "For more information, or to give feedback, please contact: [Jan Wielemaker](j.wielemaker@cs.vu.nl)"
 ---
-**Semantic Search Engine For Europeana** - A search engine that links data together to enable improved search.
+**Search Engine For Europeana** - A search engine that links data together to enable improved search.
 
 Semantic-searching &ndash; a research prototype created for Europeana by the Vrije Universiteit Amsterdam [VU.nl](http://www.vu.nl)) &ndash; uses linked data, which gives machines the ability to make associations and put search terms into context.
 

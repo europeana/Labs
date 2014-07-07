@@ -3,9 +3,10 @@ layout: search-list
 title: Search
 ---
 {% raw %}
+
 <script id="search-results-template" type="text/mustache">
   {{#entries}}
- 	<li class="grid__item one-whole {{tags}}">
+ 	<li class="grid__item one-whole">
             <div class="block block-thumb ">
 
                 <div class="b-thumb">
@@ -46,7 +47,8 @@ title: Search
       indexUrl: '/search.json',             // URL of the `search.json` index data for your site
       results:  '#search-results',          // jQuery selector for the search results container
       entries:  '.entries',                 // jQuery selector for the element to contain the results list, must be a child of the results element above.
-      template: '#search-results-template'  // jQuery selector for the Mustache.js template
+      template: '#search-results-template',  // jQuery selector for the Mustache.js template
+      executeLabsSearchSpecificCode: true
     });
    
     inputFieldQ.focus();
@@ -56,10 +58,18 @@ title: Search
    }
    
 
+ $("a.tag").listFilters({
+        	listid:"#filtered-list",
+        	paginationContainerId:"search-results-list",
+        	activeTagClass: "current-tag",
+        	modelNoPagination: true
+        });
    	
-	$("ul.tags li a").click(function(event){
+	/*$("ul.tags li a").click(function(event){
 
-		event.preventDefault();		
+		event.preventDefault();
+		
+				
 		$("ul.tags li a").removeClass("current-tag");
 		$(this).addClass("current-tag");
 		var clickedTagText = $(this).text();
@@ -74,7 +84,7 @@ title: Search
   			}
   			
   		});
-	}); 
+	});*/ 
     
   });
 
@@ -87,7 +97,7 @@ title: Search
 
 					
 		{% for tag in site.tags %}
-			<li><a href="#{{ tag | first | tags_links | slugize }}" rel="{{ tag | first | tags_links | slugize }}" class="tag">{{ tag | first }}</a></li>
+			<li><a href="#{{ tag | first | tags_links | slugize }}" rel="{{ tag | first | tags_links | slugize }}" class="tag {{ tag | first | tags_links | slugize }}">{{ tag | first }}</a></li>
 					
 		{% endfor %}
 				
@@ -120,7 +130,9 @@ title: Search
 		
 	
 	<section id="search-results" style="display: none;">
-	  <div class="entries">
-	  </div>
+		<div id="filtered-list">
+				<ul id="search-results-list" class="entries">
+	  			</ul>
+		</div>
 	</section>
 </div>

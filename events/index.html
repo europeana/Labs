@@ -40,7 +40,17 @@ title: Events
 	                    <h2 class="headline gamma"><a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a></h2>
 	                    <p>
 							{{post.city}}, {{post.country}}<br/>
-			        		<span class="icon icon-calendar">&nbsp; {{post.startdate}} </span> &nbsp; <span class="icon icon-clock">&nbsp; {{post.starttime}}</span>
+			        		<span class="icon icon-calendar">&nbsp; {{post.startdate}}
+			        			
+			        			{%  if post.enddate %}
+				        			{% if  post.startdate != post.enddate %}
+				        			<span>
+				        			  &nbsp; - {{post.enddate}}
+				        			   </span>
+				        			{% endif %}
+			        			{% endif %}
+			        			</span> &nbsp; 
+			        		<span class="icon icon-clock">&nbsp; {{post.starttime}}</span>
 	                    </p>
 	                    <div class="description">
 	                        {{post.excerpt}}                        

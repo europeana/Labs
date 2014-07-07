@@ -7,10 +7,9 @@ featured: false
 permalink: apps/EuropeanaConnect-Annotation
 tags: 
   - R&D results
-secondarytags:
-  -  Media annotation/tagging
-  -  Media applications 
-  -  Social applications 
+  - Media annotation/tagging
+  - Media applications 
+  - Social applications 
 links: 
   - "http://dme.arcs.ac.at/annotation/"
 imageurl: 
@@ -18,6 +17,8 @@ imageurl:
 contact: 
   name: "For more information, or to give feedback, please contact: [Rainer Simon](rainer.simon@ait.ac.at?subject=ThoughtLab:%20EuropeanaConnect%20Annotation%20Tool%20feedback)"
 ---
+**Disclaimer** The EuropeanaConnect Annotation Suite is now a stable tool renamed as Annotorious. For more details see the [Annotorious entry] (http://labs.europeana.eu/apps/Annotorious-FLOSS/)
+
 **The EuropeanaConnect Annotation Suite** - A tool that allows end-users to annotate digital images, maps, audio and video files.
 
 The EuropeanaConnect Annotation Suite gives users the ability to annotate digital images and maps, as well as audio and video objects. Parts of the annotation suite have been integrated into Europeana, but some challenges will need to be overcome before it can be fully implemented:

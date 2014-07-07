@@ -7,7 +7,6 @@ featured: false
 permalink: apps/ECLAP-linked-open-graph
 tags: 
   - R&D results
-secondarytags:
   - Linked Open Data
   - Search and browsing
 links: 
