@@ -2,7 +2,7 @@
 layout: data-item
 category: data
 title: "Scans of plants from the OpenUp! project"
-permalink: /data/scans-of-plants-from-the-openup-project
+permalink: /data/scans-of-plants-from-the-openup-project-berlin
 provider: Botanic Garden and Botanical Museum Berlin-Dahlem
 description: More than 130,000 scans of plants mounted on sheets.
 contact: mail@bgbm.org

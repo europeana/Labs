@@ -2,7 +2,7 @@
 layout: data-item
 category: data
 title: "Scans of plants from the OpenUp! project"
-permalink: /data/scans-of-plants-from-the-openup-project
+permalink: /data/scans-of-plants-from-the-openup-project-slovak-academy-of-sciences
 provider: Institute of Botany of Slovak Academy of Sciences
 description: More than 4,000 scans of plants mounted on sheets.
 contact: viera.vitekova@savba.sk

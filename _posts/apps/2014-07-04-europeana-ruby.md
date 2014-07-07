@@ -12,4 +12,4 @@ links:
   - https://github.com/europeana/europeana-client-ruby
 ---
 
-Ruby client library for the search and retrieval of records from the Europeana REST API.
+Ruby client library for the search and retrieval of records from the Europeana REST API. The gem is developed as part of [Europeana 1914-1918](http://www.europeana1914-1918.eu/ "Title") and is also used in that application.

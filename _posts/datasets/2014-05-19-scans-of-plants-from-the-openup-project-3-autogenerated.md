@@ -2,7 +2,7 @@
 layout: data-item
 category: data
 title: "Scans of plants from the OpenUp! project"
-permalink: /data/scans-of-plants-from-the-openup-project
+permalink: /data/scans-of-plants-from-the-openup-project-oberoesterreichischen-landesmuseen
 provider: Biologiezentrum der Oberoesterreichischen Landesmuseen
 description: More than 80,000 scans of plants mounted on sheets.
 contact: info@landesmuseum.at
