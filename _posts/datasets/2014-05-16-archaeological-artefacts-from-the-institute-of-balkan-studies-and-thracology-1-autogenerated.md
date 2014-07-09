@@ -14,6 +14,7 @@ imageurl:
 tags:
   - Tourism
   - Archaeology
+  - geodata
 
 licenses:
 dataset: 2021502

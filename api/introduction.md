@@ -17,7 +17,7 @@ The current version of the Europeana API (API2) is fully backward compatible wit
 
 ### API Console
 
-There is a method for developers to see how Europeana API works and test it for their needs without getting registered - the API console. This is an interactive tool that allows filling method parameters in an online form and see both the expected results and the exact format of the call that should be used by an application to get these results. The API console has been built by us for developers’ convenience. You are encouraged to use it and provide us feedback about its usability for the developer community.
+There is a method for developers to see how Europeana API works and test it for their needs without getting registered - the [API console](/api/console/). This is an interactive tool that allows filling method parameters in an online form and see both the expected results and the exact format of the call that should be used by an application to get these results. The API console has been built by us for developers’ convenience. You are encouraged to use it and provide us feedback about its usability for the developer community.
 
 ### Discussion
 

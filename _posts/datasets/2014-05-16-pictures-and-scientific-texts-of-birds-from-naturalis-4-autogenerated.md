@@ -14,6 +14,7 @@ imageurl:
 tags:
   - Tourism
   - Natural History
+  - geodata
 
 licenses:
 dataset: 10102

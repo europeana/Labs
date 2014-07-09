@@ -13,6 +13,7 @@ imageurl:
   - "/img/datasets/11612_Slovak.jpg"
 tags:
   - Natural History
+  - geodata
 
 licenses:
 dataset: 11612

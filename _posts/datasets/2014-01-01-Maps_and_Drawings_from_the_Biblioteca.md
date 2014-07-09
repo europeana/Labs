@@ -15,6 +15,7 @@ tags:
   - Maps
   - Drawings
   - History
+  - geodata
 
 licenses:
   - pd  

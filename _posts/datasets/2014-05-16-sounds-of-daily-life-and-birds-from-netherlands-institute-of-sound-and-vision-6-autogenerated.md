@@ -14,6 +14,7 @@ imageurl:
 tags:
   - Tourism
   - Social Networks
+  - geodata
 
 licenses:
 dataset: 2021613

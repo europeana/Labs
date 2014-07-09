@@ -9,6 +9,8 @@ imageurl:
   - "/img/apps/Europeana_Open_Culture.png"
 tags: 
   - API Implementation
+  - Tablet
+  - Open Source Tools
 links: 
   - "https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=646414251&mt=8"
   - "https://play.google.com/store/apps/details?id=com.glimworm.app.europeana&hl=en"

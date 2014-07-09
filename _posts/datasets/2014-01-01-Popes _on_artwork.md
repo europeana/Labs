@@ -13,6 +13,7 @@ imageurl:
   - "/img/datasets/pope_1_800.jpg"
 tags:
   - History
+  - geodata
 
 licenses:
   - pd  

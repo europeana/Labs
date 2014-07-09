@@ -13,6 +13,7 @@ imageurl:
   - "/img/datasets/92077-Slovak.jpg"
 tags:
   - Tourism
+  - geodata
 
 licenses:
 dataset: 92077

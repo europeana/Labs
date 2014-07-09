@@ -13,6 +13,7 @@ imageurl:
   - "/img/datasets/90402_Rijks.jpg"
 tags:
   - Art
+  - geodata
 
 licenses:
 dataset: 90402

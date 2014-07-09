@@ -13,6 +13,7 @@ imageurl:
   - "/img/datasets/2021007-Finland.jpg"
 tags:
   - Tourism
+  - geodata
 
 licenses:
 dataset: 2021007

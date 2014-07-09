@@ -15,6 +15,7 @@ tags:
   - Maps
   - Architecture
   - History
+  - geodata
 
 licenses:
   - pd  

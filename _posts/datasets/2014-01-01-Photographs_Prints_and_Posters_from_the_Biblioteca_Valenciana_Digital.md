@@ -2,7 +2,7 @@
 layout: data-item
 category: data
 title: Photographs, Prints and Posters from the Biblioteca Valenciana Digital
-paermalink: data/Photographs-Prints-and-Posters-from-the-Biblioteca-Valenciana-Digital
+permalink: data/Photographs-Prints-and-Posters-from-the-Biblioteca-Valenciana-Digital
 provider: Biblioteca Valenciana Digital
 description: More than 500 examples of photographs, prints and posters from the Biblioteca Valenciana Digital. Spanish language. This dataset also contains photographs from Barcelona, please add &#39;where&#58; barcelona&#39; as keyword to narrow down the search.
 contact: bivaldi@gva.es
@@ -14,6 +14,7 @@ imageurl:
 tags:
   - Photographs
   - Prints
+  - geodata
 
 licenses:
   - pd  

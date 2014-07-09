@@ -13,6 +13,7 @@ imageurl:
   - "/img/datasets/navarra_1_800.jpeg"
 tags:
   - Photographs
+  - geodata
 
 licenses:
   - pd  

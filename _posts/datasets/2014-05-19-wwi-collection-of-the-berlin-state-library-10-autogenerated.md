@@ -13,6 +13,7 @@ imageurl:
   - "/img/datasets/9200231_SBB.jpg"
 tags:
   - First World War
+  - geodata
 
 licenses:
 dataset: 9200231

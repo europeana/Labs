@@ -13,6 +13,7 @@ imageurl:
   - "/img/datasets/rijksmuseum_1_800.jpg"
 tags:
   - Natural History
+  - geodata
 
 licenses:
   - pd  

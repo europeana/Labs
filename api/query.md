@@ -5,7 +5,7 @@ published: true
 excerpt: Search query syntax supported by the API
 ---
 
-Internally, Europeana uses [Apache SOLR](http://lucene.apache.org/solr/) platform to store its data and thus [Apache Lucene Query Syntax](https://lucene.apache.org/core/4_1_0/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#package_description) is supported by queries. Advanced users are encouraged to use Lucene and Apache SOLR guides to get most out of the Europeana repository. For others, we supply a basic guide for querying Europeana.
+Internally, Europeana uses [Apache Solr](http://lucene.apache.org/solr/) platform to store its data and thus [Apache Lucene Query Syntax](https://lucene.apache.org/core/4_1_0/queryparser/org/apache/lucene/queryparser/classic/package-summary.html#package_description) is supported by queries. Advanced users are encouraged to use Lucene and Apache SOLR guides to get most out of the Europeana repository. For others, we supply a basic guide for querying Europeana.
 
 ## Basic Search
 
@@ -50,12 +50,12 @@ The boolean NOT operator cannot be used alone but only in conjunction with anoth
 
 ## Range Search
 
-To execute range queries, the range operator should be used. This example will search for objects whose field values fall between __a__ and __Z__:
+To execute range queries, the range operator should be used. This example will search for objects whose field values fall between __a__ and __z__:
 
     Syntax: [a TO Z]
-    http://www.europeana.eu/api/v2/search.json?wskey=xxxx&query=[a+TO+Z]
+    http://www.europeana.eu/api/v2/search.json?wskey=xxxx&query=[a+TO+z]
 
-[Test on API Console](http://labs.europeana.eu/api/console/?function=search&query=[a+TO+Z])
+[Test on API Console](http://labs.europeana.eu/api/console/?function=search&query=[a%20TO%20z])
 
 As well as for textual fields it can also be used for numeric values, date ranges, or geographical areas, as shown below.
 
@@ -63,7 +63,7 @@ As well as for textual fields it can also be used for numeric values, date range
 
 Looking for objects dated by a year between _1525_ and _1527_:
 
-	Syntax: YEAR:[1525 TO 1527]
+    Syntax: YEAR:[1525 TO 1527]
     http://www.europeana.eu/api/v2/search.json?wskey=xxxx&query=YEAR:[1525+TO+1527]
 
 [Test on API Console](http://labs.europeana.eu/api/console/?function=search&query=YEAR:[1525%20TO%201527])
@@ -75,16 +75,79 @@ To search for objects by their geographic location you should specify the boundi
     Syntax: pl_wgs84_pos_lat:[45 TO 47] AND pl_wgs84_pos_long:[7 TO 8]
     http://www.europeana.eu/api/v2/search.json?wskey=xxxx&query=pl_wgs84_pos_lat:[45+TO+47]+AND+pl_wgs84_pos_long:[7+TO+8]
 
-[Test on API Console](http://labs.europeana.eu/api/console/?function=search&query=pl_wgs84_pos_lat:[45+TO+47]+AND+pl_wgs84_pos_long:[7+TO+8])
+[Test on API Console](http://labs.europeana.eu/api/console/?function=search&query=pl_wgs84_pos_lat:[45%20TO%2047]%20AND%20pl_wgs84_pos_long:[7%20TO%208])
 
-## Date Search
+## Timestamp Search
 
-One can also search objects by date. Currently, full-fledge date search is supported only for the fields storing the creation and update dates of the objects which are available in two formats: the UNIX epoch timestamp and the ISO 8601 formatted date. To search for objects created or updated on a given date, use the following query:
+One can also search objects by date. Currently, full-fledge date search is supported only for the fields storing the creation (timestamp_created) and update (timestamp_update) dates of the objects which are available in two formats: the UNIX epoch timestamp and the ISO 8601 formatted date. To search for objects created or updated on a given date, use the following query:
 
     Syntax: timestamp_created:"2013-03-16T20:26:27.168Z"
-    Syntax: timestamp_updated:"2013-03-16T20:26:27.168Z"
     http://www.europeana.eu/api/v2/search.json?wskey=xxxx&query=timestamp_created:"2013-03-16T20:26:27.168Z"
+
+[Test on API Console](http://labs.europeana.eu/api/console/?function=search&query=timestamp_created:%222013-03-16T20:26:27.168Z%22)
+
+    Syntax: timestamp_update:"2013-03-16T20:26:27.168Z"
     http://www.europeana.eu/api/v2/search.json?wskey=xxxx&query=timestamp_updated:"2013-03-16T20:26:27.168Z"
+
+[Test on API Console](http://labs.europeana.eu/api/console/?function=search&query=timestamp_updated:%222013-03-16T20:26:27.168Z%22)
+
+### Searching for date range (as [date1 TO date2]):
+
+    Syntax: timestamp_created:[2013-11-01T00:00:0.000Z TO 2013-12-01T00:00:00.000Z]
+    http://www.europeana.eu/api/v2/search.json?wskey=xxxx&query=timestamp_created:[2013-11-01T00:00:0.000Z+TO+2013-12-01T00:00:00.000Z]
+
+[Test on API Console](http://labs.europeana.eu/api/console/?function=search&query=timestamp_created:[2013-11-01T00:00:0.000Z%20TO%202013-12-01T00:00:00.000Z])
+
+    Syntax: timestamp_update:[2013-11-01T00:00:0.000Z TO 2013-12-01T00:00:00.000Z]
+    http://www.europeana.eu/api/v2/search.json?wskey=xxxx&query=timestamp_update:[2013-11-01T00:00:0.000Z+TO+2013-12-01T00:00:00.000Z]
+
+[Test on API Console](http://labs.europeana.eu/api/console/?function=search&query=timestamp_update:[2013-11-01T00:00:0.000Z%20TO%202013-12-01T00:00:00.000Z])
+
+### Date mathematics
+
+With date mathematics you can formulate questions, such as "in the last two months" of "in the previous week". The basic operations and their symbols are addition (+), substraction (-) and rounding (/). Some examples:
+
+* now = NOW
+* tomorrow: NOW+1DAY
+* one week before now: NOW-1WEEK
+* the start of current hour: /HOUR
+* the start of current year: /YEAR
+
+The date units are: YEAR, YEARS, MONTH, MONTHS, DAY, DAYS, DATE, HOUR, HOURS, MINUTE, MINUTES, SECOND, SECONDS, MILLI, MILLIS, MILLISECOND, MILLISECONDS (the plural, singular, and abbreviated forms refer to the same unit).
+
+Let's see how to apply it in Europeana's context.
+
+From xxx up until now
+
+    Syntax: timestamp_created:[xxx TO NOW]
+    http://www.europeana.eu/api/v2/search.json?wskey=xxxx&&query=timestamp_created:[2014-05-01T00:00:00.000Z+TO+NOW]
+
+[Test on API Console](http://labs.europeana.eu/api/console/?function=search&query=timestamp_created:[2014-05-01T00:00:00.000Z%20TO%20NOW])
+
+From xxx up until tomorrow
+
+    Syntax: timestamp_created:[xxx TO NOW+1DAY]
+    http://www.europeana.eu/api/v2/search.json?wskey=xxxx&&query=timestamp_created:[2014-05-01T00:00:00.000Z+TO+NOW%2B1DAY]
+
+[Test on API Console](http://labs.europeana.eu/api/console/?function=search&query=timestamp_created:[2014-05-01T00:00:00.000Z%20TO%20NOW%2B1DAY])
+
+Note: be careful, that the plus sign's proper URL encoded value is %2B, and sometimes space character is encoded as '+' sing, and it easy to mix up the encoded space with the unencoded plus.
+
+From xxx up until yesterday
+
+    Syntax: timestamp_created:[xxx TO NOW-1DAY]
+    http://www.europeana.eu/api/v2/search.json?wskey=xxxx&&query=timestamp_created:[2014-05-01T00:00:00.000Z+TO+NOW-1DAY]
+
+[Test on API Console](http://labs.europeana.eu/api/console/?function=search&query=timestamp_created:[2014-05-01T00:00:00.000Z%20TO%20NOW%2B1DAY])
+
+Changes in the last two months
+
+    Syntax: [NOW-2MONTH/DAY TO NOW/DAY]
+    http://www.europeana.eu/api/v2/search.json?wskey=xxxx&&query=timestamp_created:[NOW-2MONTH/DAY+TO+NOW/DAY]
+
+[Test on API Console](http://labs.europeana.eu/api/console/?function=search&query=timestamp_created:[NOW-3MONTH/DAY%20TO%20NOW/DAY])
+
+You can find more about data mathematics at [Solr's API documentation](http://lucene.apache.org/solr/4_6_0/solr-core/org/apache/solr/util/DateMathParser.html)
 
 ## Refinements
 
@@ -108,9 +171,9 @@ Querying by [facets](http://labs.europeana.eu/api/search/#facet) is also done us
 
 Here are more examples of faceted search. Looking for objects containing the term _Paris_ among objects described in _French_:
 
-    http://www.europeana.eu/api/v2/search.json?wskey=xxxx&query=Paris&qf=LANGUAGE:FR
+    http://www.europeana.eu/api/v2/search.json?wskey=xxxx&query=Paris&qf=LANGUAGE:fr
 
-[Test on API Console](http://labs.europeana.eu/api/console/?function=search&query=Paris&qf=LANGUAGE:FR)
+[Test on API Console](http://labs.europeana.eu/api/console/?function=search&query=Paris&qf=LANGUAGE:fr)
 
 Looking for objects containing the term _Paris_ among objects dated by the year _1789_:
 
@@ -134,7 +197,7 @@ Looking for objects containing the term _Paris_ among objects provided by _The E
 
     http://www.europeana.eu/api/v2/search.json?wskey=xxxx&query=Paris&qf=PROVIDER:The+European+Library
 
-[Test on API Console](http://labs.europeana.eu/api/console/?function=search&query=Paris&qf=PROVIDER:The+European+Library)
+[Test on API Console](http://labs.europeana.eu/api/console/?function=search&query=Paris&qf=PROVIDER:%22The%20European%20Library%22)
     
 Looking for objects containing the term _Paris_ among objects provided by the user community:
 

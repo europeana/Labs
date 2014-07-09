@@ -14,6 +14,7 @@ imageurl:
 tags:
   - Tourism
   - Design
+  - geodata
 
 licenses:
 dataset: 2021621

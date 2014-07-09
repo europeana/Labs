@@ -14,6 +14,7 @@ imageurl:
 tags:
   - Tourism
   - Photographs
+  - geodata
 
 licenses:
 dataset: 9419

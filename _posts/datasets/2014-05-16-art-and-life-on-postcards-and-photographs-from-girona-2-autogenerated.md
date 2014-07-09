@@ -13,6 +13,7 @@ imageurl:
   - "/img/datasets/2024914-Girona.jpg"
 tags:
   - Tourism
+  - geodata
 
 licenses:
 dataset: 2024914

@@ -21,14 +21,15 @@ window.addEventListener('message', function(e) {
 });
 
 
-var embeddedConsole = new URI('http://branch.portal2.eanadev.org/portal/api/console.html');
-var allowedParams = ['function', 'callback', 'query', 'qf', 'profile', 'start', 'rows', 'sort', 'collectionId', 'recordId', 'phrases', 'latMin', 'latMax', 'longMin', 'longMax', 'yearMin', 'yearMax', 'reusability'];
+var embeddedConsole = new URI('http://europeana.eu/portal/api/console.html');
+var allowedParams = ['function', 'callback', 'query', 'qf', 'profile', 'start', 'rows', 'sort', 'collectionId', 'recordId', 'phrases', 'latMin', 'latMax', 'longMin', 'longMax', 'yearMin', 'yearMax', 'reusability', 'facet'];
+var dynamicFacetRegex = '^f\.[a-zA-Z_]+\.facet\.(offset|limit)$';
 var params = {'embedded' : 'true'};
 
 var uri = new URI();
 var parsed = URI.parseQuery(uri.query());
 for (i in parsed) {
-  if ($.inArray(i, allowedParams) > -1) {
+  if ($.inArray(i, allowedParams) > -1 || dynamicFacetRegex.test(i)) {
     params[i] = parsed[i];
   }
 }

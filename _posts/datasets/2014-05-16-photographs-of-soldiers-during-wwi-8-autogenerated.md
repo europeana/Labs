@@ -15,6 +15,7 @@ tags:
   - Geodata
   - History
   - First World War
+  - geodata
 
 licenses:
 dataset: 9200323

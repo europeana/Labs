@@ -13,6 +13,7 @@ imageurl:
   - "/img/datasets/11613_NMP.JPG"
 tags:
   - Natural History
+  - geodata
 
 licenses:
 dataset: 11613

@@ -8,7 +8,7 @@ excerpt: Retrieving a single record from the dataset
 * TOC
 {:toc}
 
-Retrieve a single record from the Europeana dataset. On the relation between EDM and records read [this](http://labs.europeana.eu/api/data-hierarchy/#edm_and_records).
+Retrieve a single record from the Europeana dataset. On the relation between EDM and records read [this](http://labs.europeana.eu/api/data-hierarchy/#edm-and-records).
 
     http://europeana.eu/api/v2/record/[recordID].json
     
@@ -16,8 +16,8 @@ Retrieve a single record from the Europeana dataset. On the relation between EDM
 
 | Parameter | Datatype | Description |
 |:-------------|:-------------|:-----|
-| recordID | String | [Europeana ID](http://labs.europeana.eu/api/data-hierarchy/#identifying_records) of the record to retrieve. |
-| callback | String | Name of a [client side callback function](http://labs.europeana.eu/api/search/#callback_function). |
+| recordID | String | [Europeana ID](http://labs.europeana.eu/api/data-hierarchy/#identifying-records) of the record to retrieve. |
+| callback | String | Name of a [client side callback function](http://labs.europeana.eu/api/search/#callback-function). |
 
 
 ## Response
@@ -32,19 +32,19 @@ Retrieve a single record from the Europeana dataset. On the relation between EDM
 
 | Field | Datatype | Description |
 |:-------------|:-------------|:-----|
-| about | String | [Europeana ID](http://labs.europeana.eu/api/data-hierarchy/#identifying_records) of the returned object.|
-| agents | Array([Agent](#edm_agent)) | A collection of EDM Agent objects contextually related to the object. Find more in the EDM Definition. |
-| aggregations | Array([Aggregation](#edm_aggregation)) | A collection of EDM Aggregation objects related to the object. Find more in the EDM Definition. |
-| concepts | Array([Concept](#edm_concept)) | A collection of EDM Concept objects contextually related to the object. Find more in the EDM Definition. |
+| about | String | [Europeana ID](http://labs.europeana.eu/api/data-hierarchy/#identifying-records) of the returned object.|
+| agents | Array([Agent](#edm-agent)) | A collection of EDM Agent objects contextually related to the object. Find more in the EDM Definition. |
+| aggregations | Array([Aggregation](#edm-aggregation)) | A collection of EDM Aggregation objects related to the object. Find more in the EDM Definition. |
+| concepts | Array([Concept](#edm-concept)) | A collection of EDM Concept objects contextually related to the object. Find more in the EDM Definition. |
 | country | Array(String) | TBD |
-| europeanaAggregation | Array([EuropeanaAggregation](#edm_EuropeanaAggregation)) | A collection of EDM Europeana Aggregation objects related to the object. Find more in the EDM Definition.|
+| europeanaAggregation | Array([EuropeanaAggregation](#edm-EuropeanaAggregation)) | A collection of EDM Europeana Aggregation objects related to the object. Find more in the EDM Definition.|
 | europeanaCollectionName | Array(String) | A collection of names of the datasets the object belongs to. |
 | europeanaCompleteness | Number | A number between 0 and 10 representing the metadata quality of the object. |
 | language | Array(String) | A singleton collection with the language of the object. |
 | optOut | Boolean | Flag indicating whether the provider allowed retrieval of thumbnail of the record |
 | places | Array([Place](edm_#Place)) | A collection of EDM Place objects contextually related to the object. Find more in the EDM Definition. |
 | provider | Array(String) | A singleton collection with the name of the organization that delivered this object to Europeana. |
-| providedCHOs | Array([ProvidedCHO](#edm_ProvidedCHO)) | A collection of Provided Cultural Heritage Objects related to the record. Find more in the EDM Definition. |
+| providedCHOs | Array([ProvidedCHO](#edm-ProvidedCHO)) | A collection of Provided Cultural Heritage Objects related to the record. Find more in the EDM Definition. |
 | proxies | Array([Proxy](#Proxy)) | A collection of proxy objects for Provided Cultural Heritage Objects. Find more in the EDM Definition. |
 | timespans | Array([TimeSpan](#TimeSpan)) | A collection of EDM TimeSpan objects contextually related to the object. Find more in the EDM Definition. |
 | timestamp_created_epoch | Number | Unix time of the date when the object was created. |
