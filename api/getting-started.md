@@ -5,6 +5,9 @@ published: true
 excerpt: Everything you need to know to start using Europeana API right away.
 ---
 
+* TOC
+{:toc}
+
 In this section you will find all information necessary to jump-start using Europeana API.
 
 ## Request

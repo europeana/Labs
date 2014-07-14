@@ -14,7 +14,7 @@ links:
   - http://iiif.io/mirador/
   - https://github.com/IIIF/mirador
 imageurl:
-  - "/img/no-image.gif"
+  - "/img/apps/Mirador/Mirador.jpg"
   
 ---
 

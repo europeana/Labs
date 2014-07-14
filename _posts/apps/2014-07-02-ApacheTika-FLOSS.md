@@ -13,7 +13,7 @@ links:
   - http://tika.apache.org/
   - http://tika.apache.org/download.html
 imageurl:
-  - "/img/no-image.gif"
+  - "/img/apps/ApacheTika/ApacheTika.png"
  
 ---
 

@@ -1,3 +1,13 @@
+---
+layout: "api-page"
+title: Record in JSON-LD
+published: true
+excerpt: Retrieving a single record from the dataset in JSON-LD format
+---
+
+* TOC
+{:toc}
+
 ## JSON-LD
 
 JSON-LD is stands for JSON for Linking Data, and is lightweight Linked Data format.
@@ -95,11 +105,11 @@ The basic structure of a JSON-LD response is similar than the normal JSON:
 
 The big differences between normal JSON and JSON-LD are
 
-1) JSON-LD makes use qualified names (in the format of namespace prefix : property name such as "dc:creator"), and not camel case ("dcCreator")
+1) JSON-LD makes use [Internationalized Resource Identifiers, IRIs](http://en.wikipedia.org/wiki/Internationalized_resource_identifier) as property names. This ensures, that each statement of a record match a standard vocabulary. In Europeana's implementation the properties are qualified names (in the format of namespace prefix : property name such as "dc:creator") for the sake of brevity. In the normal JSON response we use non-standard camel case ("dcCreator") propety names. In the [data field](/api/data-fields/) page you can find the connections between our camelCase property names, and the JSON-LD and RDF qualified names.
 
-2) JSON-LD has a `@context` part, which lists the namespaces and their prefixes
+2) JSON-LD has a `@context` part, which links object properties in a JSON document to concepts in an ontology. In JSON-LD our case this lists the used namespaces and their prefixes.
 
-3) JSON-LD makes difference between the resource type values (typically URIs), and string literals
+3) JSON-LD makes difference between the resource type values (), and string literals
 
 A resource value:
 ```JavaScript
@@ -112,3 +122,4 @@ A normal string literal:
 ```JavaScript
 "dc:creator": "Europeana",
 ```
+

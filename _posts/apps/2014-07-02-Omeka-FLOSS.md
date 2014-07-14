@@ -15,7 +15,7 @@ links:
   - http://omeka.org/download/
   - https://github.com/omeka
 imageurl:
-  - "/img/no-image.gif"
+  - "/img/apps/Omeka/Omeka.jpg"
   
 ---
 

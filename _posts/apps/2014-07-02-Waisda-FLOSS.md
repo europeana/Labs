@@ -35,7 +35,7 @@ Through this unique approach, Waisda? has added 350,000 tags to its content with
 * Actively seeking collaboration with communities connected to the content;
 * Using curated vocabularies as a means to integrate tags with professional annotations.
 
-Demo is available at [woordentikkertje.manbijthond.nl] (woordentikkertje.manbijthond.nl)
+Demo is available at [woordentikkertje.manbijthond.nl](woordentikkertje.manbijthond.nl)
 
 **Developer(s)**: Q42: Kamil Afsar and Martijn van Steenbergen
 
