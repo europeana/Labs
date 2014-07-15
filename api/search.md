@@ -207,6 +207,7 @@ The portal profile returns all the fields of the standard profile plus and the f
 
 
 ### Rich profile
+*NOTE: this profile is in development and will be placed into production at the time of the next release.*
 
 The rich profile returns all the fields of the portal profile plus and the following fields:
 
