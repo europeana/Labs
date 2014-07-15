@@ -3,7 +3,7 @@ category: apps
 floss: true
 layout: "apps-item"
 published: true
-title: europeana4j
+title: europeana4j (Java client library)
 featured: false
 permalink: apps/europeana4j
 tags: 
