@@ -113,19 +113,20 @@
 			<li>
 				<a class="menuTrigger">REST API</a>
 				<ul class="notabs tabs-v">
-                    <li><a href="/api/introduction" title="Introduction">Introduction</a></li>
-                    <li><a href="/api/getting-started" title="Getting Started with the Europeana REST API">Getting Started</a></li>
+					<li><a href="/api/introduction" title="Introduction">Introduction</a></li>
+					<li><a href="/api/getting-started" title="Getting Started with the Europeana REST API">Getting Started</a></li>
 					<li><a href="/api/registration" title="API Registration">Get an API-key</a></li>
 					<li><a href="/api/console" title="API Console">Console</a></li>
 					<li><a href="/api/authentication" title="Authentication">Authentication</a></li>
 					<li><a href="/api/search" title="Search">Search</a></li>
 					<li><a href="/api/query" title="Query">Query Syntax</a></li>
 					<li><a href="/api/record" title="Record">Record</a></li>
+					<li><a href="/api/record-jsonld" title="Record">Record in JSON-LD</a></li>
 					<li><a href="/api/myeuropeana" title="Accessing MyEuropeana">MyEuropeana</a></li>
 					<li><a href="/api/provider" title="Querying Providers and Datasets">Provider and Datasets</a></li>
 					<!--<li><a href="/api/data-fields" title="API Data Fields Reference">Data Fields</a></li>-->					
 					<li><a href="/api/data-hierarchy" title="Data Hierarchy">Data Hierarchy</a></li>					
-                    <li><a href="/api/data-fields" title="Data Fields">Data Fields</a></li>
+					<li><a href="/api/data-fields" title="Data Fields">Data Fields</a></li>
 					<li><a href="/api/error" title="Error Codes">Error Codes</a></li>	
 					<li><a href="/api/changelog" title="API ChangeLog">Change Log</a></li>
 				</ul>
@@ -148,7 +149,16 @@
 
 		
 	<div id="documentation" class="prose grid__item palm--one-whole push--palm-none one-half"><!--
-	--><p>In this section you will find all information necessary to jump-start using Europeana API.</p>
+	--><ul id="markdown-toc">
+  <li><a href="#request">Request</a></li>
+  <li><a href="#response">Response</a></li>
+  <li><a href="#datatypes">Datatypes</a></li>
+  <li><a href="#error-codes">Error Codes</a></li>
+  <li><a href="#namespaces">Namespaces</a></li>
+  <li><a href="#callback-function">Callback Function</a></li>
+</ul>
+
+<p>In this section you will find all information necessary to jump-start using Europeana API.</p>
 
 <h2 id="request">Request</h2>
 
@@ -249,7 +259,11 @@ The API root URL is located at: </p>
     </tr>
     <tr>
       <td>LangMap</td>
-      <td style="text-align: left">TBD</td>
+      <td style="text-align: left">A special data type we use in the API Object Call, to provide values in various languages. It is an associative array where the keys are ISO language codes or “def” (where the language is not given), and the value is an array of strings. For example: <code>"dcTitle": {"por": ["Paris"]}</code>. Here the data type of dcTitle is a LanguageMap: the language code is “por” (stands for Portuguese), and the value is a list with only one element: “Paris”. For those familiar with Java notations: is it the JSON equivalent of <code>Map&lt;String,List&lt;String&gt;&gt;</code></td>
+    </tr>
+    <tr>
+      <td>null</td>
+      <td style="text-align: left">empty value</td>
     </tr>
   </tbody>
 </table>
@@ -291,9 +305,116 @@ The API root URL is located at: </p>
   </tbody>
 </table>
 
+<h2 id="namespaces">Namespaces</h2>
+
+<p>In the documentation we sometime refer to namespace prefixes, such as dc, skos, edm. Here we list all the namespace prefixes and URIs.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">prefix</th>
+      <th style="text-align: left">Namespace URI</th>
+      <th style="text-align: left">More info</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">dc</td>
+      <td style="text-align: left">http://purl.org/dc/elements/1.1/</td>
+      <td style="text-align: left">Dublin Core</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dcterms</td>
+      <td style="text-align: left">http://purl.org/dc/terms/</td>
+      <td style="text-align: left">Dublin Core Mmetadata Initiative (DCMI) Metadata Terms http://dublincore.org/documents/2012/06/14/dcmi-terms/</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edm</td>
+      <td style="text-align: left">http://www.europeana.eu/schemas/edm/</td>
+      <td style="text-align: left">Europeana Data Model</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">foaf</td>
+      <td style="text-align: left">http://xmlns.com/foaf/0.1/</td>
+      <td style="text-align: left">FOAF (Friend of a Friend) Vocabulary http://xmlns.com/foaf/spec/</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">ore</td>
+      <td style="text-align: left">http://www.openarchives.org/ore/terms/</td>
+      <td style="text-align: left">Open Archives Initiative Object Reuse and Exchange http://www.openarchives.org/ore/1.0/</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">owl</td>
+      <td style="text-align: left">http://www.w3.org/2002/07/owl#</td>
+      <td style="text-align: left">OWL Web Ontology Language</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">rdaGr2</td>
+      <td style="text-align: left">http://rdvocab.info/ElementsGr2/</td>
+      <td style="text-align: left">RDA Group 2 elements. http://metadataregistry.org/schema/show/id/15.html</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">rdf</td>
+      <td style="text-align: left">http://www.w3.org/1999/02/22-rdf-syntax-ns#</td>
+      <td style="text-align: left">Resource Description Framework</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">skos</td>
+      <td style="text-align: left">http://www.w3.org/2004/02/skos/core#</td>
+      <td style="text-align: left">Simple Knowledge Organization System http://www.w3.org/2009/08/skos-reference/skos.html</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">wgs84</td>
+      <td style="text-align: left">http://www.w3.org/2003/01/geo/wgs84_pos#</td>
+      <td style="text-align: left">WGS84 Geo Positioning http://www.w3.org/2003/01/geo/</td>
+    </tr>
+  </tbody>
+</table>
+
 <h2 id="callback-function">Callback Function</h2>
 
-<p>TBD</p>
+<p>Name of a client side (JavaScript) callback function. If you set a funtion the JSON response will be wrapped by this function call, so it is not JSON, but <a href="http://en.wikipedia.org/wiki/JSONP">JSONP</a> (JSON with Paggings). JSONP provides a method to request data from a server in a different domain, something prohibited by typical web browsers because of the <a href="http://en.wikipedia.org/wiki/Same_origin_policy">same origin policy</a>.</p>
+
+<blockquote>
+  <p>“Under the same origin policy, a web page served from server1.example.com cannot normally connect to or communicate with a server other than server1.example.com. An exception is the HTML script element. Exploiting the open policy for script elements, some pages use them to retrieve JavaScript code that operates on dynamically generated JSON-formatted data from other origins. This usage pattern is known as JSONP. Requests for JSONP retrieve not JSON, but arbitrary JavaScript code. They are evaluated by the JavaScript interpreter, not parsed by a JSON parser.” (Wikipedia: <a href="http://en.wikipedia.org/wiki/JSONP">JSONP</a>)</p>
+</blockquote>
+
+<p>A callback can be added to any JSON-based call by appending &amp;callback=callbackname to the call, where the callbackname should be an existing JavaScript function existing on the client side. The API returns JSONP response, like this one:</p>
+
+<pre><code>/api/v2/record/[record ID].json?wskey=xxxx&amp;profile=similar&amp;**callback=processEuropeanaSearch**
+</code></pre>
+
+<p>returns</p>
+
+<p><code>JavaScript
+processEuropeanaSearch({
+  "apikey":"xxxxx",
+  "action":"record.json",
+  "success":true,
+  "statsDuration":22,
+  "requestNumber":8,
+  "object":{
+    "type":"TEXT",
+    "title":["Bibliotheca Indica"],
+    "about":"[record ID]",
+    ....
+  }
+})
+</code></p>
+
+<p>The JSON response is wrapped into your function, and the function use JSON as input parameter, and it immediatelly runs when it returns. In your client you have to define the callback function before you call the API. A client side example:</p>
+
+<p><code>HTML
+&lt;script&gt;
+function processEuropeanaSearch(json){
+  alert(json.object.title.join(', '));
+}
+&lt;/script&gt;
+&lt;script src="http://europeana.eu/api/v2/record/0000/1111.json?wskey=xxxx&amp;callback=processEuropeanaSearch"&gt;&lt;/script&gt;
+</code></p>
+
+<p>Of course in this example we didn’t do any rocket science with the returned Europeana record, it is your turn to do some fascinating thing.</p>
+
 <!--
 --></div>
 </div>

@@ -40,12 +40,409 @@
       <dc:date>9998-01-01T00:00:00+01:00</dc:date>
     </item>
     <item>
+      <title>Apps&amp;Cultura workshop: using Europeana content and the Europeana API</title>
+      <link>http://labs.europeana.eu/events/2nd-Europeana-Creative-Challenge-workshop-Barcelona</link>
+      <description>[&quot;Apps&amp;amp;Cultura has teamed up with Europeana Creative for this year’s Hack at Home competition and the second round of the Europeana Creative Challenges. In this workshop the team from Europeana will be organising a hands on workshop demonstrating how to use the Europeana API and include it into your applications.&quot;]</description>
+      <pubDate>Wed, 16 Jul 2014 00:00:00 +0200</pubDate>
+      <guid>http://labs.europeana.eu/events/2nd-Europeana-Creative-Challenge-workshop-Barcelona</guid>
+      <dc:date>2014-07-16T00:00:00+02:00</dc:date>
+    </item>
+    <item>
       <title>Open Knowledge Festival 2014 - Open Minds to Open Action</title>
       <link>http://labs.europeana.eu/events/Open_Knowledge_Foundation_2014</link>
       <description>[&quot;The event gathers together open movement makers, thinkers, activists and researchers from around the world. To inspire 'Open Minds to Open Action' (as the slogan goes), the 2014 edition will be a space for learning and dialogue where the activities of the international participants shapes the event and its outcomes.&quot;]</description>
       <pubDate>Tue, 15 Jul 2014 00:00:00 +0200</pubDate>
       <guid>http://labs.europeana.eu/events/Open_Knowledge_Foundation_2014</guid>
       <dc:date>2014-07-15T00:00:00+02:00</dc:date>
+    </item>
+    <item>
+      <title>yuma.min.js</title>
+      <link>http://labs.europeana.eu/apps/yuma</link>
+      <description>&lt;p&gt;Open Source media annotation toolkit that makes content on a Web page annotatable with just a few lines of JavaScript. &lt;strong&gt;Deprectated&lt;/strong&gt; Cf. &lt;a href=&quot;http://labs.europeana.eu/apps/Annotorious-FLOSS/&quot;&gt;&amp;#8216;Annotorious&amp;#8217;&lt;/a&gt;&lt;/p&gt;
+
+</description>
+      <pubDate>Fri, 11 Jul 2014 00:00:00 +0200</pubDate>
+      <guid>http://labs.europeana.eu/apps/yuma</guid>
+      <dc:date>2014-07-11T00:00:00+02:00</dc:date>
+    </item>
+    <item>
+      <title>easyLOD</title>
+      <link>http://labs.europeana.eu/apps/easyLOD</link>
+      <description>&lt;p&gt;Simple framework for exposing Linked Open Data from arbitrary sources.&lt;/p&gt;
+
+</description>
+      <pubDate>Fri, 11 Jul 2014 00:00:00 +0200</pubDate>
+      <guid>http://labs.europeana.eu/apps/easyLOD</guid>
+      <dc:date>2014-07-11T00:00:00+02:00</dc:date>
+    </item>
+    <item>
+      <title>dat</title>
+      <link>http://labs.europeana.eu/apps/dat</link>
+      <description>&lt;p&gt;dat is an open source tool that enables the sharing of large datasets, allowing for a decentralized collaboration flow&lt;/p&gt;
+
+</description>
+      <pubDate>Fri, 11 Jul 2014 00:00:00 +0200</pubDate>
+      <guid>http://labs.europeana.eu/apps/dat</guid>
+      <dc:date>2014-07-11T00:00:00+02:00</dc:date>
+    </item>
+    <item>
+      <title>XTF</title>
+      <link>http://labs.europeana.eu/apps/XTF</link>
+      <description>&lt;p&gt;The eXtensible Text Framework (XTF) is a powerful open source platform for providing access to digital content.&lt;/p&gt;
+
+</description>
+      <pubDate>Fri, 11 Jul 2014 00:00:00 +0200</pubDate>
+      <guid>http://labs.europeana.eu/apps/XTF</guid>
+      <dc:date>2014-07-11T00:00:00+02:00</dc:date>
+    </item>
+    <item>
+      <title>VuFind</title>
+      <link>http://labs.europeana.eu/apps/VuFind</link>
+      <description>&lt;p&gt;Library resource portal.&lt;/p&gt;
+
+</description>
+      <pubDate>Fri, 11 Jul 2014 00:00:00 +0200</pubDate>
+      <guid>http://labs.europeana.eu/apps/VuFind</guid>
+      <dc:date>2014-07-11T00:00:00+02:00</dc:date>
+    </item>
+    <item>
+      <title>Video Frame Analyzer</title>
+      <link>http://labs.europeana.eu/apps/VideoFrameAnalyzer</link>
+      <description>&lt;p&gt;This application is used to analyze technical properties of individual frames of a video file in order to detect quality issues within digitized video files. Within video files, the quality issues that might arise vary from collection to collection. This application allows the user to configure the tests to be performed against a file and to tailor those setting to a specific collection.&lt;/p&gt;
+
+</description>
+      <pubDate>Fri, 11 Jul 2014 00:00:00 +0200</pubDate>
+      <guid>http://labs.europeana.eu/apps/VideoFrameAnalyzer</guid>
+      <dc:date>2014-07-11T00:00:00+02:00</dc:date>
+    </item>
+    <item>
+      <title>Tabula</title>
+      <link>http://labs.europeana.eu/apps/Tabula</link>
+      <description>&lt;p&gt;Tabula is a tool for liberating data tables trapped inside PDF files.&lt;/p&gt;
+
+</description>
+      <pubDate>Fri, 11 Jul 2014 00:00:00 +0200</pubDate>
+      <guid>http://labs.europeana.eu/apps/Tabula</guid>
+      <dc:date>2014-07-11T00:00:00+02:00</dc:date>
+    </item>
+    <item>
+      <title>REPOX</title>
+      <link>http://labs.europeana.eu/apps/REPOX</link>
+      <description>&lt;p&gt;REPOX is a framework to manage metadata spaces. It comprises several channels to import metadata from data providers, services to transform metadata between schemas according to user&amp;#8217;s specified rules, and services to expose the results to the exterior. REPOX aims to provide to all the TEL and Europeana partners a simple solution to import, convert and expose their bibliographic data via OAI-PMH.&lt;/p&gt;
+
+</description>
+      <pubDate>Fri, 11 Jul 2014 00:00:00 +0200</pubDate>
+      <guid>http://labs.europeana.eu/apps/REPOX</guid>
+      <dc:date>2014-07-11T00:00:00+02:00</dc:date>
+    </item>
+    <item>
+      <title>Phraseanet</title>
+      <link>http://labs.europeana.eu/apps/Phraseanet</link>
+      <description>&lt;p&gt;Phraseanet is an Open Source Digital Asset Management (DAM) software.&lt;/p&gt;
+
+</description>
+      <pubDate>Fri, 11 Jul 2014 00:00:00 +0200</pubDate>
+      <guid>http://labs.europeana.eu/apps/Phraseanet</guid>
+      <dc:date>2014-07-11T00:00:00+02:00</dc:date>
+    </item>
+    <item>
+      <title>OpenSeadragon</title>
+      <link>http://labs.europeana.eu/apps/OpenSeadragon</link>
+      <description>&lt;p&gt;An open-source, web-based viewer for zoomable images, implemented in pure JavaScript.&lt;/p&gt;
+
+</description>
+      <pubDate>Fri, 11 Jul 2014 00:00:00 +0200</pubDate>
+      <guid>http://labs.europeana.eu/apps/OpenSeadragon</guid>
+      <dc:date>2014-07-11T00:00:00+02:00</dc:date>
+    </item>
+    <item>
+      <title>Neatline</title>
+      <link>http://labs.europeana.eu/apps/Neatline</link>
+      <description>&lt;p&gt;The Scholars’ Lab designed Neatline as a suite of plugins for the open-source Omeka framework, which provides a powerful platform for content management and web publication. Through Neatline, you can create create rich representations of places, objects, events, narratives, and documents.
+Demo is available at &lt;a href=&quot;http://neatline.org/neatline-in-action/&quot;&gt;http://neatline.org/neatline-in-action/&lt;/a&gt;&lt;/p&gt;
+
+</description>
+      <pubDate>Fri, 11 Jul 2014 00:00:00 +0200</pubDate>
+      <guid>http://labs.europeana.eu/apps/Neatline</guid>
+      <dc:date>2014-07-11T00:00:00+02:00</dc:date>
+    </item>
+    <item>
+      <title>MediaMosa</title>
+      <link>http://labs.europeana.eu/apps/MediaMosa</link>
+      <description>&lt;p&gt;MediaMosa is open source software to build a Full Featured, Webservice Oriented Media Management and Distribution platform.&lt;/p&gt;
+
+</description>
+      <pubDate>Fri, 11 Jul 2014 00:00:00 +0200</pubDate>
+      <guid>http://labs.europeana.eu/apps/MediaMosa</guid>
+      <dc:date>2014-07-11T00:00:00+02:00</dc:date>
+    </item>
+    <item>
+      <title>MediaInfo</title>
+      <link>http://labs.europeana.eu/apps/MediaInfo</link>
+      <description>&lt;p&gt;A convenient unified display of the most relevant technical and tag data for video and audio files.&lt;/p&gt;
+
+</description>
+      <pubDate>Fri, 11 Jul 2014 00:00:00 +0200</pubDate>
+      <guid>http://labs.europeana.eu/apps/MediaInfo</guid>
+      <dc:date>2014-07-11T00:00:00+02:00</dc:date>
+    </item>
+    <item>
+      <title>MINT</title>
+      <link>http://labs.europeana.eu/apps/MINT</link>
+      <description>&lt;p&gt;MINT services compose a web based platform that was designed and developed to facilitate aggregation initiatives for cultural heritage content and metadata in Europe.&lt;/p&gt;
+
+</description>
+      <pubDate>Fri, 11 Jul 2014 00:00:00 +0200</pubDate>
+      <guid>http://labs.europeana.eu/apps/MINT</guid>
+      <dc:date>2014-07-11T00:00:00+02:00</dc:date>
+    </item>
+    <item>
+      <title>MAchine Readable Cataloging (MARC)</title>
+      <link>http://labs.europeana.eu/apps/MARC</link>
+      <description>&lt;p&gt;MARC is a ruby library for reading and writing MAchine Readable Cataloging (MARC)&lt;/p&gt;
+
+</description>
+      <pubDate>Fri, 11 Jul 2014 00:00:00 +0200</pubDate>
+      <guid>http://labs.europeana.eu/apps/MARC</guid>
+      <dc:date>2014-07-11T00:00:00+02:00</dc:date>
+    </item>
+    <item>
+      <title>Leaflet</title>
+      <link>http://labs.europeana.eu/apps/Leaflet</link>
+      <description>&lt;p&gt;Leaflet is an open source JavaScript library for mobile-friendly interactive maps&lt;/p&gt;
+
+</description>
+      <pubDate>Fri, 11 Jul 2014 00:00:00 +0200</pubDate>
+      <guid>http://labs.europeana.eu/apps/Leaflet</guid>
+      <dc:date>2014-07-11T00:00:00+02:00</dc:date>
+    </item>
+    <item>
+      <title>IIPMooViewer</title>
+      <link>http://labs.europeana.eu/apps/IIPMooViewer</link>
+      <description>&lt;p&gt;IIPMooViewer is a high performance light-weight HTML5 Ajax-based javascript image streaming and zooming client designed for the IIPImage high resolution imaging system.
+Demo is available at &lt;a href=&quot;http://iipimage.sourceforge.net/demo/&quot;&gt;http://iipimage.sourceforge.net/demo/&lt;/a&gt;&lt;/p&gt;
+
+</description>
+      <pubDate>Fri, 11 Jul 2014 00:00:00 +0200</pubDate>
+      <guid>http://labs.europeana.eu/apps/IIPMooViewer</guid>
+      <dc:date>2014-07-11T00:00:00+02:00</dc:date>
+    </item>
+    <item>
+      <title>IIPImage</title>
+      <link>http://labs.europeana.eu/apps/IIPImage</link>
+      <description>&lt;p&gt;IIPImage is an advanced high-performance feature-rich image server system for web-based streamed viewing and zooming of ultra high-resolution images.&lt;/p&gt;
+
+</description>
+      <pubDate>Fri, 11 Jul 2014 00:00:00 +0200</pubDate>
+      <guid>http://labs.europeana.eu/apps/IIPImage</guid>
+      <dc:date>2014-07-11T00:00:00+02:00</dc:date>
+    </item>
+    <item>
+      <title>Internet Archive BookReader</title>
+      <link>http://labs.europeana.eu/apps/IABookReader</link>
+      <description>&lt;p&gt;The Internet Archive BookReader is used to view books from the Internet Archive online and can also be used to view other books
+Demo is available at &lt;a href=&quot;http://www.archive.org/stream/birdbookillustra00reedrich#page/n3/mode/2up&quot;&gt;http://www.archive.org/stream/birdbookillustra00reedrich#page/n3/mode/2up&lt;/a&gt;&lt;/p&gt;
+
+</description>
+      <pubDate>Fri, 11 Jul 2014 00:00:00 +0200</pubDate>
+      <guid>http://labs.europeana.eu/apps/IABookReader</guid>
+      <dc:date>2014-07-11T00:00:00+02:00</dc:date>
+    </item>
+    <item>
+      <title>GathrIt</title>
+      <link>http://labs.europeana.eu/apps/GathrIt</link>
+      <description>&lt;p&gt;The concept of GathrIt is to provide a crowdsourcing toolset for cultural collections.
+Demo is available at &lt;a href=&quot;http://collection.catchingtherain.com/items/show/58&quot;&gt;http://collection.catchingtherain.com/items/show/58&lt;/a&gt;&lt;/p&gt;
+
+</description>
+      <pubDate>Fri, 11 Jul 2014 00:00:00 +0200</pubDate>
+      <guid>http://labs.europeana.eu/apps/GathrIt</guid>
+      <dc:date>2014-07-11T00:00:00+02:00</dc:date>
+    </item>
+    <item>
+      <title>Evergreen</title>
+      <link>http://labs.europeana.eu/apps/Evergreen</link>
+      <description>&lt;p&gt;Evergreen is a highly-scalable software for libraries that helps library patrons find library materials, and helps libraries manage, catalog, and circulate those materials, no matter how large or complex the libraries.&lt;/p&gt;
+
+</description>
+      <pubDate>Fri, 11 Jul 2014 00:00:00 +0200</pubDate>
+      <guid>http://labs.europeana.eu/apps/Evergreen</guid>
+      <dc:date>2014-07-11T00:00:00+02:00</dc:date>
+    </item>
+    <item>
+      <title>Echoprint</title>
+      <link>http://labs.europeana.eu/apps/Echoprint</link>
+      <description>&lt;p&gt;Internet design and authoring tools.&lt;/p&gt;
+
+</description>
+      <pubDate>Fri, 11 Jul 2014 00:00:00 +0200</pubDate>
+      <guid>http://labs.europeana.eu/apps/Echoprint</guid>
+      <dc:date>2014-07-11T00:00:00+02:00</dc:date>
+    </item>
+    <item>
+      <title>Doc Viewer</title>
+      <link>http://labs.europeana.eu/apps/DocViewer</link>
+      <description>&lt;p&gt;HTML5 document viewer&lt;/p&gt;
+
+</description>
+      <pubDate>Fri, 11 Jul 2014 00:00:00 +0200</pubDate>
+      <guid>http://labs.europeana.eu/apps/DocViewer</guid>
+      <dc:date>2014-07-11T00:00:00+02:00</dc:date>
+    </item>
+    <item>
+      <title>Docsplit</title>
+      <link>http://labs.europeana.eu/apps/Docsplit</link>
+      <description>&lt;p&gt;Docsplit is a command-line utility and Ruby library for splitting apart documents into their component parts: searchable UTF-8 plain text, page images or thumbnails in any format, PDFs, single pages, and document metadata (title, author, number of pages&amp;#8230;)&lt;/p&gt;
+
+</description>
+      <pubDate>Fri, 11 Jul 2014 00:00:00 +0200</pubDate>
+      <guid>http://labs.europeana.eu/apps/Docsplit</guid>
+      <dc:date>2014-07-11T00:00:00+02:00</dc:date>
+    </item>
+    <item>
+      <title>Data Pipes</title>
+      <link>http://labs.europeana.eu/apps/DataPipes</link>
+      <description>&lt;p&gt;Data Pipes is a service to provide streaming, “pipe-like” data transformations on the web – things like deleting rows or columns, find and replace, head, grep etc.&lt;/p&gt;
+
+</description>
+      <pubDate>Fri, 11 Jul 2014 00:00:00 +0200</pubDate>
+      <guid>http://labs.europeana.eu/apps/DataPipes</guid>
+      <dc:date>2014-07-11T00:00:00+02:00</dc:date>
+    </item>
+    <item>
+      <title>DSpace</title>
+      <link>http://labs.europeana.eu/apps/DSpace</link>
+      <description>&lt;p&gt;DSpace open source software is a turnkey repository application
+Demo available at &lt;a href=&quot;http://demo.dspace.org/&quot;&gt;http://demo.dspace.org/&lt;/a&gt;&lt;/p&gt;
+
+</description>
+      <pubDate>Fri, 11 Jul 2014 00:00:00 +0200</pubDate>
+      <guid>http://labs.europeana.eu/apps/DSpace</guid>
+      <dc:date>2014-07-11T00:00:00+02:00</dc:date>
+    </item>
+    <item>
+      <title>DBpedia Spotlight</title>
+      <link>http://labs.europeana.eu/apps/DBpediaSpotlight</link>
+      <description>&lt;p&gt;DBpedia Spotlight is a tool for automatically annotating mentions of DBpedia resources in text, providing a solution for linking unstructured information sources to the Linked Open Data cloud through DBpedia.&lt;/p&gt;
+
+</description>
+      <pubDate>Fri, 11 Jul 2014 00:00:00 +0200</pubDate>
+      <guid>http://labs.europeana.eu/apps/DBpediaSpotlight</guid>
+      <dc:date>2014-07-11T00:00:00+02:00</dc:date>
+    </item>
+    <item>
+      <title>DAITSS</title>
+      <link>http://labs.europeana.eu/apps/DAITSS</link>
+      <description>&lt;p&gt;DAITSS is a digital preservation software application.&lt;/p&gt;
+
+</description>
+      <pubDate>Fri, 11 Jul 2014 00:00:00 +0200</pubDate>
+      <guid>http://labs.europeana.eu/apps/DAITSS</guid>
+      <dc:date>2014-07-11T00:00:00+02:00</dc:date>
+    </item>
+    <item>
+      <title>D3-cartogram</title>
+      <link>http://labs.europeana.eu/apps/D3cartogram</link>
+      <description>&lt;p&gt;Continuous area cartograms with d3 and TopoJSON&lt;/p&gt;
+
+</description>
+      <pubDate>Fri, 11 Jul 2014 00:00:00 +0200</pubDate>
+      <guid>http://labs.europeana.eu/apps/D3cartogram</guid>
+      <dc:date>2014-07-11T00:00:00+02:00</dc:date>
+    </item>
+    <item>
+      <title>CollectionSpace</title>
+      <link>http://labs.europeana.eu/apps/CollectionSpace</link>
+      <description>&lt;p&gt;CollectionSpace is an open-source collections management application that meets the needs of museums, historical societies, and other collection-holding organizations. CollectionSpace is designed to be configurable to each organization’s needs, serving as a gateway to digital and physical assets across an institution. The software is freely distributed via open-source licensing, and an active developer community ensures that CollectionSpace is continually improving.
+Demo is available at &lt;a href=&quot;www.demo.collectionspace.org&quot;&gt;www.demo.collectionspace.org&lt;/a&gt;&lt;/p&gt;
+
+</description>
+      <pubDate>Fri, 11 Jul 2014 00:00:00 +0200</pubDate>
+      <guid>http://labs.europeana.eu/apps/CollectionSpace</guid>
+      <dc:date>2014-07-11T00:00:00+02:00</dc:date>
+    </item>
+    <item>
+      <title>Catmandu</title>
+      <link>http://labs.europeana.eu/apps/Catmandu</link>
+      <description>&lt;p&gt;Catmandu provides a suite of Perl modules to ease the import, storage, retrieval, export and transformation of metadata records.&lt;/p&gt;
+
+</description>
+      <pubDate>Fri, 11 Jul 2014 00:00:00 +0200</pubDate>
+      <guid>http://labs.europeana.eu/apps/Catmandu</guid>
+      <dc:date>2014-07-11T00:00:00+02:00</dc:date>
+    </item>
+    <item>
+      <title>CKAN</title>
+      <link>http://labs.europeana.eu/apps/CKAN</link>
+      <description>&lt;p&gt;CKAN is an open-source DMS (data management system) for powering data hubs and data portals. CKAN makes it easy to publish, share and use data.
+Demo is available at &lt;a href=&quot;http://ckan.org/case-studies/&quot;&gt;http://ckan.org/case-studies/&lt;/a&gt;&lt;/p&gt;
+
+</description>
+      <pubDate>Fri, 11 Jul 2014 00:00:00 +0200</pubDate>
+      <guid>http://labs.europeana.eu/apps/CKAN</guid>
+      <dc:date>2014-07-11T00:00:00+02:00</dc:date>
+    </item>
+    <item>
+      <title>CHContext</title>
+      <link>http://labs.europeana.eu/apps/CHContext</link>
+      <description>&lt;p&gt;CHContext is a JavaScript-based widget that is able to provide a list of links to cultural heritage materials based on predefined item of a website on which it is embedded (via given JQuery HTML selector).&lt;/p&gt;
+
+</description>
+      <pubDate>Fri, 11 Jul 2014 00:00:00 +0200</pubDate>
+      <guid>http://labs.europeana.eu/apps/CHContext</guid>
+      <dc:date>2014-07-11T00:00:00+02:00</dc:date>
+    </item>
+    <item>
+      <title>BibServer</title>
+      <link>http://labs.europeana.eu/apps/BibServer</link>
+      <description>&lt;p&gt;BibServer is a tool for quickly and easily sharing collections of bibliographic metadata. By making it simple for people to use this information, we make scholarship better.&lt;/p&gt;
+
+</description>
+      <pubDate>Fri, 11 Jul 2014 00:00:00 +0200</pubDate>
+      <guid>http://labs.europeana.eu/apps/BibServer</guid>
+      <dc:date>2014-07-11T00:00:00+02:00</dc:date>
+    </item>
+    <item>
+      <title>ArchivesSpace</title>
+      <link>http://labs.europeana.eu/apps/ArchivesSpace</link>
+      <description>&lt;p&gt;A next-generation archives management application that will incorporate the best features of Archivist’s Toolkit (AT) and Archon. The project team is developing a technical platform, governance structure, and service model that will provide the archival community with a cutting-edge, extensible, and sustainable platform for describing analog and born-digital archival materials. The ArchivesSpace product is being developed using an Agile scrum process, guided by a Product Vision for ArchivesSpace.&lt;/p&gt;
+
+</description>
+      <pubDate>Fri, 11 Jul 2014 00:00:00 +0200</pubDate>
+      <guid>http://labs.europeana.eu/apps/ArchivesSpace</guid>
+      <dc:date>2014-07-11T00:00:00+02:00</dc:date>
+    </item>
+    <item>
+      <title>Archivematica</title>
+      <link>http://labs.europeana.eu/apps/Archivematica</link>
+      <description>&lt;p&gt;Archivematica is a free and open-source digital preservation system that is designed to maintain standards-based, long-term access to collections of digital objects.
+Demo is available at &lt;a href=&quot;sankofa.archivematica.org/administration/accounts/login&quot;&gt;sankofa.archivematica.org/administration/accounts/login/ (user name: demo@example.com, password: demo)&lt;/a&gt;&lt;/p&gt;
+
+</description>
+      <pubDate>Fri, 11 Jul 2014 00:00:00 +0200</pubDate>
+      <guid>http://labs.europeana.eu/apps/Archivematica</guid>
+      <dc:date>2014-07-11T00:00:00+02:00</dc:date>
+    </item>
+    <item>
+      <title>Apache PDFBox</title>
+      <link>http://labs.europeana.eu/apps/ApachePDFBox</link>
+      <description>&lt;p&gt;The Apache PDFBox™ library is an open source Java tool for working with PDF documents. This project allows creation of new PDF documents, manipulation of existing documents and the ability to extract content from documents.&lt;/p&gt;
+
+</description>
+      <pubDate>Fri, 11 Jul 2014 00:00:00 +0200</pubDate>
+      <guid>http://labs.europeana.eu/apps/ApachePDFBox</guid>
+      <dc:date>2014-07-11T00:00:00+02:00</dc:date>
+    </item>
+    <item>
+      <title>Annotator</title>
+      <link>http://labs.europeana.eu/apps/Annotator</link>
+      <description>&lt;p&gt;The Annotator is an open-source JavaScript library and tool that can be added to any webpage to make it annotatable.
+Demo is available at &lt;a href=&quot;http://okfnlabs.org/annotator/demo/&quot;&gt;http://okfnlabs.org/annotator/demo/&lt;/a&gt;&lt;/p&gt;
+
+</description>
+      <pubDate>Fri, 11 Jul 2014 00:00:00 +0200</pubDate>
+      <guid>http://labs.europeana.eu/apps/Annotator</guid>
+      <dc:date>2014-07-11T00:00:00+02:00</dc:date>
     </item>
     <item>
       <title>Europeana Ruby Client Library</title>
@@ -1260,16 +1657,6 @@ The aim of PATHS project is to enable exploration and discovery within cultural 
       <dc:date>2014-03-29T00:00:00+01:00</dc:date>
     </item>
     <item>
-      <title>Kringla</title>
-      <link>http://labs.europeana.eu/apps/kringla</link>
-      <description>&lt;p&gt;The online portal of the Swedish National Heritage Board (SOCH) www.kringla.nu allows users to search in both the national heritage repository &amp;#8216;SOCH&amp;#8217; and the Europeana repository presenting the search results in different tabs. &lt;/p&gt;
-
-</description>
-      <pubDate>Wed, 22 Jan 2014 00:00:00 +0100</pubDate>
-      <guid>http://labs.europeana.eu/apps/kringla</guid>
-      <dc:date>2014-01-22T00:00:00+01:00</dc:date>
-    </item>
-    <item>
       <title>Inventing Europe</title>
       <link>http://labs.europeana.eu/apps/inventing-europe</link>
       <description>&lt;p&gt;The Inventing Europe online platform is a pioneering collaboration between historians and cultural heritage institutions across Europe.&lt;/p&gt;
@@ -1490,11 +1877,11 @@ The aim of PATHS project is to enable exploration and discovery within cultural 
     </item>
     <item>
       <title>Photographs, Prints and Posters from the Biblioteca Valenciana Digital</title>
-      <link>http://labs.europeana.eu/data/2014/01/01/Photographs_Prints_and_Posters_from_the_Biblioteca_Valenciana_Digital/</link>
+      <link>http://labs.europeana.eu/data/Photographs-Prints-and-Posters-from-the-Biblioteca-Valenciana-Digital</link>
       <description>
 </description>
       <pubDate>Wed, 01 Jan 2014 00:00:00 +0100</pubDate>
-      <guid>http://labs.europeana.eu/data/2014/01/01/Photographs_Prints_and_Posters_from_the_Biblioteca_Valenciana_Digital/</guid>
+      <guid>http://labs.europeana.eu/data/Photographs-Prints-and-Posters-from-the-Biblioteca-Valenciana-Digital</guid>
       <dc:date>2014-01-01T00:00:00+01:00</dc:date>
     </item>
     <item>

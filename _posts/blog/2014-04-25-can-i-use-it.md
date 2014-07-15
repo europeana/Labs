@@ -9,6 +9,7 @@ tags:
   - "Re-use"
   - Rights
   - Facets
+  - Technology
 ---
 
 Uncovering the technology behind the simple search tool to discover reusable content available in both the Europeana  portal and API.

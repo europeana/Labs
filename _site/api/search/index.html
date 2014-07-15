@@ -113,19 +113,20 @@
 			<li>
 				<a class="menuTrigger">REST API</a>
 				<ul class="notabs tabs-v">
-                    <li><a href="/api/introduction" title="Introduction">Introduction</a></li>
-                    <li><a href="/api/getting-started" title="Getting Started with the Europeana REST API">Getting Started</a></li>
+					<li><a href="/api/introduction" title="Introduction">Introduction</a></li>
+					<li><a href="/api/getting-started" title="Getting Started with the Europeana REST API">Getting Started</a></li>
 					<li><a href="/api/registration" title="API Registration">Get an API-key</a></li>
 					<li><a href="/api/console" title="API Console">Console</a></li>
 					<li><a href="/api/authentication" title="Authentication">Authentication</a></li>
 					<li><a href="/api/search" title="Search">Search</a></li>
 					<li><a href="/api/query" title="Query">Query Syntax</a></li>
 					<li><a href="/api/record" title="Record">Record</a></li>
+					<li><a href="/api/record-jsonld" title="Record">Record in JSON-LD</a></li>
 					<li><a href="/api/myeuropeana" title="Accessing MyEuropeana">MyEuropeana</a></li>
 					<li><a href="/api/provider" title="Querying Providers and Datasets">Provider and Datasets</a></li>
 					<!--<li><a href="/api/data-fields" title="API Data Fields Reference">Data Fields</a></li>-->					
 					<li><a href="/api/data-hierarchy" title="Data Hierarchy">Data Hierarchy</a></li>					
-                    <li><a href="/api/data-fields" title="Data Fields">Data Fields</a></li>
+					<li><a href="/api/data-fields" title="Data Fields">Data Fields</a></li>
 					<li><a href="/api/error" title="Error Codes">Error Codes</a></li>	
 					<li><a href="/api/changelog" title="API ChangeLog">Change Log</a></li>
 				</ul>
@@ -150,7 +151,8 @@
 	<div id="documentation" class="prose grid__item palm--one-whole push--palm-none one-half"><!--
 	--><ul id="markdown-toc">
   <li><a href="#request">Request</a>    <ul>
-      <li><a href="#the-possible-values-of-the-profile-parameter">The possible values of the profile parameter</a></li>
+      <li><a href="#profile-parameter">Profile parameter</a></li>
+      <li><a href="#reusability-parameter">Reusability parameter</a></li>
     </ul>
   </li>
   <li><a href="#response">Response</a>    <ul>
@@ -159,7 +161,17 @@
       <li><a href="#facet">facet</a></li>
     </ul>
   </li>
-  <li><a href="#callback-function">Callback Function</a></li>
+  <li><a href="#metadata-sets">Metadata sets</a>    <ul>
+      <li><a href="#minimal-profile">Minimal profile</a></li>
+      <li><a href="#standard-profile">Standard profile</a></li>
+      <li><a href="#portal-profile">Portal profile</a></li>
+      <li><a href="#rich-profile">Rich profile</a></li>
+    </ul>
+  </li>
+  <li><a href="#individual-facets">Individual facets</a>    <ul>
+      <li><a href="#offset-and-limit-of-facets">Offset and limit of facets</a></li>
+    </ul>
+  </li>
 </ul>
 
 <p>Search for records.</p>
@@ -181,17 +193,17 @@
     <tr>
       <td style="text-align: left">query</td>
       <td style="text-align: left">String</td>
-      <td style="text-align: left">The search term(s). See <a href="http://labs.europeana.eu/api/query">Query Syntax</a> for information on forming complex queries and examples.</td>
+      <td style="text-align: left">The search term(s). See <a href="/api/query">Query Syntax</a> for information on forming complex queries and examples.</td>
     </tr>
     <tr>
       <td style="text-align: left">profile</td>
       <td style="text-align: left">String</td>
-      <td style="text-align: left">Profile parameter controls the format and richness of the response. See <a href="#the-possible-values-of-the-profile-parameter">the possible values of the profile parameter</a>.</td>
+      <td style="text-align: left">Profile parameter controls the format and richness of the response. See the possible values of the <a href="#profile-parameter">profile parameter</a>.</td>
     </tr>
     <tr>
       <td style="text-align: left">qf</td>
       <td style="text-align: left">String</td>
-      <td style="text-align: left">Facet filtering query. This parameter can be defined more than once. See <a href="http://labs.europeana.eu/api/query">Query Syntax</a> page for more information.</td>
+      <td style="text-align: left">Facet filtering query. This parameter can be defined more than once. See <a href="/api/query">Query Syntax</a> page for more information.</td>
     </tr>
     <tr>
       <td style="text-align: left">rows</td>
@@ -206,12 +218,34 @@
     <tr>
       <td style="text-align: left">callback</td>
       <td style="text-align: left">String</td>
-      <td style="text-align: left">Name of a client side <a href="#callback_function">callback function</a>.</td>
+      <td style="text-align: left">Name of a client side <a href="/api/getting-started/#callback-function">callback function</a>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">reusability</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left">Filter by copyright status. Possible values are open, restricted or permission, see <a href="#reusability-parameters">reusability parameters</a>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">facet</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left">Name of an individual facet. See <a href="#individual-facets">individual facets</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">f.[facet name].facet.limit</td>
+      <td style="text-align: left">Number</td>
+      <td style="text-align: left">Number of values an individual facet should contain. The [facet name] part should be replaced with one of the the facet names you specified in <code>facet</code> parameter. See <a href="#individual-facets">individual facets</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">f.[facet name].facet.offset</td>
+      <td style="text-align: left">Number</td>
+      <td style="text-align: left">The offset of the first value in an individual facet. The [facet name] part should be replaced with one of the the facet names you specified in <code>facet</code> parameter. See <a href="#individual-facets">individual facets</a></td>
     </tr>
   </tbody>
 </table>
 
-<h3 id="the-possible-values-of-the-profile-parameter">The possible values of the profile parameter</h3>
+<h3 id="profile-parameter">Profile parameter</h3>
+
+<p>We have two profile types: one to control which fields of the record should be in the result, and the other to control other data elements of the result.</p>
 
 <table>
   <thead>
@@ -223,34 +257,65 @@
   <tbody>
     <tr>
       <td style="text-align: left">minimal</td>
-      <td style="text-align: left">Returns minimal set of metadata</td>
+      <td style="text-align: left">Returns minimal set of metadata. See <a href="/api/search/#metadata-sets">metadata sets</a>.</td>
     </tr>
     <tr>
       <td style="text-align: left">standard</td>
-      <td style="text-align: left">TBD</td>
+      <td style="text-align: left">Returns a boarder set of metadata. See <a href="/api/search/#metadata-sets">metadata sets</a>.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">rich</td>
+      <td style="text-align: left">Returns the broadest set of metadata. See <a href="/api/search/#metadata-sets">metadata sets</a>.</td>
     </tr>
     <tr>
       <td style="text-align: left">facets</td>
-      <td style="text-align: left">Information about <a href="http://labs.europeana.eu/api/repository/#facets">facets</a> is added. For the records the Standard profile is used.</td>
+      <td style="text-align: left">Information about <a href="/api/repository/#facets">facets</a> is added. For the records the Standard profile is used.</td>
     </tr>
     <tr>
       <td style="text-align: left">breadcrumbs</td>
-      <td style="text-align: left">information about the query is added in the form of <a href="http://labs.europeana.eu/api/search/#breadcrumb">breadcrumbs</a>. Facets are added as well; for the records the Standard profile is used.</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">portal</td>
-      <td style="text-align: left">Standard, Facets, and Breadcrumb combined</td>
+      <td style="text-align: left">information about the query is added in the form of <a href="/api/search/#breadcrumb">breadcrumbs</a>. Facets are added as well; for the records the Standard profile is used.</td>
     </tr>
     <tr>
       <td style="text-align: left">params</td>
       <td style="text-align: left">The header of the response will contain a params key, which lists the requested and default parameters of the API call.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">portal</td>
+      <td style="text-align: left"><code>standard</code>, <code>facets</code>, and <code>breadcrumb</code> combined, plus additional fields over <code>standard</code> metadata set.  See <a href="/api/search/#metadata-sets">metadata sets</a>.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="reusability-parameter">Reusability parameter</h3>
+
+<p>The possible values of the reusability parameters</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Value</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">open</td>
+      <td style="text-align: left">The records are freely reusable. The licenses in this category are <a href="http://creativecommons.org/publicdomain/mark/">NOC</a>, <a href="http://creativecommons.org/publicdomain/zero/1.0/">CC-ZERO</a>, <a href="http://creativecommons.org/licenses/by/">CC-BY</a>, <a href="http://creativecommons.org/licenses/by-sa/">CC-BY-SA</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">restricted</td>
+      <td style="text-align: left">The records are reusable, but with restrictions. The licenses in this category are <a href="http://creativecommons.org/licenses/by-nc/">CC-BY-NC</a>, <a href="http://creativecommons.org/licenses/by-nc-sa/">CC-BY-NC-SA</a>, <a href="http://creativecommons.org/licenses/by-nc-nd/">CC-BY-NC-ND</a>, <a href="http://creativecommons.org/licenses/by-nd/">CC-BY-ND</a>, <a href="http://www.europeana.eu/rights/out-of-copyright-non-commercial/">OOC-NC</a></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">permission</td>
+      <td style="text-align: left">You can reuse the records only with explicit permission.</td>
     </tr>
   </tbody>
 </table>
 
 <h2 id="response">Response</h2>
 
-<p>For the common data fields returned by both search and object response, see Getting started guide’s <a href="http://labs.europeana.eu/api/getting-started/#response">response</a> section.</p>
+<p>For the common data fields returned by both search and object response, see Getting started guide’s <a href="/api/getting-started/#response">response</a> section.</p>
 
 <table>
   <thead>
@@ -291,7 +356,7 @@
 
 <h3 id="item">item</h3>
 
-<p>Each item is a search result and is represented by a summary of its metadata record. The actual content depends of the profile parameter.</p>
+<p>Each item is a search result and is represented by a summary of its metadata record. The actual content depends of the profile parameter, see <a href="/api/search/#metadata-sets">metadata sets</a>.</p>
 
 <table>
   <thead>
@@ -303,47 +368,47 @@
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: left">completeness</td>
+      <td style="text-align: left">europeanaCompleteness</td>
       <td style="text-align: left">Number</td>
       <td style="text-align: left">A number from 1 to 10 that is an internal measure of the metadata quality. It is based on the availability of mandatory and optional schema fields.</td>
     </tr>
     <tr>
-      <td style="text-align: left">dataProvider<sup>*</sup></td>
+      <td style="text-align: left">dataProvider</td>
       <td style="text-align: left">Array (String)</td>
       <td style="text-align: left">The names of Europeana Data Providers who provided the object.</td>
     </tr>
     <tr>
-      <td style="text-align: left">europeanaCollectionName<sup>*</sup></td>
+      <td style="text-align: left">europeanaCollectionName</td>
       <td style="text-align: left">Array (String)</td>
       <td style="text-align: left">The names of the Europeana collections that contain the item</td>
     </tr>
     <tr>
-      <td style="text-align: left">id<sup>*</sup></td>
+      <td style="text-align: left">id</td>
       <td style="text-align: left">String</td>
       <td style="text-align: left">The Europeana ID of the record.</td>
     </tr>
     <tr>
-      <td style="text-align: left">guid<sup>*</sup></td>
+      <td style="text-align: left">guid</td>
       <td style="text-align: left">String</td>
       <td style="text-align: left">A link to the object page on the Europeana portal to be used by client applications.</td>
     </tr>
     <tr>
-      <td style="text-align: left">link<sup>*</sup></td>
+      <td style="text-align: left">link</td>
       <td style="text-align: left">String</td>
       <td style="text-align: left">A link to the API object call. This link should be used to retrieve the full metadata object.</td>
     </tr>
     <tr>
-      <td style="text-align: left">provider<sup>*</sup></td>
+      <td style="text-align: left">provider</td>
       <td style="text-align: left">String</td>
       <td style="text-align: left">The name or identifier of the provider of the object.</td>
     </tr>
     <tr>
-      <td style="text-align: left">rights<sup>*</sup></td>
+      <td style="text-align: left">rights</td>
       <td style="text-align: left">Array (String)</td>
       <td style="text-align: left">A collection of URLs referring to the object rights.</td>
     </tr>
     <tr>
-      <td style="text-align: left">type<sup>*</sup></td>
+      <td style="text-align: left">type</td>
       <td style="text-align: left">String</td>
       <td style="text-align: left">The type of the provided object (TEXT, VIDEO, SOUND, IMAGE, 3D)</td>
     </tr>
@@ -383,6 +448,136 @@
       <td style="text-align: left">A point of time associated with an event in the life of the original analog or born digital object. Find more in <a href="http://pro.europeana.eu/documents/900548/bb6b51df-ad11-4a78-8d8a-44cc41810f22">EDM Definition</a></td>
     </tr>
     <tr>
+      <td style="text-align: left">edmIsShownAt</td>
+      <td style="text-align: left">Array (String)</td>
+      <td style="text-align: left">The URL of a web view of the object in full information context.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edmPlaceLatitude</td>
+      <td style="text-align: left">Array (String)</td>
+      <td style="text-align: left">The latitude of a spatial thing (decimal degrees).</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edmPlaceLongitude</td>
+      <td style="text-align: left">Array (String)</td>
+      <td style="text-align: left">The longitude of a spatial thing (decimal degrees).</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">score</td>
+      <td style="text-align: left">Number</td>
+      <td style="text-align: left">The relevancy score calculated by the search engine. Depends of the query.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edmConceptTerm</td>
+      <td style="text-align: left">Array (String)</td>
+      <td style="text-align: left">A SKOS Concept.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edmConceptPrefLabel</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">The preferred form of the name of the concept.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edmConceptBroaderTerm</td>
+      <td style="text-align: left">Array (String)</td>
+      <td style="text-align: left">The identifier of a broader concept in the same thesaurus or controlled vocabulary</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edmConceptBroaderLabel</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">A human readable name of a broader concept.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edmTimespanBegin</td>
+      <td style="text-align: left">Array (String)</td>
+      <td style="text-align: left">The date the timespan started.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edmTimespanEnd</td>
+      <td style="text-align: left">Array (String)</td>
+      <td style="text-align: left">The date the timespan finished.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edmTimespanBroaderTerm</td>
+      <td style="text-align: left">Array (String)</td>
+      <td style="text-align: left">ts_dcterms_isPartOf</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edmTimespanBroaderLabel</td>
+      <td style="text-align: left">edm:TimeSpan/dcterms:isPartOf</td>
+      <td style="text-align: left">ts_dcterms_isPartOf</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">ugc</td>
+      <td style="text-align: left">Array (Boolnean)</td>
+      <td style="text-align: left">Whether or not has user generated contents in the record</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">country</td>
+      <td style="text-align: left">Array (String)</td>
+      <td style="text-align: left">The name of the country in which the Provider is based or “Europe” in the case of Europe-wide projects.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edmPlaceBroaderTerm</td>
+      <td style="text-align: left">Array (String)</td>
+      <td style="text-align: left">pl_dcterms_isPartOf</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edmPlaceAltLabel</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Alternative forms of the name of the place.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dctermsIsPartOf</td>
+      <td style="text-align: left">Array (String)</td>
+      <td style="text-align: left">A related resource in which the described resource is physically or logically included.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dctermsSpatial</td>
+      <td style="text-align: left">Array (String)</td>
+      <td style="text-align: left">Spatial characteristics of the resource.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edmPlace</td>
+      <td style="text-align: left">Array (String)</td>
+      <td style="text-align: left">The URI of an EDM Place object.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edmTimespan</td>
+      <td style="text-align: left">Array (String)</td>
+      <td style="text-align: left">The URI of an EDM Timespan object.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edmAgent</td>
+      <td style="text-align: left">Array (String)</td>
+      <td style="text-align: left">The URI of an EDM Agent object</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edmAgentLabel</td>
+      <td style="text-align: left"> </td>
+      <td style="text-align: left">Name of the agent.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dcContributor</td>
+      <td style="text-align: left">Array (String)</td>
+      <td style="text-align: left">An entity responsible for making contributions to the resource.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">isShownBy</td>
+      <td style="text-align: left">Array (String)</td>
+      <td style="text-align: left">The URL of a web view of the object.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dcDescription</td>
+      <td style="text-align: left">Array (String)</td>
+      <td style="text-align: left">A description of the resource.</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edmLandingPage</td>
+      <td style="text-align: left">Array (String)</td>
+      <td style="text-align: left">This property captures the relation between an aggregation representing a cultural heritage object and the Web resource representing that object on the provider’s web site.</td>
+    </tr>
+    <tr>
       <td style="text-align: left">timestamp_created_epoch</td>
       <td style="text-align: left">Number</td>
       <td style="text-align: left">UNIX timestamp of the date when record were created</td>
@@ -395,12 +590,12 @@
     <tr>
       <td style="text-align: left">timestamp_created</td>
       <td style="text-align: left">String</td>
-      <td style="text-align: left">ISO 8601 format of the date when record were created</td>
+      <td style="text-align: left"><a href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> format of the date when record were created</td>
     </tr>
     <tr>
       <td style="text-align: left">timestamp_update</td>
       <td style="text-align: left">String</td>
-      <td style="text-align: left">ISO 8601 format of the date when record were last updated</td>
+      <td style="text-align: left"><a href="http://en.wikipedia.org/wiki/ISO_8601">ISO 8601</a> format of the date when record were last updated</td>
     </tr>
   </tbody>
 </table>
@@ -474,34 +669,399 @@
 
 <p><sup>*</sup> <em>indicates an obligatory property</em></p>
 
-<h2 id="callback-function">Callback Function</h2>
-<p>Name of a client side (JavaScript) callback function. If you set a funtion the JSON response will be wrapped by this function call, so it is not JSON, but <a href="http://en.wikipedia.org/wiki/JSONP">JSONP</a> (JSON with Paggings). JSONP provides a method to request data from a server in a different domain, something prohibited by typical web browsers because of the <a href="http://en.wikipedia.org/wiki/Same_origin_policy">same origin policy</a>.</p>
+<h2 id="metadata-sets">Metadata sets</h2>
 
-<blockquote>
-  <p>“Under the same origin policy, a web page served from server1.example.com cannot normally connect to or communicate with a server other than server1.example.com. An exception is the HTML script element. Exploiting the open policy for script elements, some pages use them to retrieve JavaScript code that operates on dynamically generated JSON-formatted data from other origins. This usage pattern is known as JSONP. Requests for JSONP retrieve not JSON, but arbitrary JavaScript code. They are evaluated by the JavaScript interpreter, not parsed by a JSON parser.” (Wikipedia: <a href="http://en.wikipedia.org/wiki/JSONP">JSONP</a>)</p>
-</blockquote>
+<h3 id="minimal-profile">Minimal profile</h3>
 
-<p>A callback can be added to any JSON-based call by appending &amp;callback=callbackname to the call, where the callbackname should be an existing JavaScript function existing on the client side. The API returns JSONP response, like this one:</p>
+<p>The minimal profile returns the follwoing fields:</p>
 
-<pre><code>/api/v2/record/[record ID].json?wskey=xxxx&amp;profile=similar&amp;**callback=processEuropeanaSearch**
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Name in API response</th>
+      <th style="text-align: left">EMD field</th>
+      <th style="text-align: left">Name is searching</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">dataProvider</td>
+      <td style="text-align: left">ore:Aggregation/edm:dataProvider</td>
+      <td style="text-align: left">provider_aggregation_edm_dataProvider</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dcCreator</td>
+      <td style="text-align: left">edm:ProvidedCHO/dc:creator</td>
+      <td style="text-align: left">proxy_dc_creator</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edmIsShownAt</td>
+      <td style="text-align: left">ore:Aggregation/edm:isShownAt</td>
+      <td style="text-align: left">provider_aggregation_edm_isShownAt</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edmPlaceLatitude</td>
+      <td style="text-align: left">edm:Place/wgs84_pos:lat</td>
+      <td style="text-align: left">pl_wgs84_pos_lat</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edmPlaceLongitude</td>
+      <td style="text-align: left">edm:Place/wgs84_pos:long</td>
+      <td style="text-align: left">pl_wgs84_pos_long</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edmPreview</td>
+      <td style="text-align: left"><br /></td>
+      <td style="text-align: left">europeana_aggregation_edm_preview</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">europeanaCompleteness</td>
+      <td style="text-align: left"><br /></td>
+      <td style="text-align: left">COMPLETENESS</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">guid</td>
+      <td style="text-align: left"><br /></td>
+      <td style="text-align: left"><br /></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">id</td>
+      <td style="text-align: left"><br /></td>
+      <td style="text-align: left">europeana_id</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">link</td>
+      <td style="text-align: left"><br /></td>
+      <td style="text-align: left"><br /></td>
+    </tr>
+    <tr>
+      <td style="text-align: left">provider</td>
+      <td style="text-align: left">ore:Aggregation/edm:provider</td>
+      <td style="text-align: left">PROVIDER</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">rights</td>
+      <td style="text-align: left">ore:Aggregation/edm:rights</td>
+      <td style="text-align: left">RIGHTS</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">score</td>
+      <td style="text-align: left"><br /></td>
+      <td style="text-align: left">score</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">title</td>
+      <td style="text-align: left">edm:ProvidedCHO/dc:title, edm:ProvidedCHO/dcterms:alternative</td>
+      <td style="text-align: left">title</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">type</td>
+      <td style="text-align: left"><br /></td>
+      <td style="text-align: left">TYPE</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">year</td>
+      <td style="text-align: left"><br /></td>
+      <td style="text-align: left">YEAR</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="standard-profile">Standard profile</h3>
+
+<p>The standard profile returns all the fields of the minimal profile plus and the following fields:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Name in API response</th>
+      <th style="text-align: left">EMD field</th>
+      <th style="text-align: left">Name is searching</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">edmConceptTerm</td>
+      <td style="text-align: left">skos:Concept/@rdf:about</td>
+      <td style="text-align: left">skos_concept</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edmConceptPrefLabel</td>
+      <td style="text-align: left">skos:Concept/skos:prefLabel</td>
+      <td style="text-align: left">cc_skos_prefLabel</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edmConceptBroaderTerm</td>
+      <td style="text-align: left">skos:Concept/skos:broader</td>
+      <td style="text-align: left">cc_skos_broader</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edmConceptBroaderLabel</td>
+      <td style="text-align: left">skos:Concept/skos:broader</td>
+      <td style="text-align: left">cc_skos_broader</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edmTimespanLabel</td>
+      <td style="text-align: left">edm:TimeSpan/skos:prefLabel</td>
+      <td style="text-align: left">ts_skos_prefLabel</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edmTimespanBegin</td>
+      <td style="text-align: left">edm:TimeSpan/edm:begin</td>
+      <td style="text-align: left">ts_edm_begin</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edmTimespanEnd</td>
+      <td style="text-align: left">edm:TimeSpan/edm:end</td>
+      <td style="text-align: left">ts_edm_end</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edmTimespanBroaderTerm</td>
+      <td style="text-align: left">edm:TimeSpan/dcterms:isPartOf</td>
+      <td style="text-align: left">ts_dcterms_isPartOf</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edmTimespanBroaderLabel</td>
+      <td style="text-align: left">edm:TimeSpan/dcterms:isPartOf</td>
+      <td style="text-align: left">ts_dcterms_isPartOf</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">recordHashFirstSix</td>
+      <td style="text-align: left"><br /></td>
+      <td style="text-align: left">europeana_recordHashFirstSix</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">ugc</td>
+      <td style="text-align: left">ore:Aggregation/edm:ugc</td>
+      <td style="text-align: left">UGC</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">completeness</td>
+      <td style="text-align: left"><br /></td>
+      <td style="text-align: left">COMPLETENESS</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">country</td>
+      <td style="text-align: left">edm:EuropeanaAggregation/edm:country</td>
+      <td style="text-align: left">COUNTRY</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">europeanaCollectionName</td>
+      <td style="text-align: left"><br /></td>
+      <td style="text-align: left">europeana_collectionName</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edmPlaceBroaderTerm</td>
+      <td style="text-align: left">edm:Place/dcterms:isPartOf</td>
+      <td style="text-align: left">pl_dcterms_isPartOf</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edmPlaceAltLabel</td>
+      <td style="text-align: left">edm:Place/skos:altLabel</td>
+      <td style="text-align: left">pl_skos_altLabel</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dctermsIsPartOf</td>
+      <td style="text-align: left">edm:Place/dcterms:isPartOf</td>
+      <td style="text-align: left">pl_dcterms_isPartOf</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">timestampCreated</td>
+      <td style="text-align: left"><br /></td>
+      <td style="text-align: left">timestamp_created</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">timestampUpdate</td>
+      <td style="text-align: left"><br /></td>
+      <td style="text-align: left">timestamp_update</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">language</td>
+      <td style="text-align: left">edm:EuropeanaAggregation/edm:language</td>
+      <td style="text-align: left">LANGUAGE</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="portal-profile">Portal profile</h3>
+
+<p>The portal profile returns all the fields of the standard profile plus and the following fields:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Name in API response</th>
+      <th style="text-align: left">EMD field</th>
+      <th style="text-align: left">Name is searching</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">dctermsSpatial</td>
+      <td style="text-align: left">edm:ProvidedCHO/dcterms:spatial</td>
+      <td style="text-align: left">proxy_dcterms_spatial</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edmPlace</td>
+      <td style="text-align: left">edm:Place/@rdf:about</td>
+      <td style="text-align: left">edm_place</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edmTimespan</td>
+      <td style="text-align: left">edm:TimeSpan/@rdf:about</td>
+      <td style="text-align: left">edm_timespan</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edmAgent</td>
+      <td style="text-align: left">edm:Agent/@rdf:about</td>
+      <td style="text-align: left">edm_agent</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edmAgentLabel</td>
+      <td style="text-align: left">edm:Agent/skos:prefLabel</td>
+      <td style="text-align: left">ag_skos_prefLabel</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dcContributor</td>
+      <td style="text-align: left">edm:ProvidedCHO/dc:contributor</td>
+      <td style="text-align: left">proxy_dc_contributor</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="rich-profile">Rich profile</h3>
+
+<p>The rich profile returns all the fields of the portal profile plus and the following fields:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Name in API response</th>
+      <th style="text-align: left">EMD field</th>
+      <th style="text-align: left">Name is searching</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">isShownBy</td>
+      <td style="text-align: left">ore:Aggregation/edm:isShownBy</td>
+      <td style="text-align: left">provider_aggregation_edm_isShownBy</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">dcDescription</td>
+      <td style="text-align: left">edm:ProvidedCHO/dc:description</td>
+      <td style="text-align: left">proxy_dc_description</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">edmLandingPage</td>
+      <td style="text-align: left">edm:EuropeanaAggregation/edm:landingPage</td>
+      <td style="text-align: left">europeana_aggregation_edm_landingPage</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="individual-facets">Individual facets</h2>
+
+<p>So far the user could get only the default Europeana facet set. From now on API users can select which facets they would like to retrieve via the <code>facet</code> parameter. When you request facet you have to set the profile either as <code>facets</code> or as <code>portal</code> (which covers facets as well).</p>
+
+<p>The value of the parameter could be “DEFAULT” (which is a shortcut of the Europeana facet set we make use on the portal, which contains UGC, LANGUAGE, TYPE, YEAR, PROVIDER, DATA_PROVIDER, COUNTRY and RIGHTS), or any field name which is indexed and stored in Apache Solr.
+We maintain a table in API documentation about the existing  (API Fields)[/api/api-fields/]. In the field type column “text” means indexed as as a row of distinct terms, while “string” means indexed as phrase, so the whole content is taken as one individual unit.</p>
+
+<p>Users can set one or more facets in one query.</p>
+
+<p>Requesting a single facet:</p>
+
+<pre><code>&amp;facet=proxy_dc_contributor&amp;profile=facets
+http://www.europeana.eu/api/v2/search.json?wskey=xxxx&amp;query=paris&amp;facet=proxy_dc_contributor&amp;profile=facets
 </code></pre>
 
-<p>returns</p>
+<p><a href="/api/console/?function=search&amp;query=paris&amp;facet=proxy_dc_contributor&amp;profile=facets">Test on API Console</a></p>
 
-<pre><code>processEuropeanaSearch({"apikey":"xxxxx","action":"record.json","success":true,"statsDuration":22,"requestNumber":8,"object":{"type":"TEXT","title":["Bibliotheca Indica"],"about": "[record ID]",....}})
+<p>Requesting multiple facets can be done with three different syntaxes. You can add multiple facet parameters, or one facet parameter with multiple values separated by commas or spaces:</p>
+
+<p>Multiple facet parameters:</p>
+
+<pre><code>&amp;facet=proxy_dc_coverage&amp;facet=proxy_dc_contributor&amp;profile=facets
+http://www.europeana.eu/api/v2/search.json?wskey=xxxx&amp;query=paris&amp;facet=proxy_dc_coverage&amp;facet=proxy_dc_contributor&amp;profile=facets
 </code></pre>
 
-<p>The JSON response is wrapped into your function, and the function use JSON as input parameter, and it immediatelly runs when it returns. In your client you have to define the callback function before you call the API. A client side example:</p>
+<p><a href="/api/console/?function=search&amp;query=paris&amp;facet=proxy_dc_coverage&amp;facet=proxy_dc_contributor&amp;profile=facets">Test on API Console</a></p>
 
-<pre><code>&lt;script&gt;
-function processEuropeanaSearch(json){
-   alert(json.object.title.join(', '));
-}
-&lt;/script&gt;
-&lt;script src="http://www.europeana.eu/api/v2/record/9200143/41CCA52E2986E491BBA631D4899768A5002C455A.json?wskey=xxxx&amp;profile=similar&amp;callback=processEuropeanaSearch"&gt;&lt;/script&gt;
+<p>Multiple facets separated by commas</p>
+
+<pre><code>&amp;facet=proxy_dc_coverage,proxy_dc_contributor&amp;profile=facets
+http://www.europeana.eu/api/v2/search.json?wskey=xxxx&amp;query=paris&amp;facet=proxy_dc_coverage,proxy_dc_contributor&amp;profile=facets
 </code></pre>
 
-<p>Of course in this example we didn’t do any rocket science with the returned Europeana record, it is your turn to do some fascinating thing.</p>
+<p><a href="/api/console/?function=search&amp;query=paris&amp;facet=proxy_dc_coverage,proxy_dc_contributor&amp;profile=facets">Test on API Console</a></p>
+
+<p>Multiple facets separated by spaces</p>
+
+<pre><code>&amp;facet=proxy_dc_coverage%20proxy_dc_contributor&amp;profile=facets
+http://www.europeana.eu/api/v2/search.json?wskey=xxxx&amp;query=paris&amp;facet=proxy_dc_coverage%20proxy_dc_contributor&amp;profile=facets
+</code></pre>
+
+<p><a href="/api/console/?function=search&amp;query=paris&amp;facet=proxy_dc_coverage%20proxy_dc_contributor&amp;profile=facets">Test on API Console</a></p>
+
+<pre><code>&amp;facet=proxy_dc_coverage+proxy_dc_contributor&amp;profile=facets
+http://www.europeana.eu/api/v2/search.json?wskey=xxxx&amp;query=paris&amp;facet=proxy_dc_coverage+proxy_dc_contributor&amp;profile=facets
+</code></pre>
+
+<p><a href="/api/console/?function=search&amp;query=paris&amp;facet=proxy_dc_coverage%20proxy_dc_contributor&amp;profile=facets">Test on API Console</a></p>
+
+<p>Requesting the default facets:</p>
+
+<pre><code>&amp;profile=portal
+http://www.europeana.eu/api/v2/search.json?wskey=xxxx&amp;query=paris&amp;profile=portal
+</code></pre>
+
+<p><a href="/api/console/?function=search&amp;query=paris&amp;profile=portal">Test on API Console</a></p>
+
+<pre><code>&amp;profile=facets
+http://www.europeana.eu/api/v2/search.json?wskey=xxxx&amp;query=paris&amp;profile=facets
+</code></pre>
+
+<p><a href="/api/console/?function=search&amp;query=paris&amp;profile=facets">Test on API Console</a></p>
+
+<pre><code>&amp;facet=DEFAULT&amp;profile=facets
+http://www.europeana.eu/api/v2/search.json?wskey=xxxx&amp;query=paris&amp;facet=DEFAULT&amp;profile=facets
+</code></pre>
+
+<p><a href="/api/console/?function=search&amp;query=paris&amp;facet=DEFAULT&amp;profile=facets">Test on API Console</a></p>
+
+<p>Combining default facets with custom facets:</p>
+
+<pre><code>&amp;facet=DEFAULT+proxy_dc_contributor&amp;profile=facets
+http://www.europeana.eu/api/v2/search.json?wskey=xxxx&amp;query=paris&amp;facet=DEFAULT+proxy_dc_contributor&amp;profile=facets
+</code></pre>
+
+<p><a href="/api/console/?function=search&amp;query=paris&amp;facet=DEFAULT%20proxy_dc_contributor&amp;profile=facets">Test on API Console</a></p>
+
+<h3 id="offset-and-limit-of-facets">Offset and limit of facets</h3>
+
+<p>The API user can set how many facet values she would like to retrieve, and which should be the first one. With this parameters, she can page over all facet values without requesting too much at a time. The limit and offset parameter syntax is a little bit tricky, but if you are familiar with Apache Solr syntax, it won’t be strange, because it is the same.</p>
+
+<pre><code>Syntax: f.[facet name].facet.limit
+Example: &amp;f.PROVIDER.facet.limit=30
+http://www.europeana.eu/api/v2/search.json?wskey=xxxx&amp;query=paris&amp;facet=PROVIDER&amp;profile=facets&amp;f.PROVIDER.facet.limit=30
+</code></pre>
+
+<p><a href="/api/console/?function=search&amp;query=paris&amp;facet=PROVIDER&amp;profile=facets&amp;f.PROVIDER.facet.limit=30">Test on API Console</a></p>
+
+<pre><code>Syntax: f.[facet name].facet.offset
+Example: &amp;f.PROVIDER.facet.offset=30
+http://www.europeana.eu/api/v2/search.json?wskey=xxxx&amp;query=paris&amp;facet=PROVIDER&amp;profile=facets&amp;f.PROVIDER.facet.offset=30
+</code></pre>
+
+<p><a href="/api/console/?function=search&amp;query=paris&amp;facet=PROVIDER&amp;profile=facets&amp;f.PROVIDER.facet.offset=30">Test on API Console</a></p>
+
+<p>Both parameter accepts numeric values.</p>
+
+<p>The default offset value is 0, it means no offset, the first item to return is the first item in the list. 1 offset the list by one, so the first item to return is the second and so on.</p>
+
+<p>In limit 0 means not to return anything.</p>
+
+<p>The special <code>DEFAULT</code> shortcut works here as well, and it limit the facets which are part of the above mentioned set. So <code>&amp;f.DEFAULT.facet.limit=20</code> works for RIGHTS, and PROVIDER, but doesn’t work for non default facets such as proxy_dc_contributor.</p>
 <!--
 --></div>
 </div>
