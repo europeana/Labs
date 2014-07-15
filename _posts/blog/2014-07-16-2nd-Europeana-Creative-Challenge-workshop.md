@@ -47,8 +47,10 @@ If you have any questions, just leave a comment below or check out the [other wa
 
 ### Licensing
 
-All metadata in Europeana is licensed as CC0 so is free to re-use. Individual items each have their own clearly marked license. 
+All metadata in Europeana is licensed as CC0 so is free to re-use. Individual items each have their own clearly marked license.
+
 - the simplest way to find openly re-usable content is to use the parameter [&reusability=open](http://labs.europeana.eu/api/console/?function=search&query=Barcelona&start=1&rows=24&profile=minimal&reusability=open)
+
 - more information about the different licenses and how to query them is contained in the blog post [Can I use it?](/blog/can-i-use-it/)
 
 ### Retrieving media assets
