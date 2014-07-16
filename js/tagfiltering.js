@@ -67,24 +67,65 @@
              }
         });
         
+		var addShowMoreCompleted=0;
+		
         function addShowMore()
         {
-
-        	        //add showmore and ALL tag
+        	//add showmore and ALL tag
         	$("a.show-more-tags").remove();
-        	$("ul.tags li").removeClass("othertags");
-	        if($("ul.tags li").length>5){
+
+			$("ul.tags li").removeClass("othertags");
+
+			var existingTags = new Array();
+			$("ul.tags li").each(function(){
+				if ($(this).data('btntext')!=undefined) {
+					var lcDataText = $(this).data('btntext').toLowerCase();
+					if ($.inArray(lcDataText, existingTags)!=-1) {
+						$(this).remove();
+					} else {
+						existingTags.push(lcDataText);
+					}
+				}
+			});
+	        
+			if($("ul.tags li").length>5){
+
+				var smallTags = $("ul.tags li").slice(6, $("ul.tags li").length).addClass("othertags").detach();
+	        	$("ul.tags").append("<li class=\"show-more-tags-cont\"><a class=\"show-more-tags\" data-state=\"more1\">+show more</a></li>");
 	        	
-	        	 $("ul.tags").parent().append("<a class=\"show-more-tags\">+show more</a>");
-	        	 $("a.show-more-tags").click(function(){
-	        	 	$("ul.tags li").slice(6, $("ul.tags li").length).addClass("othertags");
-	        	 	$("ul.tags li.othertags").each(function(){
-	        	 		if($(this).attr("data-count")>0){
-	        	 			$(this).show();
-	        	 		}	
-	        	 	});
-	        	 	
-	        	 	$(this).remove();
+	        	$("a.show-more-tags").click(function(){
+					if ($(this).data('state')=='more1') {
+						$("ul.tags li.othertags").each(function(){
+							if($(this).attr("data-count")>0){
+								$(this).show();
+							}	
+						});
+						
+						$("#otherTagsDiv").show();
+						
+						$(this).html('-show less');
+						$(this).data('state', 'less');
+					} 
+					else 
+					{
+						if ($(this).data('state')=='more') {
+							$("ul.tags li.othertags").each(function(){
+								if($(this).attr("data-count")>0){
+									$(this).show();
+								}	
+							});
+							
+							$(this).html('-show less');
+							$(this).data('state','less');
+						} else {
+							$("ul.tags li.othertags").each(function(){
+								$(this).hide();
+							});
+							
+							$(this).html('+show more');
+							$(this).data('state','more');
+						}
+					}
 	        	 });
 	        }
         }
@@ -95,7 +136,7 @@
 	            createFilter();
 	            performFilter();
 	            performPagination();   
-	            $(".show-more-tags").click();
+	            /*$(".show-more-tags").click();*/
 	            
         }
 
