@@ -88,11 +88,13 @@
 				}
 			});
 	        
+			$("li.show-more-tags-cont").remove();
+			
 			if($("ul.tags li").length>5){
-
-				var smallTags = $("ul.tags li").slice(6, $("ul.tags li").length).addClass("othertags").detach();
+				var smallTags = $("ul.tags li").slice(6, $("ul.tags li").length).addClass("othertags").hide().detach();
 	        	$("ul.tags").append("<li class=\"show-more-tags-cont\"><a class=\"show-more-tags\" data-state=\"more1\">+show more</a></li>");
-	        	
+	        	$("ul.tags").append(smallTags);
+				
 	        	$("a.show-more-tags").click(function(){
 					if ($(this).data('state')=='more1') {
 						$("ul.tags li.othertags").each(function(){
@@ -127,7 +129,7 @@
 						}
 					}
 	        	 });
-	        }
+			}
         }
                 
         function performFiltering() {
@@ -146,9 +148,11 @@
             var tagsSplited = hashUrl.split("&");
             $.each(tagsSplited, function(key, tag) {
                 var tagValue = tag.split("=")[1];
+				var found = 0;
                 filters.each(function () {
-                    if ($(this).hasClass(tagValue)) {
+                    if (found==0 && $(this).hasClass(tagValue)) {
                         $(this).removeClass(settings.activeTagClass).addClass(settings.activeTagClass);
+						found = 1;
                     }
                 });
             });
@@ -161,22 +165,24 @@
             $(filters).each(function () {
 
                 if ($(this).hasClass(settings.activeTagClass)) {
-
-                    if (hs.length > 0) {
-                        hs = hs + "&";
-                    }
                                        
                     var currentActiveFilterClass = $(this).attr("class").split(' ')[1];
-                    
-					if(settings.filterOperator==="AND"){
-                    	fil = fil + "." + currentActiveFilterClass;
-                   	}else{
-                   		if(fil.length>0){
-                   			fil=fil+", ";
-                   		}
-                   		fil = fil + "." + currentActiveFilterClass;
-                   	}
-                    hs = hs + "tag=" + currentActiveFilterClass;
+
+					if (hs.indexOf("tag=" + currentActiveFilterClass) == -1) {
+						if (hs.length > 0) {
+							hs = hs + "&";
+						}
+
+						if(settings.filterOperator==="AND"){
+							fil = fil + "." + currentActiveFilterClass;
+						}else{
+							if(fil.length>0){
+								fil=fil+", ";
+							}
+							fil = fil + "." + currentActiveFilterClass;
+						}
+						hs = hs + "tag=" + currentActiveFilterClass;
+					}
                    
                 }
             });
@@ -237,7 +243,7 @@
               $("ul.tags li.show-all-tags").click(function(){
               		$("ul.tags li a").removeClass(settings.activeTagClass);
               		addShowMore();
-              		$("ul.tags li").slice(6, $("ul.tags li").length).hide();
+              		//$("ul.tags li").slice(7, $("ul.tags li").length).hide();
               		location.hash = "#"
               	});
               
@@ -252,18 +258,26 @@
 					}
 				});
 				
-				$("ul.tags li").show();  
-				$("ul.tags li").slice(6, $("ul.tags li").length).hide();
+				$("ul.tags li").show();
+				addShowMore();
+				//$("ul.tags li").slice(7, $("ul.tags li").length).hide();
 								
 				if($("ul.tags a.current-tag").length<=0){
-					$("ul li.show-all-tags").click();
+					//$("ul li.show-all-tags").click();
 				}
 				
+				var countVisible = 0;
 				$("ul.tags li").each(function(){
-					if($(this).attr("data-count")<=0){
+					if(!$(this).hasClass("show-more-tags-cont") && $(this).attr("data-count")<=0){
 						$(this).hide();
+					} else {
+						countVisible++;
 					}
 				});
+				
+				if (countVisible-2<=5) {
+					$(".show-more-tags-cont").hide();
+				}
 
         }
 

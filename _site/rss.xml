@@ -40,12 +40,72 @@
       <dc:date>9998-01-01T00:00:00+01:00</dc:date>
     </item>
     <item>
-      <title>Apps&amp;Cultura workshop: using Europeana content and the Europeana API</title>
+      <title>Wandora's Europeana Extractor</title>
+      <link>http://labs.europeana.eu/apps/wandora</link>
+      <description>&lt;p&gt;Wandora is a general purpose information extraction, management and publishing application based on Topic Maps and Java.&lt;/p&gt;
+
+</description>
+      <pubDate>Wed, 15 Jul 2015 00:00:00 +0200</pubDate>
+      <guid>http://labs.europeana.eu/apps/wandora</guid>
+      <dc:date>2015-07-15T00:00:00+02:00</dc:date>
+    </item>
+    <item>
+      <title>Node.js module for the Europeana API</title>
+      <link>http://labs.europeana.eu/apps/nodejs-europeana</link>
+      <description>&lt;p&gt;Unofficial Node.js module for the Europeana API. &lt;/p&gt;
+
+</description>
+      <pubDate>Wed, 16 Jul 2014 00:00:00 +0200</pubDate>
+      <guid>http://labs.europeana.eu/apps/nodejs-europeana</guid>
+      <dc:date>2014-07-16T00:00:00+02:00</dc:date>
+    </item>
+    <item>
+      <title>Apps&amp;amp;Cultura workshop: using Europeana content and the Europeana API</title>
       <link>http://labs.europeana.eu/events/2nd-Europeana-Creative-Challenge-workshop-Barcelona</link>
-      <description>[&quot;Apps&amp;amp;Cultura has teamed up with Europeana Creative for this year’s Hack at Home competition and the second round of the Europeana Creative Challenges. In this workshop the team from Europeana will be organising a hands on workshop demonstrating how to use the Europeana API and include it into your applications.&quot;]</description>
+      <description>[&quot;Apps&amp;amp;Cultura has teamed up with Europeana Creative for this year’s Hack at Home competition and the second round of the Europeana Creative Challenges. In this workshop the team from Europeana will be demonstrating how to use the Europeana API and include it into your applications.&quot;]</description>
       <pubDate>Wed, 16 Jul 2014 00:00:00 +0200</pubDate>
       <guid>http://labs.europeana.eu/events/2nd-Europeana-Creative-Challenge-workshop-Barcelona</guid>
       <dc:date>2014-07-16T00:00:00+02:00</dc:date>
+    </item>
+    <item>
+      <title>2nd Europeana Creative Challenge Workshop, Barcelona, 16 July 2014</title>
+      <link>http://labs.europeana.eu/blog/Europeana-Creative-Challenge-workshop-Barcelona</link>
+      <description>&lt;p&gt;This blog post has been created to support the &lt;a href=&quot;/events/2nd-Europeana-Creative-Challenge-workshop-Barcelona/&quot;&gt;Europeana Creative Challenge workshop, Barcelona, 16 July 2014&lt;/a&gt;, held in association with Apps&amp;amp;Cultura. For those not able to attend, the event will be livestreamed at &lt;a href=&quot;http://xmpp.iglor.es/appscultura_europeanalab/&quot;&gt;http://xmpp.iglor.es/appscultura_europeanalab/&lt;/a&gt;&lt;/p&gt;
+
+</description>
+      <pubDate>Wed, 16 Jul 2014 00:00:00 +0200</pubDate>
+      <guid>http://labs.europeana.eu/blog/Europeana-Creative-Challenge-workshop-Barcelona</guid>
+      <dc:date>2014-07-16T00:00:00+02:00</dc:date>
+    </item>
+    <item>
+      <title>Rest Easy (Python)</title>
+      <link>http://labs.europeana.eu/apps/rest-easy</link>
+      <description>&lt;p&gt;This Python module dynamically creates wrappers for RESTful APIs from YAML markup. It has a ready-made wrapper for the Europeana API as well as for a number of other GLAM APIs.&lt;/p&gt;
+
+</description>
+      <pubDate>Tue, 15 Jul 2014 00:00:00 +0200</pubDate>
+      <guid>http://labs.europeana.eu/apps/rest-easy</guid>
+      <dc:date>2014-07-15T00:00:00+02:00</dc:date>
+    </item>
+    <item>
+      <title>europeana-search-0.2.1 (Python)</title>
+      <link>http://labs.europeana.eu/apps/europeana-search-0.2.1-python</link>
+      <description>&lt;p&gt;Basic Python wrapper for the Europeana Search API&lt;/p&gt;
+
+</description>
+      <pubDate>Tue, 15 Jul 2014 00:00:00 +0200</pubDate>
+      <guid>http://labs.europeana.eu/apps/europeana-search-0.2.1-python</guid>
+      <dc:date>2014-07-15T00:00:00+02:00</dc:date>
+    </item>
+    <item>
+      <title>Europeana PHP library</title>
+      <link>http://labs.europeana.eu/apps/europeana-php-library</link>
+      <description>&lt;p&gt;This is a PHP library for the Europeana API. The library is used to power an &lt;a href=&quot;http://europeana-api.gmtplusone.com/&quot;&gt;interactive documentation site&lt;/a&gt; for the Europeana API.&lt;/p&gt;
+
+</description>
+      <pubDate>Tue, 15 Jul 2014 00:00:00 +0200</pubDate>
+      <guid>http://labs.europeana.eu/apps/europeana-php-library</guid>
+      <dc:date>2014-07-15T00:00:00+02:00</dc:date>
     </item>
     <item>
       <title>Open Knowledge Festival 2014 - Open Minds to Open Action</title>
@@ -1677,7 +1737,7 @@ The aim of PATHS project is to enable exploration and discovery within cultural 
       <dc:date>2014-01-22T00:00:00+01:00</dc:date>
     </item>
     <item>
-      <title>europeana4j</title>
+      <title>europeana4j (Java client library)</title>
       <link>http://labs.europeana.eu/apps/europeana4j</link>
       <description>&lt;p&gt;europeana4j is a Java library which allows applications to search and retrieve Europeana data, including millions of books, paintings, films, museum objects and archival records that have been digitised throughout Europe.&lt;/p&gt;
 
