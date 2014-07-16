@@ -70,7 +70,18 @@ A lot of work is being undertaken to address this and provide a more direct and 
 
 ## Where next?
 
-Our data, API and associated documentation are constantly updated and improved. Much of this is in response to feedback and requests received from our user community. However big or small, we would love to hear your ideas and answer any questions you may have. Leave a comment below, or see some of the other ways to [contact us](/support/contact). 
+Our data, API and associated documentation are constantly updated and improved. Much of this is in response to feedback and requests received from our user community. However big or small, we would love to hear of your plans and answer any questions you may have. 
+
+- Send us your ideas
+- Consult us for tips
+- Ask us to test
+- Tell us your needs
+
+Leave a comment below, or see some of the other ways to [contact us](/support/contact). 
+
+But whatever you do
+
+- [enter the Europeana Creative Challenge](http://ecreativechallenges2014.istart.org/)
 
 ---
 
