@@ -149,90 +149,126 @@
 
 		
 	<div id="documentation" class="prose grid__item palm--one-whole push--palm-none one-half"><!--
-	--><p>This document describes the changes of Europeana API. The changes are grouped by new API versions. We deploy new versions of the portal and the API quite regularly, but not all new versions has change in the interface. The API documentation always describes the current version of the API. We don’t have (yet?) however API call to get the actual version, so the API users should see the date of changes.</p>
+	--><ul id="markdown-toc">
+  <li><a href="#version-2-0-12-2014-06-18">Version 2-0-12 (2014-06-18)</a>    <ul>
+      <li><a href="#v2translatequeryjson">/v2/translateQuery.json</a></li>
+      <li><a href="#renaming-field-europeanacollectionname-to-edmdatasetname">Renaming field “europeanaCollectionName” to “edmDatasetName”</a></li>
+    </ul>
+  </li>
+  <li><a href="#version-2010-2014-02-13">Version 2.0.10 (2014-02-13)</a>    <ul>
+      <li><a href="#timestamps-of-creation-and-modification">Timestamps of creation and modification</a></li>
+      <li><a href="#retrieving-individual-facets">Retrieving individual facets</a></li>
+    </ul>
+  </li>
+  <li><a href="#version-208-2013-10-23">Version 2.0.8 (2013-10-23)</a>    <ul>
+      <li><a href="#new-parameter-reusability">New parameter: reusability</a></li>
+    </ul>
+  </li>
+  <li><a href="#version-206-2013-08-09">Version 2.0.6 (2013-08-09)</a>    <ul>
+      <li><a href="#new-response-profile-params">New response profile: params</a></li>
+    </ul>
+  </li>
+</ul>
 
-<h2 id="version-206-2013-08-09">Version 2.0.6 (2013-08-09)</h2>
+<p>This document describes the changes of Europeana API. The changes are grouped by new API versions. We deploy new versions of the portal and API quite regularly, but not all new versions result in changes in the interface. The API documentation always describes the current version of the API. <!-- We don't have (yet?) however API call to get the actual version, so the API users should see the date of changes.--></p>
 
-<p>New allowable value for the <em>profile</em> parameter: <code>params</code>. When client adds <code>params</code> to the <em>profile</em> parameter, the header of the response will contain a <code>params</code> key, which lists the requested and default parameters of the API call. The client can use profile <em>profile</em> parameter in search and object calls. The parameter accepts both single and multiple values separated by comma or space (such as <code>&amp;profile=standard</code> or <code>&amp;profile=standard,params</code> or <code>&amp;amp;profile=standard%20params</code>).</p>
+<h2 id="version-2-0-12-2014-06-18">Version 2-0-12 (2014-06-18)</h2>
 
-<h3 id="example">Example</h3>
+<h3 id="v2translatequeryjson">/v2/translateQuery.json</h3>
 
-<p><code>
-http://europeana.eu/api/v2/search.json?wskey=xxxxxxxx&amp;amp;query=mona+lisa&amp;amp;profile=standard%20params
-</code></p>
+<p>Translate a term to different languages. Right now this functionality is a wrapper around an Wikipeadia API call, but we work on other implementation.</p>
 
-<p>returns</p>
+<p>WARNING: Right now it is in alpha phase of the development, do not rely in production service!</p>
+
+<p>Request parameters:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Parameter</th>
+      <th style="text-align: left">Datatype</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">wskey</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left">Your API key</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">languageCodes</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left">The ISO language codes separated by commas or spaces</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">term</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left">The term to translate</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Returns</p>
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align: left">Name</th>
+      <th style="text-align: left">Datatype</th>
+      <th style="text-align: left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align: left">translations</td>
+      <td style="text-align: left">Array</td>
+      <td style="text-align: left">A list of translations. Each translation contains two fields:<br />text: the text of the translation<br />languageCode: the ISO language code of the translation</td>
+    </tr>
+    <tr>
+      <td style="text-align: left">translatedQuery</td>
+      <td style="text-align: left">String</td>
+      <td style="text-align: left">A query string where each translations are concatenated by the boolean OR operator.</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Example</p>
+
+<p>Get the translations of Notre Dame</p>
+
+<pre><code>http://europeana.eu/api/v2/translateQuery.json?languageCodes=nl,en,hu&amp;wskey=xxxxxxxx&amp;term=notre%20dame
+</code></pre>
+
+<p>It returns</p>
 
 <p><code>JavaScript
 {
-  "apikey": "xxxxxxxxx",
-  "action": "search.json",
+  "apikey": "xxxxxxxx",
+  "action": "translateQuery.json",
   "success": true,
-  "requestNumber": 6,
-  "params": {
-    "query": "mona lisa",
-    "profile": "standard params",
-    "start": 1,
-    "rows": 12
-  },
-  "itemsCount": 12,
-  "totalResults": 195,
-  "items": [...]
-}
-</code></p>
-
-<h2 id="version-208-2013-10-23">Version 2.0.8 (2013-10-23)</h2>
-
-<p>New parameter: <code>reusability</code>. It might have two possible values: Free and Limited. It is an additional filter, which selects those items, which can be reusable free, or in a limited way. They are shorthands for a couple of right values:</p>
-
-<p>Free:</p>
-
-<ul>
-  <li>NOC: http://creativecommons.org/publicdomain/mark/</li>
-  <li>CC-ZERO: http://creativecommons.org/publicdomain/zero/1.0/*</li>
-  <li>CC-BY: http://creativecommons.org/licenses/by/</li>
-  <li>CC-BY-SA: http://creativecommons.org/licenses/by-sa/</li>
-</ul>
-
-<p>Limited</p>
-
-<ul>
-  <li>CC-BY-NC: http://creativecommons.org/licenses/by-nc/</li>
-  <li>CC-BY-NC-SA: http://creativecommons.org/licenses/by-nc-sa/</li>
-  <li>CC-BY-NC-ND: http://creativecommons.org/licenses/by-nc-nd/</li>
-  <li>CC-BY-ND: http://creativecommons.org/licenses/by-nd/</li>
-  <li>OOC-NC: http://www.europeana.eu/rights/out-of-copyright-non-commercial/</li>
-</ul>
-
-<p>It has double effects 1) it filter the search result with the appropriate right values, 2) if facets are requested, it provides a new facet, called REUSABILITY.</p>
-
-<p>Example:</p>
-
-<p><code>
-http://localhost:8080/api/v2/search.json?wskey=api2demo&amp;query=*:*&amp;reusability=free&amp;qf=TYPE:VIDEO&amp;profile=portal
-</code></p>
-
-<p>returns</p>
-
-<p><code>JavaScript
-{
-  "apikey": "xxxxxxxxxx",  
-  "action": "search.json",  
-  ...
-  "items": [ … ],  
-  ...
-  "facets": [
-    ...
-    {  
-      "name": "REUSABILITY",
-      "fields": [
-        {"label": "Limited", "count": 9795},
-        {"label": "Free", "count": 3659}
-      ]
+  "requestNumber": 8957,
+  "translations": [
+    {
+      "text": "Notre-Dame",
+      "languageCode": "nl"
+    },
+    {
+      "text": "Notre Dame",
+      "languageCode": "en"
+    },
+    {
+      "text": "Notre Dame",
+      "languageCode": "de"
     }
-  ]
+  ],
+  "translatedQuery": "Notre-Dame OR \"Notre Dame\""
 }
 </code></p>
+
+<h3 id="renaming-field-europeanacollectionname-to-edmdatasetname">Renaming field “europeanaCollectionName” to “edmDatasetName”</h3>
+
+<p>Following the change in Europeana Data Model schema, we add edmDatasetName with the same content as the europeanaCollectionName. For a grace period we keep both fields, but next year we will return only edmDatasetName, so please update your API client. The field is available in search, object and provider calls.</p>
 
 <h2 id="version-2010-2014-02-13">Version 2.0.10 (2014-02-13)</h2>
 
@@ -399,103 +435,92 @@ f.[facet name].facet.offset such as &amp;f.PROVIDER.facet.offset=30
 
 <p>The special DEFAULT shortcut works here as well, and it limit the facets which are part of the above mentioned set. So &amp;f.DEFAULT.facet.limit=20 works for RIGHTS, and PROVIDER, but doesn’t work for non default facets such as proxy_dc_contributor.</p>
 
-<h2 id="version-2-0-12-2014-06-18">Version 2-0-12 (2014-06-18)</h2>
+<h2 id="version-208-2013-10-23">Version 2.0.8 (2013-10-23)</h2>
 
-<h3 id="v2translatequeryjson">/v2/translateQuery.json</h3>
+<h3 id="new-parameter-reusability">New parameter: reusability</h3>
 
-<p>Translate a term to different languages. Right now this functionality is a wrapper around an Wikipeadia API call, but we work on other implementation.</p>
+<p>The new <code>reusability</code> parameter can have two possible values: Open and Limited. It is an additional filter, which selects those items, which can be reusable free, or in a limited way. They are shorthands for a couple of right values:</p>
 
-<p>WARNING: Right now it is in alpha phase of the development, do not rely in production service!</p>
+<p>Free:</p>
 
-<p>Request parameters:</p>
+<ul>
+  <li>NOC: http://creativecommons.org/publicdomain/mark/</li>
+  <li>CC-ZERO: http://creativecommons.org/publicdomain/zero/1.0/*</li>
+  <li>CC-BY: http://creativecommons.org/licenses/by/</li>
+  <li>CC-BY-SA: http://creativecommons.org/licenses/by-sa/</li>
+</ul>
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">Parameter</th>
-      <th style="text-align: left">Datatype</th>
-      <th style="text-align: left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">wskey</td>
-      <td style="text-align: left">String</td>
-      <td style="text-align: left">Your API key</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">languageCodes</td>
-      <td style="text-align: left">String</td>
-      <td style="text-align: left">The ISO language codes separated by commas or spaces</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">term</td>
-      <td style="text-align: left">String</td>
-      <td style="text-align: left">The term to translate</td>
-    </tr>
-  </tbody>
-</table>
+<p>Limited:</p>
 
-<p>Returns</p>
+<ul>
+  <li>CC-BY-NC: http://creativecommons.org/licenses/by-nc/</li>
+  <li>CC-BY-NC-SA: http://creativecommons.org/licenses/by-nc-sa/</li>
+  <li>CC-BY-NC-ND: http://creativecommons.org/licenses/by-nc-nd/</li>
+  <li>CC-BY-ND: http://creativecommons.org/licenses/by-nd/</li>
+  <li>OOC-NC: http://www.europeana.eu/rights/out-of-copyright-non-commercial/</li>
+</ul>
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align: left">Name</th>
-      <th style="text-align: left">Datatype</th>
-      <th style="text-align: left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align: left">translations</td>
-      <td style="text-align: left">Array</td>
-      <td style="text-align: left">A list of translations. Each translation contains two fields:<br />text: the text of the translation<br />languageCode: the ISO language code of the translation</td>
-    </tr>
-    <tr>
-      <td style="text-align: left">translatedQuery</td>
-      <td style="text-align: left">String</td>
-      <td style="text-align: left">A query string where each translations are concatenated by the boolean OR operator.</td>
-    </tr>
-  </tbody>
-</table>
+<p>It has double effects 1) it filter the search result with the appropriate right values, 2) if facets are requested, it provides a new facet, called REUSABILITY.</p>
 
-<p>Example</p>
+<p>Example:</p>
 
-<p>Get the translations of Notre Dame</p>
+<p><code>
+http://localhost:8080/api/v2/search.json?wskey=api2demo&amp;query=*:*&amp;reusability=free&amp;qf=TYPE:VIDEO&amp;profile=portal
+</code></p>
 
-<pre><code>http://europeana.eu/api/v2/translateQuery.json?languageCodes=nl,en,hu&amp;wskey=xxxxxxxx&amp;term=notre%20dame
-</code></pre>
-
-<p>It returns</p>
+<p>returns</p>
 
 <p><code>JavaScript
 {
-  "apikey": "xxxxxxxx",
-  "action": "translateQuery.json",
-  "success": true,
-  "requestNumber": 8957,
-  "translations": [
-    {
-      "text": "Notre-Dame",
-      "languageCode": "nl"
-    },
-    {
-      "text": "Notre Dame",
-      "languageCode": "en"
-    },
-    {
-      "text": "Notre Dame",
-      "languageCode": "de"
+  "apikey": "xxxxxxxxxx",  
+  "action": "search.json",  
+  ...
+  "items": [ … ],  
+  ...
+  "facets": [
+    ...
+    {  
+      "name": "REUSABILITY",
+      "fields": [
+        {"label": "Limited", "count": 9795},
+        {"label": "Free", "count": 3659}
+      ]
     }
-  ],
-  "translatedQuery": "Notre-Dame OR \"Notre Dame\""
+  ]
 }
 </code></p>
 
-<h3 id="renaming-field-europeanacollectionname-to-edmdatasetname">Renaming field “europeanaCollectionName” to “edmDatasetName”</h3>
+<h2 id="version-206-2013-08-09">Version 2.0.6 (2013-08-09)</h2>
 
-<p>Following the change in Europeana Data Model schema, we add edmDatasetName with the same content as the europeanaCollectionName. For a grace period we keep both fields, but next year we will return only edmDatasetName, so please update your API client. The field is available in search, object and provider calls.</p>
+<h3 id="new-response-profile-params">New response profile: params</h3>
+
+<p>New allowable value for the <em>profile</em> parameter: <code>params</code>. When client adds <code>params</code> to the <em>profile</em> parameter, the header of the response will contain a <code>params</code> key, which lists the requested and default parameters of the API call. The client can use profile <em>profile</em> parameter in search and object calls. The parameter accepts both single and multiple values separated by comma or space (such as <code>&amp;profile=standard</code> or <code>&amp;profile=standard,params</code> or <code>&amp;profile=standard%20params</code>).</p>
+
+<p>Example:</p>
+
+<p><code>
+http://europeana.eu/api/v2/search.json?wskey=xxxxxxxx&amp;amp;query=mona+lisa&amp;amp;profile=standard%20params
+</code></p>
+
+<p>returns</p>
+
+<p><code>JavaScript
+{
+  "apikey": "xxxxxxxxx",
+  "action": "search.json",
+  "success": true,
+  "requestNumber": 6,
+  "params": {
+    "query": "mona lisa",
+    "profile": "standard params",
+    "start": 1,
+    "rows": 12
+  },
+  "itemsCount": 12,
+  "totalResults": 195,
+  "items": [...]
+}
+</code></p>
 
 <!--
 --></div>

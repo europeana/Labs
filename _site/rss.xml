@@ -8,7 +8,18 @@
     <title>Europeana Labs</title>
     <link>http://labs.europeana.eu</link>
     <description>RSS feed for Europeana Labs</description>
-    <pubDate>Fri, 01 Jan 9999 00:00:00 +0100</pubDate>
+    <pubDate>Fri, 23 Jul 9999 00:00:00 +0200</pubDate>
+    <item>
+      <title>Serendip-o-matic</title>
+      <link>http://labs.europeana.eu/apps/serendip-o-matic</link>
+      <description>&lt;p&gt;As their page states:
+&amp;#8220;Serendip-o-matic connects your sources to digital materials located in libraries, museums, and archives around the world. By first examining your research interests, and then identifying related content in locations such as the Digital Public Library of America (DPLA), Europeana, and Flickr Commons, our serendipity engine helps you discover photographs, documents, maps and other primary sources.&lt;/p&gt;
+
+</description>
+      <pubDate>Fri, 23 Jul 9999 00:00:00 +0200</pubDate>
+      <guid>http://labs.europeana.eu/apps/serendip-o-matic</guid>
+      <dc:date>9999-07-23T00:00:00+02:00</dc:date>
+    </item>
     <item>
       <title>Kringla</title>
       <link>http://labs.europeana.eu/apps/kringla</link>
@@ -48,6 +59,16 @@
       <pubDate>Wed, 15 Jul 2015 00:00:00 +0200</pubDate>
       <guid>http://labs.europeana.eu/apps/wandora</guid>
       <dc:date>2015-07-15T00:00:00+02:00</dc:date>
+    </item>
+    <item>
+      <title>Europeana Labs update; take a Creative Challenge</title>
+      <link>http://labs.europeana.eu/blog/2nd-Europeana-Labs-Newsletter</link>
+      <description>&lt;p&gt;&lt;strong&gt;Welcome to the 2nd Europeana Labs newsletter. Every few months we bring you the latest news from Europeana, focussed on showcasing the exciting opportunities available to our developer community and inspiring you to be creative with Europe’s cultural heritage!&lt;/strong&gt;&lt;/p&gt;
+
+</description>
+      <pubDate>Wed, 23 Jul 2014 00:00:00 +0200</pubDate>
+      <guid>http://labs.europeana.eu/blog/2nd-Europeana-Labs-Newsletter</guid>
+      <dc:date>2014-07-23T00:00:00+02:00</dc:date>
     </item>
     <item>
       <title>Node.js module for the Europeana API</title>
@@ -1999,15 +2020,6 @@ The aim of PATHS project is to enable exploration and discovery within cultural 
       <dc:date>2014-01-01T00:00:00+01:00</dc:date>
     </item>
     <item>
-      <title>Bryozoa from the National Museum Prague</title>
-      <link>http://labs.europeana.eu/data/Bryozoa-from-the-National-Museum-Prague</link>
-      <description>
-</description>
-      <pubDate>Wed, 01 Jan 2014 00:00:00 +0100</pubDate>
-      <guid>http://labs.europeana.eu/data/Bryozoa-from-the-National-Museum-Prague</guid>
-      <dc:date>2014-01-01T00:00:00+01:00</dc:date>
-    </item>
-    <item>
       <title>Beetles from the Royal Belgian Institute of Natural Sciences</title>
       <link>http://labs.europeana.eu/data/Beetles-from-the-Royal-Belgian-Institute-of-Natural-Sciences</link>
       <description>
@@ -2025,6 +2037,6 @@ The aim of PATHS project is to enable exploration and discovery within cultural 
       <guid>http://labs.europeana.eu/data/Battles-on-artwork-and-drawings-from-the-Rijksmuseum-in-the-Netherlands</guid>
       <dc:date>2014-01-01T00:00:00+01:00</dc:date>
     </item>
-    <dc:date>9999-01-01T00:00:00+01:00</dc:date>
+    <dc:date>9999-07-23T00:00:00+02:00</dc:date>
   </channel>
 </rss>
