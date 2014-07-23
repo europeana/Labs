@@ -24,4 +24,4 @@ As their page states:
 
 Whether you begin with text from an article, a Wikipedia page, or a full Zotero collection, Serendip-o-matic's special algorithm extracts key terms and returns a surprising reflection of your interests. Because the tool is designed mostly for inspiration, search results aren't meant to be exhaustive, but rather suggestive, pointing you to materials you might not have discovered. At the very least, the magical input-output process helps you step back and look at your work from a new perspective. Give it a whirl. Your sources may surprise you."
 
-Serendip-o-matic is the product of [One Week | One Tool](http://www.oneweekonetool.org/) and was built by a team of 12 dynamic scholars, librarians, and students.
+Serendip-o-matic is the product of [One Week &#124; One Tool](http://www.oneweekonetool.org/) and was built by a team of 12 dynamic scholars, librarians, and students.
