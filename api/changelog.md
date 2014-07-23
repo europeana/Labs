@@ -3,86 +3,69 @@ layout: api-page
 title: API Change Log
 ---
 
-This document describes the changes of Europeana API. The changes are grouped by new API versions. We deploy new versions of the portal and the API quite regularly, but not all new versions has change in the interface. The API documentation always describes the current version of the API. We don't have (yet?) however API call to get the actual version, so the API users should see the date of changes.
+* TOC
+{:toc}
 
-## Version 2.0.6 (2013-08-09)
+This document describes the changes of Europeana API. The changes are grouped by new API versions. We deploy new versions of the portal and API quite regularly, but not all new versions result in changes in the interface. The API documentation always describes the current version of the API. <!-- We don't have (yet?) however API call to get the actual version, so the API users should see the date of changes.-->
 
-New allowable value for the _profile_ parameter: `params`. When client adds `params` to the _profile_ parameter, the header of the response will contain a `params` key, which lists the requested and default parameters of the API call. The client can use profile _profile_ parameter in search and object calls. The parameter accepts both single and multiple values separated by comma or space (such as `&profile=standard` or `&profile=standard,params` or `&amp;profile=standard%20params`).
+## Version 2-0-12 (2014-06-18)
 
-### Example
+### /v2/translateQuery.json
 
-```
-http://europeana.eu/api/v2/search.json?wskey=xxxxxxxx&amp;query=mona+lisa&amp;profile=standard%20params
-```
+Translate a term to different languages. Right now this functionality is a wrapper around an Wikipeadia API call, but we work on other implementation.
 
-returns
+WARNING: Right now it is in alpha phase of the development, do not rely in production service!
+
+Request parameters:
+
+| Parameter | Datatype | Description |
+|:-------------|:-------------|:-----|
+| wskey | String |Your API key |
+| languageCodes | String | The ISO language codes separated by commas or spaces |
+| term | String | The term to translate |
+
+Returns
+
+| Name | Datatype | Description |
+|:--------|:-------------|:-----|
+| translations | Array | A list of translations. Each translation contains two fields:<br>text: the text of the translation<br>languageCode: the ISO language code of the translation |
+| translatedQuery | String | A query string where each translations are concatenated by the boolean OR operator. |
+
+Example
+
+Get the translations of Notre Dame
+
+    http://europeana.eu/api/v2/translateQuery.json?languageCodes=nl,en,hu&wskey=xxxxxxxx&term=notre%20dame
+
+It returns
 
 ```JavaScript
 {
-  "apikey": "xxxxxxxxx",
-  "action": "search.json",
+  "apikey": "xxxxxxxx",
+  "action": "translateQuery.json",
   "success": true,
-  "requestNumber": 6,
-  "params": {
-    "query": "mona lisa",
-    "profile": "standard params",
-    "start": 1,
-    "rows": 12
-  },
-  "itemsCount": 12,
-  "totalResults": 195,
-  "items": [...]
-}
-```
-
-## Version 2.0.8 (2013-10-23)
-
-New parameter: `reusability`. It might have two possible values: Free and Limited. It is an additional filter, which selects those items, which can be reusable free, or in a limited way. They are shorthands for a couple of right values:
-
-Free:
-
-* NOC: http://creativecommons.org/publicdomain/mark/
-* CC-ZERO: http://creativecommons.org/publicdomain/zero/1.0/*
-* CC-BY: http://creativecommons.org/licenses/by/
-* CC-BY-SA: http://creativecommons.org/licenses/by-sa/
-
-Limited
-
-* CC-BY-NC: http://creativecommons.org/licenses/by-nc/
-* CC-BY-NC-SA: http://creativecommons.org/licenses/by-nc-sa/
-* CC-BY-NC-ND: http://creativecommons.org/licenses/by-nc-nd/
-* CC-BY-ND: http://creativecommons.org/licenses/by-nd/
-* OOC-NC: http://www.europeana.eu/rights/out-of-copyright-non-commercial/
-
-It has double effects 1) it filter the search result with the appropriate right values, 2) if facets are requested, it provides a new facet, called REUSABILITY.
-
-Example:
-
-```
-http://localhost:8080/api/v2/search.json?wskey=api2demo&query=*:*&reusability=free&qf=TYPE:VIDEO&profile=portal
-```
-
-returns
-
-```JavaScript
-{
-  "apikey": "xxxxxxxxxx",  
-  "action": "search.json",  
-  ...
-  "items": [ … ],  
-  ...
-  "facets": [
-    ...
-    {  
-      "name": "REUSABILITY",
-      "fields": [
-        {"label": "Limited", "count": 9795},
-        {"label": "Free", "count": 3659}
-      ]
+  "requestNumber": 8957,
+  "translations": [
+    {
+      "text": "Notre-Dame",
+      "languageCode": "nl"
+    },
+    {
+      "text": "Notre Dame",
+      "languageCode": "en"
+    },
+    {
+      "text": "Notre Dame",
+      "languageCode": "de"
     }
-  ]
+  ],
+  "translatedQuery": "Notre-Dame OR \"Notre Dame\""
 }
 ```
+
+### Renaming field "europeanaCollectionName" to "edmDatasetName"
+
+Following the change in Europeana Data Model schema, we add edmDatasetName with the same content as the europeanaCollectionName. For a grace period we keep both fields, but next year we will return only edmDatasetName, so please update your API client. The field is available in search, object and provider calls.
 
 ## Version 2.0.10 (2014-02-13)
 
@@ -240,62 +223,88 @@ In limit 0 means not to return anything.
 
 The special DEFAULT shortcut works here as well, and it limit the facets which are part of the above mentioned set. So &f.DEFAULT.facet.limit=20 works for RIGHTS, and PROVIDER, but doesn't work for non default facets such as proxy_dc_contributor.
 
-## Version 2-0-12 (2014-06-18)
 
-### /v2/translateQuery.json
+## Version 2.0.8 (2013-10-23)
 
-Translate a term to different languages. Right now this functionality is a wrapper around an Wikipeadia API call, but we work on other implementation.
+### New parameter: reusability
 
-WARNING: Right now it is in alpha phase of the development, do not rely in production service!
+The new `reusability` parameter can have two possible values: Open and Limited. It is an additional filter, which selects those items, which can be reusable free, or in a limited way. They are shorthands for a couple of right values:
 
-Request parameters:
+Free:
 
-| Parameter | Datatype | Description |
-|:-------------|:-------------|:-----|
-| wskey | String |Your API key |
-| languageCodes | String | The ISO language codes separated by commas or spaces |
-| term | String | The term to translate |
+* NOC: http://creativecommons.org/publicdomain/mark/
+* CC-ZERO: http://creativecommons.org/publicdomain/zero/1.0/*
+* CC-BY: http://creativecommons.org/licenses/by/
+* CC-BY-SA: http://creativecommons.org/licenses/by-sa/
 
-Returns
+Limited:
 
-| Name | Datatype | Description |
-|:--------|:-------------|:-----|
-| translations | Array | A list of translations. Each translation contains two fields:<br>text: the text of the translation<br>languageCode: the ISO language code of the translation |
-| translatedQuery | String | A query string where each translations are concatenated by the boolean OR operator. |
+* CC-BY-NC: http://creativecommons.org/licenses/by-nc/
+* CC-BY-NC-SA: http://creativecommons.org/licenses/by-nc-sa/
+* CC-BY-NC-ND: http://creativecommons.org/licenses/by-nc-nd/
+* CC-BY-ND: http://creativecommons.org/licenses/by-nd/
+* OOC-NC: http://www.europeana.eu/rights/out-of-copyright-non-commercial/
 
-Example
+It has double effects 1) it filter the search result with the appropriate right values, 2) if facets are requested, it provides a new facet, called REUSABILITY.
 
-Get the translations of Notre Dame
+Example:
 
-    http://europeana.eu/api/v2/translateQuery.json?languageCodes=nl,en,hu&wskey=xxxxxxxx&term=notre%20dame
+```
+http://localhost:8080/api/v2/search.json?wskey=api2demo&query=*:*&reusability=free&qf=TYPE:VIDEO&profile=portal
+```
 
-It returns
+returns
 
 ```JavaScript
 {
-  "apikey": "xxxxxxxx",
-  "action": "translateQuery.json",
-  "success": true,
-  "requestNumber": 8957,
-  "translations": [
-    {
-      "text": "Notre-Dame",
-      "languageCode": "nl"
-    },
-    {
-      "text": "Notre Dame",
-      "languageCode": "en"
-    },
-    {
-      "text": "Notre Dame",
-      "languageCode": "de"
+  "apikey": "xxxxxxxxxx",  
+  "action": "search.json",  
+  ...
+  "items": [ … ],  
+  ...
+  "facets": [
+    ...
+    {  
+      "name": "REUSABILITY",
+      "fields": [
+        {"label": "Limited", "count": 9795},
+        {"label": "Free", "count": 3659}
+      ]
     }
-  ],
-  "translatedQuery": "Notre-Dame OR \"Notre Dame\""
+  ]
 }
 ```
 
-### Renaming field "europeanaCollectionName" to "edmDatasetName"
 
-Following the change in Europeana Data Model schema, we add edmDatasetName with the same content as the europeanaCollectionName. For a grace period we keep both fields, but next year we will return only edmDatasetName, so please update your API client. The field is available in search, object and provider calls.
+## Version 2.0.6 (2013-08-09)
+
+### New response profile: params
+
+New allowable value for the _profile_ parameter: `params`. When client adds `params` to the _profile_ parameter, the header of the response will contain a `params` key, which lists the requested and default parameters of the API call. The client can use profile _profile_ parameter in search and object calls. The parameter accepts both single and multiple values separated by comma or space (such as `&profile=standard` or `&profile=standard,params` or `&profile=standard%20params`).
+
+Example:
+
+```
+http://europeana.eu/api/v2/search.json?wskey=xxxxxxxx&amp;query=mona+lisa&amp;profile=standard%20params
+```
+
+returns
+
+```JavaScript
+{
+  "apikey": "xxxxxxxxx",
+  "action": "search.json",
+  "success": true,
+  "requestNumber": 6,
+  "params": {
+    "query": "mona lisa",
+    "profile": "standard params",
+    "start": 1,
+    "rows": 12
+  },
+  "itemsCount": 12,
+  "totalResults": 195,
+  "items": [...]
+}
+```
 

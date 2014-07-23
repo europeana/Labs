@@ -5,15 +5,16 @@ layout: homepage
 
 <div id="banner" class="block block-hero"> 
 	<div class="b-thumb">
-		<img src="{{site.baseurl}}/img/hero_bg.jpg" width="100%" />
+		<img src="{{site.baseurl}}/img/hero_bg2.jpg" width="100%" />
 	</div>
 	<div class="b-text"> 
 		<h1>Europeana Labs</h1>
 		<div class="byline">
 			<p>A playground for remixing and using your cultural and scientific heritage.<br />A place for inspiration, innovation and sharing.</p>
-			<p>This is your code, this is your heritage, these are your labs.</p>
+			<p>Looking for a challenge? Want to get creative with Europe’s cultural heritage?</p>
 			<div class="startBtn">
-				<a href="http://labs.europeana.eu/blog/welcome-to-the-new-europeana-labs/">GET STARTED</a>
+				<a href="/blog/2nd-Europeana-Labs-Newsletter/" style="font-size: 1.1em;
+letter-spacing: 0.7pt;">Take the challenge</a>
 			</div>
 		</div>
 	</div> 
@@ -29,7 +30,7 @@ layout: homepage
 				<td class="key-image"><img src="{{site.baseurl}}/img/key.png"></td>
 				<td class="key-form">
 					<h3>Get your API key.</h3>
-					<p>Sign up for your free API key and start developing!
+					<p>Sign up for your free API key and <a href="http://labs.europeana.eu/blog/welcome-to-the-new-europeana-labs/">get started</a>!
 						{% include api-registration.html %}
 				</td>
 			</tr>
@@ -61,12 +62,12 @@ layout: homepage
 	                <div class="b-text">
 
 	                    {%if post.featured %}
-		                    <h1 class="headline gamma"><a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a></h1>
+		                    <h2 class="headline gamma"><a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a></h2>
 		                    <div class="description">
 		                        {{post.excerpt}}                        
 		                    </div>
 						{% else %}
-							<h5><a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a></h5>
+							<h3><a href="{{site.baseurl}}{{post.url}}">{{post.title}}</a></h3>
 	                    {% endif %}
 						<a href="{{site.baseurl}}{{post.url}}" title="{{post.title}}" class="text-btn-homepage">Find out more</a>
 	                </div>
