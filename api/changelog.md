@@ -12,9 +12,7 @@ This document describes the changes of Europeana API. The changes are grouped by
 
 ### /v2/translateQuery.json
 
-Translate a term to different languages. Right now this functionality is a wrapper around an Wikipeadia API call, but we work on other implementation.
-
-WARNING: Right now it is in alpha phase of the development, do not rely in production service!
+Translate a term to different languages and return a query string to use in the search API method. Right now this functionality is a wrapper around a Wikipeadia API call.
 
 Request parameters:
 
@@ -62,6 +60,7 @@ It returns
   "translatedQuery": "Notre-Dame OR \"Notre Dame\""
 }
 ```
+For background information see the blog post [Improving search across languages](http://blog.europeana.eu/2014/08/improving-search-across-languages/)
 
 ### Renaming field "europeanaCollectionName" to "edmDatasetName"
 

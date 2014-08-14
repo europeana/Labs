@@ -21,7 +21,7 @@ Search for records.
 | rows | Number | The number of records to return. Maximum is 100. Defaults to 12. |
 | start | Number | The item in the search results to start with. The first item is 1. Defaults to 1. |
 | callback | String | Name of a client side [callback function](/api/getting-started/#callback-function). |
-| reusability | String | Filter by copyright status. Possible values are open, restricted or permission, see [reusability parameters](#reusability-parameters). |
+| reusability | String | Filter by copyright status. Possible values are open, restricted or permission, see [reusability parameters](#reusability-parameter). |
 | facet | String | Name of an individual facet. See [individual facets](#individual-facets) |
 | f.[facet name].facet.limit | Number | Number of values an individual facet should contain. The [facet name] part should be replaced with one of the the facet names you specified in `facet` parameter. See [individual facets](#individual-facets) |
 | f.[facet name].facet.offset | Number | The offset of the first value in an individual facet. The [facet name] part should be replaced with one of the the facet names you specified in `facet` parameter. See [individual facets](#individual-facets) |
@@ -145,7 +145,7 @@ A collection of facets that describe the resultant dataset.
 
 The minimal profile returns the follwoing fields:
 
-| Name in API response | EMD field | Name is searching |
+| Name in API response | EDM field | Name is searching |
 |:-------------|:-------------|:-----|
 | dataProvider | ore:Aggregation/edm:dataProvider | provider_aggregation_edm_dataProvider |
 | dcCreator | edm:ProvidedCHO/dc:creator | proxy_dc_creator |
@@ -169,7 +169,7 @@ The minimal profile returns the follwoing fields:
 
 The standard profile returns all the fields of the minimal profile plus and the following fields:
 
-| Name in API response | EMD field | Name is searching |
+| Name in API response | EDM field | Name is searching |
 |:-------------|:-------------|:-----|
 | edmConceptTerm | skos:Concept/@rdf:about | skos_concept |
 | edmConceptPrefLabel | skos:Concept/skos:prefLabel | cc_skos_prefLabel |
@@ -196,7 +196,7 @@ The standard profile returns all the fields of the minimal profile plus and the 
 
 The portal profile returns all the fields of the standard profile plus and the following fields:
 
-| Name in API response | EMD field | Name is searching |
+| Name in API response | EDM field | Name is searching |
 |:-------------|:-------------|:-----|
 | dctermsSpatial | edm:ProvidedCHO/dcterms:spatial | proxy_dcterms_spatial |
 | edmPlace | edm:Place/@rdf:about | edm_place |
@@ -207,13 +207,12 @@ The portal profile returns all the fields of the standard profile plus and the f
 
 
 ### Rich profile
-*NOTE: this profile is in development and will be placed into production at the time of the next release.*
 
-The rich profile returns all the fields of the portal profile plus and the following fields:
+The rich profile returns all the fields of the portal profile plus the following fields:
 
-| Name in API response | EMD field | Name is searching |
+| Name in API response | EDM field | Name in search parameters |
 |:-------------|:-------------|:-----|
-| isShownBy | ore:Aggregation/edm:isShownBy | provider_aggregation_edm_isShownBy |
+| edmIsShownBy | ore:Aggregation/edm:isShownBy | provider_aggregation_edm_isShownBy |
 | dcDescription | edm:ProvidedCHO/dc:description | proxy_dc_description |
 | edmLandingPage | edm:EuropeanaAggregation/edm:landingPage | europeana_aggregation_edm_landingPage |
 
