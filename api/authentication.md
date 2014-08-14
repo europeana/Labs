@@ -9,7 +9,7 @@ Europeana API supports three kinds of user authentication that are used in three
 
 ### Basic Authentication
 
-This is the simplest form of authentication which does not involve accessing user-specific information. To perform a call using this authentication every API call must be provided a special authentication parameter _wskey_. This value of this parameter should be the private key that you got during the API user registration process. We use these keys to anonymously gather interesting statistics about API usage.
+This is the simplest form of authentication which does not involve accessing user-specific information. To perform a call using this authentication every API call must be provided a special authentication parameter _wskey_. This value of this parameter should be the public key that you got during the API user registration process. We use these keys to anonymously gather interesting statistics about API usage. If you forget your API key or need to generate a new one, login to [My Europeana](http://europeana.eu/portal/myeuropeana#login).
 
 ### User Authentication
 
