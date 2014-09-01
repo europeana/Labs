@@ -15,6 +15,7 @@ tags:
   - Natural History
 
 licenses:
+  - cc  
   - by
   - sa 
       

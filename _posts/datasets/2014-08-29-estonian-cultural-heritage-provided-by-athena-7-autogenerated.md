@@ -12,7 +12,8 @@ providerurl: http://restoredestonia.virtuaalmuuseum.ee/
 imageurl:
   - "/img/datasets/08548-estonia.jpg"
 tags:
-  - Maps, Design
+  - Maps
+  - Design
 
 licenses:
 dataset: 8548

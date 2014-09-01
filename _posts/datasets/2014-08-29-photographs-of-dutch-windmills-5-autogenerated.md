@@ -12,7 +12,8 @@ providerurl: http://allemolens.nl/
 imageurl:
   - "/img/datasets/2021626-windmills.jpg"
 tags:
-  - Geodata, Architecture
+  - Geodata
+  - Architecture
 
 licenses:
 dataset: 2021626

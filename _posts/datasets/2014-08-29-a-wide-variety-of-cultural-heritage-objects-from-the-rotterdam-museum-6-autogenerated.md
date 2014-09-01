@@ -12,7 +12,9 @@ providerurl: http://www.museumrotterdam.nl/
 imageurl:
   - "/img/datasets/2021609-airplane.jpg"
 tags:
-  - Social Networks, Design, Fashion
+  - Social Networks
+  - Design
+  - Fashion
 
 licenses:
 dataset: 2021609

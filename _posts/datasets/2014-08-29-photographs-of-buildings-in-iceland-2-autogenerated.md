@@ -12,7 +12,8 @@ providerurl: http://hus.fornleifavernd.is/
 imageurl:
   - "/img/datasets/2020732-iceland.jpg"
 tags:
-  - Architecture, Geodata
+  - Architecture
+  - Geodata
 
 licenses:
 dataset: 2020732
