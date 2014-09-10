@@ -44,5 +44,3 @@ prose:
 rss_path: 
 rss_name: rss.xml
 
-gems:
-  - jekyll-sitemap

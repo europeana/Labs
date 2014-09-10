@@ -23,7 +23,7 @@ For more information on EDM, we refer to the *EDM Definitions* and *EDM Primer* 
 
 ## Generating EDM data for Europeana
 
-The data available in the pilot results from a conversion of legacy ESE data into EDM. This entails creating resources for the main EDM classes, and distributing ESE metadata fields over these various resources, as presented in this [mapping](http://europeanalabs.eu/wiki/EDMPrototypingTask15). The resulting data does not realise the full potential offered by EDM but it allows us to make some distinctions, which we believe are useful for data consumers.
+The data available in the pilot results from a conversion of legacy ESE data into EDM. This entails creating resources for the main EDM classes, and distributing ESE metadata fields over these various resources, as presented in this [mapping](http://old.europeanalabs.eu/wiki/EDMPrototypingTask15). The resulting data does not realise the full potential offered by EDM but it allows us to make some distinctions, which we believe are useful for data consumers.
 
 Additionally, data.europeana.eu includes semantic connections to external (linked data) sources. We serve links to other linked data services already maintained by Europeana providers - currently only the Swedish cultural heritage aggregator (SOCH). The vast majority of external links come from semantic enrichment realised at the Europeana Office, connecting Europeana items to places (as provided by [GeoNames](http://geonames.org)), concepts (from the [GEMET](http://www.eionet.europa.eu/gemet) thesaurus), persons (from [DBpedia](http://dbpedia.org)) and time periods (from an adhoc time period vocabulary).
 

@@ -6,8 +6,8 @@ permalink: /data/newsreels-from-sound-and-vision-on-the-netherlands-in-the-20th-
 provider: Netherlands Institute for Sound and Vision
 description: More than 3,000 videos from the Open Images (Open Beelden) dataset of the Netherlands Institute for Sound and Vision. The collection contains newsreels from the Polygoon collection and several other films on the Netherlands in the twentieth century. It contains historical news events, with topics such as art, culture, transportation, health and healthcare, nature, politics, sports, pets and fashion. 
 contact: hvbiessum@beeldengeluid.nl
-portal: http://europeana.eu/portal/search.html?query=europeana_collectionName%3A2021601*&rows=24&qf=RIGHTS%3Ahttp%3A%2F%2Fcreativecommons.org%2Flicenses%2Fby-sa%2F*
-console: http://labs.europeana.eu/api/console/?function=search&query=europeana_collectionName%3A2021601*&rows=24&qf=RIGHTS%3Ahttp%3A%2F%2Fcreativecommons.org%2Flicenses%2Fby-sa%2F*
+portal: http://europeana.eu/portal/search.html?query=europeana_collectionName%3A2021601*&rows=24&qf=REUSABILITY%3Aopen
+console: http://labs.europeana.eu/api/console/?function=search&query=europeana_collectionName%3A2021601*&rows=24&reusability=open
 providerurl: http://openbeelden.nl
 imageurl:
   - "/img/datasets/2021601-newsreel.jpg"
