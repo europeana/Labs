@@ -14,12 +14,11 @@ tags:
 imageurl:
   - "/img/no-image.gif"
 links:
-  - http://repox.ist.utl.pt/
-  - http://repox.ist.utl.pt/download.html
+  - http://sysresearch.org/repox/
 ---
 REPOX is a framework to manage metadata spaces. It comprises several channels to import metadata from data providers, services to transform metadata between schemas according to user's specified rules, and services to expose the results to the exterior. REPOX aims to provide to all the TEL and Europeana partners a simple solution to import, convert and expose their bibliographic data via OAI-PMH.
 
-**Developer(s)**: Gilberto Pedrosa
+**Developer(s)**: João Edmundo (joao.a.edmundo@gmail.com)
 
 **License**: GNU
 
