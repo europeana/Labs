@@ -31,6 +31,8 @@ europeanaevent:
 featured:
   - "true"
 ---
+This event will bring together application developers, information professionals, technology researchers and decision makers in the cultural domain.
+
 Together, we will explore current technical challenges around digitisation and re-use of cultural content, learn about new developments and establish future collaborations.
 
 Get updates on Twitter fro [@EuropeanaTech](http://twitter.com/europeanatech) and [become a member of EuropeanaTech community](http://www.pro.europeana.eu/web/network/europeana-tech).

@@ -45,7 +45,7 @@
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-49084773-1', 'europeana.eu');
+  ga('create', 'UA-49084773-1', 'labs.europeana.eu');
   ga('send', 'pageview');
 
 </script>
@@ -176,9 +176,7 @@
 
 <h3 id="v2translatequeryjson">/v2/translateQuery.json</h3>
 
-<p>Translate a term to different languages. Right now this functionality is a wrapper around an Wikipeadia API call, but we work on other implementation.</p>
-
-<p>WARNING: Right now it is in alpha phase of the development, do not rely in production service!</p>
+<p>Translate a term to different languages and return a query string to use in the search API method. Right now this functionality is a wrapper around a Wikipedia API call.</p>
 
 <p>Request parameters:</p>
 
@@ -265,6 +263,8 @@
   "translatedQuery": "Notre-Dame OR \"Notre Dame\""
 }
 </code></p>
+
+<p>For background information see the blog post <a href="http://blog.europeana.eu/2014/08/improving-search-across-languages/">Improving search across languages</a></p>
 
 <h3 id="renaming-field-europeanacollectionname-to-edmdatasetname">Renaming field “europeanaCollectionName” to “edmDatasetName”</h3>
 

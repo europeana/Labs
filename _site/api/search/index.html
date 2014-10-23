@@ -45,7 +45,7 @@
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
   })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-49084773-1', 'europeana.eu');
+  ga('create', 'UA-49084773-1', 'labs.europeana.eu');
   ga('send', 'pageview');
 
 </script>
@@ -223,7 +223,7 @@
     <tr>
       <td style="text-align: left">reusability</td>
       <td style="text-align: left">String</td>
-      <td style="text-align: left">Filter by copyright status. Possible values are open, restricted or permission, see <a href="#reusability-parameters">reusability parameters</a>.</td>
+      <td style="text-align: left">Filter by copyright status. Possible values are open, restricted or permission, see <a href="#reusability-parameter">reusability parameters</a>.</td>
     </tr>
     <tr>
       <td style="text-align: left">facet</td>
@@ -679,7 +679,7 @@
   <thead>
     <tr>
       <th style="text-align: left">Name in API response</th>
-      <th style="text-align: left">EMD field</th>
+      <th style="text-align: left">EDM field</th>
       <th style="text-align: left">Name is searching</th>
     </tr>
   </thead>
@@ -775,7 +775,7 @@
   <thead>
     <tr>
       <th style="text-align: left">Name in API response</th>
-      <th style="text-align: left">EMD field</th>
+      <th style="text-align: left">EDM field</th>
       <th style="text-align: left">Name is searching</th>
     </tr>
   </thead>
@@ -891,7 +891,7 @@
   <thead>
     <tr>
       <th style="text-align: left">Name in API response</th>
-      <th style="text-align: left">EMD field</th>
+      <th style="text-align: left">EDM field</th>
       <th style="text-align: left">Name is searching</th>
     </tr>
   </thead>
@@ -930,21 +930,20 @@
 </table>
 
 <h3 id="rich-profile">Rich profile</h3>
-<p><em>NOTE: this profile is in development and will be placed into production at the time of the next release.</em></p>
 
-<p>The rich profile returns all the fields of the portal profile plus and the following fields:</p>
+<p>The rich profile returns all the fields of the portal profile plus the following fields:</p>
 
 <table>
   <thead>
     <tr>
       <th style="text-align: left">Name in API response</th>
-      <th style="text-align: left">EMD field</th>
-      <th style="text-align: left">Name is searching</th>
+      <th style="text-align: left">EDM field</th>
+      <th style="text-align: left">Name in search parameters</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <td style="text-align: left">isShownBy</td>
+      <td style="text-align: left">edmIsShownBy</td>
       <td style="text-align: left">ore:Aggregation/edm:isShownBy</td>
       <td style="text-align: left">provider_aggregation_edm_isShownBy</td>
     </tr>
@@ -963,12 +962,12 @@
 
 <h2 id="individual-facets">Individual facets</h2>
 
-<p>So far the user could get only the default Europeana facet set. From now on API users can select which facets they would like to retrieve via the <code>facet</code> parameter. When you request facet you have to set the profile either as <code>facets</code> or as <code>portal</code> (which covers facets as well).</p>
+<p>API users can select which facets they would like to retrieve beyond the default facet set via the <code>facet</code> parameter. When you request facet you have to set the profile either as <code>facets</code> or as <code>portal</code> (which covers facets as well).</p>
 
-<p>The value of the parameter could be “DEFAULT” (which is a shortcut of the Europeana facet set we make use on the portal, which contains UGC, LANGUAGE, TYPE, YEAR, PROVIDER, DATA_PROVIDER, COUNTRY and RIGHTS), or any field name which is indexed and stored in Apache Solr.
+<p>The value of the parameter could be “DEFAULT” (which is a shortcut of the Europeana facet set we use on the portal, containing UGC, LANGUAGE, TYPE, YEAR, PROVIDER, DATA_PROVIDER, COUNTRY and RIGHTS), or any field name which is indexed and stored in Apache Solr.
 We maintain a table in API documentation about the existing  (API Fields)[/api/api-fields/]. In the field type column “text” means indexed as as a row of distinct terms, while “string” means indexed as phrase, so the whole content is taken as one individual unit.</p>
 
-<p>Users can set one or more facets in one query.</p>
+<p>Users can set one or more facet in one query.</p>
 
 <p>Requesting a single facet:</p>
 
@@ -978,7 +977,7 @@ http://www.europeana.eu/api/v2/search.json?wskey=xxxx&amp;query=paris&amp;facet=
 
 <p><a href="/api/console/?function=search&amp;query=paris&amp;facet=proxy_dc_contributor&amp;profile=facets">Test on API Console</a></p>
 
-<p>Requesting multiple facets can be done with three different syntaxes. You can add multiple facet parameters, or one facet parameter with multiple values separated by commas or spaces:</p>
+<p>Requesting multiple facets can be done with two different syntaxes. You can add multiple facet parameters, or one facet parameter with multiple values separated by commas:</p>
 
 <p>Multiple facet parameters:</p>
 
@@ -995,20 +994,6 @@ http://www.europeana.eu/api/v2/search.json?wskey=xxxx&amp;query=paris&amp;facet=
 </code></pre>
 
 <p><a href="/api/console/?function=search&amp;query=paris&amp;facet=proxy_dc_coverage,proxy_dc_contributor&amp;profile=facets">Test on API Console</a></p>
-
-<p>Multiple facets separated by spaces</p>
-
-<pre><code>&amp;facet=proxy_dc_coverage%20proxy_dc_contributor&amp;profile=facets
-http://www.europeana.eu/api/v2/search.json?wskey=xxxx&amp;query=paris&amp;facet=proxy_dc_coverage%20proxy_dc_contributor&amp;profile=facets
-</code></pre>
-
-<p><a href="/api/console/?function=search&amp;query=paris&amp;facet=proxy_dc_coverage%20proxy_dc_contributor&amp;profile=facets">Test on API Console</a></p>
-
-<pre><code>&amp;facet=proxy_dc_coverage+proxy_dc_contributor&amp;profile=facets
-http://www.europeana.eu/api/v2/search.json?wskey=xxxx&amp;query=paris&amp;facet=proxy_dc_coverage+proxy_dc_contributor&amp;profile=facets
-</code></pre>
-
-<p><a href="/api/console/?function=search&amp;query=paris&amp;facet=proxy_dc_coverage%20proxy_dc_contributor&amp;profile=facets">Test on API Console</a></p>
 
 <p>Requesting the default facets:</p>
 
@@ -1040,7 +1025,7 @@ http://www.europeana.eu/api/v2/search.json?wskey=xxxx&amp;query=paris&amp;facet=
 
 <h3 id="offset-and-limit-of-facets">Offset and limit of facets</h3>
 
-<p>The API user can set how many facet values she would like to retrieve, and which should be the first one. With this parameters, she can page over all facet values without requesting too much at a time. The limit and offset parameter syntax is a little bit tricky, but if you are familiar with Apache Solr syntax, it won’t be strange, because it is the same.</p>
+<p>The API user can set how many facet values to retrieve, and which should be the first one. With these parameters, you can page over all facet values without requesting too much at a time. The limit and offset parameter syntax is a little bit tricky, but if you are familiar with Apache Solr syntax it won’t be strange because it is the same.</p>
 
 <pre><code>Syntax: f.[facet name].facet.limit
 Example: &amp;f.PROVIDER.facet.limit=30
@@ -1056,13 +1041,13 @@ http://www.europeana.eu/api/v2/search.json?wskey=xxxx&amp;query=paris&amp;facet=
 
 <p><a href="/api/console/?function=search&amp;query=paris&amp;facet=PROVIDER&amp;profile=facets&amp;f.PROVIDER.facet.offset=30">Test on API Console</a></p>
 
-<p>Both parameter accepts numeric values.</p>
+<p>Both parameters accept numeric values.</p>
 
-<p>The default offset value is 0, it means no offset, the first item to return is the first item in the list. 1 offset the list by one, so the first item to return is the second and so on.</p>
+<p>The default offset value is 0, starting from the first item in the list. 1 offsets the list by one, so the first item to return is the second and so on.</p>
 
-<p>In limit 0 means not to return anything.</p>
+<p>Set a limit of 0 to not return anything for that facet.</p>
 
-<p>The special <code>DEFAULT</code> shortcut works here as well, and it limit the facets which are part of the above mentioned set. So <code>&amp;f.DEFAULT.facet.limit=20</code> works for RIGHTS, and PROVIDER, but doesn’t work for non default facets such as proxy_dc_contributor.</p>
+<p>The special <code>DEFAULT</code> shortcut works here as well, limiting the facets which are part of this set. So <code>&amp;f.DEFAULT.facet.limit=20</code> works for RIGHTS, and PROVIDER, but doesn’t work for non default facets such as proxy_dc_contributor.</p>
 <!--
 --></div>
 </div>

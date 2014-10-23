@@ -31,7 +31,7 @@ europeanaevent:
 featured:
   - "true"
 ---
-Redesign Your Cultural Heritage! is taking place at the [Mozilla Festival](http://2014.mozillafestival.org/) as a part of the [Art & Culture on the Web track](http://mozfestartoftheweb.tumblr.com/). (sorry, the Mozilla Festival is now sold out).
+Redesign Your Cultural Heritage! is taking place at the [Mozilla Festival](http://2014.mozillafestival.org/) as a part of the [Art & Culture on the Web track](http://mozfestartoftheweb.tumblr.com/).
 
 Facilitators: Sanna Marttila, Neea Laakso, Kati Hyyppä (Aalto University), Christina Holm (Spild af Tid ApS), James Morley (Europeana)
 
@@ -43,10 +43,10 @@ The session is hosted and organized by the [Europeana Creative project](http://p
 
 Below is a rough schedule for the session to give some idea of the day’s program, but feel free to join in at any point!
 
-10:15-10:30 Introducing digital cultural heritage materials & Europeana Creative project
-10:30-11:00 Culture Cam presentation and discussion
-11:00-11:30 Europeana API presentation and discussion
-11:30-13:00 Introducing the afternoon workshops and demo sessions. Participants can start already, and continue or join in after lunch.
-13:00-14:00 LUNCH BREAK
-14:00-14:30 Introducing digital cultural heritage materials & Europeana Creative project - for those who missed the morning session
-14:30-17:00 Workshops and demo sessions
+10:15-10:30 Introducing digital cultural heritage materials & Europeana Creative project  
+10:30-11:00 Culture Cam presentation and discussion  
+11:00-11:30 Europeana API presentation and discussion  
+11:30-13:00 Introducing the afternoon workshops and demo sessions. Participants can start already, and continue or join in after lunch.  
+13:00-14:00 LUNCH BREAK  
+14:00-14:30 Introducing digital cultural heritage materials & Europeana Creative project - for those who missed the morning session  
+14:30-17:00 Workshops and demo sessions  
