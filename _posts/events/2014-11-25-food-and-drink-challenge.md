@@ -5,7 +5,7 @@ category: events
 permalink: /events/food-and-drink-challenge
 title: Europeana Food & Drink challenge
 imageurl: 
-  - "/img/events/placeholder.jpg"
+  - "/img/events/2014-11-25-food-and-drink-challenge.jpg"
 tags: 
   - challenge
 links:
