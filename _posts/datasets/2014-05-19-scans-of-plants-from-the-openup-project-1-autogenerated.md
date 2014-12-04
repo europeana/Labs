@@ -1,4 +1,5 @@
 ---
+published: false
 layout: data-item
 category: data
 title: "Scans of plants from the OpenUp! project"
