@@ -15,7 +15,7 @@ This is the simplest form of authentication which does not involve accessing use
 
 This form of authentication is used when an application wishes to access MyEuropeana data of a specific user and the public and the private keys of this user are known available in advance. In this case login is done by calling a POST method
 
-    http://europeana.eu/api/v2/login.do    
+    http://europeana.eu/api/login.do    
 
 with the following two parameters that contain authentication credentials:
 
