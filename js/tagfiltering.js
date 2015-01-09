@@ -237,9 +237,9 @@
               
               
               $("ul.tags li.show-all-tags").remove();
-              
-              $("ul.tags").prepend("<li class=\"show-all-tags\" data-count=\""+$(settings.listid + " li").length+"\"><a class=\"tag\">ALL ("+$(settings.listid + " li").length+")</a></li>");
-              
+             
+	      $("ul.tags").prepend("<li class=\"show-all-tags\" data-count=\"" + $(settings.listid + " > ul > li").length + "\"><a class=\"tag\">ALL (" + $(settings.listid + " > ul > li").length + ")</a></li>");
+ 
               $("ul.tags li.show-all-tags").click(function(){
               		$("ul.tags li a").removeClass(settings.activeTagClass);
               		addShowMore();
