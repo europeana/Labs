@@ -30,7 +30,7 @@
       this.indexDataUrl = options.indexUrl;
       this.index = this.createIndex();
       this.template = this.compileTemplate($(options.template));
-      this.executeLabsSearchSpecificCode = options.executeLabsSearchSpecificCode;
+      
       this.initialize();
     };
         
@@ -132,20 +132,6 @@
       }
     };
     
-   LunrSearch.prototype.convertToSlug = function (str)
-	{
-	
-		str = str.replace(/^\s+|\s+$/g, ''); // trim
-		str = str.toLowerCase();
-
-		str = str.replace(/[^a-z0-9 -]/g, '-'); // remove invalid chars
-		str = str.replace(/\s+/g, '-'); // collapse whitespace and replace by -	  
-		str = str.replace(/-+/g, '-'); // collapse dashes
-	
-		return str;
-		        
-	};
-    
     LunrSearch.prototype.displayResults = function(entries) {
       var $entries = this.$entries,
         $results = this.$results;
@@ -155,9 +141,7 @@
       if (entries.length === 0) {
         $entries.append('<p>Nothing found.</p>');
       } else {
-      	
         $entries.append(this.template({entries: entries}));
-        
       }
       
       $results.show();
@@ -169,29 +153,7 @@
       	}
       });
       
-      if(this.executeLabsSearchSpecificCode){
       
-	      $("#search-results-list li").each(function(){
-	
-	
-			var listItem = this;
-	
-			$(listItem).find("a.tag_alt").each(function(){
-				
-				var slugTag = LunrSearch.prototype.convertToSlug($(this).text());
-				$(listItem).addClass(slugTag);
-				
-				if(slugTag=="beta"){
-					$(listItem).attr("style","font-size:100%;")	
-				}
-				
-				$(this).click(function(){
-					$("ul.tags a."+slugTag).click();
-				});		
-			});
-			      	
-	      });  
-      }
     };
     
     // Populate the search input with 'q' querystring parameter if set
@@ -223,7 +185,6 @@
     indexUrl  : '/search.json',     // Url for the .json file containing search index source data (containing: title, url, date, body)
     results   : '#search-results',  // selector for containing search results element
     entries   : '.entries',         // selector for search entries containing element (contained within results above)
-    template  : '#search-results-template',  // selector for Mustache.js template
-    executeLabsSearchSpecificCode: false //flag for labs filtering specific code
+    template  : '#search-results-template'  // selector for Mustache.js template
   };
 })(jQuery);
