@@ -11,33 +11,32 @@ Europeana API supports three kinds of user authentication that are used in three
 
 This is the simplest form of authentication which does not involve accessing user-specific information. To perform a call using this authentication every API call must be provided a special authentication parameter _wskey_. This value of this parameter should be the public key that you got during the API user registration process. We use these keys to anonymously gather interesting statistics about API usage. If you forget your API key or need to generate a new one, login to [My Europeana](http://europeana.eu/portal/myeuropeana#login).
 
+
 ### User Authentication
 
-This form of authentication is used when an application wishes to access MyEuropeana data of a specific user and the public and the private keys of this user are known available in advance. In this case login is done by calling a POST method
+This form of authentication is used when an application wishes to access MyEuropeana data of a specific user. Either the user’s username and password, or public and private keys can be used. The pair of credentials used determines which base API endpoint to use in subsequent API calls, either `http://europeana.eu/api/v2/user` when using the username/password or `http://europeana.eu/api/v2/mydata` when using the public/private keys.
 
-    http://europeana.eu/api/login.do    
+    POST http://europeana.eu/api/login.do
 
-with the following two parameters that contain authentication credentials:
+|Parameter|Either|Or|
+|:----------|:--------------|:--------------------|
+|j_username | Your USERNAME | Your PUBLIC apikey  |
+|j_password | Your PASSWORD | Your PRIVATE apikey |
 
-|Parameter|Description|
-|:-------------|:-------------|
-|j_username | Your PUBLIC apikey |
-|j_password | Your PRIVATE apikey |
+The initial response header is a `HTTP/1.1 302 Moved Temporarily` that contains a cookie with the key/value pair, `JSESSIONID=<your-session-value>`. That cookie will need to be sent with every subsequent API call that requires authentication. Unsuccessful authentication will redirect to `http://europeana.eu/api/login?form=user`. Successful authentication will redirect to `http://europeana.eu/api/`.
 
-
-When a login is successful a status 200 is returned, otherwise a redirect to the login page is triggered. 
 
 ### OAuth2 Authentication
 
 For applications that wish to access MyEuropeana data of a specific end-user on his behalf, we use the standard [OAuth2](http://oauth.net/2/) authentication scheme. This scheme works by redirecting the application to a dedicated login page provided by the server and issuing to the application an authenticating token with a limited lifetime when the login is succesful. The token can be refreshed later on by the application. To use this kind of authentication the application should first access the URL
 
     http://europeana.eu/api/oauth/authorize
-    
+
 and further on the URL
 
     http://europeana.eu/api/oauth/token
-    
-    
+
+
 to refresh the token.
 
 There are many open source libraries available for various languages to help you implement this authentication scheme in your project. For more information, consult the [OAuth2 reference page](http://oauth.net/2/).
