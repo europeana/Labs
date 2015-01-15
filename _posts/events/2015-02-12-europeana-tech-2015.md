@@ -5,11 +5,11 @@ category: events
 permalink: /events/europeana-tech-conference-2015
 title: Europeana Tech Conference, 2015
 imageurl: 
-  - "/img/events/placeholder.jpg"
+  - "/img/events/2015-02-12-europeana-tech-2015.jpg"
 tags: 
   - conference
 links:
-  - http://www.pro.europeana.eu/web/network/europeana-tech
+  - http://www.europeanatech2015.eu/
 excerpt:
   - "This event will bring together application developers, information professionals, technology researchers and decision makers in the cultural domain."
 startdate:
