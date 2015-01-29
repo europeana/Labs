@@ -16,6 +16,8 @@ tags:
 - History
 - Tourism
 - Architecture
+secondarytags: 
+- Europeana Photography Project
 licenses:
   - Creative Commons Public Domain Mark 
 ---
