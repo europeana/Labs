@@ -26,20 +26,9 @@ $(document).ready(function(){
 	$("#homepage ul.nav-footer").append("<br class='clear'/>");
 	
 	if(document.referrer.indexOf("/search") != -1 && document.URL.indexOf("/search")==-1){
-		//$("#search").append("<a style='display:block; font-size:0.8em; text-align:center;' href='"+document.referrer+"'>Back to search results</a>");
-		
 		$("div.tabs ul").prepend("<li>"+"<a href='"+document.referrer+"'>← Back to search results</a>"+"</li>");
 	}
-	
-	/*$("ul.tags li a").click(function(){
-		alert("OK");
-		$("ul.tags li a").removeClass("current-tag");
-		$(this).addClass("current-tag");
-		$("div.pagination-holder").jPages("destroy");
-		$("ul.post-list li").removeClass("filtered-by-tag").hide();
-		$("ul.post-list li."+$(this).attr("rel")).addClass("filtered-by-tag").show();
-	});*/
-	
+
 	$("a.datasetstag-at-item").click(function(){
 		$("ul.tags li a[rel='"+$(this).attr("rel")+"']").click();
 	});	
@@ -51,28 +40,11 @@ $(document).ready(function(){
 		var currentText = $(this).text();
 		$(this).text(currentText.replace("[at]","@"));
 	});
-		
-	/*
-	$("div.startBtn a").click(function (event) {
-	    event.preventDefault();
-	    //calculate destination place
-	    var dest = 0;
-	    if ($(this.hash).offset().top > $(document).height() - $(window).height()) {
-	        dest = $(document).height() - $(window).height();
-	    } else {
-	        dest = $(this.hash).offset().top;
-	    }
-	    //go to destination
-	    $('html,body').animate({
-	        scrollTop: dest
-	    }, 2000, 'swing');
-	});
-	*/
+
 	if($("#homepage").length <= 0){
 		$("footer").attr("id", "nothomepagefooter");
 	}
 	
-	//select gallery tag if selected
 	var splitedGalleryUrl = window.location.pathname.split('/');
 	if( splitedGalleryUrl.length>2){
 		$("ul.tags li a[rel='"+splitedGalleryUrl[2]+"']").addClass("current-tag");
@@ -195,3 +167,11 @@ function initApiMenu()
 
 }
 
+    (function(f,b){
+        var c;
+        f.hj=f.hj||function(){(f.hj.q=f.hj.q||[]).push(arguments)};
+        f._hjSettings={hjid:13022, hjsv:3};
+        c=b.createElement("script");c.async=1;
+        c.src="//static.hotjar.com/c/hotjar-13022.js?sv=3";
+        b.getElementsByTagName("head")[0].appendChild(c); 
+    })(window,document);
