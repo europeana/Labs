@@ -13,7 +13,7 @@ imageurl:
   - "/img/no-image.gif"
 links:
   - http://iipimage.sf.net
-  - https://github.com/ruven/iipsrv/tree/iiif
+  - https://github.com/ruven/iipsrv
 
 ---
 IIPImage is an advanced high-performance feature-rich image server system for web-based streamed viewing and zooming of ultra high-resolution images.
