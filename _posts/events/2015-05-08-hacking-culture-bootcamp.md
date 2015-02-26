@@ -34,4 +34,4 @@ featured:
 ---
 In this two-day bootcamp Waag Society and Europeana Space are challenging game developers, storytellers, interactive designers, and app developers to create new multi-screen experiences with a focus on digitised historic footage. The best concept will progress to an intensive business modeling workshop in London, hosted by the British cultural entrepreneurs behind Remix.
 
-Closing date for applications: 28 February 2015
+Closing date for applications: 1 April 2015
