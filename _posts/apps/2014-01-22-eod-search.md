@@ -6,6 +6,8 @@ title: EOD Search
 permalink: "apps/eod-search"
 tags: 
   - API Implementation
+  - Discovery
+  - Research
 imageurl:
   - "/img/apps/eod-search/EOD.jpg"
   - "/img/apps/eod-search/EOD_2.jpg"

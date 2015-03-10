@@ -7,6 +7,7 @@ featured: false
 permalink: apps/AssetsImageSearch
 tags: 
   - R&D results
+secondarytags:
   - Image search
   - Image similarity 
 links: 
@@ -22,5 +23,5 @@ Scalability has been tested with 100 million images taken from the [CoPhiR](http
 
 In order to achieve this performance, the index was built using technology developed by ISTI-CNR - approximate similarity searches in metric spaces using inverted files and content-based image retrieval based on the Lucene search engine library.
 
-See the ASSETS image search [demo](http://virserv.isti.cnr.it:8080/assetsIRService/index)
+See the [ASSETS image search demo](http://virserv.isti.cnr.it:8080/assetsIRService/index)
 

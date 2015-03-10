@@ -8,6 +8,7 @@ permalink: apps/ECLAP-linked-open-graph
 tags: 
   - R&D results
   - Linked Open Data
+secondarytags:
   - Search and browsing
 links: 
   - "http://log.disit.org/service/"

@@ -7,6 +7,7 @@ title: "Apache PDFBox"
 featured: false
 tags:
   - Open Source tools
+secondarytags:
   - Digital Asset Management
   - Collection Management
 

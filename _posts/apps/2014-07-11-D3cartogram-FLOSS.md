@@ -7,6 +7,7 @@ title: "D3-cartogram"
 featured: false
 tags:
   - Open Source tools
+secondarytags:
   - Geo-spatial Applications
   - Data Visualisation
 imageurl:

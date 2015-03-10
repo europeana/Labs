@@ -8,6 +8,8 @@ imageurl:
 featured: false
 tags:
   - Hackathon Prototype
+  - Discovery
+secondarytags:
   - Search
   - Mobile
 links:
@@ -16,9 +18,8 @@ links:
 contact: 
   name: "Ronalds Sovas, sovas@greenbox.lv"
 ---
+The prototype was developed using the Europeana API and YQL (Yahoo Query language) to build a quick and powerful cultural information search tool.
 
-The prototype was developed using the Europeana API and YQL (Yahoo Query language) to build a quick and powerful culture information search tool.
+It allows for multi-service search (including an example of Twitter search); a multi-query search is still in development.
 
-It allows for multi-service search (including an example of Twitter search); a multi-query search is still in development. Winner in the category 'Most innovative app'.
-
-Hack4Europe '12 - Latvia
+Winner in the category 'Most innovative app'. Hack4Europe '12 - Latvia

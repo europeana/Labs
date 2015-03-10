@@ -8,12 +8,16 @@ imageurl:
 featured: false
 tags:
   - Hackathon Prototype
+  - Distribution
+secondarytags:
   - Social media
   - CMS plugin
+  - Wordpress
 links:
   - 
 contact: 
   name: "Mia Ridge and Owen Stephens"
 ---
+Share What You See supports easy blogging of Europeana content via Wordpress. 
 
-Share What you See supports easy blogging of Europeana content via Word Press. Winner in the category 'Audience award´ at Hack4Europe '11 - UK.
+Winner in the category 'Audience award´ at Hack4Europe '11 - UK.

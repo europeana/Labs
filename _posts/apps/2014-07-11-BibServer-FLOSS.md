@@ -7,6 +7,7 @@ title: "BibServer"
 featured: false
 tags:
   - Open Source tools
+secondarytags:
   - Metadata Retrieval Services
   - Collection Management
   

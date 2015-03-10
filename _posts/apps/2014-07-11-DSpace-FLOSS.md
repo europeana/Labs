@@ -7,6 +7,7 @@ title: "DSpace"
 featured: false
 tags:
   - Open Source tools
+secondarytags:
   - Collection Management
   - Metadata Retrieval Services
   - Repository Software

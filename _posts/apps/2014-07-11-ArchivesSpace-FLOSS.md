@@ -7,6 +7,7 @@ title: "ArchivesSpace"
 featured: false
 tags:
   - Open Source tools
+secondarytags:
   - Collection Management
 imageurl:
   - "/img/no-image.gif"

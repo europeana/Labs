@@ -7,6 +7,7 @@ title: "easyLOD"
 featured: false
 tags:
   - Open Source tools
+secondarytags:
   - Linked Open Data
   - Metadata Retrieval Services
   

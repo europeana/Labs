@@ -7,6 +7,7 @@ title: "Leaflet"
 featured: false
 tags:
   - Open Source tools
+secondarytags:
   - Data Visualisation
   - Geo-spatial Applications
 imageurl:

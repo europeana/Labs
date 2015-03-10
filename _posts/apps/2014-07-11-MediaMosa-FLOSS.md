@@ -7,6 +7,7 @@ title: "MediaMosa"
 featured: false
 tags:
   - Open Source tools
+secondarytags:
   - Collection Management
   - Content Retrieval Services
   - Media Applications

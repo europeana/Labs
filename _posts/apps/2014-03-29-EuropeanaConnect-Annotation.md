@@ -7,6 +7,7 @@ featured: false
 permalink: apps/EuropeanaConnect-Annotation
 tags: 
   - R&D results
+secondarytags:
   - Media annotation/tagging
   - Media applications 
   - Social applications 
@@ -17,7 +18,7 @@ imageurl:
 contact: 
   name: "For more information, or to give feedback, please contact: [Rainer Simon](rainer.simon@ait.ac.at?subject=ThoughtLab:%20EuropeanaConnect%20Annotation%20Tool%20feedback)"
 ---
-**Disclaimer** The EuropeanaConnect Annotation Suite is now a stable tool renamed as Annotorious. For more details see the [Annotorious entry] (http://labs.europeana.eu/apps/Annotorious-FLOSS/)
+**Please Note:** The EuropeanaConnect Annotation Suite is now a stable tool renamed as Annotorious. For more details see the [Annotorious entry](http://labs.europeana.eu/apps/Annotorious-FLOSS/)
 
 **The EuropeanaConnect Annotation Suite** - A tool that allows end-users to annotate digital images, maps, audio and video files.
 
@@ -33,4 +34,4 @@ The image annotation interface allows the user to annotate full-scale images; it
 
 The audio and video components of the EuropeanaConnect Annotation Suite use a modified Flash player. The audio annotation tool only allows for the annotation of time segments of an audio track or its entirety, while the video annotation tool adds features that are similar to those of the image annotation tool. For example, shapes can be drawn on the image to signify the area of the moving image that has been commented on.
 
-See The EuropeanaConnect Annotation Suite [Prototype:](http://dme.arcs.ac.at/annotation/)
+See the [EuropeanaConnect Annotation Suite Prototype](http://dme.arcs.ac.at/annotation/)

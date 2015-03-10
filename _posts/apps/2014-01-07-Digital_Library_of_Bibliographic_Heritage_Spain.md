@@ -8,6 +8,7 @@ imageurl:
 featured: false  
 tags: 
   - API Implementation
+  - Discovery
 links:
   - http://bvpb.mcu.es/es/estaticos/contenido.cmd?pagina=estaticos/presentacion
 ---

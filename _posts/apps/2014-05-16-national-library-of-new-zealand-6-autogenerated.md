@@ -2,7 +2,7 @@
 layout: apps-item
 category: apps
 permalink: /apps/national-library-of-new-zealand
-title: "National Library of New Zealand"
+title: "Digital NZ - National Library of New Zealand"
 imageurl:
   - "/img/apps/national-library-of-new-zealand/National_Library_of_New_Zealand.png"
   - "/img/apps/national-library-of-new-zealand/National_Library_of_New_Zealand_2.png"
@@ -10,6 +10,8 @@ imageurl:
 featured: false
 tags:
   - API Implementation
+  - Distribution
+secondarytags:
   - Search
 links:
   - http://digitalnz.org/

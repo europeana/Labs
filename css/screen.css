@@ -4676,6 +4676,9 @@ html:hover [class^="icon-"] {
   font-weight: normal;
   font-size: 19.2px;
   font-size: 1.2rem; }
+  
+.subhead a {
+  color: #37b98b; }
 
 /* line 217, scss/objects/_blocks.scss */
 .subnav {

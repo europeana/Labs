@@ -7,6 +7,7 @@ title: "Blacklight"
 featured: false
 tags:
   - Open Source tools
+secondarytags:
   - Search and Browsing
 links:
   - http://projectblacklight.org/

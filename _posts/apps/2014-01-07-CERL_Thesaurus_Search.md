@@ -8,6 +8,7 @@ imageurl:
 featured: false
 tags: 
   - API Implementation
+  - Discovery
 links:
   - http://thesaurus.cerl.org/cgi-bin/search.pl
 ---

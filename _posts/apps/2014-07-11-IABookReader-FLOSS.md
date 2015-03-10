@@ -2,11 +2,13 @@
 layout: apps-item
 category: apps
 floss: true
+published: false
 permalink: /apps/IABookReader
 title: "Internet Archive BookReader"
 featured: false
 tags:
   - Open Source tools
+secondarytags:
   - Content Retrieval Services
 imageurl:
   - "/img/no-image.gif"

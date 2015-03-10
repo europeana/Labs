@@ -7,6 +7,8 @@ featured: false
 permalink: "apps/inventing-europe"
 tags: 
   - API Implementation
+  - Discovery
+  - Education
 imageurl: 
   - "/img/apps/inventing-europe/image_gallery_nr2.jpg"
   - "/img/apps/inventing-europe/image_gallery_nr3.jpg"

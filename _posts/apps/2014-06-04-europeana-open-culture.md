@@ -9,6 +9,9 @@ imageurl:
   - "/img/apps/Europeana_Open_Culture.png"
 tags: 
   - API Implementation
+  - Discovery
+  - Curation/Annotation
+secondarytags:
   - Tablet
   - Open Source Tools
 links: 
@@ -17,8 +20,9 @@ links:
 contact: 
   name: Europeana
 ---
+The Europeana Open Culture app lets users explore hand-picked and beautiful image collections from some of Europe's top cultural institutions.
 
-The Europeana Open Culture app lets users explore hand-picked and beautiful image collections from some of Europe's top cultural institutions. They can browse, share and download for free more than 350,000 high-resolution images from four themes: Maps and Plans, Images of the Past, Treasures of Art and Treasures of Nature.
+They can browse, share and download for free more than 350,000 high-resolution images from four themes: Maps and Plans, Images of the Past, Treasures of Art and Treasures of Nature.
 
 The users can start their search by entering a keyword in the search field (in any language!) or by selecting one of the 'badges' on the search page which represent entry points to the four themes. To narrow further the search, they use the in-theme filters in the left-hand menu.
 

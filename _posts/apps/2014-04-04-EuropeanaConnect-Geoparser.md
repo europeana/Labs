@@ -7,6 +7,7 @@ featured: false
 permalink: apps/EuropeanaConnect-Geoparser
 tags: 
   - R&D results
+secondarytags:
   - Semantic extraction
   - Geo-spatial applications
 links: 

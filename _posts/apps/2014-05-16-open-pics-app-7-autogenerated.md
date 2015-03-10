@@ -9,6 +9,8 @@ imageurl:
 featured: false
 tags:
   - API Implementation
+  - Discovery
+secondarytags:
   - Mobile
   - Tablet
   - Geolocation
@@ -18,9 +20,6 @@ links:
 contact: 
   name: ""
 ---
-
-This open source app allows search for images in multiple online collections.
-
-This open source app allows search for images in multiple online collections, such as Europeana, New York Public Library, Library of Congress, California Digital Library, Digital Public Library of America, LIFE Magazine photo archive, National Library of Australia (Trove) and Flickr Commons Project.
+This open source app allows search for images in multiple online collections, such as Europeana, New York Public Library, Library of Congress, California Digital Library, Digital Public Library of America, LIFE Magazine photo archive, National Library of Australia (Trove) and Flickr Commons.
 
 The app is designed for both iPad and iPhone and is available in 15+ languages.

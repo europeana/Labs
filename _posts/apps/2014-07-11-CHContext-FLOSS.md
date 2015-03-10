@@ -7,6 +7,7 @@ title: "CHContext"
 featured: false
 tags:
   - Open Source tools
+secondarytags:
   - Content Retrieval Services
 imageurl:
   - "/img/no-image.gif"

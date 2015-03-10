@@ -7,6 +7,8 @@ featured: false
 permalink: apps/MyStoryPlayer
 tags: 
   - R&D results
+  - Education
+secondarytags:
   - Media annotation/tagging
   - Semantic enrichment
   - Media applications 
@@ -32,7 +34,7 @@ Each annotation created within the tool contains:
 
 The user can annotate an object using a resource as a whole (e.g. an image) or by using only a part of this resource (e.g. few minutes of a video).
 
-Once an object has been completely annotated, the user can play the different media in parallel and start comparison work. The users can play several related annotations, creating their own story by navigating among them. The stories are personal experiences that can be shared among users. This is very interesting and useful for educational purpose and for leisure.</p>
+Once an object has been completely annotated, the user can play the different media in parallel and start comparison work. The users can play several related annotations, creating their own story by navigating among them. The stories are personal experiences that can be shared among users. This is very interesting and useful for educational purpose and for leisure.
 
 MyStoryPlayer is based on a semantic database using a RDF ontology and can be used as a web application.
 

@@ -7,6 +7,7 @@ title: "Doc Viewer"
 featured: false
 tags:
   - Open Source tools
+secondarytags:
   - Media Applications
   
 imageurl:

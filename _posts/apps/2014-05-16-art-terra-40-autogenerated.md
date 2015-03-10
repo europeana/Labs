@@ -8,6 +8,7 @@ imageurl:
 featured: false
 tags:
   - Hackathon Prototype
+secondarytags:
   - Geolocation
 links:
   - 
@@ -15,8 +16,4 @@ contact:
   name: "Krzysztof Figaj, Szymon Janikowski, Paweł Gilewski"
 ---
 
-Winner in the category 'Social inclusion' at Hack4Europe '11 - Poland.
-
-A web application which allows end-users to create geo-tags referring to chosen multimedia content (i.e. Europeana images). Those tags can be organised into albums, shared and finally browsed using mobile devices.
-
-
+Winner in the category 'Social inclusion' at Hack4Europe '11 - Poland. A web application which allows end-users to create geo-tags referring to chosen multimedia content (i.e. Europeana images). Those tags can be organised into albums, shared and finally browsed using mobile devices.

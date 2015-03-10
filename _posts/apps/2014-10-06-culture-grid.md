@@ -9,6 +9,7 @@ imageurl:
   - "/img/apps/culture-grid.png"
 tags: 
   - API Implementation
+  - Discovery
 secondarytags:
   - search
 links: 

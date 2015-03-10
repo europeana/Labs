@@ -7,6 +7,7 @@ title: "IIPImage"
 featured: false
 tags:
   - Open Source tools
+secondarytags:
   - Exhibition Management
   - Media Applications
 imageurl:

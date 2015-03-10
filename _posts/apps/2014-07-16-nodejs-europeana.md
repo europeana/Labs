@@ -7,7 +7,7 @@ featured: false
 imageurl: 
   - "/img/no-image.gif"
 tags: 
-  - Client library
+  - Client Library
 links:
   - https://github.com/fvdm/nodejs-europeana
   - https://www.npmjs.org/package/europeana

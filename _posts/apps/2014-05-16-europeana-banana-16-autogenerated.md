@@ -8,6 +8,8 @@ imageurl:
 featured: false
 tags:
   - Hackathon Prototype
+  - Gaming
+secondarytags:
   - Metadata enrichment
   - Game
 links:

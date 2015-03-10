@@ -8,6 +8,7 @@ featured: false
 tags:
   - Open Source tools
   - R&D results
+secondarytags:
   - Repository Software
   - Metadata Retrieval Services
   - Media Annotation/Tagging

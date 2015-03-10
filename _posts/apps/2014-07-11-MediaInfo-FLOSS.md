@@ -7,6 +7,7 @@ title: "MediaInfo"
 featured: false
 tags:
   - Open Source tools
+secondarytags:
   - Data mapping/conversation
   - Media Applications
 imageurl:

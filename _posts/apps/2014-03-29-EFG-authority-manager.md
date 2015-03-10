@@ -7,6 +7,7 @@ featured: false
 permalink: apps/EFG-authority-manager
 tags: 
   - R&D results
+secondarytags:
   - Alignment tools
   - Data mapping/conversion
 links: 
@@ -31,4 +32,4 @@ This tool adopts basic concepts, which have successfully been used by librarians
 
 Work to develop this tool is being done by the Istituto di Scienze e Tecnologie dell&#39;Informazione &lsquo;A. Faedo&#39; of the Italian National Research Council (ISTI-CNR), based on requirements written by the German Film Institute.
 
-See the Authority File manager [prototype:](http://demo.authfile.research-infrastructures.eu/)
+See the [Authority File manager prototype](http://demo.authfile.research-infrastructures.eu/)

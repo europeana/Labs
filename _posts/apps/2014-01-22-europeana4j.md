@@ -9,6 +9,8 @@ permalink: apps/europeana4j
 tags: 
   - Open Source tools
   - Client Library
+secondarytags:
+  - Java
 imageurl:
   - "/img/apps/europeana4j/europeana4j.jpg"
 links: 

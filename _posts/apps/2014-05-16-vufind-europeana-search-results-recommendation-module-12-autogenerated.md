@@ -9,6 +9,8 @@ imageurl:
 featured: false
 tags:
   - API Implementation
+  - Discovery
+secondarytags:
   - CMS plugin
   - Search
 links:
@@ -17,7 +19,6 @@ links:
 contact: 
   name: ""
 ---
+The National Library of Ireland has generalised their implementation of the Europeana API for all VuFind users.
 
-VuFind is an Open Source discovery interface for digital libraries used by a large number of institutions.
-
-The National Library of Ireland has generalised their implementation of the Europeana API for all VuFind users. If you're an institution using VuFind, you can register for an API key too and configure the widget for your own site!
+VuFind is an Open Source discovery interface for digital libraries used by a large number of institutions. If you're an institution using VuFind, you can register for an API key too and configure the widget for your own site!

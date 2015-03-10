@@ -8,6 +8,8 @@ imageurl:
 featured: false
 tags:
   - API Implementation
+  - Curation/Annotation
+secondarytags:
   - Social media
 links:
   - https://twitter.com/EuropeanaBot
@@ -15,7 +17,6 @@ links:
 contact: 
   name: ""
 ---
-
 Inspired by the DPLABot, this implementation uses Europeana API to present semi-random images from Europeana collections on Twitter.
 
-The program takes a list of "seed terms" from a file, searches for corresponding images on Europeana and posts the URL of the first result to the Twitter-Account EuropeanaBot. The current implementation has used Austrian place names and a list of Nobel Prize winners.
+The program takes a list of "seed terms" from a file, searches for corresponding images on Europeana and posts the URL of the first result to the Twitter-Account [@EuropeanaBot](https://twitter.com/europeanabot). The current implementation has used Austrian place names and a list of Nobel Prize winners.

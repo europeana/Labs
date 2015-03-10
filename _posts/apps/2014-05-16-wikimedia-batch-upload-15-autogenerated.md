@@ -8,13 +8,14 @@ imageurl:
 featured: false
 tags:
   - Hackathon Prototype
+  - Distribution
+secondarytags:
   - Rich media
 links:
   - http://commons.wikimedia.org/wiki/Category:Images_from_Europeana
 contact: 
   name: "Maarten Zeinstra from Kennisland and Maarten Dammers, Independent developer"
 ---
-
 This prototype makes it possible to upload content to Wikimedia Commons from Europeana. 
 
 NOTE: The prototype has now been superceeded by the [GLAMwiki toolset](http://commons.wikimedia.org/wiki/Commons:GLAMwiki_Toolset_Project "GLAMWiki Toolset").

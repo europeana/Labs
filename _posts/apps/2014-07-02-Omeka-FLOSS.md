@@ -8,6 +8,7 @@ imageurl:
 featured: false
 tags:
   - Open Source tools
+secondarytags:
   - Exhibition Management
   - Collection Management
 links:

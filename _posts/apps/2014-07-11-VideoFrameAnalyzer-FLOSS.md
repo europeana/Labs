@@ -7,6 +7,7 @@ title: "Video Frame Analyzer"
 featured: false
 tags:
   - Open Source tools
+secondarytags:
   - Digital Preservation
   - Media Annotation/Tagging
   

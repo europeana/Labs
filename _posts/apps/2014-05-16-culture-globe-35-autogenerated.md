@@ -8,6 +8,7 @@ imageurl:
 featured: false
 tags:
   - Hackathon Prototype
+secondarytags:
   - Geolocation
   - 3D
 links:
@@ -20,5 +21,3 @@ contact:
 eTech Hackathon 2011 winner Culture Globe allows users to navigate through Europeana content on an interactive globe and timeline.
 
 It accomplishes this by using cutting-edge HTML5 and WebGL technology in combination with semantic information from Europeana and Freebase.
-
-

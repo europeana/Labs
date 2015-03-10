@@ -7,6 +7,7 @@ title: "Apache Tika"
 featured: false
 tags:
   - Open Source tools
+secondarytags:
   - Metadata Retrieval Services
   - Semantic Enrichment
 links:

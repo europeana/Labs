@@ -10,11 +10,12 @@ imageurl:
 featured: false
 tags:
   - API Implementation
+  - Discovery
+secondarytags:
   - Search
 links:
   - http://www.africamuseum.be/collections/browsecollections/europeana
 contact: 
   name: ""
 ---
-
 The Royal Museum for Central Africa in Belgium is one of Europeana's content providers. On their Plone powered website, they have made their contributed content searchable using the Europeana API.

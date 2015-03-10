@@ -8,6 +8,7 @@ imageurl:
 featured: false
 tags:
   - Open Source tools
+secondarytags:
   - R&D results
   - Media Annotation/Tagging
   - Social Applications

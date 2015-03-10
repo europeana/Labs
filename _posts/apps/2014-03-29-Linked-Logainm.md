@@ -6,6 +6,8 @@ title: Europeana Linked Open Data feeds Irish place name database
 featured: false
 permalink: apps/Linked-Logainm
 tags: 
+  - R&D results
+secondarytags:
   - Linked Open Data
   - Geo-spatial applications
   - Semantic enrichment

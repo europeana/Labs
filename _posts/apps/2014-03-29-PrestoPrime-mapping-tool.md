@@ -7,6 +7,7 @@ featured: false
 permalink: apps/PrestoPrime-mapping-tool
 tags: 
   - R&D results
+secondarytags:
   - Data mapping/conversion
 links: 
   - "http://prestoprime.joanneum.at/"

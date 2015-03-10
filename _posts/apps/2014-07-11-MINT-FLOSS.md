@@ -8,6 +8,7 @@ featured: false
 tags:
   - Open Source tools
   - R&D results
+secondarytags:
   - Data Mapping/Conversion
   - Collection Management
   - Metadata Retrival Services

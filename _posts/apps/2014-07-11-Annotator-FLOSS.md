@@ -7,6 +7,8 @@ title: "Annotator"
 featured: false
 tags:
   - Open Source tools
+  - Curation/Annotation
+secondarytags:
   - Data Annotation/Curation
 imageurl:
   - "/img/no-image.gif"

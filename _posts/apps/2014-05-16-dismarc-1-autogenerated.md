@@ -9,6 +9,8 @@ imageurl:
 featured: false
 tags:
   - API Implementation
+  - Discovery
+secondarytags:
   - Search
 links:
   - http://www.dismarc.org/

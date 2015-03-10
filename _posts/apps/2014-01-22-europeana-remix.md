@@ -7,6 +7,7 @@ featured: false
 permalink: apps/remix
 tags: 
   - API Implementation
+  - Discovery
 links: 
   - "http://pro.europeana.eu/web/guest/europeana-remix"
   - "http://remix.europeana.eu/"

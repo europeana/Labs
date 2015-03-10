@@ -7,6 +7,7 @@ title: "Catmandu"
 featured: false
 tags:
   - Open Source tools
+secondarytags:
   - Metadata Retrieval Services
   - Data mapping/conversation
   - Collection Management

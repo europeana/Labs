@@ -7,6 +7,7 @@ featured: false
 permalink: apps/EuropeanaConnect-Gazetteer
 tags: 
   - R&D results
+secondarytags:
   - Ontology/vocabulary building
   - Ontology/vocabulary management
   - Semantic enrichment

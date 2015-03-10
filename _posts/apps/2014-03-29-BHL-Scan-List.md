@@ -7,6 +7,7 @@ featured: false
 permalink: apps/BHL Scan List
 tags: 
   - R&D results
+secondarytags:
   - Digital Asset Management
 links: 
   - "http://www.bhl-europe.eu/"
@@ -33,6 +34,3 @@ All users can browse and search the BHL Scan List. For proposing items to be sca
 [BHL Scan List demo](http://gso.gbv.de/DB=1.83/)
 
 [See the BHL Scan List prototype:](http://bhl.nhm-wien.ac.at/scanlist/)
-
-
-	

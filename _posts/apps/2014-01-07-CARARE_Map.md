@@ -8,6 +8,9 @@ imageurl:
 featured: false
 tags: 
   - API Implementation
+  - Discovery
+secondarytags:
+  - mapping
 links:
   - http://carare.eculturelab.eu/Carare50m/Map.html
 ---

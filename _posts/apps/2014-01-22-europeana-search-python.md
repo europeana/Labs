@@ -6,7 +6,8 @@ title: "Europeana Search Python"
 featured: false
 permalink: "apps/python"
 tags: 
-  - API Implementation
+  - Open Source tools
+  - Client Library
 links: 
   - "https://pypi.python.org/pypi/europeana-search"
 imageurl:

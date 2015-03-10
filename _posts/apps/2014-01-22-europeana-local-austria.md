@@ -8,8 +8,9 @@ imageurl:
 featured: false
 tags: 
   - API Implementation
+  - Discovery
 links:
   - "http://www.europeana-local.at/index.php?option=com_mdm&Itemid=2"
 ---
 
-The Europeana Local Austria portal aggregates content from regional and local Austrian libraries, archives and museums. Through our API, searches in their portal also return results from Europeana.
+The Europeana Local Austria portal aggregates content from regional and local Austrian libraries, archives and museums. Through the Europeana API, searches in their portal also return results from Europeana.

@@ -18,4 +18,4 @@ contact:
 
 From a technical perspective, the similarity between the 3D models is based on a view-based, low-level feature extraction algorithm, designed and implemented by CERTH-ITI ([www.iti.gr](http://www.iti.gr/)). The indexing is developed by ISTI-CNR ([http://www.isti.cnr.it/](www.isti.cnr.it)) and is an inverted file-based indexing. This indexing method is highly scalable and will support the indexing of thousands of 3D models.
 
-See the ASSETS 3D search [demo](http://assetstest.atc.gr/ASSETS3DSearch/)
+See the [ASSETS 3D search demo](http://assetstest.atc.gr/ASSETS3DSearch/)

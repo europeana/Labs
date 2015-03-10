@@ -9,6 +9,7 @@ imageurl:
 featured: false
 tags:
   - Open Source tools
+secondarytags:
   - Media Annotation/Tagging
 links:
   - http://annotorious.github.io

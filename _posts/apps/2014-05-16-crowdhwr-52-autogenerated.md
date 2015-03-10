@@ -8,6 +8,7 @@ imageurl:
 featured: false
 tags:
   - Hackathon Prototype
+secondarytags:
   - Annotation
 links:
   - http://rankrasciai.atviriduomenys.lt/word/1/

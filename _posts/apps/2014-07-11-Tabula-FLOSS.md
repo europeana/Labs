@@ -7,6 +7,7 @@ title: "Tabula"
 featured: false
 tags:
   - Open Source tools
+secondarytags:
   - Semantic Extraction
   
 imageurl:

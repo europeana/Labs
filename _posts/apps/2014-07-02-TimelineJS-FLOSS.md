@@ -7,6 +7,8 @@ title: "Timeline JS"
 featured: false
 tags:
   - Open Source tools
+  - Curation/Annotation
+secondarytags:
   - Exhibition Management
   - Media Applications
   - Data Annotation/Curation
