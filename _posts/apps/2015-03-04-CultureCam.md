@@ -22,14 +22,11 @@ contact:
   email: sanna.marttila@aalto.fi
 
 ---
+The Culture Cam tool offers a non-text based visual search interface to European cultural heritage.
 
-The Culture Cam (http://culturecam.eu) tool offers a non-text based visual search interface to European cultural heritage.
+With [Culture Cam](http://culturecam.eu) people can browse a sub collection of Europeana’s content in an easy and intuitive way through a colour, a shape or a pattern by using the camera from a computer or mobile phone. Culture Cam enables and engages creative people and industries with European digital cultural heritage to find inspiration and source materials for new designs and art artefacts. All pictures in Culture Cam are under public domain, meaning that all the copyrights are waived or expired.
 
-People can browse a sub collection of Europeana’s content in an easy and intuitive way through a colour, a shape or a pattern by using camera from a computer or a mobile phone. Culture Cam enables and engages creative people and industries with European digital cultural heritage to find inspiration and source materials for new designs and art artefacts. All pictures in Culture Cam are under public domain, meaning that all the copyrights are waived or expired.
-
-The code of Culture Cam (back-end) is open source and available via the following links: 
-(https://github.com/europeana/Europeana-Creative/)
-(https://github.com/europeana/Europeana-Creative/tree/master/image-similarity)
+The code of Culture Cam (back-end) is open source and available via [github.com/europeana/Europeana-Creative](https://github.com/europeana/Europeana-Creative/)
  
 Culture Cam is developed by the Danish Design Company [Spild ad Tid](http://www.spildaftid.dk/) in collaboration with Aalto University ARTS and The Austrian Institute of Technology.
  
@@ -45,4 +42,4 @@ The Design pilot operates in three main areas:
 
 * We facilitate hands-on workshops and events, in which participants can explore and experiment with the open digital cultural heritage made accessible via Europeana, and create new works together.
 
-* We create experiments to stimulate and inspire designers, artists and practitioners to creatively re-use our shared culture. Outcomes, findings and good practices are shared at (http://redesignyourculturalheritage.eu/).
+* We create experiments to stimulate and inspire designers, artists and practitioners to creatively re-use our shared culture. Outcomes, findings and good practices are shared at [redesignyourculturalheritage.eu](http://redesignyourculturalheritage.eu/).
