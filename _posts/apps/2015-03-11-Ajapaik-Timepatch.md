@@ -3,7 +3,7 @@ category: apps
 layout: "apps-item"
 published: true
 title: Ajapaik / Timepatch
-featured: false
+featured: true
 permalink: "apps/ajapaik-timepatch"
 imageurl: 
   - "/img/apps/2015-03-11-ajapaik-timepatch.jpg"

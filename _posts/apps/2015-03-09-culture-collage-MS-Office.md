@@ -3,7 +3,7 @@ category: apps
 layout: "apps-item"
 published: true
 title: Culture Collage MS Office app
-featured: false
+featured: true
 permalink: "apps/culture-collage-MS-Office"
 imageurl: 
   - "/img/apps/2015-03-15-culture-collage-MS-Office.png"

@@ -9,8 +9,9 @@ imageurl:
   - "/img/apps/2015-03-11-Europeana-D3.png"
 tags: 
   - API Implementation
-  - Visualisation
+secondarytags:
   - Research
+  - Visualisation
 links: 
   - "http://www.europeana-d3.info/"
   - "https://github.com/smoore4moma/europeana-d3"

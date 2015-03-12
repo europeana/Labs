@@ -3,7 +3,7 @@ category: apps
 layout: "apps-item"
 published: true
 title: Museums.EU
-featured: false
+featured: true
 permalink: "apps/museums-eu"
 imageurl: 
   - "/img/apps/2015-03-11-museums-eu.jpg"

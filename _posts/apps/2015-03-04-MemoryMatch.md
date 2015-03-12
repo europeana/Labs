@@ -8,10 +8,10 @@ permalink: "apps/memory-match"
 imageurl: 
   - "/img/apps/2015-03-04-MemoryMatch.jpg"
 tags: 
+  - API Implementation
   - Gaming
   - Education
   - Pilot
-  - API Implementation
 secondarytags:
   - Europeana Creative
 links: 

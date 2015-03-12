@@ -3,7 +3,7 @@ category: apps
 layout: "apps-item"
 published: true
 title: Historiana
-featured: false
+featured: true
 permalink: "apps/historiana"
 imageurl: 
   - "/img/apps/2015-03-11-historiana.jpg"
