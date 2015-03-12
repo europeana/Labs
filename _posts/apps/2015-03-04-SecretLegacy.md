@@ -17,10 +17,8 @@ links:
   - "http://pro.europeana.eu/get-involved/projects/project-list/europeana-creative/pilots/natural-history-education-pilots"
 
 contact: 
-  name: Felix King, exozet Berlin
-  email: Felix.King@exozet.com
-  name: Ulrike Sturm, Museum für Naturkunde Berlin
-  email: Ulrike.Sturm@mfn-berlin.de
+  - Felix King, exozet Berlin Felix.King@exozet.com
+  - Ulrike Sturm, Museum für Naturkunde Berlin Ulrike.Sturm@mfn-berlin.de
   
 ---
 The Secret Legacy is part of the Europeana Creative Natural History Education Pilot.

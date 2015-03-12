@@ -12,6 +12,7 @@ tags:
   - API Implementation
   - Education
   - Curation/Annotation
+  - Pilot
 secondarytags:
   - learning
 links: 
