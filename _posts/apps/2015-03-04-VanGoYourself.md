@@ -20,7 +20,6 @@ links:
 contact: 
   email: hello@vangoyourself.com
   website: "http://vangoyourself.com/contact/"
-  
 ---
 VanGoYourself is a genuinely different and surprisingly deep way for visitors to engage with heritage, based on emotion, playfulness and curiosity: recreate a painting or historic photo with your friends, then upload and share your photograph, twinned with the original, for others to enjoy.
 

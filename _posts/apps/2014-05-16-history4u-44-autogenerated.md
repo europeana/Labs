@@ -15,9 +15,7 @@ secondarytags:
 links:
   - https://docs.google.com/presentation/d/1nazn94YZjsk1SUsGVkE40grYw9plV5Mmqu791ionnSE/edit#slide=id.p13
 contact: 
-  name: "Agris Alonderis, aa07181@lu.lv"
-  name: "Nauris Gailums, nauris@inbox.lv"
-  name: "Kaspars Kalniņš, kaspars@enkurs.lv"
+  name: "Agris Alonderis, aa07181@lu.lv, Nauris Gailums, nauris@inbox.lv, Kaspars Kalniņš, kaspars@enkurs.lv"
 ---
 History4u is a mobile application for Windows 7 which allows the search and display of historical photographs available on Europeana.
 

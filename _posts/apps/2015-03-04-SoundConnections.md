@@ -20,7 +20,6 @@ links:
 
 contact: 
   email: hello@historypin.org
-  
 ---
 Explore sounds from across Europe and help enrich them with contextual information and audio-visual media.
 

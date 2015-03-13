@@ -15,10 +15,7 @@ links:
   - http://www.youtube.com/watch?v=C6PEz2d7OLE
   - http://www.youtube.com/watch?v=cPI3hvZN-Hk
 contact: 
-  name: "Tomasz Grzywalski, , iTraff Technology, tomasz.grzywalski(at)itraff.pl
-  name: Jakub Jurkiewicz, iTraff Technology, jakub.jurkiewicz(at)itraff.pl 
-  name: Jakub Porzuczek, iTraff Technology, jakub.porzuczek(at)itraff.pl 
-  name: Marcin Szajek, student at the Poznan University of Technology, szajek(at)programa.pl"
+  name: "Tomasz Grzywalski, , iTraff Technology, tomasz.grzywalski(at)itraff.pl, Jakub Jurkiewicz, iTraff Technology, jakub.jurkiewicz(at)itraff.pl, Jakub Porzuczek, iTraff Technology, jakub.porzuczek(at)itraff.pl, Marcin Szajek, student at the Poznan University of Technology, szajek(at)programa.pl"
 ---
 
 Winner in the category 'Greatest commercial potential' at Hack4Europe '11 - Poland. Finalist at the Digital Agenda Assembly, June 2011, Brussels

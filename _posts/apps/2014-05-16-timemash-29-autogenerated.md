@@ -15,9 +15,7 @@ secondarytags:
 links:
   - http://updateculture.appspot.com/public/TimeMash.apk
 contact: 
-  name: "Martin Duveborg, Swedish National Heritage Board, @duveborg martin.duveborg@raa.se
-
-Jonas Bolin, Swedish National Heritage Board, @avelone_com jonas.bolin@raa.se"
+  name: "Martin Duveborg, Swedish National Heritage Board, @duveborg martin.duveborg@raa.se, Jonas Bolin, Swedish National Heritage Board, @avelone_com jonas.bolin@raa.se"
 ---
 TimeMash is a search client for historical data from Europeana.
 
