@@ -19,7 +19,7 @@ The Europeana Data Model was designed to replace the Europeana Semantic Elements
 
 As a consequence of EDM having to meet these requirements, EDM data has a level of complexity above that which Europeana currently maintains. This level of complexity is comparable to what can be found in the data of many Europeana providers, and thus, we argue, it enables better exploitation of that data. Note also that, as much as possible, EDM re-uses elements coming from already-established vocabularies, such as Dublin Core, OAI-ORE, SKOS and CIDOC-CRM, thus lowering the cost of its creation and, hopefully, its adoption.</p>
 
-For more information on EDM, we refer to the *EDM Definitions* and *EDM Primer* on Europeana&#39;s [technical documents](http://pro.europeana.eu/edm-documentation) page. The EDM OWL ontology is accessible through content negotiation but it is also [directly available](https://github.com/europeana/corelib/blob/master/corelib-solr-definitions/src/main/resources/eu/rdf/edm.owl). Please be aware that both data.europeana.eu and those documents are under constant revision. There could therefore be some (minor) discrepancies between them!
+For more information on EDM, we refer to the *EDM Definitions* and *EDM Primer* on Europeana&#39;s [technical documents](http://pro.europeana.eu/edm-documentation) page. The EDM OWL ontology is accessible through content negotiation but it is also [directly available](https://github.com/europeana/corelib/blob/master/corelib-edm-definitions/src/main/resources/eu/rdf/edm.owl). Please be aware that both data.europeana.eu and those documents are under constant revision. There could therefore be some (minor) discrepancies between them!
 
 ## Generating EDM data for Europeana
 
