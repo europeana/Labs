@@ -46,8 +46,8 @@ The possible values of the reusability parameters
 
 | Value | Description |
 |:------|:------------|
-| open | The records are freely reusable. The licenses in this category are [NOC](http://creativecommons.org/publicdomain/mark/), [CC-ZERO](http://creativecommons.org/publicdomain/zero/1.0/), [CC-BY](http://creativecommons.org/licenses/by/), [CC-BY-SA](http://creativecommons.org/licenses/by-sa/) |
-| restricted | The records are reusable, but with restrictions. The licenses in this category are [CC-BY-NC](http://creativecommons.org/licenses/by-nc/), [CC-BY-NC-SA](http://creativecommons.org/licenses/by-nc-sa/), [CC-BY-NC-ND](http://creativecommons.org/licenses/by-nc-nd/), [CC-BY-ND](http://creativecommons.org/licenses/by-nd/), [OOC-NC](http://www.europeana.eu/rights/out-of-copyright-non-commercial/) |
+| open | The records are freely reusable. The licenses in this category are [Public Domain](http://creativecommons.org/publicdomain/mark/1.0/), [CC-ZERO](http://creativecommons.org/publicdomain/zero/1.0/), [CC BY](http://creativecommons.org/licenses/by/), [CC BY-SA](http://creativecommons.org/licenses/by-sa/) |
+| restricted | The records are reusable, but with restrictions. The licenses in this category are [CC-BY-NC](http://creativecommons.org/licenses/by-nc/), [CC BY-NC-SA](http://creativecommons.org/licenses/by-nc-sa/), [CC-BY-NC-ND](http://creativecommons.org/licenses/by-nc-nd/), [CC BY-ND](http://creativecommons.org/licenses/by-nd/), [OOC-NC](http://www.europeana.eu/rights/out-of-copyright-non-commercial/) |
 | permission | You can reuse the records only with explicit permission. |
 
 ## Response
