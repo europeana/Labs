@@ -6,8 +6,8 @@ title: PostcodePast
 featured: false
 permalink: "apps/postcodepast"
 imageurl: 
-  - "/img/apps/2015-03-11-postcodepast.jpg"
-  - "/img/apps/2015-03-11-postcodepast2.png"
+  - "/img/apps/2015-03-11-PostcodePast.jpg"
+  - "/img/apps/2015-03-11-PostcodePast2.png"
 tags: 
   - API Implementation
   - Curation/Annotation
