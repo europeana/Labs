@@ -1,11 +1,11 @@
 ---
-published: false
+published: true
 layout: blog-item
 category: blog
 permalink: blog/whos-using-what-benjamin-rokseth
 title: Who's Using What - Benjamin Rokseth Developer Profile
 imageurl: 
-  - "/img/blog/place-holder"
+  - "/img/blog/2015-03-20-whos-using-what-benjamin-rokseth.jpg"
 tags: 
   - FLOSS
 secondarytags:
@@ -13,7 +13,7 @@ secondarytags:
   - Koha
 ---
 For this edition of “Who’s Using What?” we head north to Oslo where Benjamin Rokseth is working with The Digital Development
-Team at the Oslo Public Library. The [Oslo Public Library] (https://www.deichman.no/side/in-english) is currently in a transitional phase as they prepare for the grand opening of what will be an [astonishingly beautiful building] (http://blogg.deichman.no/nyedeichman/) on the Oslo waterfront. But with a beautiful new building comes the
+Team at the Oslo Public Library. The [Oslo Public Library](https://www.deichman.no/side/in-english) is currently in a transitional phase as they prepare for the grand opening of what will be an [astonishingly beautiful building](http://blogg.deichman.no/nyedeichman/) on the Oslo waterfront. But with a beautiful new building comes the
 need for a progressive CMS and a new and improved way for local visitors and researchers as well as internationals alike seeking to access the library’s collection. The Oslo Public Library decided to make a big change their new
 library system on the well known OSS, [Koha](http://www.koha.org/). You can read all about the transition in [this fascinating piece](http://digital.deichman.no/blog/2015/01/12/working-with-koha-at-oslo-public-library/). Rokseth is an OS
 champion and for any library’s looking to make the switch from an old CMS to Koha, hopefully his answers and insights will

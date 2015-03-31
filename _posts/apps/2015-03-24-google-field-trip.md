@@ -18,7 +18,9 @@ links:
 contact: 
   email: milena.popova@europeana.eu
 ---
-Europeana, Google's Niantic Labs and three partner memory institutions - the Swedish National Heritage Board, the National Heritage Board of Estonia and the National Heritage Board of Poland -  have successfully completed a pilot project to integrate curated cultural content in Google's Field Trip app  ([http://www.fieldtripper.com](www.fieldtripper.com)). Now, tourists from around the world can use the app on site to view and learn about archaeological sites, historical buildings and important monuments in Poland, Estonia and Sweden.
+Europeana, Google's Niantic Labs and three partner memory institutions - the Swedish National Heritage Board, the National Heritage Board of Estonia and the National Heritage Board of Poland -  have successfully completed a pilot project to integrate curated cultural content in Google's Field Trip app  ([www.fieldtripper.com](http://www.fieldtripper.com)). 
+
+Now, tourists from around the world can use the app on site to view and learn about archaeological sites, historical buildings and important monuments in Poland, Estonia and Sweden.
  
 You can download the Field Trip app on [Google Play Store](https://play.google.com/store/apps/details?id=com.nianticproject.scout) and [iTunes](https://itunes.apple.com/us/app/field-trip/id567841460?ls=1&mt=8) or even get it for [Glass](http://www.fieldtripper.com/glass/).
 

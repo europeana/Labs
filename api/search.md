@@ -35,7 +35,7 @@ We have two profile types: one to control which fields of the record should be i
 | minimal | Returns minimal set of metadata. See [metadata sets](/api/search/#metadata-sets). |
 | standard | Returns a boarder set of metadata. See [metadata sets](/api/search/#metadata-sets). |
 | rich | Returns the broadest set of metadata. See [metadata sets](/api/search/#metadata-sets). |
-| facets | Information about [facets](/api/repository/#facets) is added. For the records the Standard profile is used. |
+| facets | Information about [facets](/api/search/#facets) is added. For the records the Standard profile is used. |
 | breadcrumbs | information about the query is added in the form of [breadcrumbs](/api/search/#breadcrumb). Facets are added as well; for the records the Standard profile is used. |
 | params | The header of the response will contain a params key, which lists the requested and default parameters of the API call. |
 | portal | `standard`, `facets`, and `breadcrumb` combined, plus additional fields over `standard` metadata set.  See [metadata sets](/api/search/#metadata-sets). |
