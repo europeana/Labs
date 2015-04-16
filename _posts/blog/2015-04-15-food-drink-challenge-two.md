@@ -28,3 +28,5 @@ The winning project will receive €3,000 in cash, and, this time, we’re offer
 The Challenge opens on **15th April 2015** and your video projects can be submitted until **20th June 2015**.
 
 For further evaluation criteria, further guidelines, rules and instructions on how to apply, visit [foodanddrinkeurope.eu/challengetwo/](http://foodanddrinkeurope.eu/challengetwo/) 
+
+<small>Image credit: [The Egg Seller, by Hendrick Bloemaert](http://www.europeana.eu/portal/record/90402/SK_C_106.html) [Public Domain](http://creativecommons.org/publicdomain/mark/1.0/ "Public Domain marked") from the  Rijksmuseum.</small>
