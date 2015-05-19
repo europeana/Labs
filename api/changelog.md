@@ -8,7 +8,7 @@ title: API Change Log
 
 This document describes the changes of Europeana API. The changes are grouped by new API versions. We deploy new versions of the portal and API quite regularly, but not all new versions result in changes in the interface. The API documentation always describes the current version of the API. <!-- We don't have (yet?) however API call to get the actual version, so the API users should see the date of changes.-->
 
-## Version 2-0-12 (2014-06-18)
+## Version 2.0.12 (2014-06-18)
 
 ### /v2/translateQuery.json
 
@@ -172,7 +172,7 @@ Keep in mind, that + sign should be encoded as %2B, otherwise it will be taken a
 So far the user could get the default facets Europeana set. From now on the API users can select which facets they would like to retrieve. We have introduced a new parameter: facet. When you request facet you have to set the profile either as facets or as portal (which covers facets as well).
 
 The value of the parameter could be "DEFAULT" (which is a shortcut of the Europeana facet set we make use on the portal, which contains UGC, LANGUAGE, TYPE, YEAR, PROVIDER, DATA_PROVIDER, COUNTRY and RIGHTS), or any field name which is indexed and stored in Apache Solr.
-We maintain a table in API documentation about the existing fields: http://europeana.eu/portal/api-fields.html. In the field type column "text" means indexed as as a row of distinct terms, while "string" means indexed as phrase, so the whole content is taken as one individual unit.
+We maintain a table in API documentation about the existing fields: [API fields](/api/data-fields/). In the field type column "text" means indexed as as a row of distinct terms, while "string" means indexed as phrase, so the whole content is taken as one individual unit.
 
 Users can set one or more facets in one query.
 
@@ -307,4 +307,3 @@ returns
   "items": [...]
 }
 ```
-

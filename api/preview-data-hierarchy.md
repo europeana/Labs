@@ -1,0 +1,62 @@
+---
+layout: "api-page2"
+title: Europeana Data Hierarchy
+published: true
+excerpt: "How Europeana data hierarchy is organised"
+
+---
+
+* TOC
+{:toc}
+
+To organize its data Europeana uses a complex data model which is called the Europeana Data Model (EDM). A detailed description of EDM is beyond the scope of this documentation: the reader is referred to the extensive documentation [on Europeana website](http://pro.europeana.eu/edm-documentation). However, a basic understanding of the data organisation is necessary for implementing the API. The objective of this section is to provide this basic understanding.
+
+## EDM and Records
+
+The Europeana API provides access to the Europeana data, which is modeled using EDM. While EDM is an open flexible data model featuring various kind of resources and relations between them, the Europeana API (and the Europeana Portal) supports the retrieval of a segment of EDM for practical purposes (a subgraph, to use strict terminology). These ‘atomic' EDM segments usually contain one Cultural Heritage Object (CHO), the aggregation information which connects the metadata and the digital representations together and a number of contextual resources such as the agents, places, concepts and time pertaining to the CHO. The further API documentation, in particular the [/record](http://labs.europeana.eu/api/preview-record) call refers to this subgraph as _object_.
+
+## Identifying Records
+
+Digital records delivered to Europeana are assigned a unique identifier, Europeana ID, that serves to further identify the records when using the API. Usually, this identifier is based on the original metadata that are provided for the record and internal Europeana identifiers of the provider and the dataset containing the record. For example, a Europeana ID of an object can look as follows:
+
+    /09102/_GNM_1234
+
+where 091 is the identifier of the provider, 02 is the id of the dataset and _GNM_1234_ is derived from the unique identifier of the record in the context of the provider.
+
+## Fields
+
+Europeana data is organised in records which correspond to cultural heritage objects. Each object is described by a number of fields in the record which contain information such as the title of the object, its description, the date, persons and concepts related to it.
+
+## Aggregated Fields
+
+Europeana aggregates its data from cultural institutions that can use diverse, fine-grained systems and methodologies. As a result, a link between for example an object and a person may be stored in different specialized fields. To provide simpler views on this data, Europeana has introduced several general Aggregated Fields: title, who, what, when, and where. In these fields we gather together information from different record fields in order to make the discovery of objects easier. Title, for example, aggregates data from the dc:title and dcterms:alternative fields which are part of Dublin Core, a popular general standard for describing different types of resources.
+
+## Facets
+
+The number of records that Europeana contains is very big and growing. Therefore we need efficient ways to allow our users to discover what they need easily. One such technique is a faceted indexing system that classifies each record along multiple dimensions. The facets, seen on the left side of the Europeana portal, can be useful for filtering search results and can also be used by API users. Currently we support the following facets:
+
+| Facet | Description |
+|:-------------|:-------------|
+| Media Type  |	A broad classification of objects into five material types that users may find useful for filtering purposes: text, image, sound, video, 3D. |
+|Language |	A language of the record. |
+|Date |	A point or period of time associated with an event in the lifecycle of the record |
+|Country |	The name of the country of the data provider or "Europe" in the case of Europe-wide projects. |
+|Copyrights |	Information about rights held in and over the resource. |
+|Provider |	Europeana Provider |
+|Completeness |	Internal Europeana measure of the completeness of the metadata of the record. |
+|UGC	| Whether the record has been contributed by the user community |
+
+The facets listed above relate to the metadata of records. The following list of facets relate to the metadata extracted from media objects, such as images or videos. 
+
+| Facet | Description |
+|:-------------|:-------------|
+| Mime-type | The mime-type of a media file, such as image/jpeg for a JPEG file. | 
+| Image size | The dimensions of an image. |
+| Image colour | Whether an image is a full-colour image. |
+| Image greyscale | Whether an image is a greyscale image. | 
+| Image aspect ratio | The aspect ratio of an image. | 
+| Video HD | Whether a video file can be classified as an HD-video. | 
+| Video duration | The duration of a video file. | 
+| Sound HQ | Whether a sound file can be classified as an HQ-sound. | 
+| Sound duration | The duration of a sound file. | 
+| Full text | Whether the text in a text-object is searchable, such as most PDF files. |

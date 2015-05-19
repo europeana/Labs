@@ -1,5 +1,5 @@
 ---
-layout: "api-page"
+layout: "api-page2"
 title: Querying Providers and Datasets
 published: true
 excerpt: "How to retrieve information about Europeana data providers and datasets"
@@ -15,9 +15,9 @@ This page describes the API calls that retrieve information about Europeana data
 
 Retrieve information about all Europeana data providers.
 
-    http://europeana.eu/api/v2/providers.json
+    http://beta.europeana.eu/v2/providers.json
 
-Alternatively, you can also use the [DATA_PROVIDER facet](/api/data-fields/#metadata-facets) in a [Search Query](/api/search/) to group results by and search for results by a provider.
+Alternatively, you can also use the [DATA_PROVIDER facet](/api/preview-data-fields/#metadata-facets) in a [Search Query](/api/preview-search/) to group results by and search for results by a provider.
     
 ### Request  
 
@@ -30,7 +30,7 @@ Alternatively, you can also use the [DATA_PROVIDER facet](/api/data-fields/#meta
 List all providers from The Netherlands:
 
     &countryCode=NL
-    http://www.europeana.eu/api/v2/providers.json?wskey=xxxx&countryCode=NL
+    http://beta.europeana.eu/v2/providers.json?wskey=xxxx&countryCode=NL
 
 ### Response
 
@@ -51,7 +51,7 @@ List all providers from The Netherlands:
 
 Retrieve information about a provider. Returns the same fields as the previous call.
 
-	http://europeana.eu/api/v2/provider/[providerID].json
+	http://beta.europeana.eu/v2/provider/[providerID].json
     
 ### Request  
 
@@ -63,11 +63,11 @@ Retrieve information about a provider. Returns the same fields as the previous c
 
 Retrieve information about datasets supplied by a specific data provider.
 
-	http://europeana.eu/api/v2/provider/[providerID]/datasets.json
+	http://beta.europeana.eu/v2/provider/[providerID]/datasets.json
 
 Alternatively, you can also construct a [Search Query](/api/search) with a custom dataset facet to group results by and search for results by dataset.
 
-	http://europeana.eu/api/v2/search.json?wskey=xxxx&query=europeana_collectionName:*&facet=europeana_collectionName&f.europeana_collectionName.facet.limit=2000&profile=facets
+	http://beta.europeana.eu/v2/search.json?wskey=xxxx&query=europeana_collectionName:*&facet=europeana_collectionName&f.europeana_collectionName.facet.limit=2000&profile=facets
 
 ### Request  
 
@@ -93,7 +93,7 @@ Alternatively, you can also construct a [Search Query](/api/search) with a custo
 
 Retrieve information about a dataset. Returns the same fields as the previous call.
 
-	http://europeana.eu/api/v2/dataset/[datasetID].json
+	http://beta.europeana.eu/v2/dataset/[datasetID].json
 
 ### Request  
 

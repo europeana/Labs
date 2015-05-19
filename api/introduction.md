@@ -13,7 +13,7 @@ To start using the API you should register at the registration page. Upon regist
 
 ### Backward Compatibility
 
-The current version of the Europeana API (API2) is fully backward compatible with the previous version (API1). However, we encourage developers to switch to the new naming of the fields that were used in API1. For more information on the mapping between the new and the old fields, please see [API1-API2 Fields Mapping](http://www.europeana.eu/portal/api-api1-api2.html).
+The current version of the Europeana API (API2) is fully backward compatible with the previous version (API1). However, we encourage developers to switch to the new naming of the fields that were used in API1. For more information on the mapping between the new and the old fields, please see [API1-API2 Fields Mapping](/api/api1-api2-mapping/).
 
 ### API Console
 

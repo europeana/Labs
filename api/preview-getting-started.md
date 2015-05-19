@@ -1,5 +1,5 @@
 ---
-layout: "api-page"
+layout: "api-page2"
 title: Getting Started with Europeana REST API
 published: true
 excerpt: Everything you need to know to start using Europeana API right away.
@@ -15,9 +15,9 @@ In this section you will find all information necessary to jump-start using Euro
 Every Europeana Search API call is an HTTP request in a specified format that is sent to the Europeana API service.
 The API root URL is located at: 
 
-    http://www.europeana.eu/api/v2
+    http://beta.europeana.eu/v2
 
-For obligatory request parameters look into the documentation of specific calls. The [authentication](http://labs.europeana.eu/api/authentication/) section provides information on the obligatory authentication parameter _wskey_.
+For obligatory request parameters look into the documentation of specific calls. The [authentication](http://labs.europeana.eu/api/preview-authentication/) section provides information on the obligatory authentication parameter _wskey_.
 
 
 ## Response
@@ -31,7 +31,7 @@ A response to an API call will always contain a number of standard fields that p
 | success |	Boolean |	a boolean (true/false) flag denoting the successful execution of the call |
 | statsDuration |	Number |	the time (in milliseconds) taken to serve the request |
 | requestNumber |	Number |	a positive number denoting the number of request by this API key within the last 24 hours |
-| error | 	String |	if the call was not successful this fields will contain a detailed text message. See [Error Codes](labs.europeana.eu/documentation/error-codes.html) for more information.|
+| error | 	String |	if the call was not successful this fields will contain a detailed text message. See [Error Codes](http://labs.europeana.eu/api/preview-error-codes.html) for more information.|
 | params |	Object	| original request parameters. If an invalid request parameter was submitted, this response parameter will contain the default value (see individual calls for the default values). Shown up only if the profile parameter contains "params". |
 
 ## Datatypes

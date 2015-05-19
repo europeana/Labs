@@ -1,5 +1,5 @@
 ---
-layout: "api-page"
+layout: "api-page2"
 title: Record
 published: true
 excerpt: Retrieving a single record from the dataset
@@ -8,16 +8,16 @@ excerpt: Retrieving a single record from the dataset
 * TOC
 {:toc}
 
-Retrieve a single record from the Europeana dataset. On the relation between EDM and records read [this](http://labs.europeana.eu/api/data-hierarchy/#edm-and-records).
+Retrieve a single record from the Europeana dataset. On the relation between EDM and records read [this](http://labs.europeana.eu/api/preview-data-hierarchy/#edm-and-records).
 
-    http://europeana.eu/api/v2/record/[recordID].json
+    http://beta.europeana.eu/v2/record/[recordID].json
     
 ## Request
 
 | Parameter | Datatype | Description |
 |:-------------|:-------------|:-----|
-| recordID | String | [Europeana ID](http://labs.europeana.eu/api/data-hierarchy/#identifying-records) of the record to retrieve. |
-| callback | String | Name of a [client side callback function](http://labs.europeana.eu/api/search/#callback-function). |
+| recordID | String | [Europeana ID](http://labs.europeana.eu/api/preview-data-hierarchy/#identifying-records) of the record to retrieve. |
+| callback | String | Name of a [client side callback function](http://labs.europeana.eu/api/preview-search/#callback-function). |
 
 
 ## Response
@@ -25,14 +25,14 @@ Retrieve a single record from the Europeana dataset. On the relation between EDM
 | Field | Datatype | Description |
 |:-------------|:-------------|:-----|
 | object | [Object](#object) | The object representing the EDM metadata record. (see the note above) |
-| similarItems | Array([item](http://labs.europeana.eu/api/search/#item)) | The collection of metadata records similar to the current one. Available when profile parameter value is set to **similar**. The structure of each record is the same as the structure of the items collection returned by the [search](http://labs.europeana.eu/api/search) method. |
+| similarItems | Array([item](http://labs.europeana.eu/api/preview-search/#item)) | The collection of metadata records similar to the current one. Available when profile parameter value is set to **similar**. The structure of each record is the same as the structure of the items collection returned by the [search](http://labs.europeana.eu/api/preview-search) method. |
 
 
 ### object
 
 | Field | Datatype | Description |
 |:-------------|:-------------|:-----|
-| about | String | [Europeana ID](http://labs.europeana.eu/api/data-hierarchy/#identifying-records) of the returned object.|
+| about | String | [Europeana ID](http://labs.europeana.eu/api/preview-data-hierarchy/#identifying-records) of the returned object.|
 | agents | Array([Agent](#edm-agent)) | A collection of EDM Agent objects contextually related to the object. Find more in the EDM Definition. |
 | aggregations | Array([Aggregation](#edm-aggregation)) | A collection of EDM Aggregation objects related to the object. Find more in the EDM Definition. |
 | concepts | Array([Concept](#edm-concept)) | A collection of EDM Concept objects contextually related to the object. Find more in the EDM Definition. |
@@ -190,6 +190,20 @@ An EDM WebResource object.
 | dctermsIsFormatOf | dcterms:isFormatOf | LangMap | A related resource that is substantially the same as the described resource, but in another format. |
 | dctermsHasPart | dcterms:hasPart | LangMap | A related resource that is included either physically or logically in the web resource. |
 | isNextInSequence | edm:isNextInSequence | String | Where one CHO has several web resources, shown by multiple instances of the edm:hasView property on the ore:Aggregation this property can be used to show the sequence of the objects.  Each web resource (apart from the first in the sequence) should use this property to give the URI of the preceding resource in the sequence. |
+| edmCodecName | edm:codecName | String | The name of a device or computer program capable of encoding or decoding a digital data stream or signal, e.g. h264 | 
+| ebucoreHasMimeType | ebucore:hasMimeType | String | The main MIME type as defined by IANA: e.g. image/jpeg |
+| ebucoreFileByteSize | ebucore:fileByteSize | Integer | The size of a media file in bytes |
+| duration | ebucore:duration | String | The duration of a media file in ms |
+| ebucoreWidth | ebucore:width | Integer | The width of a media file in pixels | 
+| ebucoreHeight | ebucore:height | Integer | The height of a media file in pixels |
+| edmSpatialResolution | edm:spatialResolution | String | The spatial resolution of a media resource |
+| ebucoreSampleSize | ebucore:sampleSize | String | The size of an audio sample in bits. Also called bit depth |
+| ebucoreSampleRate | ebucore:sampleRate | String | The frequency at which audio is sampled per second. Also called sampling rate |
+| ebucoreBitRate | ebucore:bitRate | String | To provide the bitrate at which the MediaResource can be played in kilobits/second |
+| ebucoreFrameRate | ebucore:frameRate | String | The frame rate of the video signal in frame per second | 
+| edmHasColorSpace | edm:hasColorSpace | String | Whether an image is a coloured image | 
+| ebucoreOrientation | ebucore:orientation | String | The orientation of a Document or an Image i.e. landscape or portrait | 
+| ebucoreAudioChannelNumber | ebucore:audioChannelNumber | String | The total number of audio channels contained in the MediaResource | 
 
 ### Contextual resources
 
