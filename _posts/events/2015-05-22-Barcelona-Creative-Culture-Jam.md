@@ -32,6 +32,8 @@ europeanaevent:
 featured:
   - "false"
 ---
+During a day long intense Culture Jam workshop at Maker Convent Barcelona, facilitated by Platoniq, we will co-create prototypes such as mobile/web application mockups related to museum experiences, experimental 3D printed objects of sculptures and artistic objects, or new services.
+
 Using digital heritage from [Europeana](http://www.europeana.eu/), participants can share ideas and designs and develop colorful diagrams, attractive and informative wireframes and handcrafted materials like cloths printed with paintings or old pictures.
 
 Get creative, hack your heritage, network, learn, discover and have a good time!

@@ -32,6 +32,8 @@ europeanaevent:
 featured:
   - "false"
 ---
+Can posters and paintings come into life? Is it possible to make jewellery out of 1800 century newspapers? Or how about creating melody cards from educational illustrations, using art deco wallpaper patterns to fashion designs, or giving 3D form to objects that have been painted on canvas 200 years ago?
+
 Join us in Aalto Media Factory FabLab on the 4th of June to jam with our common culture, experiment and create new designs, art artefacts and objects. We are welcoming all creative tinkerers, DIY practitioners, designers and developers who are interested in exploring and engaging open digital cultural heritage with tools and resources available in the Aalto FabLab. In this one day session we create tangible objects from open cultural heritage found through a visual search tool [CultureCam](http://culturecam.eu).
 
 The aim of the Culture Jam sessions is to connect the digital cultural heritage offered by Europeana to communities of designers and artists who wish to use open cultural content as inspiration and sources for new derivative works. More [information and ideas](http://redesignyourculturalheritage.eu).

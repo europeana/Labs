@@ -32,6 +32,8 @@ europeanaevent:
 featured:
   - "false"
 ---
+Get creative, hack your heritage, network, learn, discover and have a good time! Details coming soon.
+
 Details coming soon.
 
 <iframe src="https://player.vimeo.com/video/127019323" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>

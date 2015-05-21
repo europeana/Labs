@@ -32,6 +32,8 @@ europeanaevent:
 featured:
   - "false"
 ---
+Knowle West Media Centre will be hosting an exciting 1 day ‘Culture Jam’ workshop during the school half term holidays. The Bristol Jam is unique to other Jams being held across Europe as this event is exclusively for young people ranging from 10-19 years old.
+
 Participants will be supported and collaborate with a team associates ranging from designers, programmers and artists throughout the day to re-use local and Europeana digital heritage in a new and innovative way.
 
 Young people will work in small teams to generate and present their ideas, then bring those closer to reality by creating prototypes including wireframes, app designs, modelling and sculpture, lasercut designs, 3D printed objects and more. One young person will be selected as an ambassador to represent the Bristol Jam in the final Culture Jam in Austria in July.
