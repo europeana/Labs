@@ -5,7 +5,7 @@ category: blog
 permalink: blog/whos-using-what-Sebastian-Hierl
 title: Who's Using What - Sebastian Hierl Developer Profile
 imageurl: 
-  - "/img/blog/2015-03-20-whos-using-what-benjamin-rokseth.jpg"
+  - "/img/blog/2015-03-22-whos-using-what-Sebastian-Hierl.jpg"
 tags: 
   - FLOSS
 secondarytags:
