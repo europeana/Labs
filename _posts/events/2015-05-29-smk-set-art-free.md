@@ -5,7 +5,7 @@ category: events
 permalink: /events/SMK-Set-Art-Free
 title: Set art free – and the rest will follow!
 imageurl: 
-  - "/img/events/2015-05-20-Creative-Culture-Jam.jpg"
+  - "/img/events/2015-05-29-set-art-free-SMK.jpg"
 tags: 
   - exhibition
   - workshop
@@ -60,3 +60,14 @@ Merete Sanderhoff, curator of digital museum practice, merete.sanderhoff@smk.dk
 
 Contact information at Europeana Creative: 
 Sanna Marttila, project leader Aalto University ARTS, sanna.marttila@aalto.fi
+
+##Don't forget
+
+###Creative Culture Jam, Helsinki, 4 June
+
+Can posters and paintings come into life? Is it possible to make jewellery out of 1800 century newspapers? Or how about creating melody cards from educational illustrations, using art deco wallpaper patterns to fashion designs, or giving 3D form to objects that have been painted on canvas 200 years ago? [Join us to find out!](http://labs.europeana.eu/events/Creative-Culture-Jam-Helsinki)
+
+###Culture Jam conference, Vienna, 9-10 July
+
+Culture Jam will mix inspiring keynote talks with lively discussion on topics ranging from copyright to co-creation and from living labs to business models. We’ll celebrate our innovation Challenge winners, play with the fantastic apps the project has developed and participate in some live crowd-funding madness! [Find out more about the Culture Jam conference](http://labs.europeana.eu/events/Europeana-Creative-Culture-Jam-Vienna)
+
