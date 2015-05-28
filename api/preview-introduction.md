@@ -6,6 +6,10 @@ published: true
 
 This part of our documentation reflects a preview version of the Europeana REST API. This is an upcoming version of our API and can be used to preview and play with new API functionality. Please have a look at our [changelog](/api/preview-changelog/) for a list of all new features and API changes.
 
+### Preview features
+
+The API features in the preview API are experimental and made available as a preview version first before making it available in production. The [changelog](/api/preview-changelog/) reflects all changes, all other functionality should be the same as on the production API.
+
 ### Registration
 
 For the preview API you can use the same API key as you would use for the normal version of the API.

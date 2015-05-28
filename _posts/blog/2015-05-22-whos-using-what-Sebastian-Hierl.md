@@ -34,3 +34,4 @@ We are currently working with the Koha community and with [EBSCO](https://www.eb
 For the Italian Koha community, we would like to develop a search API integrating Koha with the Italian union catalogue, the
 [OPAC catalogo SBN](http://www.sbn.it/opacsbn/opac/iccu/free.jsp), of the Istituto Centrale per il Catalogo Unico delle biblioteche italiane e per le informazioni bibliografiche. Such an integration would dramatically increase interest in Koha as an Open Source ILS in Italy. It would help all current Koha libraries in Italy and strengthen the entire Koha community. We further would like to see greater integration of linked data with Koha and our hope is that the current development with ElasticSearch will foster this development.
 
+<small>Image credit: [The triumphal arch of Constantine, Rome, Italy](https://www.flickr.com/photos/boston_public_library/14668263631/) from Boston Public Library (No known copyright restrictions).</small>

@@ -8,6 +8,10 @@ title: API Change Log
 
 This document describes the changes of Europeana API. The changes are grouped by new API versions. We deploy new versions of the portal and API quite regularly, but not all new versions result in changes in the interface. The API documentation always describes the current version of the API. <!-- We don't have (yet?) however API call to get the actual version, so the API users should see the date of changes.-->
 
+### Preview features
+
+The API features listed below are experiemental features and part of the preview API first before making it available in production. The changelog below lists all changes made to the preview API which are not part of production, all other functionality should be the same.
+
 ## Version 2.0.14 (2015-05-01)
 
 ### Support for and inclusion of technical metadata
