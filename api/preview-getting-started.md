@@ -19,6 +19,33 @@ The API root URL is located at:
 
 For obligatory request parameters look into the documentation of specific calls. The [authentication](http://labs.europeana.eu/api/preview-authentication/) section provides information on the obligatory authentication parameter _wskey_.
 
+## Methods
+
+### Search and retrieve records
+
+|Method|Description|
+|:------------- |:-------------|
+|[record.json](/api/preview-record/) 	|Retrieve information about a single record within the Europeana repository|
+|[search.json](/api/preview-search/) 	|Find records within the Europeana repository|
+|[suggestions.json](/api/preview-suggestions/) 	|Provides suggestions aimed at applications that use autocompletion for search queries|
+|[opensearch.rss](/api/preview-opensearch/) 	|Find objects within the Europeana repository following the OpenSearch specification|
+
+### MyEuropeana Actions
+
+|Method|Description|
+|:------------- |:-------------|
+|[profile.json](/api/preview-myeuropeana/#profile) 	|Retrieve user profile information|
+|[saveditem.json](/api/preview-myeuropeana/#saved-items) 	|Manage favourite records|
+|[tag.json](/api/preview-myeuropeana/#tags) 	|Manage tags|
+|[savedsearch.json](/api/preview-myeuropeana/#saved-searches) 	|Manage saved searches|
+
+### Data Providers and Datasets
+
+|Method|Description|
+|:------------- |:-------------|
+|[providers.json](/api/preview-provider/#providers)|Retrieve information about Europeana data providers|
+|[datasets.json](/api/preview-provider/#datasets-by-provider)|Retrieve information about datasets supplied by a specific data provider|
+
 
 ## Response
 
