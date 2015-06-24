@@ -1,5 +1,5 @@
 ---
-layout: "api-page"
+layout: "api-page3"
 title: Getting started
 published: true
 ---
